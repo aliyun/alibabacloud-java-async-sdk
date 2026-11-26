@@ -80,7 +80,7 @@ public class DescribeChannelUserMetricsResponseBody extends TeaModel {
         } 
 
         /**
-         * MetricDatas.
+         * <p>The metric data list.</p>
          */
         public Builder metricDatas(java.util.List<MetricDatas> metricDatas) {
             this.metricDatas = metricDatas;
@@ -88,7 +88,7 @@ public class DescribeChannelUserMetricsResponseBody extends TeaModel {
         }
 
         /**
-         * OverallData.
+         * <p>The overview data.</p>
          */
         public Builder overallData(OverallData overallData) {
             this.overallData = overallData;
@@ -96,7 +96,10 @@ public class DescribeChannelUserMetricsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>231470C1-ACFB-4C9F-844F-4CFE1E3804C5</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -175,7 +178,7 @@ public class DescribeChannelUserMetricsResponseBody extends TeaModel {
             } 
 
             /**
-             * Ext.
+             * <p>The extended properties.</p>
              */
             public Builder ext(java.util.Map<String, ?> ext) {
                 this.ext = ext;
@@ -183,7 +186,10 @@ public class DescribeChannelUserMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * X.
+             * <p>The x-axis coordinate in the metric trends chart.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1612418625</p>
              */
             public Builder x(String x) {
                 this.x = x;
@@ -191,7 +197,10 @@ public class DescribeChannelUserMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * Y.
+             * <p>The y-axis coordinate in the metric trends chart.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder y(String y) {
                 this.y = y;
@@ -258,7 +267,7 @@ public class DescribeChannelUserMetricsResponseBody extends TeaModel {
             } 
 
             /**
-             * Nodes.
+             * <p>The list of coordinate points in the metric trends chart.</p>
              */
             public Builder nodes(java.util.List<Nodes> nodes) {
                 this.nodes = nodes;
@@ -266,7 +275,17 @@ public class DescribeChannelUserMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The metric type. Valid values:</p>
+             * <ul>
+             * <li><strong>ALL_NUM</strong>: the number of users per unit of time.</li>
+             * <li><strong>PUB_NUM</strong>: the number of publishing users per unit of time.</li>
+             * <li><strong>SUB_NUM</strong>: the number of subscribing users per unit of time.</li>
+             * <li><strong>JOIN_FAIL_NUM</strong>: the number of users who failed to join the channel per unit of time.</li>
+             * <li><strong>BAD_EXP_NUM</strong>: the number of users with abnormal communication experience per unit of time.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ALL_NUM</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -372,7 +391,10 @@ public class DescribeChannelUserMetricsResponseBody extends TeaModel {
             } 
 
             /**
-             * TotalBadExpNum.
+             * <p>The total number of users with abnormal communication experience.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder totalBadExpNum(Long totalBadExpNum) {
                 this.totalBadExpNum = totalBadExpNum;
@@ -380,7 +402,10 @@ public class DescribeChannelUserMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalJoinFailNum.
+             * <p>The total number of users who failed to join the channel.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder totalJoinFailNum(Long totalJoinFailNum) {
                 this.totalJoinFailNum = totalJoinFailNum;
@@ -388,7 +413,10 @@ public class DescribeChannelUserMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalPubUserNum.
+             * <p>The total number of publishing users.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalPubUserNum(Long totalPubUserNum) {
                 this.totalPubUserNum = totalPubUserNum;
@@ -396,7 +424,10 @@ public class DescribeChannelUserMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalSubUserNum.
+             * <p>The total number of subscribing users.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder totalSubUserNum(Long totalSubUserNum) {
                 this.totalSubUserNum = totalSubUserNum;
@@ -404,7 +435,10 @@ public class DescribeChannelUserMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalUserNum.
+             * <p>The total number of users.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder totalUserNum(Long totalUserNum) {
                 this.totalUserNum = totalUserNum;

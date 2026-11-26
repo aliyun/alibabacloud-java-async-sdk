@@ -118,6 +118,7 @@ public class CreateMPULayoutRequest extends Request {
         } 
 
         /**
+         * <p>The application ID. Only a single ID is supported. You can create and query application IDs in the console.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -130,6 +131,7 @@ public class CreateMPULayoutRequest extends Request {
         }
 
         /**
+         * <p>The maximum number of audio mixes. Valid values: <strong>0</strong> to <strong>6</strong>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -142,7 +144,10 @@ public class CreateMPULayoutRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The name of the layout.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LayoutName</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -160,6 +165,7 @@ public class CreateMPULayoutRequest extends Request {
         }
 
         /**
+         * <p>The list of panes in the layout.</p>
          * <p>This parameter is required.</p>
          */
         public Builder panes(java.util.List<Panes> panes) {
@@ -293,7 +299,10 @@ public class CreateMPULayoutRequest extends Request {
             } 
 
             /**
-             * Height.
+             * <p>The height of the pane, represented as a normalized percentage. Valid values: <strong>0.0 &lt; Height ≤ 1.0</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.25</p>
              */
             public Builder height(Float height) {
                 this.height = height;
@@ -301,7 +310,16 @@ public class CreateMPULayoutRequest extends Request {
             }
 
             /**
-             * MajorPane.
+             * <p>Specifies the main pane. Each layout can have only one main pane.</p>
+             * <ul>
+             * <li><p><strong>0</strong>: secondary pane.</p>
+             * </li>
+             * <li><p><strong>1</strong>: main pane.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder majorPane(Integer majorPane) {
                 this.majorPane = majorPane;
@@ -309,7 +327,10 @@ public class CreateMPULayoutRequest extends Request {
             }
 
             /**
-             * PaneId.
+             * <p>The pane ID. Panes are sorted from top left to bottom right, starting from 0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder paneId(Integer paneId) {
                 this.paneId = paneId;
@@ -317,7 +338,10 @@ public class CreateMPULayoutRequest extends Request {
             }
 
             /**
-             * Width.
+             * <p>The width of the pane, represented as a normalized percentage. Valid values: <strong>0.0 &lt; Width ≤ 1.0</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.25</p>
              */
             public Builder width(Float width) {
                 this.width = width;
@@ -325,7 +349,10 @@ public class CreateMPULayoutRequest extends Request {
             }
 
             /**
-             * X.
+             * <p>The X-coordinate, represented as a normalized percentage. Valid values: <strong>0.0 ≤ X ≤ 1.0</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.25</p>
              */
             public Builder x(Float x) {
                 this.x = x;
@@ -333,7 +360,10 @@ public class CreateMPULayoutRequest extends Request {
             }
 
             /**
-             * Y.
+             * <p>The Y-coordinate, represented as a normalized percentage. Valid values: <strong>0.0 ≤ Y ≤ 1.0</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.25</p>
              */
             public Builder y(Float y) {
                 this.y = y;
@@ -341,7 +371,10 @@ public class CreateMPULayoutRequest extends Request {
             }
 
             /**
-             * ZOrder.
+             * <p>The stacking order. A value of 0 indicates the bottom layer. A value of 1 indicates the layer above 0, and so on.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder zOrder(Integer zOrder) {
                 this.zOrder = zOrder;

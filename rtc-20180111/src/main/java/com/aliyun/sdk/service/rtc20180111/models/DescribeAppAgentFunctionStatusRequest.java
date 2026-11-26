@@ -60,6 +60,7 @@ public class DescribeAppAgentFunctionStatusRequest extends Request {
         } 
 
         /**
+         * <p>The application ID. Create and query it in the console. Only a single ID is supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

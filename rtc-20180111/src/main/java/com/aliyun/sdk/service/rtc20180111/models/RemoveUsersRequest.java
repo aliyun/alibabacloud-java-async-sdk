@@ -90,6 +90,7 @@ public class RemoveUsersRequest extends Request {
         } 
 
         /**
+         * <p>Application ID. You can create and query it in the console. Only a single ID is supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,6 +103,7 @@ public class RemoveUsersRequest extends Request {
         }
 
         /**
+         * <p>The ID of the joined channel. Only a single ID is supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,6 +116,7 @@ public class RemoveUsersRequest extends Request {
         }
 
         /**
+         * <p>User List. Valid values of N: 1 to 30.</p>
          * <p>This parameter is required.</p>
          */
         public Builder users(java.util.List<Users> users) {
@@ -170,6 +173,7 @@ public class RemoveUsersRequest extends Request {
             } 
 
             /**
+             * <p>User ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

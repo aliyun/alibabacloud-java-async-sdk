@@ -54,7 +54,10 @@ public class UpdateMPUTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>760bad53276431c499e30dc36f6b26be</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

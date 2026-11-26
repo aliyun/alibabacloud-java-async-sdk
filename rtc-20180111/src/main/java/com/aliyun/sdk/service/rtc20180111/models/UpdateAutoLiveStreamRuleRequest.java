@@ -174,6 +174,7 @@ public class UpdateAutoLiveStreamRuleRequest extends Request {
         } 
 
         /**
+         * <p>The application ID. You can create and query application IDs in the console.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -186,7 +187,10 @@ public class UpdateAutoLiveStreamRuleRequest extends Request {
         }
 
         /**
-         * CallBack.
+         * <p>The callback URL for starting and stopping the bypass. You can query the bypass callback URL in the console or by calling the <a href="https://help.aliyun.com/document_detail/353198.html">DescribeAutoLiveStreamRule</a> operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://example.com/callback">http://example.com/callback</a></p>
          */
         public Builder callBack(String callBack) {
             this.putQueryParameter("CallBack", callBack);
@@ -195,7 +199,7 @@ public class UpdateAutoLiveStreamRuleRequest extends Request {
         }
 
         /**
-         * ChannelIdPrefixes.
+         * <p>The prefix list of channel IDs for fuzzy matching.</p>
          */
         public Builder channelIdPrefixes(java.util.List<String> channelIdPrefixes) {
             this.putQueryParameter("ChannelIdPrefixes", channelIdPrefixes);
@@ -204,7 +208,7 @@ public class UpdateAutoLiveStreamRuleRequest extends Request {
         }
 
         /**
-         * ChannelIds.
+         * <p>The list of channel IDs for exact matching.</p>
          */
         public Builder channelIds(java.util.List<String> channelIds) {
             this.putQueryParameter("ChannelIds", channelIds);
@@ -213,7 +217,10 @@ public class UpdateAutoLiveStreamRuleRequest extends Request {
         }
 
         /**
-         * MediaEncode.
+         * <p>The encoding options. For more information, see the valid values of MediaEncode in <a href="https://help.aliyun.com/document_detail/353179.html">CreateAutoLiveStreamRule</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder mediaEncode(Integer mediaEncode) {
             this.putQueryParameter("MediaEncode", mediaEncode);
@@ -231,6 +238,12 @@ public class UpdateAutoLiveStreamRuleRequest extends Request {
         }
 
         /**
+         * <p>The streaming domain name for automatic bypass. The streaming URL for an automatic bypass task is rtmp://${domain}/${app}/${stream}.</p>
+         * <ul>
+         * <li>domain: Your live streaming domain name.</li>
+         * <li>app: live.</li>
+         * <li>stream: urlencode(${AppId}<em>${ChannelId}</em>${UserId}_${SourceType}), where SourceType is the input source type.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -243,6 +256,7 @@ public class UpdateAutoLiveStreamRuleRequest extends Request {
         }
 
         /**
+         * <p>The ID of the bypass rule. You can query the bypass rule ID in the console or by calling the <a href="https://help.aliyun.com/document_detail/353198.html">DescribeAutoLiveStreamRule</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -255,7 +269,10 @@ public class UpdateAutoLiveStreamRuleRequest extends Request {
         }
 
         /**
-         * RuleName.
+         * <p>The name of the bypass rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testRule</p>
          */
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("RuleName", ruleName);

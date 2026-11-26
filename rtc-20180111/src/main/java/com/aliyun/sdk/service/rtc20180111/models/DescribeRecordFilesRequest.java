@@ -159,6 +159,7 @@ public class DescribeRecordFilesRequest extends Request {
         } 
 
         /**
+         * <p>The application ID. Only a single ID can be passed. You can create and query it in the console.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -171,7 +172,10 @@ public class DescribeRecordFilesRequest extends Request {
         }
 
         /**
-         * ChannelId.
+         * <p>The channel ID. Only a single ID can be passed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yourChannelId</p>
          */
         public Builder channelId(String channelId) {
             this.putQueryParameter("ChannelId", channelId);
@@ -180,7 +184,10 @@ public class DescribeRecordFilesRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The end time. Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC time).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-11-02T17:36:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -198,7 +205,10 @@ public class DescribeRecordFilesRequest extends Request {
         }
 
         /**
-         * PageNum.
+         * <p>The page number. By default, the first page is queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -207,7 +217,10 @@ public class DescribeRecordFilesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries to return on each page. Default value: <strong>10</strong>. Maximum value: <strong>100</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -216,7 +229,10 @@ public class DescribeRecordFilesRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The start time. Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC time).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-11-01T17:36:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -225,7 +241,10 @@ public class DescribeRecordFilesRequest extends Request {
         }
 
         /**
-         * TaskIds.
+         * <p>Recording task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yourTaskId</p>
          */
         public Builder taskIds(java.util.List<String> taskIds) {
             this.putQueryParameter("TaskIds", taskIds);

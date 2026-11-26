@@ -129,7 +129,11 @@ public class DescribeRtcPeakChannelCntDataRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * <p>The application ID. Only a single ID can be specified.</p>
+         * <p>By default, all application IDs are queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yourAppId</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -138,7 +142,11 @@ public class DescribeRtcPeakChannelCntDataRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The end time for the data query. Specify the time in the UTC format: yyyy-MM-ddTHH:mm:ssZ.</p>
+         * <p>The end time must be later than the start time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-01-29T00:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -147,7 +155,11 @@ public class DescribeRtcPeakChannelCntDataRequest extends Request {
         }
 
         /**
-         * Interval.
+         * <p>The time granularity for the data query, in seconds.</p>
+         * <p>Valid values: <strong>3600</strong> (1 hour) or <strong>86400</strong> (1 day). Default value: <strong>3600</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3600</p>
          */
         public Builder interval(String interval) {
             this.putQueryParameter("Interval", interval);
@@ -165,7 +177,10 @@ public class DescribeRtcPeakChannelCntDataRequest extends Request {
         }
 
         /**
-         * ServiceArea.
+         * <p>The service area. CN: China (default value).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CN</p>
          */
         public Builder serviceArea(String serviceArea) {
             this.putQueryParameter("ServiceArea", serviceArea);
@@ -174,7 +189,10 @@ public class DescribeRtcPeakChannelCntDataRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The start time for the data query. Specify the time in the UTC format: yyyy-MM-ddTHH:mm:ssZ.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-01-29T00:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

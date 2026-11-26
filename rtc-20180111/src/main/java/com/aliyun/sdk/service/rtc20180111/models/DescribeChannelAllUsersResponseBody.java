@@ -80,7 +80,11 @@ public class DescribeChannelAllUsersResponseBody extends TeaModel {
         } 
 
         /**
-         * ChannelExist.
+         * <p>Indicates whether the channel exists. Valid values:  </p>
+         * <ul>
+         * <li><strong>true</strong>: The channel exists.  </li>
+         * <li><strong>false</strong>: The channel does not exist.</li>
+         * </ul>
          */
         public Builder channelExist(Boolean channelExist) {
             this.channelExist = channelExist;
@@ -88,7 +92,10 @@ public class DescribeChannelAllUsersResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16A96B9A-F203-4EC5-8E43-CB92E68F4CF8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +103,7 @@ public class DescribeChannelAllUsersResponseBody extends TeaModel {
         }
 
         /**
-         * Users.
+         * <p>List of online users in the channel.</p>
          */
         public Builder users(java.util.List<Users> users) {
             this.users = users;
@@ -149,7 +156,10 @@ public class DescribeChannelAllUsersResponseBody extends TeaModel {
             } 
 
             /**
-             * UserId.
+             * <p>User ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1811****</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;

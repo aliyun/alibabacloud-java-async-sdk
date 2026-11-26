@@ -129,7 +129,11 @@ public class DescribeRtcDurationDataRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * <p>The ID of the application. You can specify only one ID.</p>
+         * <p>If you leave this parameter empty, data for all your applications is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yourAppId</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -138,7 +142,11 @@ public class DescribeRtcDurationDataRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The end of the time range to query. Specify the time in UTC format: yyyy-MM-ddTHH:mm:ssZ.</p>
+         * <p>The end time must be later than the start time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-02-04T07:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -147,7 +155,11 @@ public class DescribeRtcDurationDataRequest extends Request {
         }
 
         /**
-         * Interval.
+         * <p>The time granularity of the query, in seconds.</p>
+         * <p>Valid values are <strong>3600</strong> (1 hour) and <strong>86400</strong> (1 day). The default value is <strong>3600</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3600</p>
          */
         public Builder interval(String interval) {
             this.putQueryParameter("Interval", interval);
@@ -165,7 +177,10 @@ public class DescribeRtcDurationDataRequest extends Request {
         }
 
         /**
-         * ServiceArea.
+         * <p>The area where the service is deployed. The default value is CN, which indicates China.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CN</p>
          */
         public Builder serviceArea(String serviceArea) {
             this.putQueryParameter("ServiceArea", serviceArea);
@@ -174,7 +189,10 @@ public class DescribeRtcDurationDataRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The start of the time range to query. Specify the time in UTC format: yyyy-MM-ddTHH:mm:ssZ.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-02-04T05:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

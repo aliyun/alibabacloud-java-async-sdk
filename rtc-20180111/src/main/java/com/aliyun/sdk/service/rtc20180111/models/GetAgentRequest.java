@@ -87,7 +87,10 @@ public class GetAgentRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * <p>Application ID. You can create and view this ID in the console. Only one ID is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aec****</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -96,7 +99,10 @@ public class GetAgentRequest extends Request {
         }
 
         /**
-         * ChannelId.
+         * <p>Channel ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         public Builder channelId(String channelId) {
             this.putQueryParameter("ChannelId", channelId);
@@ -105,7 +111,10 @@ public class GetAgentRequest extends Request {
         }
 
         /**
-         * TaskId.
+         * <p>Task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yourTaskId</p>
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);

@@ -67,7 +67,10 @@ public class DescribeUsageOsSdkVersionDistributionStatDataResponseBody extends T
         } 
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>231470C1-ACFB-4C9F-844F-4CFE1E3804C5</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class DescribeUsageOsSdkVersionDistributionStatDataResponseBody extends T
         }
 
         /**
-         * UsageOsSdkVersionStatList.
+         * <p>List of SDK version data in usage statistics.</p>
          */
         public Builder usageOsSdkVersionStatList(java.util.List<UsageOsSdkVersionStatList> usageOsSdkVersionStatList) {
             this.usageOsSdkVersionStatList = usageOsSdkVersionStatList;
@@ -193,7 +196,10 @@ public class DescribeUsageOsSdkVersionDistributionStatDataResponseBody extends T
             } 
 
             /**
-             * AudioCallDuration.
+             * <p>Audio call duration, in minutes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder audioCallDuration(Long audioCallDuration) {
                 this.audioCallDuration = audioCallDuration;
@@ -201,7 +207,10 @@ public class DescribeUsageOsSdkVersionDistributionStatDataResponseBody extends T
             }
 
             /**
-             * CallDurationRatio.
+             * <p>Call duration ratio, represented as a four-decimal number, such as 0.0984.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0984</p>
              */
             public Builder callDurationRatio(String callDurationRatio) {
                 this.callDurationRatio = callDurationRatio;
@@ -209,7 +218,10 @@ public class DescribeUsageOsSdkVersionDistributionStatDataResponseBody extends T
             }
 
             /**
-             * Name.
+             * <p>SDK version name, such as 1.0.0 or 1.1.1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0.0</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -217,7 +229,10 @@ public class DescribeUsageOsSdkVersionDistributionStatDataResponseBody extends T
             }
 
             /**
-             * Os.
+             * <p>Operating system, such as iOS or Android.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>macOS</p>
              */
             public Builder os(String os) {
                 this.os = os;
@@ -225,7 +240,10 @@ public class DescribeUsageOsSdkVersionDistributionStatDataResponseBody extends T
             }
 
             /**
-             * TotalCallDuration.
+             * <p>Total call duration, in minutes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>476</p>
              */
             public Builder totalCallDuration(Long totalCallDuration) {
                 this.totalCallDuration = totalCallDuration;
@@ -233,7 +251,10 @@ public class DescribeUsageOsSdkVersionDistributionStatDataResponseBody extends T
             }
 
             /**
-             * VideoCallDuration.
+             * <p>Video call duration, in minutes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>473</p>
              */
             public Builder videoCallDuration(Long videoCallDuration) {
                 this.videoCallDuration = videoCallDuration;

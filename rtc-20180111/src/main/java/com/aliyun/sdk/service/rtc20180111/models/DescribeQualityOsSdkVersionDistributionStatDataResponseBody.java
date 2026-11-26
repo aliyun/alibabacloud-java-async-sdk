@@ -67,7 +67,7 @@ public class DescribeQualityOsSdkVersionDistributionStatDataResponseBody extends
         } 
 
         /**
-         * QualityOsSdkVersionStatDataList.
+         * <p>The list of data for operating systems and SDK versions in quality statistics.</p>
          */
         public Builder qualityOsSdkVersionStatDataList(java.util.List<QualityOsSdkVersionStatDataList> qualityOsSdkVersionStatDataList) {
             this.qualityOsSdkVersionStatDataList = qualityOsSdkVersionStatDataList;
@@ -75,7 +75,10 @@ public class DescribeQualityOsSdkVersionDistributionStatDataResponseBody extends
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>231470C1-ACFB-4C9F-844F-4CFE1E3804C5</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -271,7 +274,10 @@ public class DescribeQualityOsSdkVersionDistributionStatDataResponseBody extends
             } 
 
             /**
-             * AudioDelay.
+             * <p>The audio delay, in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>248</p>
              */
             public Builder audioDelay(Long audioDelay) {
                 this.audioDelay = audioDelay;
@@ -279,7 +285,10 @@ public class DescribeQualityOsSdkVersionDistributionStatDataResponseBody extends
             }
 
             /**
-             * AudioHighQualityTransmissionRate.
+             * <p>The audio high-quality transmission rate, represented by four decimal places.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.9987</p>
              */
             public Builder audioHighQualityTransmissionRate(String audioHighQualityTransmissionRate) {
                 this.audioHighQualityTransmissionRate = audioHighQualityTransmissionRate;
@@ -287,7 +296,10 @@ public class DescribeQualityOsSdkVersionDistributionStatDataResponseBody extends
             }
 
             /**
-             * AudioStuckRate.
+             * <p>The audio stuttering rate, represented by four decimal places.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0011</p>
              */
             public Builder audioStuckRate(String audioStuckRate) {
                 this.audioStuckRate = audioStuckRate;
@@ -295,7 +307,10 @@ public class DescribeQualityOsSdkVersionDistributionStatDataResponseBody extends
             }
 
             /**
-             * CallDurationRatio.
+             * <p>The call duration ratio, represented by four decimal places. For example, 1.0000 indicates that the call duration ratio is 100%.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0984</p>
              */
             public Builder callDurationRatio(String callDurationRatio) {
                 this.callDurationRatio = callDurationRatio;
@@ -303,7 +318,10 @@ public class DescribeQualityOsSdkVersionDistributionStatDataResponseBody extends
             }
 
             /**
-             * JoinChannelSucFiveSecRate.
+             * <p>The 5-second channel join success rate, represented by four decimal places.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.8276</p>
              */
             public Builder joinChannelSucFiveSecRate(String joinChannelSucFiveSecRate) {
                 this.joinChannelSucFiveSecRate = joinChannelSucFiveSecRate;
@@ -311,7 +329,10 @@ public class DescribeQualityOsSdkVersionDistributionStatDataResponseBody extends
             }
 
             /**
-             * JoinChannelSucRate.
+             * <p>The channel join success rate, represented by four decimal places.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.8276</p>
              */
             public Builder joinChannelSucRate(String joinChannelSucRate) {
                 this.joinChannelSucRate = joinChannelSucRate;
@@ -319,7 +340,10 @@ public class DescribeQualityOsSdkVersionDistributionStatDataResponseBody extends
             }
 
             /**
-             * Name.
+             * <p>The SDK version name, such as 1.0.0 or 1.1.1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2.1.0.210316.dev--release/rtcsdk_v2.1</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -327,7 +351,10 @@ public class DescribeQualityOsSdkVersionDistributionStatDataResponseBody extends
             }
 
             /**
-             * Os.
+             * <p>The operating system name, such as iOS or Android.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>macOS</p>
              */
             public Builder os(String os) {
                 this.os = os;
@@ -335,7 +362,10 @@ public class DescribeQualityOsSdkVersionDistributionStatDataResponseBody extends
             }
 
             /**
-             * VideoDelay.
+             * <p>The video delay, in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>333</p>
              */
             public Builder videoDelay(Long videoDelay) {
                 this.videoDelay = videoDelay;
@@ -343,7 +373,10 @@ public class DescribeQualityOsSdkVersionDistributionStatDataResponseBody extends
             }
 
             /**
-             * VideoFirstPicDuration.
+             * <p>The first video frame rendering time, in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5643</p>
              */
             public Builder videoFirstPicDuration(Long videoFirstPicDuration) {
                 this.videoFirstPicDuration = videoFirstPicDuration;
@@ -351,7 +384,10 @@ public class DescribeQualityOsSdkVersionDistributionStatDataResponseBody extends
             }
 
             /**
-             * VideoHighQualityTransmissionRate.
+             * <p>The video high-quality transmission rate, represented by four decimal places.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.9997</p>
              */
             public Builder videoHighQualityTransmissionRate(String videoHighQualityTransmissionRate) {
                 this.videoHighQualityTransmissionRate = videoHighQualityTransmissionRate;
@@ -359,7 +395,10 @@ public class DescribeQualityOsSdkVersionDistributionStatDataResponseBody extends
             }
 
             /**
-             * VideoStuckRate.
+             * <p>The video stuttering rate, represented by four decimal places.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0054</p>
              */
             public Builder videoStuckRate(String videoStuckRate) {
                 this.videoStuckRate = videoStuckRate;

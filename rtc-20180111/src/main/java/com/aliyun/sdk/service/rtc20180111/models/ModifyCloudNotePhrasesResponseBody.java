@@ -67,7 +67,10 @@ public class ModifyCloudNotePhrasesResponseBody extends TeaModel {
         } 
 
         /**
-         * Id.
+         * <p>The ID of the hotword table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>21088b2617489486958531017d0b19</p>
          */
         public Builder id(String id) {
             this.id = id;

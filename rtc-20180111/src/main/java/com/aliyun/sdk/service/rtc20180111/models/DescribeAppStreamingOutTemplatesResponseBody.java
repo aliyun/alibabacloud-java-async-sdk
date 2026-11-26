@@ -104,7 +104,7 @@ public class DescribeAppStreamingOutTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * Templates.
+         * <p>List of templates.</p>
          */
         public Builder templates(java.util.List<Templates> templates) {
             this.templates = templates;
@@ -112,7 +112,10 @@ public class DescribeAppStreamingOutTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalNum.
+         * <p>Number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalNum(Long totalNum) {
             this.totalNum = totalNum;
@@ -120,7 +123,10 @@ public class DescribeAppStreamingOutTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalPage.
+         * <p>Number of pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalPage(Long totalPage) {
             this.totalPage = totalPage;
@@ -225,7 +231,10 @@ public class DescribeAppStreamingOutTemplatesResponseBody extends TeaModel {
             } 
 
             /**
-             * CreateTime.
+             * <p>Creation Time. Format: yyyy-MM-ddTHH:mm:ssZ (UTC).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-09-04T06:22:15Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -233,7 +242,7 @@ public class DescribeAppStreamingOutTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * LayoutIds.
+             * <p>List of layout IDs.</p>
              */
             public Builder layoutIds(java.util.List<String> layoutIds) {
                 this.layoutIds = layoutIds;
@@ -241,7 +250,10 @@ public class DescribeAppStreamingOutTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * MediaEncode.
+             * <p>Encoding options.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder mediaEncode(Integer mediaEncode) {
                 this.mediaEncode = mediaEncode;
@@ -249,7 +261,10 @@ public class DescribeAppStreamingOutTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>Template Name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>模板名称</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -257,7 +272,10 @@ public class DescribeAppStreamingOutTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateId.
+             * <p>Template ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Bj6D****</p>
              */
             public Builder templateId(String templateId) {
                 this.templateId = templateId;

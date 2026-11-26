@@ -80,7 +80,7 @@ public class DescribeEndPointMetricDataResponseBody extends TeaModel {
         } 
 
         /**
-         * PubMetrics.
+         * <p>The metric data of the publisher.</p>
          */
         public Builder pubMetrics(java.util.List<PubMetrics> pubMetrics) {
             this.pubMetrics = pubMetrics;
@@ -88,7 +88,10 @@ public class DescribeEndPointMetricDataResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>231470C1-ACFB-4C9F-844F-4CFE1E3804C5</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,7 @@ public class DescribeEndPointMetricDataResponseBody extends TeaModel {
         }
 
         /**
-         * SubMetrics.
+         * <p>The metric data of the subscriber.</p>
          */
         public Builder subMetrics(java.util.List<SubMetrics> subMetrics) {
             this.subMetrics = subMetrics;
@@ -175,7 +178,7 @@ public class DescribeEndPointMetricDataResponseBody extends TeaModel {
             } 
 
             /**
-             * Ext.
+             * <p>The extended properties.</p>
              */
             public Builder ext(java.util.Map<String, ?> ext) {
                 this.ext = ext;
@@ -183,7 +186,10 @@ public class DescribeEndPointMetricDataResponseBody extends TeaModel {
             }
 
             /**
-             * X.
+             * <p>The x-axis coordinate in the publisher metric trends chart.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1548670257</p>
              */
             public Builder x(String x) {
                 this.x = x;
@@ -191,7 +197,10 @@ public class DescribeEndPointMetricDataResponseBody extends TeaModel {
             }
 
             /**
-             * Y.
+             * <p>The y-axis coordinate in the publisher metric trends chart.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>230100</p>
              */
             public Builder y(String y) {
                 this.y = y;
@@ -271,7 +280,7 @@ public class DescribeEndPointMetricDataResponseBody extends TeaModel {
             } 
 
             /**
-             * Nodes.
+             * <p>The list of coordinate points.</p>
              */
             public Builder nodes(java.util.List<Nodes> nodes) {
                 this.nodes = nodes;
@@ -279,7 +288,10 @@ public class DescribeEndPointMetricDataResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The metric type corresponding to the Metrics request parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>VIDEO_STUCK_CAMERA</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -287,7 +299,10 @@ public class DescribeEndPointMetricDataResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testuserid</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -367,7 +382,7 @@ public class DescribeEndPointMetricDataResponseBody extends TeaModel {
             } 
 
             /**
-             * Ext.
+             * <p>The extended properties.</p>
              */
             public Builder ext(java.util.Map<String, ?> ext) {
                 this.ext = ext;
@@ -375,7 +390,10 @@ public class DescribeEndPointMetricDataResponseBody extends TeaModel {
             }
 
             /**
-             * X.
+             * <p>The x-axis coordinate in the subscriber metric trends chart.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1548670257</p>
              */
             public Builder x(String x) {
                 this.x = x;
@@ -383,7 +401,10 @@ public class DescribeEndPointMetricDataResponseBody extends TeaModel {
             }
 
             /**
-             * Y.
+             * <p>The y-axis coordinate in the subscriber metric trends chart.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>230100</p>
              */
             public Builder y(String y) {
                 this.y = y;
@@ -463,7 +484,7 @@ public class DescribeEndPointMetricDataResponseBody extends TeaModel {
             } 
 
             /**
-             * Nodes.
+             * <p>The list of coordinate points for the subscriber metric trends chart.</p>
              */
             public Builder nodes(java.util.List<SubMetricsNodes> nodes) {
                 this.nodes = nodes;
@@ -471,7 +492,10 @@ public class DescribeEndPointMetricDataResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The metric type corresponding to the Metrics request parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>VIDEO_STUCK_CAMERA</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -479,7 +503,10 @@ public class DescribeEndPointMetricDataResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testuserid</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;

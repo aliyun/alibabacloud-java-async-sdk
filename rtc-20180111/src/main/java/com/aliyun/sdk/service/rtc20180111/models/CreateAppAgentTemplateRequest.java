@@ -257,7 +257,7 @@ public class CreateAppAgentTemplateRequest extends Request {
         } 
 
         /**
-         * AgentSilenceConfig.
+         * <p>The agent silence configuration.</p>
          */
         public Builder agentSilenceConfig(AgentSilenceConfig agentSilenceConfig) {
             String agentSilenceConfigShrink = shrink(agentSilenceConfig, "AgentSilenceConfig", "json");
@@ -267,7 +267,7 @@ public class CreateAppAgentTemplateRequest extends Request {
         }
 
         /**
-         * AmbientSoundConfig.
+         * <p>The ambient environment configuration for the agent. If this parameter is not specified, the ambient environment configuration is not used.</p>
          */
         public Builder ambientSoundConfig(AmbientSoundConfig ambientSoundConfig) {
             String ambientSoundConfigShrink = shrink(ambientSoundConfig, "AmbientSoundConfig", "json");
@@ -277,6 +277,7 @@ public class CreateAppAgentTemplateRequest extends Request {
         }
 
         /**
+         * <p>The application ID. You can create and query the ID in the console. Only a single ID is supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -289,7 +290,7 @@ public class CreateAppAgentTemplateRequest extends Request {
         }
 
         /**
-         * AsrConfig.
+         * <p>The speech-to-text settings.</p>
          */
         public Builder asrConfig(AsrConfig asrConfig) {
             String asrConfigShrink = shrink(asrConfig, "AsrConfig", "json");
@@ -299,7 +300,7 @@ public class CreateAppAgentTemplateRequest extends Request {
         }
 
         /**
-         * BackChannelConfig.
+         * <p>The agent backchannel configuration.</p>
          */
         public Builder backChannelConfig(BackChannelConfig backChannelConfig) {
             String backChannelConfigShrink = shrink(backChannelConfig, "BackChannelConfig", "json");
@@ -309,7 +310,14 @@ public class CreateAppAgentTemplateRequest extends Request {
         }
 
         /**
-         * ChatMode.
+         * <p>The conversation mode. Valid values:</p>
+         * <ul>
+         * <li>1: Natural conversation mode (default).</li>
+         * <li>2: Walkie-talkie mode.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder chatMode(Integer chatMode) {
             this.putQueryParameter("ChatMode", chatMode);
@@ -318,7 +326,7 @@ public class CreateAppAgentTemplateRequest extends Request {
         }
 
         /**
-         * EnableVideoUnderstanding.
+         * <p>Specifies whether to enable video understanding. If enabled, the LLM must support multimodal data.</p>
          */
         public Builder enableVideoUnderstanding(Boolean enableVideoUnderstanding) {
             this.putQueryParameter("EnableVideoUnderstanding", enableVideoUnderstanding);
@@ -327,7 +335,10 @@ public class CreateAppAgentTemplateRequest extends Request {
         }
 
         /**
-         * Greeting.
+         * <p>The greeting message. The maximum length is 500 characters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Good morning, my friend!</p>
          */
         public Builder greeting(String greeting) {
             this.putQueryParameter("Greeting", greeting);
@@ -336,7 +347,7 @@ public class CreateAppAgentTemplateRequest extends Request {
         }
 
         /**
-         * InterruptConfig.
+         * <p>The agent interruption configuration.</p>
          */
         public Builder interruptConfig(InterruptConfig interruptConfig) {
             String interruptConfigShrink = shrink(interruptConfig, "InterruptConfig", "json");
@@ -346,7 +357,14 @@ public class CreateAppAgentTemplateRequest extends Request {
         }
 
         /**
-         * InterruptMode.
+         * <p>The interruption mode. Valid values:</p>
+         * <ul>
+         * <li>1: Interruption allowed (default).</li>
+         * <li>2: Interruption disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder interruptMode(Integer interruptMode) {
             this.putQueryParameter("InterruptMode", interruptMode);
@@ -355,7 +373,7 @@ public class CreateAppAgentTemplateRequest extends Request {
         }
 
         /**
-         * LlmConfig.
+         * <p>The large language model settings.</p>
          */
         public Builder llmConfig(LlmConfig llmConfig) {
             String llmConfigShrink = shrink(llmConfig, "LlmConfig", "json");
@@ -365,10 +383,11 @@ public class CreateAppAgentTemplateRequest extends Request {
         }
 
         /**
+         * <p>The template name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>智能体模版</p>
+         * <p>Agent template</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -377,7 +396,15 @@ public class CreateAppAgentTemplateRequest extends Request {
         }
 
         /**
-         * PreferVideo.
+         * <p>The preferred video stream for the agent to process when visual understanding is enabled. The agent can process only one video stream at a time. When both the camera stream and the screen sharing stream are pushed simultaneously, this parameter specifies the preferred stream. Valid values:</p>
+         * <ul>
+         * <li>1: The agent preferentially processes the camera stream.</li>
+         * <li>2: The agent preferentially processes the screen sharing stream.
+         * Default value: 1.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder preferVideo(Integer preferVideo) {
             this.putQueryParameter("PreferVideo", preferVideo);
@@ -386,7 +413,7 @@ public class CreateAppAgentTemplateRequest extends Request {
         }
 
         /**
-         * TtsConfig.
+         * <p>The text-to-speech settings.</p>
          */
         public Builder ttsConfig(TtsConfig ttsConfig) {
             String ttsConfigShrink = shrink(ttsConfig, "TtsConfig", "json");
@@ -396,7 +423,13 @@ public class CreateAppAgentTemplateRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>The agent type. Valid values:</p>
+         * <ul>
+         * <li>1: Voice call (default).</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder type(Integer type) {
             this.putQueryParameter("Type", type);
@@ -492,7 +525,10 @@ public class CreateAppAgentTemplateRequest extends Request {
             } 
 
             /**
-             * AlertTimeout.
+             * <p>The timeout period for silence alerts, in seconds. This alert can be triggered multiple times. If the agent remains silent after the timeout period elapses, the alert is triggered again upon the next timeout. Valid values: 5 to 600. Default value: 0. A value of 0 indicates that no alert is triggered.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder alertTimeout(Integer alertTimeout) {
                 this.alertTimeout = alertTimeout;
@@ -500,7 +536,10 @@ public class CreateAppAgentTemplateRequest extends Request {
             }
 
             /**
-             * Content.
+             * <p>The content of the silence prompt message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Hello, please try again later?</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -508,7 +547,15 @@ public class CreateAppAgentTemplateRequest extends Request {
             }
 
             /**
-             * Strategy.
+             * <p>The handling strategy for silence timeout. Valid values:</p>
+             * <ul>
+             * <li>1: Broadcasts the prompt message specified by Content to the user via voice.</li>
+             * <li>2: Sends the prompt message specified by Content and the conversation history to the LLM, and broadcasts the reply generated by the model.
+             * Default value: 1.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder strategy(Integer strategy) {
                 this.strategy = strategy;
@@ -516,7 +563,10 @@ public class CreateAppAgentTemplateRequest extends Request {
             }
 
             /**
-             * WebhookTriggerTimeout.
+             * <p>The timeout period for triggering the webhook upon agent silence, in seconds. This webhook can be triggered multiple times. If the agent remains silent after the webhook timeout period elapses, the webhook is triggered again upon the next timeout. Valid values: 10 to 600. Default value: 0. A value of 0 indicates that the webhook is not triggered.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder webhookTriggerTimeout(Integer webhookTriggerTimeout) {
                 this.webhookTriggerTimeout = webhookTriggerTimeout;
@@ -585,7 +635,14 @@ public class CreateAppAgentTemplateRequest extends Request {
             } 
 
             /**
-             * SoundId.
+             * <p>The default ambient sounds provided by the agent. Valid values:</p>
+             * <ul>
+             * <li>white_noise </li>
+             * <li>office</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>white_noise</p>
              */
             public Builder soundId(String soundId) {
                 this.soundId = soundId;
@@ -593,7 +650,10 @@ public class CreateAppAgentTemplateRequest extends Request {
             }
 
             /**
-             * Volume.
+             * <p>The volume level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder volume(Integer volume) {
                 this.volume = volume;
@@ -648,7 +708,10 @@ public class CreateAppAgentTemplateRequest extends Request {
             } 
 
             /**
-             * InterruptSpeechDuration.
+             * <p>The minimum duration of continuous voice signals in milliseconds to avoid false interruptions. Default value: 300. Valid values: 0 to 3000.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder interruptSpeechDuration(Integer interruptSpeechDuration) {
                 this.interruptSpeechDuration = interruptSpeechDuration;
@@ -730,7 +793,14 @@ public class CreateAppAgentTemplateRequest extends Request {
             } 
 
             /**
-             * Lang.
+             * <p>The language code. This parameter is optional. The large language model automatically identifies the language. Valid values:</p>
+             * <ul>
+             * <li>zh: Chinese.</li>
+             * <li>en: English.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>zh</p>
              */
             public Builder lang(String lang) {
                 this.lang = lang;
@@ -738,6 +808,7 @@ public class CreateAppAgentTemplateRequest extends Request {
             }
 
             /**
+             * <p>The hot word weight. Valid values: integers from 1 to 5. Common value: 4. If the effect is not obvious, you can increase the weight. However, a large weight may cause negative effects and lead to inaccurate recognition of other words.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -749,10 +820,11 @@ public class CreateAppAgentTemplateRequest extends Request {
             }
 
             /**
+             * <p>The hot word text. Each word can be up to 10 Chinese characters or English words in length.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
-             * <p>苹果</p>
+             * <p>Apple</p>
              */
             public Builder word(String word) {
                 this.word = word;
@@ -846,7 +918,10 @@ public class CreateAppAgentTemplateRequest extends Request {
             } 
 
             /**
-             * MaxSentenceSilence.
+             * <p>The sentence silence detection threshold. Default value: 500 ms. Valid values: 200 to 6000.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>300</p>
              */
             public Builder maxSentenceSilence(Integer maxSentenceSilence) {
                 this.maxSentenceSilence = maxSentenceSilence;
@@ -854,6 +929,7 @@ public class CreateAppAgentTemplateRequest extends Request {
             }
 
             /**
+             * <p>The name.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -865,7 +941,7 @@ public class CreateAppAgentTemplateRequest extends Request {
             }
 
             /**
-             * VadConfig.
+             * <p>The voice activity detection (VAD) configuration.</p>
              */
             public Builder vadConfig(VadConfig vadConfig) {
                 this.vadConfig = vadConfig;
@@ -873,7 +949,7 @@ public class CreateAppAgentTemplateRequest extends Request {
             }
 
             /**
-             * WordWeights.
+             * <p>The hot words. Each vocabulary can contain up to 500 hot words, and each hot word can be up to 10 Chinese characters in length. Hot words must be UTF-8 encoded and cannot contain punctuation marks or special characters. Otherwise, the hot words do not take effect.</p>
              */
             public Builder wordWeights(java.util.List<WordWeights> wordWeights) {
                 this.wordWeights = wordWeights;
@@ -927,7 +1003,7 @@ public class CreateAppAgentTemplateRequest extends Request {
             } 
 
             /**
-             * UserTurnEnd.
+             * <p>Specifies whether to enable backchanneling.</p>
              */
             public Builder userTurnEnd(Boolean userTurnEnd) {
                 this.userTurnEnd = userTurnEnd;
@@ -981,7 +1057,7 @@ public class CreateAppAgentTemplateRequest extends Request {
             } 
 
             /**
-             * SemanticsInterrupt.
+             * <p>The semantic interruption configuration.</p>
              */
             public Builder semanticsInterrupt(Boolean semanticsInterrupt) {
                 this.semanticsInterrupt = semanticsInterrupt;
@@ -1157,7 +1233,7 @@ public class CreateAppAgentTemplateRequest extends Request {
             } 
 
             /**
-             * AgentAppId.
+             * <p>The ID of the Model Studio agent.</p>
              */
             public Builder agentAppId(String agentAppId) {
                 this.agentAppId = agentAppId;
@@ -1165,6 +1241,7 @@ public class CreateAppAgentTemplateRequest extends Request {
             }
 
             /**
+             * <p>The API key required by the large language model service provider.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1176,7 +1253,10 @@ public class CreateAppAgentTemplateRequest extends Request {
             }
 
             /**
-             * HistoryDepth.
+             * <p>The number of historical conversation turns provided to the large language model. Maximum value: 100. Default value: 50.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder historyDepth(Integer historyDepth) {
                 this.historyDepth = historyDepth;
@@ -1184,7 +1264,10 @@ public class CreateAppAgentTemplateRequest extends Request {
             }
 
             /**
-             * MaxToken.
+             * <p>The maximum number of tokens for the output text. Default value: 8192.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1024</p>
              */
             public Builder maxToken(Integer maxToken) {
                 this.maxToken = maxToken;
@@ -1192,6 +1275,7 @@ public class CreateAppAgentTemplateRequest extends Request {
             }
 
             /**
+             * <p>The name.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1203,7 +1287,10 @@ public class CreateAppAgentTemplateRequest extends Request {
             }
 
             /**
-             * Prompt.
+             * <p>The prompt for the large language model. The maximum length is 5,000 characters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>You are a senior psychiatrist</p>
              */
             public Builder prompt(String prompt) {
                 this.prompt = prompt;
@@ -1211,7 +1298,10 @@ public class CreateAppAgentTemplateRequest extends Request {
             }
 
             /**
-             * Temperature.
+             * <p>The sampling temperature. Default value: 0.7. Valid values: [0, 2).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.9</p>
              */
             public Builder temperature(Float temperature) {
                 this.temperature = temperature;
@@ -1219,7 +1309,10 @@ public class CreateAppAgentTemplateRequest extends Request {
             }
 
             /**
-             * TopP.
+             * <p>The top-P sampling range. Default value: 0.8. Valid values: (0, 1].</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.8</p>
              */
             public Builder topP(Float topP) {
                 this.topP = topP;
@@ -1227,7 +1320,10 @@ public class CreateAppAgentTemplateRequest extends Request {
             }
 
             /**
-             * Url.
+             * <p>The endpoint URL for connecting to a third-party large language model.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://llm.example.aliyuns.com">https://llm.example.aliyuns.com</a></p>
              */
             public Builder url(String url) {
                 this.url = url;
@@ -1235,6 +1331,7 @@ public class CreateAppAgentTemplateRequest extends Request {
             }
 
             /**
+             * <p>The provider. Alibaba Cloud Model Studio and third-party configurations that comply with OpenAI API specifications are supported.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1385,6 +1482,7 @@ public class CreateAppAgentTemplateRequest extends Request {
             } 
 
             /**
+             * <p>The API key required by the large language model service provider.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1396,7 +1494,14 @@ public class CreateAppAgentTemplateRequest extends Request {
             }
 
             /**
-             * FilterBrackets.
+             * <p>The filter settings. Valid values:</p>
+             * <ul>
+             * <li>1: Chinese parentheses （）</li>
+             * <li>2: English parentheses ()</li>
+             * <li>3: Chinese square brackets 【】</li>
+             * <li>4: English square brackets []</li>
+             * <li>5: English curly braces {}</li>
+             * </ul>
              */
             public Builder filterBrackets(java.util.List<Integer> filterBrackets) {
                 this.filterBrackets = filterBrackets;
@@ -1404,6 +1509,7 @@ public class CreateAppAgentTemplateRequest extends Request {
             }
 
             /**
+             * <p>The name.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1415,7 +1521,10 @@ public class CreateAppAgentTemplateRequest extends Request {
             }
 
             /**
-             * Pitch.
+             * <p>The pitch. Default value: 1.0. Valid values: 0.5 to 2.0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.8</p>
              */
             public Builder pitch(Float pitch) {
                 this.pitch = pitch;
@@ -1423,7 +1532,10 @@ public class CreateAppAgentTemplateRequest extends Request {
             }
 
             /**
-             * Rate.
+             * <p>The speech rate. Default value: 1.0. Valid values: 0.5 to 2.0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.8</p>
              */
             public Builder rate(Float rate) {
                 this.rate = rate;
@@ -1431,10 +1543,10 @@ public class CreateAppAgentTemplateRequest extends Request {
             }
 
             /**
-             * <p>This parameter is required.</p>
+             * <p>The provider. Alibaba Cloud Model Studio is supported.</p>
              * 
              * <strong>example:</strong>
-             * <p>thirdparty</p>
+             * <p>aliyun</p>
              */
             public Builder vendor(String vendor) {
                 this.vendor = vendor;
@@ -1442,7 +1554,32 @@ public class CreateAppAgentTemplateRequest extends Request {
             }
 
             /**
-             * Voice.
+             * <p>The voice. Default value: longxiaoxia. Valid values:</p>
+             * <ul>
+             * <li>longwan</li>
+             * <li>longcheng</li>
+             * <li>longhua</li>
+             * <li>longxiaochun</li>
+             * <li>longxiaoxia</li>
+             * <li>longxiaocheng</li>
+             * <li>longxiaobai</li>
+             * <li>longlaotie</li>
+             * <li>longshu</li>
+             * <li>longshuo</li>
+             * <li>longjing</li>
+             * <li>longmiao</li>
+             * <li>longyue</li>
+             * <li>longyuan</li>
+             * <li>longfei</li>
+             * <li>longjielidou</li>
+             * <li>longtong</li>
+             * <li>longxiang</li>
+             * <li>loongstella</li>
+             * <li>loongbella</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>longcheng</p>
              */
             public Builder voice(String voice) {
                 this.voice = voice;
@@ -1450,7 +1587,10 @@ public class CreateAppAgentTemplateRequest extends Request {
             }
 
             /**
-             * Volume.
+             * <p>The volume. Default value: 50. Valid values: 0 to 100.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>70</p>
              */
             public Builder volume(Integer volume) {
                 this.volume = volume;

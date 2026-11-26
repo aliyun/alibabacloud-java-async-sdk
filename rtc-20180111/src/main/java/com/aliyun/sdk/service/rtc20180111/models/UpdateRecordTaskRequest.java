@@ -287,6 +287,7 @@ public class UpdateRecordTaskRequest extends Request {
         } 
 
         /**
+         * <p>The application ID. You can create and query the ID in the console. Only a single ID is supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -299,6 +300,7 @@ public class UpdateRecordTaskRequest extends Request {
         }
 
         /**
+         * <p>The channel ID. Only a single ID is supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -320,7 +322,7 @@ public class UpdateRecordTaskRequest extends Request {
         }
 
         /**
-         * LayoutIds.
+         * <p>The array of layout IDs.</p>
          */
         public Builder layoutIds(java.util.List<Long> layoutIds) {
             this.putQueryParameter("LayoutIds", layoutIds);
@@ -347,7 +349,7 @@ public class UpdateRecordTaskRequest extends Request {
         }
 
         /**
-         * SubSpecAudioUsers.
+         * <p>Specifies the users whose audio streams are subscribed to in the channel.</p>
          */
         public Builder subSpecAudioUsers(java.util.List<String> subSpecAudioUsers) {
             this.putQueryParameter("SubSpecAudioUsers", subSpecAudioUsers);
@@ -356,7 +358,7 @@ public class UpdateRecordTaskRequest extends Request {
         }
 
         /**
-         * SubSpecCameraUsers.
+         * <p>Specifies the users whose camera streams are subscribed to in the channel.</p>
          */
         public Builder subSpecCameraUsers(java.util.List<String> subSpecCameraUsers) {
             this.putQueryParameter("SubSpecCameraUsers", subSpecCameraUsers);
@@ -365,7 +367,7 @@ public class UpdateRecordTaskRequest extends Request {
         }
 
         /**
-         * SubSpecShareScreenUsers.
+         * <p>Specifies the users whose screen sharing streams are subscribed to in the channel.</p>
          */
         public Builder subSpecShareScreenUsers(java.util.List<String> subSpecShareScreenUsers) {
             this.putQueryParameter("SubSpecShareScreenUsers", subSpecShareScreenUsers);
@@ -374,7 +376,10 @@ public class UpdateRecordTaskRequest extends Request {
         }
 
         /**
-         * SubSpecUsers.
+         * <p>Specifies the list of users to which the task subscribes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>userID</p>
          */
         public Builder subSpecUsers(java.util.List<String> subSpecUsers) {
             this.putQueryParameter("SubSpecUsers", subSpecUsers);
@@ -383,6 +388,7 @@ public class UpdateRecordTaskRequest extends Request {
         }
 
         /**
+         * <p>The task ID. Only a single ID is supported. The value must be the same as the TaskId request parameter of <a href="https://help.aliyun.com/document_detail/193528.html">StartRecordTask</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -404,6 +410,7 @@ public class UpdateRecordTaskRequest extends Request {
         }
 
         /**
+         * <p>The configuration template ID. For more information about how to obtain the template ID, see <a href="https://help.aliyun.com/document_detail/193625.html">AddRecordTemplate</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -416,7 +423,7 @@ public class UpdateRecordTaskRequest extends Request {
         }
 
         /**
-         * UnsubSpecAudioUsers.
+         * <p>Specifies the users whose audio streams are not subscribed to in the channel.</p>
          */
         public Builder unsubSpecAudioUsers(java.util.List<String> unsubSpecAudioUsers) {
             this.putQueryParameter("UnsubSpecAudioUsers", unsubSpecAudioUsers);
@@ -425,7 +432,7 @@ public class UpdateRecordTaskRequest extends Request {
         }
 
         /**
-         * UnsubSpecCameraUsers.
+         * <p>Specifies the users whose camera streams are not subscribed to in the channel.</p>
          */
         public Builder unsubSpecCameraUsers(java.util.List<String> unsubSpecCameraUsers) {
             this.putQueryParameter("UnsubSpecCameraUsers", unsubSpecCameraUsers);
@@ -434,7 +441,7 @@ public class UpdateRecordTaskRequest extends Request {
         }
 
         /**
-         * UnsubSpecShareScreenUsers.
+         * <p>Specifies the users whose screen sharing streams are not subscribed to in the channel.</p>
          */
         public Builder unsubSpecShareScreenUsers(java.util.List<String> unsubSpecShareScreenUsers) {
             this.putQueryParameter("UnsubSpecShareScreenUsers", unsubSpecShareScreenUsers);
@@ -443,7 +450,7 @@ public class UpdateRecordTaskRequest extends Request {
         }
 
         /**
-         * UserPanes.
+         * <p>The list of layout parameters.</p>
          */
         public Builder userPanes(java.util.List<UserPanes> userPanes) {
             this.putQueryParameter("UserPanes", userPanes);
@@ -576,7 +583,15 @@ public class UpdateRecordTaskRequest extends Request {
             } 
 
             /**
-             * Display.
+             * <p>Specifies whether to display the image. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong> (None): Not displayed.</li>
+             * <li><strong>1</strong> (Always): Always displayed.</li>
+             * <li><strong>2</strong> (Backup): Displayed when the current user has no video stream.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder display(Integer display) {
                 this.display = display;
@@ -584,7 +599,10 @@ public class UpdateRecordTaskRequest extends Request {
             }
 
             /**
-             * Height.
+             * <p>The height of the pane, as a normalized percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.2456</p>
              */
             public Builder height(Float height) {
                 this.height = height;
@@ -592,7 +610,10 @@ public class UpdateRecordTaskRequest extends Request {
             }
 
             /**
-             * Url.
+             * <p>The HTTP or HTTPS URL of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://www.example.com/image.jpg">https://www.example.com/image.jpg</a></p>
              */
             public Builder url(String url) {
                 this.url = url;
@@ -600,7 +621,10 @@ public class UpdateRecordTaskRequest extends Request {
             }
 
             /**
-             * Width.
+             * <p>The width of the pane, as a normalized percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.2456</p>
              */
             public Builder width(Float width) {
                 this.width = width;
@@ -608,7 +632,10 @@ public class UpdateRecordTaskRequest extends Request {
             }
 
             /**
-             * X.
+             * <p>The X-coordinate, as a normalized percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.7576</p>
              */
             public Builder x(Float x) {
                 this.x = x;
@@ -616,7 +643,10 @@ public class UpdateRecordTaskRequest extends Request {
             }
 
             /**
-             * Y.
+             * <p>The Y-coordinate, as a normalized percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.7576</p>
              */
             public Builder y(Float y) {
                 this.y = y;
@@ -624,7 +654,10 @@ public class UpdateRecordTaskRequest extends Request {
             }
 
             /**
-             * ZOrder.
+             * <p>The Z-order. 0 indicates the bottom layer, 1 indicates the layer above 0, and so on.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder zOrder(Integer zOrder) {
                 this.zOrder = zOrder;
@@ -756,7 +789,10 @@ public class UpdateRecordTaskRequest extends Request {
             } 
 
             /**
-             * FontColor.
+             * <p>The text color in RGB format. The calculation formula is R + G × 256 + B × 65536. Valid values of R (red), G (green), and B (blue): <strong>0 to 255</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder fontColor(Integer fontColor) {
                 this.fontColor = fontColor;
@@ -764,7 +800,10 @@ public class UpdateRecordTaskRequest extends Request {
             }
 
             /**
-             * FontSize.
+             * <p>The font size. Valid values: <strong>(0, 72]</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder fontSize(Integer fontSize) {
                 this.fontSize = fontSize;
@@ -772,7 +811,18 @@ public class UpdateRecordTaskRequest extends Request {
             }
 
             /**
-             * FontType.
+             * <p>The font type. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong> (default): NOTO_SERIF_CJKSC_REGULAR.</li>
+             * <li><strong>1</strong>: ALIBABA_PUHUITI_REGULAR.</li>
+             * <li><strong>2</strong>: ALIBABA_PUHUITI_BOLD.</li>
+             * <li><strong>3</strong>: ALIBABA_PUHUITI_Heavy.</li>
+             * <li><strong>4</strong>: ALIBABA_PUHUITI_LIGHT.</li>
+             * <li><strong>5</strong>: ALIBABA_PUHUITI_MEDIUM.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder fontType(Integer fontType) {
                 this.fontType = fontType;
@@ -780,7 +830,10 @@ public class UpdateRecordTaskRequest extends Request {
             }
 
             /**
-             * Text.
+             * <p>The text content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>text</p>
              */
             public Builder text(String text) {
                 this.text = text;
@@ -788,7 +841,10 @@ public class UpdateRecordTaskRequest extends Request {
             }
 
             /**
-             * X.
+             * <p>The X-coordinate, as a normalized percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.7576</p>
              */
             public Builder x(Float x) {
                 this.x = x;
@@ -796,7 +852,10 @@ public class UpdateRecordTaskRequest extends Request {
             }
 
             /**
-             * Y.
+             * <p>The Y-coordinate, as a normalized percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.7576</p>
              */
             public Builder y(Float y) {
                 this.y = y;
@@ -804,7 +863,10 @@ public class UpdateRecordTaskRequest extends Request {
             }
 
             /**
-             * ZOrder.
+             * <p>The Z-order. 0 indicates the bottom layer, 1 indicates the layer above 0, and so on.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder zOrder(Integer zOrder) {
                 this.zOrder = zOrder;
@@ -910,7 +972,7 @@ public class UpdateRecordTaskRequest extends Request {
             } 
 
             /**
-             * Images.
+             * <p>The list of image panes in the current layout.</p>
              */
             public Builder images(java.util.List<Images> images) {
                 this.images = images;
@@ -918,7 +980,13 @@ public class UpdateRecordTaskRequest extends Request {
             }
 
             /**
-             * PaneId.
+             * <p>The pane ID. Valid values of N: <strong>1 to 16</strong>. Valid values of PaneId: <strong>0 to 15</strong>.</p>
+             * <blockquote>
+             * <p>If the user specified by PaneId is not found, other streams are displayed by default. The streams are determined based on the order in which users join the channel.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder paneId(Integer paneId) {
                 this.paneId = paneId;
@@ -926,7 +994,15 @@ public class UpdateRecordTaskRequest extends Request {
             }
 
             /**
-             * SourceType.
+             * <p>The video input source of the user corresponding to the layout. Valid values:</p>
+             * <ul>
+             * <li><strong>camera</strong> (default): the video stream.</li>
+             * <li><strong>shareScreen</strong>: the screen sharing stream.</li>
+             * </ul>
+             * <p>Valid values of N: <strong>1 to 16</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>camera</p>
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;
@@ -934,7 +1010,7 @@ public class UpdateRecordTaskRequest extends Request {
             }
 
             /**
-             * Texts.
+             * <p>The list of text panes in the current layout.</p>
              */
             public Builder texts(java.util.List<Texts> texts) {
                 this.texts = texts;
@@ -942,7 +1018,10 @@ public class UpdateRecordTaskRequest extends Request {
             }
 
             /**
-             * UserId.
+             * <p>The ID of the user corresponding to the layout pane. Valid values of N: <strong>1 to 16</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestId</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;

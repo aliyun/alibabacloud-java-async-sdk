@@ -54,7 +54,10 @@ public class StartRecordTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>760bad53276431c499e30dc36f6b****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

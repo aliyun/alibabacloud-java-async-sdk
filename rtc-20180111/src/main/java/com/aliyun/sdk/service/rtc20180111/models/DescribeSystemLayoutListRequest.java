@@ -96,7 +96,10 @@ public class DescribeSystemLayoutListRequest extends Request {
         }
 
         /**
-         * PageNum.
+         * <p>Page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Long pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -105,7 +108,10 @@ public class DescribeSystemLayoutListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>Number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);

@@ -67,7 +67,7 @@ public class DescribeCallbacksResponseBody extends TeaModel {
         } 
 
         /**
-         * Callbacks.
+         * <p>A list of subscribed events for the application.</p>
          */
         public Builder callbacks(java.util.List<Callbacks> callbacks) {
             this.callbacks = callbacks;
@@ -209,7 +209,10 @@ public class DescribeCallbacksResponseBody extends TeaModel {
             } 
 
             /**
-             * Category.
+             * <p>The callback code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RecordEvent</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -217,7 +220,10 @@ public class DescribeCallbacksResponseBody extends TeaModel {
             }
 
             /**
-             * CheckStatus.
+             * <p>The callback validation status. 0 indicates validating. 1 indicates validation successful. 2 indicates validation failed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder checkStatus(String checkStatus) {
                 this.checkStatus = checkStatus;
@@ -225,7 +231,10 @@ public class DescribeCallbacksResponseBody extends TeaModel {
             }
 
             /**
-             * Code.
+             * <p>The callback validation code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RESPONSE_INVALID</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -233,7 +242,10 @@ public class DescribeCallbacksResponseBody extends TeaModel {
             }
 
             /**
-             * Conf.
+             * <p>The webhook address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://www.aliyun.com">https://www.aliyun.com</a></p>
              */
             public Builder conf(String conf) {
                 this.conf = conf;
@@ -241,7 +253,10 @@ public class DescribeCallbacksResponseBody extends TeaModel {
             }
 
             /**
-             * Msg.
+             * <p>The callback validation message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Success</p>
              */
             public Builder msg(String msg) {
                 this.msg = msg;
@@ -249,7 +264,10 @@ public class DescribeCallbacksResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The callback status. 0 indicates enabled. 1 indicates disabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -257,7 +275,16 @@ public class DescribeCallbacksResponseBody extends TeaModel {
             }
 
             /**
-             * SubEvent.
+             * <p>The sub-events. For more information, see Callback overview.
+             * Recording events:</p>
+             * <ul>
+             * <li><p><strong>2010</strong>: The service status of the recording changes.</p>
+             * </li>
+             * <li><p><strong>2011</strong>: The status of the recording audio stream changes.</p>
+             * </li>
+             * <li><p><strong>2012</strong>: The status of the recording video stream changes.</p>
+             * </li>
+             * </ul>
              */
             public Builder subEvent(java.util.List<Integer> subEvent) {
                 this.subEvent = subEvent;

@@ -107,7 +107,7 @@ public class DescribeAppRecordingFilesResponseBody extends TeaModel {
         } 
 
         /**
-         * Items.
+         * <p>List of recording files.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -115,7 +115,10 @@ public class DescribeAppRecordingFilesResponseBody extends TeaModel {
         }
 
         /**
-         * PageNo.
+         * <p>Page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.pageNo = pageNo;
@@ -123,7 +126,10 @@ public class DescribeAppRecordingFilesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>Number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -142,7 +148,10 @@ public class DescribeAppRecordingFilesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCnt.
+         * <p>Total count.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCnt(Integer totalCnt) {
             this.totalCnt = totalCnt;
@@ -312,7 +321,10 @@ public class DescribeAppRecordingFilesResponseBody extends TeaModel {
             } 
 
             /**
-             * Bucket.
+             * <p>User-defined bucket.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rtc-bucket</p>
              */
             public Builder bucket(String bucket) {
                 this.bucket = bucket;
@@ -320,7 +332,10 @@ public class DescribeAppRecordingFilesResponseBody extends TeaModel {
             }
 
             /**
-             * ChannelId.
+             * <p>Channel ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testchannelId</p>
              */
             public Builder channelId(String channelId) {
                 this.channelId = channelId;
@@ -328,7 +343,10 @@ public class DescribeAppRecordingFilesResponseBody extends TeaModel {
             }
 
             /**
-             * FileCreateTs.
+             * <p>Recording file creation timestamp, in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1712376032000</p>
              */
             public Builder fileCreateTs(Long fileCreateTs) {
                 this.fileCreateTs = fileCreateTs;
@@ -336,7 +354,10 @@ public class DescribeAppRecordingFilesResponseBody extends TeaModel {
             }
 
             /**
-             * FileDuration.
+             * <p>Recording file duration, in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder fileDuration(Integer fileDuration) {
                 this.fileDuration = fileDuration;
@@ -344,7 +365,10 @@ public class DescribeAppRecordingFilesResponseBody extends TeaModel {
             }
 
             /**
-             * FilePath.
+             * <p>Path where the recording file is stored. Use the SDK of your cloud provider&quot;s Object Storage Service to access the file. For Alibaba Cloud OSS, see <a href="https://help.aliyun.com/zh/oss/user-guide/how-to-obtain-the-url-of-a-single-object-or-the-urls-of-multiple-objects">here</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>record/appid/12_task_local1/1712279809158_1712279844691/playlist.mp4</p>
              */
             public Builder filePath(String filePath) {
                 this.filePath = filePath;
@@ -352,7 +376,10 @@ public class DescribeAppRecordingFilesResponseBody extends TeaModel {
             }
 
             /**
-             * FileSize.
+             * <p>Recording file size, in bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10000</p>
              */
             public Builder fileSize(Integer fileSize) {
                 this.fileSize = fileSize;
@@ -360,7 +387,10 @@ public class DescribeAppRecordingFilesResponseBody extends TeaModel {
             }
 
             /**
-             * Region.
+             * <p>See region used in the recording task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder region(Integer region) {
                 this.region = region;
@@ -368,7 +398,10 @@ public class DescribeAppRecordingFilesResponseBody extends TeaModel {
             }
 
             /**
-             * StartTs.
+             * <p>Recording task start timestamp, in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1712376012000</p>
              */
             public Builder startTs(Long startTs) {
                 this.startTs = startTs;
@@ -376,7 +409,10 @@ public class DescribeAppRecordingFilesResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * <p>Recording task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test001</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -384,7 +420,10 @@ public class DescribeAppRecordingFilesResponseBody extends TeaModel {
             }
 
             /**
-             * Vendor.
+             * <p>See vendor used when starting the recording task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder vendor(Integer vendor) {
                 this.vendor = vendor;

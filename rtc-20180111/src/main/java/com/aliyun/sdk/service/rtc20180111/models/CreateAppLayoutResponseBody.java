@@ -67,7 +67,10 @@ public class CreateAppLayoutResponseBody extends TeaModel {
         } 
 
         /**
-         * LayoutId.
+         * <p>The ID of the layout.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>167466539798442****</p>
          */
         public Builder layoutId(String layoutId) {
             this.layoutId = layoutId;

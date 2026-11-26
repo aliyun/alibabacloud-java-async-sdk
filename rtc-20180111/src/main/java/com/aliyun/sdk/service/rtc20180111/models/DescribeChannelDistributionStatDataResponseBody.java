@@ -67,7 +67,10 @@ public class DescribeChannelDistributionStatDataResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>231470C1-ACFB-4C9F-844F-4CFE1E3804C5</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class DescribeChannelDistributionStatDataResponseBody extends TeaModel {
         }
 
         /**
-         * StatList.
+         * <p>The channel distribution statistics list.</p>
          */
         public Builder statList(java.util.List<StatList> statList) {
             this.statList = statList;
@@ -154,7 +157,10 @@ public class DescribeChannelDistributionStatDataResponseBody extends TeaModel {
             } 
 
             /**
-             * CallUserCount.
+             * <p>The number of communicating users.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder callUserCount(Integer callUserCount) {
                 this.callUserCount = callUserCount;
@@ -162,7 +168,10 @@ public class DescribeChannelDistributionStatDataResponseBody extends TeaModel {
             }
 
             /**
-             * CallUserRatio.
+             * <p>The proportion of communicating users, represented as a decimal. For example, 1.0000 indicates that the proportion is 100%.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0000</p>
              */
             public Builder callUserRatio(String callUserRatio) {
                 this.callUserRatio = callUserRatio;
@@ -170,7 +179,10 @@ public class DescribeChannelDistributionStatDataResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The statistical dimension.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OS</p>
              */
             public Builder name(String name) {
                 this.name = name;

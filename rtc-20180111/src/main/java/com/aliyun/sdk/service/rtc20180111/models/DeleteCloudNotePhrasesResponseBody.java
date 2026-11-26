@@ -67,7 +67,10 @@ public class DeleteCloudNotePhrasesResponseBody extends TeaModel {
         } 
 
         /**
-         * Id.
+         * <p>The ID of the hot word table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>21088b2617489486958531017d0b19</p>
          */
         public Builder id(String id) {
             this.id = id;

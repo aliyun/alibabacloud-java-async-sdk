@@ -157,7 +157,10 @@ public class NotifyAgentRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * <p>The application ID. Create and query it in the console. Only a single ID is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aec****</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -166,7 +169,7 @@ public class NotifyAgentRequest extends Request {
         }
 
         /**
-         * BackgroundMusic.
+         * <p>Background audio.</p>
          */
         public Builder backgroundMusic(BackgroundMusic backgroundMusic) {
             String backgroundMusicShrink = shrink(backgroundMusic, "BackgroundMusic", "json");
@@ -176,7 +179,10 @@ public class NotifyAgentRequest extends Request {
         }
 
         /**
-         * ChannelId.
+         * <p>The channel to join. Only a single ID is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yourChannelId</p>
          */
         public Builder channelId(String channelId) {
             this.putQueryParameter("ChannelId", channelId);
@@ -185,7 +191,10 @@ public class NotifyAgentRequest extends Request {
         }
 
         /**
-         * CustomAttribute.
+         * <p>Custom parameters passed through to the client.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;color&quot;:&quot;blue&quot;}</p>
          */
         public Builder customAttribute(String customAttribute) {
             this.putQueryParameter("CustomAttribute", customAttribute);
@@ -194,7 +203,10 @@ public class NotifyAgentRequest extends Request {
         }
 
         /**
-         * Interruptable.
+         * <p>Indicates whether the announcement can be interrupted. If false, the message cannot be interrupted by voice input, key presses, or other methods.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder interruptable(Boolean interruptable) {
             this.putQueryParameter("Interruptable", interruptable);
@@ -203,7 +215,10 @@ public class NotifyAgentRequest extends Request {
         }
 
         /**
-         * Message.
+         * <p>The text content to announce.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>您好，现在是2025年4月16日，请问需要什么帮助</p>
          */
         public Builder message(String message) {
             this.putQueryParameter("Message", message);
@@ -212,7 +227,13 @@ public class NotifyAgentRequest extends Request {
         }
 
         /**
-         * Priority.
+         * <p>The priority level for inserting the announcement:
+         * 1 — Interrupt the current interaction and announce immediately.
+         * 2 — Announce after the current interaction ends.
+         * 3 — Announce only if no interaction is active.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder priority(Integer priority) {
             this.putQueryParameter("Priority", priority);
@@ -221,7 +242,10 @@ public class NotifyAgentRequest extends Request {
         }
 
         /**
-         * TaskId.
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yourTaskId</p>
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);
@@ -290,7 +314,13 @@ public class NotifyAgentRequest extends Request {
             } 
 
             /**
-             * format.
+             * <p>The audio format.</p>
+             * <ul>
+             * <li>wav</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>wav</p>
              */
             public Builder format(String format) {
                 this.format = format;
@@ -298,7 +328,7 @@ public class NotifyAgentRequest extends Request {
             }
 
             /**
-             * url.
+             * <p>The resource URL.</p>
              */
             public Builder url(String url) {
                 this.url = url;

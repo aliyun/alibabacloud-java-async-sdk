@@ -67,7 +67,10 @@ public class DescribeAutoLiveStreamRuleResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>069BCB66-CD80-11E8-A82B-A70F78BBDC00</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class DescribeAutoLiveStreamRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Rules.
+         * <p>The rule details.</p>
          */
         public Builder rules(java.util.List<Rules> rules) {
             this.rules = rules;
@@ -232,7 +235,10 @@ public class DescribeAutoLiveStreamRuleResponseBody extends TeaModel {
             } 
 
             /**
-             * CallBack.
+             * <p>The callback URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://example.com/callBack">http://example.com/callBack</a></p>
              */
             public Builder callBack(String callBack) {
                 this.callBack = callBack;
@@ -240,7 +246,7 @@ public class DescribeAutoLiveStreamRuleResponseBody extends TeaModel {
             }
 
             /**
-             * ChannelIdPrefixes.
+             * <p>The prefix list of channel IDs for fuzzy match.</p>
              */
             public Builder channelIdPrefixes(java.util.List<String> channelIdPrefixes) {
                 this.channelIdPrefixes = channelIdPrefixes;
@@ -248,7 +254,7 @@ public class DescribeAutoLiveStreamRuleResponseBody extends TeaModel {
             }
 
             /**
-             * ChannelIds.
+             * <p>The list of channel IDs for exact match.</p>
              */
             public Builder channelIds(java.util.List<String> channelIds) {
                 this.channelIds = channelIds;
@@ -256,7 +262,10 @@ public class DescribeAutoLiveStreamRuleResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the rule was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-08-19T02:53:07Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -264,7 +273,10 @@ public class DescribeAutoLiveStreamRuleResponseBody extends TeaModel {
             }
 
             /**
-             * MediaEncode.
+             * <p>The encoding options.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder mediaEncode(Integer mediaEncode) {
                 this.mediaEncode = mediaEncode;
@@ -272,7 +284,10 @@ public class DescribeAutoLiveStreamRuleResponseBody extends TeaModel {
             }
 
             /**
-             * PlayDomain.
+             * <p>The playback domain name for automatic bypass.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rtmp://${domain}/${app}/${stream}</p>
              */
             public Builder playDomain(String playDomain) {
                 this.playDomain = playDomain;
@@ -280,7 +295,10 @@ public class DescribeAutoLiveStreamRuleResponseBody extends TeaModel {
             }
 
             /**
-             * RuleId.
+             * <p>The rule ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder ruleId(Long ruleId) {
                 this.ruleId = ruleId;
@@ -288,7 +306,10 @@ public class DescribeAutoLiveStreamRuleResponseBody extends TeaModel {
             }
 
             /**
-             * RuleName.
+             * <p>The rule name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testRule</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -296,7 +317,14 @@ public class DescribeAutoLiveStreamRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The rule status. Valid values:</p>
+             * <ul>
+             * <li>enable: Enabled.</li>
+             * <li>disable: Disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>disable</p>
              */
             public Builder status(String status) {
                 this.status = status;

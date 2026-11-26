@@ -117,6 +117,7 @@ public class DescribeChannelOverallDataRequest extends Request {
         }
 
         /**
+         * <p>Channel ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -129,6 +130,7 @@ public class DescribeChannelOverallDataRequest extends Request {
         }
 
         /**
+         * <p>UNIX timestamp indicating the channel creation time. Supports querying data from the last 30 days. Expressed as a UNIX timestamp in seconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -141,7 +143,13 @@ public class DescribeChannelOverallDataRequest extends Request {
         }
 
         /**
-         * DestroyedTs.
+         * <p>Channel release time, represented as a UNIX timestamp in seconds. If this parameter is empty, the current time is used.</p>
+         * <blockquote>
+         * <p>If the provided channel release time exceeds the actual release time, data from the Creation Time to the actual release time is returned.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1615893757</p>
          */
         public Builder destroyedTs(Long destroyedTs) {
             this.putQueryParameter("DestroyedTs", destroyedTs);

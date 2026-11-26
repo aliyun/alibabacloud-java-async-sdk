@@ -75,6 +75,7 @@ public class ModifyAppStreamingOutTemplateRequest extends Request {
         } 
 
         /**
+         * <p>Application ID. You can create and query it in the console. Only a single ID is supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,7 @@ public class ModifyAppStreamingOutTemplateRequest extends Request {
         }
 
         /**
+         * <p>Template.</p>
          * <p>This parameter is required.</p>
          */
         public Builder streamingOutTemplate(StreamingOutTemplate streamingOutTemplate) {
@@ -186,6 +188,8 @@ public class ModifyAppStreamingOutTemplateRequest extends Request {
             } 
 
             /**
+             * <p>List of layout IDs. A maximum of 16 IDs are allowed.</p>
+             * <p>Note: The data sources corresponding to the layouts in the list must not have the same quantity.</p>
              * <p>This parameter is required.</p>
              */
             public Builder layoutIds(java.util.List<String> layoutIds) {
@@ -194,6 +198,7 @@ public class ModifyAppStreamingOutTemplateRequest extends Request {
             }
 
             /**
+             * <p>Encoding options.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -205,10 +210,11 @@ public class ModifyAppStreamingOutTemplateRequest extends Request {
             }
 
             /**
+             * <p>Template Name.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
-             * <p>模版</p>
+             * <p>模板</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -216,6 +222,7 @@ public class ModifyAppStreamingOutTemplateRequest extends Request {
             }
 
             /**
+             * <p>Template ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

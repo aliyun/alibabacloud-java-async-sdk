@@ -80,7 +80,7 @@ public class DescribeFaultDiagnosisOverallDataResponseBody extends TeaModel {
         } 
 
         /**
-         * MetricData.
+         * <p>The exception metric data.</p>
          */
         public Builder metricData(MetricData metricData) {
             this.metricData = metricData;
@@ -88,7 +88,7 @@ public class DescribeFaultDiagnosisOverallDataResponseBody extends TeaModel {
         }
 
         /**
-         * OverallData.
+         * <p>The list of overview data for exception diagnostics.</p>
          */
         public Builder overallData(OverallData overallData) {
             this.overallData = overallData;
@@ -96,7 +96,10 @@ public class DescribeFaultDiagnosisOverallDataResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>231470C1-ACFB-4C9F-844F-4CFE1E3804C5</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -175,7 +178,7 @@ public class DescribeFaultDiagnosisOverallDataResponseBody extends TeaModel {
             } 
 
             /**
-             * Ext.
+             * <p>The extended properties, where ratio indicates the proportion of abnormal users per unit time and totalCount indicates the total number of users per unit time.</p>
              */
             public Builder ext(java.util.Map<String, ?> ext) {
                 this.ext = ext;
@@ -183,7 +186,10 @@ public class DescribeFaultDiagnosisOverallDataResponseBody extends TeaModel {
             }
 
             /**
-             * X.
+             * <p>The x-axis coordinate in the metric trends chart. The unit of time is 1 minute.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1615824000</p>
              */
             public Builder x(String x) {
                 this.x = x;
@@ -191,7 +197,10 @@ public class DescribeFaultDiagnosisOverallDataResponseBody extends TeaModel {
             }
 
             /**
-             * Y.
+             * <p>The y-axis coordinate in the metric trends chart.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder y(String y) {
                 this.y = y;
@@ -245,7 +254,7 @@ public class DescribeFaultDiagnosisOverallDataResponseBody extends TeaModel {
             } 
 
             /**
-             * Nodes.
+             * <p>The list of coordinate points for the metric trends chart.</p>
              */
             public Builder nodes(java.util.List<Nodes> nodes) {
                 this.nodes = nodes;
@@ -325,7 +334,10 @@ public class DescribeFaultDiagnosisOverallDataResponseBody extends TeaModel {
             } 
 
             /**
-             * FaultUserCount.
+             * <p>The number of abnormal user visits or abnormal users.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder faultUserCount(Integer faultUserCount) {
                 this.faultUserCount = faultUserCount;
@@ -333,7 +345,10 @@ public class DescribeFaultDiagnosisOverallDataResponseBody extends TeaModel {
             }
 
             /**
-             * FaultUserRatio.
+             * <p>The total proportion of abnormal users.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.5</p>
              */
             public Builder faultUserRatio(Float faultUserRatio) {
                 this.faultUserRatio = faultUserRatio;
@@ -341,7 +356,10 @@ public class DescribeFaultDiagnosisOverallDataResponseBody extends TeaModel {
             }
 
             /**
-             * TotalUserCount.
+             * <p>The total number of user visits or total users.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>40</p>
              */
             public Builder totalUserCount(Integer totalUserCount) {
                 this.totalUserCount = totalUserCount;

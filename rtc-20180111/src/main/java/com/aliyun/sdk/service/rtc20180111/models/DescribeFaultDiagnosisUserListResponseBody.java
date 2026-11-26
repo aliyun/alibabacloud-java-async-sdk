@@ -106,7 +106,10 @@ public class DescribeFaultDiagnosisUserListResponseBody extends TeaModel {
         } 
 
         /**
-         * PageNo.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.pageNo = pageNo;
@@ -114,7 +117,10 @@ public class DescribeFaultDiagnosisUserListResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -122,7 +128,10 @@ public class DescribeFaultDiagnosisUserListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>231470C1-ACFB-4C9F-844F-4CFE1E3804C5</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +139,10 @@ public class DescribeFaultDiagnosisUserListResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCnt.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCnt(Integer totalCnt) {
             this.totalCnt = totalCnt;
@@ -138,7 +150,7 @@ public class DescribeFaultDiagnosisUserListResponseBody extends TeaModel {
         }
 
         /**
-         * UserList.
+         * <p>The detailed list of users with faults.</p>
          */
         public Builder userList(java.util.List<UserList> userList) {
             this.userList = userList;
@@ -191,7 +203,10 @@ public class DescribeFaultDiagnosisUserListResponseBody extends TeaModel {
             } 
 
             /**
-             * FaultType.
+             * <p>The fault type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>JOIN_SLOW</p>
              */
             public Builder faultType(String faultType) {
                 this.faultType = faultType;
@@ -310,7 +325,10 @@ public class DescribeFaultDiagnosisUserListResponseBody extends TeaModel {
             } 
 
             /**
-             * ChannelCreatedTs.
+             * <p>The creation timestamp of the channel. The time is a UNIX timestamp in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1614936817</p>
              */
             public Builder channelCreatedTs(Long channelCreatedTs) {
                 this.channelCreatedTs = channelCreatedTs;
@@ -318,7 +336,10 @@ public class DescribeFaultDiagnosisUserListResponseBody extends TeaModel {
             }
 
             /**
-             * ChannelId.
+             * <p>The ID of the channel.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>904</p>
              */
             public Builder channelId(String channelId) {
                 this.channelId = channelId;
@@ -326,7 +347,10 @@ public class DescribeFaultDiagnosisUserListResponseBody extends TeaModel {
             }
 
             /**
-             * CreatedTs.
+             * <p>The time when the user first joined the channel. The time is a UNIX timestamp in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1614936817</p>
              */
             public Builder createdTs(Long createdTs) {
                 this.createdTs = createdTs;
@@ -334,7 +358,10 @@ public class DescribeFaultDiagnosisUserListResponseBody extends TeaModel {
             }
 
             /**
-             * DestroyedTs.
+             * <p>The time when the user last left the channel. The time is a UNIX timestamp in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1614936817</p>
              */
             public Builder destroyedTs(Long destroyedTs) {
                 this.destroyedTs = destroyedTs;
@@ -342,7 +369,7 @@ public class DescribeFaultDiagnosisUserListResponseBody extends TeaModel {
             }
 
             /**
-             * FaultList.
+             * <p>The list of faults.</p>
              */
             public Builder faultList(java.util.List<FaultList> faultList) {
                 this.faultList = faultList;
@@ -350,7 +377,10 @@ public class DescribeFaultDiagnosisUserListResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * <p>The ID of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testuserid</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;

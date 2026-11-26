@@ -93,7 +93,7 @@ public class DescribeAppViewTemplatesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Id of the request</p>
+         * <p>Request ID</p>
          * 
          * <strong>example:</strong>
          * <p>B0A2FCBC-43A4-428F-BC1D-3F4F85837F76</p>
@@ -104,7 +104,7 @@ public class DescribeAppViewTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * Templates.
+         * <p>Template list</p>
          */
         public Builder templates(java.util.List<Templates> templates) {
             this.templates = templates;
@@ -112,7 +112,10 @@ public class DescribeAppViewTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalNum.
+         * <p>Total number of records</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalNum(Long totalNum) {
             this.totalNum = totalNum;
@@ -120,7 +123,10 @@ public class DescribeAppViewTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalPage.
+         * <p>Total number of pages</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalPage(Long totalPage) {
             this.totalPage = totalPage;
@@ -225,7 +231,10 @@ public class DescribeAppViewTemplatesResponseBody extends TeaModel {
             } 
 
             /**
-             * CreateTime.
+             * <p>Creation time. Format: yyyy-MM-ddTHH:mm:ssZ (UTC).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-09-04T06:22:15Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -233,7 +242,7 @@ public class DescribeAppViewTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * LayoutIds.
+             * <p>List of layout IDs</p>
              */
             public Builder layoutIds(java.util.List<String> layoutIds) {
                 this.layoutIds = layoutIds;
@@ -241,7 +250,10 @@ public class DescribeAppViewTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * MediaEncode.
+             * <p>Encoding option</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder mediaEncode(Integer mediaEncode) {
                 this.mediaEncode = mediaEncode;
@@ -249,7 +261,10 @@ public class DescribeAppViewTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>Template name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>模板名称</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -257,7 +272,10 @@ public class DescribeAppViewTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateId.
+             * <p>Template ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Bj6D****</p>
              */
             public Builder templateId(String templateId) {
                 this.templateId = templateId;

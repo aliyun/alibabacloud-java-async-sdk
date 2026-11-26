@@ -134,6 +134,7 @@ public class StartAgentRequest extends Request {
         } 
 
         /**
+         * <p>The application ID. You can create and query the ID in the console. Only a single ID is supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -146,6 +147,7 @@ public class StartAgentRequest extends Request {
         }
 
         /**
+         * <p>The ID of the channel to join. Only a single ID is supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -158,7 +160,11 @@ public class StartAgentRequest extends Request {
         }
 
         /**
+         * <p>The configuration for the agent to join a Real-Time Communication (RTC) channel.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder rtcConfig(RtcConfig rtcConfig) {
             String rtcConfigShrink = shrink(rtcConfig, "RtcConfig", "json");
@@ -168,6 +174,7 @@ public class StartAgentRequest extends Request {
         }
 
         /**
+         * <p>The task ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -180,6 +187,7 @@ public class StartAgentRequest extends Request {
         }
 
         /**
+         * <p>The template ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -192,7 +200,7 @@ public class StartAgentRequest extends Request {
         }
 
         /**
-         * VoiceChatConfig.
+         * <p>The configuration for AI voice chat.</p>
          */
         public Builder voiceChatConfig(VoiceChatConfig voiceChatConfig) {
             String voiceChatConfigShrink = shrink(voiceChatConfig, "VoiceChatConfig", "json");
@@ -275,7 +283,7 @@ public class StartAgentRequest extends Request {
             } 
 
             /**
-             * TargetUserIds.
+             * <p>The list of user IDs subscribed by the agent. Currently, only one user ID is supported.</p>
              */
             public Builder targetUserIds(java.util.List<String> targetUserIds) {
                 this.targetUserIds = targetUserIds;
@@ -283,6 +291,7 @@ public class StartAgentRequest extends Request {
             }
 
             /**
+             * <p>The user ID of the agent in the RTC channel.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -294,7 +303,17 @@ public class StartAgentRequest extends Request {
             }
 
             /**
-             * UserInactivityTimeout.
+             * <p>The maximum duration threshold for user inactivity, in seconds.
+             * When the duration of any of the following states reaches this threshold, the agent automatically stops and exits the channel:</p>
+             * <ol>
+             * <li>All users in the targetUserIds list have left the channel.</li>
+             * <li>The users in the targetUserIds list have not joined the channel.</li>
+             * </ol>
+             * <p>Default value: 30.
+             * Valid values: 5 to 180.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder userInactivityTimeout(Integer userInactivityTimeout) {
                 this.userInactivityTimeout = userInactivityTimeout;
@@ -348,7 +367,12 @@ public class StartAgentRequest extends Request {
             } 
 
             /**
-             * InterruptSpeechDuration.
+             * <p>The minimum duration of continuous human voice signals required to avoid false interruptions, in milliseconds.
+             * Valid values: 0 to 3000.
+             * Default value: 300.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>300</p>
              */
             public Builder interruptSpeechDuration(Integer interruptSpeechDuration) {
                 this.interruptSpeechDuration = interruptSpeechDuration;
@@ -467,7 +491,15 @@ public class StartAgentRequest extends Request {
             } 
 
             /**
-             * LanguageHints.
+             * <p>If this parameter is not specified, the model automatically identifies the language.
+             * Currently supported language codes:</p>
+             * <ul>
+             * <li>zh: Chinese, including Mandarin and dialects such as Shanghainese, Wu, Minnan, Northeastern, Gansu, Guizhou, Henan, Hubei, Hunan, Jiangxi, Ningxia, Shanxi, Shaanxi, Shandong, Sichuan, Tianjin, Yunnan, and Cantonese.</li>
+             * <li>en: English.</li>
+             * <li>ja: Japanese.</li>
+             * <li>yue: Cantonese.</li>
+             * <li>ko: Korean.</li>
+             * </ul>
              */
             public Builder languageHints(java.util.List<String> languageHints) {
                 this.languageHints = languageHints;
@@ -475,7 +507,10 @@ public class StartAgentRequest extends Request {
             }
 
             /**
-             * MaxSentenceSilence.
+             * <p>The voice segmentation detection threshold. Default value: 800. Unit: milliseconds. Recommended range: 200 to 6000.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>800</p>
              */
             public Builder maxSentenceSilence(Integer maxSentenceSilence) {
                 this.maxSentenceSilence = maxSentenceSilence;
@@ -483,7 +518,10 @@ public class StartAgentRequest extends Request {
             }
 
             /**
-             * SemanticPunctuationEnabled.
+             * <p>Specifies whether semantic or voice segmentation is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder semanticPunctuationEnabled(Boolean semanticPunctuationEnabled) {
                 this.semanticPunctuationEnabled = semanticPunctuationEnabled;
@@ -491,7 +529,10 @@ public class StartAgentRequest extends Request {
             }
 
             /**
-             * SourceLanguage.
+             * <p>No configuration is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>zh</p>
              */
             public Builder sourceLanguage(String sourceLanguage) {
                 this.sourceLanguage = sourceLanguage;
@@ -499,7 +540,7 @@ public class StartAgentRequest extends Request {
             }
 
             /**
-             * VadConfig.
+             * <p>The Voice Activity Detection (VAD) configuration.</p>
              */
             public Builder vadConfig(VadConfig vadConfig) {
                 this.vadConfig = vadConfig;
@@ -507,7 +548,10 @@ public class StartAgentRequest extends Request {
             }
 
             /**
-             * VocabularyId.
+             * <p>The ID of the supported hot word.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vocab-xxx-24ee19fa8cfb4d52902170a0xxxxxxxx</p>
              */
             public Builder vocabularyId(String vocabularyId) {
                 this.vocabularyId = vocabularyId;
@@ -613,7 +657,13 @@ public class StartAgentRequest extends Request {
             } 
 
             /**
-             * AlertTimeout.
+             * <p>The timeout period for silence reminders, in seconds.
+             * This reminder can be triggered multiple times. If the agent remains silent after a silence reminder timeout, the reminder is triggered again upon the next timeout.
+             * Valid values: 5 to 600.
+             * Default value: 0. A value of 0 indicates that no reminder is sent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder alertTimeout(Integer alertTimeout) {
                 this.alertTimeout = alertTimeout;
@@ -621,7 +671,10 @@ public class StartAgentRequest extends Request {
             }
 
             /**
-             * Content.
+             * <p>The content of the silence prompt message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>**</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -629,7 +682,10 @@ public class StartAgentRequest extends Request {
             }
 
             /**
-             * Enable.
+             * <p>The switch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -637,7 +693,15 @@ public class StartAgentRequest extends Request {
             }
 
             /**
-             * Strategy.
+             * <p>The script strategy for silence reminders. Valid values:</p>
+             * <ul>
+             * <li>1: Broadcast the prompt message specified by Content to the user by voice.</li>
+             * <li>2: Send the prompt message specified by Content and the conversation history to the LLM, and broadcast the generated reply by voice.
+             * Default value: 1.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder strategy(Integer strategy) {
                 this.strategy = strategy;
@@ -645,7 +709,13 @@ public class StartAgentRequest extends Request {
             }
 
             /**
-             * WebhookTriggerTimeout.
+             * <p>The silence timeout period for triggering the agent silence timeout webhook, in seconds.
+             * This webhook can be triggered multiple times. If the agent remains silent after a webhook silence timeout, the webhook is triggered again upon the next timeout.
+             * Valid values: 10 to 600.
+             * Default value: 0. A value of 0 indicates that the webhook is not triggered.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder webhookTriggerTimeout(Integer webhookTriggerTimeout) {
                 this.webhookTriggerTimeout = webhookTriggerTimeout;
@@ -713,7 +783,15 @@ public class StartAgentRequest extends Request {
             } 
 
             /**
-             * SoundId.
+             * <p>The ambient sound ID. Built-in and download modes are planned. Currently, only the built-in mode is supported.</p>
+             * <ul>
+             * <li>If this parameter is not specified or is left empty, ambient sound is disabled.</li>
+             * <li>Built-in mode: The agent provides the following default ambient sounds: white_noise (white noise) and office (office environment).</li>
+             * <li>Download mode: You can specify a custom soundId in the console (which must be different from built-in IDs) and provide a URL. The agent will download and bind the sound internally.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>white_noise</p>
              */
             public Builder soundId(String soundId) {
                 this.soundId = soundId;
@@ -721,7 +799,12 @@ public class StartAgentRequest extends Request {
             }
 
             /**
-             * Volume.
+             * <p>The volume of the ambient sound.
+             * Default value: 50 (original volume).
+             * Valid values: 0 to 100.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder volume(Integer volume) {
                 this.volume = volume;
@@ -788,7 +871,10 @@ public class StartAgentRequest extends Request {
             } 
 
             /**
-             * UserTurnEnd.
+             * <p>Specifies whether to enable backchannel responses after the user finishes speaking. Default value: false.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder userTurnEnd(Boolean userTurnEnd) {
                 this.userTurnEnd = userTurnEnd;
@@ -850,7 +936,10 @@ public class StartAgentRequest extends Request {
             } 
 
             /**
-             * SemanticsInterrupt.
+             * <p>Specifies whether to enable semantic interruption. Default value: true.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder semanticsInterrupt(Boolean semanticsInterrupt) {
                 this.semanticsInterrupt = semanticsInterrupt;
@@ -1073,7 +1162,10 @@ public class StartAgentRequest extends Request {
             } 
 
             /**
-             * ApiKey.
+             * <p>The API key of the service provider.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxxxxxxxxxx</p>
              */
             public Builder apiKey(String apiKey) {
                 this.apiKey = apiKey;
@@ -1081,10 +1173,10 @@ public class StartAgentRequest extends Request {
             }
 
             /**
-             * <p>This parameter is required.</p>
+             * <p>The agent application ID. You must specify either Model or AppId. If both are specified, AppId takes precedence.</p>
              * 
              * <strong>example:</strong>
-             * <p>aoe****</p>
+             * <p>e****</p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -1092,7 +1184,7 @@ public class StartAgentRequest extends Request {
             }
 
             /**
-             * BizParams.
+             * <p>The custom parameters.</p>
              */
             public Builder bizParams(Object bizParams) {
                 this.bizParams = bizParams;
@@ -1100,7 +1192,11 @@ public class StartAgentRequest extends Request {
             }
 
             /**
-             * HistoryDepth.
+             * <p>The number of historical conversation turns provided to the LLM.
+             * Default value: 3.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder historyDepth(Integer historyDepth) {
                 this.historyDepth = historyDepth;
@@ -1108,7 +1204,12 @@ public class StartAgentRequest extends Request {
             }
 
             /**
-             * MaxToken.
+             * <p>The maximum number of tokens for the output text.
+             * Default value: 8192.
+             * The maximum value for DeepSeek and Qwen models is 8192.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>500</p>
              */
             public Builder maxToken(Integer maxToken) {
                 this.maxToken = maxToken;
@@ -1116,7 +1217,12 @@ public class StartAgentRequest extends Request {
             }
 
             /**
-             * Model.
+             * <p>The model name.
+             * Supported models under the aliyun provider:
+             * [&quot;qwen-plus&quot;, &quot;deepseek-r1&quot;, &quot;qwen-omni-turbo&quot;]</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qwen-plus</p>
              */
             public Builder model(String model) {
                 this.model = model;
@@ -1124,7 +1230,10 @@ public class StartAgentRequest extends Request {
             }
 
             /**
-             * Params.
+             * <p>The custom user parameters in key-value pairs. This parameter is deprecated. Use the BizParams parameter instead.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;verification_code&quot;: &quot;xxx&quot;}</p>
              */
             public Builder params(java.util.Map<String, ?> params) {
                 this.params = params;
@@ -1132,7 +1241,10 @@ public class StartAgentRequest extends Request {
             }
 
             /**
-             * Prompt.
+             * <p>The prompt used to instruct the model on the role or behavior to adopt.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxxx</p>
              */
             public Builder prompt(String prompt) {
                 this.prompt = prompt;
@@ -1140,7 +1252,13 @@ public class StartAgentRequest extends Request {
             }
 
             /**
-             * Temperature.
+             * <p>The sampling temperature used to control the randomness and creativity of the generated text. A higher value indicates higher randomness.
+             * Default value: 0.7.
+             * Valid values: 0 to 2, excluding 2.
+             * Note: This parameter does not take effect for deepseek-r1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.7</p>
              */
             public Builder temperature(Double temperature) {
                 this.temperature = temperature;
@@ -1164,7 +1282,12 @@ public class StartAgentRequest extends Request {
             }
 
             /**
-             * TopP.
+             * <p>The sampling range used to control the diversity of output tokens. The model samples from tokens whose cumulative probability exceeds this value to ensure the sampling range is not too broad. A higher value indicates a richer variety of output tokens.
+             * Valid values: 0 to 1, excluding 0.
+             * Default value: 0.8.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.8</p>
              */
             public Builder topP(Double topP) {
                 this.topP = topP;
@@ -1172,7 +1295,10 @@ public class StartAgentRequest extends Request {
             }
 
             /**
-             * Url.
+             * <p>The endpoint URL for integrating a third-party LLM.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://xxxxx">https://xxxxx</a></p>
              */
             public Builder url(String url) {
                 this.url = url;
@@ -1180,7 +1306,10 @@ public class StartAgentRequest extends Request {
             }
 
             /**
-             * Vendor.
+             * <p>The name of the service provider when a cloud service provider is integrated. Examples: aliyun for Model Studio, thirdparty.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aliyun</p>
              */
             public Builder vendor(String vendor) {
                 this.vendor = vendor;
@@ -1325,7 +1454,10 @@ public class StartAgentRequest extends Request {
             } 
 
             /**
-             * ApiKey.
+             * <p>The API key of the service provider.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxxxxx</p>
              */
             public Builder apiKey(String apiKey) {
                 this.apiKey = apiKey;
@@ -1333,7 +1465,10 @@ public class StartAgentRequest extends Request {
             }
 
             /**
-             * FilterBrackets.
+             * <p>The configuration to filter out characters within specified brackets from text-to-speech conversion.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[1,2]</p>
              */
             public Builder filterBrackets(java.util.List<Integer> filterBrackets) {
                 this.filterBrackets = filterBrackets;
@@ -1341,7 +1476,10 @@ public class StartAgentRequest extends Request {
             }
 
             /**
-             * Model.
+             * <p>The model name. Example: cosyvoice-v1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cosyvoice-v1</p>
              */
             public Builder model(String model) {
                 this.model = model;
@@ -1349,7 +1487,12 @@ public class StartAgentRequest extends Request {
             }
 
             /**
-             * Pitch.
+             * <p>The pitch.
+             * Valid values: 0.5 to 2.0.
+             * Default value: 1.0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pitch(Double pitch) {
                 this.pitch = pitch;
@@ -1357,7 +1500,12 @@ public class StartAgentRequest extends Request {
             }
 
             /**
-             * Rate.
+             * <p>The speech rate.
+             * Valid values: 0.5 to 2.0.
+             * Default value: 1.0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder rate(Double rate) {
                 this.rate = rate;
@@ -1365,7 +1513,10 @@ public class StartAgentRequest extends Request {
             }
 
             /**
-             * Vendor.
+             * <p>The service provider. Example: aliyun for Model Studio.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aliyun</p>
              */
             public Builder vendor(String vendor) {
                 this.vendor = vendor;
@@ -1373,7 +1524,12 @@ public class StartAgentRequest extends Request {
             }
 
             /**
-             * Voice.
+             * <p>The voice. If you select the Alibaba Cloud cosyvoice-v1 model, the default voice is longxiaoxia.
+             * Available voices:
+             * longwan, longcheng, longhua, longxiaochun, longxiaoxia, longxiaocheng, longxiaobai, longlaotie, longshu, longshuo, longjing, longmiao, longyue, longyuan, longfei, longjielidou, longtong, longxiang, loongstella, and loongbella.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>longxiaoxia</p>
              */
             public Builder voice(String voice) {
                 this.voice = voice;
@@ -1381,7 +1537,12 @@ public class StartAgentRequest extends Request {
             }
 
             /**
-             * Volume.
+             * <p>The volume.
+             * Valid values: 0 to 100.
+             * Default value: 50.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder volume(Integer volume) {
                 this.volume = volume;
@@ -1578,7 +1739,7 @@ public class StartAgentRequest extends Request {
             } 
 
             /**
-             * ASRConfig.
+             * <p>The Automatic Speech Recognition (ASR) configuration.</p>
              */
             public Builder ASRConfig(ASRConfig ASRConfig) {
                 this.ASRConfig = ASRConfig;
@@ -1586,7 +1747,7 @@ public class StartAgentRequest extends Request {
             }
 
             /**
-             * AgentSilenceConfig.
+             * <p>The configuration for agent behavior during silence timeout. When a user joins the channel but does not interact effectively with the agent (the user does not speak), the agent is in a silent state. You can configure the agent to broadcast a voice messaging reminder or send a webhook notification during this silent state.</p>
              */
             public Builder agentSilenceConfig(AgentSilenceConfig agentSilenceConfig) {
                 this.agentSilenceConfig = agentSilenceConfig;
@@ -1594,7 +1755,7 @@ public class StartAgentRequest extends Request {
             }
 
             /**
-             * AmbientSoundConfig.
+             * <p>The ambient sound settings.</p>
              */
             public Builder ambientSoundConfig(AmbientSoundConfig ambientSoundConfig) {
                 this.ambientSoundConfig = ambientSoundConfig;
@@ -1602,7 +1763,7 @@ public class StartAgentRequest extends Request {
             }
 
             /**
-             * BackChannelConfig.
+             * <p>The backchannel settings.</p>
              */
             public Builder backChannelConfig(BackChannelConfig backChannelConfig) {
                 this.backChannelConfig = backChannelConfig;
@@ -1610,7 +1771,14 @@ public class StartAgentRequest extends Request {
             }
 
             /**
-             * ChatMode.
+             * <p>The chat mode. Valid values:</p>
+             * <ul>
+             * <li>1: natural conversation mode. This is the default value.</li>
+             * <li>2: walkie-talkie mode.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder chatMode(Integer chatMode) {
                 this.chatMode = chatMode;
@@ -1618,7 +1786,7 @@ public class StartAgentRequest extends Request {
             }
 
             /**
-             * EnableVideoUnderstanding.
+             * <p>Specifies whether to enable visual understanding. If enabled, the large language model (LLM) must support multimodal data.</p>
              */
             public Builder enableVideoUnderstanding(Boolean enableVideoUnderstanding) {
                 this.enableVideoUnderstanding = enableVideoUnderstanding;
@@ -1626,7 +1794,10 @@ public class StartAgentRequest extends Request {
             }
 
             /**
-             * Greeting.
+             * <p>The greeting message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Good morning, my friend</p>
              */
             public Builder greeting(String greeting) {
                 this.greeting = greeting;
@@ -1634,7 +1805,7 @@ public class StartAgentRequest extends Request {
             }
 
             /**
-             * InterruptConfig.
+             * <p>The interrupt settings.</p>
              */
             public Builder interruptConfig(InterruptConfig interruptConfig) {
                 this.interruptConfig = interruptConfig;
@@ -1642,7 +1813,14 @@ public class StartAgentRequest extends Request {
             }
 
             /**
-             * InterruptMode.
+             * <p>The interrupt mode. Valid values:</p>
+             * <ul>
+             * <li>1: voice interruption supported. This is the default value.</li>
+             * <li>2: voice interruption disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder interruptMode(Integer interruptMode) {
                 this.interruptMode = interruptMode;
@@ -1650,7 +1828,7 @@ public class StartAgentRequest extends Request {
             }
 
             /**
-             * LLMConfig.
+             * <p>The large language model (LLM) configuration.</p>
              */
             public Builder LLMConfig(LLMConfig LLMConfig) {
                 this.LLMConfig = LLMConfig;
@@ -1658,7 +1836,7 @@ public class StartAgentRequest extends Request {
             }
 
             /**
-             * TTSConfig.
+             * <p>The text-to-speech (TTS) configuration.</p>
              */
             public Builder TTSConfig(TTSConfig TTSConfig) {
                 this.TTSConfig = TTSConfig;
@@ -1666,7 +1844,15 @@ public class StartAgentRequest extends Request {
             }
 
             /**
-             * preferVideo.
+             * <p>After visual understanding is enabled, you can specify the video stream that the agent prioritizes for understanding. The agent can understand only one video stream when both the camera stream and the screen sharing stream are pushed simultaneously.</p>
+             * <ol>
+             * <li>The agent prioritizes the camera stream.</li>
+             * <li>The agent prioritizes the screen sharing stream.</li>
+             * </ol>
+             * <p>By default, the camera stream is prioritized.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder preferVideo(Integer preferVideo) {
                 this.preferVideo = preferVideo;

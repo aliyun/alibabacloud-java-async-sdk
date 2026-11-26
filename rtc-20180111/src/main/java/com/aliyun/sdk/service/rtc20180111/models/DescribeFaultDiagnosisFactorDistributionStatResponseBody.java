@@ -67,7 +67,10 @@ public class DescribeFaultDiagnosisFactorDistributionStatResponseBody extends Te
         } 
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>231470C1-ACFB-4C9F-844F-4CFE1E3804C5</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class DescribeFaultDiagnosisFactorDistributionStatResponseBody extends Te
         }
 
         /**
-         * StatList.
+         * <p>Statistics on the distribution of impact factors.</p>
          */
         public Builder statList(java.util.List<StatList> statList) {
             this.statList = statList;
@@ -154,7 +157,10 @@ public class DescribeFaultDiagnosisFactorDistributionStatResponseBody extends Te
             } 
 
             /**
-             * FactorId.
+             * <p>Impact factor ID. For details, see the list of impact factor ID values below.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder factorId(String factorId) {
                 this.factorId = factorId;
@@ -162,7 +168,10 @@ public class DescribeFaultDiagnosisFactorDistributionStatResponseBody extends Te
             }
 
             /**
-             * UserCount.
+             * <p>Number of impacted users.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder userCount(Integer userCount) {
                 this.userCount = userCount;
@@ -170,7 +179,10 @@ public class DescribeFaultDiagnosisFactorDistributionStatResponseBody extends Te
             }
 
             /**
-             * UserRatio.
+             * <p>Proportion of impacted users.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.9239</p>
              */
             public Builder userRatio(Float userRatio) {
                 this.userRatio = userRatio;

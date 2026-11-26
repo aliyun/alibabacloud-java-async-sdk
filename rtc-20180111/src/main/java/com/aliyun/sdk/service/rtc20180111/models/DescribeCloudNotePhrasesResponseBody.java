@@ -93,7 +93,7 @@ public class DescribeCloudNotePhrasesResponseBody extends TeaModel {
         } 
 
         /**
-         * Phrases.
+         * <p>The hotword lists.</p>
          */
         public Builder phrases(java.util.List<Phrases> phrases) {
             this.phrases = phrases;
@@ -101,7 +101,7 @@ public class DescribeCloudNotePhrasesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request。</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>3A26E1E3-3CBB-599E-AD68-CB78F5A42FA1</p>
@@ -112,7 +112,10 @@ public class DescribeCloudNotePhrasesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalNum.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalNum(Long totalNum) {
             this.totalNum = totalNum;
@@ -120,7 +123,10 @@ public class DescribeCloudNotePhrasesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalPage.
+         * <p>The total number of pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalPage(Long totalPage) {
             this.totalPage = totalPage;
@@ -188,7 +194,10 @@ public class DescribeCloudNotePhrasesResponseBody extends TeaModel {
             } 
 
             /**
-             * Weight.
+             * <p>The weight value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder weight(Integer weight) {
                 this.weight = weight;
@@ -196,7 +205,10 @@ public class DescribeCloudNotePhrasesResponseBody extends TeaModel {
             }
 
             /**
-             * Word.
+             * <p>The hotword.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Apple</p>
              */
             public Builder word(String word) {
                 this.word = word;
@@ -305,7 +317,10 @@ public class DescribeCloudNotePhrasesResponseBody extends TeaModel {
             } 
 
             /**
-             * CreateTime.
+             * <p>The creation time. Format: yyyy-MM-ddTHH:mm:ssZ (UTC time).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-03-04T06:22:15Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -313,7 +328,10 @@ public class DescribeCloudNotePhrasesResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Fruit description</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -321,7 +339,10 @@ public class DescribeCloudNotePhrasesResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The hotword list ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1qweadca332121212</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -329,7 +350,10 @@ public class DescribeCloudNotePhrasesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The hotword list name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Fruit</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -337,6 +361,7 @@ public class DescribeCloudNotePhrasesResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The hotword weights.</p>
              * <p>This parameter is required.</p>
              */
             public Builder wordWeights(java.util.List<WordWeights> wordWeights) {

@@ -132,6 +132,7 @@ public class DescribePubUserListBySubUserRequest extends Request {
         }
 
         /**
+         * <p>Channel ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -144,6 +145,7 @@ public class DescribePubUserListBySubUserRequest extends Request {
         }
 
         /**
+         * <p>The channel creation time. You can query data from the last 30 days. The value is represented as a UNIX timestamp in seconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -156,7 +158,13 @@ public class DescribePubUserListBySubUserRequest extends Request {
         }
 
         /**
-         * DestroyedTs.
+         * <p>The channel release time, represented as a UNIX timestamp in seconds. If this parameter is empty, the current time is used.  </p>
+         * <blockquote>
+         * <p>If the provided channel release time exceeds the actual release time, data from the creation time to the actual release time will be returned.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1614936817</p>
          */
         public Builder destroyedTs(Long destroyedTs) {
             this.putQueryParameter("DestroyedTs", destroyedTs);
@@ -165,6 +173,7 @@ public class DescribePubUserListBySubUserRequest extends Request {
         }
 
         /**
+         * <p>Subscriber User ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

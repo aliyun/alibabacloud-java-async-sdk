@@ -75,6 +75,7 @@ public class CreateAppViewTemplateRequest extends Request {
         } 
 
         /**
+         * <p>The application ID. You can create and query it in the console. Only a single ID is supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,7 @@ public class CreateAppViewTemplateRequest extends Request {
         }
 
         /**
+         * <p>The template.</p>
          * <p>This parameter is required.</p>
          */
         public Builder template(Template template) {
@@ -172,6 +174,7 @@ public class CreateAppViewTemplateRequest extends Request {
             } 
 
             /**
+             * <p>The list of layout IDs. A maximum of 16 layout IDs are supported.</p>
              * <p>This parameter is required.</p>
              */
             public Builder layoutIds(java.util.List<String> layoutIds) {
@@ -180,6 +183,7 @@ public class CreateAppViewTemplateRequest extends Request {
             }
 
             /**
+             * <p>The encoding options.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -191,10 +195,11 @@ public class CreateAppViewTemplateRequest extends Request {
             }
 
             /**
+             * <p>The template name.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
-             * <p>模版</p>
+             * <p>Template</p>
              */
             public Builder name(String name) {
                 this.name = name;

@@ -203,7 +203,14 @@ public class DescribeCallListRequest extends Request {
         }
 
         /**
-         * CallStatus.
+         * <p>Call status. Valid values:</p>
+         * <ul>
+         * <li><strong>IN</strong>: In progress.</li>
+         * <li><strong>OUT</strong>: Ended.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>OUT</p>
          */
         public Builder callStatus(String callStatus) {
             this.putQueryParameter("CallStatus", callStatus);
@@ -212,7 +219,10 @@ public class DescribeCallListRequest extends Request {
         }
 
         /**
-         * ChannelId.
+         * <p>Channel ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>311</p>
          */
         public Builder channelId(String channelId) {
             this.putQueryParameter("ChannelId", channelId);
@@ -221,6 +231,7 @@ public class DescribeCallListRequest extends Request {
         }
 
         /**
+         * <p>The end time of the query, expressed as a UNIX timestamp. Unit: seconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -233,7 +244,14 @@ public class DescribeCallListRequest extends Request {
         }
 
         /**
-         * OrderBy.
+         * <p>Sorting field. Valid values:</p>
+         * <ul>
+         * <li><strong>BAD_EXP_USER_COUNT_DESC</strong>: Sort by the number of users with poor experience in descending order.</li>
+         * <li><strong>BAD_EXP_USER_COUNT_ASC</strong>: Sort by the number of users with poor experience in ascending order.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>BAD_EXP_USER_COUNT_DESC</p>
          */
         public Builder orderBy(String orderBy) {
             this.putQueryParameter("OrderBy", orderBy);
@@ -242,6 +260,7 @@ public class DescribeCallListRequest extends Request {
         }
 
         /**
+         * <p>Page number. Minimum value: 1. Maximum value: 200.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -254,6 +273,7 @@ public class DescribeCallListRequest extends Request {
         }
 
         /**
+         * <p>Quantity per page, minimum value is 1, maximum value is 200.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -266,7 +286,14 @@ public class DescribeCallListRequest extends Request {
         }
 
         /**
-         * QueryMode.
+         * <p>Query mode. Valid values:</p>
+         * <ul>
+         * <li><strong>ALL</strong>: All calls.</li>
+         * <li><strong>FOLLOW</strong>: Followed calls.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ALL</p>
          */
         public Builder queryMode(String queryMode) {
             this.putQueryParameter("QueryMode", queryMode);
@@ -275,6 +302,7 @@ public class DescribeCallListRequest extends Request {
         }
 
         /**
+         * <p>Start Time of the query, represented as a UNIX timestamp in seconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -287,7 +315,10 @@ public class DescribeCallListRequest extends Request {
         }
 
         /**
-         * UserId.
+         * <p>User ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c906531af5f9****</p>
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);

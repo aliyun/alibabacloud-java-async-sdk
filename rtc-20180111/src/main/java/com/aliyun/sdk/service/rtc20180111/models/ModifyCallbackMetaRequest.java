@@ -89,6 +89,7 @@ public class ModifyCallbackMetaRequest extends Request {
         } 
 
         /**
+         * <p>The application ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,6 +102,7 @@ public class ModifyCallbackMetaRequest extends Request {
         }
 
         /**
+         * <p>The callback configuration.</p>
          * <p>This parameter is required.</p>
          */
         public Builder callback(Callback callback) {
@@ -194,6 +196,7 @@ public class ModifyCallbackMetaRequest extends Request {
             } 
 
             /**
+             * <p>The callback code.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -205,6 +208,7 @@ public class ModifyCallbackMetaRequest extends Request {
             }
 
             /**
+             * <p>The callback URL.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -216,7 +220,13 @@ public class ModifyCallbackMetaRequest extends Request {
             }
 
             /**
-             * SubEvent.
+             * <p>The sub-events.
+             * Recording events:</p>
+             * <ul>
+             * <li><strong>2010</strong>: Recording service status change.</li>
+             * <li><strong>2011</strong>: Recording audio stream status change.</li>
+             * <li><strong>2012</strong>: Recording video stream status change.</li>
+             * </ul>
              */
             public Builder subEvent(java.util.List<Integer> subEvent) {
                 this.subEvent = subEvent;

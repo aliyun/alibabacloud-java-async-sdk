@@ -119,7 +119,7 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
         } 
 
         /**
-         * CallInfo.
+         * <p>Basic call information, returned when QueryCallUserInfo=false.</p>
          */
         public Builder callInfo(CallInfo callInfo) {
             this.callInfo = callInfo;
@@ -127,7 +127,7 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
         }
 
         /**
-         * FactorList.
+         * <p>List of impact factors. An empty list indicates that the impact factors are unknown.</p>
          */
         public Builder factorList(java.util.List<FactorList> factorList) {
             this.factorList = factorList;
@@ -135,7 +135,7 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
         }
 
         /**
-         * FaultMetricData.
+         * <p>Abnormal metrics.</p>
          */
         public Builder faultMetricData(FaultMetricData faultMetricData) {
             this.faultMetricData = faultMetricData;
@@ -143,7 +143,7 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
         }
 
         /**
-         * NetworkOperators.
+         * <p>List of Network carriers</p>
          */
         public Builder networkOperators(java.util.List<String> networkOperators) {
             this.networkOperators = networkOperators;
@@ -151,7 +151,10 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>231470C1-ACFB-4C9F-844F-4CFE1E3804C5</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +162,7 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
         }
 
         /**
-         * UserDetail.
+         * <p>[responses_200_schema_properties_UserDetail_properties_CreatedTs_type]integer</p>
          */
         public Builder userDetail(UserDetail userDetail) {
             this.userDetail = userDetail;
@@ -288,7 +291,14 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
             }
 
             /**
-             * CallStatus.
+             * <p>Call status. Valid values:</p>
+             * <ul>
+             * <li><strong>IN</strong>: In progress.</li>
+             * <li><strong>OUT</strong>: Ended.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>IN</p>
              */
             public Builder callStatus(String callStatus) {
                 this.callStatus = callStatus;
@@ -296,7 +306,10 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ChannelId.
+             * <p>Channel ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>311</p>
              */
             public Builder channelId(String channelId) {
                 this.channelId = channelId;
@@ -304,7 +317,10 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
             }
 
             /**
-             * CreatedTs.
+             * <p>The time when the call was created, represented as a UNIX timestamp in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1620957905</p>
              */
             public Builder createdTs(Long createdTs) {
                 this.createdTs = createdTs;
@@ -312,7 +328,10 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DestroyedTs.
+             * <p>The time when the call was released, represented as a UNIX timestamp in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1620958150</p>
              */
             public Builder destroyedTs(Long destroyedTs) {
                 this.destroyedTs = destroyedTs;
@@ -320,7 +339,10 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Duration.
+             * <p>Call duration in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder duration(Long duration) {
                 this.duration = duration;
@@ -400,7 +422,10 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * EventName.
+             * <p>Event Name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>开始发布</p>
              */
             public Builder eventName(String eventName) {
                 this.eventName = eventName;
@@ -408,7 +433,14 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
             }
 
             /**
-             * EventType.
+             * <p>Event Type. Valid values:</p>
+             * <ul>
+             * <li><strong>USER</strong>: User event.</li>
+             * <li><strong>SYSTEM</strong>: System event.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>USER</p>
              */
             public Builder eventType(String eventType) {
                 this.eventType = eventType;
@@ -416,7 +448,10 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Ts.
+             * <p>The time of the first management event occurrence, represented as a UNIX timestamp in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1614936817</p>
              */
             public Builder ts(Long ts) {
                 this.ts = ts;
@@ -483,7 +518,7 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * EventList.
+             * <p>Event List.</p>
              */
             public Builder eventList(java.util.List<EventList> eventList) {
                 this.eventList = eventList;
@@ -491,7 +526,10 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Ts.
+             * <p>[responses_200_schema_properties_FaultMetricData_properties_Nodes_description]List of metric coordinate points.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1614936817</p>
              */
             public Builder ts(Long ts) {
                 this.ts = ts;
@@ -571,7 +609,7 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * EventDataItems.
+             * <p>List of event data.</p>
              */
             public Builder eventDataItems(java.util.List<EventDataItems> eventDataItems) {
                 this.eventDataItems = eventDataItems;
@@ -579,7 +617,14 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Role.
+             * <p>Source role. Valid values:</p>
+             * <ul>
+             * <li><strong>SENDER</strong>: Publisher (upstream).</li>
+             * <li><strong>RECEIVER</strong>: Subscriber (downstream).</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>SENDER</p>
              */
             public Builder role(String role) {
                 this.role = role;
@@ -587,7 +632,10 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * <p>User ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0a497933****</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -667,7 +715,7 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * Ext.
+             * <p>[responses_200_schema_properties_FactorList_items_properties_RelatedEventDatas_items_properties_EventDataItems_items_properties_EventList_items_properties_Ts_title]The time of the first management event occurrence, represented as a UNIX timestamp in seconds.</p>
              */
             public Builder ext(java.util.Map<String, ?> ext) {
                 this.ext = ext;
@@ -675,7 +723,10 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
             }
 
             /**
-             * X.
+             * <p>[responses_200_schema_properties_FactorList_items_properties_FactorId_title]Factor ID: 1: Poor publisher-side Network; 2: Poor subscriber-side Network; 3: Poor publisher-side device Performance; 4: Publisher-side camera shutdown; 5: Publisher-side app moved to background Run</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1615892596</p>
              */
             public Builder x(String x) {
                 this.x = x;
@@ -683,7 +734,10 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Y.
+             * <p>[responses_200_schema_properties_RequestId_title]The Request ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder y(String y) {
                 this.y = y;
@@ -776,7 +830,7 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * Nodes.
+             * <p>[responses_200_schema_properties_FactorList_items_properties_RelatedEventDatas_items_properties_EventDataItems_items_properties_EventList_items_properties_EventName_type]string</p>
              */
             public Builder nodes(java.util.List<Nodes> nodes) {
                 this.nodes = nodes;
@@ -784,7 +838,14 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Role.
+             * <p>Source role. Valid values:</p>
+             * <ul>
+             * <li><strong>SENDER</strong>: Publisher.</li>
+             * <li><strong>RECEIVER</strong>: Subscriber.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>SENDER</p>
              */
             public Builder role(String role) {
                 this.role = role;
@@ -792,7 +853,10 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>Metric type, consistent with the metric types defined in the end-to-end metrics API.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AUDIO_STUCK</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -800,7 +864,10 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * <p>User ID of the publisher from which the data originates.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0a497933****</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -893,7 +960,10 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * FactorId.
+             * <p>The factor ID. For details, see the factor ID values below.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder factorId(String factorId) {
                 this.factorId = factorId;
@@ -901,7 +971,10 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
             }
 
             /**
-             * FaultSource.
+             * <p>Abnormal source: LOCAL indicates the local end; REMOTE indicates the remote end.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>LOCAL</p>
              */
             public Builder faultSource(String faultSource) {
                 this.faultSource = faultSource;
@@ -909,7 +982,7 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RelatedEventDatas.
+             * <p>Associated management events, grouped by time. Coordinate data is returned when FaultType is AUDIO_STUCK, VIDEO_STUCK, VIDEO_VAGUE, or HIGH_DELAY.</p>
              */
             public Builder relatedEventDatas(java.util.List<RelatedEventDatas> relatedEventDatas) {
                 this.relatedEventDatas = relatedEventDatas;
@@ -917,7 +990,7 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RelatedMetricDatas.
+             * <p>Associated metrics and coordinate data, returned when FaultType is AUDIO_STUCK, VIDEO_STUCK, VIDEO_VAGUE, or HIGH_DELAY.</p>
              */
             public Builder relatedMetricDatas(java.util.List<RelatedMetricDatas> relatedMetricDatas) {
                 this.relatedMetricDatas = relatedMetricDatas;
@@ -984,7 +1057,10 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * X.
+             * <p>指标趋势图中x轴横坐标，单位时间为1分钟。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1620957900</p>
              */
             public Builder x(String x) {
                 this.x = x;
@@ -992,7 +1068,10 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Y.
+             * <p>指标趋势图中y轴纵坐标。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.4540</p>
              */
             public Builder y(String y) {
                 this.y = y;
@@ -1046,7 +1125,7 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * Nodes.
+             * <p>List of metric coordinate points.</p>
              */
             public Builder nodes(java.util.List<FaultMetricDataNodes> nodes) {
                 this.nodes = nodes;
@@ -1113,7 +1192,10 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * JoinTs.
+             * <p>Time of joining the call, represented as a UNIX timestamp in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1620957919</p>
              */
             public Builder joinTs(Long joinTs) {
                 this.joinTs = joinTs;
@@ -1121,7 +1203,10 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
             }
 
             /**
-             * LeaveTs.
+             * <p>Time of leaving the call, represented as a UNIX timestamp in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1620958150</p>
              */
             public Builder leaveTs(Long leaveTs) {
                 this.leaveTs = leaveTs;
@@ -1292,7 +1377,10 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * CreatedTs.
+             * <p>Call creation time, represented as a UNIX timestamp in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1620957919</p>
              */
             public Builder createdTs(Long createdTs) {
                 this.createdTs = createdTs;
@@ -1300,7 +1388,10 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DestroyedTs.
+             * <p>[responses_200_schema_properties_UserDetail_properties_OnlineDuration_type]integer</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1620958150</p>
              */
             public Builder destroyedTs(Long destroyedTs) {
                 this.destroyedTs = destroyedTs;
@@ -1308,7 +1399,10 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Duration.
+             * <p>[responses_200_schema_properties_FactorList_title]List of impact factors. An empty value indicates that the impact factors are unknown.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>231</p>
              */
             public Builder duration(Long duration) {
                 this.duration = duration;
@@ -1316,7 +1410,10 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Location.
+             * <p>Geographic location information, such as: Beijing City - Beijing Municipality.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>浙江省-杭州市</p>
              */
             public Builder location(String location) {
                 this.location = location;
@@ -1324,7 +1421,10 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Network.
+             * <p>[responses_200_schema_properties_UserDetail_properties_OnlinePeriods_items_properties_JoinTs_title]Time of joining the call, represented as a UNIX timestamp in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4G</p>
              */
             public Builder network(String network) {
                 this.network = network;
@@ -1332,7 +1432,10 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
             }
 
             /**
-             * OnlineDuration.
+             * <p>Online duration, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>231</p>
              */
             public Builder onlineDuration(Long onlineDuration) {
                 this.onlineDuration = onlineDuration;
@@ -1340,7 +1443,7 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
             }
 
             /**
-             * OnlinePeriods.
+             * <p>Online period information.</p>
              */
             public Builder onlinePeriods(java.util.List<OnlinePeriods> onlinePeriods) {
                 this.onlinePeriods = onlinePeriods;
@@ -1348,7 +1451,10 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Os.
+             * <p>[responses_200_schema_properties_UserDetail_properties_OnlinePeriods_type]array</p>
+             * 
+             * <strong>example:</strong>
+             * <p>iOS</p>
              */
             public Builder os(String os) {
                 this.os = os;
@@ -1356,7 +1462,10 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
             }
 
             /**
-             * SdkVersion.
+             * <p>[responses_200_schema_properties_UserDetail_properties_Location_title]Geographic location information, such as: Beijing City - Beijing Municipality</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0.0</p>
              */
             public Builder sdkVersion(String sdkVersion) {
                 this.sdkVersion = sdkVersion;
@@ -1364,7 +1473,10 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * <p>[responses_200_schema_properties_UserDetail_properties_OnlinePeriods_items_properties_LeaveTs_title]Time of leaving the call, represented as a UNIX timestamp in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0a497933****</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;

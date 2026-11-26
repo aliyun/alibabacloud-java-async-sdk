@@ -67,7 +67,7 @@ public class CreateAppStreamingOutTemplateResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>30D41049-D02D-1C21-86AE-B3E5FD805C27</p>
@@ -78,7 +78,10 @@ public class CreateAppStreamingOutTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * TemplateId.
+         * <p>The template ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bc5v****</p>
          */
         public Builder templateId(String templateId) {
             this.templateId = templateId;

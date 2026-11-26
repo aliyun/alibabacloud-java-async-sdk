@@ -88,6 +88,7 @@ public class DeleteAppLayoutRequest extends Request {
         } 
 
         /**
+         * <p>The application ID. You can create and query the ID in the console. Only a single ID is supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -100,7 +101,10 @@ public class DeleteAppLayoutRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>The client token that is used to ensure idempotence.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-42665544****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -109,7 +113,7 @@ public class DeleteAppLayoutRequest extends Request {
         }
 
         /**
-         * Layout.
+         * <p>The layout information.</p>
          */
         public Builder layout(Layout layout) {
             String layoutShrink = shrink(layout, "Layout", "json");
@@ -166,6 +170,7 @@ public class DeleteAppLayoutRequest extends Request {
             } 
 
             /**
+             * <p>The layout ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

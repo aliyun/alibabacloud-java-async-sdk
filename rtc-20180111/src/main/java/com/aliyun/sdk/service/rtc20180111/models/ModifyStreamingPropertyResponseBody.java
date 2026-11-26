@@ -54,7 +54,10 @@ public class ModifyStreamingPropertyResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E7C44674-9065-5BBA-AB77-A5F20908E73B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

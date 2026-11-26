@@ -78,7 +78,10 @@ public class DescribeAppLiveStreamStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>The status of the switch. enable indicates that the feature is enabled. disable indicates that the feature is disabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>disable</p>
          */
         public Builder result(String result) {
             this.result = result;

@@ -143,7 +143,10 @@ public class DescribeAppsRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * <p>The application ID. You can create and query application IDs in the console. Only a single ID is supported. If this parameter is left empty, all application IDs are queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yourAppId</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -152,7 +155,10 @@ public class DescribeAppsRequest extends Request {
         }
 
         /**
-         * AppVersion.
+         * <p>The application version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3.0</p>
          */
         public Builder appVersion(String appVersion) {
             this.putQueryParameter("AppVersion", appVersion);
@@ -161,7 +167,16 @@ public class DescribeAppsRequest extends Request {
         }
 
         /**
-         * Order.
+         * <p>The sort order. Valid values:</p>
+         * <ul>
+         * <li><p><strong>asc</strong>: Ascending.</p>
+         * </li>
+         * <li><p><strong>desc</strong>: Descending. Default value.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>asc</p>
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -179,7 +194,10 @@ public class DescribeAppsRequest extends Request {
         }
 
         /**
-         * PageNum.
+         * <p>The page number. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -188,7 +206,10 @@ public class DescribeAppsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -197,7 +218,18 @@ public class DescribeAppsRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The application status. If this parameter is left empty, all statuses are queried. Valid values:</p>
+         * <ul>
+         * <li><p><strong>1</strong>: Available.</p>
+         * </li>
+         * <li><p><strong>2</strong>: Disabled.</p>
+         * </li>
+         * <li><p><strong>3</strong>: Disabled due to overdue payments.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

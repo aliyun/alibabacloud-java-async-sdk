@@ -104,6 +104,7 @@ public class DescribeRtcChannelMetricRequest extends Request {
         } 
 
         /**
+         * <p>The application ID. You can create and query the application ID in the console. Only a single ID is supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,6 +117,7 @@ public class DescribeRtcChannelMetricRequest extends Request {
         }
 
         /**
+         * <p>The channel ID. Only a single ID is supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -137,6 +139,8 @@ public class DescribeRtcChannelMetricRequest extends Request {
         }
 
         /**
+         * <p>The time when the record is queried, in UTC. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format.</p>
+         * <p>The time granularity is day.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

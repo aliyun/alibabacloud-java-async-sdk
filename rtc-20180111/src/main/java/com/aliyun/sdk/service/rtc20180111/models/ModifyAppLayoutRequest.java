@@ -89,6 +89,7 @@ public class ModifyAppLayoutRequest extends Request {
         } 
 
         /**
+         * <p>Application ID. Create and query through the console. Only a single ID is supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,7 +102,10 @@ public class ModifyAppLayoutRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>Idempotent parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>53200b81-b761-4c10-842a-a0726d97xxxx</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -110,6 +114,7 @@ public class ModifyAppLayoutRequest extends Request {
         }
 
         /**
+         * <p>Layout.</p>
          * <p>This parameter is required.</p>
          */
         public Builder layout(Layout layout) {
@@ -237,7 +242,10 @@ public class ModifyAppLayoutRequest extends Request {
             } 
 
             /**
-             * Height.
+             * <p>Pane height, normalized percentage. Height ranges from 0.0&lt;Height≤1.0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.25</p>
              */
             public Builder height(Double height) {
                 this.height = height;
@@ -245,7 +253,10 @@ public class ModifyAppLayoutRequest extends Request {
             }
 
             /**
-             * PaneId.
+             * <p>Pane ID, starting from 0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder paneId(Long paneId) {
                 this.paneId = paneId;
@@ -253,7 +264,10 @@ public class ModifyAppLayoutRequest extends Request {
             }
 
             /**
-             * Width.
+             * <p>Pane width, normalized percentage. Width ranges from 0.0&lt;Width≤1.0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.25</p>
              */
             public Builder width(Double width) {
                 this.width = width;
@@ -261,7 +275,10 @@ public class ModifyAppLayoutRequest extends Request {
             }
 
             /**
-             * X.
+             * <p>X coordinate, normalized percentage. The X coordinate ranges from 0.0 to 1.0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.25</p>
              */
             public Builder x(Double x) {
                 this.x = x;
@@ -269,7 +286,10 @@ public class ModifyAppLayoutRequest extends Request {
             }
 
             /**
-             * Y.
+             * <p>Y coordinate, normalized percentage. The Y coordinate ranges from 0.0 to 1.0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.25</p>
              */
             public Builder y(Double y) {
                 this.y = y;
@@ -277,7 +297,10 @@ public class ModifyAppLayoutRequest extends Request {
             }
 
             /**
-             * ZOrder.
+             * <p>Stacking order. 0 is the bottom layer, 1 is above 0, and so on.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder zOrder(Integer zOrder) {
                 this.zOrder = zOrder;
@@ -359,6 +382,7 @@ public class ModifyAppLayoutRequest extends Request {
             } 
 
             /**
+             * <p>Layout ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -370,6 +394,7 @@ public class ModifyAppLayoutRequest extends Request {
             }
 
             /**
+             * <p>Layout name.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -381,7 +406,7 @@ public class ModifyAppLayoutRequest extends Request {
             }
 
             /**
-             * Panes.
+             * <p>List of panes.</p>
              */
             public Builder panes(java.util.List<Panes> panes) {
                 this.panes = panes;

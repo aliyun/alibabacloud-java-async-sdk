@@ -104,7 +104,7 @@ public class DescribeAppRecordTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * Templates.
+         * <p>The list of templates.</p>
          */
         public Builder templates(java.util.List<Templates> templates) {
             this.templates = templates;
@@ -112,7 +112,10 @@ public class DescribeAppRecordTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalNum.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalNum(Long totalNum) {
             this.totalNum = totalNum;
@@ -120,7 +123,10 @@ public class DescribeAppRecordTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalPage.
+         * <p>The total number of pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalPage(Long totalPage) {
             this.totalPage = totalPage;
@@ -277,7 +283,10 @@ public class DescribeAppRecordTemplatesResponseBody extends TeaModel {
             } 
 
             /**
-             * CreateTime.
+             * <p>The creation time. The time is displayed in the yyyy-MM-ddTHH:mm:ssZ format. The time is in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-09-04T06:22:15Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -285,7 +294,10 @@ public class DescribeAppRecordTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * DelayStopTime.
+             * <p>The delay time before stopping the recording. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>180</p>
              */
             public Builder delayStopTime(Long delayStopTime) {
                 this.delayStopTime = delayStopTime;
@@ -293,7 +305,13 @@ public class DescribeAppRecordTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * FilePrefix.
+             * <p>The naming rule for recording files.</p>
+             * <blockquote>
+             * <p>To ensure the uniqueness of recording file names, the current naming rule is record/{AppId}/{ChannelId}<em>{TaskId}/{EscapedStartTime}</em>{EscapedEndTime}.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>record/{AppId}/{ChannelId_TaskId}/{EscapedStartTime}_{EscapedEndTime}</p>
              */
             public Builder filePrefix(String filePrefix) {
                 this.filePrefix = filePrefix;
@@ -301,7 +319,10 @@ public class DescribeAppRecordTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * FileSplitInterval.
+             * <p>The splitting duration of the recording file. The value must be greater than or equal to 1800. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1800</p>
              */
             public Builder fileSplitInterval(Long fileSplitInterval) {
                 this.fileSplitInterval = fileSplitInterval;
@@ -309,7 +330,10 @@ public class DescribeAppRecordTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Formats.
+             * <p>The formats of the recording file. Valid values: .m3u8, .mp4, and .flv.</p>
+             * <blockquote>
+             * <p>Only lowercase letters are supported for file formats.</p>
+             * </blockquote>
              */
             public Builder formats(java.util.List<String> formats) {
                 this.formats = formats;
@@ -317,7 +341,7 @@ public class DescribeAppRecordTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * LayoutIds.
+             * <p>The list of layout IDs.</p>
              */
             public Builder layoutIds(java.util.List<String> layoutIds) {
                 this.layoutIds = layoutIds;
@@ -325,7 +349,10 @@ public class DescribeAppRecordTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * MediaEncode.
+             * <p>The encoding options.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder mediaEncode(Integer mediaEncode) {
                 this.mediaEncode = mediaEncode;
@@ -333,7 +360,10 @@ public class DescribeAppRecordTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The template name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -341,7 +371,10 @@ public class DescribeAppRecordTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateId.
+             * <p>The template ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>wv7N****</p>
              */
             public Builder templateId(String templateId) {
                 this.templateId = templateId;

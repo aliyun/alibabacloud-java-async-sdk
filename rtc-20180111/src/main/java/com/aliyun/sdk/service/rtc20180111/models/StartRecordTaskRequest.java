@@ -329,6 +329,7 @@ public class StartRecordTaskRequest extends Request {
         } 
 
         /**
+         * <p>The application ID. You can create and query the ID in the console. Only a single ID is supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -341,6 +342,7 @@ public class StartRecordTaskRequest extends Request {
         }
 
         /**
+         * <p>The channel ID. Only a single ID is supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -353,7 +355,14 @@ public class StartRecordTaskRequest extends Request {
         }
 
         /**
-         * CropMode.
+         * <p>The cropping mode of the video. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: crops the video while maintaining the aspect ratio.</li>
+         * <li><strong>2</strong> (default): adds padding to the video while maintaining the aspect ratio.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder cropMode(Long cropMode) {
             this.putQueryParameter("CropMode", cropMode);
@@ -362,7 +371,10 @@ public class StartRecordTaskRequest extends Request {
         }
 
         /**
-         * LayoutIds.
+         * <p>The list of layout IDs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1111</p>
          */
         public Builder layoutIds(java.util.List<Long> layoutIds) {
             this.putQueryParameter("LayoutIds", layoutIds);
@@ -371,7 +383,10 @@ public class StartRecordTaskRequest extends Request {
         }
 
         /**
-         * MediaEncode.
+         * <p>The encoding option. For more information, see the MediaEncode enum values below.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder mediaEncode(Integer mediaEncode) {
             this.putQueryParameter("MediaEncode", mediaEncode);
@@ -380,7 +395,22 @@ public class StartRecordTaskRequest extends Request {
         }
 
         /**
-         * MixMode.
+         * <p>The recording mode. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: single-stream recording. Task parameters cannot be modified during the recording process. You cannot call the UpdateRecordTask operation to modify task parameters.</li>
+         * <li><strong>1</strong> (default): mixed-stream recording. Multiple video streams are mixed and output.</li>
+         * </ul>
+         * <blockquote>
+         * <ul>
+         * <li>Valid parameters in single-stream recording mode: StreamType and SourceType.</li>
+         * </ul>
+         * </blockquote>
+         * <ul>
+         * <li>Valid parameters in mixed-stream recording mode: TaskProfile, MediaEncode, LayoutIds, BackgroundColor, SubSpecUsers, CropMode, UserPanes, Backgrounds, Watermarks, and ClockWidgets.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder mixMode(Integer mixMode) {
             this.putQueryParameter("MixMode", mixMode);
@@ -398,7 +428,17 @@ public class StartRecordTaskRequest extends Request {
         }
 
         /**
-         * SourceType.
+         * <p>The video source in single-stream recording mode. Valid values:</p>
+         * <ul>
+         * <li><strong>camera</strong>: the camera.</li>
+         * <li><strong>shareScreen</strong>: screen sharing.</li>
+         * </ul>
+         * <blockquote>
+         * <p>If the video source is shareScreen and only the camera stream is ingested, the camera stream is recorded. If both the camera stream and the screen sharing stream are ingested, the screen sharing stream is recorded.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>camera</p>
          */
         public Builder sourceType(String sourceType) {
             this.putQueryParameter("SourceType", sourceType);
@@ -407,7 +447,14 @@ public class StartRecordTaskRequest extends Request {
         }
 
         /**
-         * StreamType.
+         * <p>The single-stream recording mode. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong> (default): records the original stream.</li>
+         * <li><strong>1</strong>: records only the audio stream.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder streamType(Integer streamType) {
             this.putQueryParameter("StreamType", streamType);
@@ -416,7 +463,10 @@ public class StartRecordTaskRequest extends Request {
         }
 
         /**
-         * SubSpecAudioUsers.
+         * <p>Specifies the users whose audio streams are subscribed to in the channel.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder subSpecAudioUsers(java.util.List<String> subSpecAudioUsers) {
             this.putQueryParameter("SubSpecAudioUsers", subSpecAudioUsers);
@@ -425,7 +475,10 @@ public class StartRecordTaskRequest extends Request {
         }
 
         /**
-         * SubSpecCameraUsers.
+         * <p>Specifies the users whose camera streams are subscribed to in the channel.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder subSpecCameraUsers(java.util.List<String> subSpecCameraUsers) {
             this.putQueryParameter("SubSpecCameraUsers", subSpecCameraUsers);
@@ -434,7 +487,10 @@ public class StartRecordTaskRequest extends Request {
         }
 
         /**
-         * SubSpecShareScreenUsers.
+         * <p>Specifies the users whose screen sharing streams are subscribed to in the channel.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder subSpecShareScreenUsers(java.util.List<String> subSpecShareScreenUsers) {
             this.putQueryParameter("SubSpecShareScreenUsers", subSpecShareScreenUsers);
@@ -443,7 +499,10 @@ public class StartRecordTaskRequest extends Request {
         }
 
         /**
-         * SubSpecUsers.
+         * <p>Specifies the list of users to which the task subscribes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>userID</p>
          */
         public Builder subSpecUsers(java.util.List<String> subSpecUsers) {
             this.putQueryParameter("SubSpecUsers", subSpecUsers);
@@ -452,6 +511,7 @@ public class StartRecordTaskRequest extends Request {
         }
 
         /**
+         * <p>The task ID. Only a single ID is supported and the ID must be unique. The ID must be 1 to 55 characters in length and can contain letters, digits, underscores (_), and hyphens (-).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -464,7 +524,18 @@ public class StartRecordTaskRequest extends Request {
         }
 
         /**
-         * TaskProfile.
+         * <p>The billing configuration of the task. You are charged based on your settings. For more information, see the TaskProfile enum values below.</p>
+         * <blockquote>
+         * <ul>
+         * <li>The resolution of the MediaEncode encoding option must be less than or equal to the resolution of TaskProfile.</li>
+         * </ul>
+         * </blockquote>
+         * <ul>
+         * <li>The maximum number of panes in the layout must be less than or equal to the number of input streams specified by TaskProfile.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>4IN_1080P</p>
          */
         public Builder taskProfile(String taskProfile) {
             this.putQueryParameter("TaskProfile", taskProfile);
@@ -473,6 +544,7 @@ public class StartRecordTaskRequest extends Request {
         }
 
         /**
+         * <p>The configuration template ID. For more information about how to obtain the template ID, see <a href="https://help.aliyun.com/document_detail/193625.html">AddRecordTemplate</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -485,7 +557,10 @@ public class StartRecordTaskRequest extends Request {
         }
 
         /**
-         * UnsubSpecAudioUsers.
+         * <p>Specifies the users whose audio streams are not subscribed to in the channel.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder unsubSpecAudioUsers(java.util.List<String> unsubSpecAudioUsers) {
             this.putQueryParameter("UnsubSpecAudioUsers", unsubSpecAudioUsers);
@@ -494,7 +569,10 @@ public class StartRecordTaskRequest extends Request {
         }
 
         /**
-         * UnsubSpecCameraUsers.
+         * <p>Specifies the users whose camera streams are not subscribed to in the channel.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder unsubSpecCameraUsers(java.util.List<String> unsubSpecCameraUsers) {
             this.putQueryParameter("UnsubSpecCameraUsers", unsubSpecCameraUsers);
@@ -503,7 +581,10 @@ public class StartRecordTaskRequest extends Request {
         }
 
         /**
-         * UnsubSpecShareScreenUsers.
+         * <p>Specifies the users whose screen sharing streams are not subscribed to in the channel.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder unsubSpecShareScreenUsers(java.util.List<String> unsubSpecShareScreenUsers) {
             this.putQueryParameter("UnsubSpecShareScreenUsers", unsubSpecShareScreenUsers);
@@ -512,7 +593,7 @@ public class StartRecordTaskRequest extends Request {
         }
 
         /**
-         * UserPanes.
+         * <p>The list of layout parameters.</p>
          */
         public Builder userPanes(java.util.List<UserPanes> userPanes) {
             this.putQueryParameter("UserPanes", userPanes);
@@ -645,7 +726,15 @@ public class StartRecordTaskRequest extends Request {
             } 
 
             /**
-             * Display.
+             * <p>The display mode of the image. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong> (None): The image is not displayed.</li>
+             * <li><strong>1</strong> (Always): The image is always displayed.</li>
+             * <li><strong>2</strong> (Backup): The image is displayed when the current user has no video stream.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder display(Integer display) {
                 this.display = display;
@@ -653,7 +742,10 @@ public class StartRecordTaskRequest extends Request {
             }
 
             /**
-             * Height.
+             * <p>The height of the pane, represented as a normalized percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.2456</p>
              */
             public Builder height(Float height) {
                 this.height = height;
@@ -661,7 +753,10 @@ public class StartRecordTaskRequest extends Request {
             }
 
             /**
-             * Url.
+             * <p>The HTTP or HTTPS URL of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://www.example.com/image.jpg">https://www.example.com/image.jpg</a></p>
              */
             public Builder url(String url) {
                 this.url = url;
@@ -669,7 +764,10 @@ public class StartRecordTaskRequest extends Request {
             }
 
             /**
-             * Width.
+             * <p>The width of the pane, represented as a normalized percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.2456</p>
              */
             public Builder width(Float width) {
                 this.width = width;
@@ -677,7 +775,10 @@ public class StartRecordTaskRequest extends Request {
             }
 
             /**
-             * X.
+             * <p>The X coordinate, represented as a normalized percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.7576</p>
              */
             public Builder x(Float x) {
                 this.x = x;
@@ -685,7 +786,10 @@ public class StartRecordTaskRequest extends Request {
             }
 
             /**
-             * Y.
+             * <p>The Y coordinate, represented as a normalized percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.7576</p>
              */
             public Builder y(Float y) {
                 this.y = y;
@@ -693,7 +797,10 @@ public class StartRecordTaskRequest extends Request {
             }
 
             /**
-             * ZOrder.
+             * <p>The stacking order. 0 indicates the bottom layer, 1 indicates the layer above 0, and so on.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder zOrder(Integer zOrder) {
                 this.zOrder = zOrder;
@@ -825,7 +932,10 @@ public class StartRecordTaskRequest extends Request {
             } 
 
             /**
-             * FontColor.
+             * <p>The text color in RGB format. The calculation formula is R + G × 256 + B × 65536. Valid values of R (red), G (green), and B (blue): <strong>0 to 255</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder fontColor(Integer fontColor) {
                 this.fontColor = fontColor;
@@ -833,7 +943,10 @@ public class StartRecordTaskRequest extends Request {
             }
 
             /**
-             * FontSize.
+             * <p>The font size. Valid values: <strong>(0, 72]</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder fontSize(Integer fontSize) {
                 this.fontSize = fontSize;
@@ -841,7 +954,18 @@ public class StartRecordTaskRequest extends Request {
             }
 
             /**
-             * FontType.
+             * <p>The font type. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong> (default): NOTO_SERIF_CJKSC_REGULAR.</li>
+             * <li><strong>1</strong>: ALIBABA_PUHUITI_REGULAR.</li>
+             * <li><strong>2</strong>: ALIBABA_PUHUITI_BOLD.</li>
+             * <li><strong>3</strong>: ALIBABA_PUHUITI_Heavy.</li>
+             * <li><strong>4</strong>: ALIBABA_PUHUITI_LIGHT.</li>
+             * <li><strong>5</strong>: ALIBABA_PUHUITI_MEDIUM.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder fontType(Integer fontType) {
                 this.fontType = fontType;
@@ -849,7 +973,10 @@ public class StartRecordTaskRequest extends Request {
             }
 
             /**
-             * Text.
+             * <p>The text content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>text</p>
              */
             public Builder text(String text) {
                 this.text = text;
@@ -857,7 +984,10 @@ public class StartRecordTaskRequest extends Request {
             }
 
             /**
-             * X.
+             * <p>The X coordinate, represented as a normalized percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.7576</p>
              */
             public Builder x(Float x) {
                 this.x = x;
@@ -865,7 +995,10 @@ public class StartRecordTaskRequest extends Request {
             }
 
             /**
-             * Y.
+             * <p>The Y coordinate, represented as a normalized percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.7576</p>
              */
             public Builder y(Float y) {
                 this.y = y;
@@ -873,7 +1006,10 @@ public class StartRecordTaskRequest extends Request {
             }
 
             /**
-             * ZOrder.
+             * <p>The stacking order. 0 indicates the bottom layer, 1 indicates the layer above 0, and so on.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder zOrder(Integer zOrder) {
                 this.zOrder = zOrder;
@@ -979,7 +1115,7 @@ public class StartRecordTaskRequest extends Request {
             } 
 
             /**
-             * Images.
+             * <p>The list of image panes in the current layout.</p>
              */
             public Builder images(java.util.List<Images> images) {
                 this.images = images;
@@ -987,7 +1123,18 @@ public class StartRecordTaskRequest extends Request {
             }
 
             /**
-             * PaneId.
+             * <p>The pane ID. Valid values: <strong>0</strong> to <strong>15</strong>.</p>
+             * <blockquote>
+             * <ul>
+             * <li>If the user specified by PaneId is not found, other streams are displayed by default. The streams are determined based on the order in which users join the channel.</li>
+             * </ul>
+             * </blockquote>
+             * <ul>
+             * <li>If a parameter related to UserPanes is required, all other related parameters are also required. Otherwise, none of them are required.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder paneId(Integer paneId) {
                 this.paneId = paneId;
@@ -995,7 +1142,14 @@ public class StartRecordTaskRequest extends Request {
             }
 
             /**
-             * SourceType.
+             * <p>The user video input that corresponds to the layout. Valid values:</p>
+             * <ul>
+             * <li><strong>camera</strong> (default): the video stream.</li>
+             * <li><strong>shareScreen</strong>: the screen sharing stream.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>camera</p>
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;
@@ -1003,7 +1157,7 @@ public class StartRecordTaskRequest extends Request {
             }
 
             /**
-             * Texts.
+             * <p>The list of text panes in the current layout.</p>
              */
             public Builder texts(java.util.List<Texts> texts) {
                 this.texts = texts;
@@ -1011,7 +1165,10 @@ public class StartRecordTaskRequest extends Request {
             }
 
             /**
-             * UserId.
+             * <p>The ID of the user that corresponds to the layout pane. Valid values of N: <strong>1 to 16</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestId</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;

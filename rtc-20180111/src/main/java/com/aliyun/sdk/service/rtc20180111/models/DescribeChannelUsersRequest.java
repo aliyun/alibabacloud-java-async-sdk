@@ -89,6 +89,7 @@ public class DescribeChannelUsersRequest extends Request {
         } 
 
         /**
+         * <p>The application ID. You can create and query the ID in the console. Only a single ID is supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,6 +102,7 @@ public class DescribeChannelUsersRequest extends Request {
         }
 
         /**
+         * <p>The ID of the channel to query. Only a single ID is supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

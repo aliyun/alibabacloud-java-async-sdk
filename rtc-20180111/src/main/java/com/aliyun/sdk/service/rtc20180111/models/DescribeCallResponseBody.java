@@ -80,7 +80,7 @@ public class DescribeCallResponseBody extends TeaModel {
         } 
 
         /**
-         * CallInfo.
+         * <p>The basic communication information.</p>
          */
         public Builder callInfo(CallInfo callInfo) {
             this.callInfo = callInfo;
@@ -88,7 +88,10 @@ public class DescribeCallResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>231470C1-ACFB-4C9F-844F-4CFE1E3804C5</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,7 @@ public class DescribeCallResponseBody extends TeaModel {
         }
 
         /**
-         * UserDetailList.
+         * <p>The list of user details.</p>
          */
         public Builder userDetailList(java.util.List<UserDetailList> userDetailList) {
             this.userDetailList = userDetailList;
@@ -214,10 +217,10 @@ public class DescribeCallResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>App ID。</p>
+             * <p>The app ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxxxxxxx</p>
+             * <p>testappid</p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -225,7 +228,14 @@ public class DescribeCallResponseBody extends TeaModel {
             }
 
             /**
-             * CallStatus.
+             * <p>The communication status. Valid values:</p>
+             * <ul>
+             * <li><strong>IN</strong>: In progress.</li>
+             * <li><strong>OUT</strong>: Ended.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>IN</p>
              */
             public Builder callStatus(String callStatus) {
                 this.callStatus = callStatus;
@@ -233,7 +243,10 @@ public class DescribeCallResponseBody extends TeaModel {
             }
 
             /**
-             * ChannelId.
+             * <p>The channel ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456</p>
              */
             public Builder channelId(String channelId) {
                 this.channelId = channelId;
@@ -241,7 +254,10 @@ public class DescribeCallResponseBody extends TeaModel {
             }
 
             /**
-             * CreatedTs.
+             * <p>The time when the channel was created. The value is a UNIX timestamp in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1615860711</p>
              */
             public Builder createdTs(Long createdTs) {
                 this.createdTs = createdTs;
@@ -249,7 +265,10 @@ public class DescribeCallResponseBody extends TeaModel {
             }
 
             /**
-             * DestroyedTs.
+             * <p>The time when the channel was released. The value is a UNIX timestamp in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1615860811</p>
              */
             public Builder destroyedTs(Long destroyedTs) {
                 this.destroyedTs = destroyedTs;
@@ -257,7 +276,10 @@ public class DescribeCallResponseBody extends TeaModel {
             }
 
             /**
-             * Duration.
+             * <p>The duration of the channel. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder duration(Long duration) {
                 this.duration = duration;
@@ -428,7 +450,10 @@ public class DescribeCallResponseBody extends TeaModel {
             } 
 
             /**
-             * PubAudio.
+             * <p>The duration of published audio. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder pubAudio(Long pubAudio) {
                 this.pubAudio = pubAudio;
@@ -436,7 +461,10 @@ public class DescribeCallResponseBody extends TeaModel {
             }
 
             /**
-             * PubVideo1080.
+             * <p>The duration of published 1080P video. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder pubVideo1080(Long pubVideo1080) {
                 this.pubVideo1080 = pubVideo1080;
@@ -444,7 +472,10 @@ public class DescribeCallResponseBody extends TeaModel {
             }
 
             /**
-             * PubVideo360.
+             * <p>The duration of published 360P video. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder pubVideo360(Long pubVideo360) {
                 this.pubVideo360 = pubVideo360;
@@ -452,7 +483,10 @@ public class DescribeCallResponseBody extends TeaModel {
             }
 
             /**
-             * PubVideo720.
+             * <p>The duration of published 720P video. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder pubVideo720(Long pubVideo720) {
                 this.pubVideo720 = pubVideo720;
@@ -460,7 +494,10 @@ public class DescribeCallResponseBody extends TeaModel {
             }
 
             /**
-             * PubVideoScreenShare.
+             * <p>The duration of published screen sharing. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder pubVideoScreenShare(Long pubVideoScreenShare) {
                 this.pubVideoScreenShare = pubVideoScreenShare;
@@ -468,7 +505,10 @@ public class DescribeCallResponseBody extends TeaModel {
             }
 
             /**
-             * SubAudio.
+             * <p>The duration of subscribed audio. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder subAudio(Long subAudio) {
                 this.subAudio = subAudio;
@@ -476,7 +516,10 @@ public class DescribeCallResponseBody extends TeaModel {
             }
 
             /**
-             * SubVideo1080.
+             * <p>The duration of subscribed 1080P video. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder subVideo1080(Long subVideo1080) {
                 this.subVideo1080 = subVideo1080;
@@ -484,7 +527,10 @@ public class DescribeCallResponseBody extends TeaModel {
             }
 
             /**
-             * SubVideo360.
+             * <p>The duration of subscribed 360P video. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder subVideo360(Long subVideo360) {
                 this.subVideo360 = subVideo360;
@@ -492,7 +538,10 @@ public class DescribeCallResponseBody extends TeaModel {
             }
 
             /**
-             * SubVideo720.
+             * <p>The duration of subscribed 720P video. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder subVideo720(Long subVideo720) {
                 this.subVideo720 = subVideo720;
@@ -500,7 +549,10 @@ public class DescribeCallResponseBody extends TeaModel {
             }
 
             /**
-             * SubVideoScreenShare.
+             * <p>The duration of subscribed screen sharing. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder subVideoScreenShare(Long subVideoScreenShare) {
                 this.subVideoScreenShare = subVideoScreenShare;
@@ -567,7 +619,10 @@ public class DescribeCallResponseBody extends TeaModel {
             } 
 
             /**
-             * JoinTs.
+             * <p>The time when the user joined the channel. The value is a UNIX timestamp in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1614936817</p>
              */
             public Builder joinTs(Long joinTs) {
                 this.joinTs = joinTs;
@@ -575,7 +630,10 @@ public class DescribeCallResponseBody extends TeaModel {
             }
 
             /**
-             * LeaveTs.
+             * <p>The time when the user left the channel. The value is a UNIX timestamp in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1614936817</p>
              */
             public Builder leaveTs(Long leaveTs) {
                 this.leaveTs = leaveTs;
@@ -824,7 +882,14 @@ public class DescribeCallResponseBody extends TeaModel {
             } 
 
             /**
-             * CallExp.
+             * <p>The call experience. Valid values:</p>
+             * <ul>
+             * <li><strong>GOOD</strong>: Good.</li>
+             * <li><strong>BAD</strong>: Poor.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>GOOD</p>
              */
             public Builder callExp(String callExp) {
                 this.callExp = callExp;
@@ -832,7 +897,10 @@ public class DescribeCallResponseBody extends TeaModel {
             }
 
             /**
-             * CreatedTs.
+             * <p>The time when the user first joined the channel. The value is a UNIX timestamp in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1614936817</p>
              */
             public Builder createdTs(Long createdTs) {
                 this.createdTs = createdTs;
@@ -840,7 +908,10 @@ public class DescribeCallResponseBody extends TeaModel {
             }
 
             /**
-             * DestroyedTs.
+             * <p>The time when the user last left the channel. The value is a UNIX timestamp in seconds. If the communication has not ended, the value is empty.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1614936817</p>
              */
             public Builder destroyedTs(Long destroyedTs) {
                 this.destroyedTs = destroyedTs;
@@ -848,7 +919,7 @@ public class DescribeCallResponseBody extends TeaModel {
             }
 
             /**
-             * DurMetricStatData.
+             * <p>The duration statistics.</p>
              */
             public Builder durMetricStatData(DurMetricStatData durMetricStatData) {
                 this.durMetricStatData = durMetricStatData;
@@ -856,7 +927,10 @@ public class DescribeCallResponseBody extends TeaModel {
             }
 
             /**
-             * Duration.
+             * <p>The communication duration from the first join to the last leave. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder duration(Long duration) {
                 this.duration = duration;
@@ -864,7 +938,10 @@ public class DescribeCallResponseBody extends TeaModel {
             }
 
             /**
-             * Location.
+             * <p>The geographic location, such as Beijing-Beijing.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Zhejiang-Hangzhou</p>
              */
             public Builder location(String location) {
                 this.location = location;
@@ -872,7 +949,10 @@ public class DescribeCallResponseBody extends TeaModel {
             }
 
             /**
-             * Network.
+             * <p>The network type, such as Wi-Fi or 4G.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4G</p>
              */
             public Builder network(String network) {
                 this.network = network;
@@ -880,7 +960,7 @@ public class DescribeCallResponseBody extends TeaModel {
             }
 
             /**
-             * NetworkList.
+             * <p>The network type, such as Wi-Fi or 4G.</p>
              */
             public Builder networkList(java.util.List<String> networkList) {
                 this.networkList = networkList;
@@ -888,7 +968,10 @@ public class DescribeCallResponseBody extends TeaModel {
             }
 
             /**
-             * OnlineDuration.
+             * <p>The online duration. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder onlineDuration(Long onlineDuration) {
                 this.onlineDuration = onlineDuration;
@@ -896,7 +979,7 @@ public class DescribeCallResponseBody extends TeaModel {
             }
 
             /**
-             * OnlinePeriods.
+             * <p>The online periods.</p>
              */
             public Builder onlinePeriods(java.util.List<OnlinePeriods> onlinePeriods) {
                 this.onlinePeriods = onlinePeriods;
@@ -904,7 +987,10 @@ public class DescribeCallResponseBody extends TeaModel {
             }
 
             /**
-             * Os.
+             * <p>The platform type. If the user client is WEB, this indicates the type of the browser. If the client is NATIVE, this indicates the operating system type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>iOS</p>
              */
             public Builder os(String os) {
                 this.os = os;
@@ -912,7 +998,7 @@ public class DescribeCallResponseBody extends TeaModel {
             }
 
             /**
-             * OsList.
+             * <p>The platform type. If the user client is WEB, this indicates the type of the browser. If the client is NATIVE, this indicates the operating system type.</p>
              */
             public Builder osList(java.util.List<String> osList) {
                 this.osList = osList;
@@ -920,7 +1006,7 @@ public class DescribeCallResponseBody extends TeaModel {
             }
 
             /**
-             * Roles.
+             * <p>The user roles.</p>
              */
             public Builder roles(java.util.List<String> roles) {
                 this.roles = roles;
@@ -928,7 +1014,10 @@ public class DescribeCallResponseBody extends TeaModel {
             }
 
             /**
-             * SdkVersion.
+             * <p>The SDK version, such as 1.0.0 or 1.1.1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0.0</p>
              */
             public Builder sdkVersion(String sdkVersion) {
                 this.sdkVersion = sdkVersion;
@@ -936,7 +1025,7 @@ public class DescribeCallResponseBody extends TeaModel {
             }
 
             /**
-             * SdkVersionList.
+             * <p>The list of SDK versions, such as 1.0.0 or 1.1.1.</p>
              */
             public Builder sdkVersionList(java.util.List<String> sdkVersionList) {
                 this.sdkVersionList = sdkVersionList;
@@ -944,7 +1033,10 @@ public class DescribeCallResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testuserid</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;

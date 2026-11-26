@@ -189,6 +189,7 @@ public class ModifyViewLayoutRequest extends Request {
         } 
 
         /**
+         * <p>The application ID. You can create and query the ID in the console. Only a single ID is supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -201,7 +202,7 @@ public class ModifyViewLayoutRequest extends Request {
         }
 
         /**
-         * Backgrounds.
+         * <p>The background images.</p>
          */
         public Builder backgrounds(java.util.List<Backgrounds> backgrounds) {
             this.putQueryParameter("Backgrounds", backgrounds);
@@ -210,6 +211,7 @@ public class ModifyViewLayoutRequest extends Request {
         }
 
         /**
+         * <p>The ID of an existing channel. Only a single ID is supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -222,7 +224,7 @@ public class ModifyViewLayoutRequest extends Request {
         }
 
         /**
-         * ClockWidgets.
+         * <p>The global clock watermark.</p>
          */
         public Builder clockWidgets(java.util.List<ClockWidgets> clockWidgets) {
             this.putQueryParameter("ClockWidgets", clockWidgets);
@@ -231,7 +233,7 @@ public class ModifyViewLayoutRequest extends Request {
         }
 
         /**
-         * Images.
+         * <p>The global image watermark.</p>
          */
         public Builder images(java.util.List<Images> images) {
             this.putQueryParameter("Images", images);
@@ -240,7 +242,7 @@ public class ModifyViewLayoutRequest extends Request {
         }
 
         /**
-         * LayoutSpecifiedUsers.
+         * <p>The blacklists and whitelists settings.</p>
          */
         public Builder layoutSpecifiedUsers(LayoutSpecifiedUsers layoutSpecifiedUsers) {
             String layoutSpecifiedUsersShrink = shrink(layoutSpecifiedUsers, "LayoutSpecifiedUsers", "json");
@@ -250,7 +252,7 @@ public class ModifyViewLayoutRequest extends Request {
         }
 
         /**
-         * Panes.
+         * <p>The pane settings. You can configure up to 16 panes.</p>
          */
         public Builder panes(java.util.List<Panes> panes) {
             this.putQueryParameter("Panes", panes);
@@ -259,6 +261,7 @@ public class ModifyViewLayoutRequest extends Request {
         }
 
         /**
+         * <p>The task ID. Only a single ID is supported. The ID can contain letters, digits, underscores (_), and hyphens (-), and can be up to 55 bytes in length.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -271,6 +274,7 @@ public class ModifyViewLayoutRequest extends Request {
         }
 
         /**
+         * <p>The template ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -283,7 +287,7 @@ public class ModifyViewLayoutRequest extends Request {
         }
 
         /**
-         * Texts.
+         * <p>The global text watermark.</p>
          */
         public Builder texts(java.util.List<Texts> texts) {
             this.putQueryParameter("Texts", texts);
@@ -434,7 +438,10 @@ public class ModifyViewLayoutRequest extends Request {
             } 
 
             /**
-             * Alpha.
+             * <p>The opacity of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.9</p>
              */
             public Builder alpha(Double alpha) {
                 this.alpha = alpha;
@@ -442,7 +449,15 @@ public class ModifyViewLayoutRequest extends Request {
             }
 
             /**
-             * BackgroundCropMode.
+             * <p>The crop mode of the image. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: Crops the image while maintaining the aspect ratio.</li>
+             * <li><strong>2</strong>: Maintains the aspect ratio and adds padding.</li>
+             * <li><strong>3</strong>: Stretches the image to fill the area.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder backgroundCropMode(Integer backgroundCropMode) {
                 this.backgroundCropMode = backgroundCropMode;
@@ -450,6 +465,7 @@ public class ModifyViewLayoutRequest extends Request {
             }
 
             /**
+             * <p>The height.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -461,7 +477,10 @@ public class ModifyViewLayoutRequest extends Request {
             }
 
             /**
-             * Layer.
+             * <p>The z-axis layer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder layer(Integer layer) {
                 this.layer = layer;
@@ -469,6 +488,7 @@ public class ModifyViewLayoutRequest extends Request {
             }
 
             /**
+             * <p>The URL of the image.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -480,6 +500,7 @@ public class ModifyViewLayoutRequest extends Request {
             }
 
             /**
+             * <p>The width.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -491,6 +512,7 @@ public class ModifyViewLayoutRequest extends Request {
             }
 
             /**
+             * <p>The x-coordinate.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -502,6 +524,7 @@ public class ModifyViewLayoutRequest extends Request {
             }
 
             /**
+             * <p>The y-coordinate.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -585,7 +608,7 @@ public class ModifyViewLayoutRequest extends Request {
             } 
 
             /**
-             * <p>B。</p>
+             * <p>The blue component.</p>
              * 
              * <strong>example:</strong>
              * <p>255</p>
@@ -596,7 +619,7 @@ public class ModifyViewLayoutRequest extends Request {
             }
 
             /**
-             * <p>G。</p>
+             * <p>The green component.</p>
              * 
              * <strong>example:</strong>
              * <p>255</p>
@@ -607,7 +630,7 @@ public class ModifyViewLayoutRequest extends Request {
             }
 
             /**
-             * <p>R。</p>
+             * <p>The red component.</p>
              * 
              * <strong>example:</strong>
              * <p>255</p>
@@ -690,7 +713,7 @@ public class ModifyViewLayoutRequest extends Request {
             } 
 
             /**
-             * <p>B。</p>
+             * <p>The blue component.</p>
              * 
              * <strong>example:</strong>
              * <p>255</p>
@@ -701,7 +724,7 @@ public class ModifyViewLayoutRequest extends Request {
             }
 
             /**
-             * <p>G。</p>
+             * <p>The green component.</p>
              * 
              * <strong>example:</strong>
              * <p>255</p>
@@ -712,7 +735,7 @@ public class ModifyViewLayoutRequest extends Request {
             }
 
             /**
-             * <p>R。</p>
+             * <p>The red component.</p>
              * 
              * <strong>example:</strong>
              * <p>255</p>
@@ -914,7 +937,10 @@ public class ModifyViewLayoutRequest extends Request {
             } 
 
             /**
-             * Alpha.
+             * <p>The opacity of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.9</p>
              */
             public Builder alpha(Double alpha) {
                 this.alpha = alpha;
@@ -922,7 +948,10 @@ public class ModifyViewLayoutRequest extends Request {
             }
 
             /**
-             * BoxAlpha.
+             * <p>The opacity of the text box.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.6</p>
              */
             public Builder boxAlpha(Double boxAlpha) {
                 this.boxAlpha = boxAlpha;
@@ -930,7 +959,10 @@ public class ModifyViewLayoutRequest extends Request {
             }
 
             /**
-             * BoxBorderw.
+             * <p>The border width of the text box.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder boxBorderw(Integer boxBorderw) {
                 this.boxBorderw = boxBorderw;
@@ -938,7 +970,7 @@ public class ModifyViewLayoutRequest extends Request {
             }
 
             /**
-             * BoxColor.
+             * <p>The border color of the text box.</p>
              */
             public Builder boxColor(BoxColor boxColor) {
                 this.boxColor = boxColor;
@@ -946,7 +978,22 @@ public class ModifyViewLayoutRequest extends Request {
             }
 
             /**
-             * Font.
+             * <p>The font. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: Alibaba PuHuiTi Regular</li>
+             * <li><strong>1</strong>: Alibaba PuHuiTi Light</li>
+             * <li><strong>2</strong>: Alibaba PuHuiTi Medium</li>
+             * <li><strong>3</strong>: Alibaba PuHuiTi Bold</li>
+             * <li><strong>4</strong>: Alibaba PuHuiTi Heavy</li>
+             * <li><strong>5</strong>: Alimama ShuHeiTi</li>
+             * <li><strong>6</strong>: DingTalk JinBuTi</li>
+             * <li><strong>7</strong>: Alimama DaoLiTi</li>
+             * <li><strong>8</strong>: Alimama DongFangDaKai</li>
+             * <li><strong>9</strong>: Alimama FangYuanTi</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder font(Integer font) {
                 this.font = font;
@@ -954,7 +1001,7 @@ public class ModifyViewLayoutRequest extends Request {
             }
 
             /**
-             * FontColor.
+             * <p>The font color.</p>
              */
             public Builder fontColor(FontColor fontColor) {
                 this.fontColor = fontColor;
@@ -962,7 +1009,10 @@ public class ModifyViewLayoutRequest extends Request {
             }
 
             /**
-             * FontSize.
+             * <p>The clock font size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder fontSize(Integer fontSize) {
                 this.fontSize = fontSize;
@@ -970,7 +1020,7 @@ public class ModifyViewLayoutRequest extends Request {
             }
 
             /**
-             * HasBox.
+             * <p>Specifies whether to display a text box.</p>
              */
             public Builder hasBox(Boolean hasBox) {
                 this.hasBox = hasBox;
@@ -978,7 +1028,10 @@ public class ModifyViewLayoutRequest extends Request {
             }
 
             /**
-             * Layer.
+             * <p>The z-axis layer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder layer(Integer layer) {
                 this.layer = layer;
@@ -986,6 +1039,7 @@ public class ModifyViewLayoutRequest extends Request {
             }
 
             /**
+             * <p>The x-coordinate.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -997,6 +1051,7 @@ public class ModifyViewLayoutRequest extends Request {
             }
 
             /**
+             * <p>The y-coordinate.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1008,7 +1063,10 @@ public class ModifyViewLayoutRequest extends Request {
             }
 
             /**
-             * Zone.
+             * <p>The time zone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder zone(Integer zone) {
                 this.zone = zone;
@@ -1158,7 +1216,10 @@ public class ModifyViewLayoutRequest extends Request {
             } 
 
             /**
-             * Alpha.
+             * <p>The opacity of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.9</p>
              */
             public Builder alpha(Double alpha) {
                 this.alpha = alpha;
@@ -1166,6 +1227,7 @@ public class ModifyViewLayoutRequest extends Request {
             }
 
             /**
+             * <p>The height.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1177,7 +1239,15 @@ public class ModifyViewLayoutRequest extends Request {
             }
 
             /**
-             * ImageCropMode.
+             * <p>The crop mode of the image. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: Crops the image while maintaining the aspect ratio.</li>
+             * <li><strong>2</strong>: Maintains the aspect ratio and adds padding.</li>
+             * <li><strong>3</strong>: Stretches the image to fill the area.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder imageCropMode(Integer imageCropMode) {
                 this.imageCropMode = imageCropMode;
@@ -1185,7 +1255,10 @@ public class ModifyViewLayoutRequest extends Request {
             }
 
             /**
-             * Layer.
+             * <p>The z-axis layer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder layer(Integer layer) {
                 this.layer = layer;
@@ -1193,6 +1266,7 @@ public class ModifyViewLayoutRequest extends Request {
             }
 
             /**
+             * <p>The URL of the image.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1204,6 +1278,7 @@ public class ModifyViewLayoutRequest extends Request {
             }
 
             /**
+             * <p>The width.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1215,6 +1290,7 @@ public class ModifyViewLayoutRequest extends Request {
             }
 
             /**
+             * <p>The x-coordinate.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1226,6 +1302,7 @@ public class ModifyViewLayoutRequest extends Request {
             }
 
             /**
+             * <p>The y-coordinate.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1298,6 +1375,7 @@ public class ModifyViewLayoutRequest extends Request {
             } 
 
             /**
+             * <p>The list of specified user IDs.</p>
              * <p>This parameter is required.</p>
              */
             public Builder ids(java.util.List<String> ids) {
@@ -1306,6 +1384,7 @@ public class ModifyViewLayoutRequest extends Request {
             }
 
             /**
+             * <p>The user list type. Valid values: black: Blacklist. white: Whitelist.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1459,7 +1538,10 @@ public class ModifyViewLayoutRequest extends Request {
             } 
 
             /**
-             * Alpha.
+             * <p>The opacity of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.9</p>
              */
             public Builder alpha(Double alpha) {
                 this.alpha = alpha;
@@ -1467,6 +1549,7 @@ public class ModifyViewLayoutRequest extends Request {
             }
 
             /**
+             * <p>The height.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1478,7 +1561,10 @@ public class ModifyViewLayoutRequest extends Request {
             }
 
             /**
-             * Layer.
+             * <p>The z-axis layer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder layer(Integer layer) {
                 this.layer = layer;
@@ -1486,7 +1572,15 @@ public class ModifyViewLayoutRequest extends Request {
             }
 
             /**
-             * PaneImageCropMode.
+             * <p>The crop mode of the image. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: Crops the image while maintaining the aspect ratio.</li>
+             * <li><strong>2</strong>: Maintains the aspect ratio and adds padding.</li>
+             * <li><strong>3</strong>: Stretches the image to fill the area.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder paneImageCropMode(Integer paneImageCropMode) {
                 this.paneImageCropMode = paneImageCropMode;
@@ -1494,6 +1588,7 @@ public class ModifyViewLayoutRequest extends Request {
             }
 
             /**
+             * <p>The URL of the image.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1505,6 +1600,7 @@ public class ModifyViewLayoutRequest extends Request {
             }
 
             /**
+             * <p>The width.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1516,6 +1612,7 @@ public class ModifyViewLayoutRequest extends Request {
             }
 
             /**
+             * <p>The x-coordinate.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1527,6 +1624,7 @@ public class ModifyViewLayoutRequest extends Request {
             }
 
             /**
+             * <p>The y-coordinate.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1610,7 +1708,7 @@ public class ModifyViewLayoutRequest extends Request {
             } 
 
             /**
-             * <p>B。</p>
+             * <p>The blue component.</p>
              * 
              * <strong>example:</strong>
              * <p>255</p>
@@ -1621,7 +1719,7 @@ public class ModifyViewLayoutRequest extends Request {
             }
 
             /**
-             * <p>G。</p>
+             * <p>The green component.</p>
              * 
              * <strong>example:</strong>
              * <p>255</p>
@@ -1632,7 +1730,7 @@ public class ModifyViewLayoutRequest extends Request {
             }
 
             /**
-             * <p>R。</p>
+             * <p>The red component.</p>
              * 
              * <strong>example:</strong>
              * <p>255</p>
@@ -1715,7 +1813,7 @@ public class ModifyViewLayoutRequest extends Request {
             } 
 
             /**
-             * <p>B。</p>
+             * <p>The blue component.</p>
              * 
              * <strong>example:</strong>
              * <p>255</p>
@@ -1726,7 +1824,7 @@ public class ModifyViewLayoutRequest extends Request {
             }
 
             /**
-             * <p>G。</p>
+             * <p>The green component.</p>
              * 
              * <strong>example:</strong>
              * <p>255</p>
@@ -1737,7 +1835,7 @@ public class ModifyViewLayoutRequest extends Request {
             }
 
             /**
-             * <p>R。</p>
+             * <p>The red component.</p>
              * 
              * <strong>example:</strong>
              * <p>255</p>
@@ -1940,7 +2038,10 @@ public class ModifyViewLayoutRequest extends Request {
             } 
 
             /**
-             * Alpha.
+             * <p>The opacity of the watermark.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.9</p>
              */
             public Builder alpha(Double alpha) {
                 this.alpha = alpha;
@@ -1948,7 +2049,10 @@ public class ModifyViewLayoutRequest extends Request {
             }
 
             /**
-             * BoxAlpha.
+             * <p>The opacity of the text box.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.6</p>
              */
             public Builder boxAlpha(Double boxAlpha) {
                 this.boxAlpha = boxAlpha;
@@ -1956,7 +2060,10 @@ public class ModifyViewLayoutRequest extends Request {
             }
 
             /**
-             * BoxBorderw.
+             * <p>The border width of the text box.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder boxBorderw(Integer boxBorderw) {
                 this.boxBorderw = boxBorderw;
@@ -1964,7 +2071,7 @@ public class ModifyViewLayoutRequest extends Request {
             }
 
             /**
-             * BoxColor.
+             * <p>The border color of the text box.</p>
              */
             public Builder boxColor(TextsBoxColor boxColor) {
                 this.boxColor = boxColor;
@@ -1972,7 +2079,22 @@ public class ModifyViewLayoutRequest extends Request {
             }
 
             /**
-             * Font.
+             * <p>The font. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: Alibaba PuHuiTi Regular</li>
+             * <li><strong>1</strong>: Alibaba PuHuiTi Light</li>
+             * <li><strong>2</strong>: Alibaba PuHuiTi Medium</li>
+             * <li><strong>3</strong>: Alibaba PuHuiTi Bold</li>
+             * <li><strong>4</strong>: Alibaba PuHuiTi Heavy</li>
+             * <li><strong>5</strong>: Alimama ShuHeiTi</li>
+             * <li><strong>6</strong>: DingTalk JinBuTi</li>
+             * <li><strong>7</strong>: Alimama DaoLiTi</li>
+             * <li><strong>8</strong>: Alimama DongFangDaKai</li>
+             * <li><strong>9</strong>: Alimama FangYuanTi</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder font(Integer font) {
                 this.font = font;
@@ -1980,7 +2102,7 @@ public class ModifyViewLayoutRequest extends Request {
             }
 
             /**
-             * FontColor.
+             * <p>The font color.</p>
              */
             public Builder fontColor(TextsFontColor fontColor) {
                 this.fontColor = fontColor;
@@ -1988,7 +2110,10 @@ public class ModifyViewLayoutRequest extends Request {
             }
 
             /**
-             * FontSize.
+             * <p>The font size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>36</p>
              */
             public Builder fontSize(Integer fontSize) {
                 this.fontSize = fontSize;
@@ -1996,7 +2121,7 @@ public class ModifyViewLayoutRequest extends Request {
             }
 
             /**
-             * HasBox.
+             * <p>Specifies whether to display a text box.</p>
              */
             public Builder hasBox(Boolean hasBox) {
                 this.hasBox = hasBox;
@@ -2004,7 +2129,10 @@ public class ModifyViewLayoutRequest extends Request {
             }
 
             /**
-             * Layer.
+             * <p>The z-axis layer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder layer(Integer layer) {
                 this.layer = layer;
@@ -2012,10 +2140,11 @@ public class ModifyViewLayoutRequest extends Request {
             }
 
             /**
+             * <p>The content of the watermark.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
-             * <p>文字水印</p>
+             * <p>Text watermark</p>
              */
             public Builder texture(String texture) {
                 this.texture = texture;
@@ -2023,6 +2152,7 @@ public class ModifyViewLayoutRequest extends Request {
             }
 
             /**
+             * <p>The x-coordinate.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -2034,6 +2164,7 @@ public class ModifyViewLayoutRequest extends Request {
             }
 
             /**
+             * <p>The y-coordinate.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -2157,7 +2288,7 @@ public class ModifyViewLayoutRequest extends Request {
             } 
 
             /**
-             * Images.
+             * <p>The image watermarks for the pane.</p>
              */
             public Builder images(java.util.List<PanesImages> images) {
                 this.images = images;
@@ -2165,7 +2296,15 @@ public class ModifyViewLayoutRequest extends Request {
             }
 
             /**
-             * PaneCropMode.
+             * <p>The crop mode of the image. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: Crops the image while maintaining the aspect ratio.</li>
+             * <li><strong>2</strong>: Maintains the aspect ratio and adds padding.</li>
+             * <li><strong>3</strong>: Stretches the image to fill the area.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder paneCropMode(Integer paneCropMode) {
                 this.paneCropMode = paneCropMode;
@@ -2173,6 +2312,7 @@ public class ModifyViewLayoutRequest extends Request {
             }
 
             /**
+             * <p>The ID of the pane. The ID starts from 0.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -2184,7 +2324,14 @@ public class ModifyViewLayoutRequest extends Request {
             }
 
             /**
-             * Source.
+             * <p>The media source of the pane. You can specify a userId. To specify a specific user type, you can use wildcard configurations. The following types are supported:</p>
+             * <ul>
+             * <li><strong>$ActiveSpeaker</strong>: The active speaker in the current channel.</li>
+             * <li><strong>$ScreenShare</strong>: The user who is sharing the screen. If multiple users are sharing their screens in the channel, the panes are filled in chronological order.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>22</p>
              */
             public Builder source(String source) {
                 this.source = source;
@@ -2192,7 +2339,15 @@ public class ModifyViewLayoutRequest extends Request {
             }
 
             /**
-             * SourceType.
+             * <p>The media type of the pane. Valid values:</p>
+             * <ul>
+             * <li><strong>video</strong>: The camera or screen sharing stream of the user. This is the default value.</li>
+             * <li><strong>camera</strong>: The camera stream.</li>
+             * <li><strong>screen</strong>: The screen sharing stream.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>video</p>
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;
@@ -2200,7 +2355,7 @@ public class ModifyViewLayoutRequest extends Request {
             }
 
             /**
-             * Texts.
+             * <p>The text watermarks for the pane.</p>
              */
             public Builder texts(java.util.List<PanesTexts> texts) {
                 this.texts = texts;
@@ -2280,7 +2435,7 @@ public class ModifyViewLayoutRequest extends Request {
             } 
 
             /**
-             * <p>B。</p>
+             * <p>The blue component.</p>
              * 
              * <strong>example:</strong>
              * <p>255</p>
@@ -2291,7 +2446,7 @@ public class ModifyViewLayoutRequest extends Request {
             }
 
             /**
-             * <p>G。</p>
+             * <p>The green component.</p>
              * 
              * <strong>example:</strong>
              * <p>255</p>
@@ -2302,7 +2457,7 @@ public class ModifyViewLayoutRequest extends Request {
             }
 
             /**
-             * <p>R。</p>
+             * <p>The red component.</p>
              * 
              * <strong>example:</strong>
              * <p>255</p>
@@ -2385,7 +2540,7 @@ public class ModifyViewLayoutRequest extends Request {
             } 
 
             /**
-             * <p>B。</p>
+             * <p>The blue component.</p>
              * 
              * <strong>example:</strong>
              * <p>255</p>
@@ -2396,7 +2551,7 @@ public class ModifyViewLayoutRequest extends Request {
             }
 
             /**
-             * <p>G。</p>
+             * <p>The green component.</p>
              * 
              * <strong>example:</strong>
              * <p>255</p>
@@ -2407,7 +2562,7 @@ public class ModifyViewLayoutRequest extends Request {
             }
 
             /**
-             * <p>R。</p>
+             * <p>The red component.</p>
              * 
              * <strong>example:</strong>
              * <p>255</p>
@@ -2610,7 +2765,10 @@ public class ModifyViewLayoutRequest extends Request {
             } 
 
             /**
-             * Alpha.
+             * <p>The opacity of the watermark.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.1</p>
              */
             public Builder alpha(Double alpha) {
                 this.alpha = alpha;
@@ -2618,7 +2776,10 @@ public class ModifyViewLayoutRequest extends Request {
             }
 
             /**
-             * BoxAlpha.
+             * <p>The opacity of the text box.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.6</p>
              */
             public Builder boxAlpha(Double boxAlpha) {
                 this.boxAlpha = boxAlpha;
@@ -2626,7 +2787,10 @@ public class ModifyViewLayoutRequest extends Request {
             }
 
             /**
-             * BoxBorderw.
+             * <p>The border width of the text box.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder boxBorderw(Integer boxBorderw) {
                 this.boxBorderw = boxBorderw;
@@ -2634,7 +2798,7 @@ public class ModifyViewLayoutRequest extends Request {
             }
 
             /**
-             * BoxColor.
+             * <p>The border color of the text box.</p>
              */
             public Builder boxColor(ModifyViewLayoutRequestTextsBoxColor boxColor) {
                 this.boxColor = boxColor;
@@ -2642,7 +2806,22 @@ public class ModifyViewLayoutRequest extends Request {
             }
 
             /**
-             * Font.
+             * <p>The font. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: Alibaba PuHuiTi Regular</li>
+             * <li><strong>1</strong>: Alibaba PuHuiTi Light</li>
+             * <li><strong>2</strong>: Alibaba PuHuiTi Medium</li>
+             * <li><strong>3</strong>: Alibaba PuHuiTi Bold</li>
+             * <li><strong>4</strong>: Alibaba PuHuiTi Heavy</li>
+             * <li><strong>5</strong>: Alimama ShuHeiTi</li>
+             * <li><strong>6</strong>: DingTalk JinBuTi</li>
+             * <li><strong>7</strong>: Alimama DaoLiTi</li>
+             * <li><strong>8</strong>: Alimama DongFangDaKai</li>
+             * <li><strong>9</strong>: Alimama FangYuanTi</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder font(Integer font) {
                 this.font = font;
@@ -2650,7 +2829,7 @@ public class ModifyViewLayoutRequest extends Request {
             }
 
             /**
-             * FontColor.
+             * <p>The font color.</p>
              */
             public Builder fontColor(ModifyViewLayoutRequestTextsFontColor fontColor) {
                 this.fontColor = fontColor;
@@ -2658,7 +2837,10 @@ public class ModifyViewLayoutRequest extends Request {
             }
 
             /**
-             * FontSize.
+             * <p>The font size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>36</p>
              */
             public Builder fontSize(Integer fontSize) {
                 this.fontSize = fontSize;
@@ -2666,7 +2848,7 @@ public class ModifyViewLayoutRequest extends Request {
             }
 
             /**
-             * HasBox.
+             * <p>Specifies whether to display a text box.</p>
              */
             public Builder hasBox(Boolean hasBox) {
                 this.hasBox = hasBox;
@@ -2674,7 +2856,10 @@ public class ModifyViewLayoutRequest extends Request {
             }
 
             /**
-             * Layer.
+             * <p>The z-axis layer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder layer(Integer layer) {
                 this.layer = layer;
@@ -2682,10 +2867,11 @@ public class ModifyViewLayoutRequest extends Request {
             }
 
             /**
+             * <p>The content of the watermark.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
-             * <p>文字水印</p>
+             * <p>Text watermark</p>
              */
             public Builder texture(String texture) {
                 this.texture = texture;
@@ -2693,6 +2879,7 @@ public class ModifyViewLayoutRequest extends Request {
             }
 
             /**
+             * <p>The x-coordinate.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -2704,6 +2891,7 @@ public class ModifyViewLayoutRequest extends Request {
             }
 
             /**
+             * <p>The y-coordinate.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

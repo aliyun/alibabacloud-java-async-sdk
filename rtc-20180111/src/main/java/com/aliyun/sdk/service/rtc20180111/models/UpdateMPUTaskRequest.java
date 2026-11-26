@@ -341,6 +341,8 @@ public class UpdateMPUTaskRequest extends Request {
         } 
 
         /**
+         * <p>Application ID. Only a single ID can be passed.</p>
+         * <p>You can create and query it in the console.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -353,7 +355,11 @@ public class UpdateMPUTaskRequest extends Request {
         }
 
         /**
-         * BackgroundColor.
+         * <p>Background color RGB. The default is <strong>0</strong> (black).</p>
+         * <p>The calculation formula is <code>R + G × 256 + B × 65536</code>. Values of R (red), G (green), and B (blue): <strong>0</strong> to <strong>255</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder backgroundColor(Integer backgroundColor) {
             this.putQueryParameter("BackgroundColor", backgroundColor);
@@ -362,7 +368,7 @@ public class UpdateMPUTaskRequest extends Request {
         }
 
         /**
-         * Backgrounds.
+         * <p>The list of canvas background image pane positions.</p>
          */
         public Builder backgrounds(java.util.List<Backgrounds> backgrounds) {
             this.putQueryParameter("Backgrounds", backgrounds);
@@ -371,7 +377,7 @@ public class UpdateMPUTaskRequest extends Request {
         }
 
         /**
-         * ClockWidgets.
+         * <p>Clock widget.</p>
          */
         public Builder clockWidgets(java.util.List<ClockWidgets> clockWidgets) {
             this.putQueryParameter("ClockWidgets", clockWidgets);
@@ -380,7 +386,16 @@ public class UpdateMPUTaskRequest extends Request {
         }
 
         /**
-         * CropMode.
+         * <p>Video cropping mode. Values:</p>
+         * <ul>
+         * <li><p><strong>1</strong>: crop while maintaining ratio.</p>
+         * </li>
+         * <li><p><strong>2</strong> (default): keep margins while maintaining ratio.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder cropMode(Integer cropMode) {
             this.putQueryParameter("CropMode", cropMode);
@@ -389,7 +404,7 @@ public class UpdateMPUTaskRequest extends Request {
         }
 
         /**
-         * LayoutIds.
+         * <p>Layout ID data.</p>
          */
         public Builder layoutIds(java.util.List<Long> layoutIds) {
             this.putQueryParameter("LayoutIds", layoutIds);
@@ -398,7 +413,10 @@ public class UpdateMPUTaskRequest extends Request {
         }
 
         /**
-         * MediaEncode.
+         * <p>Encoding option. See the MediaEncode enumeration values below.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder mediaEncode(Integer mediaEncode) {
             this.putQueryParameter("MediaEncode", mediaEncode);
@@ -407,7 +425,22 @@ public class UpdateMPUTaskRequest extends Request {
         }
 
         /**
-         * MixMode.
+         * <p>Stream mixing mode. Values:</p>
+         * <ul>
+         * <li><strong>0</strong>: single-stream relay. No stream mixing or transcoding. Only the original single stream is relayed. No need to configure stream mixing and transcoding parameters.</li>
+         * <li><strong>1</strong>: stream mixing and transcoding (default). Supports stream mixing and transcoding output.</li>
+         * </ul>
+         * <blockquote>
+         * <ul>
+         * <li>Valid parameters in single-stream relay mode: <strong>StreamType</strong>, <strong>SourceType</strong>.</li>
+         * </ul>
+         * </blockquote>
+         * <ul>
+         * <li>Valid parameters in stream mixing and transcoding mode: <strong>MediaEncode</strong>, <strong>LayoutIds</strong>, <strong>BackgroundColor</strong>, <strong>SubSpecUsers</strong>, <strong>CropMode</strong>, <strong>UserPanes</strong>, <strong>Backgrounds</strong>, <strong>Watermarks</strong>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder mixMode(Integer mixMode) {
             this.putQueryParameter("MixMode", mixMode);
@@ -425,7 +458,14 @@ public class UpdateMPUTaskRequest extends Request {
         }
 
         /**
-         * SourceType.
+         * <p>User video input stream in single-stream relay mode. Values:</p>
+         * <ul>
+         * <li><strong>camera</strong>: camera.</li>
+         * <li><strong>shareScreen</strong>: screen sharing.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>camera</p>
          */
         public Builder sourceType(String sourceType) {
             this.putQueryParameter("SourceType", sourceType);
@@ -434,7 +474,15 @@ public class UpdateMPUTaskRequest extends Request {
         }
 
         /**
-         * StreamType.
+         * <p>Audio stream relayed in single-stream relay mode. Values:</p>
+         * <ul>
+         * <li><strong>0</strong> (default): relay the original stream.</li>
+         * <li><strong>1</strong>: relay only the audio stream.</li>
+         * <li><strong>2</strong>: relay only the video stream.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder streamType(Integer streamType) {
             this.putQueryParameter("StreamType", streamType);
@@ -443,7 +491,7 @@ public class UpdateMPUTaskRequest extends Request {
         }
 
         /**
-         * SubSpecAudioUsers.
+         * <p>Specifies the users in the room whose audio streams are subscribed to.</p>
          */
         public Builder subSpecAudioUsers(java.util.List<String> subSpecAudioUsers) {
             this.putQueryParameter("SubSpecAudioUsers", subSpecAudioUsers);
@@ -452,7 +500,7 @@ public class UpdateMPUTaskRequest extends Request {
         }
 
         /**
-         * SubSpecCameraUsers.
+         * <p>Specifies the users in the room whose camera video streams are subscribed to.</p>
          */
         public Builder subSpecCameraUsers(java.util.List<String> subSpecCameraUsers) {
             this.putQueryParameter("SubSpecCameraUsers", subSpecCameraUsers);
@@ -461,7 +509,7 @@ public class UpdateMPUTaskRequest extends Request {
         }
 
         /**
-         * SubSpecShareScreenUsers.
+         * <p>Specifies the users in the room whose shared video streams are subscribed to.</p>
          */
         public Builder subSpecShareScreenUsers(java.util.List<String> subSpecShareScreenUsers) {
             this.putQueryParameter("SubSpecShareScreenUsers", subSpecShareScreenUsers);
@@ -470,7 +518,7 @@ public class UpdateMPUTaskRequest extends Request {
         }
 
         /**
-         * SubSpecUsers.
+         * <p>The list of users subscribed to by this task.</p>
          */
         public Builder subSpecUsers(java.util.List<String> subSpecUsers) {
             this.putQueryParameter("SubSpecUsers", subSpecUsers);
@@ -479,6 +527,7 @@ public class UpdateMPUTaskRequest extends Request {
         }
 
         /**
+         * <p>Task ID. Only a single ID can be passed. It is consistent with the input parameter TaskId in <a href="https://help.aliyun.com/document_detail/93183.html">StartMpuTask</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -491,7 +540,7 @@ public class UpdateMPUTaskRequest extends Request {
         }
 
         /**
-         * UnsubSpecAudioUsers.
+         * <p>Specifies the users in the room whose audio streams are not subscribed to.</p>
          */
         public Builder unsubSpecAudioUsers(java.util.List<String> unsubSpecAudioUsers) {
             this.putQueryParameter("UnsubSpecAudioUsers", unsubSpecAudioUsers);
@@ -500,7 +549,7 @@ public class UpdateMPUTaskRequest extends Request {
         }
 
         /**
-         * UnsubSpecCameraUsers.
+         * <p>Specifies the users in the room whose camera video streams are not subscribed to.</p>
          */
         public Builder unsubSpecCameraUsers(java.util.List<String> unsubSpecCameraUsers) {
             this.putQueryParameter("UnsubSpecCameraUsers", unsubSpecCameraUsers);
@@ -509,7 +558,7 @@ public class UpdateMPUTaskRequest extends Request {
         }
 
         /**
-         * UnsubSpecShareScreenUsers.
+         * <p>Specifies the users in the room whose shared video streams are not subscribed to.</p>
          */
         public Builder unsubSpecShareScreenUsers(java.util.List<String> unsubSpecShareScreenUsers) {
             this.putQueryParameter("UnsubSpecShareScreenUsers", unsubSpecShareScreenUsers);
@@ -518,7 +567,7 @@ public class UpdateMPUTaskRequest extends Request {
         }
 
         /**
-         * UserPanes.
+         * <p>Layout parameters.</p>
          */
         public Builder userPanes(java.util.List<UserPanes> userPanes) {
             this.putQueryParameter("UserPanes", userPanes);
@@ -527,7 +576,7 @@ public class UpdateMPUTaskRequest extends Request {
         }
 
         /**
-         * Watermarks.
+         * <p>The list of watermark image pane positions.</p>
          */
         public Builder watermarks(java.util.List<Watermarks> watermarks) {
             this.putQueryParameter("Watermarks", watermarks);
@@ -660,7 +709,14 @@ public class UpdateMPUTaskRequest extends Request {
             } 
 
             /**
-             * Display.
+             * <p>Image display. Values:</p>
+             * <ul>
+             * <li><strong>0 (None)</strong>: not displayed.</li>
+             * <li><strong>1 (Always)</strong>: always displayed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder display(Integer display) {
                 this.display = display;
@@ -668,7 +724,10 @@ public class UpdateMPUTaskRequest extends Request {
             }
 
             /**
-             * Height.
+             * <p>Pane height, normalized percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.2456</p>
              */
             public Builder height(Float height) {
                 this.height = height;
@@ -676,7 +735,10 @@ public class UpdateMPUTaskRequest extends Request {
             }
 
             /**
-             * Url.
+             * <p>HTTP or HTTPS address of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://www.example.com/image.jpg">https://www.example.com/image.jpg</a></p>
              */
             public Builder url(String url) {
                 this.url = url;
@@ -684,7 +746,10 @@ public class UpdateMPUTaskRequest extends Request {
             }
 
             /**
-             * Width.
+             * <p>Pane width, normalized percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.2456</p>
              */
             public Builder width(Float width) {
                 this.width = width;
@@ -692,7 +757,10 @@ public class UpdateMPUTaskRequest extends Request {
             }
 
             /**
-             * X.
+             * <p>X coordinate, normalized percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.7576</p>
              */
             public Builder x(Float x) {
                 this.x = x;
@@ -700,7 +768,10 @@ public class UpdateMPUTaskRequest extends Request {
             }
 
             /**
-             * Y.
+             * <p>Y coordinate, normalized percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.7576</p>
              */
             public Builder y(Float y) {
                 this.y = y;
@@ -708,7 +779,10 @@ public class UpdateMPUTaskRequest extends Request {
             }
 
             /**
-             * ZOrder.
+             * <p>Stacking order. 0 is the bottom layer, layer 1 is above layer 0, and so on.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder zOrder(Integer zOrder) {
                 this.zOrder = zOrder;
@@ -905,7 +979,10 @@ public class UpdateMPUTaskRequest extends Request {
             } 
 
             /**
-             * Alpha.
+             * <p>Transparency of the text box and text. 0.0 indicates transparent, and 1.0 indicates completely opaque.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder alpha(Float alpha) {
                 this.alpha = alpha;
@@ -913,7 +990,11 @@ public class UpdateMPUTaskRequest extends Request {
             }
 
             /**
-             * BorderColor.
+             * <p>Text border color.
+             * The calculation formula is <code>R + G × 256 + B × 65536</code>. Values of R (red), G (green), and B (blue): <strong>0</strong> to <strong>255</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder borderColor(Long borderColor) {
                 this.borderColor = borderColor;
@@ -921,7 +1002,10 @@ public class UpdateMPUTaskRequest extends Request {
             }
 
             /**
-             * BorderWidth.
+             * <p>Text border width (unit: pixels). The default value is 0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder borderWidth(Integer borderWidth) {
                 this.borderWidth = borderWidth;
@@ -929,7 +1013,14 @@ public class UpdateMPUTaskRequest extends Request {
             }
 
             /**
-             * Box.
+             * <p>Whether to display a text box. Values:</p>
+             * <ul>
+             * <li>false (default): not displayed.</li>
+             * <li>true: displayed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder box(Boolean box) {
                 this.box = box;
@@ -937,7 +1028,10 @@ public class UpdateMPUTaskRequest extends Request {
             }
 
             /**
-             * BoxBorderWidth.
+             * <p>Text box width (unit: pixels). The default value is 0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder boxBorderWidth(Integer boxBorderWidth) {
                 this.boxBorderWidth = boxBorderWidth;
@@ -945,7 +1039,11 @@ public class UpdateMPUTaskRequest extends Request {
             }
 
             /**
-             * BoxColor.
+             * <p>Text box color.
+             * The calculation formula is <code>R + G × 256 + B × 65536</code>. Values of R (red), G (green), and B (blue): <strong>0</strong> to <strong>255</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder boxColor(Long boxColor) {
                 this.boxColor = boxColor;
@@ -953,7 +1051,11 @@ public class UpdateMPUTaskRequest extends Request {
             }
 
             /**
-             * FontColor.
+             * <p>Text color (RGB).</p>
+             * <p>The calculation formula is <code>R + G × 256 + B × 65536</code>. Values of R (red), G (green), and B (blue): <strong>0</strong> to <strong>255</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder fontColor(Integer fontColor) {
                 this.fontColor = fontColor;
@@ -961,7 +1063,10 @@ public class UpdateMPUTaskRequest extends Request {
             }
 
             /**
-             * FontSize.
+             * <p>Font size. Value range: <strong>0</strong> to <strong>72</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder fontSize(Integer fontSize) {
                 this.fontSize = fontSize;
@@ -969,7 +1074,18 @@ public class UpdateMPUTaskRequest extends Request {
             }
 
             /**
-             * FontType.
+             * <p>Font type. Values:</p>
+             * <ul>
+             * <li><strong>0</strong> (default): NOTO_SERIF_CJKSC_REGULAR</li>
+             * <li><strong>1</strong>: ALIBABA_PUHUITI_REGULAR</li>
+             * <li><strong>2</strong>: ALIBABA_PUHUITI_BOLD</li>
+             * <li><strong>3</strong>: ALIBABA_PUHUITI_Heavy</li>
+             * <li><strong>4</strong>: ALIBABA_PUHUITI_LIGHT</li>
+             * <li><strong>5</strong>: ALIBABA_PUHUITI_MEDIUM</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder fontType(Integer fontType) {
                 this.fontType = fontType;
@@ -977,7 +1093,10 @@ public class UpdateMPUTaskRequest extends Request {
             }
 
             /**
-             * X.
+             * <p>X coordinate, normalized percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.7576</p>
              */
             public Builder x(Float x) {
                 this.x = x;
@@ -985,7 +1104,10 @@ public class UpdateMPUTaskRequest extends Request {
             }
 
             /**
-             * Y.
+             * <p>Y coordinate, normalized percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.7576</p>
              */
             public Builder y(Float y) {
                 this.y = y;
@@ -993,7 +1115,10 @@ public class UpdateMPUTaskRequest extends Request {
             }
 
             /**
-             * ZOrder.
+             * <p>Stacking order. 0 is the bottom layer, layer 1 is above layer 0, and so on.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder zOrder(Integer zOrder) {
                 this.zOrder = zOrder;
@@ -1125,7 +1250,15 @@ public class UpdateMPUTaskRequest extends Request {
             } 
 
             /**
-             * Display.
+             * <p>Image display. Values:</p>
+             * <ul>
+             * <li><strong>0 (None)</strong>: not displayed.</li>
+             * <li><strong>1 (Always)</strong>: always displayed.</li>
+             * <li><strong>2 (Backup)</strong>: displayed when the current user has no video stream.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder display(Integer display) {
                 this.display = display;
@@ -1133,7 +1266,10 @@ public class UpdateMPUTaskRequest extends Request {
             }
 
             /**
-             * Height.
+             * <p>Pane height, normalized percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.2456</p>
              */
             public Builder height(Float height) {
                 this.height = height;
@@ -1141,7 +1277,10 @@ public class UpdateMPUTaskRequest extends Request {
             }
 
             /**
-             * Url.
+             * <p>HTTP or HTTPS address of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://www.example.com/image.jpg">https://www.example.com/image.jpg</a></p>
              */
             public Builder url(String url) {
                 this.url = url;
@@ -1149,7 +1288,10 @@ public class UpdateMPUTaskRequest extends Request {
             }
 
             /**
-             * Width.
+             * <p>Pane width, normalized percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.2456</p>
              */
             public Builder width(Float width) {
                 this.width = width;
@@ -1157,7 +1299,10 @@ public class UpdateMPUTaskRequest extends Request {
             }
 
             /**
-             * X.
+             * <p>X coordinate, normalized percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.7576</p>
              */
             public Builder x(Float x) {
                 this.x = x;
@@ -1165,7 +1310,10 @@ public class UpdateMPUTaskRequest extends Request {
             }
 
             /**
-             * Y.
+             * <p>Y coordinate, normalized percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.7576</p>
              */
             public Builder y(Float y) {
                 this.y = y;
@@ -1173,7 +1321,10 @@ public class UpdateMPUTaskRequest extends Request {
             }
 
             /**
-             * ZOrder.
+             * <p>Stacking order. 0 is the bottom layer, layer 1 is above layer 0, and so on.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder zOrder(Integer zOrder) {
                 this.zOrder = zOrder;
@@ -1383,7 +1534,10 @@ public class UpdateMPUTaskRequest extends Request {
             } 
 
             /**
-             * Alpha.
+             * <p>Transparency of the text box and text. 0.0 indicates transparent, and 1.0 indicates completely opaque.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder alpha(Float alpha) {
                 this.alpha = alpha;
@@ -1391,7 +1545,11 @@ public class UpdateMPUTaskRequest extends Request {
             }
 
             /**
-             * BorderColor.
+             * <p>Text border color.
+             * The calculation formula is <code>R + G × 256 + B × 65536</code>. Values of R (red), G (green), and B (blue): <strong>0</strong> to <strong>255</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder borderColor(Long borderColor) {
                 this.borderColor = borderColor;
@@ -1399,7 +1557,10 @@ public class UpdateMPUTaskRequest extends Request {
             }
 
             /**
-             * BorderWidth.
+             * <p>Text border width (unit: pixels). The default value is 0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder borderWidth(Integer borderWidth) {
                 this.borderWidth = borderWidth;
@@ -1407,7 +1568,14 @@ public class UpdateMPUTaskRequest extends Request {
             }
 
             /**
-             * Box.
+             * <p>Whether to display a text box. Values:</p>
+             * <ul>
+             * <li>false (default): not displayed.</li>
+             * <li>true: displayed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder box(Boolean box) {
                 this.box = box;
@@ -1415,7 +1583,10 @@ public class UpdateMPUTaskRequest extends Request {
             }
 
             /**
-             * BoxBorderWidth.
+             * <p>Text box width (unit: pixels). The default value is 0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder boxBorderWidth(Integer boxBorderWidth) {
                 this.boxBorderWidth = boxBorderWidth;
@@ -1423,7 +1594,11 @@ public class UpdateMPUTaskRequest extends Request {
             }
 
             /**
-             * BoxColor.
+             * <p>Text box color.
+             * The calculation formula is <code>R + G × 256 + B × 65536</code>. Values of R (red), G (green), and B (blue): <strong>0</strong> to <strong>255</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder boxColor(Long boxColor) {
                 this.boxColor = boxColor;
@@ -1431,7 +1606,11 @@ public class UpdateMPUTaskRequest extends Request {
             }
 
             /**
-             * FontColor.
+             * <p>Text color (RGB).</p>
+             * <p>The calculation formula is <code>R + G × 256 + B × 65536</code>. Values of R (red), G (green), and B (blue): <strong>0</strong> to <strong>255</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder fontColor(Integer fontColor) {
                 this.fontColor = fontColor;
@@ -1439,7 +1618,10 @@ public class UpdateMPUTaskRequest extends Request {
             }
 
             /**
-             * FontSize.
+             * <p>Font size. Value range: <strong>0</strong> to <strong>72</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder fontSize(Integer fontSize) {
                 this.fontSize = fontSize;
@@ -1447,7 +1629,18 @@ public class UpdateMPUTaskRequest extends Request {
             }
 
             /**
-             * FontType.
+             * <p>Font type. Values:</p>
+             * <ul>
+             * <li><strong>0</strong> (default): NOTO_SERIF_CJKSC_REGULAR</li>
+             * <li><strong>1</strong>: ALIBABA_PUHUITI_REGULAR</li>
+             * <li><strong>2</strong>: ALIBABA_PUHUITI_BOLD</li>
+             * <li><strong>3</strong>: ALIBABA_PUHUITI_Heavy</li>
+             * <li><strong>4</strong>: ALIBABA_PUHUITI_LIGHT</li>
+             * <li><strong>5</strong>: ALIBABA_PUHUITI_MEDIUM</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder fontType(Integer fontType) {
                 this.fontType = fontType;
@@ -1455,7 +1648,10 @@ public class UpdateMPUTaskRequest extends Request {
             }
 
             /**
-             * Text.
+             * <p>Text content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>text</p>
              */
             public Builder text(String text) {
                 this.text = text;
@@ -1463,7 +1659,10 @@ public class UpdateMPUTaskRequest extends Request {
             }
 
             /**
-             * X.
+             * <p>X coordinate, normalized percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.7576</p>
              */
             public Builder x(Float x) {
                 this.x = x;
@@ -1471,7 +1670,10 @@ public class UpdateMPUTaskRequest extends Request {
             }
 
             /**
-             * Y.
+             * <p>Y coordinate, normalized percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.7576</p>
              */
             public Builder y(Float y) {
                 this.y = y;
@@ -1479,7 +1681,10 @@ public class UpdateMPUTaskRequest extends Request {
             }
 
             /**
-             * ZOrder.
+             * <p>Stacking order. 0 is the bottom layer, layer 1 is above layer 0, and so on.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder zOrder(Integer zOrder) {
                 this.zOrder = zOrder;
@@ -1598,7 +1803,7 @@ public class UpdateMPUTaskRequest extends Request {
             } 
 
             /**
-             * Images.
+             * <p>The list of image pane positions for the current layout.</p>
              */
             public Builder images(java.util.List<Images> images) {
                 this.images = images;
@@ -1606,7 +1811,10 @@ public class UpdateMPUTaskRequest extends Request {
             }
 
             /**
-             * PaneId.
+             * <p>Pane ID. Value range: <strong>0</strong> to <strong>15</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder paneId(Integer paneId) {
                 this.paneId = paneId;
@@ -1614,7 +1822,16 @@ public class UpdateMPUTaskRequest extends Request {
             }
 
             /**
-             * SegmentType.
+             * <p>Portrait segmentation type. Values:</p>
+             * <ul>
+             * <li><p><strong>0</strong>: no portrait segmentation (default).</p>
+             * </li>
+             * <li><p><strong>1</strong>: portrait segmentation. Only effective after the enhancement parameter (portrait segmentation feature) is enabled.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder segmentType(Integer segmentType) {
                 this.segmentType = segmentType;
@@ -1622,7 +1839,16 @@ public class UpdateMPUTaskRequest extends Request {
             }
 
             /**
-             * SourceType.
+             * <p>User video input corresponding to the layout. Values:</p>
+             * <ul>
+             * <li><p><strong>camera</strong>: camera stream.</p>
+             * </li>
+             * <li><p><strong>shareScreen</strong>: shared screen stream.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>camera</p>
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;
@@ -1630,7 +1856,7 @@ public class UpdateMPUTaskRequest extends Request {
             }
 
             /**
-             * Texts.
+             * <p>The list of text pane positions for the current layout.</p>
              */
             public Builder texts(java.util.List<Texts> texts) {
                 this.texts = texts;
@@ -1638,7 +1864,10 @@ public class UpdateMPUTaskRequest extends Request {
             }
 
             /**
-             * UserId.
+             * <p>The user ID corresponding to the layout pane. Values: <strong>1</strong> to <strong>16</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestUserID</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -1783,7 +2012,10 @@ public class UpdateMPUTaskRequest extends Request {
             } 
 
             /**
-             * Alpha.
+             * <p>Transparency. 0.0 indicates transparent, and 1.0 indicates completely opaque.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder alpha(Float alpha) {
                 this.alpha = alpha;
@@ -1791,7 +2023,14 @@ public class UpdateMPUTaskRequest extends Request {
             }
 
             /**
-             * Display.
+             * <p>Image display. Values:</p>
+             * <ul>
+             * <li><strong>0 (None)</strong>: not displayed.</li>
+             * <li><strong>1 (Always)</strong>: always displayed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder display(Integer display) {
                 this.display = display;
@@ -1799,7 +2038,10 @@ public class UpdateMPUTaskRequest extends Request {
             }
 
             /**
-             * Height.
+             * <p>Pane height, normalized percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.2456</p>
              */
             public Builder height(Float height) {
                 this.height = height;
@@ -1807,7 +2049,10 @@ public class UpdateMPUTaskRequest extends Request {
             }
 
             /**
-             * Url.
+             * <p>HTTP or HTTPS address of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://www.example.com/image.jpg">https://www.example.com/image.jpg</a></p>
              */
             public Builder url(String url) {
                 this.url = url;
@@ -1815,7 +2060,10 @@ public class UpdateMPUTaskRequest extends Request {
             }
 
             /**
-             * Width.
+             * <p>Pane width, normalized percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.2456</p>
              */
             public Builder width(Float width) {
                 this.width = width;
@@ -1823,7 +2071,10 @@ public class UpdateMPUTaskRequest extends Request {
             }
 
             /**
-             * X.
+             * <p>X coordinate, normalized percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.7576</p>
              */
             public Builder x(Float x) {
                 this.x = x;
@@ -1831,7 +2082,10 @@ public class UpdateMPUTaskRequest extends Request {
             }
 
             /**
-             * Y.
+             * <p>Y coordinate, normalized percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.7576</p>
              */
             public Builder y(Float y) {
                 this.y = y;
@@ -1839,7 +2093,10 @@ public class UpdateMPUTaskRequest extends Request {
             }
 
             /**
-             * ZOrder.
+             * <p>Stacking order. 0 is the bottom layer, layer 1 is above layer 0, and so on.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder zOrder(Integer zOrder) {
                 this.zOrder = zOrder;

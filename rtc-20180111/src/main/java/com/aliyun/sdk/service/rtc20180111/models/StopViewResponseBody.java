@@ -67,7 +67,10 @@ public class StopViewResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E8236D21-B690-5251-A361-5971FBF552BA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,10 @@ public class StopViewResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2bd80921b81e4d4289f696606885606b</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

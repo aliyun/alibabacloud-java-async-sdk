@@ -119,6 +119,7 @@ public class DescribeAppAgentTemplatesRequest extends Request {
         } 
 
         /**
+         * <p>The application ID. You can create and query the ID in the console. Only a single ID is supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -131,7 +132,10 @@ public class DescribeAppAgentTemplatesRequest extends Request {
         }
 
         /**
-         * Id.
+         * <p>The template ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123121414122313121313</p>
          */
         public Builder id(String id) {
             this.putQueryParameter("Id", id);
@@ -140,7 +144,10 @@ public class DescribeAppAgentTemplatesRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The template name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Agent template</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -149,7 +156,10 @@ public class DescribeAppAgentTemplatesRequest extends Request {
         }
 
         /**
-         * PageNum.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -158,7 +168,10 @@ public class DescribeAppAgentTemplatesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The page size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

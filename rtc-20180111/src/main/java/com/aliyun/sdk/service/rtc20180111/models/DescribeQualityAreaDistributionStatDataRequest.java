@@ -104,7 +104,7 @@ public class DescribeQualityAreaDistributionStatDataRequest extends Request {
         } 
 
         /**
-         * <p>APP ID</p>
+         * <p>The app ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -117,6 +117,7 @@ public class DescribeQualityAreaDistributionStatDataRequest extends Request {
         }
 
         /**
+         * <p>The end time of the query. The value is a UNIX timestamp in seconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -129,7 +130,10 @@ public class DescribeQualityAreaDistributionStatDataRequest extends Request {
         }
 
         /**
-         * ParentArea.
+         * <p>The name of the parent region. For example, the parent region of Hangzhou is Zhejiang Province, and the parameter is set to China_Zhejiang Province. If this parameter is left empty, the statistics are collected at the country level worldwide, such as China and the United Kingdom.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>China_Zhejiang Province</p>
          */
         public Builder parentArea(String parentArea) {
             this.putQueryParameter("ParentArea", parentArea);
@@ -138,6 +142,7 @@ public class DescribeQualityAreaDistributionStatDataRequest extends Request {
         }
 
         /**
+         * <p>The start time of the query. The value is a UNIX timestamp in seconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

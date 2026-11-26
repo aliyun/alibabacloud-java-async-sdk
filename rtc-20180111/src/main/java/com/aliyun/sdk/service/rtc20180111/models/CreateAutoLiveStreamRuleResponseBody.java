@@ -67,7 +67,10 @@ public class CreateAutoLiveStreamRuleResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>760bad53276431c499e30dc36f6b26be</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,10 @@ public class CreateAutoLiveStreamRuleResponseBody extends TeaModel {
         }
 
         /**
-         * RuleId.
+         * <p>The ID of the relay rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         public Builder ruleId(Long ruleId) {
             this.ruleId = ruleId;

@@ -107,7 +107,7 @@ public class DescribeCloudNotesResponseBody extends TeaModel {
         } 
 
         /**
-         * Items.
+         * <p>List of meeting summary results.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -115,7 +115,10 @@ public class DescribeCloudNotesResponseBody extends TeaModel {
         }
 
         /**
-         * PageNo.
+         * <p>Page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.pageNo = pageNo;
@@ -123,7 +126,10 @@ public class DescribeCloudNotesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>Quantity per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -142,7 +148,10 @@ public class DescribeCloudNotesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCnt.
+         * <p>Total quantity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCnt(Integer totalCnt) {
             this.totalCnt = totalCnt;
@@ -351,7 +360,10 @@ public class DescribeCloudNotesResponseBody extends TeaModel {
             } 
 
             /**
-             * AutoChaptersFilePath.
+             * <p>Path where the chapter overview result file is stored.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cloudNote/ksvxxppi/88_12/autoChapters_1724914365173.json</p>
              */
             public Builder autoChaptersFilePath(String autoChaptersFilePath) {
                 this.autoChaptersFilePath = autoChaptersFilePath;
@@ -359,7 +371,10 @@ public class DescribeCloudNotesResponseBody extends TeaModel {
             }
 
             /**
-             * Bucket.
+             * <p>The user-defined bucket.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sample-bucket</p>
              */
             public Builder bucket(String bucket) {
                 this.bucket = bucket;
@@ -367,7 +382,10 @@ public class DescribeCloudNotesResponseBody extends TeaModel {
             }
 
             /**
-             * ChannelId.
+             * <p>Channel ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testchannelId</p>
              */
             public Builder channelId(String channelId) {
                 this.channelId = channelId;
@@ -375,7 +393,10 @@ public class DescribeCloudNotesResponseBody extends TeaModel {
             }
 
             /**
-             * CustomPromptFilePath.
+             * <p>The path where the custom prompt result file is stored.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cloudNote/ksvxxppi/88_12/customPrompt_1724914365173.json</p>
              */
             public Builder customPromptFilePath(String customPromptFilePath) {
                 this.customPromptFilePath = customPromptFilePath;
@@ -383,7 +404,10 @@ public class DescribeCloudNotesResponseBody extends TeaModel {
             }
 
             /**
-             * MeetingAssistanceFilePath.
+             * <p>The path where the key points extraction result file is stored.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cloudNote/ksvxxppi/88_12/meetingAssistance_1724914365173.json</p>
              */
             public Builder meetingAssistanceFilePath(String meetingAssistanceFilePath) {
                 this.meetingAssistanceFilePath = meetingAssistanceFilePath;
@@ -391,7 +415,10 @@ public class DescribeCloudNotesResponseBody extends TeaModel {
             }
 
             /**
-             * Region.
+             * <p>Reference job region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder region(Integer region) {
                 this.region = region;
@@ -399,7 +426,10 @@ public class DescribeCloudNotesResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceInspectionFilePath.
+             * <p>The path where the service quality inspection result file is stored.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cloudNote/ksvxxppi/88_12/serviceInspection_1724914365173.json</p>
              */
             public Builder serviceInspectionFilePath(String serviceInspectionFilePath) {
                 this.serviceInspectionFilePath = serviceInspectionFilePath;
@@ -407,7 +437,10 @@ public class DescribeCloudNotesResponseBody extends TeaModel {
             }
 
             /**
-             * StartTs.
+             * <p>Start Time of the meeting summary job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1731939816837</p>
              */
             public Builder startTs(Long startTs) {
                 this.startTs = startTs;
@@ -415,7 +448,10 @@ public class DescribeCloudNotesResponseBody extends TeaModel {
             }
 
             /**
-             * SummarizationFilePath.
+             * <p>Path where the summary result file is stored.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cloudNote/ksvxxppi/88_12/summarization_1724914365173.json</p>
              */
             public Builder summarizationFilePath(String summarizationFilePath) {
                 this.summarizationFilePath = summarizationFilePath;
@@ -423,7 +459,10 @@ public class DescribeCloudNotesResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * <p>Job ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test001</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -431,7 +470,10 @@ public class DescribeCloudNotesResponseBody extends TeaModel {
             }
 
             /**
-             * TextPolishFilePath.
+             * <p>The path where the spoken-to-written text result file is stored.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cloudNote/ksvxxppi/88_12/textPolish_1724914365173.json</p>
              */
             public Builder textPolishFilePath(String textPolishFilePath) {
                 this.textPolishFilePath = textPolishFilePath;
@@ -439,7 +481,10 @@ public class DescribeCloudNotesResponseBody extends TeaModel {
             }
 
             /**
-             * TranscriptionFilePath.
+             * <p>Path where the transcription result file is stored.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cloudNote/ksvxxppi/88_12/transcription_1724914365173.json</p>
              */
             public Builder transcriptionFilePath(String transcriptionFilePath) {
                 this.transcriptionFilePath = transcriptionFilePath;
@@ -447,7 +492,10 @@ public class DescribeCloudNotesResponseBody extends TeaModel {
             }
 
             /**
-             * Vendor.
+             * <p>The vendor referenced when enabling the job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder vendor(Integer vendor) {
                 this.vendor = vendor;

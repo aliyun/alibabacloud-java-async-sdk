@@ -116,6 +116,7 @@ public class DescribeRecordTemplatesRequest extends Request {
         } 
 
         /**
+         * <p>The application ID. You can create and query the ID in the console. Only a single ID is supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -128,7 +129,7 @@ public class DescribeRecordTemplatesRequest extends Request {
         }
 
         /**
-         * <p>1</p>
+         * OwnerId.
          */
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
@@ -137,7 +138,10 @@ public class DescribeRecordTemplatesRequest extends Request {
         }
 
         /**
-         * PageNum.
+         * <p>The page number to return. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -146,7 +150,10 @@ public class DescribeRecordTemplatesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries to return on each page. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -155,7 +162,15 @@ public class DescribeRecordTemplatesRequest extends Request {
         }
 
         /**
-         * TemplateIds.
+         * <p>The list of template IDs to query. The format is as follows:</p>
+         * <pre><code>TemplateIds.1=****
+         * TemplateIds.2=****
+         * ......
+         * </code></pre>
+         * <p>To obtain the template ID, see <a href="https://help.aliyun.com/document_detail/193625.html">AddRecordTemplate</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>76dasgb****</p>
          */
         public Builder templateIds(java.util.List<String> templateIds) {
             this.putQueryParameter("TemplateIds", templateIds);

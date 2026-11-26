@@ -67,7 +67,10 @@ public class CreateMPULayoutResponseBody extends TeaModel {
         } 
 
         /**
-         * LayoutId.
+         * <p>The layout ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder layoutId(Long layoutId) {
             this.layoutId = layoutId;
@@ -75,7 +78,10 @@ public class CreateMPULayoutResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>760bad53276431c499e30dc36f6b26be</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

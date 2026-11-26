@@ -344,7 +344,10 @@ public class StartStreamingOutRequest extends Request {
         } 
 
         /**
-         * Annotation.
+         * <p>The annotation switch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>disable</p>
          */
         public Builder annotation(String annotation) {
             this.putQueryParameter("Annotation", annotation);
@@ -353,6 +356,7 @@ public class StartStreamingOutRequest extends Request {
         }
 
         /**
+         * <p>The application ID. You can create and query the ID in the console. Only a single ID is supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -365,7 +369,7 @@ public class StartStreamingOutRequest extends Request {
         }
 
         /**
-         * Backgrounds.
+         * <p>The background image.</p>
          */
         public Builder backgrounds(java.util.List<Backgrounds> backgrounds) {
             this.putQueryParameter("Backgrounds", backgrounds);
@@ -374,7 +378,7 @@ public class StartStreamingOutRequest extends Request {
         }
 
         /**
-         * BgColor.
+         * <p>The global background color.</p>
          */
         public Builder bgColor(BgColor bgColor) {
             this.putQueryParameter("BgColor", bgColor);
@@ -383,6 +387,7 @@ public class StartStreamingOutRequest extends Request {
         }
 
         /**
+         * <p>The ID of an existing channel. Only a single ID is supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -395,7 +400,7 @@ public class StartStreamingOutRequest extends Request {
         }
 
         /**
-         * ClockWidgets.
+         * <p>The global clock watermark.</p>
          */
         public Builder clockWidgets(java.util.List<ClockWidgets> clockWidgets) {
             this.putQueryParameter("ClockWidgets", clockWidgets);
@@ -404,7 +409,15 @@ public class StartStreamingOutRequest extends Request {
         }
 
         /**
-         * CropMode.
+         * <p>The crop mode. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: Crop the image while maintaining the aspect ratio.</li>
+         * <li><strong>2</strong>: Maintain the aspect ratio and add borders (default).</li>
+         * <li><strong>3</strong>: Stretch the image to fill the pane.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder cropMode(Integer cropMode) {
             this.putQueryParameter("CropMode", cropMode);
@@ -413,7 +426,10 @@ public class StartStreamingOutRequest extends Request {
         }
 
         /**
-         * Images.
+         * <p>The global image watermark.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder images(java.util.List<Images> images) {
             this.putQueryParameter("Images", images);
@@ -422,7 +438,16 @@ public class StartStreamingOutRequest extends Request {
         }
 
         /**
-         * LayoutSpecifiedUsers.
+         * <p>The specified user list for layout generation, including Blacklist/Whitelist.</p>
+         * <p>Whitelist: specifies the users whose video streams are subscribed to in the channel.</p>
+         * <ul>
+         * <li>After the settings are applied, automatic padding is performed in sequence based on this list.</li>
+         * <li>When switching between multiple layouts in a template, only users in the whitelist are considered.</li>
+         * </ul>
+         * <p>Blacklist: specifies the users whose video streams are not subscribed to in the channel.</p>
+         * <ul>
+         * <li>When switching between multiple layouts in a template, only users not in the blacklist are considered.</li>
+         * </ul>
          */
         public Builder layoutSpecifiedUsers(LayoutSpecifiedUsers layoutSpecifiedUsers) {
             String layoutSpecifiedUsersShrink = shrink(layoutSpecifiedUsers, "LayoutSpecifiedUsers", "json");
@@ -432,7 +457,10 @@ public class StartStreamingOutRequest extends Request {
         }
 
         /**
-         * Panes.
+         * <p>The pane settings.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eo85****</p>
          */
         public Builder panes(java.util.List<Panes> panes) {
             this.putQueryParameter("Panes", panes);
@@ -441,7 +469,7 @@ public class StartStreamingOutRequest extends Request {
         }
 
         /**
-         * RegionColor.
+         * <p>The global pane background color.</p>
          */
         public Builder regionColor(RegionColor regionColor) {
             this.putQueryParameter("RegionColor", regionColor);
@@ -450,7 +478,7 @@ public class StartStreamingOutRequest extends Request {
         }
 
         /**
-         * ReservePaneForNoCameraUser.
+         * <p>Specifies whether to reserve a pane placeholder for users who do not push camera streams. Default value: true. A value of true indicates that a pane is reserved when a user does not push a camera stream. A value of false indicates that no pane is reserved.</p>
          */
         public Builder reservePaneForNoCameraUser(Boolean reservePaneForNoCameraUser) {
             this.putQueryParameter("ReservePaneForNoCameraUser", reservePaneForNoCameraUser);
@@ -459,7 +487,11 @@ public class StartStreamingOutRequest extends Request {
         }
 
         /**
-         * ShowDefaultBackgroundOnMute.
+         * <p>Specifies whether to display the default background image of a pane when the user is muted. Valid values:</p>
+         * <ul>
+         * <li>true: Displays the default background image (default).</li>
+         * <li>false: Does not display the default background image, but the configured local pane background image is still displayed.</li>
+         * </ul>
          */
         public Builder showDefaultBackgroundOnMute(Boolean showDefaultBackgroundOnMute) {
             this.putQueryParameter("ShowDefaultBackgroundOnMute", showDefaultBackgroundOnMute);
@@ -468,7 +500,7 @@ public class StartStreamingOutRequest extends Request {
         }
 
         /**
-         * SpecMixedUserList.
+         * <p>The list of specified users for audio mixing.</p>
          */
         public Builder specMixedUserList(java.util.List<String> specMixedUserList) {
             this.putQueryParameter("SpecMixedUserList", specMixedUserList);
@@ -477,7 +509,11 @@ public class StartStreamingOutRequest extends Request {
         }
 
         /**
-         * StartWithoutChannel.
+         * <p>Specifies whether to allow starting the task when the channel does not exist. Valid values:</p>
+         * <ul>
+         * <li>true: Yes.</li>
+         * <li>false: No (default).</li>
+         * </ul>
          */
         public Builder startWithoutChannel(Boolean startWithoutChannel) {
             this.putQueryParameter("StartWithoutChannel", startWithoutChannel);
@@ -486,7 +522,10 @@ public class StartStreamingOutRequest extends Request {
         }
 
         /**
-         * StartWithoutChannelWaitTime.
+         * <p>The wait time for the task when the channel is not started, in seconds. This parameter is valid only when the StartWithoutChannel parameter is set to true. Valid values: 30 to 120.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder startWithoutChannelWaitTime(Integer startWithoutChannelWaitTime) {
             this.putQueryParameter("StartWithoutChannelWaitTime", startWithoutChannelWaitTime);
@@ -495,7 +534,11 @@ public class StartStreamingOutRequest extends Request {
         }
 
         /**
-         * SubHighResolutionStream.
+         * <p>Specifies whether to subscribe to high resolution streams. Valid values:</p>
+         * <ul>
+         * <li>false: Subscribes to streams of different resolutions based on the pane area (default).</li>
+         * <li>true: Uses the highest resolution stream pushed by the client for padding by default.</li>
+         * </ul>
          */
         public Builder subHighResolutionStream(Boolean subHighResolutionStream) {
             this.putQueryParameter("SubHighResolutionStream", subHighResolutionStream);
@@ -504,7 +547,10 @@ public class StartStreamingOutRequest extends Request {
         }
 
         /**
-         * TaskId.
+         * <p>The task ID of the bypass streaming task. Only a single ID is supported. The ID can contain uppercase and lowercase letters, digits, underscores (_), and hyphens (-), and can be up to 55 bytes in length. If you do not specify this parameter, the system automatically generates a task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);
@@ -513,6 +559,7 @@ public class StartStreamingOutRequest extends Request {
         }
 
         /**
+         * <p>The template ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -525,7 +572,7 @@ public class StartStreamingOutRequest extends Request {
         }
 
         /**
-         * Texts.
+         * <p>The global text watermark.</p>
          */
         public Builder texts(java.util.List<Texts> texts) {
             this.putQueryParameter("Texts", texts);
@@ -534,6 +581,7 @@ public class StartStreamingOutRequest extends Request {
         }
 
         /**
+         * <p>The live stream ingest URL. Only a single URL is supported. This URL cannot be used by multiple tasks at the same time.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -688,7 +736,10 @@ public class StartStreamingOutRequest extends Request {
             } 
 
             /**
-             * Alpha.
+             * <p>The transparency.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.9</p>
              */
             public Builder alpha(Double alpha) {
                 this.alpha = alpha;
@@ -696,7 +747,15 @@ public class StartStreamingOutRequest extends Request {
             }
 
             /**
-             * BackgroundCropMode.
+             * <p>The crop mode. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: Crop while maintaining the aspect ratio.</li>
+             * <li><strong>2</strong>: Maintain the aspect ratio and add borders.</li>
+             * <li><strong>3</strong>: Stretch to fill.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder backgroundCropMode(Integer backgroundCropMode) {
                 this.backgroundCropMode = backgroundCropMode;
@@ -704,6 +763,7 @@ public class StartStreamingOutRequest extends Request {
             }
 
             /**
+             * <p>The height.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -715,7 +775,10 @@ public class StartStreamingOutRequest extends Request {
             }
 
             /**
-             * Layer.
+             * <p>The z-axis layer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder layer(Integer layer) {
                 this.layer = layer;
@@ -723,6 +786,7 @@ public class StartStreamingOutRequest extends Request {
             }
 
             /**
+             * <p>The image URL.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -734,6 +798,7 @@ public class StartStreamingOutRequest extends Request {
             }
 
             /**
+             * <p>The width.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -745,6 +810,7 @@ public class StartStreamingOutRequest extends Request {
             }
 
             /**
+             * <p>The x-coordinate.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -756,6 +822,7 @@ public class StartStreamingOutRequest extends Request {
             }
 
             /**
+             * <p>The y-coordinate.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -842,7 +909,10 @@ public class StartStreamingOutRequest extends Request {
             } 
 
             /**
-             * B.
+             * <p>The B value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>255</p>
              */
             public Builder b(Integer b) {
                 this.b = b;
@@ -850,7 +920,10 @@ public class StartStreamingOutRequest extends Request {
             }
 
             /**
-             * G.
+             * <p>The G value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>255</p>
              */
             public Builder g(Integer g) {
                 this.g = g;
@@ -858,7 +931,10 @@ public class StartStreamingOutRequest extends Request {
             }
 
             /**
-             * R.
+             * <p>The R value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>255</p>
              */
             public Builder r(Integer r) {
                 this.r = r;
@@ -938,7 +1014,10 @@ public class StartStreamingOutRequest extends Request {
             } 
 
             /**
-             * B.
+             * <p>The B value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>255</p>
              */
             public Builder b(Integer b) {
                 this.b = b;
@@ -946,7 +1025,10 @@ public class StartStreamingOutRequest extends Request {
             }
 
             /**
-             * G.
+             * <p>The G value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>255</p>
              */
             public Builder g(Integer g) {
                 this.g = g;
@@ -954,7 +1036,10 @@ public class StartStreamingOutRequest extends Request {
             }
 
             /**
-             * R.
+             * <p>The R value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>255</p>
              */
             public Builder r(Integer r) {
                 this.r = r;
@@ -1034,7 +1119,10 @@ public class StartStreamingOutRequest extends Request {
             } 
 
             /**
-             * B.
+             * <p>The B value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>255</p>
              */
             public Builder b(Integer b) {
                 this.b = b;
@@ -1042,7 +1130,10 @@ public class StartStreamingOutRequest extends Request {
             }
 
             /**
-             * G.
+             * <p>The G value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>255</p>
              */
             public Builder g(Integer g) {
                 this.g = g;
@@ -1050,7 +1141,10 @@ public class StartStreamingOutRequest extends Request {
             }
 
             /**
-             * R.
+             * <p>The R value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>255</p>
              */
             public Builder r(Integer r) {
                 this.r = r;
@@ -1249,7 +1343,10 @@ public class StartStreamingOutRequest extends Request {
             } 
 
             /**
-             * Alpha.
+             * <p>The transparency.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.9</p>
              */
             public Builder alpha(Double alpha) {
                 this.alpha = alpha;
@@ -1257,7 +1354,10 @@ public class StartStreamingOutRequest extends Request {
             }
 
             /**
-             * BoxAlpha.
+             * <p>The transparency of the rectangle box.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.6</p>
              */
             public Builder boxAlpha(Double boxAlpha) {
                 this.boxAlpha = boxAlpha;
@@ -1265,7 +1365,10 @@ public class StartStreamingOutRequest extends Request {
             }
 
             /**
-             * BoxBorderw.
+             * <p>The border width of the rectangle box.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder boxBorderw(Integer boxBorderw) {
                 this.boxBorderw = boxBorderw;
@@ -1273,7 +1376,7 @@ public class StartStreamingOutRequest extends Request {
             }
 
             /**
-             * BoxColor.
+             * <p>The color of the rectangle box.</p>
              */
             public Builder boxColor(BoxColor boxColor) {
                 this.boxColor = boxColor;
@@ -1281,7 +1384,22 @@ public class StartStreamingOutRequest extends Request {
             }
 
             /**
-             * Font.
+             * <p>The font. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: Alibaba PuHuiTi Regular</li>
+             * <li><strong>1</strong>: Alibaba PuHuiTi Light</li>
+             * <li><strong>2</strong>: Alibaba PuHuiTi Medium</li>
+             * <li><strong>3</strong>: Alibaba PuHuiTi Bold</li>
+             * <li><strong>4</strong>: Alibaba PuHuiTi Heavy</li>
+             * <li><strong>5</strong>: Alimama ShuHeiTi</li>
+             * <li><strong>6</strong>: DingTalk JinBuTi</li>
+             * <li><strong>7</strong>: Alimama DaoLiTi</li>
+             * <li><strong>8</strong>: Alimama DongFangDaKai</li>
+             * <li><strong>9</strong>: Alimama FangYuanTi</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder font(Integer font) {
                 this.font = font;
@@ -1289,7 +1407,7 @@ public class StartStreamingOutRequest extends Request {
             }
 
             /**
-             * FontColor.
+             * <p>The font color.</p>
              */
             public Builder fontColor(FontColor fontColor) {
                 this.fontColor = fontColor;
@@ -1297,7 +1415,10 @@ public class StartStreamingOutRequest extends Request {
             }
 
             /**
-             * FontSize.
+             * <p>The font size of the clock.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder fontSize(Integer fontSize) {
                 this.fontSize = fontSize;
@@ -1305,7 +1426,7 @@ public class StartStreamingOutRequest extends Request {
             }
 
             /**
-             * HasBox.
+             * <p>Specifies whether a rectangle box is required.</p>
              */
             public Builder hasBox(Boolean hasBox) {
                 this.hasBox = hasBox;
@@ -1313,7 +1434,10 @@ public class StartStreamingOutRequest extends Request {
             }
 
             /**
-             * Layer.
+             * <p>The z-axis layer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder layer(Integer layer) {
                 this.layer = layer;
@@ -1321,6 +1445,7 @@ public class StartStreamingOutRequest extends Request {
             }
 
             /**
+             * <p>The x-coordinate.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1332,6 +1457,7 @@ public class StartStreamingOutRequest extends Request {
             }
 
             /**
+             * <p>The y-coordinate.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1343,7 +1469,10 @@ public class StartStreamingOutRequest extends Request {
             }
 
             /**
-             * Zone.
+             * <p>The time zone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder zone(Integer zone) {
                 this.zone = zone;
@@ -1493,7 +1622,10 @@ public class StartStreamingOutRequest extends Request {
             } 
 
             /**
-             * Alpha.
+             * <p>The transparency.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.9</p>
              */
             public Builder alpha(Double alpha) {
                 this.alpha = alpha;
@@ -1501,6 +1633,7 @@ public class StartStreamingOutRequest extends Request {
             }
 
             /**
+             * <p>The height.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1512,7 +1645,15 @@ public class StartStreamingOutRequest extends Request {
             }
 
             /**
-             * ImageCropMode.
+             * <p>The crop mode. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: Crop while maintaining the aspect ratio.</li>
+             * <li><strong>2</strong>: Maintain the aspect ratio and add borders.</li>
+             * <li><strong>3</strong>: Stretch to fill.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder imageCropMode(Integer imageCropMode) {
                 this.imageCropMode = imageCropMode;
@@ -1520,7 +1661,10 @@ public class StartStreamingOutRequest extends Request {
             }
 
             /**
-             * Layer.
+             * <p>The z-axis layer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder layer(Integer layer) {
                 this.layer = layer;
@@ -1528,6 +1672,7 @@ public class StartStreamingOutRequest extends Request {
             }
 
             /**
+             * <p>The image URL. The image content cannot be updated during stream ingest.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1539,6 +1684,7 @@ public class StartStreamingOutRequest extends Request {
             }
 
             /**
+             * <p>The width.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1550,6 +1696,7 @@ public class StartStreamingOutRequest extends Request {
             }
 
             /**
+             * <p>The x-coordinate.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1561,6 +1708,7 @@ public class StartStreamingOutRequest extends Request {
             }
 
             /**
+             * <p>The y-coordinate.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1633,6 +1781,7 @@ public class StartStreamingOutRequest extends Request {
             } 
 
             /**
+             * <p>The list of specified user IDs.</p>
              * <p>This parameter is required.</p>
              */
             public Builder ids(java.util.List<String> ids) {
@@ -1641,7 +1790,15 @@ public class StartStreamingOutRequest extends Request {
             }
 
             /**
+             * <p>The type of the user list. Valid values:</p>
+             * <ul>
+             * <li>black: Blacklist.</li>
+             * <li>white: Whitelist.</li>
+             * </ul>
              * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>white</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -1804,7 +1961,10 @@ public class StartStreamingOutRequest extends Request {
             } 
 
             /**
-             * Alpha.
+             * <p>The transparency.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.9</p>
              */
             public Builder alpha(Double alpha) {
                 this.alpha = alpha;
@@ -1812,7 +1972,15 @@ public class StartStreamingOutRequest extends Request {
             }
 
             /**
-             * Display.
+             * <p>The display condition. Valid values:</p>
+             * <ul>
+             * <li>streamOnly: Displayed when the current user has a video stream. This is the default value.</li>
+             * <li>backup: Displayed when the current user does not have a video stream.</li>
+             * <li>always: Always displayed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>backup</p>
              */
             public Builder display(String display) {
                 this.display = display;
@@ -1820,6 +1988,7 @@ public class StartStreamingOutRequest extends Request {
             }
 
             /**
+             * <p>The height.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1831,7 +2000,10 @@ public class StartStreamingOutRequest extends Request {
             }
 
             /**
-             * Layer.
+             * <p>The z-axis layer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder layer(Integer layer) {
                 this.layer = layer;
@@ -1839,7 +2011,15 @@ public class StartStreamingOutRequest extends Request {
             }
 
             /**
-             * PaneBackgroundCropMode.
+             * <p>The crop mode. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: Crop while maintaining the aspect ratio.</li>
+             * <li><strong>2</strong>: Maintain the aspect ratio and add borders.</li>
+             * <li><strong>3</strong>: Stretch to fill.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder paneBackgroundCropMode(Integer paneBackgroundCropMode) {
                 this.paneBackgroundCropMode = paneBackgroundCropMode;
@@ -1847,6 +2027,7 @@ public class StartStreamingOutRequest extends Request {
             }
 
             /**
+             * <p>The image URL.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1858,10 +2039,11 @@ public class StartStreamingOutRequest extends Request {
             }
 
             /**
+             * <p>The width.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
-             * <p>0.2</p>
+             * <p>0.3</p>
              */
             public Builder width(Double width) {
                 this.width = width;
@@ -1869,6 +2051,7 @@ public class StartStreamingOutRequest extends Request {
             }
 
             /**
+             * <p>The x-coordinate.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1880,6 +2063,7 @@ public class StartStreamingOutRequest extends Request {
             }
 
             /**
+             * <p>The y-coordinate.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -2046,7 +2230,10 @@ public class StartStreamingOutRequest extends Request {
             } 
 
             /**
-             * Alpha.
+             * <p>The transparency.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.9</p>
              */
             public Builder alpha(Double alpha) {
                 this.alpha = alpha;
@@ -2054,7 +2241,15 @@ public class StartStreamingOutRequest extends Request {
             }
 
             /**
-             * Display.
+             * <p>The condition for displaying the watermark. Valid values:</p>
+             * <ul>
+             * <li>streamOnly: Displayed when the current user has a video stream. This is the default value.</li>
+             * <li>backup: Displayed when the current user does not have a video stream.</li>
+             * <li>always: Always displayed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>backup</p>
              */
             public Builder display(String display) {
                 this.display = display;
@@ -2062,6 +2257,7 @@ public class StartStreamingOutRequest extends Request {
             }
 
             /**
+             * <p>The height.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -2073,7 +2269,10 @@ public class StartStreamingOutRequest extends Request {
             }
 
             /**
-             * Layer.
+             * <p>The z-axis layer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder layer(Integer layer) {
                 this.layer = layer;
@@ -2081,7 +2280,15 @@ public class StartStreamingOutRequest extends Request {
             }
 
             /**
-             * PaneImageCropMode.
+             * <p>The crop mode. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: Crop while maintaining the aspect ratio.</li>
+             * <li><strong>2</strong>: Maintain the aspect ratio and add borders.</li>
+             * <li><strong>3</strong>: Stretch to fill.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder paneImageCropMode(Integer paneImageCropMode) {
                 this.paneImageCropMode = paneImageCropMode;
@@ -2089,6 +2296,7 @@ public class StartStreamingOutRequest extends Request {
             }
 
             /**
+             * <p>The corresponding image content cannot be updated while streaming.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -2100,6 +2308,7 @@ public class StartStreamingOutRequest extends Request {
             }
 
             /**
+             * <p>The width.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -2111,6 +2320,7 @@ public class StartStreamingOutRequest extends Request {
             }
 
             /**
+             * <p>The x-coordinate.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -2122,6 +2332,7 @@ public class StartStreamingOutRequest extends Request {
             }
 
             /**
+             * <p>The y-coordinate.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -2205,7 +2416,10 @@ public class StartStreamingOutRequest extends Request {
             } 
 
             /**
-             * B.
+             * <p>The B value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>255</p>
              */
             public Builder b(Integer b) {
                 this.b = b;
@@ -2213,7 +2427,10 @@ public class StartStreamingOutRequest extends Request {
             }
 
             /**
-             * G.
+             * <p>The G value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>255</p>
              */
             public Builder g(Integer g) {
                 this.g = g;
@@ -2221,7 +2438,10 @@ public class StartStreamingOutRequest extends Request {
             }
 
             /**
-             * R.
+             * <p>The R value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>255</p>
              */
             public Builder r(Integer r) {
                 this.r = r;
@@ -2301,7 +2521,10 @@ public class StartStreamingOutRequest extends Request {
             } 
 
             /**
-             * B.
+             * <p>The B value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>255</p>
              */
             public Builder b(Integer b) {
                 this.b = b;
@@ -2309,7 +2532,10 @@ public class StartStreamingOutRequest extends Request {
             }
 
             /**
-             * G.
+             * <p>The G value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>255</p>
              */
             public Builder g(Integer g) {
                 this.g = g;
@@ -2317,7 +2543,10 @@ public class StartStreamingOutRequest extends Request {
             }
 
             /**
-             * R.
+             * <p>The R value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>255</p>
              */
             public Builder r(Integer r) {
                 this.r = r;
@@ -2530,7 +2759,10 @@ public class StartStreamingOutRequest extends Request {
             } 
 
             /**
-             * Alpha.
+             * <p>The watermark transparency.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.9</p>
              */
             public Builder alpha(Double alpha) {
                 this.alpha = alpha;
@@ -2538,7 +2770,10 @@ public class StartStreamingOutRequest extends Request {
             }
 
             /**
-             * BoxAlpha.
+             * <p>The transparency of the rectangle box.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.6</p>
              */
             public Builder boxAlpha(Double boxAlpha) {
                 this.boxAlpha = boxAlpha;
@@ -2546,7 +2781,10 @@ public class StartStreamingOutRequest extends Request {
             }
 
             /**
-             * BoxBorderw.
+             * <p>The border width of the rectangle box.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder boxBorderw(Integer boxBorderw) {
                 this.boxBorderw = boxBorderw;
@@ -2554,7 +2792,7 @@ public class StartStreamingOutRequest extends Request {
             }
 
             /**
-             * BoxColor.
+             * <p>The color of the rectangle box.</p>
              */
             public Builder boxColor(TextsBoxColor boxColor) {
                 this.boxColor = boxColor;
@@ -2562,7 +2800,15 @@ public class StartStreamingOutRequest extends Request {
             }
 
             /**
-             * Display.
+             * <p>The condition for displaying the watermark. Valid values:</p>
+             * <ul>
+             * <li>streamOnly: Displayed when the current user has a video stream. This is the default value.</li>
+             * <li>backup: Displayed when the current user does not have a video stream.</li>
+             * <li>always: Always displayed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>backup</p>
              */
             public Builder display(String display) {
                 this.display = display;
@@ -2570,7 +2816,22 @@ public class StartStreamingOutRequest extends Request {
             }
 
             /**
-             * Font.
+             * <p>The font. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: Alibaba PuHuiTi Regular</li>
+             * <li><strong>1</strong>: Alibaba PuHuiTi Light</li>
+             * <li><strong>2</strong>: Alibaba PuHuiTi Medium</li>
+             * <li><strong>3</strong>: Alibaba PuHuiTi Bold</li>
+             * <li><strong>4</strong>: Alibaba PuHuiTi Heavy</li>
+             * <li><strong>5</strong>: Alimama ShuHeiTi</li>
+             * <li><strong>6</strong>: DingTalk JinBuTi</li>
+             * <li><strong>7</strong>: Alimama DaoLiTi</li>
+             * <li><strong>8</strong>: Alimama DongFangDaKai</li>
+             * <li><strong>9</strong>: Alimama FangYuanTi</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder font(Integer font) {
                 this.font = font;
@@ -2578,7 +2839,7 @@ public class StartStreamingOutRequest extends Request {
             }
 
             /**
-             * FontColor.
+             * <p>The font color.</p>
              */
             public Builder fontColor(TextsFontColor fontColor) {
                 this.fontColor = fontColor;
@@ -2586,7 +2847,10 @@ public class StartStreamingOutRequest extends Request {
             }
 
             /**
-             * FontSize.
+             * <p>The font size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>36</p>
              */
             public Builder fontSize(Integer fontSize) {
                 this.fontSize = fontSize;
@@ -2594,7 +2858,7 @@ public class StartStreamingOutRequest extends Request {
             }
 
             /**
-             * HasBox.
+             * <p>Specifies whether a rectangle box is required.</p>
              */
             public Builder hasBox(Boolean hasBox) {
                 this.hasBox = hasBox;
@@ -2602,7 +2866,10 @@ public class StartStreamingOutRequest extends Request {
             }
 
             /**
-             * Layer.
+             * <p>The z-axis layer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder layer(Integer layer) {
                 this.layer = layer;
@@ -2610,10 +2877,11 @@ public class StartStreamingOutRequest extends Request {
             }
 
             /**
+             * <p>The watermark content.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
-             * <p>文字水印</p>
+             * <p>Text watermark</p>
              */
             public Builder texture(String texture) {
                 this.texture = texture;
@@ -2621,6 +2889,7 @@ public class StartStreamingOutRequest extends Request {
             }
 
             /**
+             * <p>The x-coordinate.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -2632,6 +2901,7 @@ public class StartStreamingOutRequest extends Request {
             }
 
             /**
+             * <p>The y-coordinate.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -2689,7 +2959,10 @@ public class StartStreamingOutRequest extends Request {
             } 
 
             /**
-             * WhiteboardId.
+             * <p>The whiteboard ID. Default value: default.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder whiteboardId(String whiteboardId) {
                 this.whiteboardId = whiteboardId;
@@ -2861,7 +3134,7 @@ public class StartStreamingOutRequest extends Request {
             } 
 
             /**
-             * Backgrounds.
+             * <p>The local background images.</p>
              */
             public Builder backgrounds(java.util.List<PanesBackgrounds> backgrounds) {
                 this.backgrounds = backgrounds;
@@ -2869,7 +3142,7 @@ public class StartStreamingOutRequest extends Request {
             }
 
             /**
-             * Images.
+             * <p>The local image watermarks for the pane.</p>
              */
             public Builder images(java.util.List<PanesImages> images) {
                 this.images = images;
@@ -2877,7 +3150,15 @@ public class StartStreamingOutRequest extends Request {
             }
 
             /**
-             * PaneCropMode.
+             * <p>The crop mode. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: Crop while maintaining the aspect ratio.</li>
+             * <li><strong>2</strong>: Maintain the aspect ratio and add borders.</li>
+             * <li><strong>3</strong>: Stretch to fill.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder paneCropMode(Integer paneCropMode) {
                 this.paneCropMode = paneCropMode;
@@ -2885,6 +3166,7 @@ public class StartStreamingOutRequest extends Request {
             }
 
             /**
+             * <p>The pane ID. The value starts from 0.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -2896,7 +3178,9 @@ public class StartStreamingOutRequest extends Request {
             }
 
             /**
-             * ReservePaneForOfflineUser.
+             * <p>Specifies whether to reserve the pane for users who have not joined the meeting.
+             * Default value: true. This value indicates that when the specific user or wildcard user specified for the grid is offline, the pane is forcibly reserved.
+             * A value of false indicates that when the specific user or wildcard user specified for the grid is offline, video streams are displayed based on the automatic fill order.</p>
              */
             public Builder reservePaneForOfflineUser(Boolean reservePaneForOfflineUser) {
                 this.reservePaneForOfflineUser = reservePaneForOfflineUser;
@@ -2904,7 +3188,14 @@ public class StartStreamingOutRequest extends Request {
             }
 
             /**
-             * Source.
+             * <p>The media source of the pane. You can specify a userId. To specify a specific user type, you can use wildcard configurations. The following types are supported:</p>
+             * <ul>
+             * <li><strong>$ActiveSpeaker</strong>: The current speaker in the channel.</li>
+             * <li><strong>$ScreenShare</strong>: The user who is sharing their screen. If multiple users are sharing their screens in the channel, the panes are filled in chronological order.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>22</p>
              */
             public Builder source(String source) {
                 this.source = source;
@@ -2912,7 +3203,16 @@ public class StartStreamingOutRequest extends Request {
             }
 
             /**
-             * SourceType.
+             * <p>The media type of the pane. Valid values:</p>
+             * <ul>
+             * <li><strong>video</strong>: The user camera or screen sharing stream. This is the default value.</li>
+             * <li><strong>camera</strong>: The camera stream.</li>
+             * <li><strong>screen</strong>: The screen sharing stream.</li>
+             * <li><strong>whiteboard</strong>: The whiteboard.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>video</p>
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;
@@ -2920,7 +3220,7 @@ public class StartStreamingOutRequest extends Request {
             }
 
             /**
-             * Texts.
+             * <p>The local text watermarks for the pane.</p>
              */
             public Builder texts(java.util.List<PanesTexts> texts) {
                 this.texts = texts;
@@ -2928,7 +3228,14 @@ public class StartStreamingOutRequest extends Request {
             }
 
             /**
-             * VideoOrder.
+             * <p>The fill order when SourceType is set to video. Valid values:</p>
+             * <ul>
+             * <li>screenFirst: Screen sharing takes precedence. This is the default value.</li>
+             * <li>cameraFirst: The camera takes precedence.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>cameraFirst</p>
              */
             public Builder videoOrder(String videoOrder) {
                 this.videoOrder = videoOrder;
@@ -2936,7 +3243,7 @@ public class StartStreamingOutRequest extends Request {
             }
 
             /**
-             * Whiteboard.
+             * <p>The whiteboard configurations.</p>
              */
             public Builder whiteboard(Whiteboard whiteboard) {
                 this.whiteboard = whiteboard;
@@ -3019,7 +3326,10 @@ public class StartStreamingOutRequest extends Request {
             } 
 
             /**
-             * B.
+             * <p>The B value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>255</p>
              */
             public Builder b(Integer b) {
                 this.b = b;
@@ -3027,7 +3337,10 @@ public class StartStreamingOutRequest extends Request {
             }
 
             /**
-             * G.
+             * <p>The G value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>255</p>
              */
             public Builder g(Integer g) {
                 this.g = g;
@@ -3035,7 +3348,10 @@ public class StartStreamingOutRequest extends Request {
             }
 
             /**
-             * R.
+             * <p>The R value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>255</p>
              */
             public Builder r(Integer r) {
                 this.r = r;
@@ -3115,7 +3431,10 @@ public class StartStreamingOutRequest extends Request {
             } 
 
             /**
-             * B.
+             * <p>The B value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>255</p>
              */
             public Builder b(Integer b) {
                 this.b = b;
@@ -3123,7 +3442,10 @@ public class StartStreamingOutRequest extends Request {
             }
 
             /**
-             * G.
+             * <p>The G value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>255</p>
              */
             public Builder g(Integer g) {
                 this.g = g;
@@ -3131,7 +3453,10 @@ public class StartStreamingOutRequest extends Request {
             }
 
             /**
-             * R.
+             * <p>The R value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>255</p>
              */
             public Builder r(Integer r) {
                 this.r = r;
@@ -3211,7 +3536,10 @@ public class StartStreamingOutRequest extends Request {
             } 
 
             /**
-             * B.
+             * <p>The B value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>255</p>
              */
             public Builder b(Integer b) {
                 this.b = b;
@@ -3219,7 +3547,10 @@ public class StartStreamingOutRequest extends Request {
             }
 
             /**
-             * G.
+             * <p>The G value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>255</p>
              */
             public Builder g(Integer g) {
                 this.g = g;
@@ -3227,7 +3558,10 @@ public class StartStreamingOutRequest extends Request {
             }
 
             /**
-             * R.
+             * <p>The R value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>255</p>
              */
             public Builder r(Integer r) {
                 this.r = r;
@@ -3427,7 +3761,10 @@ public class StartStreamingOutRequest extends Request {
             } 
 
             /**
-             * Alpha.
+             * <p>The watermark transparency.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.1</p>
              */
             public Builder alpha(Double alpha) {
                 this.alpha = alpha;
@@ -3435,7 +3772,10 @@ public class StartStreamingOutRequest extends Request {
             }
 
             /**
-             * BoxAlpha.
+             * <p>The transparency of the rectangle box.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.6</p>
              */
             public Builder boxAlpha(Double boxAlpha) {
                 this.boxAlpha = boxAlpha;
@@ -3443,7 +3783,10 @@ public class StartStreamingOutRequest extends Request {
             }
 
             /**
-             * BoxBorderw.
+             * <p>The border width of the rectangle box.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder boxBorderw(Integer boxBorderw) {
                 this.boxBorderw = boxBorderw;
@@ -3451,7 +3794,7 @@ public class StartStreamingOutRequest extends Request {
             }
 
             /**
-             * BoxColor.
+             * <p>The color of the rectangle box.</p>
              */
             public Builder boxColor(StartStreamingOutRequestTextsBoxColor boxColor) {
                 this.boxColor = boxColor;
@@ -3459,7 +3802,22 @@ public class StartStreamingOutRequest extends Request {
             }
 
             /**
-             * Font.
+             * <p>The font. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: Alibaba PuHuiTi Regular</li>
+             * <li><strong>1</strong>: Alibaba PuHuiTi Light</li>
+             * <li><strong>2</strong>: Alibaba PuHuiTi Medium</li>
+             * <li><strong>3</strong>: Alibaba PuHuiTi Bold</li>
+             * <li><strong>4</strong>: Alibaba PuHuiTi Heavy</li>
+             * <li><strong>5</strong>: Alimama ShuHeiTi</li>
+             * <li><strong>6</strong>: DingTalk JinBuTi</li>
+             * <li><strong>7</strong>: Alimama DaoLiTi</li>
+             * <li><strong>8</strong>: Alimama DongFangDaKai</li>
+             * <li><strong>9</strong>: Alimama FangYuanTi</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder font(Integer font) {
                 this.font = font;
@@ -3467,7 +3825,7 @@ public class StartStreamingOutRequest extends Request {
             }
 
             /**
-             * FontColor.
+             * <p>The font color.</p>
              */
             public Builder fontColor(StartStreamingOutRequestTextsFontColor fontColor) {
                 this.fontColor = fontColor;
@@ -3475,7 +3833,10 @@ public class StartStreamingOutRequest extends Request {
             }
 
             /**
-             * FontSize.
+             * <p>The font size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>36</p>
              */
             public Builder fontSize(Integer fontSize) {
                 this.fontSize = fontSize;
@@ -3483,7 +3844,7 @@ public class StartStreamingOutRequest extends Request {
             }
 
             /**
-             * HasBox.
+             * <p>Specifies whether a rectangle box is required.</p>
              */
             public Builder hasBox(Boolean hasBox) {
                 this.hasBox = hasBox;
@@ -3491,7 +3852,10 @@ public class StartStreamingOutRequest extends Request {
             }
 
             /**
-             * Layer.
+             * <p>The z-axis layer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder layer(Integer layer) {
                 this.layer = layer;
@@ -3499,10 +3863,11 @@ public class StartStreamingOutRequest extends Request {
             }
 
             /**
+             * <p>The watermark content.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
-             * <p>文字水印</p>
+             * <p>Text watermark</p>
              */
             public Builder texture(String texture) {
                 this.texture = texture;
@@ -3510,6 +3875,7 @@ public class StartStreamingOutRequest extends Request {
             }
 
             /**
+             * <p>The x-coordinate.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -3521,6 +3887,7 @@ public class StartStreamingOutRequest extends Request {
             }
 
             /**
+             * <p>The y-coordinate.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

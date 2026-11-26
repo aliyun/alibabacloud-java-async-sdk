@@ -105,7 +105,7 @@ public class DescribeUsageOverallDataRequest extends Request {
         } 
 
         /**
-         * <p>APP ID</p>
+         * <p>The app ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -118,6 +118,7 @@ public class DescribeUsageOverallDataRequest extends Request {
         }
 
         /**
+         * <p>The end time of the query. The value is a UNIX timestamp in seconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -130,6 +131,7 @@ public class DescribeUsageOverallDataRequest extends Request {
         }
 
         /**
+         * <p>The start time of the query. The value is a UNIX timestamp in seconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -142,6 +144,18 @@ public class DescribeUsageOverallDataRequest extends Request {
         }
 
         /**
+         * <p>The metric types to query. Separate multiple values with commas (,). Valid values:</p>
+         * <ul>
+         * <li><strong>TOTAL_CALL_DURATION</strong>: total duration.</li>
+         * <li><strong>VIDEO_CALL_DURATION</strong>: video communication duration.</li>
+         * <li><strong>AUDIO_CALL_DURATION</strong>: audio communication duration.</li>
+         * <li><strong>CALL_CHANNEL_COUNT</strong>: communication channel count.</li>
+         * <li><strong>HIGHLY_CONCURRENT_CHANNEL_COUNT</strong>: highly concurrent communication channel count.</li>
+         * <li><strong>CHANNEL_CONCURRENT_PEAK</strong>: peak concurrent channel count.</li>
+         * <li><strong>ONLINE_USER_PEAK</strong>: peak online user count.</li>
+         * <li><strong>TOTAL_CALL_USER</strong>: total call users.</li>
+         * <li><strong>TOTAL_INOUT_NUM</strong>: total inbound and outbound visits.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

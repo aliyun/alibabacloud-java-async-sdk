@@ -358,7 +358,10 @@ public class StartCloudRecordRequest extends Request {
         } 
 
         /**
-         * Annotation.
+         * <p>Specifies whether to enable the annotation feature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>disable</p>
          */
         public Builder annotation(String annotation) {
             this.putQueryParameter("Annotation", annotation);
@@ -367,7 +370,7 @@ public class StartCloudRecordRequest extends Request {
         }
 
         /**
-         * <p>appId</p>
+         * <p>The application ID. You can create and query the ID in the console. Only a single ID is supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -380,7 +383,7 @@ public class StartCloudRecordRequest extends Request {
         }
 
         /**
-         * Backgrounds.
+         * <p>The local background images for the pane.</p>
          */
         public Builder backgrounds(java.util.List<Backgrounds> backgrounds) {
             this.putQueryParameter("Backgrounds", backgrounds);
@@ -389,7 +392,7 @@ public class StartCloudRecordRequest extends Request {
         }
 
         /**
-         * BgColor.
+         * <p>The global background color.</p>
          */
         public Builder bgColor(BgColor bgColor) {
             this.putQueryParameter("BgColor", bgColor);
@@ -398,7 +401,7 @@ public class StartCloudRecordRequest extends Request {
         }
 
         /**
-         * <p>channelName</p>
+         * <p>The ID of an existing channel. Only a single ID is supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -411,7 +414,7 @@ public class StartCloudRecordRequest extends Request {
         }
 
         /**
-         * ClockWidgets.
+         * <p>The global clock watermark.</p>
          */
         public Builder clockWidgets(java.util.List<ClockWidgets> clockWidgets) {
             this.putQueryParameter("ClockWidgets", clockWidgets);
@@ -420,7 +423,15 @@ public class StartCloudRecordRequest extends Request {
         }
 
         /**
-         * CropMode.
+         * <p>The crop mode. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: Crops the video while keeping the aspect ratio.</li>
+         * <li><strong>2</strong>: Keeps the aspect ratio and adds padding (default).</li>
+         * <li><strong>3</strong>: Stretches the video to fill the pane.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder cropMode(Integer cropMode) {
             this.putQueryParameter("CropMode", cropMode);
@@ -429,7 +440,10 @@ public class StartCloudRecordRequest extends Request {
         }
 
         /**
-         * Images.
+         * <p>The global image watermarks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>disable</p>
          */
         public Builder images(java.util.List<Images> images) {
             this.putQueryParameter("Images", images);
@@ -438,7 +452,16 @@ public class StartCloudRecordRequest extends Request {
         }
 
         /**
-         * LayoutSpecifiedUsers.
+         * <p>The specified user list for layout generation, which includes Blacklist/Whitelist.</p>
+         * <p>Whitelist: specifies the users whose video streams are subscribed to in the room.</p>
+         * <ul>
+         * <li>After the settings are applied, padding is automatically performed in sequence based on this list.</li>
+         * <li>When switching between multiple layouts in a template, only users in the whitelist are calculated.</li>
+         * </ul>
+         * <p>Blacklist: specifies the users whose video streams are not subscribed to in the room.</p>
+         * <ul>
+         * <li>When switching between multiple layouts in a template, only users not in the blacklist are calculated.</li>
+         * </ul>
          */
         public Builder layoutSpecifiedUsers(LayoutSpecifiedUsers layoutSpecifiedUsers) {
             String layoutSpecifiedUsersShrink = shrink(layoutSpecifiedUsers, "LayoutSpecifiedUsers", "json");
@@ -448,7 +471,10 @@ public class StartCloudRecordRequest extends Request {
         }
 
         /**
-         * <p>panes</p>
+         * <p>The pane settings. You can configure up to 16 panes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eo85****</p>
          */
         public Builder panes(java.util.List<Panes> panes) {
             this.putQueryParameter("Panes", panes);
@@ -457,7 +483,14 @@ public class StartCloudRecordRequest extends Request {
         }
 
         /**
-         * RecordMode.
+         * <p>The recording mode. Valid values:</p>
+         * <ul>
+         * <li>0: Mixed-stream recording. This is the default value.</li>
+         * <li>1: Single-stream recording. Single-stream recording does not support updates.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder recordMode(Integer recordMode) {
             this.putQueryParameter("RecordMode", recordMode);
@@ -466,7 +499,7 @@ public class StartCloudRecordRequest extends Request {
         }
 
         /**
-         * RegionColor.
+         * <p>The global frame background color.</p>
          */
         public Builder regionColor(RegionColor regionColor) {
             this.putQueryParameter("RegionColor", regionColor);
@@ -475,7 +508,7 @@ public class StartCloudRecordRequest extends Request {
         }
 
         /**
-         * ReservePaneForNoCameraUser.
+         * <p>Specifies whether to reserve a pane for a user who does not publish a camera stream. Default value: true. A value of true indicates that a pane is reserved. A value of false indicates that no pane is reserved.</p>
          */
         public Builder reservePaneForNoCameraUser(Boolean reservePaneForNoCameraUser) {
             this.putQueryParameter("ReservePaneForNoCameraUser", reservePaneForNoCameraUser);
@@ -484,7 +517,11 @@ public class StartCloudRecordRequest extends Request {
         }
 
         /**
-         * ShowDefaultBackgroundOnMute.
+         * <p>Specifies whether to display the default background image of the pane when the user is muted. Valid values:</p>
+         * <ul>
+         * <li>true: Displays the default background image (default).</li>
+         * <li>false: Does not display the default background image. The custom background image of the pane is still displayed.</li>
+         * </ul>
          */
         public Builder showDefaultBackgroundOnMute(Boolean showDefaultBackgroundOnMute) {
             this.putQueryParameter("ShowDefaultBackgroundOnMute", showDefaultBackgroundOnMute);
@@ -493,7 +530,7 @@ public class StartCloudRecordRequest extends Request {
         }
 
         /**
-         * SingleStreamingRecord.
+         * <p>The parameters for single-stream recording.</p>
          */
         public Builder singleStreamingRecord(SingleStreamingRecord singleStreamingRecord) {
             String singleStreamingRecordShrink = shrink(singleStreamingRecord, "SingleStreamingRecord", "json");
@@ -503,7 +540,11 @@ public class StartCloudRecordRequest extends Request {
         }
 
         /**
-         * StartWithoutChannel.
+         * <p>Specifies whether to allow starting the task when the channel does not exist. Valid values:</p>
+         * <ul>
+         * <li>true: Yes.</li>
+         * <li>false: No (default).</li>
+         * </ul>
          */
         public Builder startWithoutChannel(Boolean startWithoutChannel) {
             this.putQueryParameter("StartWithoutChannel", startWithoutChannel);
@@ -512,7 +553,10 @@ public class StartCloudRecordRequest extends Request {
         }
 
         /**
-         * StartWithoutChannelWaitTime.
+         * <p>The wait time for the task when the channel is not started, in seconds. This parameter takes effect only when the StartWithoutChannel parameter is set to true. Valid values: 30 to 120.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder startWithoutChannelWaitTime(Integer startWithoutChannelWaitTime) {
             this.putQueryParameter("StartWithoutChannelWaitTime", startWithoutChannelWaitTime);
@@ -521,8 +565,11 @@ public class StartCloudRecordRequest extends Request {
         }
 
         /**
-         * <p>storageConfig</p>
+         * <p>The storage configuration.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testid</p>
          */
         public Builder storageConfig(StorageConfig storageConfig) {
             this.putQueryParameter("StorageConfig", storageConfig);
@@ -531,7 +578,11 @@ public class StartCloudRecordRequest extends Request {
         }
 
         /**
-         * SubHighResolutionStream.
+         * <p>Specifies whether to subscribe to high-resolution streams. Valid values:</p>
+         * <ul>
+         * <li>false: Subscribes to streams of different resolutions based on the pane area (default).</li>
+         * <li>true: Uses the highest resolution stream published by the client as padding.</li>
+         * </ul>
          */
         public Builder subHighResolutionStream(Boolean subHighResolutionStream) {
             this.putQueryParameter("SubHighResolutionStream", subHighResolutionStream);
@@ -540,7 +591,7 @@ public class StartCloudRecordRequest extends Request {
         }
 
         /**
-         * <p>taskId</p>
+         * <p>The task ID of the cloud recording task. Only a single ID is supported. The ID can contain letters, digits, underscores (_), and hyphens (-), and can be up to 55 bytes in length.</p>
          * 
          * <strong>example:</strong>
          * <p>123</p>
@@ -552,7 +603,7 @@ public class StartCloudRecordRequest extends Request {
         }
 
         /**
-         * <p>templateId</p>
+         * <p>The template ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -565,7 +616,7 @@ public class StartCloudRecordRequest extends Request {
         }
 
         /**
-         * Texts.
+         * <p>The global text watermarks.</p>
          */
         public Builder texts(java.util.List<Texts> texts) {
             this.putQueryParameter("Texts", texts);
@@ -716,7 +767,10 @@ public class StartCloudRecordRequest extends Request {
             } 
 
             /**
-             * Alpha.
+             * <p>The transparency of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.9</p>
              */
             public Builder alpha(Double alpha) {
                 this.alpha = alpha;
@@ -724,7 +778,15 @@ public class StartCloudRecordRequest extends Request {
             }
 
             /**
-             * BackgroundCropMode.
+             * <p>The crop mode of the image. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: Crops the image while maintaining the aspect ratio.</li>
+             * <li><strong>2</strong>: Maintains the aspect ratio and adds borders.</li>
+             * <li><strong>3</strong>: Stretches the image to fill the pane.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder backgroundCropMode(Integer backgroundCropMode) {
                 this.backgroundCropMode = backgroundCropMode;
@@ -732,6 +794,7 @@ public class StartCloudRecordRequest extends Request {
             }
 
             /**
+             * <p>The height.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -743,7 +806,10 @@ public class StartCloudRecordRequest extends Request {
             }
 
             /**
-             * Layer.
+             * <p>The z-axis layer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder layer(Integer layer) {
                 this.layer = layer;
@@ -751,6 +817,7 @@ public class StartCloudRecordRequest extends Request {
             }
 
             /**
+             * <p>The URL of the image.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -762,6 +829,7 @@ public class StartCloudRecordRequest extends Request {
             }
 
             /**
+             * <p>The width.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -773,6 +841,7 @@ public class StartCloudRecordRequest extends Request {
             }
 
             /**
+             * <p>The x-coordinate.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -784,6 +853,7 @@ public class StartCloudRecordRequest extends Request {
             }
 
             /**
+             * <p>The y-coordinate.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -870,7 +940,10 @@ public class StartCloudRecordRequest extends Request {
             } 
 
             /**
-             * B.
+             * <p>The blue component.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>255</p>
              */
             public Builder b(Integer b) {
                 this.b = b;
@@ -878,7 +951,10 @@ public class StartCloudRecordRequest extends Request {
             }
 
             /**
-             * G.
+             * <p>The green component.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>255</p>
              */
             public Builder g(Integer g) {
                 this.g = g;
@@ -886,7 +962,10 @@ public class StartCloudRecordRequest extends Request {
             }
 
             /**
-             * R.
+             * <p>The red component.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>255</p>
              */
             public Builder r(Integer r) {
                 this.r = r;
@@ -966,7 +1045,10 @@ public class StartCloudRecordRequest extends Request {
             } 
 
             /**
-             * B.
+             * <p>The blue component.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>255</p>
              */
             public Builder b(Integer b) {
                 this.b = b;
@@ -974,7 +1056,10 @@ public class StartCloudRecordRequest extends Request {
             }
 
             /**
-             * G.
+             * <p>The green component.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>255</p>
              */
             public Builder g(Integer g) {
                 this.g = g;
@@ -982,7 +1067,10 @@ public class StartCloudRecordRequest extends Request {
             }
 
             /**
-             * R.
+             * <p>The red component.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>255</p>
              */
             public Builder r(Integer r) {
                 this.r = r;
@@ -1062,7 +1150,10 @@ public class StartCloudRecordRequest extends Request {
             } 
 
             /**
-             * B.
+             * <p>The blue component.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>255</p>
              */
             public Builder b(Integer b) {
                 this.b = b;
@@ -1070,7 +1161,10 @@ public class StartCloudRecordRequest extends Request {
             }
 
             /**
-             * G.
+             * <p>The green component.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>255</p>
              */
             public Builder g(Integer g) {
                 this.g = g;
@@ -1078,7 +1172,10 @@ public class StartCloudRecordRequest extends Request {
             }
 
             /**
-             * R.
+             * <p>The red component.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>255</p>
              */
             public Builder r(Integer r) {
                 this.r = r;
@@ -1277,7 +1374,10 @@ public class StartCloudRecordRequest extends Request {
             } 
 
             /**
-             * Alpha.
+             * <p>The transparency of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.9</p>
              */
             public Builder alpha(Double alpha) {
                 this.alpha = alpha;
@@ -1285,7 +1385,10 @@ public class StartCloudRecordRequest extends Request {
             }
 
             /**
-             * BoxAlpha.
+             * <p>The transparency of the text box.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.6</p>
              */
             public Builder boxAlpha(Double boxAlpha) {
                 this.boxAlpha = boxAlpha;
@@ -1293,7 +1396,10 @@ public class StartCloudRecordRequest extends Request {
             }
 
             /**
-             * BoxBorderw.
+             * <p>The border width of the text box.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder boxBorderw(Integer boxBorderw) {
                 this.boxBorderw = boxBorderw;
@@ -1301,7 +1407,7 @@ public class StartCloudRecordRequest extends Request {
             }
 
             /**
-             * BoxColor.
+             * <p>The color of the text box.</p>
              */
             public Builder boxColor(BoxColor boxColor) {
                 this.boxColor = boxColor;
@@ -1309,7 +1415,22 @@ public class StartCloudRecordRequest extends Request {
             }
 
             /**
-             * Font.
+             * <p>The font. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: Alibaba PuHuiTi Regular</li>
+             * <li><strong>1</strong>: Alibaba PuHuiTi Light</li>
+             * <li><strong>2</strong>: Alibaba PuHuiTi Medium</li>
+             * <li><strong>3</strong>: Alibaba PuHuiTi Bold</li>
+             * <li><strong>4</strong>: Alibaba PuHuiTi Heavy</li>
+             * <li><strong>5</strong>: Alimama ShuHeiTi</li>
+             * <li><strong>6</strong>: DingTalk JinBuTi</li>
+             * <li><strong>7</strong>: Alimama DaoLiTi</li>
+             * <li><strong>8</strong>: Alimama DongFangDaKai</li>
+             * <li><strong>9</strong>: Alimama FangYuanTi</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder font(Integer font) {
                 this.font = font;
@@ -1317,7 +1438,7 @@ public class StartCloudRecordRequest extends Request {
             }
 
             /**
-             * FontColor.
+             * <p>The font color.</p>
              */
             public Builder fontColor(FontColor fontColor) {
                 this.fontColor = fontColor;
@@ -1325,7 +1446,10 @@ public class StartCloudRecordRequest extends Request {
             }
 
             /**
-             * FontSize.
+             * <p>The font size of the clock.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder fontSize(Integer fontSize) {
                 this.fontSize = fontSize;
@@ -1333,7 +1457,7 @@ public class StartCloudRecordRequest extends Request {
             }
 
             /**
-             * HasBox.
+             * <p>Specifies whether to display a text box.</p>
              */
             public Builder hasBox(Boolean hasBox) {
                 this.hasBox = hasBox;
@@ -1341,7 +1465,10 @@ public class StartCloudRecordRequest extends Request {
             }
 
             /**
-             * Layer.
+             * <p>The z-axis layer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder layer(Integer layer) {
                 this.layer = layer;
@@ -1349,6 +1476,7 @@ public class StartCloudRecordRequest extends Request {
             }
 
             /**
+             * <p>The x-coordinate.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1360,6 +1488,7 @@ public class StartCloudRecordRequest extends Request {
             }
 
             /**
+             * <p>The y-coordinate.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1371,7 +1500,10 @@ public class StartCloudRecordRequest extends Request {
             }
 
             /**
-             * Zone.
+             * <p>The time zone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder zone(Integer zone) {
                 this.zone = zone;
@@ -1521,7 +1653,10 @@ public class StartCloudRecordRequest extends Request {
             } 
 
             /**
-             * Alpha.
+             * <p>The transparency of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.9</p>
              */
             public Builder alpha(Double alpha) {
                 this.alpha = alpha;
@@ -1529,6 +1664,7 @@ public class StartCloudRecordRequest extends Request {
             }
 
             /**
+             * <p>The height.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1540,7 +1676,15 @@ public class StartCloudRecordRequest extends Request {
             }
 
             /**
-             * ImageCropMode.
+             * <p>The crop mode of the image. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: Crops the image while maintaining the aspect ratio.</li>
+             * <li><strong>2</strong>: Maintains the aspect ratio and adds borders.</li>
+             * <li><strong>3</strong>: Stretches the image to fill the pane.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder imageCropMode(Integer imageCropMode) {
                 this.imageCropMode = imageCropMode;
@@ -1548,7 +1692,10 @@ public class StartCloudRecordRequest extends Request {
             }
 
             /**
-             * Layer.
+             * <p>The z-axis layer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder layer(Integer layer) {
                 this.layer = layer;
@@ -1556,6 +1703,7 @@ public class StartCloudRecordRequest extends Request {
             }
 
             /**
+             * <p>The image URL. The image content cannot be updated during stream ingest.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1567,6 +1715,7 @@ public class StartCloudRecordRequest extends Request {
             }
 
             /**
+             * <p>The width.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1578,6 +1727,7 @@ public class StartCloudRecordRequest extends Request {
             }
 
             /**
+             * <p>The x-coordinate.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1589,6 +1739,7 @@ public class StartCloudRecordRequest extends Request {
             }
 
             /**
+             * <p>The y-coordinate.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1661,6 +1812,7 @@ public class StartCloudRecordRequest extends Request {
             } 
 
             /**
+             * <p>The list of specified user IDs.</p>
              * <p>This parameter is required.</p>
              */
             public Builder ids(java.util.List<String> ids) {
@@ -1669,7 +1821,15 @@ public class StartCloudRecordRequest extends Request {
             }
 
             /**
+             * <p>The type of the user list. Valid values:</p>
+             * <ul>
+             * <li>black: Blacklist.</li>
+             * <li>white: Whitelist.</li>
+             * </ul>
              * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>white</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -1832,7 +1992,10 @@ public class StartCloudRecordRequest extends Request {
             } 
 
             /**
-             * Alpha.
+             * <p>The transparency of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.9</p>
              */
             public Builder alpha(Double alpha) {
                 this.alpha = alpha;
@@ -1840,7 +2003,15 @@ public class StartCloudRecordRequest extends Request {
             }
 
             /**
-             * Display.
+             * <p>The condition for displaying the background image. Valid values:</p>
+             * <ul>
+             * <li>streamOnly: The background image is displayed when the current user has a video stream. This is the default value.</li>
+             * <li>backup: The background image is displayed when the current user does not have a video stream.</li>
+             * <li>always: The background image is always displayed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>backup</p>
              */
             public Builder display(String display) {
                 this.display = display;
@@ -1848,6 +2019,7 @@ public class StartCloudRecordRequest extends Request {
             }
 
             /**
+             * <p>The height.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1859,7 +2031,10 @@ public class StartCloudRecordRequest extends Request {
             }
 
             /**
-             * Layer.
+             * <p>The z-axis layer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder layer(Integer layer) {
                 this.layer = layer;
@@ -1867,7 +2042,15 @@ public class StartCloudRecordRequest extends Request {
             }
 
             /**
-             * PaneBackgroundCropMode.
+             * <p>The crop mode of the image. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: Crops the image while maintaining the aspect ratio.</li>
+             * <li><strong>2</strong>: Maintains the aspect ratio and adds borders.</li>
+             * <li><strong>3</strong>: Stretches the image to fill the pane.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder paneBackgroundCropMode(Integer paneBackgroundCropMode) {
                 this.paneBackgroundCropMode = paneBackgroundCropMode;
@@ -1875,6 +2058,7 @@ public class StartCloudRecordRequest extends Request {
             }
 
             /**
+             * <p>The URL of the image.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1886,10 +2070,11 @@ public class StartCloudRecordRequest extends Request {
             }
 
             /**
+             * <p>The width.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
-             * <p>0.2</p>
+             * <p>0.3</p>
              */
             public Builder width(Double width) {
                 this.width = width;
@@ -1897,6 +2082,7 @@ public class StartCloudRecordRequest extends Request {
             }
 
             /**
+             * <p>The x-coordinate.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1908,6 +2094,7 @@ public class StartCloudRecordRequest extends Request {
             }
 
             /**
+             * <p>The y-coordinate.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -2074,7 +2261,10 @@ public class StartCloudRecordRequest extends Request {
             } 
 
             /**
-             * Alpha.
+             * <p>The transparency of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.9</p>
              */
             public Builder alpha(Double alpha) {
                 this.alpha = alpha;
@@ -2082,7 +2272,15 @@ public class StartCloudRecordRequest extends Request {
             }
 
             /**
-             * Display.
+             * <p>The condition for displaying the watermark. Valid values:</p>
+             * <ul>
+             * <li>streamOnly: The watermark is displayed when the current user has a video stream. This is the default value.</li>
+             * <li>backup: The watermark is displayed when the current user does not have a video stream.</li>
+             * <li>always: The watermark is always displayed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>backup</p>
              */
             public Builder display(String display) {
                 this.display = display;
@@ -2090,6 +2288,7 @@ public class StartCloudRecordRequest extends Request {
             }
 
             /**
+             * <p>The height.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -2101,7 +2300,10 @@ public class StartCloudRecordRequest extends Request {
             }
 
             /**
-             * Layer.
+             * <p>The z-axis layer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder layer(Integer layer) {
                 this.layer = layer;
@@ -2109,7 +2311,15 @@ public class StartCloudRecordRequest extends Request {
             }
 
             /**
-             * PaneImageCropMode.
+             * <p>The crop mode of the image. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: Crops the image while maintaining the aspect ratio.</li>
+             * <li><strong>2</strong>: Maintains the aspect ratio and adds borders.</li>
+             * <li><strong>3</strong>: Stretches the image to fill the pane.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder paneImageCropMode(Integer paneImageCropMode) {
                 this.paneImageCropMode = paneImageCropMode;
@@ -2117,6 +2327,7 @@ public class StartCloudRecordRequest extends Request {
             }
 
             /**
+             * <p>The URL of the image. The image content cannot be updated during stream ingest.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -2128,6 +2339,7 @@ public class StartCloudRecordRequest extends Request {
             }
 
             /**
+             * <p>The width.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -2139,6 +2351,7 @@ public class StartCloudRecordRequest extends Request {
             }
 
             /**
+             * <p>The x-coordinate.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -2150,6 +2363,7 @@ public class StartCloudRecordRequest extends Request {
             }
 
             /**
+             * <p>The y-coordinate.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -2233,7 +2447,10 @@ public class StartCloudRecordRequest extends Request {
             } 
 
             /**
-             * B.
+             * <p>The blue component.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>255</p>
              */
             public Builder b(Integer b) {
                 this.b = b;
@@ -2241,7 +2458,10 @@ public class StartCloudRecordRequest extends Request {
             }
 
             /**
-             * G.
+             * <p>The green component.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>255</p>
              */
             public Builder g(Integer g) {
                 this.g = g;
@@ -2249,7 +2469,10 @@ public class StartCloudRecordRequest extends Request {
             }
 
             /**
-             * R.
+             * <p>The red component.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>255</p>
              */
             public Builder r(Integer r) {
                 this.r = r;
@@ -2329,7 +2552,10 @@ public class StartCloudRecordRequest extends Request {
             } 
 
             /**
-             * B.
+             * <p>The blue component.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>255</p>
              */
             public Builder b(Integer b) {
                 this.b = b;
@@ -2337,7 +2563,10 @@ public class StartCloudRecordRequest extends Request {
             }
 
             /**
-             * G.
+             * <p>The green component.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>255</p>
              */
             public Builder g(Integer g) {
                 this.g = g;
@@ -2345,7 +2574,10 @@ public class StartCloudRecordRequest extends Request {
             }
 
             /**
-             * R.
+             * <p>The red component.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>255</p>
              */
             public Builder r(Integer r) {
                 this.r = r;
@@ -2558,7 +2790,10 @@ public class StartCloudRecordRequest extends Request {
             } 
 
             /**
-             * Alpha.
+             * <p>The transparency of the watermark.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.9</p>
              */
             public Builder alpha(Double alpha) {
                 this.alpha = alpha;
@@ -2566,7 +2801,10 @@ public class StartCloudRecordRequest extends Request {
             }
 
             /**
-             * BoxAlpha.
+             * <p>The transparency of the text box.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.6</p>
              */
             public Builder boxAlpha(Double boxAlpha) {
                 this.boxAlpha = boxAlpha;
@@ -2574,7 +2812,10 @@ public class StartCloudRecordRequest extends Request {
             }
 
             /**
-             * BoxBorderw.
+             * <p>The border width of the text box.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder boxBorderw(Integer boxBorderw) {
                 this.boxBorderw = boxBorderw;
@@ -2582,7 +2823,7 @@ public class StartCloudRecordRequest extends Request {
             }
 
             /**
-             * BoxColor.
+             * <p>The color of the text box.</p>
              */
             public Builder boxColor(TextsBoxColor boxColor) {
                 this.boxColor = boxColor;
@@ -2590,7 +2831,15 @@ public class StartCloudRecordRequest extends Request {
             }
 
             /**
-             * Display.
+             * <p>The condition for displaying the watermark. Valid values:</p>
+             * <ul>
+             * <li>streamOnly: The watermark is displayed when the current user has a video stream. This is the default value.</li>
+             * <li>backup: The watermark is displayed when the current user does not have a video stream.</li>
+             * <li>always: The watermark is always displayed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>backup</p>
              */
             public Builder display(String display) {
                 this.display = display;
@@ -2598,7 +2847,22 @@ public class StartCloudRecordRequest extends Request {
             }
 
             /**
-             * Font.
+             * <p>The font. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: Alibaba PuHuiTi Regular</li>
+             * <li><strong>1</strong>: Alibaba PuHuiTi Light</li>
+             * <li><strong>2</strong>: Alibaba PuHuiTi Medium</li>
+             * <li><strong>3</strong>: Alibaba PuHuiTi Bold</li>
+             * <li><strong>4</strong>: Alibaba PuHuiTi Heavy</li>
+             * <li><strong>5</strong>: Alimama ShuHeiTi</li>
+             * <li><strong>6</strong>: DingTalk JinBuTi</li>
+             * <li><strong>7</strong>: Alimama DaoLiTi</li>
+             * <li><strong>8</strong>: Alimama DongFangDaKai</li>
+             * <li><strong>9</strong>: Alimama FangYuanTi</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder font(Integer font) {
                 this.font = font;
@@ -2606,7 +2870,7 @@ public class StartCloudRecordRequest extends Request {
             }
 
             /**
-             * FontColor.
+             * <p>The font color.</p>
              */
             public Builder fontColor(TextsFontColor fontColor) {
                 this.fontColor = fontColor;
@@ -2614,7 +2878,10 @@ public class StartCloudRecordRequest extends Request {
             }
 
             /**
-             * FontSize.
+             * <p>The font size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>36</p>
              */
             public Builder fontSize(Integer fontSize) {
                 this.fontSize = fontSize;
@@ -2622,7 +2889,7 @@ public class StartCloudRecordRequest extends Request {
             }
 
             /**
-             * HasBox.
+             * <p>Specifies whether to display a text box.</p>
              */
             public Builder hasBox(Boolean hasBox) {
                 this.hasBox = hasBox;
@@ -2630,7 +2897,10 @@ public class StartCloudRecordRequest extends Request {
             }
 
             /**
-             * Layer.
+             * <p>The z-axis layer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder layer(Integer layer) {
                 this.layer = layer;
@@ -2638,10 +2908,11 @@ public class StartCloudRecordRequest extends Request {
             }
 
             /**
+             * <p>The content of the watermark.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
-             * <p>文字水印</p>
+             * <p>Text watermark</p>
              */
             public Builder texture(String texture) {
                 this.texture = texture;
@@ -2649,6 +2920,7 @@ public class StartCloudRecordRequest extends Request {
             }
 
             /**
+             * <p>The x-coordinate.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -2660,6 +2932,7 @@ public class StartCloudRecordRequest extends Request {
             }
 
             /**
+             * <p>The y-coordinate.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -2717,7 +2990,10 @@ public class StartCloudRecordRequest extends Request {
             } 
 
             /**
-             * WhiteboardId.
+             * <p>The ID of the whiteboard. Default value: default.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder whiteboardId(String whiteboardId) {
                 this.whiteboardId = whiteboardId;
@@ -2889,7 +3165,7 @@ public class StartCloudRecordRequest extends Request {
             } 
 
             /**
-             * Backgrounds.
+             * <p>The local background images for the pane.</p>
              */
             public Builder backgrounds(java.util.List<PanesBackgrounds> backgrounds) {
                 this.backgrounds = backgrounds;
@@ -2897,7 +3173,7 @@ public class StartCloudRecordRequest extends Request {
             }
 
             /**
-             * Images.
+             * <p>The local image watermarks for the pane.</p>
              */
             public Builder images(java.util.List<PanesImages> images) {
                 this.images = images;
@@ -2905,7 +3181,15 @@ public class StartCloudRecordRequest extends Request {
             }
 
             /**
-             * PaneCropMode.
+             * <p>The crop mode of the image. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: Crops the image while maintaining the aspect ratio.</li>
+             * <li><strong>2</strong>: Maintains the aspect ratio and adds borders.</li>
+             * <li><strong>3</strong>: Stretches the image to fill the pane.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder paneCropMode(Integer paneCropMode) {
                 this.paneCropMode = paneCropMode;
@@ -2913,7 +3197,7 @@ public class StartCloudRecordRequest extends Request {
             }
 
             /**
-             * <p>paneId</p>
+             * <p>The ID of the pane. The value starts from 0.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -2925,7 +3209,8 @@ public class StartCloudRecordRequest extends Request {
             }
 
             /**
-             * ReservePaneForOfflineUser.
+             * <p>Specifies whether to reserve the pane as a placeholder for users who have not joined the meeting.
+             * Default value: true. A value of true indicates that if the specific user or wildcard user specified for the pane is offline, the pane is forcibly reserved as a placeholder. A value of false indicates that if the specific user or wildcard user specified for the pane is offline, video streams are displayed based on the automatic fill order.</p>
              */
             public Builder reservePaneForOfflineUser(Boolean reservePaneForOfflineUser) {
                 this.reservePaneForOfflineUser = reservePaneForOfflineUser;
@@ -2933,7 +3218,14 @@ public class StartCloudRecordRequest extends Request {
             }
 
             /**
-             * <p>source</p>
+             * <p>The media source of the pane. You can specify a user ID. To specify a specific user type, you can use wildcard configurations. The following wildcard types are supported:</p>
+             * <ul>
+             * <li><strong>$ActiveSpeaker</strong>: the current speaker in the channel.</li>
+             * <li><strong>$ScreenShare</strong>: the user who is sharing the screen. If multiple users are sharing their screens in the channel, the panes are filled in chronological order.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>22</p>
              */
             public Builder source(String source) {
                 this.source = source;
@@ -2941,7 +3233,13 @@ public class StartCloudRecordRequest extends Request {
             }
 
             /**
-             * <p>sourceType</p>
+             * <p>The media type of the pane. Valid values:</p>
+             * <ul>
+             * <li><strong>video</strong>: The user camera or screen sharing stream. This is the default value.</li>
+             * <li><strong>camera</strong>: The camera stream.</li>
+             * <li><strong>screen</strong>: The screen sharing stream.</li>
+             * <li><strong>whiteboard</strong>: The whiteboard.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>video</p>
@@ -2952,7 +3250,7 @@ public class StartCloudRecordRequest extends Request {
             }
 
             /**
-             * Texts.
+             * <p>The local text watermarks for the pane.</p>
              */
             public Builder texts(java.util.List<PanesTexts> texts) {
                 this.texts = texts;
@@ -2960,7 +3258,14 @@ public class StartCloudRecordRequest extends Request {
             }
 
             /**
-             * VideoOrder.
+             * <p>The fill order when SourceType is set to video. Valid values:</p>
+             * <ul>
+             * <li>screenFirst: Screen sharing takes precedence. This is the default value.</li>
+             * <li>cameraFirst: The camera takes precedence.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>cameraFirst</p>
              */
             public Builder videoOrder(String videoOrder) {
                 this.videoOrder = videoOrder;
@@ -2968,7 +3273,7 @@ public class StartCloudRecordRequest extends Request {
             }
 
             /**
-             * Whiteboard.
+             * <p>The whiteboard configurations.</p>
              */
             public Builder whiteboard(Whiteboard whiteboard) {
                 this.whiteboard = whiteboard;
@@ -3051,7 +3356,10 @@ public class StartCloudRecordRequest extends Request {
             } 
 
             /**
-             * B.
+             * <p>The blue component.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>255</p>
              */
             public Builder b(Integer b) {
                 this.b = b;
@@ -3059,7 +3367,10 @@ public class StartCloudRecordRequest extends Request {
             }
 
             /**
-             * G.
+             * <p>The green component.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>255</p>
              */
             public Builder g(Integer g) {
                 this.g = g;
@@ -3067,7 +3378,10 @@ public class StartCloudRecordRequest extends Request {
             }
 
             /**
-             * R.
+             * <p>The red component.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>255</p>
              */
             public Builder r(Integer r) {
                 this.r = r;
@@ -3149,6 +3463,7 @@ public class StartCloudRecordRequest extends Request {
             } 
 
             /**
+             * <p>The list of user IDs.</p>
              * <p>This parameter is required.</p>
              */
             public Builder ids(java.util.List<String> ids) {
@@ -3157,7 +3472,14 @@ public class StartCloudRecordRequest extends Request {
             }
 
             /**
+             * <p>The type of the stream. Valid values:</p>
+             * <ul>
+             * <li>mic: Audio stream.</li>
+             * </ul>
              * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mic</p>
              */
             public Builder streamType(String streamType) {
                 this.streamType = streamType;
@@ -3165,7 +3487,13 @@ public class StartCloudRecordRequest extends Request {
             }
 
             /**
-             * <p>This parameter is required.</p>
+             * <p>The blacklists and whitelists type for single-stream recording streams. Valid values:</p>
+             * <ul>
+             * <li>white: Whitelist. Indicates that the stream is recorded.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>white</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -3245,7 +3573,10 @@ public class StartCloudRecordRequest extends Request {
             } 
 
             /**
-             * Bitrate.
+             * <p>The bitrate, in kbps.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>128</p>
              */
             public Builder bitrate(Integer bitrate) {
                 this.bitrate = bitrate;
@@ -3253,7 +3584,14 @@ public class StartCloudRecordRequest extends Request {
             }
 
             /**
-             * Codec.
+             * <p>The audio codec format. Valid values:</p>
+             * <ul>
+             * <li>mp3</li>
+             * <li>aac</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>mp3</p>
              */
             public Builder codec(String codec) {
                 this.codec = codec;
@@ -3261,7 +3599,17 @@ public class StartCloudRecordRequest extends Request {
             }
 
             /**
-             * SampleRate.
+             * <p>The sample rate. Valid values:</p>
+             * <ul>
+             * <li>8000</li>
+             * <li>16000</li>
+             * <li>32000</li>
+             * <li>44100</li>
+             * <li>48000</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>48000</p>
              */
             public Builder sampleRate(Integer sampleRate) {
                 this.sampleRate = sampleRate;
@@ -3328,7 +3676,7 @@ public class StartCloudRecordRequest extends Request {
             } 
 
             /**
-             * Audio.
+             * <p>The audio encoding settings.</p>
              */
             public Builder audio(Audio audio) {
                 this.audio = audio;
@@ -3336,7 +3684,16 @@ public class StartCloudRecordRequest extends Request {
             }
 
             /**
-             * Container.
+             * <p>The container format for the recording file. Valid values:</p>
+             * <ul>
+             * <li>mp3</li>
+             * <li>aac</li>
+             * <li>mp4</li>
+             * <li>ts</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>aac</p>
              */
             public Builder container(String container) {
                 this.container = container;
@@ -3417,7 +3774,7 @@ public class StartCloudRecordRequest extends Request {
             } 
 
             /**
-             * AvMerge.
+             * <p>Specifies whether to merge the audio file into the video file. Default value: false.</p>
              */
             public Builder avMerge(Boolean avMerge) {
                 this.avMerge = avMerge;
@@ -3425,6 +3782,7 @@ public class StartCloudRecordRequest extends Request {
             }
 
             /**
+             * <p>The streams specified for single-stream recording.</p>
              * <p>This parameter is required.</p>
              */
             public Builder specifiedStreams(java.util.List<SpecifiedStreams> specifiedStreams) {
@@ -3433,7 +3791,7 @@ public class StartCloudRecordRequest extends Request {
             }
 
             /**
-             * TranscodingParameters.
+             * <p>The transcoding parameters. By default, single-stream recording writes files in MP3 format. Specify this parameter if transcoding is required.</p>
              */
             public Builder transcodingParameters(TranscodingParameters transcodingParameters) {
                 this.transcodingParameters = transcodingParameters;
@@ -3557,7 +3915,7 @@ public class StartCloudRecordRequest extends Request {
             } 
 
             /**
-             * <p>accessKey</p>
+             * <p>The AccessKey. Make sure that the RAM user associated with the AccessKey pair is granted the <strong>write</strong> permissions on the object storage service of the corresponding cloud provider. Otherwise, the result files fail to be written.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -3569,7 +3927,7 @@ public class StartCloudRecordRequest extends Request {
             }
 
             /**
-             * <p>bucket</p>
+             * <p>The name of the bucket.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -3581,7 +3939,10 @@ public class StartCloudRecordRequest extends Request {
             }
 
             /**
-             * Endpoint.
+             * <p>The private endpoint for Apsara Stack.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://aliyuns.dalian.oss.com">https://aliyuns.dalian.oss.com</a></p>
              */
             public Builder endpoint(String endpoint) {
                 this.endpoint = endpoint;
@@ -3589,7 +3950,175 @@ public class StartCloudRecordRequest extends Request {
             }
 
             /**
-             * <p>region</p>
+             * <p>The storage region.</p>
+             * <table>
+             * <thead>
+             * <tr>
+             * <th>Region</th>
+             * <th>Alibaba Cloud OSS</th>
+             * </tr>
+             * </thead>
+             * <tbody><tr>
+             * <td>0</td>
+             * <td>CN_Hangzhou</td>
+             * </tr>
+             * <tr>
+             * <td>1</td>
+             * <td>CN_Shanghai</td>
+             * </tr>
+             * <tr>
+             * <td>2</td>
+             * <td>CN_Qingdao</td>
+             * </tr>
+             * <tr>
+             * <td>3</td>
+             * <td>CN_Beijing</td>
+             * </tr>
+             * <tr>
+             * <td>4</td>
+             * <td>CN_Zhangjiakou</td>
+             * </tr>
+             * <tr>
+             * <td>5</td>
+             * <td>CN_Huhehaote</td>
+             * </tr>
+             * <tr>
+             * <td>6</td>
+             * <td>CN_Shenzhen</td>
+             * </tr>
+             * <tr>
+             * <td>7</td>
+             * <td>CN_Hongkong</td>
+             * </tr>
+             * <tr>
+             * <td>8</td>
+             * <td>US_West_1</td>
+             * </tr>
+             * <tr>
+             * <td>9</td>
+             * <td>US_East_1</td>
+             * </tr>
+             * <tr>
+             * <td>10</td>
+             * <td>AP_Southeast_1</td>
+             * </tr>
+             * <tr>
+             * <td>11</td>
+             * <td>AP_Southeast_2 (Deprecated. Do not use.)</td>
+             * </tr>
+             * <tr>
+             * <td>12</td>
+             * <td>AP_Southeast_3</td>
+             * </tr>
+             * <tr>
+             * <td>13</td>
+             * <td>AP_Southeast_5</td>
+             * </tr>
+             * <tr>
+             * <td>14</td>
+             * <td>AP_Northeast_1</td>
+             * </tr>
+             * <tr>
+             * <td>15</td>
+             * <td>AP_South_1 (Deprecated. Do not use.)</td>
+             * </tr>
+             * <tr>
+             * <td>16</td>
+             * <td>EU_Central_1</td>
+             * </tr>
+             * <tr>
+             * <td>17</td>
+             * <td>EU_West_1</td>
+             * </tr>
+             * <tr>
+             * <td>18</td>
+             * <td>EU_East_1(ME_East_1)</td>
+             * </tr>
+             * <tr>
+             * <td>19</td>
+             * <td>AP_Southeast_6</td>
+             * </tr>
+             * <tr>
+             * <td>20</td>
+             * <td>CN_Heyuan</td>
+             * </tr>
+             * <tr>
+             * <td>21</td>
+             * <td>CN_Guangzhou</td>
+             * </tr>
+             * <tr>
+             * <td>22</td>
+             * <td>CN_Chengdu</td>
+             * </tr>
+             * <tr>
+             * <td>23</td>
+             * <td>CN_Nanjing</td>
+             * </tr>
+             * <tr>
+             * <td>24</td>
+             * <td>CN_Fuzhou</td>
+             * </tr>
+             * <tr>
+             * <td>25</td>
+             * <td>CN_Wulanchabu</td>
+             * </tr>
+             * <tr>
+             * <td>26</td>
+             * <td>CN_Northeast_2</td>
+             * </tr>
+             * <tr>
+             * <td>27</td>
+             * <td>CN_Southeast_7</td>
+             * </tr>
+             * <tr>
+             * <td>28</td>
+             * <td>CN_Wuhan_LR</td>
+             * </tr>
+             * <tr>
+             * <td>100</td>
+             * <td>oss-cn-hzjbp</td>
+             * </tr>
+             * <tr>
+             * <td>101</td>
+             * <td>oss-cn-shanghai-finance-1</td>
+             * </tr>
+             * <tr>
+             * <td>102</td>
+             * <td>oss-cn-shenzhen-finance-1</td>
+             * </tr>
+             * <tr>
+             * <td>103</td>
+             * <td>oss-cn-beijing-finance-1</td>
+             * </tr>
+             * <tr>
+             * <td>104</td>
+             * <td>oss-cn-hzfinance</td>
+             * </tr>
+             * <tr>
+             * <td>105</td>
+             * <td>oss-cn-shanghai-finance-1-pub</td>
+             * </tr>
+             * <tr>
+             * <td>106</td>
+             * <td>oss-cn-szfinance</td>
+             * </tr>
+             * <tr>
+             * <td>107</td>
+             * <td>oss-cn-beijing-finance-1-pub</td>
+             * </tr>
+             * </tbody></table>
+             * <table>
+             * <thead>
+             * <tr>
+             * <th>Region</th>
+             * <th>Apsara Stack OSS</th>
+             * </tr>
+             * </thead>
+             * <tbody><tr>
+             * <td>0</td>
+             * <td>default</td>
+             * </tr>
+             * </tbody></table>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -3613,7 +4142,26 @@ public class StartCloudRecordRequest extends Request {
             }
 
             /**
-             * <p>vendor</p>
+             * <p>The storage platform. Valid values:</p>
+             * <table>
+             * <thead>
+             * <tr>
+             * <th>vendor</th>
+             * <th>Object storage service</th>
+             * <th>Remarks</th>
+             * </tr>
+             * </thead>
+             * <tbody><tr>
+             * <td>1</td>
+             * <td>AliYun OSS</td>
+             * <td>Alibaba Cloud</td>
+             * </tr>
+             * <tr>
+             * <td>2</td>
+             * <td>Apsara Stack OSS</td>
+             * <td>Alibaba Cloud Apsara Stack</td>
+             * </tr>
+             * </tbody></table>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -3697,7 +4245,10 @@ public class StartCloudRecordRequest extends Request {
             } 
 
             /**
-             * B.
+             * <p>The blue component.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>255</p>
              */
             public Builder b(Integer b) {
                 this.b = b;
@@ -3705,7 +4256,10 @@ public class StartCloudRecordRequest extends Request {
             }
 
             /**
-             * G.
+             * <p>The green component.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>255</p>
              */
             public Builder g(Integer g) {
                 this.g = g;
@@ -3713,7 +4267,10 @@ public class StartCloudRecordRequest extends Request {
             }
 
             /**
-             * R.
+             * <p>The red component.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>255</p>
              */
             public Builder r(Integer r) {
                 this.r = r;
@@ -3793,7 +4350,10 @@ public class StartCloudRecordRequest extends Request {
             } 
 
             /**
-             * B.
+             * <p>The blue component.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>255</p>
              */
             public Builder b(Integer b) {
                 this.b = b;
@@ -3801,7 +4361,10 @@ public class StartCloudRecordRequest extends Request {
             }
 
             /**
-             * G.
+             * <p>The green component.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>255</p>
              */
             public Builder g(Integer g) {
                 this.g = g;
@@ -3809,7 +4372,10 @@ public class StartCloudRecordRequest extends Request {
             }
 
             /**
-             * R.
+             * <p>The red component.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>255</p>
              */
             public Builder r(Integer r) {
                 this.r = r;
@@ -4009,7 +4575,10 @@ public class StartCloudRecordRequest extends Request {
             } 
 
             /**
-             * Alpha.
+             * <p>The transparency of the watermark.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.1</p>
              */
             public Builder alpha(Double alpha) {
                 this.alpha = alpha;
@@ -4017,7 +4586,10 @@ public class StartCloudRecordRequest extends Request {
             }
 
             /**
-             * BoxAlpha.
+             * <p>The transparency of the text box.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.6</p>
              */
             public Builder boxAlpha(Double boxAlpha) {
                 this.boxAlpha = boxAlpha;
@@ -4025,7 +4597,10 @@ public class StartCloudRecordRequest extends Request {
             }
 
             /**
-             * BoxBorderw.
+             * <p>The border width of the text box.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder boxBorderw(Integer boxBorderw) {
                 this.boxBorderw = boxBorderw;
@@ -4033,7 +4608,7 @@ public class StartCloudRecordRequest extends Request {
             }
 
             /**
-             * BoxColor.
+             * <p>The color of the text box.</p>
              */
             public Builder boxColor(StartCloudRecordRequestTextsBoxColor boxColor) {
                 this.boxColor = boxColor;
@@ -4041,7 +4616,22 @@ public class StartCloudRecordRequest extends Request {
             }
 
             /**
-             * Font.
+             * <p>The font. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: Alibaba PuHuiTi Regular</li>
+             * <li><strong>1</strong>: Alibaba PuHuiTi Light</li>
+             * <li><strong>2</strong>: Alibaba PuHuiTi Medium</li>
+             * <li><strong>3</strong>: Alibaba PuHuiTi Bold</li>
+             * <li><strong>4</strong>: Alibaba PuHuiTi Heavy</li>
+             * <li><strong>5</strong>: Alimama ShuHeiTi</li>
+             * <li><strong>6</strong>: DingTalk JinBuTi</li>
+             * <li><strong>7</strong>: Alimama DaoLiTi</li>
+             * <li><strong>8</strong>: Alimama DongFangDaKai</li>
+             * <li><strong>9</strong>: Alimama FangYuanTi</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder font(Integer font) {
                 this.font = font;
@@ -4049,7 +4639,7 @@ public class StartCloudRecordRequest extends Request {
             }
 
             /**
-             * FontColor.
+             * <p>The font color.</p>
              */
             public Builder fontColor(StartCloudRecordRequestTextsFontColor fontColor) {
                 this.fontColor = fontColor;
@@ -4057,7 +4647,10 @@ public class StartCloudRecordRequest extends Request {
             }
 
             /**
-             * FontSize.
+             * <p>The font size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>36</p>
              */
             public Builder fontSize(Integer fontSize) {
                 this.fontSize = fontSize;
@@ -4065,7 +4658,7 @@ public class StartCloudRecordRequest extends Request {
             }
 
             /**
-             * HasBox.
+             * <p>Specifies whether to display a text box.</p>
              */
             public Builder hasBox(Boolean hasBox) {
                 this.hasBox = hasBox;
@@ -4073,7 +4666,10 @@ public class StartCloudRecordRequest extends Request {
             }
 
             /**
-             * Layer.
+             * <p>The z-axis layer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder layer(Integer layer) {
                 this.layer = layer;
@@ -4081,10 +4677,11 @@ public class StartCloudRecordRequest extends Request {
             }
 
             /**
+             * <p>The content of the watermark.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
-             * <p>文字水印</p>
+             * <p>Text watermark</p>
              */
             public Builder texture(String texture) {
                 this.texture = texture;
@@ -4092,6 +4689,7 @@ public class StartCloudRecordRequest extends Request {
             }
 
             /**
+             * <p>The x-coordinate.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -4103,6 +4701,7 @@ public class StartCloudRecordRequest extends Request {
             }
 
             /**
+             * <p>The y-coordinate.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

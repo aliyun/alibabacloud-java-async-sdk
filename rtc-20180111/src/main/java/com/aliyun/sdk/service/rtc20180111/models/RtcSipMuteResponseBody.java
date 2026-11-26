@@ -67,7 +67,7 @@ public class RtcSipMuteResponseBody extends TeaModel {
         } 
 
         /**
-         * ErrTracks.
+         * <p>The error tracks.</p>
          */
         public Builder errTracks(java.util.List<ErrTracks> errTracks) {
             this.errTracks = errTracks;
@@ -75,7 +75,10 @@ public class RtcSipMuteResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E7997404-5858-5C4D-94E4-33677412ACDC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -154,7 +157,7 @@ public class RtcSipMuteResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>ErrMsg。</p>
+             * <p>The error message.</p>
              * 
              * <strong>example:</strong>
              * <p>participant does not existed.</p>
@@ -165,7 +168,10 @@ public class RtcSipMuteResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -173,7 +179,7 @@ public class RtcSipMuteResponseBody extends TeaModel {
             }
 
             /**
-             * <p>OperationId。</p>
+             * <p>The operation ID.</p>
              * 
              * <strong>example:</strong>
              * <p>12122121</p>

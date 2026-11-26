@@ -67,7 +67,10 @@ public class AddRecordTemplateResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>760bad53276431c499e30dc36f6b26be</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,10 @@ public class AddRecordTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * TemplateId.
+         * <p>The ID of the recording configuration template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>76dasgb****</p>
          */
         public Builder templateId(String templateId) {
             this.templateId = templateId;

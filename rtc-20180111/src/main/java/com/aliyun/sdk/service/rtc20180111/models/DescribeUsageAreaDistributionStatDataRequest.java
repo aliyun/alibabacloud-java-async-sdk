@@ -117,6 +117,7 @@ public class DescribeUsageAreaDistributionStatDataRequest extends Request {
         }
 
         /**
+         * <p>The end time of the query, expressed as a UNIX timestamp in seconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -129,7 +130,10 @@ public class DescribeUsageAreaDistributionStatDataRequest extends Request {
         }
 
         /**
-         * ParentArea.
+         * <p>The parent region name. For example, the parent of Hangzhou City is Zhejiang Province, and the parameter should be set to China_Zhejiang Province. An empty parameter indicates statistics at the global scope (country dimension), such as China or the United Kingdom.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>中国_浙江省</p>
          */
         public Builder parentArea(String parentArea) {
             this.putQueryParameter("ParentArea", parentArea);
@@ -138,6 +142,7 @@ public class DescribeUsageAreaDistributionStatDataRequest extends Request {
         }
 
         /**
+         * <p>The start time of the query, expressed as a UNIX timestamp in seconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

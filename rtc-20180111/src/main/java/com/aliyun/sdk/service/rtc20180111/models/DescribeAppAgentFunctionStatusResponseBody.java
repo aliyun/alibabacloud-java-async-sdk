@@ -78,7 +78,10 @@ public class DescribeAppAgentFunctionStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>Switch status. Valid values: enable (on) and disable (off).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>disable</p>
          */
         public Builder result(String result) {
             this.result = result;

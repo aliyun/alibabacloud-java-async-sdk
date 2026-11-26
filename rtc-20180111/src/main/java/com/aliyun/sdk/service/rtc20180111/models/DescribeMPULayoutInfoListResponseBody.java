@@ -101,7 +101,10 @@ public class DescribeMPULayoutInfoListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>760bad53276431c499e30dc36f6b26be</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +112,10 @@ public class DescribeMPULayoutInfoListResponseBody extends TeaModel {
         }
 
         /**
-         * TotalNum.
+         * <p>Total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalNum(Long totalNum) {
             this.totalNum = totalNum;
@@ -117,7 +123,10 @@ public class DescribeMPULayoutInfoListResponseBody extends TeaModel {
         }
 
         /**
-         * TotalPage.
+         * <p>Total number of pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalPage(Long totalPage) {
             this.totalPage = totalPage;

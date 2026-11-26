@@ -101,7 +101,10 @@ public class DescribeSystemLayoutListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16A96B9A-F203-4EC5-8E43-CB92E68F4CD8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +112,10 @@ public class DescribeSystemLayoutListResponseBody extends TeaModel {
         }
 
         /**
-         * TotalNum.
+         * <p>Total number of pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         public Builder totalNum(Long totalNum) {
             this.totalNum = totalNum;
@@ -117,7 +123,10 @@ public class DescribeSystemLayoutListResponseBody extends TeaModel {
         }
 
         /**
-         * TotalPage.
+         * <p>Total number of pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalPage(Long totalPage) {
             this.totalPage = totalPage;
@@ -256,10 +265,7 @@ public class DescribeSystemLayoutListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>MajorPane。</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0</p>
+             * MajorPane.
              */
             public Builder majorPane(Integer majorPane) {
                 this.majorPane = majorPane;
@@ -446,10 +452,7 @@ public class DescribeSystemLayoutListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>AudioMixCount。</p>
-             * 
-             * <strong>example:</strong>
-             * <p>3</p>
+             * AudioMixCount.
              */
             public Builder audioMixCount(Integer audioMixCount) {
                 this.audioMixCount = audioMixCount;

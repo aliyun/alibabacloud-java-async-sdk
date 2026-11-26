@@ -67,7 +67,10 @@ public class UpdateCloudRecordResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16A96B9A-F203-4EC5-8E43-CB92E68F4CF8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,10 @@ public class UpdateCloudRecordResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * <p>The task ID for this cloud recording.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

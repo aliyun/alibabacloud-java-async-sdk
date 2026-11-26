@@ -89,6 +89,7 @@ public class DeleteAutoLiveStreamRuleRequest extends Request {
         } 
 
         /**
+         * <p>The application ID. You can create and query it in the console.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -110,6 +111,7 @@ public class DeleteAutoLiveStreamRuleRequest extends Request {
         }
 
         /**
+         * <p>The ID of the bypass rule. You can query the ID in the console or by calling the <a href="https://help.aliyun.com/document_detail/353198.html">DescribeAutoLiveStreamRule</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

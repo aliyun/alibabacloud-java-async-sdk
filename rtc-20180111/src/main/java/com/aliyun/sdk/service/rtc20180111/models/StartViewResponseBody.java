@@ -67,7 +67,10 @@ public class StartViewResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FA2F9DE9-8EAD-580E-87DF-A3D25EE87C37</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,10 @@ public class StartViewResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * <p>The task ID for the current request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

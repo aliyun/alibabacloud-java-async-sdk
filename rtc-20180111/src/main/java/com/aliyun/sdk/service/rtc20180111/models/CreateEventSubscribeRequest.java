@@ -175,6 +175,7 @@ public class CreateEventSubscribeRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the subscribed application.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -187,6 +188,7 @@ public class CreateEventSubscribeRequest extends Request {
         }
 
         /**
+         * <p>The callback URL. For information about the callback content, see the following callback content example.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -199,7 +201,13 @@ public class CreateEventSubscribeRequest extends Request {
         }
 
         /**
-         * ChannelId.
+         * <p>The ID of the subscribed channel.</p>
+         * <blockquote>
+         * <p>This parameter is required if the Users.N parameter is not empty.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>123333</p>
          */
         public Builder channelId(String channelId) {
             this.putQueryParameter("ChannelId", channelId);
@@ -208,6 +216,7 @@ public class CreateEventSubscribeRequest extends Request {
         }
 
         /**
+         * <p>The idempotence identifier used by the client to create the subscription.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -220,6 +229,7 @@ public class CreateEventSubscribeRequest extends Request {
         }
 
         /**
+         * <p>The subscribed events.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -232,7 +242,15 @@ public class CreateEventSubscribeRequest extends Request {
         }
 
         /**
-         * NeedCallbackAuth.
+         * <p>Specifies whether to enable callback authentication. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: enables callback authentication.</li>
+         * <li><strong>fasle</strong> (default): disables callback authentication.</li>
+         * </ul>
+         * <p>For more information, see the following callback authentication description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder needCallbackAuth(Boolean needCallbackAuth) {
             this.putQueryParameter("NeedCallbackAuth", needCallbackAuth);
@@ -250,7 +268,15 @@ public class CreateEventSubscribeRequest extends Request {
         }
 
         /**
-         * Role.
+         * <p>The user role. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: subscribes to host messages in the channel.</li>
+         * <li><strong>2</strong>: subscribes to audience messages in the channel.</li>
+         * <li><strong>Empty or other values</strong>: subscribes to messages from all roles in the channel without role filtering.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder role(Long role) {
             this.putQueryParameter("Role", role);
@@ -259,7 +285,10 @@ public class CreateEventSubscribeRequest extends Request {
         }
 
         /**
-         * Users.
+         * <p>The subscribed users.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user1</p>
          */
         public Builder users(java.util.List<String> users) {
             this.putQueryParameter("Users", users);

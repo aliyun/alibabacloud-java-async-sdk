@@ -67,7 +67,10 @@ public class GetMPUTaskStatusResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>760bad53276431c499e30dc36f6b26be</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,29 @@ public class GetMPUTaskStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The status ID of the bypass transcoding task. Valid values:</p>
+         * <ul>
+         * <li><p><strong>0</strong>: Waiting for the channel to start.</p>
+         * <blockquote>
+         * <p>If the task is not started within 30 days, the task is automatically stopped.</p>
+         * </blockquote>
+         * </li>
+         * <li><p><strong>1</strong>: The task is running.</p>
+         * </li>
+         * <li><p><strong>2</strong>: The task is stopped.</p>
+         * </li>
+         * <li><p><strong>3</strong>: The task is stopped by the user.</p>
+         * </li>
+         * <li><p><strong>4</strong>: The channel is stopped.</p>
+         * </li>
+         * <li><p><strong>5</strong>: Live streaming is stopped due to CDN network issues.</p>
+         * </li>
+         * <li><p><strong>6</strong>: Live streaming is stopped due to live streaming URL issues.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder status(Integer status) {
             this.status = status;

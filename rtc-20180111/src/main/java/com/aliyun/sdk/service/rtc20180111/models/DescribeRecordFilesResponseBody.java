@@ -93,7 +93,7 @@ public class DescribeRecordFilesResponseBody extends TeaModel {
         } 
 
         /**
-         * RecordFiles.
+         * <p>The file list.</p>
          */
         public Builder recordFiles(java.util.List<RecordFiles> recordFiles) {
             this.recordFiles = recordFiles;
@@ -101,7 +101,10 @@ public class DescribeRecordFilesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>760bad53276431c499e30dc36f6b****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +112,10 @@ public class DescribeRecordFilesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalNum.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalNum(Long totalNum) {
             this.totalNum = totalNum;
@@ -117,7 +123,10 @@ public class DescribeRecordFilesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalPage.
+         * <p>The total number of pages returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalPage(Long totalPage) {
             this.totalPage = totalPage;
@@ -261,7 +270,10 @@ public class DescribeRecordFilesResponseBody extends TeaModel {
             } 
 
             /**
-             * AppId.
+             * <p>The application ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>yourAppId</p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -269,7 +281,10 @@ public class DescribeRecordFilesResponseBody extends TeaModel {
             }
 
             /**
-             * ChannelId.
+             * <p>The channel ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>yourChannelId</p>
              */
             public Builder channelId(String channelId) {
                 this.channelId = channelId;
@@ -277,7 +292,10 @@ public class DescribeRecordFilesResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The creation time. Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC time).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-10-02T17:36:00Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -285,7 +303,10 @@ public class DescribeRecordFilesResponseBody extends TeaModel {
             }
 
             /**
-             * Duration.
+             * <p>The duration of the recording file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1800</p>
              */
             public Builder duration(Float duration) {
                 this.duration = duration;
@@ -293,7 +314,10 @@ public class DescribeRecordFilesResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The start time. Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC time).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-11-01T17:36:00Z</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -301,7 +325,10 @@ public class DescribeRecordFilesResponseBody extends TeaModel {
             }
 
             /**
-             * StopTime.
+             * <p>The end time. Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC time).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-11-02T17:36:00Z</p>
              */
             public Builder stopTime(String stopTime) {
                 this.stopTime = stopTime;
@@ -309,7 +336,10 @@ public class DescribeRecordFilesResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * <p>The task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>yourTaskId</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -317,7 +347,7 @@ public class DescribeRecordFilesResponseBody extends TeaModel {
             }
 
             /**
-             * Url.
+             * <p>The OSS URL of the recording file.</p>
              */
             public Builder url(String url) {
                 this.url = url;

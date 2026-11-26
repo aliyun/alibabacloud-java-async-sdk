@@ -67,7 +67,10 @@ public class DescribeUsageAreaDistributionStatDataResponseBody extends TeaModel 
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>231470C1-ACFB-4C9F-844F-4CFE1E3804C5</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class DescribeUsageAreaDistributionStatDataResponseBody extends TeaModel 
         }
 
         /**
-         * UsageAreaStatList.
+         * <p>The regional distribution data of usage statistics.</p>
          */
         public Builder usageAreaStatList(java.util.List<UsageAreaStatList> usageAreaStatList) {
             this.usageAreaStatList = usageAreaStatList;
@@ -167,7 +170,10 @@ public class DescribeUsageAreaDistributionStatDataResponseBody extends TeaModel 
             } 
 
             /**
-             * AudioCallDuration.
+             * <p>Audio call duration, in minutes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>45</p>
              */
             public Builder audioCallDuration(Integer audioCallDuration) {
                 this.audioCallDuration = audioCallDuration;
@@ -175,7 +181,10 @@ public class DescribeUsageAreaDistributionStatDataResponseBody extends TeaModel 
             }
 
             /**
-             * Name.
+             * <p>Region name, such as China.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>中国_浙江省</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -183,7 +192,10 @@ public class DescribeUsageAreaDistributionStatDataResponseBody extends TeaModel 
             }
 
             /**
-             * TotalCallDuration.
+             * <p>Total call duration, in minutes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4821</p>
              */
             public Builder totalCallDuration(Integer totalCallDuration) {
                 this.totalCallDuration = totalCallDuration;
@@ -191,7 +203,10 @@ public class DescribeUsageAreaDistributionStatDataResponseBody extends TeaModel 
             }
 
             /**
-             * VideoCallDuration.
+             * <p>Video call duration, in minutes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4776</p>
              */
             public Builder videoCallDuration(Integer videoCallDuration) {
                 this.videoCallDuration = videoCallDuration;

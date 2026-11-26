@@ -67,7 +67,7 @@ public class DescribeRtcChannelMetricResponseBody extends TeaModel {
         } 
 
         /**
-         * ChannelMetricInfo.
+         * <p>The detailed information.</p>
          */
         public Builder channelMetricInfo(ChannelMetricInfo channelMetricInfo) {
             this.channelMetricInfo = channelMetricInfo;
@@ -75,7 +75,10 @@ public class DescribeRtcChannelMetricResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16A96B9A-F203-4EC5-8E43-CB92E68F4CD8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -193,7 +196,10 @@ public class DescribeRtcChannelMetricResponseBody extends TeaModel {
             } 
 
             /**
-             * ChannelId.
+             * <p>The channel ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example_channel</p>
              */
             public Builder channelId(String channelId) {
                 this.channelId = channelId;
@@ -201,7 +207,10 @@ public class DescribeRtcChannelMetricResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * <p>The time when the user left the channel, in UTC. The time is in the yyyy-MM-ddTHH:mm:ssZ format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-06-06T18:57:00Z</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -209,7 +218,10 @@ public class DescribeRtcChannelMetricResponseBody extends TeaModel {
             }
 
             /**
-             * PubUserCount.
+             * <p>The number of users that entered the channel and successfully published streams.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pubUserCount(Integer pubUserCount) {
                 this.pubUserCount = pubUserCount;
@@ -217,7 +229,10 @@ public class DescribeRtcChannelMetricResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The time when the user joined the channel, in UTC. The time is in the yyyy-MM-ddTHH:mm:ssZ format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-06-06T17:57:00Z</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -225,7 +240,10 @@ public class DescribeRtcChannelMetricResponseBody extends TeaModel {
             }
 
             /**
-             * SubUserCount.
+             * <p>The number of users that entered the channel and successfully subscribed to streams.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>25</p>
              */
             public Builder subUserCount(Integer subUserCount) {
                 this.subUserCount = subUserCount;
@@ -233,7 +251,10 @@ public class DescribeRtcChannelMetricResponseBody extends TeaModel {
             }
 
             /**
-             * UserCount.
+             * <p>The number of users that entered the channel.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder userCount(Integer userCount) {
                 this.userCount = userCount;
@@ -339,7 +360,10 @@ public class DescribeRtcChannelMetricResponseBody extends TeaModel {
             } 
 
             /**
-             * Audio.
+             * <p>The duration of audio. Unit: minutes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder audio(Integer audio) {
                 this.audio = audio;
@@ -347,7 +371,10 @@ public class DescribeRtcChannelMetricResponseBody extends TeaModel {
             }
 
             /**
-             * Content.
+             * <p>The duration of screen sharing. Unit: minutes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder content(Integer content) {
                 this.content = content;
@@ -355,7 +382,10 @@ public class DescribeRtcChannelMetricResponseBody extends TeaModel {
             }
 
             /**
-             * Video1080.
+             * <p>The duration of full high-definition (FHD) videos. Unit: minutes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder video1080(Integer video1080) {
                 this.video1080 = video1080;
@@ -363,7 +393,10 @@ public class DescribeRtcChannelMetricResponseBody extends TeaModel {
             }
 
             /**
-             * Video360.
+             * <p>The duration of standard-definition (SD) videos. Unit: minutes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder video360(Integer video360) {
                 this.video360 = video360;
@@ -371,7 +404,10 @@ public class DescribeRtcChannelMetricResponseBody extends TeaModel {
             }
 
             /**
-             * Video720.
+             * <p>The duration of high-definition (HD) videos. Unit: minutes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder video720(Integer video720) {
                 this.video720 = video720;
@@ -477,7 +513,10 @@ public class DescribeRtcChannelMetricResponseBody extends TeaModel {
             } 
 
             /**
-             * Audio.
+             * <p>The duration of audio. Unit: minutes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder audio(Integer audio) {
                 this.audio = audio;
@@ -485,7 +524,10 @@ public class DescribeRtcChannelMetricResponseBody extends TeaModel {
             }
 
             /**
-             * Content.
+             * <p>The duration of screen sharing. Unit: minutes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder content(Integer content) {
                 this.content = content;
@@ -493,7 +535,10 @@ public class DescribeRtcChannelMetricResponseBody extends TeaModel {
             }
 
             /**
-             * Video1080.
+             * <p>The duration of full high-definition (FHD) videos. Unit: minutes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder video1080(Integer video1080) {
                 this.video1080 = video1080;
@@ -501,7 +546,10 @@ public class DescribeRtcChannelMetricResponseBody extends TeaModel {
             }
 
             /**
-             * Video360.
+             * <p>The duration of standard-definition (SD) videos. Unit: minutes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder video360(Integer video360) {
                 this.video360 = video360;
@@ -509,7 +557,10 @@ public class DescribeRtcChannelMetricResponseBody extends TeaModel {
             }
 
             /**
-             * Video720.
+             * <p>The duration of high-definition (HD) videos. Unit: minutes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder video720(Integer video720) {
                 this.video720 = video720;
@@ -576,7 +627,7 @@ public class DescribeRtcChannelMetricResponseBody extends TeaModel {
             } 
 
             /**
-             * PubDuration.
+             * <p>The duration information about publishing streams.</p>
              */
             public Builder pubDuration(PubDuration pubDuration) {
                 this.pubDuration = pubDuration;
@@ -584,7 +635,7 @@ public class DescribeRtcChannelMetricResponseBody extends TeaModel {
             }
 
             /**
-             * SubDuration.
+             * <p>The duration information about subscribing to streams.</p>
              */
             public Builder subDuration(SubDuration subDuration) {
                 this.subDuration = subDuration;
@@ -651,7 +702,7 @@ public class DescribeRtcChannelMetricResponseBody extends TeaModel {
             } 
 
             /**
-             * ChannelMetric.
+             * <p>The user information of the channel.</p>
              */
             public Builder channelMetric(ChannelMetric channelMetric) {
                 this.channelMetric = channelMetric;
@@ -659,7 +710,7 @@ public class DescribeRtcChannelMetricResponseBody extends TeaModel {
             }
 
             /**
-             * Duration.
+             * <p>The duration information.</p>
              */
             public Builder duration(Duration duration) {
                 this.duration = duration;

@@ -103,6 +103,7 @@ public class DescribeUsageOsSdkVersionDistributionStatDataRequest extends Reques
         }
 
         /**
+         * <p>End Time of the query, represented as a UNIX timestamp in seconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,6 +116,7 @@ public class DescribeUsageOsSdkVersionDistributionStatDataRequest extends Reques
         }
 
         /**
+         * <p>Start Time of the query, represented as a UNIX timestamp in seconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

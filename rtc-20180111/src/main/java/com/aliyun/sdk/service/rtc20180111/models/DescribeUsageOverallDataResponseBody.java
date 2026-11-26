@@ -67,7 +67,10 @@ public class DescribeUsageOverallDataResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>231470C1-ACFB-4C9F-844F-4CFE1E3804C5</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class DescribeUsageOverallDataResponseBody extends TeaModel {
         }
 
         /**
-         * UsageOverallData.
+         * <p>The usage overview data list.</p>
          */
         public Builder usageOverallData(java.util.List<UsageOverallData> usageOverallData) {
             this.usageOverallData = usageOverallData;
@@ -141,7 +144,10 @@ public class DescribeUsageOverallDataResponseBody extends TeaModel {
             } 
 
             /**
-             * X.
+             * <p>The x-axis coordinate in the metric trends chart.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1615824000</p>
              */
             public Builder x(String x) {
                 this.x = x;
@@ -149,7 +155,10 @@ public class DescribeUsageOverallDataResponseBody extends TeaModel {
             }
 
             /**
-             * Y.
+             * <p>The y-axis coordinate in the metric trends chart.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder y(String y) {
                 this.y = y;
@@ -216,7 +225,7 @@ public class DescribeUsageOverallDataResponseBody extends TeaModel {
             } 
 
             /**
-             * Nodes.
+             * <p>The list of coordinate points for the metric trends chart.</p>
              */
             public Builder nodes(java.util.List<Nodes> nodes) {
                 this.nodes = nodes;
@@ -224,7 +233,10 @@ public class DescribeUsageOverallDataResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The queried metric type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ONLINE_USER_PEAK</p>
              */
             public Builder type(String type) {
                 this.type = type;

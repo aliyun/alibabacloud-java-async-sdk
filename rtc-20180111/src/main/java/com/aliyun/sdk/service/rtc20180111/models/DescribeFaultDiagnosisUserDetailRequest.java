@@ -147,6 +147,7 @@ public class DescribeFaultDiagnosisUserDetailRequest extends Request {
         }
 
         /**
+         * <p>频道ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -159,6 +160,7 @@ public class DescribeFaultDiagnosisUserDetailRequest extends Request {
         }
 
         /**
+         * <p>频道创建时间，使用UNIX时间戳表示，单位：秒。</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -171,6 +173,15 @@ public class DescribeFaultDiagnosisUserDetailRequest extends Request {
         }
 
         /**
+         * <p>异常类型。取值：</p>
+         * <ul>
+         * <li><strong>JOIN_SLOW</strong>：进频道慢 。</li>
+         * <li><strong>AUDIO_STUCK</strong>：音频卡顿。</li>
+         * <li><strong>VIDEO_STUCK</strong>：视频卡顿。</li>
+         * <li><strong>VIDEO_VAGUE</strong>：视频模糊。</li>
+         * <li><strong>HIGH_DELAY</strong>：通话延迟高 。</li>
+         * <li><strong>FIRST_FRAME_SLOW</strong>：接收首屏慢。</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -183,7 +194,10 @@ public class DescribeFaultDiagnosisUserDetailRequest extends Request {
         }
 
         /**
-         * QueryCallUserInfo.
+         * <p>是否查询通话用户信息，为空默认是false。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder queryCallUserInfo(Boolean queryCallUserInfo) {
             this.putQueryParameter("QueryCallUserInfo", queryCallUserInfo);
@@ -192,6 +206,7 @@ public class DescribeFaultDiagnosisUserDetailRequest extends Request {
         }
 
         /**
+         * <p>用户ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

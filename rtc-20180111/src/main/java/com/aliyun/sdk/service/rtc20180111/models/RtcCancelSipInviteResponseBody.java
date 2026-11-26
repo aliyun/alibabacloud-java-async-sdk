@@ -54,7 +54,10 @@ public class RtcCancelSipInviteResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID. Use this ID to locate logs and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EB3C3C75-74D5-5F01-9F3C-9974261BAED4</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

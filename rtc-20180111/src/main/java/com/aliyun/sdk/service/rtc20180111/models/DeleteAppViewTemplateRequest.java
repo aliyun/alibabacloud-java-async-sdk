@@ -75,6 +75,7 @@ public class DeleteAppViewTemplateRequest extends Request {
         } 
 
         /**
+         * <p>The application ID. You can create and query the ID in the console. Only a single ID can be specified.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,7 @@ public class DeleteAppViewTemplateRequest extends Request {
         }
 
         /**
+         * <p>The template information.</p>
          * <p>This parameter is required.</p>
          */
         public Builder template(Template template) {
@@ -144,6 +146,7 @@ public class DeleteAppViewTemplateRequest extends Request {
             } 
 
             /**
+             * <p>The template ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

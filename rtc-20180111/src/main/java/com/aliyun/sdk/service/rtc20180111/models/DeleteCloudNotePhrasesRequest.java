@@ -75,6 +75,7 @@ public class DeleteCloudNotePhrasesRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the application. You can create and query application IDs in the console. Only a single ID is supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,7 @@ public class DeleteCloudNotePhrasesRequest extends Request {
         }
 
         /**
+         * <p>The hot word table parameters.</p>
          * <p>This parameter is required.</p>
          */
         public Builder phrase(Phrase phrase) {
@@ -144,6 +146,7 @@ public class DeleteCloudNotePhrasesRequest extends Request {
             } 
 
             /**
+             * <p>The ID of the hot word table.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

@@ -106,7 +106,10 @@ public class DescribeChannelParticipantsResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6159ba01-6687-4fb2-a831-f0cd8d188648</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -114,7 +117,10 @@ public class DescribeChannelParticipantsResponseBody extends TeaModel {
         }
 
         /**
-         * Timestamp.
+         * <p>The time when the result is returned. The value is a UNIX timestamp in seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1557909133</p>
          */
         public Builder timestamp(Integer timestamp) {
             this.timestamp = timestamp;
@@ -122,7 +128,10 @@ public class DescribeChannelParticipantsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalNum.
+         * <p>The total number of results returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder totalNum(Integer totalNum) {
             this.totalNum = totalNum;
@@ -130,7 +139,10 @@ public class DescribeChannelParticipantsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalPage.
+         * <p>The total number of pages returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalPage(Integer totalPage) {
             this.totalPage = totalPage;

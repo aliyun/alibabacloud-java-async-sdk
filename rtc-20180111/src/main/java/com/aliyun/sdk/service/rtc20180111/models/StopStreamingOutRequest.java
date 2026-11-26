@@ -90,6 +90,7 @@ public class StopStreamingOutRequest extends Request {
         } 
 
         /**
+         * <p>The application ID, which is created and queried via the console. Only a single ID is supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,6 +103,7 @@ public class StopStreamingOutRequest extends Request {
         }
 
         /**
+         * <p>An existing channel ID. Only a single ID is supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,6 +116,7 @@ public class StopStreamingOutRequest extends Request {
         }
 
         /**
+         * <p>The ID of an existing bypass stream ingest job. Only a single ID is supported. It can contain uppercase and lowercase letters, digits, underscores, and hyphens (-), with a maximum length of 55 bytes. If not specified, the system will automatically generate one.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -67,7 +67,7 @@ public class DescribeAllCallbackResponseBody extends TeaModel {
         } 
 
         /**
-         * Callbacks.
+         * <p>List of callback events.</p>
          */
         public Builder callbacks(java.util.List<Callbacks> callbacks) {
             this.callbacks = callbacks;
@@ -157,7 +157,10 @@ public class DescribeAllCallbackResponseBody extends TeaModel {
             } 
 
             /**
-             * Event.
+             * <p>Subscribed sub-event code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2000</p>
              */
             public Builder event(Integer event) {
                 this.event = event;
@@ -165,7 +168,10 @@ public class DescribeAllCallbackResponseBody extends TeaModel {
             }
 
             /**
-             * EventName.
+             * <p>Subscribed sub-event name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>录制开始</p>
              */
             public Builder eventName(String eventName) {
                 this.eventName = eventName;
@@ -173,7 +179,10 @@ public class DescribeAllCallbackResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>Subscription event type: 0 for system, 1 for custom.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder type(Integer type) {
                 this.type = type;
@@ -253,7 +262,10 @@ public class DescribeAllCallbackResponseBody extends TeaModel {
             } 
 
             /**
-             * Category.
+             * <p>Event code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RecordEvent</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -261,7 +273,10 @@ public class DescribeAllCallbackResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>Event name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>录制回调</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -269,7 +284,7 @@ public class DescribeAllCallbackResponseBody extends TeaModel {
             }
 
             /**
-             * SubEvent.
+             * <p>List of subscribed sub-events.</p>
              */
             public Builder subEvent(java.util.List<SubEvent> subEvent) {
                 this.subEvent = subEvent;

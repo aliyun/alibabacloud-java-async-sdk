@@ -114,7 +114,10 @@ public class DescribeRtcChannelListResponseBody extends TeaModel {
         }
 
         /**
-         * PageNo.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Long pageNo) {
             this.pageNo = pageNo;
@@ -122,7 +125,10 @@ public class DescribeRtcChannelListResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -130,7 +136,10 @@ public class DescribeRtcChannelListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16A96B9A-F203-4EC5-8E43-CB92E68F4CD8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class DescribeRtcChannelListResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCnt.
+         * <p>The total count.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder totalCnt(Long totalCnt) {
             this.totalCnt = totalCnt;

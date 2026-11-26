@@ -203,6 +203,7 @@ public class StartViewRequest extends Request {
         } 
 
         /**
+         * <p>The application ID. You can create and query the ID in the console. Only a single ID is supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -215,7 +216,7 @@ public class StartViewRequest extends Request {
         }
 
         /**
-         * BgColor.
+         * <p>The global background color.</p>
          */
         public Builder bgColor(BgColor bgColor) {
             this.putQueryParameter("BgColor", bgColor);
@@ -224,6 +225,7 @@ public class StartViewRequest extends Request {
         }
 
         /**
+         * <p>The ID of an existing channel. Only a single ID is supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -236,7 +238,15 @@ public class StartViewRequest extends Request {
         }
 
         /**
-         * CropMode.
+         * <p>The crop mode. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: proportional cropping</li>
+         * <li><strong>2</strong>: proportional padding (default)</li>
+         * <li><strong>3</strong>: stretch to fill</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder cropMode(Integer cropMode) {
             this.putQueryParameter("CropMode", cropMode);
@@ -245,7 +255,7 @@ public class StartViewRequest extends Request {
         }
 
         /**
-         * RegionColor.
+         * <p>The global pane background color.</p>
          */
         public Builder regionColor(RegionColor regionColor) {
             this.putQueryParameter("RegionColor", regionColor);
@@ -254,7 +264,11 @@ public class StartViewRequest extends Request {
         }
 
         /**
-         * StartWithoutChannel.
+         * <p>Specifies whether to allow starting the task when the channel does not exist. Valid values:</p>
+         * <ul>
+         * <li>true: Yes.</li>
+         * <li>false: No (default).</li>
+         * </ul>
          */
         public Builder startWithoutChannel(Boolean startWithoutChannel) {
             this.putQueryParameter("StartWithoutChannel", startWithoutChannel);
@@ -263,7 +277,10 @@ public class StartViewRequest extends Request {
         }
 
         /**
-         * StartWithoutChannelWaitTime.
+         * <p>The wait time for the task when the channel is not started, in seconds. This parameter is valid only when the StartWithoutChannel parameter is set to true. Valid values: 30 to 120.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder startWithoutChannelWaitTime(Integer startWithoutChannelWaitTime) {
             this.putQueryParameter("StartWithoutChannelWaitTime", startWithoutChannelWaitTime);
@@ -272,6 +289,7 @@ public class StartViewRequest extends Request {
         }
 
         /**
+         * <p>The task ID for the current request. Only a single ID is supported. The ID can contain letters, digits, underscores (_), and hyphens (-), and can be up to 55 bytes in length.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -284,6 +302,7 @@ public class StartViewRequest extends Request {
         }
 
         /**
+         * <p>The template ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -296,7 +315,14 @@ public class StartViewRequest extends Request {
         }
 
         /**
-         * ViewContent.
+         * <p>The stream property. Valid values:</p>
+         * <ul>
+         * <li>main: main stream</li>
+         * <li>screen-cast: shared stream</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>main</p>
          */
         public Builder viewContent(String viewContent) {
             this.putQueryParameter("ViewContent", viewContent);
@@ -305,7 +331,7 @@ public class StartViewRequest extends Request {
         }
 
         /**
-         * ViewSubscribers.
+         * <p>The list of user IDs of Session Initiation Protocol (SIP) devices that are allowed to view the main stream or shared stream.</p>
          */
         public Builder viewSubscribers(java.util.List<String> viewSubscribers) {
             String viewSubscribersShrink = shrink(viewSubscribers, "ViewSubscribers", "simple");
@@ -390,7 +416,7 @@ public class StartViewRequest extends Request {
             } 
 
             /**
-             * <p>B。</p>
+             * <p>The B value.</p>
              * 
              * <strong>example:</strong>
              * <p>255</p>
@@ -401,7 +427,7 @@ public class StartViewRequest extends Request {
             }
 
             /**
-             * <p>G。</p>
+             * <p>The G value.</p>
              * 
              * <strong>example:</strong>
              * <p>255</p>
@@ -412,7 +438,7 @@ public class StartViewRequest extends Request {
             }
 
             /**
-             * <p>R。</p>
+             * <p>The R value.</p>
              * 
              * <strong>example:</strong>
              * <p>255</p>
@@ -498,7 +524,7 @@ public class StartViewRequest extends Request {
             } 
 
             /**
-             * <p>B。</p>
+             * <p>The B value.</p>
              * 
              * <strong>example:</strong>
              * <p>255</p>
@@ -509,7 +535,7 @@ public class StartViewRequest extends Request {
             }
 
             /**
-             * <p>G。</p>
+             * <p>The G value.</p>
              * 
              * <strong>example:</strong>
              * <p>255</p>
@@ -520,7 +546,7 @@ public class StartViewRequest extends Request {
             }
 
             /**
-             * <p>R。</p>
+             * <p>The R value.</p>
              * 
              * <strong>example:</strong>
              * <p>255</p>

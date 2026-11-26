@@ -67,7 +67,10 @@ public class DescribeUsageDistributionStatDataResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>231470C1-ACFB-4C9F-844F-4CFE1E3804C5</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class DescribeUsageDistributionStatDataResponseBody extends TeaModel {
         }
 
         /**
-         * UsageStatList.
+         * <p>The list of usage statistics.</p>
          */
         public Builder usageStatList(java.util.List<UsageStatList> usageStatList) {
             this.usageStatList = usageStatList;
@@ -180,7 +183,10 @@ public class DescribeUsageDistributionStatDataResponseBody extends TeaModel {
             } 
 
             /**
-             * AudioCallDuration.
+             * <p>The duration of audio calls, in minutes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>51</p>
              */
             public Builder audioCallDuration(Long audioCallDuration) {
                 this.audioCallDuration = audioCallDuration;
@@ -188,7 +194,10 @@ public class DescribeUsageDistributionStatDataResponseBody extends TeaModel {
             }
 
             /**
-             * CallDurationRatio.
+             * <p>The ratio of the call duration, represented by four decimal places, such as 0.9782.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.9782</p>
              */
             public Builder callDurationRatio(String callDurationRatio) {
                 this.callDurationRatio = callDurationRatio;
@@ -196,7 +205,15 @@ public class DescribeUsageDistributionStatDataResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The statistical dimension. Valid values:</p>
+             * <ul>
+             * <li>When StatDim is set to CHANNEL_ONLINE, valid values are <strong>ONE_TO_FIVE</strong> (1 to 5 users), <strong>SIX_TO_TEN</strong> (6 to 10 users), <strong>ELEVEN_TO_TWENTY</strong> (11 to 20 users), <strong>TWENTY_ONE_TO_FIFTY</strong> (21 to 50 users), and <strong>ABOVE_FIFTY</strong> (more than 50 users).  </li>
+             * <li>When StatDim is set to NETWORK, valid values are <strong>WiFi</strong>, <strong>4G</strong>, and others.  </li>
+             * <li>When StatDim is set to OS, valid values are <strong>iOS</strong>, <strong>Android</strong>, and others.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ONE_TO_FIVE</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -204,7 +221,10 @@ public class DescribeUsageDistributionStatDataResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCallDuration.
+             * <p>The total duration of calls, in minutes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10636</p>
              */
             public Builder totalCallDuration(Long totalCallDuration) {
                 this.totalCallDuration = totalCallDuration;
@@ -212,7 +232,10 @@ public class DescribeUsageDistributionStatDataResponseBody extends TeaModel {
             }
 
             /**
-             * VideoCallDuration.
+             * <p>The duration of video calls, in minutes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10585</p>
              */
             public Builder videoCallDuration(Long videoCallDuration) {
                 this.videoCallDuration = videoCallDuration;

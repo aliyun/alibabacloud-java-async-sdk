@@ -67,7 +67,10 @@ public class DescribeAppCallbackSecretKeyResponseBody extends TeaModel {
         } 
 
         /**
-         * CallbackSecretKey.
+         * <p>Callback key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a656b296a30xxxxxxxxxx1cd4</p>
          */
         public Builder callbackSecretKey(String callbackSecretKey) {
             this.callbackSecretKey = callbackSecretKey;

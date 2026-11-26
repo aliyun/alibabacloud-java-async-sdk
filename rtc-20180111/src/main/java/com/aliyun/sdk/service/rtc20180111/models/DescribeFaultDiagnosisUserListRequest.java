@@ -162,7 +162,7 @@ public class DescribeFaultDiagnosisUserListRequest extends Request {
         } 
 
         /**
-         * <p>APP ID。</p>
+         * <p>The app ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -175,7 +175,10 @@ public class DescribeFaultDiagnosisUserListRequest extends Request {
         }
 
         /**
-         * ChannelId.
+         * <p>The ID of the channel to search.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>311</p>
          */
         public Builder channelId(String channelId) {
             this.putQueryParameter("ChannelId", channelId);
@@ -184,6 +187,7 @@ public class DescribeFaultDiagnosisUserListRequest extends Request {
         }
 
         /**
+         * <p>The end time of the query. The time is a UNIX timestamp in seconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -196,7 +200,19 @@ public class DescribeFaultDiagnosisUserListRequest extends Request {
         }
 
         /**
-         * FaultTypes.
+         * <p>The fault types to filter. Separate multiple fault types with commas (,). Valid values:</p>
+         * <ul>
+         * <li><strong>JOIN_SLOW</strong>: Slow channel joining.</li>
+         * <li><strong>AUDIO_STUCK</strong>: Audio stuttering. </li>
+         * <li><strong>VIDEO_STUCK</strong>: Video stuttering.</li>
+         * <li><strong>VIDEO_VAGUE</strong>: Blurry video.</li>
+         * <li><strong>HIGH_DELAY</strong>: High call latency.</li>
+         * <li><strong>FIRST_FRAME_SLOW</strong>: Slow first frame rendering.</li>
+         * </ul>
+         * <p>For more information about fault types, see <a href="https://help.aliyun.com/document_detail/2639494.html">Fault types</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>JOIN_SLOW,AUDIO_STUCK</p>
          */
         public Builder faultTypes(String faultTypes) {
             this.putQueryParameter("FaultTypes", faultTypes);
@@ -205,6 +221,7 @@ public class DescribeFaultDiagnosisUserListRequest extends Request {
         }
 
         /**
+         * <p>The page number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -217,6 +234,7 @@ public class DescribeFaultDiagnosisUserListRequest extends Request {
         }
 
         /**
+         * <p>The number of entries per page.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -229,6 +247,7 @@ public class DescribeFaultDiagnosisUserListRequest extends Request {
         }
 
         /**
+         * <p>The start time of the query. The time is a UNIX timestamp in seconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -241,7 +260,10 @@ public class DescribeFaultDiagnosisUserListRequest extends Request {
         }
 
         /**
-         * UserId.
+         * <p>The ID of the user to search.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c906531af5f9****</p>
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);

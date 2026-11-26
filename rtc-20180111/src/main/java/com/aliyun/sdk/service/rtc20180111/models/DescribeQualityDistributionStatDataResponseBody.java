@@ -67,7 +67,7 @@ public class DescribeQualityDistributionStatDataResponseBody extends TeaModel {
         } 
 
         /**
-         * QualityStatDataList.
+         * <p>The list of quality statistics data.</p>
          */
         public Builder qualityStatDataList(java.util.List<QualityStatDataList> qualityStatDataList) {
             this.qualityStatDataList = qualityStatDataList;
@@ -75,7 +75,10 @@ public class DescribeQualityDistributionStatDataResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>231470C1-ACFB-4C9F-844F-4CFE1E3804C5</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -258,7 +261,10 @@ public class DescribeQualityDistributionStatDataResponseBody extends TeaModel {
             } 
 
             /**
-             * AudioDelay.
+             * <p>Audio delay, in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>554</p>
              */
             public Builder audioDelay(Long audioDelay) {
                 this.audioDelay = audioDelay;
@@ -266,7 +272,10 @@ public class DescribeQualityDistributionStatDataResponseBody extends TeaModel {
             }
 
             /**
-             * AudioHighQualityTransmissionRate.
+             * <p>Audio high-quality transmission rate, represented as a four-digit decimal.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.9953</p>
              */
             public Builder audioHighQualityTransmissionRate(String audioHighQualityTransmissionRate) {
                 this.audioHighQualityTransmissionRate = audioHighQualityTransmissionRate;
@@ -274,7 +283,10 @@ public class DescribeQualityDistributionStatDataResponseBody extends TeaModel {
             }
 
             /**
-             * AudioStuckRate.
+             * <p>The Audio Lag Rate, represented as a four-digit decimal.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0014</p>
              */
             public Builder audioStuckRate(String audioStuckRate) {
                 this.audioStuckRate = audioStuckRate;
@@ -282,7 +294,10 @@ public class DescribeQualityDistributionStatDataResponseBody extends TeaModel {
             }
 
             /**
-             * CallDurationRatio.
+             * <p>The call duration ratio, represented as a four-digit decimal. For example, 1.0000 indicates that the call duration accounts for 100% of the total usage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0000</p>
              */
             public Builder callDurationRatio(String callDurationRatio) {
                 this.callDurationRatio = callDurationRatio;
@@ -290,7 +305,10 @@ public class DescribeQualityDistributionStatDataResponseBody extends TeaModel {
             }
 
             /**
-             * JoinChannelSucFiveSecRate.
+             * <p>Five-second channel join success rate, represented as a four-digit decimal.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.9560</p>
              */
             public Builder joinChannelSucFiveSecRate(String joinChannelSucFiveSecRate) {
                 this.joinChannelSucFiveSecRate = joinChannelSucFiveSecRate;
@@ -298,7 +316,10 @@ public class DescribeQualityDistributionStatDataResponseBody extends TeaModel {
             }
 
             /**
-             * JoinChannelSucRate.
+             * <p>The channel join success rate, represented as a four-digit decimal.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.9575</p>
              */
             public Builder joinChannelSucRate(String joinChannelSucRate) {
                 this.joinChannelSucRate = joinChannelSucRate;
@@ -306,7 +327,15 @@ public class DescribeQualityDistributionStatDataResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>Statistical dimension. Valid values:  </p>
+             * <ul>
+             * <li>When StatDim is CHANNELONLINE: <strong>ONE_TO_FIVE</strong> (1–5 participants), <strong>SIX_TO_TEN</strong> (6–10 participants), <strong>ELEVEN_TO_TWENTY</strong> (11–20 participants), <strong>TWENTYONE_TO_FIFTY</strong> (21–50 participants), <strong>ABOVE_FIFTY</strong> (more than 50 participants).  </li>
+             * <li>When StatDim is NETWORK: <strong>WiFi</strong>, <strong>4G</strong>, etc.  </li>
+             * <li>When StatDim is OS: <strong>iOS</strong>, <strong>Android</strong>, etc.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ONE_TO_FIVE</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -314,7 +343,10 @@ public class DescribeQualityDistributionStatDataResponseBody extends TeaModel {
             }
 
             /**
-             * VideoDelay.
+             * <p>Video delay, in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>517</p>
              */
             public Builder videoDelay(Long videoDelay) {
                 this.videoDelay = videoDelay;
@@ -322,7 +354,10 @@ public class DescribeQualityDistributionStatDataResponseBody extends TeaModel {
             }
 
             /**
-             * VideoFirstPicDuration.
+             * <p>Time to first video frame, in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1299</p>
              */
             public Builder videoFirstPicDuration(Long videoFirstPicDuration) {
                 this.videoFirstPicDuration = videoFirstPicDuration;
@@ -330,7 +365,10 @@ public class DescribeQualityDistributionStatDataResponseBody extends TeaModel {
             }
 
             /**
-             * VideoHighQualityTransmissionRate.
+             * <p>Video high-quality transmission rate, represented as a four-digit decimal.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.9981</p>
              */
             public Builder videoHighQualityTransmissionRate(String videoHighQualityTransmissionRate) {
                 this.videoHighQualityTransmissionRate = videoHighQualityTransmissionRate;
@@ -338,7 +376,10 @@ public class DescribeQualityDistributionStatDataResponseBody extends TeaModel {
             }
 
             /**
-             * VideoStuckRate.
+             * <p>The Video Lag Rate, represented as a four-digit decimal.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0264</p>
              */
             public Builder videoStuckRate(String videoStuckRate) {
                 this.videoStuckRate = videoStuckRate;

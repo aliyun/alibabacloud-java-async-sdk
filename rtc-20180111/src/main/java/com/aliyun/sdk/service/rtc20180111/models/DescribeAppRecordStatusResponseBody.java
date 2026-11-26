@@ -67,7 +67,7 @@ public class DescribeAppRecordStatusResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Id of the request</p>
+         * <p>Request ID</p>
          * 
          * <strong>example:</strong>
          * <p>16A96B9A-F203-4EC5-8E43-CB92E68F4CD8</p>
@@ -78,7 +78,10 @@ public class DescribeAppRecordStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>Recording status. Valid values: enable or disable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>disable</p>
          */
         public Builder result(String result) {
             this.result = result;

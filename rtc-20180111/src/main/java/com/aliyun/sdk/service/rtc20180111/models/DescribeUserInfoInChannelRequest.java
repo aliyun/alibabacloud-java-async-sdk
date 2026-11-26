@@ -104,6 +104,7 @@ public class DescribeUserInfoInChannelRequest extends Request {
         } 
 
         /**
+         * <p>The application ID, which is created and queried through the console. Only a single ID is supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,6 +117,7 @@ public class DescribeUserInfoInChannelRequest extends Request {
         }
 
         /**
+         * <p>The channel ID. Only a single ID is supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -137,6 +139,7 @@ public class DescribeUserInfoInChannelRequest extends Request {
         }
 
         /**
+         * <p>The user ID. Only a single ID is supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -78,7 +78,10 @@ public class DescribeAppCallStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>The callback status. Valid values: enable (enabled) and disable (disabled).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>enable</p>
          */
         public Builder result(String result) {
             this.result = result;

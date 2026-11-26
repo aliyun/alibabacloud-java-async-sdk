@@ -130,6 +130,7 @@ public class DescribeMPULayoutInfoListRequest extends Request {
         } 
 
         /**
+         * <p>Application ID. You can specify only one ID. Create or view IDs in the console.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -142,7 +143,10 @@ public class DescribeMPULayoutInfoListRequest extends Request {
         }
 
         /**
-         * LayoutId.
+         * <p>Layout ID. To get a layout ID, see <a href="https://help.aliyun.com/document_detail/162192.html">CreateMPULayout</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder layoutId(Long layoutId) {
             this.putQueryParameter("LayoutId", layoutId);
@@ -151,7 +155,10 @@ public class DescribeMPULayoutInfoListRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>Layout name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LayoutName</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -169,7 +176,10 @@ public class DescribeMPULayoutInfoListRequest extends Request {
         }
 
         /**
-         * PageNum.
+         * <p>Page number. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Long pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -178,7 +188,10 @@ public class DescribeMPULayoutInfoListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>Number of entries per page. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);

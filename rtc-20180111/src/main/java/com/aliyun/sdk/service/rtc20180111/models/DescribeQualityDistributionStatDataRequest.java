@@ -118,6 +118,7 @@ public class DescribeQualityDistributionStatDataRequest extends Request {
         }
 
         /**
+         * <p>End Time of the query, expressed as a UNIX timestamp in seconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -130,6 +131,7 @@ public class DescribeQualityDistributionStatDataRequest extends Request {
         }
 
         /**
+         * <p>Start Time of the query, expressed as a UNIX timestamp in seconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -142,6 +144,12 @@ public class DescribeQualityDistributionStatDataRequest extends Request {
         }
 
         /**
+         * <p>Statistical dimension. Valid values:  </p>
+         * <ul>
+         * <li><strong>CHANNEL_ONLINE</strong>: Statistics by channel online participant count.  </li>
+         * <li><strong>NETWORK</strong>: Statistics by network type.  </li>
+         * <li><strong>OS</strong>: Statistics by operating system type.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

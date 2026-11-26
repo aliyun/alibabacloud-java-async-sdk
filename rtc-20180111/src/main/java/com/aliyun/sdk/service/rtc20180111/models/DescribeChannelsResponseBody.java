@@ -106,7 +106,10 @@ public class DescribeChannelsResponseBody extends TeaModel {
         } 
 
         /**
-         * PageNo.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.pageNo = pageNo;
@@ -114,7 +117,10 @@ public class DescribeChannelsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of items per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -122,7 +128,7 @@ public class DescribeChannelsResponseBody extends TeaModel {
         }
 
         /**
-         * Records.
+         * <p>The active channels.</p>
          */
         public Builder records(java.util.List<String> records) {
             this.records = records;
@@ -130,7 +136,10 @@ public class DescribeChannelsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16A96B9A-F203-4EC5-8E43-CB92E68F4CF8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class DescribeChannelsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCnt.
+         * <p>The total count.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCnt(Integer totalCnt) {
             this.totalCnt = totalCnt;

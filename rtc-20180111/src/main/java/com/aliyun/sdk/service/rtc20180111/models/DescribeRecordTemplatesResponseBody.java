@@ -93,7 +93,10 @@ public class DescribeRecordTemplatesResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C292B80E-5175-4BA4-8CC292B80E-5175-4BA4-8C1E-2ABEC4D7C2FE1E-2ABEC4D7****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -101,7 +104,7 @@ public class DescribeRecordTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * Templates.
+         * <p>The recording configuration templates.</p>
          */
         public Builder templates(java.util.List<Templates> templates) {
             this.templates = templates;
@@ -109,7 +112,10 @@ public class DescribeRecordTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalNum.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalNum(Long totalNum) {
             this.totalNum = totalNum;
@@ -117,7 +123,10 @@ public class DescribeRecordTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalPage.
+         * <p>The total number of pages returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalPage(Long totalPage) {
             this.totalPage = totalPage;
@@ -248,7 +257,14 @@ public class DescribeRecordTemplatesResponseBody extends TeaModel {
             } 
 
             /**
-             * Display.
+             * <p>Specifies whether to display the background image. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong> (None): Not displayed.</li>
+             * <li><strong>1</strong> (Always): Always displayed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder display(Integer display) {
                 this.display = display;
@@ -256,7 +272,10 @@ public class DescribeRecordTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Height.
+             * <p>The height of the background image pane. The value is a normalized percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.2456</p>
              */
             public Builder height(Float height) {
                 this.height = height;
@@ -264,7 +283,10 @@ public class DescribeRecordTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Url.
+             * <p>The HTTP or HTTPS URL of the background image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://www.example.com/image.jpg">https://www.example.com/image.jpg</a></p>
              */
             public Builder url(String url) {
                 this.url = url;
@@ -272,7 +294,10 @@ public class DescribeRecordTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Width.
+             * <p>The width of the background image pane. The value is a normalized percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.2456</p>
              */
             public Builder width(Float width) {
                 this.width = width;
@@ -280,7 +305,10 @@ public class DescribeRecordTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * X.
+             * <p>The X-coordinate of the background image. The value is a normalized percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.7576</p>
              */
             public Builder x(Float x) {
                 this.x = x;
@@ -288,7 +316,10 @@ public class DescribeRecordTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Y.
+             * <p>The Y-coordinate of the background image. The value is a normalized percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.7576</p>
              */
             public Builder y(Float y) {
                 this.y = y;
@@ -296,7 +327,10 @@ public class DescribeRecordTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * ZOrder.
+             * <p>The stacking order of the background image. A value of 0 indicates the bottom layer. A value of 1 indicates the layer above the bottom layer, and so on.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder zOrder(Integer zOrder) {
                 this.zOrder = zOrder;
@@ -415,7 +449,11 @@ public class DescribeRecordTemplatesResponseBody extends TeaModel {
             } 
 
             /**
-             * FontColor.
+             * <p>The text color of the clock (RGB).</p>
+             * <p>The calculation formula is <code>R + G × 256 + B × 65536</code>. Valid values for R (red), G (green), and B (blue): <strong>0</strong> to <strong>255</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder fontColor(Integer fontColor) {
                 this.fontColor = fontColor;
@@ -423,7 +461,10 @@ public class DescribeRecordTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * FontSize.
+             * <p>The font size of the clock. Valid values: <strong>(0, 72]</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder fontSize(Integer fontSize) {
                 this.fontSize = fontSize;
@@ -431,7 +472,18 @@ public class DescribeRecordTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * FontType.
+             * <p>The font type of the clock. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong> (default): NOTO_SERIF_CJKSC_REGULAR</li>
+             * <li><strong>1</strong>: ALIBABA_PUHUITI_REGULAR</li>
+             * <li><strong>2</strong>: ALIBABA_PUHUITI_BOLD</li>
+             * <li><strong>3</strong>: ALIBABA_PUHUITI_Heavy</li>
+             * <li><strong>4</strong>: ALIBABA_PUHUITI_LIGHT</li>
+             * <li><strong>5</strong>: ALIBABA_PUHUITI_MEDIUM</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder fontType(Integer fontType) {
                 this.fontType = fontType;
@@ -439,7 +491,10 @@ public class DescribeRecordTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * X.
+             * <p>The X-coordinate of the clock. The value is a normalized percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.7576</p>
              */
             public Builder x(Float x) {
                 this.x = x;
@@ -447,7 +502,10 @@ public class DescribeRecordTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Y.
+             * <p>The Y-coordinate of the clock. The value is a normalized percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.7576</p>
              */
             public Builder y(Float y) {
                 this.y = y;
@@ -455,7 +513,10 @@ public class DescribeRecordTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * ZOrder.
+             * <p>The stacking order of the clock. A value of 0 indicates the bottom layer. A value of 1 indicates the layer above the bottom layer, and so on.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder zOrder(Integer zOrder) {
                 this.zOrder = zOrder;
@@ -600,7 +661,10 @@ public class DescribeRecordTemplatesResponseBody extends TeaModel {
             } 
 
             /**
-             * Alpha.
+             * <p>The transparency of the watermark. The value is a normalized percentage. A value of 0 indicates transparent, and a value of 1 indicates completely opaque.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder alpha(Float alpha) {
                 this.alpha = alpha;
@@ -608,7 +672,14 @@ public class DescribeRecordTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Display.
+             * <p>Specifies whether to display the watermark. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong> (None): Not displayed.</li>
+             * <li><strong>1</strong> (Always): Always displayed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder display(Integer display) {
                 this.display = display;
@@ -616,7 +687,10 @@ public class DescribeRecordTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Height.
+             * <p>The height of the watermark pane. The value is a normalized percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.2456</p>
              */
             public Builder height(Float height) {
                 this.height = height;
@@ -624,7 +698,10 @@ public class DescribeRecordTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Url.
+             * <p>The HTTP or HTTPS URL of the watermark.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://www.example.com/image.jpg">https://www.example.com/image.jpg</a></p>
              */
             public Builder url(String url) {
                 this.url = url;
@@ -632,7 +709,10 @@ public class DescribeRecordTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Width.
+             * <p>The width of the watermark pane. The value is a normalized percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.2456</p>
              */
             public Builder width(Float width) {
                 this.width = width;
@@ -640,7 +720,10 @@ public class DescribeRecordTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * X.
+             * <p>The X-coordinate of the watermark. The value is a normalized percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.7576</p>
              */
             public Builder x(Float x) {
                 this.x = x;
@@ -648,7 +731,10 @@ public class DescribeRecordTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Y.
+             * <p>The Y-coordinate of the watermark. The value is a normalized percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.7576</p>
              */
             public Builder y(Float y) {
                 this.y = y;
@@ -656,7 +742,10 @@ public class DescribeRecordTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * ZOrder.
+             * <p>The stacking order of the watermark. A value of 0 indicates the bottom layer. A value of 1 indicates the layer above the bottom layer, and so on.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder zOrder(Integer zOrder) {
                 this.zOrder = zOrder;
@@ -931,7 +1020,10 @@ public class DescribeRecordTemplatesResponseBody extends TeaModel {
             } 
 
             /**
-             * BackgroundColor.
+             * <p>The RGB value of the background color. Default value: <strong>0</strong> (black). The calculation formula is R + G × 256 + B × 65536. Valid values for R (red), G (green), and B (blue): <strong>0</strong> to <strong>255</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder backgroundColor(Integer backgroundColor) {
                 this.backgroundColor = backgroundColor;
@@ -939,7 +1031,7 @@ public class DescribeRecordTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Backgrounds.
+             * <p>The list of background image information.</p>
              */
             public Builder backgrounds(java.util.List<Backgrounds> backgrounds) {
                 this.backgrounds = backgrounds;
@@ -947,7 +1039,7 @@ public class DescribeRecordTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * ClockWidgets.
+             * <p>The list of clock widgets.</p>
              */
             public Builder clockWidgets(java.util.List<ClockWidgets> clockWidgets) {
                 this.clockWidgets = clockWidgets;
@@ -955,7 +1047,10 @@ public class DescribeRecordTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The creation time. The time is displayed in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC time).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-09-04T06:22:15Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -963,7 +1058,10 @@ public class DescribeRecordTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * DelayStopTime.
+             * <p>The delay before stopping the recording. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>180</p>
              */
             public Builder delayStopTime(Integer delayStopTime) {
                 this.delayStopTime = delayStopTime;
@@ -971,7 +1069,10 @@ public class DescribeRecordTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * EnableM3u8DateTime.
+             * <p>Specifies whether to add the timestamp of the TS file to the recorded M3U8 file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder enableM3u8DateTime(Boolean enableM3u8DateTime) {
                 this.enableM3u8DateTime = enableM3u8DateTime;
@@ -979,7 +1080,10 @@ public class DescribeRecordTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * FileSplitInterval.
+             * <p>The file splitting duration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1800</p>
              */
             public Builder fileSplitInterval(Integer fileSplitInterval) {
                 this.fileSplitInterval = fileSplitInterval;
@@ -987,7 +1091,7 @@ public class DescribeRecordTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Formats.
+             * <p>The list of recording file formats. Valid formats include M3U8, FLV, and MP4.</p>
              */
             public Builder formats(java.util.List<String> formats) {
                 this.formats = formats;
@@ -995,7 +1099,10 @@ public class DescribeRecordTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * HttpCallbackUrl.
+             * <p>The HTTP callback URL for recording events.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://example.com/callback">http://example.com/callback</a></p>
              */
             public Builder httpCallbackUrl(String httpCallbackUrl) {
                 this.httpCallbackUrl = httpCallbackUrl;
@@ -1003,7 +1110,7 @@ public class DescribeRecordTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * LayoutIds.
+             * <p>The list of mixed-stream layout IDs used by the recording template.</p>
              */
             public Builder layoutIds(java.util.List<Long> layoutIds) {
                 this.layoutIds = layoutIds;
@@ -1011,7 +1118,10 @@ public class DescribeRecordTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * MediaEncode.
+             * <p>The encoding options.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder mediaEncode(Integer mediaEncode) {
                 this.mediaEncode = mediaEncode;
@@ -1019,7 +1129,10 @@ public class DescribeRecordTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * MnsQueue.
+             * <p>The name of the Message Service (MNS) queue for recording event callbacks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>record-callback-queue</p>
              */
             public Builder mnsQueue(String mnsQueue) {
                 this.mnsQueue = mnsQueue;
@@ -1027,7 +1140,10 @@ public class DescribeRecordTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the recording configuration template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Template-demo</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1035,7 +1151,10 @@ public class DescribeRecordTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * OssBucket.
+             * <p>The name of the Object Storage Service (OSS) bucket where recording files are stored.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rtc-record-oss</p>
              */
             public Builder ossBucket(String ossBucket) {
                 this.ossBucket = ossBucket;
@@ -1043,7 +1162,10 @@ public class DescribeRecordTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * OssFilePrefix.
+             * <p>The naming rule for recording files.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>record/pre/{AppId}/{ChannelId_TaskId}/{EscapedStartTime}_{EscapedEndTime}</p>
              */
             public Builder ossFilePrefix(String ossFilePrefix) {
                 this.ossFilePrefix = ossFilePrefix;
@@ -1051,7 +1173,10 @@ public class DescribeRecordTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * TaskProfile.
+             * <p>The task specifications.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4IN_1080P</p>
              */
             public Builder taskProfile(String taskProfile) {
                 this.taskProfile = taskProfile;
@@ -1059,7 +1184,10 @@ public class DescribeRecordTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateId.
+             * <p>The ID of the recording configuration template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1ca698e2-57fa-4314-8e11-00d950d4****</p>
              */
             public Builder templateId(String templateId) {
                 this.templateId = templateId;
@@ -1067,7 +1195,7 @@ public class DescribeRecordTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Watermarks.
+             * <p>The list of watermark information.</p>
              */
             public Builder watermarks(java.util.List<Watermarks> watermarks) {
                 this.watermarks = watermarks;

@@ -67,7 +67,7 @@ public class DescribeQualityAreaDistributionStatDataResponseBody extends TeaMode
         } 
 
         /**
-         * QualityStatDataList.
+         * <p>The list of quality distribution data.</p>
          */
         public Builder qualityStatDataList(java.util.List<QualityStatDataList> qualityStatDataList) {
             this.qualityStatDataList = qualityStatDataList;
@@ -75,7 +75,10 @@ public class DescribeQualityAreaDistributionStatDataResponseBody extends TeaMode
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>231470C1-ACFB-4C9F-844F-4CFE1E3804C5</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -258,7 +261,10 @@ public class DescribeQualityAreaDistributionStatDataResponseBody extends TeaMode
             } 
 
             /**
-             * AudioDelay.
+             * <p>The audio delay, in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>347</p>
              */
             public Builder audioDelay(Long audioDelay) {
                 this.audioDelay = audioDelay;
@@ -266,7 +272,10 @@ public class DescribeQualityAreaDistributionStatDataResponseBody extends TeaMode
             }
 
             /**
-             * AudioHighQualityTransmissionRate.
+             * <p>The high-quality transmission rate of audio, represented by a four-decimal number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.9933</p>
              */
             public Builder audioHighQualityTransmissionRate(String audioHighQualityTransmissionRate) {
                 this.audioHighQualityTransmissionRate = audioHighQualityTransmissionRate;
@@ -274,7 +283,10 @@ public class DescribeQualityAreaDistributionStatDataResponseBody extends TeaMode
             }
 
             /**
-             * AudioStuckRate.
+             * <p>The audio stuttering rate, represented by a four-decimal number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0021</p>
              */
             public Builder audioStuckRate(String audioStuckRate) {
                 this.audioStuckRate = audioStuckRate;
@@ -282,7 +294,10 @@ public class DescribeQualityAreaDistributionStatDataResponseBody extends TeaMode
             }
 
             /**
-             * CallDurationRatio.
+             * <p>The ratio of the call duration, represented by a four-decimal number. For example, 1.0000 indicates that the call duration ratio is 100%.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.6654</p>
              */
             public Builder callDurationRatio(String callDurationRatio) {
                 this.callDurationRatio = callDurationRatio;
@@ -290,7 +305,10 @@ public class DescribeQualityAreaDistributionStatDataResponseBody extends TeaMode
             }
 
             /**
-             * JoinChannelSucFiveSecRate.
+             * <p>The success rate of joining a channel within 5 seconds, represented by a four-decimal number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.9338</p>
              */
             public Builder joinChannelSucFiveSecRate(String joinChannelSucFiveSecRate) {
                 this.joinChannelSucFiveSecRate = joinChannelSucFiveSecRate;
@@ -298,7 +316,10 @@ public class DescribeQualityAreaDistributionStatDataResponseBody extends TeaMode
             }
 
             /**
-             * JoinChannelSucRate.
+             * <p>The success rate of joining a channel, represented by a four-decimal number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.9356</p>
              */
             public Builder joinChannelSucRate(String joinChannelSucRate) {
                 this.joinChannelSucRate = joinChannelSucRate;
@@ -306,7 +327,10 @@ public class DescribeQualityAreaDistributionStatDataResponseBody extends TeaMode
             }
 
             /**
-             * Name.
+             * <p>The name of the region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>China_Zhejiang Province</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -314,7 +338,10 @@ public class DescribeQualityAreaDistributionStatDataResponseBody extends TeaMode
             }
 
             /**
-             * VideoDelay.
+             * <p>The video delay, in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>291</p>
              */
             public Builder videoDelay(Long videoDelay) {
                 this.videoDelay = videoDelay;
@@ -322,7 +349,10 @@ public class DescribeQualityAreaDistributionStatDataResponseBody extends TeaMode
             }
 
             /**
-             * VideoFirstPicDuration.
+             * <p>The time taken to render the first video frame, in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1363</p>
              */
             public Builder videoFirstPicDuration(Long videoFirstPicDuration) {
                 this.videoFirstPicDuration = videoFirstPicDuration;
@@ -330,7 +360,10 @@ public class DescribeQualityAreaDistributionStatDataResponseBody extends TeaMode
             }
 
             /**
-             * VideoHighQualityTransmissionRate.
+             * <p>The high-quality transmission rate of video, represented by a four-decimal number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.9967</p>
              */
             public Builder videoHighQualityTransmissionRate(String videoHighQualityTransmissionRate) {
                 this.videoHighQualityTransmissionRate = videoHighQualityTransmissionRate;
@@ -338,7 +371,10 @@ public class DescribeQualityAreaDistributionStatDataResponseBody extends TeaMode
             }
 
             /**
-             * VideoStuckRate.
+             * <p>The video stuttering rate, represented by a four-decimal number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0058</p>
              */
             public Builder videoStuckRate(String videoStuckRate) {
                 this.videoStuckRate = videoStuckRate;

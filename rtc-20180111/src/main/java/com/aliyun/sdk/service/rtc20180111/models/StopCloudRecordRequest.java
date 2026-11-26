@@ -90,6 +90,7 @@ public class StopCloudRecordRequest extends Request {
         } 
 
         /**
+         * <p>The application ID, created and queried via the console. Only a single ID is supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,6 +103,7 @@ public class StopCloudRecordRequest extends Request {
         }
 
         /**
+         * <p>The existing channel ID. Only a single ID is supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,6 +116,7 @@ public class StopCloudRecordRequest extends Request {
         }
 
         /**
+         * <p>The existing cloud recording job ID. Only a single ID is supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

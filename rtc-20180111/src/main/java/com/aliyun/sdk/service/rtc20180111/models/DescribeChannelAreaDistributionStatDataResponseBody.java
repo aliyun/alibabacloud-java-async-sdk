@@ -67,7 +67,7 @@ public class DescribeChannelAreaDistributionStatDataResponseBody extends TeaMode
         } 
 
         /**
-         * AreaStatList.
+         * <p>The regional statistics list.</p>
          */
         public Builder areaStatList(java.util.List<AreaStatList> areaStatList) {
             this.areaStatList = areaStatList;
@@ -75,7 +75,10 @@ public class DescribeChannelAreaDistributionStatDataResponseBody extends TeaMode
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>231470C1-ACFB-4C9F-844F-4CFE1E3804C5</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -180,7 +183,10 @@ public class DescribeChannelAreaDistributionStatDataResponseBody extends TeaMode
             } 
 
             /**
-             * AreaName.
+             * <p>The region name, such as China_Zhejiang Province_Hangzhou.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>China_Zhejiang Province_Hangzhou</p>
              */
             public Builder areaName(String areaName) {
                 this.areaName = areaName;
@@ -188,7 +194,10 @@ public class DescribeChannelAreaDistributionStatDataResponseBody extends TeaMode
             }
 
             /**
-             * CallUserCount.
+             * <p>The number of communicating users.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder callUserCount(Integer callUserCount) {
                 this.callUserCount = callUserCount;
@@ -196,7 +205,10 @@ public class DescribeChannelAreaDistributionStatDataResponseBody extends TeaMode
             }
 
             /**
-             * HighQualityTransmissionRate.
+             * <p>The high-quality transmission rate, represented as a decimal. For example, 0.9999 indicates a high-quality transmission rate of 99.99%.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.9999</p>
              */
             public Builder highQualityTransmissionRate(String highQualityTransmissionRate) {
                 this.highQualityTransmissionRate = highQualityTransmissionRate;
@@ -204,7 +216,10 @@ public class DescribeChannelAreaDistributionStatDataResponseBody extends TeaMode
             }
 
             /**
-             * PubUserCount.
+             * <p>The number of publishers.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pubUserCount(Integer pubUserCount) {
                 this.pubUserCount = pubUserCount;
@@ -212,7 +227,10 @@ public class DescribeChannelAreaDistributionStatDataResponseBody extends TeaMode
             }
 
             /**
-             * SubUserCount.
+             * <p>The number of subscribers.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder subUserCount(Integer subUserCount) {
                 this.subUserCount = subUserCount;

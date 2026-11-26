@@ -89,6 +89,7 @@ public class DeleteAppRecordTemplateRequest extends Request {
         } 
 
         /**
+         * <p>The application ID. You can create and query the ID in the console. Only a single ID is supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,7 +102,10 @@ public class DeleteAppRecordTemplateRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>The idempotency parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>53200b81-b761-4c10-842a-a0726d97xxxx</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -110,6 +114,7 @@ public class DeleteAppRecordTemplateRequest extends Request {
         }
 
         /**
+         * <p>The template information.</p>
          * <p>This parameter is required.</p>
          */
         public Builder template(Template template) {
@@ -167,6 +172,7 @@ public class DeleteAppRecordTemplateRequest extends Request {
             } 
 
             /**
+             * <p>The template ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

@@ -171,7 +171,16 @@ public class DescribeChannelUsersResponseBody extends TeaModel {
         } 
 
         /**
-         * ChannelProfile.
+         * <p>The channel mode. Valid values:</p>
+         * <ul>
+         * <li><p><strong>1</strong>: Communication (communication mode).</p>
+         * </li>
+         * <li><p><strong>2</strong>: Interactive_live (live streaming mode).</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder channelProfile(Integer channelProfile) {
             this.channelProfile = channelProfile;
@@ -179,7 +188,10 @@ public class DescribeChannelUsersResponseBody extends TeaModel {
         }
 
         /**
-         * CommTotalNum.
+         * <p>The total number of users in the channel in communication mode. If the channel is not in communication mode, this parameter is 0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder commTotalNum(Integer commTotalNum) {
             this.commTotalNum = commTotalNum;
@@ -187,7 +199,7 @@ public class DescribeChannelUsersResponseBody extends TeaModel {
         }
 
         /**
-         * InteractiveUserList.
+         * <p>The list of interactive user IDs in the channel in live streaming mode. This parameter is empty if the channel is not in live streaming mode.</p>
          */
         public Builder interactiveUserList(java.util.List<String> interactiveUserList) {
             this.interactiveUserList = interactiveUserList;
@@ -195,7 +207,10 @@ public class DescribeChannelUsersResponseBody extends TeaModel {
         }
 
         /**
-         * InteractiveUserNum.
+         * <p>The total number of interactive users in the channel in live streaming mode. If the channel is not in live streaming mode, this parameter is 0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder interactiveUserNum(Integer interactiveUserNum) {
             this.interactiveUserNum = interactiveUserNum;
@@ -203,7 +218,16 @@ public class DescribeChannelUsersResponseBody extends TeaModel {
         }
 
         /**
-         * IsChannelExist.
+         * <p>Indicates whether the channel exists. Valid values:</p>
+         * <ul>
+         * <li><p><strong>true</strong>: The channel exists.</p>
+         * </li>
+         * <li><p><strong>false</strong>: The channel does not exist.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isChannelExist(Boolean isChannelExist) {
             this.isChannelExist = isChannelExist;
@@ -211,7 +235,7 @@ public class DescribeChannelUsersResponseBody extends TeaModel {
         }
 
         /**
-         * LiveUserList.
+         * <p>The list of viewer IDs in the channel in live streaming mode. A maximum of 1,000 viewers are returned. This parameter is empty if the channel is not in live streaming mode.</p>
          */
         public Builder liveUserList(java.util.List<String> liveUserList) {
             this.liveUserList = liveUserList;
@@ -219,7 +243,10 @@ public class DescribeChannelUsersResponseBody extends TeaModel {
         }
 
         /**
-         * LiveUserNum.
+         * <p>The total number of viewers in the channel in live streaming mode. If the channel is not in live streaming mode, this parameter is 0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder liveUserNum(Integer liveUserNum) {
             this.liveUserNum = liveUserNum;
@@ -227,7 +254,10 @@ public class DescribeChannelUsersResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6159ba01-6687-4fb2-a831-f0cd8d188648</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -235,7 +265,10 @@ public class DescribeChannelUsersResponseBody extends TeaModel {
         }
 
         /**
-         * Timestamp.
+         * <p>The timestamp of the current time in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1557909133</p>
          */
         public Builder timestamp(Integer timestamp) {
             this.timestamp = timestamp;
@@ -243,7 +276,7 @@ public class DescribeChannelUsersResponseBody extends TeaModel {
         }
 
         /**
-         * UserList.
+         * <p>The list of user IDs in the channel in communication mode. This parameter is empty if the channel is not in communication mode.</p>
          */
         public Builder userList(java.util.List<String> userList) {
             this.userList = userList;

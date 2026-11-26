@@ -105,7 +105,7 @@ public class DescribeFaultDiagnosisOverallDataRequest extends Request {
         } 
 
         /**
-         * <p>APP ID</p>
+         * <p>The app ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -118,6 +118,7 @@ public class DescribeFaultDiagnosisOverallDataRequest extends Request {
         }
 
         /**
+         * <p>The end time of the query. The value is a UNIX timestamp in seconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -130,6 +131,7 @@ public class DescribeFaultDiagnosisOverallDataRequest extends Request {
         }
 
         /**
+         * <p>The start time of the query. The value is a UNIX timestamp in seconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -142,6 +144,15 @@ public class DescribeFaultDiagnosisOverallDataRequest extends Request {
         }
 
         /**
+         * <p>The statistical dimension. Valid values:</p>
+         * <ul>
+         * <li><strong>JOIN_SLOW_USER</strong>: the number of users who joined the channel slowly</li>
+         * <li><strong>AUDIO_STUCK_USER</strong>: the number of users who experienced audio stuttering</li>
+         * <li><strong>VIDEO_STUCK_USER</strong>: the number of users who experienced video stuttering</li>
+         * <li><strong>VIDEO_VAGUE_USER</strong>: the number of users who experienced blurry video</li>
+         * <li><strong>HIGH_DELAY_USER</strong>: the number of users who experienced high call latency</li>
+         * <li><strong>FIRST_FRAME_SLOW_USER</strong>: the number of users who experienced slow first screen rendering</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -78,7 +78,10 @@ public class ModifyAppStreamingOutTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * TemplateId.
+         * <p>Template ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ac7N****</p>
          */
         public Builder templateId(String templateId) {
             this.templateId = templateId;

@@ -321,6 +321,7 @@ public class AddRecordTemplateRequest extends Request {
         } 
 
         /**
+         * <p>The application ID. You can create and query the ID in the console. Only a single ID is supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -333,7 +334,10 @@ public class AddRecordTemplateRequest extends Request {
         }
 
         /**
-         * BackgroundColor.
+         * <p>The background color in RGB format. Default value: 0 (black). The calculation formula is R + G × 256 + B × 65536. Valid values for R (red), G (green), and B (blue): <strong>0</strong> to <strong>255</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder backgroundColor(Integer backgroundColor) {
             this.putQueryParameter("BackgroundColor", backgroundColor);
@@ -342,7 +346,7 @@ public class AddRecordTemplateRequest extends Request {
         }
 
         /**
-         * Backgrounds.
+         * <p>The list of background images.</p>
          */
         public Builder backgrounds(java.util.List<Backgrounds> backgrounds) {
             this.putQueryParameter("Backgrounds", backgrounds);
@@ -351,7 +355,7 @@ public class AddRecordTemplateRequest extends Request {
         }
 
         /**
-         * ClockWidgets.
+         * <p>The list of clocks.</p>
          */
         public Builder clockWidgets(java.util.List<ClockWidgets> clockWidgets) {
             this.putQueryParameter("ClockWidgets", clockWidgets);
@@ -360,7 +364,10 @@ public class AddRecordTemplateRequest extends Request {
         }
 
         /**
-         * DelayStopTime.
+         * <p>The delay time before stopping the recording. Unit: seconds. Default value: <strong>180</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>180</p>
          */
         public Builder delayStopTime(Integer delayStopTime) {
             this.putQueryParameter("DelayStopTime", delayStopTime);
@@ -369,7 +376,10 @@ public class AddRecordTemplateRequest extends Request {
         }
 
         /**
-         * EnableM3u8DateTime.
+         * <p>Specifies whether to add the timestamp of the TS file to the recorded M3U8 file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enableM3u8DateTime(Boolean enableM3u8DateTime) {
             this.putQueryParameter("EnableM3u8DateTime", enableM3u8DateTime);
@@ -378,6 +388,7 @@ public class AddRecordTemplateRequest extends Request {
         }
 
         /**
+         * <p>The splitting duration of the recording file. The value must be greater than or equal to 1800. Unit: seconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -390,6 +401,7 @@ public class AddRecordTemplateRequest extends Request {
         }
 
         /**
+         * <p>The list of recording file formats.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -402,7 +414,13 @@ public class AddRecordTemplateRequest extends Request {
         }
 
         /**
-         * HttpCallbackUrl.
+         * <p>The HTTP callback URL for recording events.</p>
+         * <blockquote>
+         * <p>You must specify either this parameter or MnsQueue. You cannot specify both or neither.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://example.com/callback">http://example.com/callback</a></p>
          */
         public Builder httpCallbackUrl(String httpCallbackUrl) {
             this.putQueryParameter("HttpCallbackUrl", httpCallbackUrl);
@@ -411,6 +429,7 @@ public class AddRecordTemplateRequest extends Request {
         }
 
         /**
+         * <p>The list of layout IDs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -423,6 +442,7 @@ public class AddRecordTemplateRequest extends Request {
         }
 
         /**
+         * <p>The encoding option. For more information, see the MediaEncode enum values below.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -435,7 +455,13 @@ public class AddRecordTemplateRequest extends Request {
         }
 
         /**
-         * MnsQueue.
+         * <p>The MSMQ for recording event callbacks.</p>
+         * <blockquote>
+         * <p>You must specify either this parameter or HttpCallbackUrl. You cannot specify both or neither.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>record-callback-queue</p>
          */
         public Builder mnsQueue(String mnsQueue) {
             this.putQueryParameter("MnsQueue", mnsQueue);
@@ -444,7 +470,11 @@ public class AddRecordTemplateRequest extends Request {
         }
 
         /**
+         * <p>The name of the recording configuration template.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Recording template</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -453,6 +483,10 @@ public class AddRecordTemplateRequest extends Request {
         }
 
         /**
+         * <p>The OSS bucket where the recording files are stored.</p>
+         * <blockquote>
+         * <p>Only OSS buckets in the China (Shanghai) region are supported.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -465,7 +499,10 @@ public class AddRecordTemplateRequest extends Request {
         }
 
         /**
-         * OssEndpoint.
+         * <p>The OSS endpoint of the region where the recording files are stored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss-cn-shanghai.aliyuncs.com</p>
          */
         public Builder ossEndpoint(String ossEndpoint) {
             this.putQueryParameter("OssEndpoint", ossEndpoint);
@@ -474,6 +511,10 @@ public class AddRecordTemplateRequest extends Request {
         }
 
         /**
+         * <p>The naming rule for recording files.</p>
+         * <blockquote>
+         * <p>To ensure the uniqueness of recording file names, the naming rule is record/{AppId}/{ChannelId_TaskId}/{EscapedStartTime}_{EscapedEndTime}.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -495,6 +536,15 @@ public class AddRecordTemplateRequest extends Request {
         }
 
         /**
+         * <p>The billing configuration of the task. You are charged based on your settings. For more information, see the TaskProfile enum values below.</p>
+         * <blockquote>
+         * <ul>
+         * <li>The resolution of the MediaEncode encoding option must be less than or equal to the resolution of TaskProfile.</li>
+         * </ul>
+         * </blockquote>
+         * <ul>
+         * <li>The maximum number of layout panes must be less than or equal to the number of input channels of TaskProfile.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -507,7 +557,7 @@ public class AddRecordTemplateRequest extends Request {
         }
 
         /**
-         * Watermarks.
+         * <p>The list of watermarks.</p>
          */
         public Builder watermarks(java.util.List<Watermarks> watermarks) {
             this.putQueryParameter("Watermarks", watermarks);
@@ -640,7 +690,14 @@ public class AddRecordTemplateRequest extends Request {
             } 
 
             /**
-             * Display.
+             * <p>Specifies whether to display the background image. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong> (None): Not displayed.</li>
+             * <li><strong>1</strong> (Always): Always displayed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder display(Integer display) {
                 this.display = display;
@@ -648,7 +705,10 @@ public class AddRecordTemplateRequest extends Request {
             }
 
             /**
-             * Height.
+             * <p>The height of the background image pane, as a normalized percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.2456</p>
              */
             public Builder height(Float height) {
                 this.height = height;
@@ -656,7 +716,10 @@ public class AddRecordTemplateRequest extends Request {
             }
 
             /**
-             * Url.
+             * <p>The HTTP or HTTPS URL of the background image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://www.example.com/image.jpg">https://www.example.com/image.jpg</a></p>
              */
             public Builder url(String url) {
                 this.url = url;
@@ -664,7 +727,10 @@ public class AddRecordTemplateRequest extends Request {
             }
 
             /**
-             * Width.
+             * <p>The width of the background image pane, as a normalized percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.2456</p>
              */
             public Builder width(Float width) {
                 this.width = width;
@@ -672,7 +738,10 @@ public class AddRecordTemplateRequest extends Request {
             }
 
             /**
-             * X.
+             * <p>The X-coordinate of the background image, as a normalized percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.7576</p>
              */
             public Builder x(Float x) {
                 this.x = x;
@@ -680,7 +749,10 @@ public class AddRecordTemplateRequest extends Request {
             }
 
             /**
-             * Y.
+             * <p>The Y-coordinate of the background image, as a normalized percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.7576</p>
              */
             public Builder y(Float y) {
                 this.y = y;
@@ -688,7 +760,10 @@ public class AddRecordTemplateRequest extends Request {
             }
 
             /**
-             * ZOrder.
+             * <p>The Z-order of the background image. A value of 0 indicates the bottom layer. A value of 1 indicates the layer above 0, and so on.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder zOrder(Integer zOrder) {
                 this.zOrder = zOrder;
@@ -807,7 +882,11 @@ public class AddRecordTemplateRequest extends Request {
             } 
 
             /**
-             * FontColor.
+             * <p>The text color of the clock in RGB format.</p>
+             * <p>The calculation formula is <code>R + G × 256 + B × 65536</code>. Valid values for R (red), G (green), and B (blue): <strong>0</strong> to <strong>255</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder fontColor(Integer fontColor) {
                 this.fontColor = fontColor;
@@ -815,7 +894,10 @@ public class AddRecordTemplateRequest extends Request {
             }
 
             /**
-             * FontSize.
+             * <p>The font size of the clock. Valid values: <strong>(0, 72]</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder fontSize(Integer fontSize) {
                 this.fontSize = fontSize;
@@ -823,7 +905,18 @@ public class AddRecordTemplateRequest extends Request {
             }
 
             /**
-             * FontType.
+             * <p>The font type of the clock. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong> (default): NOTO_SERIF_CJKSC_REGULAR.</li>
+             * <li><strong>1</strong>: ALIBABA_PUHUITI_REGULAR.</li>
+             * <li><strong>2</strong>: ALIBABA_PUHUITI_BOLD.</li>
+             * <li><strong>3</strong>: ALIBABA_PUHUITI_Heavy.</li>
+             * <li><strong>4</strong>: ALIBABA_PUHUITI_LIGHT.</li>
+             * <li><strong>5</strong>: ALIBABA_PUHUITI_MEDIUM.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder fontType(Integer fontType) {
                 this.fontType = fontType;
@@ -831,7 +924,10 @@ public class AddRecordTemplateRequest extends Request {
             }
 
             /**
-             * X.
+             * <p>The X-coordinate of the clock, as a normalized percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.7576</p>
              */
             public Builder x(Float x) {
                 this.x = x;
@@ -839,7 +935,10 @@ public class AddRecordTemplateRequest extends Request {
             }
 
             /**
-             * Y.
+             * <p>The Y-coordinate of the clock, as a normalized percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.7576</p>
              */
             public Builder y(Float y) {
                 this.y = y;
@@ -847,7 +946,10 @@ public class AddRecordTemplateRequest extends Request {
             }
 
             /**
-             * ZOrder.
+             * <p>The Z-order of the clock. A value of 0 indicates the bottom layer. A value of 1 indicates the layer above 0, and so on.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder zOrder(Integer zOrder) {
                 this.zOrder = zOrder;
@@ -992,7 +1094,10 @@ public class AddRecordTemplateRequest extends Request {
             } 
 
             /**
-             * Alpha.
+             * <p>The transparency of the watermark. A value of 0.0 indicates fully transparent, and a value of 1.0 indicates fully opaque.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder alpha(Float alpha) {
                 this.alpha = alpha;
@@ -1000,7 +1105,14 @@ public class AddRecordTemplateRequest extends Request {
             }
 
             /**
-             * Display.
+             * <p>Specifies whether to display the watermark. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong> (None): Not displayed.</li>
+             * <li><strong>1</strong> (Always): Always displayed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder display(Integer display) {
                 this.display = display;
@@ -1008,7 +1120,10 @@ public class AddRecordTemplateRequest extends Request {
             }
 
             /**
-             * Height.
+             * <p>The height of the watermark pane, as a normalized percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.2456</p>
              */
             public Builder height(Float height) {
                 this.height = height;
@@ -1016,7 +1131,10 @@ public class AddRecordTemplateRequest extends Request {
             }
 
             /**
-             * Url.
+             * <p>The HTTP or HTTPS URL of the watermark.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://www.example.com/image.jpg">https://www.example.com/image.jpg</a></p>
              */
             public Builder url(String url) {
                 this.url = url;
@@ -1024,7 +1142,10 @@ public class AddRecordTemplateRequest extends Request {
             }
 
             /**
-             * Width.
+             * <p>The width of the watermark pane, as a normalized percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.2456</p>
              */
             public Builder width(Float width) {
                 this.width = width;
@@ -1032,7 +1153,10 @@ public class AddRecordTemplateRequest extends Request {
             }
 
             /**
-             * X.
+             * <p>The X-coordinate of the watermark, as a normalized percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.7576</p>
              */
             public Builder x(Float x) {
                 this.x = x;
@@ -1040,7 +1164,10 @@ public class AddRecordTemplateRequest extends Request {
             }
 
             /**
-             * Y.
+             * <p>The Y-coordinate of the watermark, as a normalized percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.7576</p>
              */
             public Builder y(Float y) {
                 this.y = y;
@@ -1048,7 +1175,10 @@ public class AddRecordTemplateRequest extends Request {
             }
 
             /**
-             * ZOrder.
+             * <p>The Z-order of the watermark. A value of 0 indicates the bottom layer. A value of 1 indicates the layer above 0, and so on.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder zOrder(Integer zOrder) {
                 this.zOrder = zOrder;

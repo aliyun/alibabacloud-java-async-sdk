@@ -105,6 +105,7 @@ public class RtcCancelSipInviteRequest extends Request {
         } 
 
         /**
+         * <p>The application ID. Create and find this ID in the console. Specify only one ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -117,10 +118,11 @@ public class RtcCancelSipInviteRequest extends Request {
         }
 
         /**
+         * <p>The ID of an existing channel. Specify only one ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>testid</p>
+         * <p>$rtc_channelid</p>
          */
         public Builder channelId(String channelId) {
             this.putQueryParameter("ChannelId", channelId);
@@ -129,10 +131,20 @@ public class RtcCancelSipInviteRequest extends Request {
         }
 
         /**
+         * <p>The type of the third-party SIP device:</p>
+         * <ul>
+         * <li><p>sip_device</p>
+         * </li>
+         * <li><p>mcu</p>
+         * </li>
+         * <li><p>phone</p>
+         * </li>
+         * </ul>
+         * <p>Note: Only the phone type is supported at this stage.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>mcu</p>
+         * <p>phone</p>
          */
         public Builder deviceType(String deviceType) {
             this.putQueryParameter("DeviceType", deviceType);
@@ -141,10 +153,11 @@ public class RtcCancelSipInviteRequest extends Request {
         }
 
         /**
+         * <p>The user ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>123</p>
+         * <p>$rtc_userid</p>
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);

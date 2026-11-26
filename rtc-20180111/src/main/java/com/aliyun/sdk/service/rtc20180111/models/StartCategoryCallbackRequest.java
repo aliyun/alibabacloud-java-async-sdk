@@ -75,6 +75,7 @@ public class StartCategoryCallbackRequest extends Request {
         } 
 
         /**
+         * <p>The application ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,7 @@ public class StartCategoryCallbackRequest extends Request {
         }
 
         /**
+         * <p>The callback.</p>
          * <p>This parameter is required.</p>
          */
         public Builder callback(Callback callback) {
@@ -144,6 +146,7 @@ public class StartCategoryCallbackRequest extends Request {
             } 
 
             /**
+             * <p>The callback code.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

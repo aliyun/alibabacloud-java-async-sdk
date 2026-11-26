@@ -67,7 +67,10 @@ public class DescribeChannelTopPubUserListResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>231470C1-ACFB-4C9F-844F-4CFE1E3804C5</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class DescribeChannelTopPubUserListResponseBody extends TeaModel {
         }
 
         /**
-         * TopPubUserDetailList.
+         * <p>The list of details about top publishing users.</p>
          */
         public Builder topPubUserDetailList(java.util.List<TopPubUserDetailList> topPubUserDetailList) {
             this.topPubUserDetailList = topPubUserDetailList;
@@ -141,7 +144,10 @@ public class DescribeChannelTopPubUserListResponseBody extends TeaModel {
             } 
 
             /**
-             * JoinTs.
+             * <p>The time when the user joined the channel. The value is a UNIX timestamp in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1615893327</p>
              */
             public Builder joinTs(Long joinTs) {
                 this.joinTs = joinTs;
@@ -149,7 +155,10 @@ public class DescribeChannelTopPubUserListResponseBody extends TeaModel {
             }
 
             /**
-             * LeaveTs.
+             * <p>The time when the user left the channel. The value is a UNIX timestamp in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1615893442</p>
              */
             public Builder leaveTs(Long leaveTs) {
                 this.leaveTs = leaveTs;
@@ -281,7 +290,10 @@ public class DescribeChannelTopPubUserListResponseBody extends TeaModel {
             } 
 
             /**
-             * CreatedTs.
+             * <p>The time when the user first joined the channel. The value is a UNIX timestamp in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1615893327</p>
              */
             public Builder createdTs(Long createdTs) {
                 this.createdTs = createdTs;
@@ -289,7 +301,10 @@ public class DescribeChannelTopPubUserListResponseBody extends TeaModel {
             }
 
             /**
-             * DestroyedTs.
+             * <p>The time when the user last left the channel. The value is a UNIX timestamp in seconds. The value is 0 if the call has not ended.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1615893442</p>
              */
             public Builder destroyedTs(Long destroyedTs) {
                 this.destroyedTs = destroyedTs;
@@ -297,7 +312,10 @@ public class DescribeChannelTopPubUserListResponseBody extends TeaModel {
             }
 
             /**
-             * Duration.
+             * <p>The total duration in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>115</p>
              */
             public Builder duration(Long duration) {
                 this.duration = duration;
@@ -305,7 +323,10 @@ public class DescribeChannelTopPubUserListResponseBody extends TeaModel {
             }
 
             /**
-             * Location.
+             * <p>The geographic location, such as Beijing-Beijing.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Zhejiang-Hangzhou</p>
              */
             public Builder location(String location) {
                 this.location = location;
@@ -313,7 +334,10 @@ public class DescribeChannelTopPubUserListResponseBody extends TeaModel {
             }
 
             /**
-             * OnlineDuration.
+             * <p>The communication duration in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>115</p>
              */
             public Builder onlineDuration(Long onlineDuration) {
                 this.onlineDuration = onlineDuration;
@@ -321,7 +345,7 @@ public class DescribeChannelTopPubUserListResponseBody extends TeaModel {
             }
 
             /**
-             * OnlinePeriods.
+             * <p>The list of online periods for the user.</p>
              */
             public Builder onlinePeriods(java.util.List<OnlinePeriods> onlinePeriods) {
                 this.onlinePeriods = onlinePeriods;
@@ -329,7 +353,10 @@ public class DescribeChannelTopPubUserListResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testuserid</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;

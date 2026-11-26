@@ -75,6 +75,7 @@ public class DeleteAppStreamingOutTemplateRequest extends Request {
         } 
 
         /**
+         * <p>The application ID. You can create and query the ID in the console. Only a single ID is supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,7 @@ public class DeleteAppStreamingOutTemplateRequest extends Request {
         }
 
         /**
+         * <p>The stream ingest template information.</p>
          * <p>This parameter is required.</p>
          */
         public Builder streamingOutTemplate(StreamingOutTemplate streamingOutTemplate) {
@@ -144,6 +146,7 @@ public class DeleteAppStreamingOutTemplateRequest extends Request {
             } 
 
             /**
+             * <p>The template ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

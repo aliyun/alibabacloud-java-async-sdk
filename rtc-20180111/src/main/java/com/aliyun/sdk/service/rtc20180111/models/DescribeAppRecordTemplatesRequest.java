@@ -116,6 +116,7 @@ public class DescribeAppRecordTemplatesRequest extends Request {
         } 
 
         /**
+         * <p>The application ID. You can create and query the ID in the console. Only a single ID is supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -128,7 +129,10 @@ public class DescribeAppRecordTemplatesRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>The idempotency parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-42665544****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -137,7 +141,7 @@ public class DescribeAppRecordTemplatesRequest extends Request {
         }
 
         /**
-         * Condition.
+         * <p>The query conditions.</p>
          */
         public Builder condition(Condition condition) {
             String conditionShrink = shrink(condition, "Condition", "json");
@@ -147,7 +151,10 @@ public class DescribeAppRecordTemplatesRequest extends Request {
         }
 
         /**
-         * PageNum.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -156,7 +163,10 @@ public class DescribeAppRecordTemplatesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -224,7 +234,10 @@ public class DescribeAppRecordTemplatesRequest extends Request {
             } 
 
             /**
-             * Name.
+             * <p>The template name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -232,7 +245,10 @@ public class DescribeAppRecordTemplatesRequest extends Request {
             }
 
             /**
-             * TemplateId.
+             * <p>The template ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ac7N****</p>
              */
             public Builder templateId(String templateId) {
                 this.templateId = templateId;

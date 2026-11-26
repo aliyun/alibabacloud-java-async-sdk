@@ -89,6 +89,7 @@ public class CreateAppLayoutRequest extends Request {
         } 
 
         /**
+         * <p>The application ID. You can create and query the ID in the console. Only a single ID is supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,7 +102,10 @@ public class CreateAppLayoutRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>The client token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>53200b81-b761-4c10-842a-a0726d97xxxx</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -110,6 +114,7 @@ public class CreateAppLayoutRequest extends Request {
         }
 
         /**
+         * <p>The layout.</p>
          * <p>This parameter is required.</p>
          */
         public Builder layout(Layout layout) {
@@ -237,7 +242,10 @@ public class CreateAppLayoutRequest extends Request {
             } 
 
             /**
-             * Height.
+             * <p>The height of the pane, represented as a normalized percentage. Valid values: 0.0 &lt; Height ≤ 1.0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.25</p>
              */
             public Builder height(Double height) {
                 this.height = height;
@@ -245,7 +253,10 @@ public class CreateAppLayoutRequest extends Request {
             }
 
             /**
-             * PaneId.
+             * <p>The ID of the pane. The value starts from 0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder paneId(Long paneId) {
                 this.paneId = paneId;
@@ -253,7 +264,10 @@ public class CreateAppLayoutRequest extends Request {
             }
 
             /**
-             * Width.
+             * <p>The width of the pane, represented as a normalized percentage. Valid values: 0.0 &lt; Width ≤ 1.0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.25</p>
              */
             public Builder width(Double width) {
                 this.width = width;
@@ -261,7 +275,10 @@ public class CreateAppLayoutRequest extends Request {
             }
 
             /**
-             * X.
+             * <p>The X coordinate, represented as a normalized percentage. Valid values: 0.0 ≤ X ≤ 1.0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.25</p>
              */
             public Builder x(Double x) {
                 this.x = x;
@@ -269,7 +286,10 @@ public class CreateAppLayoutRequest extends Request {
             }
 
             /**
-             * Y.
+             * <p>The Y coordinate, represented as a normalized percentage. Valid values: 0.0 ≤ Y ≤ 1.0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.25</p>
              */
             public Builder y(Double y) {
                 this.y = y;
@@ -277,7 +297,10 @@ public class CreateAppLayoutRequest extends Request {
             }
 
             /**
-             * ZOrder.
+             * <p>The Z-order of the pane. A value of 0 indicates the bottom layer, 1 indicates the layer above 0, and so on.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder zOrder(Integer zOrder) {
                 this.zOrder = zOrder;
@@ -346,10 +369,11 @@ public class CreateAppLayoutRequest extends Request {
             } 
 
             /**
+             * <p>The name of the layout.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
-             * <p>布局</p>
+             * <p>Layout</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -357,6 +381,7 @@ public class CreateAppLayoutRequest extends Request {
             }
 
             /**
+             * <p>The list of panes.</p>
              * <p>This parameter is required.</p>
              */
             public Builder panes(java.util.List<Panes> panes) {

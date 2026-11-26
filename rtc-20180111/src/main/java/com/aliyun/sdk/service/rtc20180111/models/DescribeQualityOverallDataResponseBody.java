@@ -67,7 +67,7 @@ public class DescribeQualityOverallDataResponseBody extends TeaModel {
         } 
 
         /**
-         * QualityOverallData.
+         * <p>List of overview data.</p>
          */
         public Builder qualityOverallData(java.util.List<QualityOverallData> qualityOverallData) {
             this.qualityOverallData = qualityOverallData;
@@ -75,7 +75,10 @@ public class DescribeQualityOverallDataResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>231470C1-ACFB-4C9F-844F-4CFE1E3804C5</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -141,7 +144,10 @@ public class DescribeQualityOverallDataResponseBody extends TeaModel {
             } 
 
             /**
-             * X.
+             * <p>The x-axis coordinate in the Trend Indicator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1615831200</p>
              */
             public Builder x(String x) {
                 this.x = x;
@@ -149,7 +155,10 @@ public class DescribeQualityOverallDataResponseBody extends TeaModel {
             }
 
             /**
-             * Y.
+             * <p>The y-axis coordinate in the Trend Indicator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0000</p>
              */
             public Builder y(String y) {
                 this.y = y;
@@ -229,7 +238,10 @@ public class DescribeQualityOverallDataResponseBody extends TeaModel {
             } 
 
             /**
-             * Average.
+             * <p>The average value of the Metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.9376</p>
              */
             public Builder average(String average) {
                 this.average = average;
@@ -237,7 +249,7 @@ public class DescribeQualityOverallDataResponseBody extends TeaModel {
             }
 
             /**
-             * Nodes.
+             * <p>List of coordinate points for the Trend Indicator.</p>
              */
             public Builder nodes(java.util.List<Nodes> nodes) {
                 this.nodes = nodes;
@@ -245,7 +257,10 @@ public class DescribeQualityOverallDataResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The Metric Type queried.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>JOIN_CHANNEL_SUC_RATE</p>
              */
             public Builder type(String type) {
                 this.type = type;

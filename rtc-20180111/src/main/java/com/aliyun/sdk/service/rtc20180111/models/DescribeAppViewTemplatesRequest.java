@@ -102,6 +102,7 @@ public class DescribeAppViewTemplatesRequest extends Request {
         } 
 
         /**
+         * <p>Application ID. Create and view it in the console. You can specify only one ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,7 +115,7 @@ public class DescribeAppViewTemplatesRequest extends Request {
         }
 
         /**
-         * Condition.
+         * <p>Search condition.</p>
          */
         public Builder condition(Condition condition) {
             String conditionShrink = shrink(condition, "Condition", "json");
@@ -124,7 +125,10 @@ public class DescribeAppViewTemplatesRequest extends Request {
         }
 
         /**
-         * PageNum.
+         * <p>Page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -133,7 +137,10 @@ public class DescribeAppViewTemplatesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>Number of entries per page. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -201,7 +208,10 @@ public class DescribeAppViewTemplatesRequest extends Request {
             } 
 
             /**
-             * Name.
+             * <p>Template name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>测试</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -209,7 +219,10 @@ public class DescribeAppViewTemplatesRequest extends Request {
             }
 
             /**
-             * TemplateId.
+             * <p>Template ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Bj6D****</p>
              */
             public Builder templateId(String templateId) {
                 this.templateId = templateId;

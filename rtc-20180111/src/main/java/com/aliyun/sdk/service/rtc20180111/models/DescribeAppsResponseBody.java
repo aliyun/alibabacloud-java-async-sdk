@@ -101,7 +101,10 @@ public class DescribeAppsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>231470C1-ACFB-4C9F-844F-4CFE1E3804C6</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +112,10 @@ public class DescribeAppsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalNum.
+         * <p>The total number of results returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalNum(Integer totalNum) {
             this.totalNum = totalNum;
@@ -117,7 +123,10 @@ public class DescribeAppsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalPage.
+         * <p>The total number of pages returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalPage(Integer totalPage) {
             this.totalPage = totalPage;

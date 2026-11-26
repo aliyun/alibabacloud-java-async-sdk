@@ -104,6 +104,7 @@ public class StopCloudNoteRequest extends Request {
         } 
 
         /**
+         * <p>The application ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,6 +117,7 @@ public class StopCloudNoteRequest extends Request {
         }
 
         /**
+         * <p>The channel name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -128,7 +130,10 @@ public class StopCloudNoteRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>The idempotency parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>53200b81-b761-4c10-842a-a0726d97xxxx</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -137,6 +142,7 @@ public class StopCloudNoteRequest extends Request {
         }
 
         /**
+         * <p>The task ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

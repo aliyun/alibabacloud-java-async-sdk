@@ -118,6 +118,7 @@ public class ModifyStreamingPropertyRequest extends Request {
         } 
 
         /**
+         * <p>The application ID. You can create and query the ID in the console. Only a single ID is supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -130,6 +131,7 @@ public class ModifyStreamingPropertyRequest extends Request {
         }
 
         /**
+         * <p>The ID of an existing channel. Only a single ID is supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -142,6 +144,7 @@ public class ModifyStreamingPropertyRequest extends Request {
         }
 
         /**
+         * <p>The ID of the stream mixing task.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -154,7 +157,10 @@ public class ModifyStreamingPropertyRequest extends Request {
         }
 
         /**
-         * ViewContent.
+         * <p>The stream mixing content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>main</p>
          */
         public Builder viewContent(String viewContent) {
             this.putQueryParameter("ViewContent", viewContent);
@@ -163,7 +169,7 @@ public class ModifyStreamingPropertyRequest extends Request {
         }
 
         /**
-         * <p>ViewSubscribers。</p>
+         * <p>The view subscribers.</p>
          */
         public Builder viewSubscribers(java.util.List<String> viewSubscribers) {
             String viewSubscribersShrink = shrink(viewSubscribers, "ViewSubscribers", "simple");

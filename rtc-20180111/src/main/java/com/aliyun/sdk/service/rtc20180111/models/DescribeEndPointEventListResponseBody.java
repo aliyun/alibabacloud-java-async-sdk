@@ -67,7 +67,7 @@ public class DescribeEndPointEventListResponseBody extends TeaModel {
         } 
 
         /**
-         * Nodes.
+         * <p>The list of basic user information.</p>
          */
         public Builder nodes(java.util.List<Nodes> nodes) {
             this.nodes = nodes;
@@ -75,7 +75,10 @@ public class DescribeEndPointEventListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>231470C1-ACFB-4C9F-844F-4CFE1E3804C5</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -167,7 +170,10 @@ public class DescribeEndPointEventListResponseBody extends TeaModel {
             } 
 
             /**
-             * EventName.
+             * <p>The event name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Start publishing</p>
              */
             public Builder eventName(String eventName) {
                 this.eventName = eventName;
@@ -175,7 +181,14 @@ public class DescribeEndPointEventListResponseBody extends TeaModel {
             }
 
             /**
-             * EventType.
+             * <p>The event type. Valid values:</p>
+             * <ul>
+             * <li><strong>USER</strong>: user event</li>
+             * <li><strong>SYSTEM</strong>: system event</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>USER</p>
              */
             public Builder eventType(String eventType) {
                 this.eventType = eventType;
@@ -183,7 +196,10 @@ public class DescribeEndPointEventListResponseBody extends TeaModel {
             }
 
             /**
-             * Ts.
+             * <p>The time when the event occurred. The time is a UNIX timestamp in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1614936817</p>
              */
             public Builder ts(Long ts) {
                 this.ts = ts;
@@ -191,7 +207,10 @@ public class DescribeEndPointEventListResponseBody extends TeaModel {
             }
 
             /**
-             * TsInMs.
+             * <p>The time when the event occurred. The time is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1614936817123</p>
              */
             public Builder tsInMs(String tsInMs) {
                 this.tsInMs = tsInMs;
@@ -258,7 +277,7 @@ public class DescribeEndPointEventListResponseBody extends TeaModel {
             } 
 
             /**
-             * EventList.
+             * <p>The list of events.</p>
              */
             public Builder eventList(java.util.List<EventList> eventList) {
                 this.eventList = eventList;
@@ -266,7 +285,10 @@ public class DescribeEndPointEventListResponseBody extends TeaModel {
             }
 
             /**
-             * Ts.
+             * <p>The time when the first event occurred. The time is a UNIX timestamp in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1614936817</p>
              */
             public Builder ts(Long ts) {
                 this.ts = ts;
@@ -333,7 +355,7 @@ public class DescribeEndPointEventListResponseBody extends TeaModel {
             } 
 
             /**
-             * EventDataItems.
+             * <p>The list of event data.</p>
              */
             public Builder eventDataItems(java.util.List<EventDataItems> eventDataItems) {
                 this.eventDataItems = eventDataItems;
@@ -341,7 +363,10 @@ public class DescribeEndPointEventListResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testuserid</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;

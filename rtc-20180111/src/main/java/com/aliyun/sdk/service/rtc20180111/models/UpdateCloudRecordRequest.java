@@ -189,6 +189,7 @@ public class UpdateCloudRecordRequest extends Request {
         } 
 
         /**
+         * <p>The application ID. You can create and query it in the console. Only one ID is supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -201,7 +202,7 @@ public class UpdateCloudRecordRequest extends Request {
         }
 
         /**
-         * Backgrounds.
+         * <p>Background images.</p>
          */
         public Builder backgrounds(java.util.List<Backgrounds> backgrounds) {
             this.putQueryParameter("Backgrounds", backgrounds);
@@ -210,6 +211,7 @@ public class UpdateCloudRecordRequest extends Request {
         }
 
         /**
+         * <p>The existing channel ID. Only one ID is supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -222,7 +224,7 @@ public class UpdateCloudRecordRequest extends Request {
         }
 
         /**
-         * ClockWidgets.
+         * <p>Global clock watermarks.</p>
          */
         public Builder clockWidgets(java.util.List<ClockWidgets> clockWidgets) {
             this.putQueryParameter("ClockWidgets", clockWidgets);
@@ -231,7 +233,7 @@ public class UpdateCloudRecordRequest extends Request {
         }
 
         /**
-         * Images.
+         * <p>Global image watermarks.</p>
          */
         public Builder images(java.util.List<Images> images) {
             this.putQueryParameter("Images", images);
@@ -240,7 +242,18 @@ public class UpdateCloudRecordRequest extends Request {
         }
 
         /**
-         * LayoutSpecifiedUsers.
+         * <p>A list that specifies users for layout generation. It supports both blacklists and whitelists.</p>
+         * <p>Whitelist: Specifies the users whose video streams are subscribed to in the channel.</p>
+         * <ul>
+         * <li><p>The auto-fill feature uses this list for sequential filling.</p>
+         * </li>
+         * <li><p>During multi-layout switching, only users in the whitelist are included.</p>
+         * </li>
+         * </ul>
+         * <p>Blacklist: Specifies the users whose video streams are not subscribed to in the channel.</p>
+         * <ul>
+         * <li>During multi-layout switching, only users not in the blacklist are included.</li>
+         * </ul>
          */
         public Builder layoutSpecifiedUsers(LayoutSpecifiedUsers layoutSpecifiedUsers) {
             String layoutSpecifiedUsersShrink = shrink(layoutSpecifiedUsers, "LayoutSpecifiedUsers", "json");
@@ -250,7 +263,7 @@ public class UpdateCloudRecordRequest extends Request {
         }
 
         /**
-         * Panes.
+         * <p>Cell settings.</p>
          */
         public Builder panes(java.util.List<Panes> panes) {
             this.putQueryParameter("Panes", panes);
@@ -259,6 +272,7 @@ public class UpdateCloudRecordRequest extends Request {
         }
 
         /**
+         * <p>The task ID for this cloud recording. Only one ID is supported. It can contain letters, digits, underscores (_), and hyphens (-), with a maximum length of 55 bytes.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -271,6 +285,10 @@ public class UpdateCloudRecordRequest extends Request {
         }
 
         /**
+         * <p>The template ID.</p>
+         * <blockquote>
+         * <p>Notice: To update the layout, change the template ID. Resolution updates are not supported.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -283,7 +301,7 @@ public class UpdateCloudRecordRequest extends Request {
         }
 
         /**
-         * Texts.
+         * <p>Global text watermarks.</p>
          */
         public Builder texts(java.util.List<Texts> texts) {
             this.putQueryParameter("Texts", texts);
@@ -436,7 +454,10 @@ public class UpdateCloudRecordRequest extends Request {
             } 
 
             /**
-             * Alpha.
+             * <p>Transparency.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.9</p>
              */
             public Builder alpha(Double alpha) {
                 this.alpha = alpha;
@@ -444,7 +465,18 @@ public class UpdateCloudRecordRequest extends Request {
             }
 
             /**
-             * BackgroundCropMode.
+             * <p>The cropping mode. Valid values:</p>
+             * <ul>
+             * <li><p><strong>1</strong>: Crop while maintaining aspect ratio.</p>
+             * </li>
+             * <li><p><strong>2</strong>: Maintain aspect ratio with padding.</p>
+             * </li>
+             * <li><p><strong>3</strong>: Stretch to fill.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder backgroundCropMode(Integer backgroundCropMode) {
                 this.backgroundCropMode = backgroundCropMode;
@@ -452,6 +484,7 @@ public class UpdateCloudRecordRequest extends Request {
             }
 
             /**
+             * <p>Height.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -463,7 +496,10 @@ public class UpdateCloudRecordRequest extends Request {
             }
 
             /**
-             * Layer.
+             * <p>The z-axis layer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder layer(Integer layer) {
                 this.layer = layer;
@@ -471,6 +507,7 @@ public class UpdateCloudRecordRequest extends Request {
             }
 
             /**
+             * <p>The image URL.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -482,6 +519,7 @@ public class UpdateCloudRecordRequest extends Request {
             }
 
             /**
+             * <p>Width.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -493,6 +531,7 @@ public class UpdateCloudRecordRequest extends Request {
             }
 
             /**
+             * <p>The horizontal coordinate.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -504,6 +543,7 @@ public class UpdateCloudRecordRequest extends Request {
             }
 
             /**
+             * <p>The vertical coordinate.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -590,7 +630,10 @@ public class UpdateCloudRecordRequest extends Request {
             } 
 
             /**
-             * B.
+             * <p>B.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>255</p>
              */
             public Builder b(Integer b) {
                 this.b = b;
@@ -598,7 +641,10 @@ public class UpdateCloudRecordRequest extends Request {
             }
 
             /**
-             * G.
+             * <p>G.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>255</p>
              */
             public Builder g(Integer g) {
                 this.g = g;
@@ -606,7 +652,10 @@ public class UpdateCloudRecordRequest extends Request {
             }
 
             /**
-             * R.
+             * <p>R.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>255</p>
              */
             public Builder r(Integer r) {
                 this.r = r;
@@ -689,7 +738,10 @@ public class UpdateCloudRecordRequest extends Request {
             } 
 
             /**
-             * B.
+             * <p>B.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>255</p>
              */
             public Builder b(Integer b) {
                 this.b = b;
@@ -697,7 +749,10 @@ public class UpdateCloudRecordRequest extends Request {
             }
 
             /**
-             * G.
+             * <p>G.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>255</p>
              */
             public Builder g(Integer g) {
                 this.g = g;
@@ -705,7 +760,10 @@ public class UpdateCloudRecordRequest extends Request {
             }
 
             /**
-             * R.
+             * <p>R.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>255</p>
              */
             public Builder r(Integer r) {
                 this.r = r;
@@ -911,7 +969,10 @@ public class UpdateCloudRecordRequest extends Request {
             } 
 
             /**
-             * Alpha.
+             * <p>Transparency.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.9</p>
              */
             public Builder alpha(Double alpha) {
                 this.alpha = alpha;
@@ -919,7 +980,10 @@ public class UpdateCloudRecordRequest extends Request {
             }
 
             /**
-             * BoxAlpha.
+             * <p>Rectangle box transparency.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.6</p>
              */
             public Builder boxAlpha(Double boxAlpha) {
                 this.boxAlpha = boxAlpha;
@@ -927,7 +991,10 @@ public class UpdateCloudRecordRequest extends Request {
             }
 
             /**
-             * BoxBorderw.
+             * <p>Rectangle box border width.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder boxBorderw(Integer boxBorderw) {
                 this.boxBorderw = boxBorderw;
@@ -935,7 +1002,7 @@ public class UpdateCloudRecordRequest extends Request {
             }
 
             /**
-             * BoxColor.
+             * <p>Rectangle box color.</p>
              */
             public Builder boxColor(BoxColor boxColor) {
                 this.boxColor = boxColor;
@@ -943,7 +1010,32 @@ public class UpdateCloudRecordRequest extends Request {
             }
 
             /**
-             * Font.
+             * <p>Font.</p>
+             * <ul>
+             * <li><p><strong>0</strong>: Alibaba PuHuiTi Regular</p>
+             * </li>
+             * <li><p><strong>1</strong>: Alibaba PuHuiTi Light</p>
+             * </li>
+             * <li><p><strong>2</strong>: Alibaba PuHuiTi Medium</p>
+             * </li>
+             * <li><p><strong>3</strong>: Alibaba PuHuiTi Bold</p>
+             * </li>
+             * <li><p><strong>4</strong>: Alibaba PuHuiTi Heavy</p>
+             * </li>
+             * <li><p><strong>5</strong>: Ali Mama ShuHeiTi</p>
+             * </li>
+             * <li><p><strong>6</strong>: DingTalk JinBuTi</p>
+             * </li>
+             * <li><p><strong>7</strong>: Ali Mama DaoLiTi</p>
+             * </li>
+             * <li><p><strong>8</strong>: Ali Mama DongFang DaKai</p>
+             * </li>
+             * <li><p><strong>9</strong>: Ali Mama FangYuanTi</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder font(Integer font) {
                 this.font = font;
@@ -951,7 +1043,7 @@ public class UpdateCloudRecordRequest extends Request {
             }
 
             /**
-             * FontColor.
+             * <p>Font color.</p>
              */
             public Builder fontColor(FontColor fontColor) {
                 this.fontColor = fontColor;
@@ -959,7 +1051,10 @@ public class UpdateCloudRecordRequest extends Request {
             }
 
             /**
-             * FontSize.
+             * <p>Clock font size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder fontSize(Integer fontSize) {
                 this.fontSize = fontSize;
@@ -967,7 +1062,7 @@ public class UpdateCloudRecordRequest extends Request {
             }
 
             /**
-             * HasBox.
+             * <p>Whether to draw a rectangle box.</p>
              */
             public Builder hasBox(Boolean hasBox) {
                 this.hasBox = hasBox;
@@ -975,7 +1070,10 @@ public class UpdateCloudRecordRequest extends Request {
             }
 
             /**
-             * Layer.
+             * <p>The z-axis layer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder layer(Integer layer) {
                 this.layer = layer;
@@ -983,6 +1081,7 @@ public class UpdateCloudRecordRequest extends Request {
             }
 
             /**
+             * <p>The horizontal coordinate.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -994,6 +1093,7 @@ public class UpdateCloudRecordRequest extends Request {
             }
 
             /**
+             * <p>The vertical coordinate.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1005,7 +1105,10 @@ public class UpdateCloudRecordRequest extends Request {
             }
 
             /**
-             * Zone.
+             * <p>Time zone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder zone(Integer zone) {
                 this.zone = zone;
@@ -1157,7 +1260,10 @@ public class UpdateCloudRecordRequest extends Request {
             } 
 
             /**
-             * Alpha.
+             * <p>Transparency.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.9</p>
              */
             public Builder alpha(Double alpha) {
                 this.alpha = alpha;
@@ -1165,6 +1271,7 @@ public class UpdateCloudRecordRequest extends Request {
             }
 
             /**
+             * <p>Height.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1176,7 +1283,18 @@ public class UpdateCloudRecordRequest extends Request {
             }
 
             /**
-             * ImageCropMode.
+             * <p>The cropping mode. Valid values:</p>
+             * <ul>
+             * <li><p><strong>1</strong>: Crop while maintaining aspect ratio.</p>
+             * </li>
+             * <li><p><strong>2</strong>: Maintain aspect ratio with padding.</p>
+             * </li>
+             * <li><p><strong>3</strong>: Stretch to fill.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder imageCropMode(Integer imageCropMode) {
                 this.imageCropMode = imageCropMode;
@@ -1184,7 +1302,10 @@ public class UpdateCloudRecordRequest extends Request {
             }
 
             /**
-             * Layer.
+             * <p>The z-axis layer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder layer(Integer layer) {
                 this.layer = layer;
@@ -1192,6 +1313,7 @@ public class UpdateCloudRecordRequest extends Request {
             }
 
             /**
+             * <p>The image URL. The image content cannot be updated during stream ingest.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1203,6 +1325,7 @@ public class UpdateCloudRecordRequest extends Request {
             }
 
             /**
+             * <p>Width.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1214,6 +1337,7 @@ public class UpdateCloudRecordRequest extends Request {
             }
 
             /**
+             * <p>The horizontal coordinate.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1225,6 +1349,7 @@ public class UpdateCloudRecordRequest extends Request {
             }
 
             /**
+             * <p>The vertical coordinate.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1297,6 +1422,7 @@ public class UpdateCloudRecordRequest extends Request {
             } 
 
             /**
+             * <p>The list of specified user IDs.</p>
              * <p>This parameter is required.</p>
              */
             public Builder ids(java.util.List<String> ids) {
@@ -1305,7 +1431,11 @@ public class UpdateCloudRecordRequest extends Request {
             }
 
             /**
+             * <p>The type of the user list. Valid values: `black` for a blacklist and `white` for a whitelist.</p>
              * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>white</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -1470,7 +1600,10 @@ public class UpdateCloudRecordRequest extends Request {
             } 
 
             /**
-             * Alpha.
+             * <p>Transparency.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.9</p>
              */
             public Builder alpha(Double alpha) {
                 this.alpha = alpha;
@@ -1478,7 +1611,18 @@ public class UpdateCloudRecordRequest extends Request {
             }
 
             /**
-             * Display.
+             * <p>When to display.</p>
+             * <ul>
+             * <li><p>streamOnly: Display only when the user has a video stream (default).</p>
+             * </li>
+             * <li><p>backup: Display only when the user has no video stream.</p>
+             * </li>
+             * <li><p>always: Always display.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>backup</p>
              */
             public Builder display(String display) {
                 this.display = display;
@@ -1486,6 +1630,7 @@ public class UpdateCloudRecordRequest extends Request {
             }
 
             /**
+             * <p>Height.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1497,7 +1642,10 @@ public class UpdateCloudRecordRequest extends Request {
             }
 
             /**
-             * Layer.
+             * <p>The z-axis layer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder layer(Integer layer) {
                 this.layer = layer;
@@ -1505,7 +1653,18 @@ public class UpdateCloudRecordRequest extends Request {
             }
 
             /**
-             * PaneBackgroundCropMode.
+             * <p>The cropping mode. Valid values:</p>
+             * <ul>
+             * <li><p><strong>1</strong>: Crop while maintaining aspect ratio.</p>
+             * </li>
+             * <li><p><strong>2</strong>: Maintain aspect ratio with padding.</p>
+             * </li>
+             * <li><p><strong>3</strong>: Stretch to fill.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder paneBackgroundCropMode(Integer paneBackgroundCropMode) {
                 this.paneBackgroundCropMode = paneBackgroundCropMode;
@@ -1513,6 +1672,7 @@ public class UpdateCloudRecordRequest extends Request {
             }
 
             /**
+             * <p>The background image URL.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1524,6 +1684,7 @@ public class UpdateCloudRecordRequest extends Request {
             }
 
             /**
+             * <p>Width.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1535,6 +1696,7 @@ public class UpdateCloudRecordRequest extends Request {
             }
 
             /**
+             * <p>The horizontal coordinate.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1546,6 +1708,7 @@ public class UpdateCloudRecordRequest extends Request {
             }
 
             /**
+             * <p>The vertical coordinate.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1714,7 +1877,10 @@ public class UpdateCloudRecordRequest extends Request {
             } 
 
             /**
-             * Alpha.
+             * <p>Transparency.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.9</p>
              */
             public Builder alpha(Double alpha) {
                 this.alpha = alpha;
@@ -1722,7 +1888,18 @@ public class UpdateCloudRecordRequest extends Request {
             }
 
             /**
-             * Display.
+             * <p>When to display the watermark.</p>
+             * <ul>
+             * <li><p>streamOnly: Display only when the user has a video stream (default).</p>
+             * </li>
+             * <li><p>backup: Display only when the user has no video stream.</p>
+             * </li>
+             * <li><p>always: Always display.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>backup</p>
              */
             public Builder display(String display) {
                 this.display = display;
@@ -1730,6 +1907,7 @@ public class UpdateCloudRecordRequest extends Request {
             }
 
             /**
+             * <p>Height.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1741,7 +1919,10 @@ public class UpdateCloudRecordRequest extends Request {
             }
 
             /**
-             * Layer.
+             * <p>The z-axis layer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder layer(Integer layer) {
                 this.layer = layer;
@@ -1749,7 +1930,18 @@ public class UpdateCloudRecordRequest extends Request {
             }
 
             /**
-             * PaneImageCropMode.
+             * <p>The cropping mode. Valid values:</p>
+             * <ul>
+             * <li><p><strong>1</strong>: Crop while maintaining aspect ratio.</p>
+             * </li>
+             * <li><p><strong>2</strong>: Maintain aspect ratio with padding.</p>
+             * </li>
+             * <li><p><strong>3</strong>: Stretch to fill.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder paneImageCropMode(Integer paneImageCropMode) {
                 this.paneImageCropMode = paneImageCropMode;
@@ -1757,6 +1949,7 @@ public class UpdateCloudRecordRequest extends Request {
             }
 
             /**
+             * <p>The image URL. The image content cannot be updated during stream ingest.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1768,6 +1961,7 @@ public class UpdateCloudRecordRequest extends Request {
             }
 
             /**
+             * <p>Width.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1779,6 +1973,7 @@ public class UpdateCloudRecordRequest extends Request {
             }
 
             /**
+             * <p>The horizontal coordinate.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1790,6 +1985,7 @@ public class UpdateCloudRecordRequest extends Request {
             }
 
             /**
+             * <p>The vertical coordinate.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1876,7 +2072,10 @@ public class UpdateCloudRecordRequest extends Request {
             } 
 
             /**
-             * B.
+             * <p>B.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>255</p>
              */
             public Builder b(Integer b) {
                 this.b = b;
@@ -1884,7 +2083,10 @@ public class UpdateCloudRecordRequest extends Request {
             }
 
             /**
-             * G.
+             * <p>G.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>255</p>
              */
             public Builder g(Integer g) {
                 this.g = g;
@@ -1892,7 +2094,10 @@ public class UpdateCloudRecordRequest extends Request {
             }
 
             /**
-             * R.
+             * <p>R.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>255</p>
              */
             public Builder r(Integer r) {
                 this.r = r;
@@ -1975,7 +2180,10 @@ public class UpdateCloudRecordRequest extends Request {
             } 
 
             /**
-             * B.
+             * <p>B.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>255</p>
              */
             public Builder b(Integer b) {
                 this.b = b;
@@ -1983,7 +2191,10 @@ public class UpdateCloudRecordRequest extends Request {
             }
 
             /**
-             * G.
+             * <p>G.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>255</p>
              */
             public Builder g(Integer g) {
                 this.g = g;
@@ -1991,7 +2202,10 @@ public class UpdateCloudRecordRequest extends Request {
             }
 
             /**
-             * R.
+             * <p>R.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>255</p>
              */
             public Builder r(Integer r) {
                 this.r = r;
@@ -2210,7 +2424,10 @@ public class UpdateCloudRecordRequest extends Request {
             } 
 
             /**
-             * Alpha.
+             * <p>Watermark transparency.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.9</p>
              */
             public Builder alpha(Double alpha) {
                 this.alpha = alpha;
@@ -2218,7 +2435,10 @@ public class UpdateCloudRecordRequest extends Request {
             }
 
             /**
-             * BoxAlpha.
+             * <p>Rectangle box transparency.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.6</p>
              */
             public Builder boxAlpha(Double boxAlpha) {
                 this.boxAlpha = boxAlpha;
@@ -2226,7 +2446,10 @@ public class UpdateCloudRecordRequest extends Request {
             }
 
             /**
-             * BoxBorderw.
+             * <p>Rectangle box border width.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder boxBorderw(Integer boxBorderw) {
                 this.boxBorderw = boxBorderw;
@@ -2234,7 +2457,7 @@ public class UpdateCloudRecordRequest extends Request {
             }
 
             /**
-             * BoxColor.
+             * <p>Rectangle box color.</p>
              */
             public Builder boxColor(TextsBoxColor boxColor) {
                 this.boxColor = boxColor;
@@ -2242,7 +2465,18 @@ public class UpdateCloudRecordRequest extends Request {
             }
 
             /**
-             * Display.
+             * <p>When to display the watermark.</p>
+             * <ul>
+             * <li><p>streamOnly: Display only when the user has a video stream (default).</p>
+             * </li>
+             * <li><p>backup: Display only when the user has no video stream.</p>
+             * </li>
+             * <li><p>always: Always display.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>backup</p>
              */
             public Builder display(String display) {
                 this.display = display;
@@ -2250,7 +2484,32 @@ public class UpdateCloudRecordRequest extends Request {
             }
 
             /**
-             * Font.
+             * <p>Font.</p>
+             * <ul>
+             * <li><p><strong>0</strong>: Alibaba PuHuiTi Regular</p>
+             * </li>
+             * <li><p><strong>1</strong>: Alibaba PuHuiTi Light</p>
+             * </li>
+             * <li><p><strong>2</strong>: Alibaba PuHuiTi Medium</p>
+             * </li>
+             * <li><p><strong>3</strong>: Alibaba PuHuiTi Bold</p>
+             * </li>
+             * <li><p><strong>4</strong>: Alibaba PuHuiTi Heavy</p>
+             * </li>
+             * <li><p><strong>5</strong>: Ali Mama ShuHeiTi</p>
+             * </li>
+             * <li><p><strong>6</strong>: DingTalk JinBuTi</p>
+             * </li>
+             * <li><p><strong>7</strong>: Ali Mama DaoLiTi</p>
+             * </li>
+             * <li><p><strong>8</strong>: Ali Mama DongFang DaKai</p>
+             * </li>
+             * <li><p><strong>9</strong>: Ali Mama FangYuanTi</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder font(Integer font) {
                 this.font = font;
@@ -2258,7 +2517,7 @@ public class UpdateCloudRecordRequest extends Request {
             }
 
             /**
-             * FontColor.
+             * <p>Font color.</p>
              */
             public Builder fontColor(TextsFontColor fontColor) {
                 this.fontColor = fontColor;
@@ -2266,7 +2525,10 @@ public class UpdateCloudRecordRequest extends Request {
             }
 
             /**
-             * FontSize.
+             * <p>Font size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>36</p>
              */
             public Builder fontSize(Integer fontSize) {
                 this.fontSize = fontSize;
@@ -2274,7 +2536,7 @@ public class UpdateCloudRecordRequest extends Request {
             }
 
             /**
-             * HasBox.
+             * <p>Whether to draw a rectangle box.</p>
              */
             public Builder hasBox(Boolean hasBox) {
                 this.hasBox = hasBox;
@@ -2282,7 +2544,10 @@ public class UpdateCloudRecordRequest extends Request {
             }
 
             /**
-             * Layer.
+             * <p>The z-axis layer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder layer(Integer layer) {
                 this.layer = layer;
@@ -2290,6 +2555,7 @@ public class UpdateCloudRecordRequest extends Request {
             }
 
             /**
+             * <p>The watermark content.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -2301,6 +2567,7 @@ public class UpdateCloudRecordRequest extends Request {
             }
 
             /**
+             * <p>The horizontal coordinate.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -2312,6 +2579,7 @@ public class UpdateCloudRecordRequest extends Request {
             }
 
             /**
+             * <p>The vertical coordinate.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -2369,7 +2637,10 @@ public class UpdateCloudRecordRequest extends Request {
             } 
 
             /**
-             * WhiteboardId.
+             * <p>The whiteboard ID. Default value: default.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder whiteboardId(String whiteboardId) {
                 this.whiteboardId = whiteboardId;
@@ -2541,7 +2812,7 @@ public class UpdateCloudRecordRequest extends Request {
             } 
 
             /**
-             * Backgrounds.
+             * <p>Background images.</p>
              */
             public Builder backgrounds(java.util.List<PanesBackgrounds> backgrounds) {
                 this.backgrounds = backgrounds;
@@ -2549,7 +2820,7 @@ public class UpdateCloudRecordRequest extends Request {
             }
 
             /**
-             * Images.
+             * <p>Local image watermarks for the pane.</p>
              */
             public Builder images(java.util.List<PanesImages> images) {
                 this.images = images;
@@ -2557,7 +2828,18 @@ public class UpdateCloudRecordRequest extends Request {
             }
 
             /**
-             * PaneCropMode.
+             * <p>The cropping mode. Valid values:</p>
+             * <ul>
+             * <li><p><strong>1</strong>: Crop while maintaining aspect ratio.</p>
+             * </li>
+             * <li><p><strong>2</strong>: Maintain aspect ratio with padding.</p>
+             * </li>
+             * <li><p><strong>3</strong>: Stretch to fill.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder paneCropMode(Integer paneCropMode) {
                 this.paneCropMode = paneCropMode;
@@ -2565,6 +2847,7 @@ public class UpdateCloudRecordRequest extends Request {
             }
 
             /**
+             * <p>The pane ID, starting from 0.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -2576,7 +2859,7 @@ public class UpdateCloudRecordRequest extends Request {
             }
 
             /**
-             * ReservePaneForOfflineUser.
+             * <p>Reserves a pane for a user who goes offline. The default value is true. If true, the pane for a specified user or wildcard user remains as a placeholder. If false, the pane is filled with a video stream based on the Auto Fill order.</p>
              */
             public Builder reservePaneForOfflineUser(Boolean reservePaneForOfflineUser) {
                 this.reservePaneForOfflineUser = reservePaneForOfflineUser;
@@ -2584,7 +2867,16 @@ public class UpdateCloudRecordRequest extends Request {
             }
 
             /**
-             * Source.
+             * <p>The media source for the cell. You can specify a userId to target a specific user. Wildcard characters are also supported:</p>
+             * <ul>
+             * <li><p><strong>$ActiveSpeaker</strong>: The current active speaker in the channel.</p>
+             * </li>
+             * <li><p><strong>$ScreenShare</strong>: A screen-sharing user. If multiple users share their screens, they are filled in sequence.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>22</p>
              */
             public Builder source(String source) {
                 this.source = source;
@@ -2592,7 +2884,20 @@ public class UpdateCloudRecordRequest extends Request {
             }
 
             /**
-             * SourceType.
+             * <p>The media type of the cell. Valid values:</p>
+             * <ul>
+             * <li><p><strong>video</strong>: Camera or screen sharing stream (default).</p>
+             * </li>
+             * <li><p><strong>camera</strong>: Camera stream.</p>
+             * </li>
+             * <li><p><strong>screen</strong>: Screen sharing stream.</p>
+             * </li>
+             * <li><p><strong>whiteboard</strong>: Whiteboard.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>video</p>
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;
@@ -2600,7 +2905,7 @@ public class UpdateCloudRecordRequest extends Request {
             }
 
             /**
-             * Texts.
+             * <p>Local text watermarks for the pane.</p>
              */
             public Builder texts(java.util.List<PanesTexts> texts) {
                 this.texts = texts;
@@ -2608,7 +2913,16 @@ public class UpdateCloudRecordRequest extends Request {
             }
 
             /**
-             * VideoOrder.
+             * <p>The fill order when SourceType is video.</p>
+             * <ul>
+             * <li><p>screenFirst: Prioritize screen sharing (default).</p>
+             * </li>
+             * <li><p>cameraFirst: Prioritize camera.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>cameraFirst</p>
              */
             public Builder videoOrder(String videoOrder) {
                 this.videoOrder = videoOrder;
@@ -2616,7 +2930,7 @@ public class UpdateCloudRecordRequest extends Request {
             }
 
             /**
-             * Whiteboard.
+             * <p>Whiteboard configuration.</p>
              */
             public Builder whiteboard(Whiteboard whiteboard) {
                 this.whiteboard = whiteboard;
@@ -2699,7 +3013,10 @@ public class UpdateCloudRecordRequest extends Request {
             } 
 
             /**
-             * B.
+             * <p>B.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>255</p>
              */
             public Builder b(Integer b) {
                 this.b = b;
@@ -2707,7 +3024,10 @@ public class UpdateCloudRecordRequest extends Request {
             }
 
             /**
-             * G.
+             * <p>G.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>255</p>
              */
             public Builder g(Integer g) {
                 this.g = g;
@@ -2715,7 +3035,10 @@ public class UpdateCloudRecordRequest extends Request {
             }
 
             /**
-             * R.
+             * <p>R.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>255</p>
              */
             public Builder r(Integer r) {
                 this.r = r;
@@ -2798,7 +3121,10 @@ public class UpdateCloudRecordRequest extends Request {
             } 
 
             /**
-             * B.
+             * <p>B.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>255</p>
              */
             public Builder b(Integer b) {
                 this.b = b;
@@ -2806,7 +3132,10 @@ public class UpdateCloudRecordRequest extends Request {
             }
 
             /**
-             * G.
+             * <p>G.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>255</p>
              */
             public Builder g(Integer g) {
                 this.g = g;
@@ -2814,7 +3143,10 @@ public class UpdateCloudRecordRequest extends Request {
             }
 
             /**
-             * R.
+             * <p>R.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>255</p>
              */
             public Builder r(Integer r) {
                 this.r = r;
@@ -3020,7 +3352,10 @@ public class UpdateCloudRecordRequest extends Request {
             } 
 
             /**
-             * Alpha.
+             * <p>Watermark transparency.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.1</p>
              */
             public Builder alpha(Double alpha) {
                 this.alpha = alpha;
@@ -3028,7 +3363,10 @@ public class UpdateCloudRecordRequest extends Request {
             }
 
             /**
-             * BoxAlpha.
+             * <p>Rectangle box transparency.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.6</p>
              */
             public Builder boxAlpha(Double boxAlpha) {
                 this.boxAlpha = boxAlpha;
@@ -3036,7 +3374,10 @@ public class UpdateCloudRecordRequest extends Request {
             }
 
             /**
-             * BoxBorderw.
+             * <p>Rectangle box border width.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder boxBorderw(Integer boxBorderw) {
                 this.boxBorderw = boxBorderw;
@@ -3044,7 +3385,7 @@ public class UpdateCloudRecordRequest extends Request {
             }
 
             /**
-             * BoxColor.
+             * <p>Rectangle box color.</p>
              */
             public Builder boxColor(UpdateCloudRecordRequestTextsBoxColor boxColor) {
                 this.boxColor = boxColor;
@@ -3052,7 +3393,32 @@ public class UpdateCloudRecordRequest extends Request {
             }
 
             /**
-             * Font.
+             * <p>Font.</p>
+             * <ul>
+             * <li><p><strong>0</strong>: Alibaba PuHuiTi Regular</p>
+             * </li>
+             * <li><p><strong>1</strong>: Alibaba PuHuiTi Light</p>
+             * </li>
+             * <li><p><strong>2</strong>: Alibaba PuHuiTi Medium</p>
+             * </li>
+             * <li><p><strong>3</strong>: Alibaba PuHuiTi Bold</p>
+             * </li>
+             * <li><p><strong>4</strong>: Alibaba PuHuiTi Heavy</p>
+             * </li>
+             * <li><p><strong>5</strong>: Ali Mama ShuHeiTi</p>
+             * </li>
+             * <li><p><strong>6</strong>: DingTalk JinBuTi</p>
+             * </li>
+             * <li><p><strong>7</strong>: Ali Mama DaoLiTi</p>
+             * </li>
+             * <li><p><strong>8</strong>: Ali Mama DongFang DaKai</p>
+             * </li>
+             * <li><p><strong>9</strong>: Ali Mama FangYuanTi</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder font(Integer font) {
                 this.font = font;
@@ -3060,7 +3426,7 @@ public class UpdateCloudRecordRequest extends Request {
             }
 
             /**
-             * FontColor.
+             * <p>Font color.</p>
              */
             public Builder fontColor(UpdateCloudRecordRequestTextsFontColor fontColor) {
                 this.fontColor = fontColor;
@@ -3068,7 +3434,10 @@ public class UpdateCloudRecordRequest extends Request {
             }
 
             /**
-             * FontSize.
+             * <p>Font size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>36</p>
              */
             public Builder fontSize(Integer fontSize) {
                 this.fontSize = fontSize;
@@ -3076,7 +3445,7 @@ public class UpdateCloudRecordRequest extends Request {
             }
 
             /**
-             * HasBox.
+             * <p>Whether to draw a rectangle box.</p>
              */
             public Builder hasBox(Boolean hasBox) {
                 this.hasBox = hasBox;
@@ -3084,7 +3453,10 @@ public class UpdateCloudRecordRequest extends Request {
             }
 
             /**
-             * Layer.
+             * <p>The z-axis layer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder layer(Integer layer) {
                 this.layer = layer;
@@ -3092,6 +3464,7 @@ public class UpdateCloudRecordRequest extends Request {
             }
 
             /**
+             * <p>The watermark content.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -3103,6 +3476,7 @@ public class UpdateCloudRecordRequest extends Request {
             }
 
             /**
+             * <p>The horizontal coordinate.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -3114,6 +3488,7 @@ public class UpdateCloudRecordRequest extends Request {
             }
 
             /**
+             * <p>The vertical coordinate.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

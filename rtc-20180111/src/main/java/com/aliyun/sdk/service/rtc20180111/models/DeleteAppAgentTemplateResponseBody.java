@@ -67,7 +67,10 @@ public class DeleteAppAgentTemplateResponseBody extends TeaModel {
         } 
 
         /**
-         * Id.
+         * <p>The template ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1223131213231313213</p>
          */
         public Builder id(String id) {
             this.id = id;

@@ -93,7 +93,11 @@ public class DescribeChannelUserResponseBody extends TeaModel {
         } 
 
         /**
-         * ChannelExist.
+         * <p>Indicates whether the channel exists. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The channel exists.</li>
+         * <li><strong>false</strong>: The channel does not exist.</li>
+         * </ul>
          */
         public Builder channelExist(Boolean channelExist) {
             this.channelExist = channelExist;
@@ -101,7 +105,11 @@ public class DescribeChannelUserResponseBody extends TeaModel {
         }
 
         /**
-         * InChannel.
+         * <p>Indicates whether the user is currently in the channel. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The user is in the channel.</li>
+         * <li><strong>false</strong>: The user is not in the channel.</li>
+         * </ul>
          */
         public Builder inChannel(Boolean inChannel) {
             this.inChannel = inChannel;
@@ -109,7 +117,10 @@ public class DescribeChannelUserResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16A96B9A-F203-4EC5-8E43-CB92E68F4CF8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +128,7 @@ public class DescribeChannelUserResponseBody extends TeaModel {
         }
 
         /**
-         * Sessions.
+         * <p>The list of session information.</p>
          */
         public Builder sessions(java.util.List<Sessions> sessions) {
             this.sessions = sessions;
@@ -196,7 +207,10 @@ public class DescribeChannelUserResponseBody extends TeaModel {
             } 
 
             /**
-             * Joined.
+             * <p>The UNIX timestamp in seconds when the user joined the channel. The time is in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1557909133</p>
              */
             public Builder joined(Long joined) {
                 this.joined = joined;
@@ -204,7 +218,10 @@ public class DescribeChannelUserResponseBody extends TeaModel {
             }
 
             /**
-             * SessionId.
+             * <p>The session ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xa744sxx8rtobgj****</p>
              */
             public Builder sessionId(String sessionId) {
                 this.sessionId = sessionId;
@@ -212,7 +229,10 @@ public class DescribeChannelUserResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1811****</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;

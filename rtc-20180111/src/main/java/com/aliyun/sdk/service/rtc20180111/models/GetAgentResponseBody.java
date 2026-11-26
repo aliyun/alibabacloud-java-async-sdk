@@ -106,7 +106,10 @@ public class GetAgentResponseBody extends TeaModel {
         } 
 
         /**
-         * Message.
+         * <p>Status message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -114,7 +117,7 @@ public class GetAgentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>Request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>6159ba01-6687-4fb2-a831-f0cd8d188648</p>
@@ -125,7 +128,10 @@ public class GetAgentResponseBody extends TeaModel {
         }
 
         /**
-         * StartTime.
+         * <p>Start timestamp, in Unix time, measured in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1751513144838</p>
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -133,7 +139,10 @@ public class GetAgentResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>Agent status. Valid values: 0 (not started), 1 (starting), 2 (running), 3 (stopping), 4 (stopped), or 5 (failed).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -141,7 +150,10 @@ public class GetAgentResponseBody extends TeaModel {
         }
 
         /**
-         * StopTime.
+         * <p>End timestamp, in Unix time, measured in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1751513144838</p>
          */
         public Builder stopTime(String stopTime) {
             this.stopTime = stopTime;

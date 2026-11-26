@@ -145,7 +145,7 @@ public class DescribeAppRecordingFilesRequest extends Request {
         } 
 
         /**
-         * <p>APP ID。</p>
+         * <p>App ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -158,7 +158,10 @@ public class DescribeAppRecordingFilesRequest extends Request {
         }
 
         /**
-         * ChannelId.
+         * <p>Channel ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>311</p>
          */
         public Builder channelId(String channelId) {
             this.putQueryParameter("ChannelId", channelId);
@@ -167,7 +170,10 @@ public class DescribeAppRecordingFilesRequest extends Request {
         }
 
         /**
-         * EndTs.
+         * <p>The query range specifies the start time of the recording task. It is defined as a closed interval and measured in milliseconds (ms).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1712376532000</p>
          */
         public Builder endTs(Long endTs) {
             this.putQueryParameter("EndTs", endTs);
@@ -176,7 +182,10 @@ public class DescribeAppRecordingFilesRequest extends Request {
         }
 
         /**
-         * PageNo.
+         * <p>Page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -185,7 +194,10 @@ public class DescribeAppRecordingFilesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>Number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -194,7 +206,10 @@ public class DescribeAppRecordingFilesRequest extends Request {
         }
 
         /**
-         * StartTs.
+         * <p>Query range start time (open interval) for recording tasks, in milliseconds. If not specified, defaults to the past 3 days. You can query recordings up to one year old.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1712376032000</p>
          */
         public Builder startTs(Long startTs) {
             this.putQueryParameter("StartTs", startTs);
@@ -203,7 +218,7 @@ public class DescribeAppRecordingFilesRequest extends Request {
         }
 
         /**
-         * TaskIds.
+         * <p>List of recording task IDs.</p>
          */
         public Builder taskIds(java.util.List<String> taskIds) {
             String taskIdsShrink = shrink(taskIds, "TaskIds", "json");

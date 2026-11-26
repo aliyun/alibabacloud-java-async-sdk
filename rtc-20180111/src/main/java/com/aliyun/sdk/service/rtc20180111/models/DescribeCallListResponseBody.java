@@ -106,7 +106,7 @@ public class DescribeCallListResponseBody extends TeaModel {
         } 
 
         /**
-         * CallList.
+         * <p>List of communications.</p>
          */
         public Builder callList(java.util.List<CallList> callList) {
             this.callList = callList;
@@ -114,7 +114,10 @@ public class DescribeCallListResponseBody extends TeaModel {
         }
 
         /**
-         * PageNo.
+         * <p>Page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.pageNo = pageNo;
@@ -122,7 +125,10 @@ public class DescribeCallListResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>Quantity per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -130,7 +136,10 @@ public class DescribeCallListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>231470C1-ACFB-4C9F-844F-4CFE1E3804C5</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class DescribeCallListResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCnt.
+         * <p>Total Quantity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder totalCnt(Integer totalCnt) {
             this.totalCnt = totalCnt;
@@ -293,7 +305,10 @@ public class DescribeCallListResponseBody extends TeaModel {
             }
 
             /**
-             * BadExpUserCnt.
+             * <p>Number of users with poor communication experience.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder badExpUserCnt(Integer badExpUserCnt) {
                 this.badExpUserCnt = badExpUserCnt;
@@ -301,7 +316,14 @@ public class DescribeCallListResponseBody extends TeaModel {
             }
 
             /**
-             * CallStatus.
+             * <p>Communication status. Valid values:  </p>
+             * <ul>
+             * <li><strong>IN</strong>: In progress.  </li>
+             * <li><strong>OUT</strong>: Ended.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>OUT</p>
              */
             public Builder callStatus(String callStatus) {
                 this.callStatus = callStatus;
@@ -309,7 +331,10 @@ public class DescribeCallListResponseBody extends TeaModel {
             }
 
             /**
-             * ChannelId.
+             * <p>Channel ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>904</p>
              */
             public Builder channelId(String channelId) {
                 this.channelId = channelId;
@@ -317,7 +342,10 @@ public class DescribeCallListResponseBody extends TeaModel {
             }
 
             /**
-             * CreatedTs.
+             * <p>The UNIX timestamp indicating when the communication was created, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1614936817</p>
              */
             public Builder createdTs(Long createdTs) {
                 this.createdTs = createdTs;
@@ -325,7 +353,10 @@ public class DescribeCallListResponseBody extends TeaModel {
             }
 
             /**
-             * DestroyedTs.
+             * <p>The UNIX timestamp indicating when the communication was released, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1614936817</p>
              */
             public Builder destroyedTs(Long destroyedTs) {
                 this.destroyedTs = destroyedTs;
@@ -333,7 +364,10 @@ public class DescribeCallListResponseBody extends TeaModel {
             }
 
             /**
-             * Duration.
+             * <p>Duration of the communication, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder duration(Long duration) {
                 this.duration = duration;
@@ -341,7 +375,10 @@ public class DescribeCallListResponseBody extends TeaModel {
             }
 
             /**
-             * UserCnt.
+             * <p>User Count.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder userCnt(Integer userCnt) {
                 this.userCnt = userCnt;

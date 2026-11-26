@@ -80,7 +80,7 @@ public class DescribeQoeMetricDataResponseBody extends TeaModel {
         } 
 
         /**
-         * AudioData.
+         * <p>Audio data.</p>
          */
         public Builder audioData(java.util.List<AudioData> audioData) {
             this.audioData = audioData;
@@ -88,7 +88,10 @@ public class DescribeQoeMetricDataResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>231470C1-ACFB-4C9F-844F-4CFE1E3804C5</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,7 @@ public class DescribeQoeMetricDataResponseBody extends TeaModel {
         }
 
         /**
-         * VideoData.
+         * <p>Video data.</p>
          */
         public Builder videoData(java.util.List<VideoData> videoData) {
             this.videoData = videoData;
@@ -162,7 +165,10 @@ public class DescribeQoeMetricDataResponseBody extends TeaModel {
             } 
 
             /**
-             * X.
+             * <p>X-axis coordinate in the audio trend indicator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1548670256</p>
              */
             public Builder x(String x) {
                 this.x = x;
@@ -170,7 +176,10 @@ public class DescribeQoeMetricDataResponseBody extends TeaModel {
             }
 
             /**
-             * Y.
+             * <p>Y-axis coordinate in the audio trend indicator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder y(String y) {
                 this.y = y;
@@ -250,7 +259,7 @@ public class DescribeQoeMetricDataResponseBody extends TeaModel {
             } 
 
             /**
-             * Nodes.
+             * <p>List of coordinate points for the audio trend indicator.</p>
              */
             public Builder nodes(java.util.List<Nodes> nodes) {
                 this.nodes = nodes;
@@ -258,7 +267,14 @@ public class DescribeQoeMetricDataResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>Communication experience. Valid values:  </p>
+             * <ul>
+             * <li><strong>AUDIO</strong>: Audio bitrate.  </li>
+             * <li><strong>AUDIO_STUCK</strong>: Audio downlink stuttering.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>AUDIO</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -266,7 +282,10 @@ public class DescribeQoeMetricDataResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * <p>User ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testuserid</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -333,7 +352,10 @@ public class DescribeQoeMetricDataResponseBody extends TeaModel {
             } 
 
             /**
-             * X.
+             * <p>The x-axis coordinate in the video metric trend graph.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1548670256</p>
              */
             public Builder x(String x) {
                 this.x = x;
@@ -341,7 +363,10 @@ public class DescribeQoeMetricDataResponseBody extends TeaModel {
             }
 
             /**
-             * Y.
+             * <p>The y-axis coordinate in the Video Trend Indicator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder y(String y) {
                 this.y = y;
@@ -421,7 +446,7 @@ public class DescribeQoeMetricDataResponseBody extends TeaModel {
             } 
 
             /**
-             * Nodes.
+             * <p>List of coordinate points for the video metric trend graph.</p>
              */
             public Builder nodes(java.util.List<VideoDataNodes> nodes) {
                 this.nodes = nodes;
@@ -429,7 +454,18 @@ public class DescribeQoeMetricDataResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of metric that impacts communication experience. Valid values:</p>
+             * <ul>
+             * <li><strong>VIDEO_CAMERA</strong>: Camera bitrate.</li>
+             * <li><strong>VIDEO_SCREEN_SHARE</strong>: Screen sharing stream bitrate.</li>
+             * <li><strong>VIDEO_STUCK_CAMERA</strong>: Camera stuttering.</li>
+             * <li><strong>VIDEO_STUCK_SCREEN_SHARE</strong>: Screen sharing stuttering.</li>
+             * <li><strong>VIDEO_VAGUE_CAMERA</strong>: Camera blur.</li>
+             * <li><strong>VIDEO_VAGUE_SCREEN_SHARE</strong>: Screen sharing blur.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>VIDEO_CAMERA</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -437,7 +473,10 @@ public class DescribeQoeMetricDataResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * <p>User ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testuserid</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;

@@ -93,7 +93,14 @@ public class DescribePubUserListBySubUserResponseBody extends TeaModel {
         } 
 
         /**
-         * CallStatus.
+         * <p>Communication status. Valid values:  </p>
+         * <ul>
+         * <li><strong>IN</strong>: In progress.  </li>
+         * <li><strong>OUT</strong>: Ended.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>IN</p>
          */
         public Builder callStatus(String callStatus) {
             this.callStatus = callStatus;
@@ -101,7 +108,7 @@ public class DescribePubUserListBySubUserResponseBody extends TeaModel {
         }
 
         /**
-         * PubUserDetailList.
+         * <p>Details of publishing users.</p>
          */
         public Builder pubUserDetailList(java.util.List<PubUserDetailList> pubUserDetailList) {
             this.pubUserDetailList = pubUserDetailList;
@@ -109,7 +116,10 @@ public class DescribePubUserListBySubUserResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>231470C1-ACFB-4C9F-844F-4CFE1E3804C5</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,7 @@ public class DescribePubUserListBySubUserResponseBody extends TeaModel {
         }
 
         /**
-         * SubUserDetail.
+         * <p>Subscriber user details.</p>
          */
         public Builder subUserDetail(SubUserDetail subUserDetail) {
             this.subUserDetail = subUserDetail;
@@ -183,7 +193,10 @@ public class DescribePubUserListBySubUserResponseBody extends TeaModel {
             } 
 
             /**
-             * JoinTs.
+             * <p>The time when the user joined the channel, represented as a UNIX timestamp in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1614936817</p>
              */
             public Builder joinTs(Long joinTs) {
                 this.joinTs = joinTs;
@@ -191,7 +204,10 @@ public class DescribePubUserListBySubUserResponseBody extends TeaModel {
             }
 
             /**
-             * LeaveTs.
+             * <p>The time when the user left the channel, represented as a UNIX timestamp in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1614936817</p>
              */
             public Builder leaveTs(Long leaveTs) {
                 this.leaveTs = leaveTs;
@@ -453,7 +469,7 @@ public class DescribePubUserListBySubUserResponseBody extends TeaModel {
             } 
 
             /**
-             * CallIdList.
+             * <p>Call IDs of the user&quot;s communication streams.</p>
              */
             public Builder callIdList(java.util.List<String> callIdList) {
                 this.callIdList = callIdList;
@@ -461,7 +477,10 @@ public class DescribePubUserListBySubUserResponseBody extends TeaModel {
             }
 
             /**
-             * ClientType.
+             * <p>Client type. Valid values: WEB: Web client. NATIVE: Native client.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NATIVE</p>
              */
             public Builder clientType(String clientType) {
                 this.clientType = clientType;
@@ -469,7 +488,10 @@ public class DescribePubUserListBySubUserResponseBody extends TeaModel {
             }
 
             /**
-             * CreatedTs.
+             * <p>The time when the user first joined the channel, represented as a UNIX timestamp in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1614936817</p>
              */
             public Builder createdTs(Long createdTs) {
                 this.createdTs = createdTs;
@@ -477,7 +499,10 @@ public class DescribePubUserListBySubUserResponseBody extends TeaModel {
             }
 
             /**
-             * DestroyedTs.
+             * <p>The time when the user last left the channel, represented as a UNIX timestamp in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1614936817</p>
              */
             public Builder destroyedTs(Long destroyedTs) {
                 this.destroyedTs = destroyedTs;
@@ -485,7 +510,10 @@ public class DescribePubUserListBySubUserResponseBody extends TeaModel {
             }
 
             /**
-             * Duration.
+             * <p>Communication duration, measured from the first entry to the final exit, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder duration(Long duration) {
                 this.duration = duration;
@@ -493,7 +521,10 @@ public class DescribePubUserListBySubUserResponseBody extends TeaModel {
             }
 
             /**
-             * Location.
+             * <p>Geographical location information, such as Zhejiang Province-Hangzhou City.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>浙江省-杭州市</p>
              */
             public Builder location(String location) {
                 this.location = location;
@@ -501,7 +532,10 @@ public class DescribePubUserListBySubUserResponseBody extends TeaModel {
             }
 
             /**
-             * Network.
+             * <p>Network type, such as WiFi, 4G, etc.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4G</p>
              */
             public Builder network(String network) {
                 this.network = network;
@@ -509,7 +543,7 @@ public class DescribePubUserListBySubUserResponseBody extends TeaModel {
             }
 
             /**
-             * NetworkList.
+             * <p>Network types, such as WiFi, 4G, etc.</p>
              */
             public Builder networkList(java.util.List<String> networkList) {
                 this.networkList = networkList;
@@ -517,7 +551,10 @@ public class DescribePubUserListBySubUserResponseBody extends TeaModel {
             }
 
             /**
-             * OnlineDuration.
+             * <p>Online duration, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder onlineDuration(Long onlineDuration) {
                 this.onlineDuration = onlineDuration;
@@ -525,7 +562,7 @@ public class DescribePubUserListBySubUserResponseBody extends TeaModel {
             }
 
             /**
-             * OnlinePeriods.
+             * <p>Online period information.</p>
              */
             public Builder onlinePeriods(java.util.List<OnlinePeriods> onlinePeriods) {
                 this.onlinePeriods = onlinePeriods;
@@ -533,7 +570,10 @@ public class DescribePubUserListBySubUserResponseBody extends TeaModel {
             }
 
             /**
-             * Os.
+             * <p>Platform Type: If the client type is WEB, this field indicates the type of the browser. If the client type is NATIVE, this field indicates the operating system.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>iOS</p>
              */
             public Builder os(String os) {
                 this.os = os;
@@ -541,7 +581,7 @@ public class DescribePubUserListBySubUserResponseBody extends TeaModel {
             }
 
             /**
-             * OsList.
+             * <p>Platform Type: If the client type is WEB, this field indicates the type of the browser. If the client type is NATIVE, this field indicates the operating system.</p>
              */
             public Builder osList(java.util.List<String> osList) {
                 this.osList = osList;
@@ -549,7 +589,7 @@ public class DescribePubUserListBySubUserResponseBody extends TeaModel {
             }
 
             /**
-             * Roles.
+             * <p>User roles. Valid values: SENDER: sender. RECEIVER: receiver.</p>
              */
             public Builder roles(java.util.List<String> roles) {
                 this.roles = roles;
@@ -557,7 +597,10 @@ public class DescribePubUserListBySubUserResponseBody extends TeaModel {
             }
 
             /**
-             * SdkVersion.
+             * <p>SDK Version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0.0</p>
              */
             public Builder sdkVersion(String sdkVersion) {
                 this.sdkVersion = sdkVersion;
@@ -565,7 +608,7 @@ public class DescribePubUserListBySubUserResponseBody extends TeaModel {
             }
 
             /**
-             * SdkVersionList.
+             * <p>List of software development kit (SDK) versions, such as 1.0.0, 1.1.1, etc.</p>
              */
             public Builder sdkVersionList(java.util.List<String> sdkVersionList) {
                 this.sdkVersionList = sdkVersionList;
@@ -573,7 +616,10 @@ public class DescribePubUserListBySubUserResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * <p>User ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testuserid</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -581,7 +627,10 @@ public class DescribePubUserListBySubUserResponseBody extends TeaModel {
             }
 
             /**
-             * UserIdAlias.
+             * <p>User ID alias.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>yi****</p>
              */
             public Builder userIdAlias(String userIdAlias) {
                 this.userIdAlias = userIdAlias;
@@ -648,7 +697,10 @@ public class DescribePubUserListBySubUserResponseBody extends TeaModel {
             } 
 
             /**
-             * JoinTs.
+             * <p>The time when the user joined the channel, represented as a UNIX timestamp in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1614936817</p>
              */
             public Builder joinTs(Long joinTs) {
                 this.joinTs = joinTs;
@@ -656,7 +708,10 @@ public class DescribePubUserListBySubUserResponseBody extends TeaModel {
             }
 
             /**
-             * LeaveTs.
+             * <p>The time when the user left the channel, represented as a UNIX timestamp in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1614936817</p>
              */
             public Builder leaveTs(Long leaveTs) {
                 this.leaveTs = leaveTs;
@@ -905,7 +960,10 @@ public class DescribePubUserListBySubUserResponseBody extends TeaModel {
             } 
 
             /**
-             * ClientType.
+             * <p>Client type. Valid values: WEB: Web client. NATIVE: Native client.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NATIVE</p>
              */
             public Builder clientType(String clientType) {
                 this.clientType = clientType;
@@ -913,7 +971,10 @@ public class DescribePubUserListBySubUserResponseBody extends TeaModel {
             }
 
             /**
-             * CreatedTs.
+             * <p>The time when the user first joined the channel, represented as a UNIX timestamp in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1614936817</p>
              */
             public Builder createdTs(Long createdTs) {
                 this.createdTs = createdTs;
@@ -921,7 +982,10 @@ public class DescribePubUserListBySubUserResponseBody extends TeaModel {
             }
 
             /**
-             * DestroyedTs.
+             * <p>The time when the user last left the channel, represented as a UNIX timestamp, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1614936817</p>
              */
             public Builder destroyedTs(Long destroyedTs) {
                 this.destroyedTs = destroyedTs;
@@ -929,7 +993,10 @@ public class DescribePubUserListBySubUserResponseBody extends TeaModel {
             }
 
             /**
-             * Duration.
+             * <p>Communication duration, from the first entry to the final exit, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder duration(Long duration) {
                 this.duration = duration;
@@ -937,7 +1004,10 @@ public class DescribePubUserListBySubUserResponseBody extends TeaModel {
             }
 
             /**
-             * Location.
+             * <p>Geographic location information, such as Zhejiang Province-Hangzhou City.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>浙江省-杭州市</p>
              */
             public Builder location(String location) {
                 this.location = location;
@@ -945,7 +1015,10 @@ public class DescribePubUserListBySubUserResponseBody extends TeaModel {
             }
 
             /**
-             * Network.
+             * <p>Network type, such as WiFi, 4G, etc.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4G</p>
              */
             public Builder network(String network) {
                 this.network = network;
@@ -953,7 +1026,7 @@ public class DescribePubUserListBySubUserResponseBody extends TeaModel {
             }
 
             /**
-             * NetworkList.
+             * <p>Network type, such as WiFi, 4G, etc.</p>
              */
             public Builder networkList(java.util.List<String> networkList) {
                 this.networkList = networkList;
@@ -961,7 +1034,10 @@ public class DescribePubUserListBySubUserResponseBody extends TeaModel {
             }
 
             /**
-             * OnlineDuration.
+             * <p>Online duration, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder onlineDuration(Long onlineDuration) {
                 this.onlineDuration = onlineDuration;
@@ -969,7 +1045,7 @@ public class DescribePubUserListBySubUserResponseBody extends TeaModel {
             }
 
             /**
-             * OnlinePeriods.
+             * <p>Online period information.</p>
              */
             public Builder onlinePeriods(java.util.List<SubUserDetailOnlinePeriods> onlinePeriods) {
                 this.onlinePeriods = onlinePeriods;
@@ -977,7 +1053,10 @@ public class DescribePubUserListBySubUserResponseBody extends TeaModel {
             }
 
             /**
-             * Os.
+             * <p>Platform Type: If the client type is WEB, this field indicates the type of the browser. If the client type is NATIVE, this field indicates the operating system type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>iOS</p>
              */
             public Builder os(String os) {
                 this.os = os;
@@ -985,7 +1064,7 @@ public class DescribePubUserListBySubUserResponseBody extends TeaModel {
             }
 
             /**
-             * OsList.
+             * <p>Platform Type: If the client type is WEB, this field indicates the type of the browser. If the client type is NATIVE, this field indicates the operating system type.</p>
              */
             public Builder osList(java.util.List<String> osList) {
                 this.osList = osList;
@@ -993,7 +1072,7 @@ public class DescribePubUserListBySubUserResponseBody extends TeaModel {
             }
 
             /**
-             * Roles.
+             * <p>User role.</p>
              */
             public Builder roles(java.util.List<String> roles) {
                 this.roles = roles;
@@ -1001,7 +1080,10 @@ public class DescribePubUserListBySubUserResponseBody extends TeaModel {
             }
 
             /**
-             * SdkVersion.
+             * <p>SDK Version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0.0</p>
              */
             public Builder sdkVersion(String sdkVersion) {
                 this.sdkVersion = sdkVersion;
@@ -1009,7 +1091,7 @@ public class DescribePubUserListBySubUserResponseBody extends TeaModel {
             }
 
             /**
-             * SdkVersionList.
+             * <p>List of SDK versions, such as 1.0.0, 1.1.1, etc.</p>
              */
             public Builder sdkVersionList(java.util.List<String> sdkVersionList) {
                 this.sdkVersionList = sdkVersionList;
@@ -1017,7 +1099,10 @@ public class DescribePubUserListBySubUserResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * <p>User ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testuserid</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -1025,7 +1110,10 @@ public class DescribePubUserListBySubUserResponseBody extends TeaModel {
             }
 
             /**
-             * UserIdAlias.
+             * <p>User ID alias.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>yi****</p>
              */
             public Builder userIdAlias(String userIdAlias) {
                 this.userIdAlias = userIdAlias;

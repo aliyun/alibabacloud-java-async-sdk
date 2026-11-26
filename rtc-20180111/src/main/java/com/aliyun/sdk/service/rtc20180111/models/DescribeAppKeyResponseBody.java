@@ -78,7 +78,10 @@ public class DescribeAppKeyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>154EF5DE-3D08-1F2C-A482-281F78D74B7C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

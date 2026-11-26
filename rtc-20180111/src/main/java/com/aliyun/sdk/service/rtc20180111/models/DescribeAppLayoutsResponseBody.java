@@ -93,7 +93,7 @@ public class DescribeAppLayoutsResponseBody extends TeaModel {
         } 
 
         /**
-         * Layouts.
+         * <p>The list of layouts.</p>
          */
         public Builder layouts(java.util.List<Layouts> layouts) {
             this.layouts = layouts;
@@ -101,7 +101,10 @@ public class DescribeAppLayoutsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of this request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16A96B9A-F203-4EC5-8E43-CB92E68F4CD8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +112,10 @@ public class DescribeAppLayoutsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalNum.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalNum(Long totalNum) {
             this.totalNum = totalNum;
@@ -117,7 +123,10 @@ public class DescribeAppLayoutsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalPage.
+         * <p>The total number of pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalPage(Long totalPage) {
             this.totalPage = totalPage;
@@ -235,7 +244,10 @@ public class DescribeAppLayoutsResponseBody extends TeaModel {
             } 
 
             /**
-             * Height.
+             * <p>The pane height, as a normalized percentage. The value range for Height is 0.0 &lt; Height ≤ 1.0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.25</p>
              */
             public Builder height(Float height) {
                 this.height = height;
@@ -243,7 +255,10 @@ public class DescribeAppLayoutsResponseBody extends TeaModel {
             }
 
             /**
-             * PaneId.
+             * <p>The pane ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder paneId(Integer paneId) {
                 this.paneId = paneId;
@@ -251,7 +266,10 @@ public class DescribeAppLayoutsResponseBody extends TeaModel {
             }
 
             /**
-             * Width.
+             * <p>The pane width, as a normalized percentage. The value range for Width is 0.0 &lt; Width ≤ 1.0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.25</p>
              */
             public Builder width(Float width) {
                 this.width = width;
@@ -259,7 +277,10 @@ public class DescribeAppLayoutsResponseBody extends TeaModel {
             }
 
             /**
-             * X.
+             * <p>The X coordinate, as a normalized percentage. The value range for X is 0.0 ≤ X ≤ 1.0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.25</p>
              */
             public Builder x(Float x) {
                 this.x = x;
@@ -267,7 +288,10 @@ public class DescribeAppLayoutsResponseBody extends TeaModel {
             }
 
             /**
-             * Y.
+             * <p>The Y coordinate, as a normalized percentage. The value range for Y is 0.0 ≤ Y ≤ 1.0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.25</p>
              */
             public Builder y(Float y) {
                 this.y = y;
@@ -275,7 +299,10 @@ public class DescribeAppLayoutsResponseBody extends TeaModel {
             }
 
             /**
-             * ZOrder.
+             * <p>The Z-order. 0 is the bottom layer, 1 is above 0, and so on.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder zOrder(Integer zOrder) {
                 this.zOrder = zOrder;
@@ -355,7 +382,10 @@ public class DescribeAppLayoutsResponseBody extends TeaModel {
             } 
 
             /**
-             * LayoutId.
+             * <p>The layout ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>167466539798442****</p>
              */
             public Builder layoutId(String layoutId) {
                 this.layoutId = layoutId;
@@ -363,7 +393,10 @@ public class DescribeAppLayoutsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The layout name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>测试</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -371,7 +404,7 @@ public class DescribeAppLayoutsResponseBody extends TeaModel {
             }
 
             /**
-             * Panes.
+             * <p>The list of panes.</p>
              */
             public Builder panes(java.util.List<Panes> panes) {
                 this.panes = panes;

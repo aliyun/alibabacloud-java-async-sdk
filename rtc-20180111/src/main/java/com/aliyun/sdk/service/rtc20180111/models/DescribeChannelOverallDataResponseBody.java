@@ -93,7 +93,7 @@ public class DescribeChannelOverallDataResponseBody extends TeaModel {
         } 
 
         /**
-         * CallInfo.
+         * <p>Basic communication information.</p>
          */
         public Builder callInfo(CallInfo callInfo) {
             this.callInfo = callInfo;
@@ -101,7 +101,7 @@ public class DescribeChannelOverallDataResponseBody extends TeaModel {
         }
 
         /**
-         * MetricDatas.
+         * <p>List of metric data.</p>
          */
         public Builder metricDatas(java.util.List<MetricDatas> metricDatas) {
             this.metricDatas = metricDatas;
@@ -109,7 +109,7 @@ public class DescribeChannelOverallDataResponseBody extends TeaModel {
         }
 
         /**
-         * OverallData.
+         * <p>Overview data.</p>
          */
         public Builder overallData(OverallData overallData) {
             this.overallData = overallData;
@@ -117,7 +117,10 @@ public class DescribeChannelOverallDataResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>231470C1-ACFB-4C9F-844F-4CFE1E3804C5</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -235,7 +238,10 @@ public class DescribeChannelOverallDataResponseBody extends TeaModel {
             } 
 
             /**
-             * AppId.
+             * <p>Application ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rjdhtnqy</p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -243,7 +249,16 @@ public class DescribeChannelOverallDataResponseBody extends TeaModel {
             }
 
             /**
-             * CallStatus.
+             * <p>Communication status. Valid values:  </p>
+             * <ul>
+             * <li><p><strong>IN</strong>: In progress.  </p>
+             * </li>
+             * <li><p><strong>OUT</strong>: Ended.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>IN</p>
              */
             public Builder callStatus(String callStatus) {
                 this.callStatus = callStatus;
@@ -251,7 +266,10 @@ public class DescribeChannelOverallDataResponseBody extends TeaModel {
             }
 
             /**
-             * ChannelId.
+             * <p>Channel ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456</p>
              */
             public Builder channelId(String channelId) {
                 this.channelId = channelId;
@@ -259,7 +277,10 @@ public class DescribeChannelOverallDataResponseBody extends TeaModel {
             }
 
             /**
-             * CreatedTs.
+             * <p>The UNIX timestamp when the channel was created, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1615860711</p>
              */
             public Builder createdTs(Long createdTs) {
                 this.createdTs = createdTs;
@@ -267,7 +288,10 @@ public class DescribeChannelOverallDataResponseBody extends TeaModel {
             }
 
             /**
-             * DestroyedTs.
+             * <p>The UNIX timestamp when the channel was released, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1615860811</p>
              */
             public Builder destroyedTs(Long destroyedTs) {
                 this.destroyedTs = destroyedTs;
@@ -275,7 +299,10 @@ public class DescribeChannelOverallDataResponseBody extends TeaModel {
             }
 
             /**
-             * Duration.
+             * <p>Channel duration, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder duration(Long duration) {
                 this.duration = duration;
@@ -355,7 +382,7 @@ public class DescribeChannelOverallDataResponseBody extends TeaModel {
             } 
 
             /**
-             * Ext.
+             * <p>Extension data.</p>
              */
             public Builder ext(java.util.Map<String, ?> ext) {
                 this.ext = ext;
@@ -363,7 +390,10 @@ public class DescribeChannelOverallDataResponseBody extends TeaModel {
             }
 
             /**
-             * X.
+             * <p>X-axis coordinate in the Trend Indicator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1612418625</p>
              */
             public Builder x(String x) {
                 this.x = x;
@@ -371,7 +401,10 @@ public class DescribeChannelOverallDataResponseBody extends TeaModel {
             }
 
             /**
-             * Y.
+             * <p>Y-axis coordinate in the Trend Indicator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder y(String y) {
                 this.y = y;
@@ -438,7 +471,7 @@ public class DescribeChannelOverallDataResponseBody extends TeaModel {
             } 
 
             /**
-             * Nodes.
+             * <p>List of coordinate points for the Trend Indicator.</p>
              */
             public Builder nodes(java.util.List<Nodes> nodes) {
                 this.nodes = nodes;
@@ -446,7 +479,14 @@ public class DescribeChannelOverallDataResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>Metric Type. Valid values:</p>
+             * <ul>
+             * <li><strong>CALL_QUALITY</strong>: Call quality.</li>
+             * <li><strong>CONN_NUM</strong>: Distribution of time intervals for successful channel joins.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>CALL_QUALITY</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -552,7 +592,10 @@ public class DescribeChannelOverallDataResponseBody extends TeaModel {
             } 
 
             /**
-             * ConnAvgTime.
+             * <p>Average communication connection time, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.5</p>
              */
             public Builder connAvgTime(Float connAvgTime) {
                 this.connAvgTime = connAvgTime;
@@ -560,7 +603,10 @@ public class DescribeChannelOverallDataResponseBody extends TeaModel {
             }
 
             /**
-             * FiveSecJoinRate.
+             * <p>Connection success rate within 5 seconds, represented as a decimal. For example, 1.0 indicates a 100% connection success rate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.91</p>
              */
             public Builder fiveSecJoinRate(Float fiveSecJoinRate) {
                 this.fiveSecJoinRate = fiveSecJoinRate;
@@ -568,7 +614,10 @@ public class DescribeChannelOverallDataResponseBody extends TeaModel {
             }
 
             /**
-             * TotalAudioStuckRate.
+             * <p>Overall audio stuttering rate, represented as a decimal. For example, 0.02 indicates an audio stuttering rate of 2%.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.02</p>
              */
             public Builder totalAudioStuckRate(Float totalAudioStuckRate) {
                 this.totalAudioStuckRate = totalAudioStuckRate;
@@ -576,7 +625,10 @@ public class DescribeChannelOverallDataResponseBody extends TeaModel {
             }
 
             /**
-             * TotalVideoStuckRate.
+             * <p>Overall video stuttering rate, represented as a decimal. For example, 0.02 indicates a video stuttering rate of 2%.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.02</p>
              */
             public Builder totalVideoStuckRate(Float totalVideoStuckRate) {
                 this.totalVideoStuckRate = totalVideoStuckRate;
@@ -584,7 +636,10 @@ public class DescribeChannelOverallDataResponseBody extends TeaModel {
             }
 
             /**
-             * TotalVideoVagueRate.
+             * <p>Overall video blur rate, represented as a decimal. For example, 0.02 indicates a video blur rate of 2%.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.02</p>
              */
             public Builder totalVideoVagueRate(Float totalVideoVagueRate) {
                 this.totalVideoVagueRate = totalVideoVagueRate;

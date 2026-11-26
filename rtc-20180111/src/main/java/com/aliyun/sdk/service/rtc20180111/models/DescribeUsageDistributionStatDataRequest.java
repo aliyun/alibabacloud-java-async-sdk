@@ -105,8 +105,11 @@ public class DescribeUsageDistributionStatDataRequest extends Request {
         } 
 
         /**
-         * <p>APP ID</p>
+         * <p>The app ID.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0rbd****</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -115,6 +118,7 @@ public class DescribeUsageDistributionStatDataRequest extends Request {
         }
 
         /**
+         * <p>The end time of the query. The value is a UNIX timestamp in seconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -127,6 +131,7 @@ public class DescribeUsageDistributionStatDataRequest extends Request {
         }
 
         /**
+         * <p>The start time of the query. The value is a UNIX timestamp in seconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -139,6 +144,12 @@ public class DescribeUsageDistributionStatDataRequest extends Request {
         }
 
         /**
+         * <p>The statistical dimension. Valid values:</p>
+         * <ul>
+         * <li><strong>CHANNEL_ONLINE</strong>: aggregates data by the number of online users in a channel.</li>
+         * <li><strong>NETWORK</strong>: aggregates data by network type.</li>
+         * <li><strong>OS</strong>: aggregates data by operating system type.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

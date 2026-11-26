@@ -89,6 +89,7 @@ public class StopRecordTaskRequest extends Request {
         } 
 
         /**
+         * <p>The application ID. Create and query the ID in the console. Only a single ID is supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -110,6 +111,7 @@ public class StopRecordTaskRequest extends Request {
         }
 
         /**
+         * <p>The task ID. Only a single ID is supported. The value must be the same as the TaskId parameter of the <a href="https://help.aliyun.com/document_detail/193528.html">StartRecordTask</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

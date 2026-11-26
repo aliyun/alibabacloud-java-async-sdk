@@ -89,6 +89,7 @@ public class ModifyAppRecordTemplateRequest extends Request {
         } 
 
         /**
+         * <p>Application ID. Create and query through the console. Only a single ID is supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,7 +102,10 @@ public class ModifyAppRecordTemplateRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>Idempotency parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>53200b81-b761-4c10-842a-a0726d97xxxx</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -110,6 +114,7 @@ public class ModifyAppRecordTemplateRequest extends Request {
         }
 
         /**
+         * <p>Recording template.</p>
          * <p>This parameter is required.</p>
          */
         public Builder recordTemplate(RecordTemplate recordTemplate) {
@@ -265,7 +270,10 @@ public class ModifyAppRecordTemplateRequest extends Request {
             } 
 
             /**
-             * DelayStopTime.
+             * <p>Delayed stop recording time. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>180</p>
              */
             public Builder delayStopTime(Integer delayStopTime) {
                 this.delayStopTime = delayStopTime;
@@ -273,6 +281,10 @@ public class ModifyAppRecordTemplateRequest extends Request {
             }
 
             /**
+             * <p>The naming convention for recording files.</p>
+             * <blockquote>
+             * <p>To ensure unique recording file names, use the following naming convention: <code>record/{AppId}/{ChannelId}/{TaskId}/{EscapedStartTime}/{EscapedEndTime}</code>.</p>
+             * </blockquote>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -284,6 +296,7 @@ public class ModifyAppRecordTemplateRequest extends Request {
             }
 
             /**
+             * <p>Recording file split duration (greater than or equal to 1800). Unit: seconds.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -295,6 +308,7 @@ public class ModifyAppRecordTemplateRequest extends Request {
             }
 
             /**
+             * <p>Recording file format. Currently, only .m3u8, .mp4, and .flv are supported.</p>
              * <p>This parameter is required.</p>
              */
             public Builder formats(java.util.List<String> formats) {
@@ -303,6 +317,8 @@ public class ModifyAppRecordTemplateRequest extends Request {
             }
 
             /**
+             * <p>Layout ID list, up to 16.</p>
+             * <p>Note: The layouts in the list must not have the same number of data sources.</p>
              * <p>This parameter is required.</p>
              */
             public Builder layoutIds(java.util.List<String> layoutIds) {
@@ -311,6 +327,7 @@ public class ModifyAppRecordTemplateRequest extends Request {
             }
 
             /**
+             * <p>Encoding options.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -322,6 +339,7 @@ public class ModifyAppRecordTemplateRequest extends Request {
             }
 
             /**
+             * <p>Template name.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -333,6 +351,7 @@ public class ModifyAppRecordTemplateRequest extends Request {
             }
 
             /**
+             * <p>Template ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
