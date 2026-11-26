@@ -80,7 +80,7 @@ public class ListSyslogsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The paginated list of log objects.</p>
+         * <p>The paginated list of logs.</p>
          */
         public Builder logs(java.util.List<Logs> logs) {
             this.logs = logs;
@@ -88,7 +88,7 @@ public class ListSyslogsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The NextToken for the next page. Include this value in the request to retrieve the next page of results.</p>
+         * <p>The token for the next page. Include this value to request the next page of data.</p>
          * 
          * <strong>example:</strong>
          * <p>563d42ae0b17572449ec8c97f7f66069</p>
@@ -398,7 +398,7 @@ public class ListSyslogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Linux syslog standard field.</p>
+             * <p>The standard Linux syslog facility field.</p>
              * 
              * <strong>example:</strong>
              * <p>kern</p>
@@ -453,7 +453,7 @@ public class ListSyslogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Linux syslog standard field.</p>
+             * <p>The standard Linux syslog facility field.</p>
              * 
              * <strong>example:</strong>
              * <p>warning</p>
@@ -486,7 +486,7 @@ public class ListSyslogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Linux syslog standard field.</p>
+             * <p>The standard Linux syslog facility field.</p>
              * 
              * <strong>example:</strong>
              * <p>kernel</p>
@@ -497,7 +497,7 @@ public class ListSyslogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag for the hostname.</p>
+             * <p>The hostname tag.</p>
              * 
              * <strong>example:</strong>
              * <p>damo-m53kr8kd-0008</p>
@@ -508,7 +508,7 @@ public class ListSyslogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag for the pack ID.</p>
+             * <p>The pack ID tag.</p>
              * 
              * <strong>example:</strong>
              * <p>D990314D3C25D7E8-1080</p>
@@ -519,7 +519,7 @@ public class ListSyslogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag for the path.</p>
+             * <p>The path tag.</p>
              * 
              * <strong>example:</strong>
              * <p>/var/log/kern</p>
@@ -530,7 +530,7 @@ public class ListSyslogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag for the receive time. Specify a UNIX timestamp in seconds.</p>
+             * <p>The receive time tag. The value is a UNIX timestamp in seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1687363348</p>
@@ -541,7 +541,7 @@ public class ListSyslogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag for the user-defined ID.</p>
+             * <p>The user-defined ID tag.</p>
              * 
              * <strong>example:</strong>
              * <p>application_b</p>
@@ -552,7 +552,7 @@ public class ListSyslogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time in UNIX timestamp format.</p>
+             * <p>The UNIX timestamp.</p>
              * 
              * <strong>example:</strong>
              * <p>1687363346</p>
@@ -563,7 +563,7 @@ public class ListSyslogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The topic, which is logserver or log2sls. Both are syslog servers. logserver collects logs over TCP, and log2sls collects logs over UDP.</p>
+             * <p>The topic. Valid values: logserver and log2sls. Both are syslog servers. logserver collects logs over TCP, and log2sls collects logs over UDP.</p>
              * 
              * <strong>example:</strong>
              * <p>logserver</p>

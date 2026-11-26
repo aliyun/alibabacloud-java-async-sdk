@@ -250,7 +250,7 @@ public class ListHyperNodesRequest extends Request {
         }
 
         /**
-         * <p>The cluster name.</p>
+         * <p>The name of the cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>Standard_Cluster</p>
@@ -286,7 +286,7 @@ public class ListHyperNodesRequest extends Request {
         }
 
         /**
-         * <p>The node ID.</p>
+         * <p>The ID of the hypernode.</p>
          * 
          * <strong>example:</strong>
          * <p>e01-cn-zvp2tgykr08</p>
@@ -298,7 +298,7 @@ public class ListHyperNodesRequest extends Request {
         }
 
         /**
-         * <p>The list of node IDs.</p>
+         * <p>The list of hypernode IDs.</p>
          */
         public Builder hyperNodeIds(java.util.List<String> hyperNodeIds) {
             String hyperNodeIdsShrink = shrink(hyperNodeIds, "HyperNodeIds", "json");
@@ -320,13 +320,11 @@ public class ListHyperNodesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page in a paged query. Maximum value: 100.</p>
+         * <p>The maximum number of entries to return per page for paging in a paged query. Maximum value: 100.</p>
          * <p>Default value:</p>
          * <ul>
-         * <li><p>If this parameter is not specified or is set to a value less than 20, the default value is 20.</p>
-         * </li>
-         * <li><p>If this parameter is set to a value greater than 100, the default value is 100.</p>
-         * </li>
+         * <li>If no Settings are specified or the Settings value is less than 20, the default value is 20.</li>
+         * <li>If the Settings value is greater than 100, the default value is 100.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -339,7 +337,7 @@ public class ListHyperNodesRequest extends Request {
         }
 
         /**
-         * <p>The pagination token. Set this parameter to the NextToken value returned in the previous API call.</p>
+         * <p>The query token. Set the value to the NextToken value returned from the last API call.</p>
          * 
          * <strong>example:</strong>
          * <p>3a6b93229825ac667104463b56790c91</p>
@@ -363,7 +361,7 @@ public class ListHyperNodesRequest extends Request {
         }
 
         /**
-         * <p>The node status. If this parameter is not specified, all statuses are returned. Valid values: Extending, UnusedNodeStopped, UnusedNodeStopping, Unused, Using, ReleaseLocking, Operating, Cutting, ClusterNodeStopped, UnusedNodeRecovering, ClusterNodeStopping, ClusterNodeRecovering, and Replacing.</p>
+         * <p>The operating states of the nodes. If you do not specify this parameter, all states are queried. Valid values: Extending, UnusedNodeStopped, UnusedNodeStopping, Unused, Using, ReleaseLocking, Operating, Cutting, ClusterNodeStopped, UnusedNodeRecovering, ClusterNodeStopping, ClusterNodeRecovering, and Replacing.</p>
          */
         public Builder operatingStates(java.util.List<String> operatingStates) {
             String operatingStatesShrink = shrink(operatingStates, "OperatingStates", "json");
@@ -373,7 +371,7 @@ public class ListHyperNodesRequest extends Request {
         }
 
         /**
-         * <p>The resource group ID.</p>
+         * <p>The ID of the resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfmwfm33rlt6zi</p>

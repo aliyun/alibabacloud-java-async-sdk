@@ -139,7 +139,7 @@ public class CreateNodeGroupRequest extends Request {
          * <p>The node information.</p>
          * 
          * <strong>example:</strong>
-         * <p>{\&quot;NodeUnitId\&quot;:\&quot;3c2999a8-2b95-4409-93c5-ad3985fc5c9f\&quot;,\&quot;ResourceGroupId\&quot;:\&quot;\&quot;,\&quot;MaxNodes\&quot;:0,\&quot;NodeUnitName\&quot;:\&quot;asi_cn-serverless-sale_e01-lingjun-psale\&quot;}</p>
+         * <p>{&quot;NodeUnitId&quot;:&quot;3c2999a8-2b95-4409-93c5-ad3985fc5c9f&quot;,&quot;ResourceGroupId&quot;:&quot;&quot;,&quot;MaxNodes&quot;:0,&quot;NodeUnitName&quot;:&quot;asi_cn-serverless-sale_e01-lingjun-psale&quot;}</p>
          */
         public Builder nodeUnit(java.util.Map<String, ?> nodeUnit) {
             String nodeUnitShrink = shrink(nodeUnit, "NodeUnit", "json");
@@ -165,6 +165,12 @@ public class CreateNodeGroupRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
 
+        @com.aliyun.core.annotation.NameInMap("Encrypted")
+        private Boolean encrypted;
+
+        @com.aliyun.core.annotation.NameInMap("KMSKeyId")
+        private String KMSKeyId;
+
         @com.aliyun.core.annotation.NameInMap("PerformanceLevel")
         private String performanceLevel;
 
@@ -173,6 +179,8 @@ public class CreateNodeGroupRequest extends Request {
 
         private SystemDisk(Builder builder) {
             this.category = builder.category;
+            this.encrypted = builder.encrypted;
+            this.KMSKeyId = builder.KMSKeyId;
             this.performanceLevel = builder.performanceLevel;
             this.size = builder.size;
         }
@@ -193,6 +201,20 @@ public class CreateNodeGroupRequest extends Request {
         }
 
         /**
+         * @return encrypted
+         */
+        public Boolean getEncrypted() {
+            return this.encrypted;
+        }
+
+        /**
+         * @return KMSKeyId
+         */
+        public String getKMSKeyId() {
+            return this.KMSKeyId;
+        }
+
+        /**
          * @return performanceLevel
          */
         public String getPerformanceLevel() {
@@ -208,6 +230,8 @@ public class CreateNodeGroupRequest extends Request {
 
         public static final class Builder {
             private String category; 
+            private Boolean encrypted; 
+            private String KMSKeyId; 
             private String performanceLevel; 
             private Integer size; 
 
@@ -216,6 +240,8 @@ public class CreateNodeGroupRequest extends Request {
 
             private Builder(SystemDisk model) {
                 this.category = model.category;
+                this.encrypted = model.encrypted;
+                this.KMSKeyId = model.KMSKeyId;
                 this.performanceLevel = model.performanceLevel;
                 this.size = model.size;
             } 
@@ -223,7 +249,7 @@ public class CreateNodeGroupRequest extends Request {
             /**
              * <p>The cloud disk type. Valid values:</p>
              * <ul>
-             * <li>cloud_essd: Enterprise SSD (ESSD) cloud disk.</li>
+             * <li>cloud_essd: ESSD.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -235,10 +261,50 @@ public class CreateNodeGroupRequest extends Request {
             }
 
             /**
-             * <p>The performance level (PL) of the ESSD cloud disk used as the system disk. Valid values:</p>
+             * <p>Specifies whether to encrypt the system cloud disk. Valid values:</p>
              * <ul>
-             * <li>PL0: a maximum of 10,000 random read/write IOPS per cloud disk.</li>
-             * <li>PL1: a maximum of 50,000 random read/write IOPS per cloud disk.</li>
+             * <li>true: Encrypts the system cloud disk.</li>
+             * <li>false: Does not encrypt the system cloud disk.</li>
+             * </ul>
+             * <p>Default value: false.</p>
+             * <blockquote>
+             * <p>Notice: When you use a shared encrypted image to create a cloud disk based on an encrypted snapshot, you must set the Encrypted request parameter to true for the cloud disk to ensure that the created cloud disk uses the key of the account that receives the shared image.</p>
+             * </blockquote>
+             * <blockquote>
+             * <p>System cloud disk encryption during instance creation is not supported in Hong Kong (China) Zone D and Singapore Zone A.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
+             */
+            public Builder encrypted(Boolean encrypted) {
+                this.encrypted = encrypted;
+                return this;
+            }
+
+            /**
+             * <p>The KMS key ID corresponding to the system cloud disk.</p>
+             * <p>If Encrypted is set to true and KMSKeyId is not specified, the default key is used for encryption, and the KMSKeyId value is returned after the instance is created.</p>
+             * <ul>
+             * <li>If the cloud disk is created from a non-shared encrypted snapshot, the encryption key used for the snapshot is used by default.</li>
+             * <li>If the cloud disk is created from a shared encrypted snapshot, the service key is used by default.</li>
+             * <li>If the cloud disk is created in a region where account-level default encryption for Block Storage is enabled, the specified account-level key is used by default.</li>
+             * <li>In other cases, the service key is used by default.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>2ae0a815-a877-4bce-b5ec-4becb8ab4d89</p>
+             */
+            public Builder KMSKeyId(String KMSKeyId) {
+                this.KMSKeyId = KMSKeyId;
+                return this;
+            }
+
+            /**
+             * <p>The performance level of the ESSD when used as the system cloud disk. Valid values:</p>
+             * <ul>
+             * <li>PL0: Up to 10,000 random read/write IOPS per disk.</li>
+             * <li>PL1: Up to 50,000 random read/write IOPS per disk.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -250,7 +316,7 @@ public class CreateNodeGroupRequest extends Request {
             }
 
             /**
-             * <p>The disk size. Unit: GB.</p>
+             * <p>The size of the system cloud disk. Unit: GB.</p>
              * 
              * <strong>example:</strong>
              * <p>1000</p>
@@ -490,7 +556,7 @@ public class CreateNodeGroupRequest extends Request {
             }
 
             /**
-             * <p>The key pair name.</p>
+             * <p>The name of the key pair. You must specify at least one of LoginPassword and KeyPairName. If neither is specified, the API returns InvalidParameter.</p>
              * 
              * <strong>example:</strong>
              * <p>test-keypair</p>
@@ -501,7 +567,7 @@ public class CreateNodeGroupRequest extends Request {
             }
 
             /**
-             * <p>The logon password.</p>
+             * <p>The logon password. You must specify at least one of LoginPassword and KeyPairName. If neither is specified, the API returns InvalidParameter.</p>
              * 
              * <strong>example:</strong>
              * <p>test-LoginPassword</p>
@@ -512,7 +578,7 @@ public class CreateNodeGroupRequest extends Request {
             }
 
             /**
-             * <p>The machine type.</p>
+             * <p>The instance type.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -524,10 +590,10 @@ public class CreateNodeGroupRequest extends Request {
             }
 
             /**
-             * <p>The node group description.</p>
+             * <p>The description of the node group.</p>
              * 
              * <strong>example:</strong>
-             * <p>节点分组描述</p>
+             * <p>Node group description</p>
              */
             public Builder nodeGroupDescription(String nodeGroupDescription) {
                 this.nodeGroupDescription = nodeGroupDescription;
@@ -535,7 +601,7 @@ public class CreateNodeGroupRequest extends Request {
             }
 
             /**
-             * <p>The node group name.</p>
+             * <p>The name of the node group.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -547,10 +613,7 @@ public class CreateNodeGroupRequest extends Request {
             }
 
             /**
-             * <p>The RAM role name of the node. You can call the RAM API ListRoles to query the RAM roles you have created. The trusted entity of the role must be set to Lingjun AI Computing Service.</p>
-             * <blockquote>
-             * <p>Note: Clearing an existing role is not currently supported.</p>
-             * </blockquote>
+             * <p>The name of the RAM role for the node. You can call the ListRoles operation of RAM to query the RAM roles that you have created. The trusted entity of the specified role must be Lingjun AI Computing Service. Note: You cannot clear an existing role.</p>
              * 
              * <strong>example:</strong>
              * <p>xianwen-test-ram-role</p>
@@ -561,7 +624,7 @@ public class CreateNodeGroupRequest extends Request {
             }
 
             /**
-             * <p>The system disk configuration of the node.</p>
+             * <p>The system cloud disk configuration of the node.</p>
              */
             public Builder systemDisk(SystemDisk systemDisk) {
                 this.systemDisk = systemDisk;
@@ -569,7 +632,7 @@ public class CreateNodeGroupRequest extends Request {
             }
 
             /**
-             * <p>A custom executable shell script that must be Base64-encoded. The maximum size of the raw data is 16 KB.</p>
+             * <p>The custom executable shell script. The script must be Base64-encoded. The maximum size of the raw data is 16 KB.</p>
              * 
              * <strong>example:</strong>
              * <p>ZWNobyBoZWxsbyBlY3Mh</p>
@@ -580,7 +643,7 @@ public class CreateNodeGroupRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether GPU virtualization splitting is enabled.</p>
+             * <p>Specifies whether to enable vGPU splitting.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>

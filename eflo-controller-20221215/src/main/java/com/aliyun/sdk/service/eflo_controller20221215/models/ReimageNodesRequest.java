@@ -136,7 +136,7 @@ public class ReimageNodesRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to skip failed nodes. Default value: False.</p>
+         * <p>Specifies whether to allow skipping failed nodes. Default value: false.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -148,7 +148,7 @@ public class ReimageNodesRequest extends Request {
         }
 
         /**
-         * <p>The list of nodes.</p>
+         * <p>The list of nodes. The node IDs must belong to created Lingjun nodes. You can obtain the node IDs by calling the ListClusterNodes or ListFreeNodes operation.</p>
          */
         public Builder nodes(java.util.List<Nodes> nodes) {
             String nodesShrink = shrink(nodes, "Nodes", "json");
@@ -182,6 +182,174 @@ public class ReimageNodesRequest extends Request {
      *
      * <p>ReimageNodesRequest</p>
      */
+    public static class SystemDisk extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Category")
+        private String category;
+
+        @com.aliyun.core.annotation.NameInMap("Encrypted")
+        private Boolean encrypted;
+
+        @com.aliyun.core.annotation.NameInMap("KMSKeyId")
+        private String KMSKeyId;
+
+        @com.aliyun.core.annotation.NameInMap("PerformanceLevel")
+        private String performanceLevel;
+
+        @com.aliyun.core.annotation.NameInMap("Size")
+        private Long size;
+
+        private SystemDisk(Builder builder) {
+            this.category = builder.category;
+            this.encrypted = builder.encrypted;
+            this.KMSKeyId = builder.KMSKeyId;
+            this.performanceLevel = builder.performanceLevel;
+            this.size = builder.size;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SystemDisk create() {
+            return builder().build();
+        }
+
+        /**
+         * @return category
+         */
+        public String getCategory() {
+            return this.category;
+        }
+
+        /**
+         * @return encrypted
+         */
+        public Boolean getEncrypted() {
+            return this.encrypted;
+        }
+
+        /**
+         * @return KMSKeyId
+         */
+        public String getKMSKeyId() {
+            return this.KMSKeyId;
+        }
+
+        /**
+         * @return performanceLevel
+         */
+        public String getPerformanceLevel() {
+            return this.performanceLevel;
+        }
+
+        /**
+         * @return size
+         */
+        public Long getSize() {
+            return this.size;
+        }
+
+        public static final class Builder {
+            private String category; 
+            private Boolean encrypted; 
+            private String KMSKeyId; 
+            private String performanceLevel; 
+            private Long size; 
+
+            private Builder() {
+            } 
+
+            private Builder(SystemDisk model) {
+                this.category = model.category;
+                this.encrypted = model.encrypted;
+                this.KMSKeyId = model.KMSKeyId;
+                this.performanceLevel = model.performanceLevel;
+                this.size = model.size;
+            } 
+
+            /**
+             * <p>The disk category.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cloud_essd</p>
+             */
+            public Builder category(String category) {
+                this.category = category;
+                return this;
+            }
+
+            /**
+             * <p>Specifies whether to encrypt the system disk. Valid values:</p>
+             * <ul>
+             * <li>true: Encrypts the system disk.</li>
+             * <li>false: Does not encrypt the system disk.</li>
+             * </ul>
+             * <p>Default value: false.</p>
+             * <blockquote>
+             * <p>Notice: When you use a shared encrypted image to create a cloud disk from an encrypted snapshot, you must specify the request parameter Encrypted=true for the cloud disk to ensure that the created cloud disk is encrypted by using the key of the recipient account.</p>
+             * </blockquote>
+             * <blockquote>
+             * <p>System disk encryption during instance creation is not supported in Hong Kong (China) active zone D and Singapore active zone A.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
+             */
+            public Builder encrypted(Boolean encrypted) {
+                this.encrypted = encrypted;
+                return this;
+            }
+
+            /**
+             * <p>The KMS key ID for the system disk.</p>
+             * <p>If the Encrypted Settings is true but KMSKeyId is not specified, the default key is used for encryption, and the KMSKeyId value is returned after the instance is created.</p>
+             * <ul>
+             * <li>If the cloud disk is created from a non-shared encrypted snapshot, the encryption key used for the snapshot is used by default.</li>
+             * <li>If the cloud disk is created from a shared encrypted snapshot, the service key is used by default.</li>
+             * <li>If the cloud disk is created in a region where account-level default encryption for block storage is enabled, the specified account-level key is used by default.</li>
+             * <li>In other cases, the service key is used by default.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>5b21a1c4-e2e8-43b2-a982-720fa9e6b9d7</p>
+             */
+            public Builder KMSKeyId(String KMSKeyId) {
+                this.KMSKeyId = KMSKeyId;
+                return this;
+            }
+
+            /**
+             * <p>The performance level.</p>
+             */
+            public Builder performanceLevel(String performanceLevel) {
+                this.performanceLevel = performanceLevel;
+                return this;
+            }
+
+            /**
+             * <p>The disk size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
+             */
+            public Builder size(Long size) {
+                this.size = size;
+                return this;
+            }
+
+            public SystemDisk build() {
+                return new SystemDisk(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ReimageNodesRequest} extends {@link TeaModel}
+     *
+     * <p>ReimageNodesRequest</p>
+     */
     public static class Nodes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Hostname")
         private String hostname;
@@ -195,11 +363,15 @@ public class ReimageNodesRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("NodeId")
         private String nodeId;
 
+        @com.aliyun.core.annotation.NameInMap("SystemDisk")
+        private SystemDisk systemDisk;
+
         private Nodes(Builder builder) {
             this.hostname = builder.hostname;
             this.imageId = builder.imageId;
             this.loginPassword = builder.loginPassword;
             this.nodeId = builder.nodeId;
+            this.systemDisk = builder.systemDisk;
         }
 
         public static Builder builder() {
@@ -238,11 +410,19 @@ public class ReimageNodesRequest extends Request {
             return this.nodeId;
         }
 
+        /**
+         * @return systemDisk
+         */
+        public SystemDisk getSystemDisk() {
+            return this.systemDisk;
+        }
+
         public static final class Builder {
             private String hostname; 
             private String imageId; 
             private String loginPassword; 
             private String nodeId; 
+            private SystemDisk systemDisk; 
 
             private Builder() {
             } 
@@ -252,6 +432,7 @@ public class ReimageNodesRequest extends Request {
                 this.imageId = model.imageId;
                 this.loginPassword = model.loginPassword;
                 this.nodeId = model.nodeId;
+                this.systemDisk = model.systemDisk;
             } 
 
             /**
@@ -280,7 +461,7 @@ public class ReimageNodesRequest extends Request {
              * <p>The logon password.</p>
              * 
              * <strong>example:</strong>
-             * <hr>
+             * <p>Demo****123!</p>
              */
             public Builder loginPassword(String loginPassword) {
                 this.loginPassword = loginPassword;
@@ -295,6 +476,14 @@ public class ReimageNodesRequest extends Request {
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
+                return this;
+            }
+
+            /**
+             * <p>The system disk configuration.</p>
+             */
+            public Builder systemDisk(SystemDisk systemDisk) {
+                this.systemDisk = systemDisk;
                 return this;
             }
 

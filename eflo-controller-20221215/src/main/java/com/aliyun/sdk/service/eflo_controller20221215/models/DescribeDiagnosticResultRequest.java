@@ -82,7 +82,7 @@ public class DescribeDiagnosticResultRequest extends Request {
         }
 
         /**
-         * <p>The diagnostic ID.</p>
+         * <p>The diagnostic ID. This parameter is required. If you do not specify this parameter, the API returns an error. You can obtain the ID from the response of the CreateDiagnosticTask operation when you create a diagnostic task, or by calling the ListDiagnosticResults operation to query existing diagnostic tasks.</p>
          * 
          * <strong>example:</strong>
          * <p>diag-i151942361720577788844</p>

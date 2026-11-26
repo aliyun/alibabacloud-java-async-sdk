@@ -236,10 +236,10 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>The cluster description.</p>
+         * <p>The description of the cluster.</p>
          * 
          * <strong>example:</strong>
-         * <p>标准集群测试</p>
+         * <p>Standard cluster test</p>
          */
         public Builder clusterDescription(String clusterDescription) {
             this.putBodyParameter("ClusterDescription", clusterDescription);
@@ -248,7 +248,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>The cluster name.</p>
+         * <p>The name of the cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>Standard_Cluster</p>
@@ -260,7 +260,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>The cluster type.</p>
+         * <p>The type of the cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>Lite</p>
@@ -294,7 +294,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to skip failed nodes. Default value: False.</p>
+         * <p>Specifies whether to skip failed nodes. Default value: false.</p>
          * 
          * <strong>example:</strong>
          * <p>False</p>
@@ -326,7 +326,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>The list of node groups.</p>
+         * <p>The list of node groups. This parameter is actually required. If it is not provided, the API returns InvalidParameter (NodeGroups field required).</p>
          */
         public Builder nodeGroups(java.util.List<NodeGroups> nodeGroups) {
             String nodeGroupsShrink = shrink(nodeGroups, "NodeGroups", "json");
@@ -623,7 +623,7 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * <p>The cluster subnet from which the IP address is allocated.</p>
+             * <p>The source cluster subnet for IP addresses.</p>
              * 
              * <strong>example:</strong>
              * <p>172.16.0.0/24</p>
@@ -693,7 +693,7 @@ public class CreateClusterRequest extends Request {
             } 
 
             /**
-             * <p>The default bond cluster subnet.</p>
+             * <p>The default cluster subnet for the bond.</p>
              * 
              * <strong>example:</strong>
              * <p>172.168.0.0/24</p>
@@ -782,7 +782,7 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * <p>The cluster subnet from which the IP address is allocated.</p>
+             * <p>The source cluster subnet for IP addresses.</p>
              * 
              * <strong>example:</strong>
              * <p>192.168.1.0/24</p>
@@ -941,7 +941,7 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * <p>The cluster subnet from which the IP address is allocated.</p>
+             * <p>The source cluster subnet for IP addresses.</p>
              * 
              * <strong>example:</strong>
              * <p>10.0.0.0/24</p>
@@ -1198,7 +1198,7 @@ public class CreateClusterRequest extends Request {
             } 
 
             /**
-             * <p>The subnet CIDR block.</p>
+             * <p>The CIDR block of the subnet.</p>
              * 
              * <strong>example:</strong>
              * <p>10.0.1.8/24</p>
@@ -1355,7 +1355,7 @@ public class CreateClusterRequest extends Request {
             } 
 
             /**
-             * <p>The Cloud Enterprise Network (CEN) instance ID.</p>
+             * <p>The CEN ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cen-1gb1eftc5qp2ao75fo</p>
@@ -1366,7 +1366,7 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * <p>The cloud link CIDR block.</p>
+             * <p>The CIDR block of the cloud link.</p>
              * 
              * <strong>example:</strong>
              * <p>172.16.0.0/24</p>
@@ -1410,7 +1410,7 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * <p>The cluster CIDR block.</p>
+             * <p>The CIDR block of the cluster.</p>
              * 
              * <strong>example:</strong>
              * <p>192.168.0.0/16</p>
@@ -1488,7 +1488,7 @@ public class CreateClusterRequest extends Request {
             } 
 
             /**
-             * <p>The VPC ID.</p>
+             * <p>The virtual private cloud (VPC) ID.</p>
              * 
              * <strong>example:</strong>
              * <p>vpd-vfuz6ejv</p>
@@ -1499,7 +1499,7 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * <p>The list of cluster subnet IDs.</p>
+             * <p>The list of cluster subnet IDs. This parameter is required when you use VpdInfo to reuse an existing VPD. If you specify only VpdId and omit this parameter, the API returns InvalidParameter.</p>
              */
             public Builder vpdSubnets(java.util.List<String> vpdSubnets) {
                 this.vpdSubnets = vpdSubnets;
@@ -1644,7 +1644,7 @@ public class CreateClusterRequest extends Request {
             } 
 
             /**
-             * <p>The IP allocation policy.</p>
+             * <p>The IP address allocation policy.</p>
              */
             public Builder ipAllocationPolicy(java.util.List<IpAllocationPolicy> ipAllocationPolicy) {
                 this.ipAllocationPolicy = ipAllocationPolicy;
@@ -1704,7 +1704,7 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * <p>The VPC ID.</p>
+             * <p>The virtual private cloud (VPC) ID.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-0jl36lqzmc06qogy0t5ll</p>
@@ -1715,7 +1715,7 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * <p>The information about the reused VPD.</p>
+             * <p>The reused VPD information.</p>
              */
             public Builder vpdInfo(VpdInfo vpdInfo) {
                 this.vpdInfo = vpdInfo;
@@ -1745,6 +1745,15 @@ public class CreateClusterRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("DeleteWithNode")
         private Boolean deleteWithNode;
 
+        @com.aliyun.core.annotation.NameInMap("Device")
+        private String device;
+
+        @com.aliyun.core.annotation.NameInMap("Encrypted")
+        private Boolean encrypted;
+
+        @com.aliyun.core.annotation.NameInMap("KMSKeyId")
+        private String KMSKeyId;
+
         @com.aliyun.core.annotation.NameInMap("PerformanceLevel")
         private String performanceLevel;
 
@@ -1758,6 +1767,9 @@ public class CreateClusterRequest extends Request {
             this.burstingEnabled = builder.burstingEnabled;
             this.category = builder.category;
             this.deleteWithNode = builder.deleteWithNode;
+            this.device = builder.device;
+            this.encrypted = builder.encrypted;
+            this.KMSKeyId = builder.KMSKeyId;
             this.performanceLevel = builder.performanceLevel;
             this.provisionedIops = builder.provisionedIops;
             this.size = builder.size;
@@ -1793,6 +1805,27 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
+         * @return device
+         */
+        public String getDevice() {
+            return this.device;
+        }
+
+        /**
+         * @return encrypted
+         */
+        public Boolean getEncrypted() {
+            return this.encrypted;
+        }
+
+        /**
+         * @return KMSKeyId
+         */
+        public String getKMSKeyId() {
+            return this.KMSKeyId;
+        }
+
+        /**
          * @return performanceLevel
          */
         public String getPerformanceLevel() {
@@ -1817,6 +1850,9 @@ public class CreateClusterRequest extends Request {
             private Boolean burstingEnabled; 
             private String category; 
             private Boolean deleteWithNode; 
+            private String device; 
+            private Boolean encrypted; 
+            private String KMSKeyId; 
             private String performanceLevel; 
             private Long provisionedIops; 
             private Integer size; 
@@ -1828,13 +1864,16 @@ public class CreateClusterRequest extends Request {
                 this.burstingEnabled = model.burstingEnabled;
                 this.category = model.category;
                 this.deleteWithNode = model.deleteWithNode;
+                this.device = model.device;
+                this.encrypted = model.encrypted;
+                this.KMSKeyId = model.KMSKeyId;
                 this.performanceLevel = model.performanceLevel;
                 this.provisionedIops = model.provisionedIops;
                 this.size = model.size;
             } 
 
             /**
-             * <p>Specifies whether to enable I/O performance burst.</p>
+             * <p>Specifies whether to enable the burst (performance burst) feature.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -1845,9 +1884,9 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * <p>The cloud disk type. Valid values:</p>
+             * <p>The cloud disk category. Valid values:</p>
              * <ul>
-             * <li>cloud_essd: Enterprise SSD (ESSD).</li>
+             * <li>cloud_essd: ESSD.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1859,7 +1898,7 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether the data cloud disk is deleted when the node is unsubscribed.</p>
+             * <p>Specifies whether to delete the data cloud disk when the node is unsubscribed.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -1870,12 +1909,68 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * <p>Settings for the performance level (PL) when an ESSD is created as the data cloud disk. Valid values:</p>
+             * <p>The device name of the data cloud disk. This parameter is used only in full image scenarios. You can use this parameter to set the device name of the data cloud disk to match the source data cloud disk in the full image, and modify the properties of the corresponding data cloud disk. For non-full image scaling, the Device parameter is set by the system by default. When you use a full image for scaling:</p>
              * <ul>
-             * <li>PL0: a maximum of 10,000 random read/write IOPS per cloud disk.</li>
-             * <li>PL1: a maximum of 50,000 random read/write IOPS per cloud disk.</li>
-             * <li>PL2: a maximum of 100,000 random read/write IOPS per cloud disk.</li>
-             * <li>PL3: a maximum of 1,000,000 random read/write IOPS per cloud disk.</li>
+             * <li>Regardless of whether the data cloud disk parameters are explicitly set, the system restores the data cloud disks from the source image for the user. The content is consistent with the data cloud disks in the source image.</li>
+             * <li>If data cloud disks are explicitly specified but the Device parameter is not set, additional empty data cloud disks are created. The quantity and properties are specified by the user&quot;s data cloud disk parameters.</li>
+             * <li>If the Device parameter of the explicitly specified data cloud disk does not match the Device parameter of the source image data cloud disk, additional empty data cloud disks are created. The quantity and properties are specified by the user&quot;s data cloud disk parameters.</li>
+             * <li>If multiple data cloud disks and their Device parameters are explicitly specified, but all Device parameters point to the same device of a single data cloud disk in the source image, only one of the user-specified data cloud disks matches and overwrites the source image data cloud disk by device. The other specified data cloud disks are silently discarded, and no additional empty data cloud disks are created.</li>
+             * <li>If the Device parameter of the explicitly specified data cloud disk matches the Device parameter of the source image data cloud disk, no additional empty data cloud disks are created. The user-specified data cloud disks correspond one-to-one with the source image data cloud disks by device. If the Size of the user-specified data cloud disk is smaller than the Size of the source image data cloud disk, the system returns HTTP status code 417 and the error message: &quot;Data disk Size can not be less than the image data disk snapshot size for Device &quot;/dev/xvdb&quot;&quot;.</li>
+             * <li>The total number of data cloud disks mounted to the node (specified data cloud disks + data cloud disks restored from the image) cannot exceed 16 for standard cloud disk groups, and cannot exceed 4 when Cloud Paralleled File System (CPFS) is enabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>/dev/xvdb</p>
+             */
+            public Builder device(String device) {
+                this.device = device;
+                return this;
+            }
+
+            /**
+             * <p>Specifies whether to encrypt the data cloud disk. Valid values:</p>
+             * <ul>
+             * <li>true: Encrypts the data cloud disk.</li>
+             * <li>false: Does not encrypt the data cloud disk.</li>
+             * </ul>
+             * <p>Default value: false.</p>
+             * <blockquote>
+             * <p>Notice: When you use a shared encrypted image to create a cloud disk based on an encrypted snapshot, you must specify the request parameter Encrypted=true for the cloud disk. This ensures that the created cloud disk uses the key of the shared party.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
+             */
+            public Builder encrypted(Boolean encrypted) {
+                this.encrypted = encrypted;
+                return this;
+            }
+
+            /**
+             * <p>The KMS key ID of the data cloud disk.</p>
+             * <p>If the Encrypted parameter is set to true and KMSKeyId is not specified, the default key is used for encryption, and the KMSKeyId value is returned after the instance is created.</p>
+             * <ul>
+             * <li>If the cloud disk is created from an unshared encrypted snapshot, the encryption key used for the snapshot is used by default.</li>
+             * <li>If the cloud disk is created from a shared encrypted snapshot, the service key is used by default.</li>
+             * <li>If the cloud disk is created in a region where account-level default encryption for Block Storage is enabled, the specified account-level key is used by default.</li>
+             * <li>In other cases, the service key is used by default.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>57e27f4a-f60f-4e8f-bbae-6c042e9a5ed6</p>
+             */
+            public Builder KMSKeyId(String KMSKeyId) {
+                this.KMSKeyId = KMSKeyId;
+                return this;
+            }
+
+            /**
+             * <p>The performance level of the ESSD used as the data cloud disk. Valid values:</p>
+             * <ul>
+             * <li>PL0: A single disk delivers up to 10,000 random read/write IOPS.</li>
+             * <li>PL1: A single disk delivers up to 50,000 random read/write IOPS.</li>
+             * <li>PL2: A single disk delivers up to 100,000 random read/write IOPS.</li>
+             * <li>PL3: A single disk delivers up to 1,000,000 random read/write IOPS.</li>
              * </ul>
              * <p>Default value: PL1.</p>
              * 
@@ -1888,7 +1983,7 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * <p>The provisioned performance of read/write IOPS for the ESSD AutoPL cloud disk (per disk).</p>
+             * <p>The read/write IOPS of the provisioned performance for a single ESSD AutoPL cloud disk.</p>
              * 
              * <strong>example:</strong>
              * <p>10000</p>
@@ -1899,7 +1994,7 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * <p>The cloud disk size. Unit: GiB.</p>
+             * <p>The disk size. Unit: GiB.</p>
              * 
              * <strong>example:</strong>
              * <p>180</p>
@@ -2040,7 +2135,7 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * <p>The hyper node ID.</p>
+             * <p>The hypernode ID.</p>
              * 
              * <strong>example:</strong>
              * <p>e01-dw72u2c23jk</p>
@@ -2062,7 +2157,7 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * <p>The vSwitch ID.</p>
+             * <p>The vSwitch ID in the VPC.</p>
              * 
              * <strong>example:</strong>
              * <p>vsw-bp1xn9iq3s3p8218c4qu4</p>
@@ -2073,7 +2168,7 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * <p>The VPC ID.</p>
+             * <p>The virtual private cloud (VPC) ID.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-uf689skpx56nk7yfw0jhy</p>
@@ -2106,6 +2201,15 @@ public class CreateClusterRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("DeleteWithNode")
         private Boolean deleteWithNode;
 
+        @com.aliyun.core.annotation.NameInMap("Device")
+        private String device;
+
+        @com.aliyun.core.annotation.NameInMap("Encrypted")
+        private Boolean encrypted;
+
+        @com.aliyun.core.annotation.NameInMap("KMSKeyId")
+        private String KMSKeyId;
+
         @com.aliyun.core.annotation.NameInMap("PerformanceLevel")
         private String performanceLevel;
 
@@ -2119,6 +2223,9 @@ public class CreateClusterRequest extends Request {
             this.burstingEnabled = builder.burstingEnabled;
             this.category = builder.category;
             this.deleteWithNode = builder.deleteWithNode;
+            this.device = builder.device;
+            this.encrypted = builder.encrypted;
+            this.KMSKeyId = builder.KMSKeyId;
             this.performanceLevel = builder.performanceLevel;
             this.provisionedIops = builder.provisionedIops;
             this.size = builder.size;
@@ -2154,6 +2261,27 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
+         * @return device
+         */
+        public String getDevice() {
+            return this.device;
+        }
+
+        /**
+         * @return encrypted
+         */
+        public Boolean getEncrypted() {
+            return this.encrypted;
+        }
+
+        /**
+         * @return KMSKeyId
+         */
+        public String getKMSKeyId() {
+            return this.KMSKeyId;
+        }
+
+        /**
          * @return performanceLevel
          */
         public String getPerformanceLevel() {
@@ -2178,6 +2306,9 @@ public class CreateClusterRequest extends Request {
             private Boolean burstingEnabled; 
             private String category; 
             private Boolean deleteWithNode; 
+            private String device; 
+            private Boolean encrypted; 
+            private String KMSKeyId; 
             private String performanceLevel; 
             private Long provisionedIops; 
             private Integer size; 
@@ -2189,13 +2320,16 @@ public class CreateClusterRequest extends Request {
                 this.burstingEnabled = model.burstingEnabled;
                 this.category = model.category;
                 this.deleteWithNode = model.deleteWithNode;
+                this.device = model.device;
+                this.encrypted = model.encrypted;
+                this.KMSKeyId = model.KMSKeyId;
                 this.performanceLevel = model.performanceLevel;
                 this.provisionedIops = model.provisionedIops;
                 this.size = model.size;
             } 
 
             /**
-             * <p>Specifies whether to enable I/O performance burst.</p>
+             * <p>Specifies whether to enable the burst (performance burst) feature.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -2206,7 +2340,7 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * <p>The cloud disk type.</p>
+             * <p>The disk category.</p>
              * 
              * <strong>example:</strong>
              * <p>cloud_essd</p>
@@ -2217,13 +2351,69 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether the data cloud disk is deleted when the node is unsubscribed.</p>
+             * <p>Specifies whether to delete the data cloud disk when the node is unsubscribed.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
              */
             public Builder deleteWithNode(Boolean deleteWithNode) {
                 this.deleteWithNode = deleteWithNode;
+                return this;
+            }
+
+            /**
+             * <p>The device name of the data cloud disk. This parameter is used only in full image scenarios. You can use this parameter to set the device name of the data cloud disk to match the source data cloud disk in the full image, and modify the properties of the corresponding data cloud disk. For non-full image scaling, the Device parameter is set by the system by default. When you use a full image for scaling:</p>
+             * <ul>
+             * <li>Regardless of whether the data cloud disk parameters are explicitly set, the system restores the data cloud disks from the source image for the user. The content is consistent with the data cloud disks in the source image.</li>
+             * <li>If data cloud disks are explicitly specified but the Device parameter is not set, additional empty data cloud disks are created. The quantity and properties are specified by the user&quot;s data cloud disk parameters.</li>
+             * <li>If the Device parameter of the explicitly specified data cloud disk does not match the Device parameter of the source image data cloud disk, additional empty data cloud disks are created. The quantity and properties are specified by the user&quot;s data cloud disk parameters.</li>
+             * <li>If multiple data cloud disks and their Device parameters are explicitly specified, but all Device parameters point to the same device of a single data cloud disk in the source image, only one of the user-specified data cloud disks matches and overwrites the source image data cloud disk by device. The other specified data cloud disks are silently discarded, and no additional empty data cloud disks are created.</li>
+             * <li>If the Device parameter of the explicitly specified data cloud disk matches the Device parameter of the source image data cloud disk, no additional empty data cloud disks are created. The user-specified data cloud disks correspond one-to-one with the source image data cloud disks by device. If the Size of the user-specified data cloud disk is smaller than the Size of the source image data cloud disk, the system returns HTTP status code 417 and the error message: &quot;Data disk Size can not be less than the image data disk snapshot size for Device &quot;/dev/xvdb&quot;&quot;.</li>
+             * <li>The total number of data cloud disks mounted to the node (specified data cloud disks + data cloud disks restored from the image) cannot exceed 16 for standard cloud disk groups, and cannot exceed 4 when Cloud Paralleled File System (CPFS) is enabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>/dev/xvdb</p>
+             */
+            public Builder device(String device) {
+                this.device = device;
+                return this;
+            }
+
+            /**
+             * <p>Specifies whether to encrypt the data cloud disk. Valid values:</p>
+             * <ul>
+             * <li>true: Encrypts the data cloud disk.</li>
+             * <li>false: Does not encrypt the data cloud disk.</li>
+             * </ul>
+             * <p>Default value: false.</p>
+             * <blockquote>
+             * <p>Notice: When you use a shared encrypted image to create a cloud disk based on an encrypted snapshot, you must specify the request parameter Encrypted=true for the cloud disk. This ensures that the created cloud disk uses the key of the shared party.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
+             */
+            public Builder encrypted(Boolean encrypted) {
+                this.encrypted = encrypted;
+                return this;
+            }
+
+            /**
+             * <p>The KMS key ID of the data cloud disk.</p>
+             * <p>If the Encrypted parameter is set to true and KMSKeyId is not specified, the default key is used for encryption, and the KMSKeyId value is returned after the instance is created.</p>
+             * <ul>
+             * <li>If the cloud disk is created from an unshared encrypted snapshot, the encryption key used for the snapshot is used by default.</li>
+             * <li>If the cloud disk is created from a shared encrypted snapshot, the service key is used by default.</li>
+             * <li>If the cloud disk is created in a region where account-level default encryption for Block Storage is enabled, the specified account-level key is used by default.</li>
+             * <li>In other cases, the service key is used by default.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>3c0655ca-59c8-4878-ac02-e7fb93656504</p>
+             */
+            public Builder KMSKeyId(String KMSKeyId) {
+                this.KMSKeyId = KMSKeyId;
                 return this;
             }
 
@@ -2250,7 +2440,7 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * <p>The cloud disk size.</p>
+             * <p>The disk size.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -2394,7 +2584,7 @@ public class CreateClusterRequest extends Request {
              * <p>The logon password.</p>
              * 
              * <strong>example:</strong>
-             * <hr>
+             * <p>Demo****123!</p>
              */
             public Builder loginPassword(String loginPassword) {
                 this.loginPassword = loginPassword;
@@ -2424,7 +2614,7 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * <p>The VPC ID.</p>
+             * <p>The virtual private cloud (VPC) ID.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-0jlasms92fdxqd3wlf8ny</p>
@@ -2451,6 +2641,12 @@ public class CreateClusterRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
 
+        @com.aliyun.core.annotation.NameInMap("Encrypted")
+        private Boolean encrypted;
+
+        @com.aliyun.core.annotation.NameInMap("KMSKeyId")
+        private String KMSKeyId;
+
         @com.aliyun.core.annotation.NameInMap("PerformanceLevel")
         private String performanceLevel;
 
@@ -2459,6 +2655,8 @@ public class CreateClusterRequest extends Request {
 
         private SystemDisk(Builder builder) {
             this.category = builder.category;
+            this.encrypted = builder.encrypted;
+            this.KMSKeyId = builder.KMSKeyId;
             this.performanceLevel = builder.performanceLevel;
             this.size = builder.size;
         }
@@ -2479,6 +2677,20 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
+         * @return encrypted
+         */
+        public Boolean getEncrypted() {
+            return this.encrypted;
+        }
+
+        /**
+         * @return KMSKeyId
+         */
+        public String getKMSKeyId() {
+            return this.KMSKeyId;
+        }
+
+        /**
          * @return performanceLevel
          */
         public String getPerformanceLevel() {
@@ -2494,6 +2706,8 @@ public class CreateClusterRequest extends Request {
 
         public static final class Builder {
             private String category; 
+            private Boolean encrypted; 
+            private String KMSKeyId; 
             private String performanceLevel; 
             private Integer size; 
 
@@ -2502,14 +2716,16 @@ public class CreateClusterRequest extends Request {
 
             private Builder(SystemDisk model) {
                 this.category = model.category;
+                this.encrypted = model.encrypted;
+                this.KMSKeyId = model.KMSKeyId;
                 this.performanceLevel = model.performanceLevel;
                 this.size = model.size;
             } 
 
             /**
-             * <p>The cloud disk type. Valid values:</p>
+             * <p>The cloud disk category. Valid values:</p>
              * <ul>
-             * <li>cloud_essd: Enterprise SSD (ESSD).</li>
+             * <li>cloud_essd: ESSD.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -2521,10 +2737,50 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * <p>Settings for the performance level (PL) when an ESSD is created as the system cloud disk. Valid values:</p>
+             * <p>Specifies whether to encrypt the system cloud disk. Valid values:</p>
              * <ul>
-             * <li>PL0: a maximum of 10,000 random read/write IOPS per cloud disk.</li>
-             * <li>PL1: a maximum of 50,000 random read/write IOPS per cloud disk.</li>
+             * <li>true: Encrypts the system cloud disk.</li>
+             * <li>false: Does not encrypt the system cloud disk.</li>
+             * </ul>
+             * <p>Default value: false.</p>
+             * <blockquote>
+             * <p>Notice: When you use a shared encrypted image to create a cloud disk based on an encrypted snapshot, you must specify the request parameter Encrypted=true for the cloud disk. This ensures that the created cloud disk uses the key of the shared party.</p>
+             * </blockquote>
+             * <blockquote>
+             * <p>System cloud disk encryption during instance creation is not supported in Hong Kong (China) Zone D and Singapore Zone A.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
+             */
+            public Builder encrypted(Boolean encrypted) {
+                this.encrypted = encrypted;
+                return this;
+            }
+
+            /**
+             * <p>The KMS key ID of the system cloud disk.</p>
+             * <p>If the Encrypted parameter is set to true and KMSKeyId is not specified, the default key is used for encryption, and the KMSKeyId value is returned after the instance is created.</p>
+             * <ul>
+             * <li>If the cloud disk is created from an unshared encrypted snapshot, the encryption key used for the snapshot is used by default.</li>
+             * <li>If the cloud disk is created from a shared encrypted snapshot, the service key is used by default.</li>
+             * <li>If the cloud disk is created in a region where account-level default encryption for Block Storage is enabled, the specified account-level key is used by default.</li>
+             * <li>In other cases, the service key is used by default.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>3b424bd2-b120-4185-9665-84e9a312d91a</p>
+             */
+            public Builder KMSKeyId(String KMSKeyId) {
+                this.KMSKeyId = KMSKeyId;
+                return this;
+            }
+
+            /**
+             * <p>The performance level of the ESSD used as the system cloud disk. Valid values:</p>
+             * <ul>
+             * <li>PL0: A single disk delivers up to 10,000 random read/write IOPS.</li>
+             * <li>PL1: A single disk delivers up to 50,000 random read/write IOPS.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -2536,7 +2792,7 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * <p>The cloud disk size. Unit: GB.</p>
+             * <p>The size of the system cloud disk. Unit: GB.</p>
              * 
              * <strong>example:</strong>
              * <p>9999</p>
@@ -2774,7 +3030,7 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * <p>The list of hyper nodes.</p>
+             * <p>The list of hypernodes.</p>
              */
             public Builder hyperNodes(java.util.List<HyperNodes> hyperNodes) {
                 this.hyperNodes = hyperNodes;
@@ -2793,7 +3049,7 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * <p>The key pair name.</p>
+             * <p>The name of the key pair. You must specify at least one of LoginPassword and KeyPairName. If neither is specified, the API returns InvalidParameter.</p>
              * 
              * <strong>example:</strong>
              * <p>test-keypair</p>
@@ -2804,10 +3060,10 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * <p>The logon password.</p>
+             * <p>The logon password. You must specify at least one of LoginPassword and KeyPairName. If neither is specified, the API returns InvalidParameter.</p>
              * 
              * <strong>example:</strong>
-             * <p>密码</p>
+             * <p>Password</p>
              */
             public Builder loginPassword(String loginPassword) {
                 this.loginPassword = loginPassword;
@@ -2826,10 +3082,10 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * <p>The node group description.</p>
+             * <p>The description of the node group.</p>
              * 
              * <strong>example:</strong>
-             * <p>默认节点组</p>
+             * <p>Default node group</p>
              */
             public Builder nodeGroupDescription(String nodeGroupDescription) {
                 this.nodeGroupDescription = nodeGroupDescription;
@@ -2837,7 +3093,7 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * <p>The node group name.</p>
+             * <p>The name of the node group.</p>
              * 
              * <strong>example:</strong>
              * <p>emr-default</p>
@@ -2856,8 +3112,8 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * <p>The RAM role name of the node. You can call the RAM API ListRoles to query the node RAM roles that you have created. The trusted entity of the specified role must be set to Lingjun AI Computing Service.
-             * Note: Clearing an existing role is not supported.</p>
+             * <p>The name of the Resource Access Management (RAM) role for the node. You can call the ListRoles operation of RAM to query the RAM roles that you have created. The trusted entity of the specified role must be Lingjun Intelligent Computing.
+             * Note: You cannot clear an existing role.</p>
              * 
              * <strong>example:</strong>
              * <p>xianwen-test-ram-role</p>
@@ -2887,7 +3143,7 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to enable GPU splitting.</p>
+             * <p>Specifies whether to enable GPU virtualization splitting.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>

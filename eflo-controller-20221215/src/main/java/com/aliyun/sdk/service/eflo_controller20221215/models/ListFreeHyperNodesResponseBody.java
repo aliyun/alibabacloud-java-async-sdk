@@ -101,10 +101,14 @@ public class ListFreeHyperNodesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page in a paged query. Maximum value: 100.</p>
+         * <p>The maximum number of results per paging for a paged query. Maximum value: 100.</p>
          * <p>Default value:</p>
-         * <p>•If this parameter is not specified or is set to a value less than 20, the default value is 20.</p>
-         * <p>•If this parameter is set to a value greater than 100, the default value is 100.</p>
+         * <ul>
+         * <li><p>If this parameter is not specified or the Settings value is less than 20, the default value is 20.</p>
+         * </li>
+         * <li><p>If the Settings value is greater than 100, the default value is 100.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -115,7 +119,7 @@ public class ListFreeHyperNodesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The pagination token returned by this call.</p>
+         * <p>The pagination token returned by the current call.</p>
          * 
          * <strong>example:</strong>
          * <p>563d42ae0b17572449ec8c97f7f66069</p>
@@ -418,7 +422,7 @@ public class ListFreeHyperNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time. The time is in ISO 8601 format.</p>
+             * <p>The creation time in ISO 8601 format.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-08-06T10:11:41.569</p>
@@ -429,7 +433,7 @@ public class ListFreeHyperNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The machine expiration time. The time is in ISO 8601 format. Z in the example indicates UTC.</p>
+             * <p>The expiration time of the machine in ISO 8601 format. The Z in the example indicates UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-01-22T23:59:59Z</p>
@@ -462,7 +466,7 @@ public class ListFreeHyperNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The node ID.</p>
+             * <p>The hypernode ID.</p>
              * 
              * <strong>example:</strong>
              * <p>e01-cn-7pp2x193801</p>
@@ -484,7 +488,7 @@ public class ListFreeHyperNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The hyper node status.</p>
+             * <p>The hypernode status.</p>
              * 
              * <strong>example:</strong>
              * <p>Using</p>
@@ -506,7 +510,7 @@ public class ListFreeHyperNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The hyper node status.</p>
+             * <p>The hypernode status.</p>
              * 
              * <strong>example:</strong>
              * <p>Using</p>

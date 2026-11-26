@@ -226,15 +226,15 @@ public class SendFileRequest extends Request {
         }
 
         /**
-         * <p>The content of the file. The file must not exceed 32 KB in size after it is encoded in Base64.</p>
+         * <p>The file content. The size of the file content cannot exceed 32 KB after Base64 encoding.</p>
          * <ul>
-         * <li>If <code>ContentType</code> is set to <code>PlainText</code>, the value of Content is in plaintext.</li>
-         * <li>If <code>ContentType</code> is set to <code>Base64</code>, the value of Content is Base64-encoded.</li>
+         * <li>If the ContentType parameter is set to PlainText, this field contains plain text.</li>
+         * <li>If the ContentType parameter is set to Base64, this field contains Base64-encoded text.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>#!/bin/bash echo &quot;Current User is :&quot; echo $(ps | grep &quot;$$&quot; | awk \&quot;{print $2}\&quot;) -------- oss://bucketName/objectName</p>
+         * <p>#!/bin/bash echo &quot;Current User is :&quot; echo $(ps | grep &quot;$$&quot; | awk &quot;{print $2}&quot;) -------- oss://bucketName/objectName</p>
          */
         public Builder content(String content) {
             this.putBodyParameter("Content", content);
@@ -244,7 +244,11 @@ public class SendFileRequest extends Request {
 
         /**
          * <p>The content type of the file. Valid values:</p>
-         * <p>PlainText Base64 Default value: PlainText.</p>
+         * <ul>
+         * <li>PlainText: plain text.</li>
+         * <li>Base64: Base64-encoded text.
+         * Default value: PlainText.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>PlainText</p>
@@ -256,7 +260,7 @@ public class SendFileRequest extends Request {
         }
 
         /**
-         * <p>The description of the file. The description can be up to 512 characters in length and can contain any characters.</p>
+         * <p>The description. The description supports all character sets and can be up to 512 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>This is a test file.</p>
@@ -268,8 +272,9 @@ public class SendFileRequest extends Request {
         }
 
         /**
-         * <p>The user group of the file. This parameter takes effect only on Linux instances. Default value: root. The value can be up to 64 characters in length.</p>
-         * <p>Note If you want to use a non-root user group, make sure that the user group exists in the instances.</p>
+         * <p>The file group. This parameter takes effect only on Linux instances. Default value: root. The value can be up to 64 characters in length.
+         * Note
+         * When you use a different group, make sure that the group exists on the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -281,8 +286,8 @@ public class SendFileRequest extends Request {
         }
 
         /**
-         * <p>The permissions on the file. This parameter takes effect only on Linux instances. You can configure this parameter in the same way as you configure the chmod command.</p>
-         * <p>Default value: 0644: the owner of the file has the read and write permission. The user group of the file and other users have read-only permission.</p>
+         * <p>The file permissions. This parameter takes effect only on Linux instances. The setting method is the same as that of the chmod command.
+         * Default value: 0644, which indicates that the owner has read and write permissions, and the group and others have read-only permissions.</p>
          * 
          * <strong>example:</strong>
          * <p>0644</p>
@@ -294,7 +299,7 @@ public class SendFileRequest extends Request {
         }
 
         /**
-         * <p>The owner of the file. This parameter takes effect only on Linux instances. Default value: root.</p>
+         * <p>The file owner. This parameter takes effect only on Linux instances. Default value: root.</p>
          * 
          * <strong>example:</strong>
          * <p>root</p>
@@ -306,7 +311,7 @@ public class SendFileRequest extends Request {
         }
 
         /**
-         * <p>The file name. The name can be up to 255 characters in length and can contain any characters.</p>
+         * <p>The file name. The name supports all character sets and can be up to 255 characters in length.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -319,7 +324,7 @@ public class SendFileRequest extends Request {
         }
 
         /**
-         * <p>The node list.</p>
+         * <p>The list of node IDs. The node IDs must belong to created Lingjun nodes. You can call the ListClusterNodes or ListFreeNodes operation to query the node IDs.</p>
          * <p>This parameter is required.</p>
          */
         public Builder nodeIdList(java.util.List<String> nodeIdList) {
@@ -330,12 +335,12 @@ public class SendFileRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to overwrite file with the same name in the destination directory.</p>
+         * <p>Specifies whether to overwrite the file if a file with the same name already exists in the target directory. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li>true: Overwrites the file.</li>
+         * <li>false: Does not overwrite the file.
+         * Default value: false.</li>
          * </ul>
-         * <p>Default value: false.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>
@@ -347,7 +352,7 @@ public class SendFileRequest extends Request {
         }
 
         /**
-         * <p>The directory in the Lingjun node to which the file is sent. If the specified directory does not exist, the system creates the directory automatically.</p>
+         * <p>The target folder on the Lingjun nodes to which the file is delivered. If the folder does not exist, automatic creation is performed.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -360,12 +365,12 @@ public class SendFileRequest extends Request {
         }
 
         /**
-         * <p>The timeout period for the file sending task. Unit: seconds.</p>
+         * <p>The timeout period for delivering the file. Unit: seconds.</p>
          * <ul>
-         * <li>A timeout error occurs when a file cannot be sent because the process slows down or because a specific module or Cloud Assistant Agent does not exist.</li>
-         * <li>If the specified timeout period is less than 10 seconds, the system sets the timeout period to 10 seconds to ensure that the file can be sent.</li>
+         * <li>A timeout occurs if the file cannot be delivered due to process issues, missing modules, or a missing Cloud Assistant Agent.</li>
+         * <li>If the specified timeout period is less than 10 seconds, the system automatically sets it to 10 seconds to ensure successful delivery.
+         * Default value: 60.</li>
          * </ul>
-         * <p>Default value: 60.</p>
          * 
          * <strong>example:</strong>
          * <p>600</p>

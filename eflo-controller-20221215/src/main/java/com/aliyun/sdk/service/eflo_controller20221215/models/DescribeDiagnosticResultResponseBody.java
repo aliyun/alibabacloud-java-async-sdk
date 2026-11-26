@@ -169,7 +169,7 @@ public class DescribeDiagnosticResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The time when the device was created. The time is in ISO 8601 format.</p>
+         * <p>The time when the device was created. The time follows the ISO 8601 format.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-06-15T10:17:56</p>
@@ -199,7 +199,7 @@ public class DescribeDiagnosticResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The diagnostic status.</p>
+         * <p>The diagnostic state.</p>
          * 
          * <strong>example:</strong>
          * <p>Fault</p>
@@ -221,7 +221,7 @@ public class DescribeDiagnosticResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The time when the node exception ended. The time is in ISO 8601 format with a time zone, in the yyyy-MM-ddTHH:mm:ss+0800 format.</p>
+         * <p>The time when the node exception ended. The time follows the ISO 8601 standard and includes the time zone. The format is yyyy-MM-ddTHH:mm:ss+0800.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-06-11T10:00:30</p>

@@ -122,7 +122,7 @@ public class ShrinkClusterRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to skip failed nodes. The default value is False.</p>
+         * <p>Specifies whether to skip failed nodes. Default value: false.</p>
          * 
          * <strong>example:</strong>
          * <p>False</p>
@@ -134,7 +134,7 @@ public class ShrinkClusterRequest extends Request {
         }
 
         /**
-         * <p>The information about the node groups.</p>
+         * <p>The node group information. Note: This parameter is actually required. If it is not provided, the API returns a 400 InvalidParameter error (NodeGroups field required).</p>
          */
         public Builder nodeGroups(java.util.List<NodeGroups> nodeGroups) {
             String nodeGroupsShrink = shrink(nodeGroups, "NodeGroups", "json");
@@ -190,7 +190,7 @@ public class ShrinkClusterRequest extends Request {
             } 
 
             /**
-             * <p>The hyper node ID.</p>
+             * <p>The hypernode ID.</p>
              * 
              * <strong>example:</strong>
              * <p>e01-cn-zvp2tgykr08</p>
@@ -330,7 +330,7 @@ public class ShrinkClusterRequest extends Request {
             } 
 
             /**
-             * <p>The list of hyper nodes.</p>
+             * <p>The hypernode list.</p>
              */
             public Builder hyperNodes(java.util.List<HyperNodes> hyperNodes) {
                 this.hyperNodes = hyperNodes;
@@ -349,7 +349,7 @@ public class ShrinkClusterRequest extends Request {
             }
 
             /**
-             * <p>The list of nodes.</p>
+             * <p>The node list.</p>
              */
             public Builder nodes(java.util.List<Nodes> nodes) {
                 this.nodes = nodes;

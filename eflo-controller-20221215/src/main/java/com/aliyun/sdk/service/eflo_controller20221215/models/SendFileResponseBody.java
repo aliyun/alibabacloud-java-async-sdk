@@ -67,7 +67,7 @@ public class SendFileResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the execution.</p>
+         * <p>The command execution ID.</p>
          * 
          * <strong>example:</strong>
          * <p>t-hz03la52z1zkvls</p>

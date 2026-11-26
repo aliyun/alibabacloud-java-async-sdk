@@ -292,7 +292,7 @@ public class RunCommandRequest extends Request {
         }
 
         /**
-         * <p>The client token to ensure the idempotency of the request. Use your client to generate the token that is unique among requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see &quot;How to ensure idempotence&quot;.</p>
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The client token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see How to ensure idempotence.</p>
          * 
          * <strong>example:</strong>
          * <p>123e4567-e89b-12d3-a456-426655440000</p>
@@ -304,13 +304,13 @@ public class RunCommandRequest extends Request {
         }
 
         /**
-         * <p>The command content. Take note of the following:</p>
+         * <p>The command content. Take note of the following items:</p>
          * <ul>
-         * <li>When <code>EnableParameter</code> is set to true, you can use custom parameters in the command.</li>
-         * <li>Define custom parameters in the {{}} format. Within <code>{{}}</code>, the spaces and line feeds before and after the parameter names are ignored.</li>
-         * <li>You can specify up to 20 custom parameters.</li>
-         * <li>A custom parameter name can contain only letters, digits, underscores (_), and hyphens (-). The name is not case-sensitive.</li>
-         * <li>Each custom parameter name is up to 64 bytes in length.</li>
+         * <li>Specify <code>EnableParameter=true</code> to enable the custom parameter feature in the command content.</li>
+         * <li>Define custom parameters by enclosing them in <code>{{}}</code>. Spaces and line breaks before and after the parameter names within <code>{{}}</code> are ignored.</li>
+         * <li>You can define up to 20 custom parameters.</li>
+         * <li>Custom parameter names can contain only letters, digits, hyphens (-), and underscores (_). Parameter names are not case-sensitive.</li>
+         * <li>A single custom parameter name cannot exceed 64 bytes in length.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -323,7 +323,7 @@ public class RunCommandRequest extends Request {
         }
 
         /**
-         * <p>The ID of the command.</p>
+         * <p>The command ID.</p>
          * 
          * <strong>example:</strong>
          * <p>c-e996287206324975b5fbe1d***</p>
@@ -335,12 +335,12 @@ public class RunCommandRequest extends Request {
         }
 
         /**
-         * <p>The encoding mode of the command content. Valid values:</p>
+         * <p>The encoding format of the script content. Valid values:</p>
          * <ul>
-         * <li>PlainText</li>
-         * <li>Base64</li>
+         * <li>PlainText: The content is not encoded and is transmitted in plaintext.</li>
+         * <li>Base64: The content is Base64-encoded.</li>
          * </ul>
-         * <p>Default value: PlainText. If the specified value of this parameter is invalid, PlainText is used by default.</p>
+         * <p>Default value: PlainText. If you specify an invalid value, the value is processed as PlainText.</p>
          * 
          * <strong>example:</strong>
          * <p>Base64</p>
@@ -364,7 +364,7 @@ public class RunCommandRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to use custom parameters in the command.</p>
+         * <p>Specifies whether the command contains custom parameters.</p>
          * <p>Default value: false.</p>
          * 
          * <strong>example:</strong>
@@ -377,24 +377,25 @@ public class RunCommandRequest extends Request {
         }
 
         /**
-         * <p>The schedule to run the command. Supported schedule types: at a fixed interval based on a rate expression, run only once at a specific time, or run at specific times based on a cron expression.</p>
+         * <p>The scheduled execution time of the command. Three scheduled execution modes are supported: execution at fixed intervals (based on rate expressions), one-time execution at a specified time, and clock-based scheduled execution (based on cron expressions).</p>
          * <ul>
-         * <li><p>To run the command at a fixed interval, use a rate expression to specify the interval. The interval can be in seconds, minutes, hours, or days. This option is suitable for scenarios in which tasks need to be executed at a fixed interval. Format: rate(\<Execution interval value> \<Execution interval unit>). For example, rate(5m) means to run the command every 5 minutes. When you specify an interval, take note of the following limits:</p>
+         * <li><p>Execution at fixed intervals: Executes the command at the specified interval based on a rate expression. The interval can be specified in seconds (s), minutes (m), hours (h), or days (d). This mode is suitable for scenarios where tasks are executed at fixed intervals. The format is rate(<interval value><interval unit>). For example, to execute the command every 5 minutes, use rate(5m). Limits on execution at fixed intervals: </p>
          * <ul>
-         * <li>The interval can be anywhere from 60 seconds to 7 days, but must be longer than the timeout period of the scheduled task.</li>
-         * <li>The interval is the time between two consecutive executions, irrelevant of the time required to run the command. For example, assume that you set the interval to 5 minutes and that it takes 2 minutes to run the command each time. The system waits 3 minutes before running the command again.</li>
-         * <li>The command is not immediately executed after the task is created. For example, assume that you set the interval to 5 minutes. The task begins to be executed 5 minutes after it is created.</li>
+         * <li>The interval cannot exceed 7 days or be less than 60 seconds, and must be greater than the timeout period of the scheduled task. </li>
+         * <li>The execution interval is based only on the fixed frequency and is independent of the actual time required to execute the task. For example, if you set the interval to 5 minutes and the task takes 2 minutes to complete, the next execution starts 3 minutes after the task is completed. </li>
+         * <li>The task is not executed immediately upon creation. For example, if you set the interval to 5 minutes, the command is not executed immediately when the task is created. Instead, the first execution starts 5 minutes after the task is created.</li>
          * </ul>
          * </li>
-         * <li><p>To run a command only once at a specific point in time, specify a point in time and a time zone. Format: at(yyyy-MM-dd HH:mm:ss \<Time zone>). If you do not specify a time zone, the Coordinated Universal Time (UTC) time zone is used by default. The time zone name supports the following formats: Full name, such as Asia/Shanghai and America/Los_Angeles. The time offset from GMT. Examples: GMT+8:00 (UTC+8) and GMT-7:00 (UTC-7). If you use the GMT format, you cannot add leading zeros to the hour value. The time zone abbreviation. Only UTC is supported. For example, to configure a command to run only once at 13:15:30 on June 6, 2022 (Shanghai time), set the time to at(2022-06-06 13:15:30 Asia/Shanghai). To configure a command to run only once at 13:15:30 on June 6, 2022 (UTC-7), set the time to at(2022-06-06 13:15:30 GMT-7:00).</p>
+         * <li><p>One-time execution at a specified time: Executes the command once at the specified time zone and time point. The format is at(yyyy-MM-dd HH:mm:ss <time zone>). If you do not specify a time zone, the UTC time zone is used by default. The time zone can be in one of the following formats: Full name of the time zone, such as Asia/Shanghai and America/Los_Angeles. Offset from Greenwich Mean Time (GMT), such as GMT+8:00 and GMT-7:00. When you use the GMT format, leading zeros are not supported for the hour. Time zone abbreviation: Only UTC is supported.
+         * For example, to execute the command once at 13:15:30 on June 6, 2022 in the Asia/Shanghai time zone, use at(2022-06-06 13:15:30 Asia/Shanghai). To execute the command once at 13:15:30 on June 6, 2022 in the GMT-7:00 time zone, use at(2022-06-06 13:15:30 GMT-7:00).</p>
          * </li>
-         * <li><p>To run a command at designated points in time, use a cron expression to define the schedule. Format: \<Cron expression> \<Time zone>. Example: \<Seconds> \<Minutes> \<Hours> \<Day of the month> \<Month> \<Day of the week> \&lt;Year (optional)&gt; \<Time zone>. The system calculates the execution times of the command based on the specified cron expression and time zone and runs the command as scheduled. If you do not specify a time zone, the system time zone of the instance is used by default. For more information, see Cron expressions. The time zone name supports the following formats:</p>
+         * <li><p>Clock-based scheduled execution (based on cron expressions): Executes the command based on a cron expression. The format is <seconds> <minutes> <hours> <day of month> <month> <day of week> &lt;year (optional)&gt; <time zone>, which is <cron expression> <time zone>. The execution time is calculated based on the cron expression in the specified time zone. If you do not specify a time zone, the system time zone of the instance is used by default. For more information about cron expressions, see Cron expressions. The time zone can be in one of the following formats: </p>
          * <ul>
-         * <li>Full name, such as Asia/Shanghai and America/Los_Angeles.</li>
-         * <li>The time offset from GMT. Examples: GMT+8:00 (UTC+8) and GMT-7:00 (UTC-7). If you use the GMT format, you cannot add leading zeros to the hour value.</li>
-         * <li>The time zone abbreviation. Only UTC is supported.</li>
+         * <li>Full name of the time zone, such as Asia/Shanghai and America/Los_Angeles. </li>
+         * <li>Offset from GMT, such as GMT+8:00 and GMT-7:00. When you use the GMT format, leading zeros are not supported for the hour. </li>
+         * <li>Time zone abbreviation: Only UTC is supported.</li>
          * </ul>
-         * <p>For example, if you specify a command to run at 10:15:00 every day in 2022 in China/Shanghai time, set the time to 0 15 10 ? \* \* 2022 Asia/Shanghai. To configure a command to run every half an hour from 10:00:00 to 11:30:00 every day in 2022 (UTC+8), set the schedule to 0 0/30 10-11 \* \* ? 2022 GMT+8:00. To configure a command to run every 5 minutes from 14:00:00 to 14:55:00 every October every two years from 2022 in UTC, set the schedule to 0 0/5 14 \* 10 ? 2022/2 UTC.</p>
+         * <p>  For example, to execute the command once at 10:15 every day in 2022 in the Asia/Shanghai time zone, use 0 15 10 ? * * 2022 Asia/Shanghai. To execute the command every 30 minutes from 10:00 to 11:30 every day in 2022 in the GMT+8:00 time zone, use 0 0/30 10-11 * * ? 2022 GMT+8:00. To execute the command every 5 minutes from 14:00 to 14:55 every day in October every two years starting from 2022 in the UTC time zone, use 0 0/5 14 * 10 ? 2022/2 UTC.</p>
          * </li>
          * </ul>
          */
@@ -405,7 +406,7 @@ public class RunCommandRequest extends Request {
         }
 
         /**
-         * <p>The launcher for script execution. Cannot exceed 1 KB.</p>
+         * <p>The launcher for script execution. The size cannot exceed 1 KB.</p>
          * 
          * <strong>example:</strong>
          * <p>python3 -u {{ACS::ScriptFileName|Ext(&quot;.py&quot;)}}</p>
@@ -429,7 +430,7 @@ public class RunCommandRequest extends Request {
         }
 
         /**
-         * <p>The node list.</p>
+         * <p>The list of nodes. The node IDs must belong to created Lingjun nodes. You can call the ListClusterNodes or ListFreeNodes operation to query the node IDs.</p>
          */
         public Builder nodeIdList(java.util.List<String> nodeIdList) {
             String nodeIdListShrink = shrink(nodeIdList, "NodeIdList", "json");
@@ -439,18 +440,18 @@ public class RunCommandRequest extends Request {
         }
 
         /**
-         * <p>The key-value pairs of custom parameters to pass in when the command includes custom parameters. For example, the command content is <code>echo {{name}}</code>. You can use <code>Parameters</code> to pass in the <code>{&quot;name&quot;:&quot;Jack&quot;}</code> key-value pair. The <code>name</code> key of the custom parameter is automatically replaced by the paired Jack value to generate a new command. As a result, the <code>echo Jack</code> command is run.</p>
-         * <p>You can specify 0 to 10 custom parameters. Take note of the following:</p>
+         * <p>The key-value pairs of the custom parameters that are passed when the command is executed, if the command contains custom parameters. For example, if the command content is <code>echo {{name}}</code>, you can pass the key-value pair <code>{&quot;name&quot;:&quot;Jack&quot;}</code> by using the <code>Parameter</code> parameter. The custom parameter automatically replaces the variable <code>name</code>, generating a new command <code>echo Jack</code> to be executed.</p>
+         * <p>The number of custom parameters ranges from 0 to 10. Take note of the following items:</p>
          * <ul>
-         * <li>The key of a custom parameter can be up to 64 characters in length, and cannot be an empty string.</li>
-         * <li>The value of a custom parameter can be an empty string.</li>
-         * <li>If you want to retain a command, make sure that the command after Base64 encoding, including custom parameters and original command content, does not exceed 18 KB in size. If you do not want to retain the command, make sure that the command after Base64 encoding does not exceed 24 KB in size. You can set <code>KeepCommand</code> to specify whether to retain the command.</li>
-         * <li>The specified custom parameter names must be included in the custom parameter names that you specify when you create the command. You can use empty strings to represent the parameters that are not passed in.</li>
+         * <li>The key cannot be an empty string and can contain up to 64 characters.</li>
+         * <li>The value can be an empty string.</li>
+         * <li>After the custom parameters and the original command content are Base64-encoded, if the command is saved, the size of the Base64-encoded command content cannot exceed 18 KB. If the command is not saved, the size cannot exceed 24 KB. You can use <code>KeepCommand</code> to specify whether to retain the command.</li>
+         * <li>The set of custom parameter names must be a subset of the parameter set defined when the command was created. For parameters that are not passed, you can use empty strings.</li>
          * </ul>
-         * <p>This parameter is left empty by default, which indicates that the custom parameter feature is disabled.</p>
+         * <p>Default value: empty, which indicates that this parameter is not specified and the custom parameter feature is disabled.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;name&quot;:&quot;Jack&quot;, &quot;accessKey&quot;:&quot;LTAIdyvdIqaRY****&quot;}</p>
+         * <p>{&quot;name&quot;:&quot;Jack&quot;, &quot;accessKey&quot;:&quot;LTAI***********&quot;}</p>
          */
         public Builder parameters(java.util.Map<String, ?> parameters) {
             String parametersShrink = shrink(parameters, "Parameters", "json");
@@ -460,17 +461,17 @@ public class RunCommandRequest extends Request {
         }
 
         /**
-         * <p>The mode to run the command. Valid values:</p>
+         * <p>The execution mode of the command. Valid values:</p>
          * <ul>
-         * <li>Once: runs the command immediately.</li>
-         * <li>Period: runs the command based on a schedule. When set to <code>Period</code>, <code>Frequency</code> is required.</li>
-         * <li>NextRebootOnly: runs the command the next time the instances is started.</li>
-         * <li>EveryReboot: runs the command every time the instance is started.</li>
+         * <li>Once: Executes the command immediately.</li>
+         * <li>Period: Executes the command on a schedule. If you set this parameter to <code>Period</code>, you must also specify the <code>Frequency</code> parameter.</li>
+         * <li>NextRebootOnly: Automatically executes the command the next time the instance starts.</li>
+         * <li>EveryReboot: Automatically executes the command every time the instance starts.</li>
          * </ul>
          * <p>Default value:</p>
          * <ul>
-         * <li>If you do not specify <code>Frequency</code>, the default value is <code>Once</code>.</li>
-         * <li>If you specify <code>Frequency</code>, RepeatMode is set to <code>Period</code> regardless of whether a value is already specified.</li>
+         * <li>If you do not specify the <code>Frequency</code> parameter, the default value is <code>Once</code>.</li>
+         * <li>If you specify the <code>Frequency</code> parameter, the value is processed as <code>Period</code> regardless of whether this parameter is specified.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -483,8 +484,9 @@ public class RunCommandRequest extends Request {
         }
 
         /**
-         * <p>Indicates how the command task is stopped when a command execution is manually stopped or times out. Valid values:</p>
-         * <p>Process: The process of the command is stopped. ProcessTree: The process tree of the command is stopped. In this case, the process of the command and all subprocesses are stopped.</p>
+         * <p>The mode used when the task is stopped manually or interrupted due to execution timeout. Valid values:</p>
+         * <p>Process: Stops the current script process.
+         * ProcessTree: Stops the current process tree, which includes the script process and all its child processes.</p>
          * 
          * <strong>example:</strong>
          * <p>ProcessTree</p>
@@ -496,7 +498,7 @@ public class RunCommandRequest extends Request {
         }
 
         /**
-         * <p>The timeout period for the command. Unit: seconds. A timeout error occurs if the command cannot be run because the process slows down or because a specific module or Cloud Assistant Agent does not exist. When the specified timeout period ends, the command process is forcefully terminated. Default value: 60.</p>
+         * <p>The timeout period for executing the command, in seconds. A timeout occurs when the command cannot be executed due to process issues, missing modules, or a missing Cloud Assistant Agent. After a timeout, the command process is forcibly terminated. Default value: 60.</p>
          * 
          * <strong>example:</strong>
          * <p>3600</p>
@@ -508,7 +510,8 @@ public class RunCommandRequest extends Request {
         }
 
         /**
-         * <p>The username that you use to run the command. The name can be up to 255 characters in length. For Linux instances, the root user is used by default.</p>
+         * <p>The name of the user that is used to execute the command on the instance. The name cannot exceed 255 characters in length.
+         * For Linux instances, the command is executed by the root user by default.</p>
          * 
          * <strong>example:</strong>
          * <p>root</p>
@@ -520,8 +523,8 @@ public class RunCommandRequest extends Request {
         }
 
         /**
-         * <p>The working path of the command. You can specify a custom path. Default path:</p>
-         * <p>Linux instances: By default, the path is in the /home directory of the root user.</p>
+         * <p>The custom execution path of the command. Default paths:</p>
+         * <p>Linux instances: The default execution path is the /home directory of the root user.</p>
          * 
          * <strong>example:</strong>
          * <p>/home/user</p>

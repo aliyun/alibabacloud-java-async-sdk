@@ -122,10 +122,12 @@ public class CreateSessionRequest extends Request {
         }
 
         /**
-         * <p>The type of the session corresponding to the session package.</p>
+         * <p>The session type of the session package.</p>
          * 
          * <strong>example:</strong>
-         * <p>Sol</p>
+         * <p>N Two types:
+         * Sol: Serial port-based [default]
+         * Assistant: Cloud Assistant-based</p>
          */
         public Builder sessionType(String sessionType) {
             this.putBodyParameter("SessionType", sessionType);
@@ -134,7 +136,7 @@ public class CreateSessionRequest extends Request {
         }
 
         /**
-         * <p>The start time. The value is a 13-digit timestamp.</p>
+         * <p>The start time, which is a 13-digit timestamp.</p>
          * 
          * <strong>example:</strong>
          * <p>1669340937156</p>

@@ -375,7 +375,7 @@ public class DescribeNodeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The creation time. The time is in ISO 8601 format. Z in the example indicates UTC.</p>
+         * <p>The creation time. The time is displayed in ISO 8601 format. Z in the example indicates UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-09-30T03:35:53Z</p>
@@ -386,7 +386,7 @@ public class DescribeNodeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of disk information.</p>
+         * <p>The disk information.</p>
          */
         public Builder disks(java.util.List<Disks> disks) {
             this.disks = disks;
@@ -394,7 +394,7 @@ public class DescribeNodeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The expiration time. The time is in ISO 8601 format. Z in the example indicates UTC.</p>
+         * <p>The expiration time. The time is displayed in ISO 8601 format. Z in the example indicates UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-06-23T16:00:00Z</p>
@@ -405,7 +405,7 @@ public class DescribeNodeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether file storage mounting is supported.</p>
+         * <p>Specifies whether file storage mounting is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>
@@ -438,7 +438,7 @@ public class DescribeNodeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HyperNode ID.</p>
+         * <p>The hypernode ID.</p>
          * 
          * <strong>example:</strong>
          * <p>e01-cn-zvp2tgykr08</p>
@@ -523,13 +523,15 @@ public class DescribeNodeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The type of the current node. Valid values:
-         * ● cpfs-enhanced
-         * ● ebs-enhanced
-         * ● standard
-         * ● standby
-         * ● standard-v2
-         * ● standby-v2</p>
+         * <p>The type of the current node. Valid values:</p>
+         * <ul>
+         * <li>cpfs-enhanced</li>
+         * <li>ebs-enhanced</li>
+         * <li>standard</li>
+         * <li>standby</li>
+         * <li>standard-v2</li>
+         * <li>standby-v2</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>standard</p>
@@ -540,7 +542,22 @@ public class DescribeNodeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The node status.</p>
+         * <p>The operating state of the node. Valid values:</p>
+         * <ul>
+         * <li>Extending: scaling out</li>
+         * <li>UnusedNodeStopped: unused node stopped</li>
+         * <li>UnusedNodeStopping: stopping unused node</li>
+         * <li>Unused: unused</li>
+         * <li>Using: in use</li>
+         * <li>ReleaseLocking: pending release</li>
+         * <li>Operating: operating</li>
+         * <li>ClusterNodeStopped: cluster node stopped</li>
+         * <li>Cutting: scaling in</li>
+         * <li>UnusedNodeRecovering: recovering unused node</li>
+         * <li>ClusterNodeStopping: stopping cluster node</li>
+         * <li>ClusterNodeRecovering: recovering cluster node</li>
+         * <li>Replacing: replacing</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Using</p>
@@ -637,6 +654,12 @@ public class DescribeNodeResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DiskId")
         private String diskId;
 
+        @com.aliyun.core.annotation.NameInMap("Encrypted")
+        private Boolean encrypted;
+
+        @com.aliyun.core.annotation.NameInMap("KMSKeyId")
+        private String KMSKeyId;
+
         @com.aliyun.core.annotation.NameInMap("PerformanceLevel")
         private String performanceLevel;
 
@@ -649,6 +672,8 @@ public class DescribeNodeResponseBody extends TeaModel {
         private Disks(Builder builder) {
             this.category = builder.category;
             this.diskId = builder.diskId;
+            this.encrypted = builder.encrypted;
+            this.KMSKeyId = builder.KMSKeyId;
             this.performanceLevel = builder.performanceLevel;
             this.size = builder.size;
             this.type = builder.type;
@@ -677,6 +702,20 @@ public class DescribeNodeResponseBody extends TeaModel {
         }
 
         /**
+         * @return encrypted
+         */
+        public Boolean getEncrypted() {
+            return this.encrypted;
+        }
+
+        /**
+         * @return KMSKeyId
+         */
+        public String getKMSKeyId() {
+            return this.KMSKeyId;
+        }
+
+        /**
          * @return performanceLevel
          */
         public String getPerformanceLevel() {
@@ -700,6 +739,8 @@ public class DescribeNodeResponseBody extends TeaModel {
         public static final class Builder {
             private String category; 
             private String diskId; 
+            private Boolean encrypted; 
+            private String KMSKeyId; 
             private String performanceLevel; 
             private Integer size; 
             private String type; 
@@ -710,6 +751,8 @@ public class DescribeNodeResponseBody extends TeaModel {
             private Builder(Disks model) {
                 this.category = model.category;
                 this.diskId = model.diskId;
+                this.encrypted = model.encrypted;
+                this.KMSKeyId = model.KMSKeyId;
                 this.performanceLevel = model.performanceLevel;
                 this.size = model.size;
                 this.type = model.type;
@@ -718,7 +761,7 @@ public class DescribeNodeResponseBody extends TeaModel {
             /**
              * <p>The disk category. Valid values:</p>
              * <ul>
-             * <li>cloud_essd: ESSD cloud disk.</li>
+             * <li>cloud_essd: ESSD.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -741,10 +784,50 @@ public class DescribeNodeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The performance level (PL) of the ESSD cloud disk when it is used as the system cloud disk. Valid values:</p>
+             * <p>Specifies whether the system cloud disk is encrypted. Valid values:</p>
              * <ul>
-             * <li>PL0: a maximum of 10,000 random read/write IOPS per disk.</li>
-             * <li>PL1: a maximum of 50,000 random read/write IOPS per disk.</li>
+             * <li>true: The disk is encrypted.</li>
+             * <li>false: The disk is not encrypted.</li>
+             * </ul>
+             * <p>Default value: false.</p>
+             * <blockquote>
+             * <p>Notice: When you use a shared encrypted image to create a cloud disk from an encrypted snapshot, you must set the request parameter Encrypted to true for the cloud disk to ensure that the created cloud disk uses the key of the sharer.</notice></p>
+             * </blockquote>
+             * <blockquote>
+             * <p>System cloud disk encryption during instance creation is not supported in Hong Kong (China) Zone D or Singapore Zone A.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
+             */
+            public Builder encrypted(Boolean encrypted) {
+                this.encrypted = encrypted;
+                return this;
+            }
+
+            /**
+             * <p>The KMS key ID of the system cloud disk.</p>
+             * <p>If Encrypted is specified as true and KMSKeyId is not specified, the default key is used for encryption, and the KMSKeyId value is returned after the instance is created.</p>
+             * <ul>
+             * <li>If the cloud disk is created from an unshared encrypted snapshot, the encryption key used for the snapshot is used by default.</li>
+             * <li>If the cloud disk is created from a shared encrypted snapshot, the service key is used by default.</li>
+             * <li>If the cloud disk is created in a region where account-level default encryption for Elastic Block Storage (EBS) is enabled, the specified account-level key is used by default.</li>
+             * <li>In other cases, the service key is used by default.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>d76693f2-32db-483c-ad4a-d3139f42ced4</p>
+             */
+            public Builder KMSKeyId(String KMSKeyId) {
+                this.KMSKeyId = KMSKeyId;
+                return this;
+            }
+
+            /**
+             * <p>The performance level of the ESSD when it is used as the system cloud disk. Valid values:</p>
+             * <ul>
+             * <li>PL0: A single disk can deliver up to 10,000 random read/write IOPS.</li>
+             * <li>PL1: A single disk can deliver up to 50,000 random read/write IOPS.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -904,7 +987,7 @@ public class DescribeNodeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IP address of the machine.</p>
+             * <p>The machine IP address.</p>
              * 
              * <strong>example:</strong>
              * <p>47.254.235.44</p>

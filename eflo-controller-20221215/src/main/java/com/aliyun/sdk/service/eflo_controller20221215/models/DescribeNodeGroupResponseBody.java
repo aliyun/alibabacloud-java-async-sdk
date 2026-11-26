@@ -312,7 +312,7 @@ public class DescribeNodeGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The cluster ID.</p>
+         * <p>The ID of the cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>i111987311754895199538</p>
@@ -323,7 +323,7 @@ public class DescribeNodeGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The cluster name.</p>
+         * <p>The name of the cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>aliyun-basic-cluster</p>
@@ -334,7 +334,7 @@ public class DescribeNodeGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The creation time. The time is in ISO 8601 format.</p>
+         * <p>The creation time in ISO 8601 format.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-07-07T17:19:42.980000</p>
@@ -345,7 +345,7 @@ public class DescribeNodeGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether file storage mounting is supported.</p>
+         * <p>Specifies whether file storage mounting is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>
@@ -356,7 +356,7 @@ public class DescribeNodeGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The image ID.</p>
+         * <p>The ID of the image.</p>
          * 
          * <strong>example:</strong>
          * <p>i190720111752146430748</p>
@@ -389,11 +389,13 @@ public class DescribeNodeGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Valid values:
-         * • password: The group supports only password-based logon. 
-         * • keypair: The group supports only key pair-based logon. 
-         * • both: The group supports both password-based and key pair-based logon.</p>
-         * <p>If the value is empty, no logon method is configured for the group.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>password: The current group supports only password logon. </li>
+         * <li>keypair: The current group supports only key pair logon. </li>
+         * <li>both: The current group supports both password and key pair logon.</li>
+         * </ul>
+         * <p>If this parameter is empty, no logon method is configured for the group.</p>
          * 
          * <strong>example:</strong>
          * <p>password</p>
@@ -426,7 +428,7 @@ public class DescribeNodeGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The node group description.</p>
+         * <p>The description of the node group.</p>
          * 
          * <strong>example:</strong>
          * <p>lingjun alinux node group</p>
@@ -437,7 +439,7 @@ public class DescribeNodeGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The node group ID.</p>
+         * <p>The ID of the node group.</p>
          * 
          * <strong>example:</strong>
          * <p>i120982301752461697971</p>
@@ -448,7 +450,7 @@ public class DescribeNodeGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The node group name.</p>
+         * <p>The name of the node group.</p>
          * 
          * <strong>example:</strong>
          * <p>test-ack</p>
@@ -459,7 +461,7 @@ public class DescribeNodeGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The name of the RAM role for the node. You can call the RAM API ListRoles to query the RAM roles that you have created.</p>
+         * <p>The name of the RAM role for the node. You can call the ListRoles operation of RAM to query the RAM roles that you have created.</p>
          * 
          * <strong>example:</strong>
          * <p>xianwen-test-ram-role</p>
@@ -489,7 +491,7 @@ public class DescribeNodeGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The update time. The time is in ISO 8601 format.</p>
+         * <p>The update time in ISO 8601 format.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-08-20T11:18:11.164000</p>
@@ -513,7 +515,7 @@ public class DescribeNodeGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether GPU virtualization slicing is supported.</p>
+         * <p>Specifies whether GPU virtualization and partitioning are supported.</p>
          * 
          * <strong>example:</strong>
          * <p>False</p>
@@ -539,6 +541,12 @@ public class DescribeNodeGroupResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
 
+        @com.aliyun.core.annotation.NameInMap("Encrypted")
+        private Boolean encrypted;
+
+        @com.aliyun.core.annotation.NameInMap("KMSKeyId")
+        private String KMSKeyId;
+
         @com.aliyun.core.annotation.NameInMap("PerformanceLevel")
         private String performanceLevel;
 
@@ -547,6 +555,8 @@ public class DescribeNodeGroupResponseBody extends TeaModel {
 
         private SystemDisk(Builder builder) {
             this.category = builder.category;
+            this.encrypted = builder.encrypted;
+            this.KMSKeyId = builder.KMSKeyId;
             this.performanceLevel = builder.performanceLevel;
             this.size = builder.size;
         }
@@ -567,6 +577,20 @@ public class DescribeNodeGroupResponseBody extends TeaModel {
         }
 
         /**
+         * @return encrypted
+         */
+        public Boolean getEncrypted() {
+            return this.encrypted;
+        }
+
+        /**
+         * @return KMSKeyId
+         */
+        public String getKMSKeyId() {
+            return this.KMSKeyId;
+        }
+
+        /**
          * @return performanceLevel
          */
         public String getPerformanceLevel() {
@@ -582,6 +606,8 @@ public class DescribeNodeGroupResponseBody extends TeaModel {
 
         public static final class Builder {
             private String category; 
+            private Boolean encrypted; 
+            private String KMSKeyId; 
             private String performanceLevel; 
             private Integer size; 
 
@@ -590,6 +616,8 @@ public class DescribeNodeGroupResponseBody extends TeaModel {
 
             private Builder(SystemDisk model) {
                 this.category = model.category;
+                this.encrypted = model.encrypted;
+                this.KMSKeyId = model.KMSKeyId;
                 this.performanceLevel = model.performanceLevel;
                 this.size = model.size;
             } 
@@ -606,10 +634,50 @@ public class DescribeNodeGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The performance level (PL) of the ESSD used as the system cloud disk. Valid values:</p>
+             * <p>Specifies whether the system cloud disk is encrypted. Valid values:</p>
              * <ul>
-             * <li>PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.</li>
-             * <li>PL1: A single ESSD can deliver up to 50,000 random read/write IOPS.</li>
+             * <li>true: The system cloud disk is encrypted.</li>
+             * <li>false: The system cloud disk is not encrypted.</li>
+             * </ul>
+             * <p>Default value: false.</p>
+             * <blockquote>
+             * <p>Notice: When you use a shared encrypted image to create a cloud disk based on an encrypted snapshot, you must set the Encrypted request parameter to true for the cloud disk. This ensures that the created cloud disk uses the key of the account that the image is shared with.</notice></p>
+             * </blockquote>
+             * <blockquote>
+             * <p>You cannot encrypt the system cloud disk when you create an instance in Hong Kong (China) Zone D or Singapore Zone A.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
+             */
+            public Builder encrypted(Boolean encrypted) {
+                this.encrypted = encrypted;
+                return this;
+            }
+
+            /**
+             * <p>The KMS key ID for the system cloud disk.</p>
+             * <p>If the Encrypted parameter is set to true but KMSKeyId is not specified, the default key is used for encryption, and the KMSKeyId value is returned after the instance is created.</p>
+             * <ul>
+             * <li>If the cloud disk is created from a non-shared encrypted snapshot, the encryption key used for the snapshot is used by default.</li>
+             * <li>If the cloud disk is created from a shared encrypted snapshot, the service key is used by default.</li>
+             * <li>If the cloud disk is created in a region where account-level default encryption for Block Storage is enabled, the specified account-level key is used by default.</li>
+             * <li>In other cases, the service key is used by default.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>2d504554-333a-47c8-8d98-de36a23a1a4f</p>
+             */
+            public Builder KMSKeyId(String KMSKeyId) {
+                this.KMSKeyId = KMSKeyId;
+                return this;
+            }
+
+            /**
+             * <p>The performance level of the ESSD used as the system cloud disk. Valid values:</p>
+             * <ul>
+             * <li>PL0: A single disk can deliver up to 10,000 random read/write IOPS.</li>
+             * <li>PL1: A single disk can deliver up to 50,000 random read/write IOPS.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -623,7 +691,7 @@ public class DescribeNodeGroupResponseBody extends TeaModel {
             /**
              * <p>The size of the system cloud disk. Unit: GiB. Valid values:</p>
              * <ul>
-             * <li>Premium performance disk: 20 to 500.</li>
+             * <li>Basic cloud disk: 20 to 500.</li>
              * <li>ESSD:<ul>
              * <li>PL0: 1 to 2048.</li>
              * <li>PL1: 20 to 2048.</li>
@@ -631,10 +699,10 @@ public class DescribeNodeGroupResponseBody extends TeaModel {
              * <li>PL3: 1261 to 2048.</li>
              * </ul>
              * </li>
-             * <li>ESSD AutoPL: 1 to 2048.</li>
+             * <li>ESSD AutoPL cloud disk: 1 to 2048.</li>
              * <li>Other cloud disk types: 20 to 2048.</li>
              * </ul>
-             * <p>Default value: max{20, size of the image specified by the parameter ImageId}.</p>
+             * <p>Default value: max{20, the size of the image specified by the ImageId parameter}.</p>
              * 
              * <strong>example:</strong>
              * <p>1024</p>

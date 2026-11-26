@@ -27,7 +27,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Creates a session, returns the frontend endpoint, and starts an epoch task to track the session status.</p>
+     * <p>Creates a session, returns the frontend endpoint, and starts a periodic task to track the session status.</p>
      * 
      * @param request the request parameters of ChangeNodeGroup  ChangeNodeGroupRequest
      * @return ChangeNodeGroupResponse
@@ -87,7 +87,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>The API creates a session, returns the frontend endpoint, and starts a periodic task to track the session status.</p>
+     * <p>Creates a session, returns the frontend endpoint, and starts a periodic task to track the session status.</p>
      * 
      * @param request the request parameters of CreateSession  CreateSessionRequest
      * @return CreateSessionResponse
@@ -156,7 +156,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Queries the details of a hypernode.</p>
+     * <p>Queries the details of a supernode.</p>
      * 
      * @param request the request parameters of DescribeHyperNode  DescribeHyperNodeRequest
      * @return DescribeHyperNodeResponse
@@ -177,7 +177,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Queries the details of a supernode.</p>
+     * <p>Queries the details of a super node.</p>
      * 
      * @param request the request parameters of DescribeNode  DescribeNodeRequest
      * @return DescribeNodeResponse
@@ -299,7 +299,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Queries the details of hyper nodes.</p>
+     * <p>Queries the details of hypernodes.</p>
      * 
      * @param request the request parameters of ListHyperNodes  ListHyperNodesRequest
      * @return ListHyperNodesResponse
@@ -419,7 +419,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Creates a session, returns a frontend endpoint, and starts a periodic task to track the session status.</p>
+     * <p>Creates a session, returns the frontend endpoint, and starts a periodic task to track the session status.</p>
      * 
      * @param request the request parameters of ReportNodesStatus  ReportNodesStatusRequest
      * @return ReportNodesStatusResponse

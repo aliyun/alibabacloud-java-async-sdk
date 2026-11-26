@@ -67,7 +67,7 @@ public class CreateNetTestTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE*****</p>
@@ -78,7 +78,7 @@ public class CreateNetTestTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the network test task. This ID is the unique identifier for the task.</p>
+         * <p>The ID of the started test task, which is the unique identifier of the network test task.</p>
          * 
          * <strong>example:</strong>
          * <p>dr-uf6i0tv2refv8wz*****</p>

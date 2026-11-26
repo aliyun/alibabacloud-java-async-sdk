@@ -101,14 +101,7 @@ public class ListDiagnosticResultsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page in a paged query. Maximum value: 100.</p>
-         * <p>Default value:</p>
-         * <ul>
-         * <li><p>If this parameter is not specified or is set to a value less than 20, the default value is 20.</p>
-         * </li>
-         * <li><p>If this parameter is set to a value greater than 100, the default value is 100.</p>
-         * </li>
-         * </ul>
+         * <p>The maximum number of entries to return on each page during paging in a paged query. Valid values: 1 to 100. If you do not specify this parameter in the Settings, the default value is 10. If the specified value is greater than 100, the value 100 is used.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -119,7 +112,7 @@ public class ListDiagnosticResultsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The NextToken for the next page. Include this value when you request the next page.</p>
+         * <p>The NextToken value for the next page. Include this value in the request to query the next page.</p>
          * 
          * <strong>example:</strong>
          * <p>a3f2224a5ec7224116c4f5246120****</p>
@@ -130,7 +123,7 @@ public class ListDiagnosticResultsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>AC4F0004-7BCE-52E0-891B-CAC7D64E3368</p>
@@ -303,7 +296,7 @@ public class ListDiagnosticResultsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The cluster ID.</p>
+             * <p>The ID of the cluster.</p>
              * 
              * <strong>example:</strong>
              * <p>i11857814169474524****</p>
@@ -314,7 +307,7 @@ public class ListDiagnosticResultsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The cluster name.</p>
+             * <p>The name of the cluster.</p>
              * 
              * <strong>example:</strong>
              * <p>pjlab-lingjun</p>
@@ -325,7 +318,7 @@ public class ListDiagnosticResultsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the diagnostic task was created. The time is in ISO 8601 format. Z in the example indicates UTC.</p>
+             * <p>The time when the diagnostic task was created. The time follows the ISO 8601 standard. Z in the example indicates UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-01-15T02:01:12Z</p>
@@ -369,7 +362,7 @@ public class ListDiagnosticResultsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the diagnostic task was completed. The time is in ISO 8601 format. Z in the example indicates UTC.</p>
+             * <p>The time when the diagnostic task was completed. The time follows the ISO 8601 standard. Z in the example indicates UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-10-16T02:04Z</p>
@@ -380,7 +373,7 @@ public class ListDiagnosticResultsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The resource ID.</p>
+             * <p>The ID of the resource.</p>
              * 
              * <strong>example:</strong>
              * <p>e01-cn-bl03ofg6****</p>

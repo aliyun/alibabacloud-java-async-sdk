@@ -204,7 +204,7 @@ public class CreateNetTestTaskRequest extends Request {
         }
 
         /**
-         * <p>Specify this parameter if NetTestType is set to CommTest.</p>
+         * <p>The communication test configurations. This field is required when the network test type is communication library testing.</p>
          */
         public Builder commTest(CommTest commTest) {
             String commTestShrink = shrink(commTest, "CommTest", "json");
@@ -214,7 +214,7 @@ public class CreateNetTestTaskRequest extends Request {
         }
 
         /**
-         * <p>Specify this parameter if NetTestType is set to DelayTest.</p>
+         * <p>The delay test configurations. This field is required when the network test type is latency testing.</p>
          */
         public Builder delayTest(DelayTest delayTest) {
             String delayTestShrink = shrink(delayTest, "DelayTest", "json");
@@ -224,7 +224,7 @@ public class CreateNetTestTaskRequest extends Request {
         }
 
         /**
-         * <p>The type of network test. Valid values: DelayTest, TrafficTest, and CommTest.</p>
+         * <p>The network test type. Examples: DelayTest for latency testing, TrafficTest for traffic testing, and CommTest for communication library testing.</p>
          * 
          * <strong>example:</strong>
          * <p>DelayTest</p>
@@ -236,7 +236,7 @@ public class CreateNetTestTaskRequest extends Request {
         }
 
         /**
-         * <p>The network mode.</p>
+         * <p>The network mode. This parameter is required. If you do not specify this parameter, the API returns a 400 error and prompts that the field is missing (NetworkMode field required).</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -248,7 +248,7 @@ public class CreateNetTestTaskRequest extends Request {
         }
 
         /**
-         * <p>The test port number.</p>
+         * <p>The test port number. This parameter is required. If you do not specify this parameter, the API returns a 400 error and prompts that the field is missing (Port field required).</p>
          * 
          * <strong>example:</strong>
          * <p>23604</p>
@@ -260,7 +260,7 @@ public class CreateNetTestTaskRequest extends Request {
         }
 
         /**
-         * <p>This field is empty if TrafficModel is set to Fullmesh.</p>
+         * <p>The traffic test configurations. If the traffic model TrafficModel is Fullmesh, leave this field empty.</p>
          */
         public Builder trafficTest(TrafficTest trafficTest) {
             String trafficTestShrink = shrink(trafficTest, "TrafficTest", "json");
@@ -495,7 +495,7 @@ public class CreateNetTestTaskRequest extends Request {
             }
 
             /**
-             * <p>The hosts.</p>
+             * <p>The resource ID.</p>
              */
             public Builder hosts(java.util.List<Hosts> hosts) {
                 this.hosts = hosts;
@@ -514,7 +514,7 @@ public class CreateNetTestTaskRequest extends Request {
             }
 
             /**
-             * <p>The type of communication library test. Valid values: ACCL and NCCL.</p>
+             * <p>The communication library test type. Valid values: ACCL and NCCL.</p>
              * 
              * <strong>example:</strong>
              * <p>ACCL</p>
@@ -634,7 +634,7 @@ public class CreateNetTestTaskRequest extends Request {
             }
 
             /**
-             * <p>The IP address of the node.</p>
+             * <p>The node IP address.</p>
              * 
              * <strong>example:</strong>
              * <p>125.210.225.48</p>
@@ -830,7 +830,7 @@ public class CreateNetTestTaskRequest extends Request {
             } 
 
             /**
-             * <p>The bonded port of the network interface card (NIC).</p>
+             * <p>The bonded NIC port.</p>
              * 
              * <strong>example:</strong>
              * <p>bond1</p>
@@ -841,7 +841,7 @@ public class CreateNetTestTaskRequest extends Request {
             }
 
             /**
-             * <p>The IP address of the node.</p>
+             * <p>The node IP address.</p>
              * 
              * <strong>example:</strong>
              * <p>192.168.1.1</p>
@@ -994,7 +994,7 @@ public class CreateNetTestTaskRequest extends Request {
             }
 
             /**
-             * <p>The IP address of the node.</p>
+             * <p>The node IP address.</p>
              * 
              * <strong>example:</strong>
              * <p>47.121.110.190</p>
@@ -1170,7 +1170,7 @@ public class CreateNetTestTaskRequest extends Request {
             }
 
             /**
-             * <p>The runtime duration of the flow task, in seconds.</p>
+             * <p>The running duration of the workflow task, in seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1181,7 +1181,7 @@ public class CreateNetTestTaskRequest extends Request {
             }
 
             /**
-             * <p>If Protocol is set to RDMA, specify True or False. This field is empty if Protocol is set to TCP.</p>
+             * <p>If the protocol is RDMA, specify True or False. If the protocol is TCP, leave this field empty.</p>
              * 
              * <strong>example:</strong>
              * <p>False</p>
@@ -1203,7 +1203,7 @@ public class CreateNetTestTaskRequest extends Request {
             }
 
             /**
-             * <p>If Protocol is set to TCP, specify the number of concurrent connections for the test. If Protocol is set to RDMA, specify the QP value.</p>
+             * <p>The number of Concurrent Connections for the test when the protocol is TCP, or the configured queue pair (QP) value when the protocol is RDMA.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1214,7 +1214,7 @@ public class CreateNetTestTaskRequest extends Request {
             }
 
             /**
-             * <p>The list of servers.</p>
+             * <p>The server list.</p>
              */
             public Builder servers(java.util.List<Servers> servers) {
                 this.servers = servers;

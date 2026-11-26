@@ -93,7 +93,7 @@ public class ListHyperNodesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The list of nodes.</p>
+         * <p>The list of hypernodes.</p>
          */
         public Builder hyperNodes(java.util.List<HyperNodes> hyperNodes) {
             this.hyperNodes = hyperNodes;
@@ -101,13 +101,11 @@ public class ListHyperNodesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page in a paged query. Maximum value: 100.</p>
+         * <p>The maximum number of entries to return per page for paging in a paged query. Maximum value: 100.</p>
          * <p>Default value:</p>
          * <ul>
-         * <li><p>If this parameter is not specified or is set to a value less than 20, the default value is 20.</p>
-         * </li>
-         * <li><p>If this parameter is set to a value greater than 100, the default value is 100.</p>
-         * </li>
+         * <li>If no Settings are specified or the Settings value is less than 20, the default value is 20.</li>
+         * <li>If the Settings value is greater than 100, the default value is 100.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -119,7 +117,7 @@ public class ListHyperNodesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The NextToken for the next page. Include this value when requesting the next page.</p>
+         * <p>The token used to query the next page. Include this value in the request to query the next page.</p>
          * 
          * <strong>example:</strong>
          * <p>7ed93fda-5e7f-436a-ae5a-bd8e6b04e36b</p>
@@ -476,7 +474,7 @@ public class ListHyperNodesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The cluster ID.</p>
+             * <p>The ID of the cluster.</p>
              * 
              * <strong>example:</strong>
              * <p>i115226661755786900341</p>
@@ -487,7 +485,7 @@ public class ListHyperNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The cluster name.</p>
+             * <p>The name of the cluster.</p>
              * 
              * <strong>example:</strong>
              * <p>test-ack</p>
@@ -509,7 +507,7 @@ public class ListHyperNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time. The time is in ISO 8601 format.</p>
+             * <p>The time when the hypernode was created. The time follows the ISO 8601 standard.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-07-09T10:41:56.577</p>
@@ -520,7 +518,7 @@ public class ListHyperNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The expiration time. The time is in ISO 8601 format. The Z in the example indicates UTC.</p>
+             * <p>The time when the hypernode expires. The time follows the ISO 8601 standard. The Z in the example indicates UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-09-28T16:00:00Z</p>
@@ -553,7 +551,7 @@ public class ListHyperNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The node ID.</p>
+             * <p>The ID of the hypernode.</p>
              * 
              * <strong>example:</strong>
              * <p>e01-cn-2r42tmj4z02</p>
@@ -575,7 +573,7 @@ public class ListHyperNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The node group ID.</p>
+             * <p>The ID of the node group.</p>
              * 
              * <strong>example:</strong>
              * <p>i121135081698451727812</p>
@@ -586,7 +584,7 @@ public class ListHyperNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The node group.</p>
+             * <p>The name of the node group.</p>
              * 
              * <strong>example:</strong>
              * <p>l20c-0801</p>
@@ -597,7 +595,7 @@ public class ListHyperNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The hyper node status.</p>
+             * <p>The operating state of the hypernode.</p>
              * 
              * <strong>example:</strong>
              * <p>Using</p>
@@ -608,7 +606,7 @@ public class ListHyperNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The resource group ID.</p>
+             * <p>The ID of the resource group.</p>
              * 
              * <strong>example:</strong>
              * <p>rg-acfmwfm33rlt6zi</p>
@@ -619,7 +617,7 @@ public class ListHyperNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The node status.</p>
+             * <p>The status of the node.</p>
              * 
              * <strong>example:</strong>
              * <p>Extending</p>
@@ -638,7 +636,7 @@ public class ListHyperNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The task ID.</p>
+             * <p>The ID of the task.</p>
              * 
              * <strong>example:</strong>
              * <p>i153333771756952392398</p>

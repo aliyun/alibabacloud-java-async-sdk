@@ -207,7 +207,7 @@ public class UpdateNodeGroupRequest extends Request {
         }
 
         /**
-         * <p>The default image ID of the node group. If you do not specify this parameter, the image ID remains unchanged.</p>
+         * <p>The ID of the default image for the node group. If you do not specify this parameter, the image remains unchanged.</p>
          * 
          * <strong>example:</strong>
          * <p>i1232142432432</p>
@@ -267,7 +267,8 @@ public class UpdateNodeGroupRequest extends Request {
         }
 
         /**
-         * <p>The name of the RAM role for the node. You can call the ListRoles API operation of RAM to query the RAM roles that you have created. The trusted entity of the role must be Lingjun AI Computing Service. <warning>Submitting an empty string &quot;&quot; clears the RAM role of the node group.</warning></p>
+         * <p>The name of the RAM role for the node. You can call the ListRoles operation of Resource Access Management (RAM) to query the RAM roles that you have created. The trusted entity of the specified role must be Lingjun AI Computing Service.
+         * <warning>Submitting an empty string &quot;&quot; clears the RAM role of the node group.</warning></p>
          * 
          * <strong>example:</strong>
          * <p>xianwen-test-ram-role</p>
@@ -279,7 +280,7 @@ public class UpdateNodeGroupRequest extends Request {
         }
 
         /**
-         * <p>The system cloud disk configuration.</p>
+         * <p>The configuration of the system cloud disk.</p>
          */
         public Builder systemDisk(SystemDisk systemDisk) {
             String systemDiskShrink = shrink(systemDisk, "SystemDisk", "json");
@@ -289,7 +290,7 @@ public class UpdateNodeGroupRequest extends Request {
         }
 
         /**
-         * <p>The custom executable shell script. It must be Base64-encoded, and the maximum size of the raw data is 16 KB.</p>
+         * <p>The custom executable shell script. The script must be Base64-encoded. The maximum size of the raw data is 16 KB.</p>
          * 
          * <strong>example:</strong>
          * <p>ZWNobyBoZWxsbyBlY3Mh</p>
@@ -314,11 +315,27 @@ public class UpdateNodeGroupRequest extends Request {
      * <p>UpdateNodeGroupRequest</p>
      */
     public static class SystemDisk extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Category")
+        private String category;
+
+        @com.aliyun.core.annotation.NameInMap("Encrypted")
+        private Boolean encrypted;
+
+        @com.aliyun.core.annotation.NameInMap("KMSKeyId")
+        private String KMSKeyId;
+
         @com.aliyun.core.annotation.NameInMap("PerformanceLevel")
         private String performanceLevel;
 
+        @com.aliyun.core.annotation.NameInMap("Size")
+        private Long size;
+
         private SystemDisk(Builder builder) {
+            this.category = builder.category;
+            this.encrypted = builder.encrypted;
+            this.KMSKeyId = builder.KMSKeyId;
             this.performanceLevel = builder.performanceLevel;
+            this.size = builder.size;
         }
 
         public static Builder builder() {
@@ -330,30 +347,128 @@ public class UpdateNodeGroupRequest extends Request {
         }
 
         /**
+         * @return category
+         */
+        public String getCategory() {
+            return this.category;
+        }
+
+        /**
+         * @return encrypted
+         */
+        public Boolean getEncrypted() {
+            return this.encrypted;
+        }
+
+        /**
+         * @return KMSKeyId
+         */
+        public String getKMSKeyId() {
+            return this.KMSKeyId;
+        }
+
+        /**
          * @return performanceLevel
          */
         public String getPerformanceLevel() {
             return this.performanceLevel;
         }
 
+        /**
+         * @return size
+         */
+        public Long getSize() {
+            return this.size;
+        }
+
         public static final class Builder {
+            private String category; 
+            private Boolean encrypted; 
+            private String KMSKeyId; 
             private String performanceLevel; 
+            private Long size; 
 
             private Builder() {
             } 
 
             private Builder(SystemDisk model) {
+                this.category = model.category;
+                this.encrypted = model.encrypted;
+                this.KMSKeyId = model.KMSKeyId;
                 this.performanceLevel = model.performanceLevel;
+                this.size = model.size;
             } 
 
             /**
-             * <p>The performance level.</p>
+             * <p>The type of the system cloud disk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cloud_essd</p>
+             */
+            public Builder category(String category) {
+                this.category = category;
+                return this;
+            }
+
+            /**
+             * <p>Specifies whether the system cloud disk is encrypted. Valid values:</p>
+             * <ul>
+             * <li>true: Encrypted.</li>
+             * <li>false: Not encrypted.</li>
+             * </ul>
+             * <p>Default value: false.</p>
+             * <blockquote>
+             * <p>Notice: When you use a shared encrypted image to create a cloud disk based on an encrypted snapshot, you must set the Encrypted request parameter to true for the cloud disk to ensure that the created cloud disk uses the recipient&quot;s own key.</p>
+             * </blockquote>
+             * <blockquote>
+             * <p>Encrypting the system cloud disk during instance creation is not supported in Hong Kong (China) Zone D or Singapore Zone A.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
+             */
+            public Builder encrypted(Boolean encrypted) {
+                this.encrypted = encrypted;
+                return this;
+            }
+
+            /**
+             * <p>The KMS key ID for the system cloud disk.</p>
+             * <p>If the Encrypted Settings is true and KMSKeyId is not specified, the default key is used for encryption, and the KMSKeyId value is returned after the instance is created.</p>
+             * <ul>
+             * <li>If the cloud disk is created from an unshared encrypted snapshot, the encryption key used for the snapshot is used by default.</li>
+             * <li>If the cloud disk is created from a shared encrypted snapshot, the service key is used by default.</li>
+             * <li>If the cloud disk is created in a region where account-level default encryption for Elastic Block Storage (EBS) is enabled, the specified account-level key is used by default.</li>
+             * <li>In other cases, the service key is used by default.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>de1a73c4-9590-45da-8859-d39b5ec4751e</p>
+             */
+            public Builder KMSKeyId(String KMSKeyId) {
+                this.KMSKeyId = KMSKeyId;
+                return this;
+            }
+
+            /**
+             * <p>The performance level of the cloud disk.</p>
              * 
              * <strong>example:</strong>
              * <p>PL1</p>
              */
             public Builder performanceLevel(String performanceLevel) {
                 this.performanceLevel = performanceLevel;
+                return this;
+            }
+
+            /**
+             * <p>The size of the cloud disk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
+             */
+            public Builder size(Long size) {
+                this.size = size;
                 return this;
             }
 

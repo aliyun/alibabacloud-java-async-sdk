@@ -124,7 +124,7 @@ public class ListNodeGroupsRequest extends Request {
         }
 
         /**
-         * <p>The cluster ID.</p>
+         * <p>The ID of the cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>i119982311660892626523</p>
@@ -136,12 +136,12 @@ public class ListNodeGroupsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page for a paged query. Maximum value: 100.</p>
+         * <p>The number of entries to return on each page during paging in a paged query. Maximum value: 100.</p>
          * <p>Default value:</p>
          * <ul>
-         * <li><p>If the value is not set or is set to less than 20, the default value is 20.</p>
+         * <li><p>If no Settings are specified or the Settings value is less than 20, the default value is 20.</p>
          * </li>
-         * <li><p>If the value is set to greater than 100, the default value is 100.</p>
+         * <li><p>If the Settings value is greater than 100, the default value is 100.</p>
          * </li>
          * </ul>
          * 
@@ -155,7 +155,7 @@ public class ListNodeGroupsRequest extends Request {
         }
 
         /**
-         * <p>The NextToken for the next page. Include this return value when requesting the next page.</p>
+         * <p>The token for the next page. Include this token in the request to retrieve the next page.</p>
          * 
          * <strong>example:</strong>
          * <p>a3f2224a5ec7224116c4f5246120abe4</p>
@@ -167,7 +167,7 @@ public class ListNodeGroupsRequest extends Request {
         }
 
         /**
-         * <p>The node group ID.</p>
+         * <p>The ID of the node group.</p>
          * 
          * <strong>example:</strong>
          * <p>ng-ec3c96ff0aa4c60d</p>

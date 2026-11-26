@@ -164,7 +164,7 @@ public class ReportNodesStatusRequest extends Request {
         }
 
         /**
-         * <p>The end time of the node issue. The time is in the ISO 8601 format \<code>yyyy-MM-ddTHH:mm:ss+0800\\</code> and includes the time zone.</p>
+         * <p>The end time of the node exception. Specify the time in the ISO 8601 standard with the time zone. The format is yyyy-MM-ddTHH:mm:ss+0800.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-07-10T10:17:06</p>
@@ -176,17 +176,19 @@ public class ReportNodesStatusRequest extends Request {
         }
 
         /**
-         * <p>The category of the issue. This parameter is required when \<code>Reason\\</code> is set to \<code>HardwareError\\</code>. Valid values:<br>
-         * ● hardware-cpu-error: CPU failure<br>
-         * ● hardware-gpu-error: GPU failure<br>
-         * ● hardware-motherboard-error: Motherboard failure<br>
-         * ● hardware-mem-error: Memory failure<br>
-         * ● hardware-power-error: Power supply failure<br>
-         * ● hardware-disk-error: Disk failure
-         * ● hardware-networkcard-error: Network interface card failure<br>
-         * ● hardware-fan-error: Fan failure<br>
-         * ● hardware-cable-error: Network cable failure<br>
-         * ● others: Other<br><br><br><br><br><br><br><br><br></p>
+         * <p>The category of the exception. This parameter is required when Reason is set to HardwareError. Valid values:</br></p>
+         * <ul>
+         * <li>hardware-cpu-error: CPU failure.</br></li>
+         * <li>hardware-gpu-error: GPU failure.</br></li>
+         * <li>hardware-motherboard-error: Motherboard failure.</br></li>
+         * <li>hardware-mem-error: Memory failure.</br></li>
+         * <li>hardware-power-error: Power supply failure.</br></li>
+         * <li>hardware-disk-error: Disk failure.</li>
+         * <li>hardware-networkcard-error: NIC failure.</br></li>
+         * <li>hardware-fan-error: Fan failure.</br></li>
+         * <li>hardware-cable-error: Network cable failure.</br></li>
+         * <li>others: Others.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>hardware-disk-error</p>
@@ -208,12 +210,13 @@ public class ReportNodesStatusRequest extends Request {
         }
 
         /**
-         * <p>The impact of the issue on the Lingjun node.
-         * Valid values:
-         * ● HardwareError: A hardware error occurred.
-         * ● SoftwareError: A software error occurred.
-         * ● NetworkError: A network error occurred.
-         * ● Others: Other issues. If none of the preceding values apply, set this parameter to \<code>Others\\</code> and provide details in the \<code>Description\\</code> parameter.</p>
+         * <p>The impact of the exception on the Lingjun node. Valid values:</p>
+         * <ul>
+         * <li>HardwareError: A hardware exception occurs.</li>
+         * <li>SoftwareError: A software exception occurs.</li>
+         * <li>NetworkError: A network exception occurs.</li>
+         * <li>Others: Other exceptions. If none of the preceding impact types apply, set Reason to Others and provide more information in Description.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>SoftwareError</p>
@@ -225,7 +228,7 @@ public class ReportNodesStatusRequest extends Request {
         }
 
         /**
-         * <p>The start time of the node issue. The time is in the ISO 8601 format \<code>yyyy-MM-ddTHH:mm:ss+0800\\</code> and includes the time zone.</p>
+         * <p>The start time of the node exception. Specify the time in the ISO 8601 standard with the time zone. The format is yyyy-MM-ddTHH:mm:ss+0800. Note: This parameter is actually required. If it is not provided, the API returns a 400 InvalidParameter (field required) error.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-09-22T16:00:00Z</p>

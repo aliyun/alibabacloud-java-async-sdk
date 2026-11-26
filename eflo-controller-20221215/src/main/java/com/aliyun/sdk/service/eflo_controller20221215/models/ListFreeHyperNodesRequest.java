@@ -190,10 +190,14 @@ public class ListFreeHyperNodesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page in a paged query. Maximum value: 100.</p>
+         * <p>The maximum number of results per paging for a paged query. Maximum value: 100.</p>
          * <p>Default value:</p>
-         * <p>•If this parameter is not specified or is set to a value less than 20, the default value is 20.</p>
-         * <p>•If this parameter is set to a value greater than 100, the default value is 100.</p>
+         * <ul>
+         * <li><p>If this parameter is not specified or the Settings value is less than 20, the default value is 20.</p>
+         * </li>
+         * <li><p>If the Settings value is greater than 100, the default value is 100.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -205,7 +209,7 @@ public class ListFreeHyperNodesRequest extends Request {
         }
 
         /**
-         * <p>The pagination token. Set this parameter to the value of NextToken that was returned from the last API call.</p>
+         * <p>The pagination token. The value is the NextToken parameter returned by the previous API call.</p>
          * 
          * <strong>example:</strong>
          * <p>a3f2224a5ec7224116c4f5246120****</p>
@@ -229,7 +233,7 @@ public class ListFreeHyperNodesRequest extends Request {
         }
 
         /**
-         * <p>The list of unused node statuses to return.</p>
+         * <p>The list of statuses of unused nodes to return.</p>
          */
         public Builder status(java.util.List<String> status) {
             this.putBodyParameter("Status", status);

@@ -108,11 +108,7 @@ public class ApproveOperationRequest extends Request {
         }
 
         /**
-         * <p>The O\&amp;M operation type</p>
-         * <p>Valid value:</p>
-         * <ul>
-         * <li>RepairMachine</li>
-         * </ul>
+         * <p>The O&amp;M operation type. This parameter is required. If it is not provided, the API returns a 400 InvalidParameter (field required) error.</p>
          * 
          * <strong>example:</strong>
          * <p>RepairMachine</p>

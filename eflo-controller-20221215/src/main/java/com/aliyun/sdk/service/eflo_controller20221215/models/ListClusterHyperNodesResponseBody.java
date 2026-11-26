@@ -80,7 +80,7 @@ public class ListClusterHyperNodesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The node list.</p>
+         * <p>The hypernode list.</p>
          */
         public Builder hyperNodes(java.util.List<HyperNodes> hyperNodes) {
             this.hyperNodes = hyperNodes;
@@ -88,7 +88,7 @@ public class ListClusterHyperNodesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The pagination token returned in this call.</p>
+         * <p>The query token returned by the current call.</p>
          * 
          * <strong>example:</strong>
          * <p>563d42ae0b17572449ec8c97f7f66069</p>
@@ -467,7 +467,7 @@ public class ListClusterHyperNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The machine expiration time. The time is in ISO 8601 format. The Z in the example indicates UTC.</p>
+             * <p>The expiration time of the machine. The time is in ISO 8601 format. The Z in the example indicates UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-04-19T02:32:48Z</p>
@@ -478,7 +478,7 @@ public class ListClusterHyperNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether file storage mounting is supported.</p>
+             * <p>Specifies whether file system mounting is supported.</p>
              * 
              * <strong>example:</strong>
              * <p>False</p>
@@ -511,7 +511,7 @@ public class ListClusterHyperNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The node ID.</p>
+             * <p>The hypernode ID.</p>
              * 
              * <strong>example:</strong>
              * <p>e01-cn-2r42tmj4z02</p>
@@ -555,7 +555,7 @@ public class ListClusterHyperNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The hypernode status.</p>
+             * <p>The hypernode operating state.</p>
              * 
              * <strong>example:</strong>
              * <p>Using</p>

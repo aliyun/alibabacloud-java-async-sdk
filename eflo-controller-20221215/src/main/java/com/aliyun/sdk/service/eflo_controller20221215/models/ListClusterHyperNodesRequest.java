@@ -166,12 +166,12 @@ public class ListClusterHyperNodesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page in a paged query. Maximum value: 100.</p>
+         * <p>The maximum number of entries per page for a paged query. Maximum value: 100.</p>
          * <p>Default value:</p>
          * <ul>
-         * <li><p>If this parameter is not set or is set to a value less than 20, the default value is 20.</p>
+         * <li><p>If you do not specify this parameter or the specified value is less than 20, the default value is 20.</p>
          * </li>
-         * <li><p>If this parameter is set to a value greater than 100, the default value is 100.</p>
+         * <li><p>If the specified value is greater than 100, the default value is 100.</p>
          * </li>
          * </ul>
          * 
@@ -185,7 +185,7 @@ public class ListClusterHyperNodesRequest extends Request {
         }
 
         /**
-         * <p>The pagination token. Set this parameter to the NextToken value returned in the previous API call.</p>
+         * <p>The query token. Set the value to the NextToken value returned by the previous API call.</p>
          * 
          * <strong>example:</strong>
          * <p>563d42ae0b17572449ec8c97f7f66069</p>

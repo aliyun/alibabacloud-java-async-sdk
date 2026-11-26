@@ -93,12 +93,12 @@ public class ListNetTestResultsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The number of entries per page in a paged query. Maximum value: 100.</p>
+         * <p>The maximum number of entries per page for paging in a paged query. Maximum value: 100.</p>
          * <p>Default value:</p>
          * <ul>
-         * <li><p>If this parameter is not specified or is set to a value less than 20, the default value is 20.</p>
+         * <li><p>If you do not specify the Settings or the specified Settings value is less than 20, the default value is 20.</p>
          * </li>
-         * <li><p>If this parameter is set to a value greater than 100, the default value is 100.</p>
+         * <li><p>If the specified Settings value is greater than 100, the default value is 100.</p>
          * </li>
          * </ul>
          * 
@@ -111,7 +111,7 @@ public class ListNetTestResultsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The node list.</p>
+         * <p>The list of nodes.</p>
          */
         public Builder netTestResults(java.util.List<NetTestResults> netTestResults) {
             this.netTestResults = netTestResults;
@@ -119,7 +119,7 @@ public class ListNetTestResultsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The NextToken for the next page. Include this value when requesting the next page.</p>
+         * <p>The next token. Include this value in the request to query the next page of results.</p>
          * 
          * <strong>example:</strong>
          * <p>3a6b93229825ac667104463b5679****</p>
@@ -360,7 +360,7 @@ public class ListNetTestResultsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The communication library test category. Valid values: ACCL or NCCL.</p>
+             * <p>The communication library test type. Valid values: ACCL and NCCL.</p>
              * 
              * <strong>example:</strong>
              * <p>ACCL</p>
@@ -546,7 +546,7 @@ public class ListNetTestResultsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The resources.</p>
+             * <p>The list of resources.</p>
              */
             public Builder hosts(java.util.List<DelayTestHosts> hosts) {
                 this.hosts = hosts;
@@ -944,7 +944,7 @@ public class ListNetTestResultsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The duration of the workflow task. Unit: seconds.</p>
+             * <p>The duration of the workflow task, in seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -955,7 +955,7 @@ public class ListNetTestResultsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether GPUDirect RDMA is enabled. Valid values: True and False. This parameter is returned only when the protocol is RDMA. This field is empty when the protocol is TCP.</p>
+             * <p>Indicates whether GDR is enabled when the protocol is RDMA. Valid values: True and False. This field is empty when the protocol is TCP.</p>
              * 
              * <strong>example:</strong>
              * <p>True</p>
@@ -966,7 +966,7 @@ public class ListNetTestResultsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The network protocol. Valid values: RDMA or TCP.</p>
+             * <p>The network protocol. Valid values: RDMA and TCP.</p>
              * 
              * <strong>example:</strong>
              * <p>TCP</p>
@@ -977,10 +977,10 @@ public class ListNetTestResultsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of concurrent connections for TCP tests, or the QP value for RDMA tests.</p>
+             * <p>The number of concurrent connections for the test when the protocol is TCP, or the configured QP value when the protocol is RDMA.</p>
              * 
              * <strong>example:</strong>
-             * <p>RDMA</p>
+             * <p>3</p>
              */
             public Builder qp(Long qp) {
                 this.qp = qp;
@@ -988,7 +988,7 @@ public class ListNetTestResultsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The servers. This field is empty when the traffic model (TrafficModel) is Fullmesh.</p>
+             * <p>The servers. This field is empty if the traffic model is Fullmesh.</p>
              */
             public Builder servers(java.util.List<Servers> servers) {
                 this.servers = servers;
@@ -996,7 +996,7 @@ public class ListNetTestResultsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The traffic model. Valid values: MTON or Fullmesh.</p>
+             * <p>The traffic model. Valid values: MTON and Fullmesh.</p>
              * 
              * <strong>example:</strong>
              * <p>Fullmesh</p>
@@ -1218,7 +1218,7 @@ public class ListNetTestResultsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The communication library test information. This parameter is required when the test type is communication library test.</p>
+             * <p>The communication library test information. This field is populated when the traffic test type is communication library test.</p>
              */
             public Builder commTest(CommTest commTest) {
                 this.commTest = commTest;
@@ -1226,7 +1226,7 @@ public class ListNetTestResultsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time. The time is in ISO 8601 format. Z in the example indicates UTC.</p>
+             * <p>The creation time. The time is displayed in ISO 8601 format. Z in the example indicates UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-01-19T02:18:12Z</p>
@@ -1237,7 +1237,7 @@ public class ListNetTestResultsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The latency test information. This parameter is returned when the network test type is latency test.</p>
+             * <p>The delay test information. This field is populated when the network test type is delay test.</p>
              */
             public Builder delayTest(DelayTest delayTest) {
                 this.delayTest = delayTest;
@@ -1245,7 +1245,7 @@ public class ListNetTestResultsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The completion time. The time is in ISO 8601 format. Z in the example indicates UTC.</p>
+             * <p>The completion time. The time is displayed in ISO 8601 format. Z in the example indicates UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-10-30T02:07Z</p>
@@ -1289,10 +1289,12 @@ public class ListNetTestResultsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The network test task status. Valid values:</br>
-             * ● InProgress: The test is in progress.</br>
-             * ● Finished: The test is complete.</br>
-             * ● Failed: The test failed.</p>
+             * <p>The status of the network test task. Valid values:</br></p>
+             * <ul>
+             * <li>InProgress: The test is in progress.</br></li>
+             * <li>Finished: The test is completed.</br></li>
+             * <li>Failed: The test failed.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>InProgress</p>
@@ -1314,7 +1316,7 @@ public class ListNetTestResultsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The traffic test information. This parameter is returned when the network test type is traffic test.</p>
+             * <p>The traffic test information. This field is populated when the network test type is traffic test.</p>
              */
             public Builder trafficTest(TrafficTest trafficTest) {
                 this.trafficTest = trafficTest;

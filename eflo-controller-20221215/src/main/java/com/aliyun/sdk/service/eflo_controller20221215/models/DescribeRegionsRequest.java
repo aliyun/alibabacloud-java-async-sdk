@@ -82,13 +82,10 @@ public class DescribeRegionsRequest extends Request {
         }
 
         /**
-         * <p>The natural language that is used to filter responses. For more information, see RFC 7231.</p>
-         * <p>zh-CN en-US Default value: zh-CN.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>en-US</li>
-         * <li>zh-CN</li>
-         * </ul>
+         * <p>The language used to filter the returned results, such as Chinese, English, and Japanese. For more information, see RFC 7231. Valid values:</p>
+         * <p>zh-CN
+         * en-US
+         * Default value: zh-CN.</p>
          * 
          * <strong>example:</strong>
          * <p>zh-CN</p>

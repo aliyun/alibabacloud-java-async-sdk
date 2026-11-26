@@ -263,7 +263,7 @@ public class DescribeHyperNodeResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The cluster ID.</p>
+         * <p>The ID of the cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>i119982311660892626523</p>
@@ -274,7 +274,7 @@ public class DescribeHyperNodeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The cluster name.</p>
+         * <p>The name of the cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>Standard_Cluster</p>
@@ -285,7 +285,7 @@ public class DescribeHyperNodeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The creation time. The time is in ISO 8601 format. The Z in the example indicates UTC.</p>
+         * <p>The creation time in ISO 8601 format. The Z in the example indicates UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-11-30T02:00:00.852Z</p>
@@ -296,7 +296,7 @@ public class DescribeHyperNodeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The expiration time. The time is in ISO 8601 format.</p>
+         * <p>The expiration time in ISO 8601 format.</p>
          * 
          * <strong>example:</strong>
          * <p>2125-06-24T16:52:44.318000</p>
@@ -307,7 +307,7 @@ public class DescribeHyperNodeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether file storage mounting is supported.</p>
+         * <p>Indicates whether file system mounting is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>
@@ -340,7 +340,7 @@ public class DescribeHyperNodeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The hypernode ID.</p>
+         * <p>The ID of the supernode.</p>
          * 
          * <strong>example:</strong>
          * <p>e01-cn-zvp2tgykr08</p>
@@ -362,7 +362,7 @@ public class DescribeHyperNodeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The node group ID.</p>
+         * <p>The ID of the node group.</p>
          * 
          * <strong>example:</strong>
          * <p>ng-ec3c96ff0aa4c60d</p>
@@ -373,7 +373,7 @@ public class DescribeHyperNodeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The node group name.</p>
+         * <p>The name of the node group.</p>
          * 
          * <strong>example:</strong>
          * <p>lisan-nodegroup</p>
@@ -392,7 +392,7 @@ public class DescribeHyperNodeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The hypernode status.</p>
+         * <p>The status of the supernode.</p>
          * 
          * <strong>example:</strong>
          * <p>Using</p>
@@ -414,7 +414,7 @@ public class DescribeHyperNodeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The resource group ID.</p>
+         * <p>The ID of the resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfmxno4vh5****</p>
@@ -425,7 +425,7 @@ public class DescribeHyperNodeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The node status.</p>
+         * <p>The status of the node.</p>
          * 
          * <strong>example:</strong>
          * <p>Operating</p>
@@ -465,6 +465,12 @@ public class DescribeHyperNodeResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DiskId")
         private String diskId;
 
+        @com.aliyun.core.annotation.NameInMap("Encrypted")
+        private Boolean encrypted;
+
+        @com.aliyun.core.annotation.NameInMap("KMSKeyId")
+        private String KMSKeyId;
+
         @com.aliyun.core.annotation.NameInMap("PerformanceLevel")
         private String performanceLevel;
 
@@ -477,6 +483,8 @@ public class DescribeHyperNodeResponseBody extends TeaModel {
         private Disks(Builder builder) {
             this.category = builder.category;
             this.diskId = builder.diskId;
+            this.encrypted = builder.encrypted;
+            this.KMSKeyId = builder.KMSKeyId;
             this.performanceLevel = builder.performanceLevel;
             this.size = builder.size;
             this.type = builder.type;
@@ -505,6 +513,20 @@ public class DescribeHyperNodeResponseBody extends TeaModel {
         }
 
         /**
+         * @return encrypted
+         */
+        public Boolean getEncrypted() {
+            return this.encrypted;
+        }
+
+        /**
+         * @return KMSKeyId
+         */
+        public String getKMSKeyId() {
+            return this.KMSKeyId;
+        }
+
+        /**
          * @return performanceLevel
          */
         public String getPerformanceLevel() {
@@ -528,6 +550,8 @@ public class DescribeHyperNodeResponseBody extends TeaModel {
         public static final class Builder {
             private String category; 
             private String diskId; 
+            private Boolean encrypted; 
+            private String KMSKeyId; 
             private String performanceLevel; 
             private Integer size; 
             private String type; 
@@ -538,16 +562,18 @@ public class DescribeHyperNodeResponseBody extends TeaModel {
             private Builder(Disks model) {
                 this.category = model.category;
                 this.diskId = model.diskId;
+                this.encrypted = model.encrypted;
+                this.KMSKeyId = model.KMSKeyId;
                 this.performanceLevel = model.performanceLevel;
                 this.size = model.size;
                 this.type = model.type;
             } 
 
             /**
-             * <p>The packet category. Valid values:</p>
+             * <p>The data packet classification. Valid values:</p>
              * <ul>
-             * <li><strong>DOWNLINK_PACKET</strong>: downlink packet.</li>
-             * <li><strong>UPLINK_PACKET</strong>: uplink packet.</li>
+             * <li><strong>DOWNLINK_PACKET</strong>: downlink packets</li>
+             * <li><strong>UPLINK_PACKET</strong>: uplink packets</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -559,7 +585,7 @@ public class DescribeHyperNodeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The disk ID.</p>
+             * <p>The ID of the cloud disk.</p>
              * 
              * <strong>example:</strong>
              * <p>d-bp1564bcc2306uui4zpk</p>
@@ -570,10 +596,50 @@ public class DescribeHyperNodeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The performance level (PL) of the cloud disk when an ESSD is created as the system cloud disk. Settings:</p>
+             * <p>Indicates whether the system cloud disk is encrypted. Valid values:</p>
              * <ul>
-             * <li>PL0: A maximum of 10,000 random read/write IOPS per standard SSD.</li>
-             * <li>PL1: A maximum of 50,000 random read/write IOPS per standard SSD.</li>
+             * <li>true: The disk is encrypted.</li>
+             * <li>false: The disk is not encrypted.</li>
+             * </ul>
+             * <p>Default value: false.</p>
+             * <blockquote>
+             * <p>Notice: When you create a cloud disk from an encrypted snapshot by using a shared encrypted image, you must specify the request parameter Encrypted=true for the cloud disk to ensure that the created cloud disk is encrypted by using the recipient&quot;s key.</p>
+             * </blockquote>
+             * <blockquote>
+             * <p>System cloud disk encryption during instance creation is not supported in Hong Kong (China) Zone D and Singapore Zone A.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
+             */
+            public Builder encrypted(Boolean encrypted) {
+                this.encrypted = encrypted;
+                return this;
+            }
+
+            /**
+             * <p>The KMS key ID corresponding to the system cloud disk.</p>
+             * <p>If the Encrypted parameter is set to true and the KMSKeyId parameter is not specified, the default key is used for encryption, and the KMSKeyId value is returned after the instance is created.</p>
+             * <ul>
+             * <li>If the cloud disk is created from an unshared encrypted snapshot, the encryption key used for the snapshot is used by default.</li>
+             * <li>If the cloud disk is created from a shared encrypted snapshot, the service key is used by default.</li>
+             * <li>If the cloud disk is created in a region where account-level default encryption for Block Storage is enabled, the specified account-level key is used by default.</li>
+             * <li>In other cases, the service key is used by default.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>67d1dc19-663a-447e-9f0c-7bee2d30c8aa</p>
+             */
+            public Builder KMSKeyId(String KMSKeyId) {
+                this.KMSKeyId = KMSKeyId;
+                return this;
+            }
+
+            /**
+             * <p>The performance level of the ESSD when it is used as the system cloud disk. Valid values:</p>
+             * <ul>
+             * <li>PL0: A single disk can deliver up to 10,000 random read/write IOPS.</li>
+             * <li>PL1: A single disk can deliver up to 50,000 random read/write IOPS.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -585,7 +651,7 @@ public class DescribeHyperNodeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The disk size. Unit: GiB.</p>
+             * <p>The size of the cloud disk. Unit: GiB.</p>
              * 
              * <strong>example:</strong>
              * <p>5</p>
@@ -596,10 +662,10 @@ public class DescribeHyperNodeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The disk type. Valid values:</p>
+             * <p>The type of the cloud disk. Valid values:</p>
              * <ul>
-             * <li>system: system cloud disk.</li>
-             * <li>data: data cloud disk.</li>
+             * <li>system: system cloud disk</li>
+             * <li>data: data cloud disk</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -670,7 +736,7 @@ public class DescribeHyperNodeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The bond interface name of the machine.</p>
+             * <p>The name of the network interface.</p>
              * 
              * <strong>example:</strong>
              * <p>bond0</p>
@@ -843,7 +909,7 @@ public class DescribeHyperNodeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The disk information.</p>
+             * <p>The cloud disk information.</p>
              */
             public Builder disks(java.util.List<Disks> disks) {
                 this.disks = disks;
@@ -862,7 +928,7 @@ public class DescribeHyperNodeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The image ID.</p>
+             * <p>The ID of the image.</p>
              * 
              * <strong>example:</strong>
              * <p>i190297201669099844192</p>
@@ -873,7 +939,7 @@ public class DescribeHyperNodeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The image name.</p>
+             * <p>The name of the image.</p>
              * 
              * <strong>example:</strong>
              * <p>Alinux3_x86_gu8xf_P_Host_D3_C7E3_550.127_Legacy_N_241230</p>
@@ -892,7 +958,7 @@ public class DescribeHyperNodeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The node ID.</p>
+             * <p>The ID of the node.</p>
              * 
              * <strong>example:</strong>
              * <p>e01-cn-zvp2tgykr0b</p>
@@ -903,7 +969,7 @@ public class DescribeHyperNodeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The node status.</p>
+             * <p>The status of the node.</p>
              * 
              * <strong>example:</strong>
              * <p>Using</p>

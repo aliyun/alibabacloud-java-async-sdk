@@ -168,7 +168,7 @@ public class ListSyslogsRequest extends Request {
         }
 
         /**
-         * <p>The token for the next page. Include this token when you retrieve the next page of results.</p>
+         * <p>The token for the next page. Include this token to retrieve the next page of data.</p>
          * 
          * <strong>example:</strong>
          * <p>392e8b4a03ed171433cc39f5b464ec9d</p>
@@ -193,12 +193,10 @@ public class ListSyslogsRequest extends Request {
         }
 
         /**
-         * <p>The query condition.</p>
+         * <p>The query conditions.</p>
          * 
          * <strong>example:</strong>
-         * <ul>
-         * <li></li>
-         * </ul>
+         * <p>panic</p>
          */
         public Builder query(String query) {
             this.putBodyParameter("Query", query);
@@ -207,7 +205,7 @@ public class ListSyslogsRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to query logs in reverse chronological order.</p>
+         * <p>Specifies whether to search in reverse chronological order.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

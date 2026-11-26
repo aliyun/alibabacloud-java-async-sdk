@@ -110,7 +110,7 @@ public class ChangeNodeGroupRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to skip failed nodes. Default value: False.</p>
+         * <p>Specifies whether to skip failed nodes. Default value: false.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>

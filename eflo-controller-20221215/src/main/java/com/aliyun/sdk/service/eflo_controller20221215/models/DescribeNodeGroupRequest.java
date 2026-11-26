@@ -83,7 +83,7 @@ public class DescribeNodeGroupRequest extends Request {
         }
 
         /**
-         * <p>The node group ID.</p>
+         * <p>The ID of the node group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

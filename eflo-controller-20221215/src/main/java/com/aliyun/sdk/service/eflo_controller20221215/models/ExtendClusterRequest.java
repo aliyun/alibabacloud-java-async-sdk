@@ -164,7 +164,7 @@ public class ExtendClusterRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to skip failed nodes. Default value: False.</p>
+         * <p>Specifies whether to skip failed nodes. Default value: false.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -176,7 +176,7 @@ public class ExtendClusterRequest extends Request {
         }
 
         /**
-         * <p>The combined policy for IP allocation. Each policy can use only one policy type, and multiple policies can be combined.</p>
+         * <p>The combined IP allocation policies. Each policy supports only one policy type, and multiple policies can be combined.</p>
          */
         public Builder ipAllocationPolicy(java.util.List<IpAllocationPolicy> ipAllocationPolicy) {
             String ipAllocationPolicyShrink = shrink(ipAllocationPolicy, "IpAllocationPolicy", "json");
@@ -186,7 +186,7 @@ public class ExtendClusterRequest extends Request {
         }
 
         /**
-         * <p>The node group.</p>
+         * <p>The node groups.</p>
          */
         public Builder nodeGroups(java.util.List<NodeGroups> nodeGroups) {
             String nodeGroupsShrink = shrink(nodeGroups, "NodeGroups", "json");
@@ -288,7 +288,7 @@ public class ExtendClusterRequest extends Request {
             }
 
             /**
-             * <p>The cluster subnet from which the IP address is allocated.</p>
+             * <p>The source cluster subnet for IP addresses.</p>
              * 
              * <strong>example:</strong>
              * <p>subnet-3od2fe</p>
@@ -447,7 +447,7 @@ public class ExtendClusterRequest extends Request {
             }
 
             /**
-             * <p>The cluster subnet from which the IP address is allocated.</p>
+             * <p>The source cluster subnet for IP addresses.</p>
              * 
              * <strong>example:</strong>
              * <p>subnet-fdo3dv</p>
@@ -606,7 +606,7 @@ public class ExtendClusterRequest extends Request {
             }
 
             /**
-             * <p>The cluster subnet from which the IP address is allocated.</p>
+             * <p>The source cluster subnet for IP addresses.</p>
              * 
              * <strong>example:</strong>
              * <p>subnet-fdo3dv</p>
@@ -837,6 +837,15 @@ public class ExtendClusterRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("DeleteWithNode")
         private Boolean deleteWithNode;
 
+        @com.aliyun.core.annotation.NameInMap("Device")
+        private String device;
+
+        @com.aliyun.core.annotation.NameInMap("Encrypted")
+        private Boolean encrypted;
+
+        @com.aliyun.core.annotation.NameInMap("KMSKeyId")
+        private String KMSKeyId;
+
         @com.aliyun.core.annotation.NameInMap("PerformanceLevel")
         private String performanceLevel;
 
@@ -850,6 +859,9 @@ public class ExtendClusterRequest extends Request {
             this.burstingEnabled = builder.burstingEnabled;
             this.category = builder.category;
             this.deleteWithNode = builder.deleteWithNode;
+            this.device = builder.device;
+            this.encrypted = builder.encrypted;
+            this.KMSKeyId = builder.KMSKeyId;
             this.performanceLevel = builder.performanceLevel;
             this.provisionedIops = builder.provisionedIops;
             this.size = builder.size;
@@ -885,6 +897,27 @@ public class ExtendClusterRequest extends Request {
         }
 
         /**
+         * @return device
+         */
+        public String getDevice() {
+            return this.device;
+        }
+
+        /**
+         * @return encrypted
+         */
+        public Boolean getEncrypted() {
+            return this.encrypted;
+        }
+
+        /**
+         * @return KMSKeyId
+         */
+        public String getKMSKeyId() {
+            return this.KMSKeyId;
+        }
+
+        /**
          * @return performanceLevel
          */
         public String getPerformanceLevel() {
@@ -909,6 +942,9 @@ public class ExtendClusterRequest extends Request {
             private Boolean burstingEnabled; 
             private String category; 
             private Boolean deleteWithNode; 
+            private String device; 
+            private Boolean encrypted; 
+            private String KMSKeyId; 
             private String performanceLevel; 
             private Long provisionedIops; 
             private Integer size; 
@@ -920,13 +956,16 @@ public class ExtendClusterRequest extends Request {
                 this.burstingEnabled = model.burstingEnabled;
                 this.category = model.category;
                 this.deleteWithNode = model.deleteWithNode;
+                this.device = model.device;
+                this.encrypted = model.encrypted;
+                this.KMSKeyId = model.KMSKeyId;
                 this.performanceLevel = model.performanceLevel;
                 this.provisionedIops = model.provisionedIops;
                 this.size = model.size;
             } 
 
             /**
-             * <p>Specifies whether to enable burst (performance burst).</p>
+             * <p>Specifies whether to enable burstable performance.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -937,9 +976,9 @@ public class ExtendClusterRequest extends Request {
             }
 
             /**
-             * <p>The cloud disk type. Valid values:</p>
+             * <p>The disk category. Valid values:</p>
              * <ul>
-             * <li>cloud_essd: Enterprise SSD (ESSD) cloud disk.</li>
+             * <li>cloud_essd: ESSD.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -962,10 +1001,64 @@ public class ExtendClusterRequest extends Request {
             }
 
             /**
-             * <p>The performance level (PL) of the ESSD cloud disk used as a system cloud disk. Valid values:</p>
+             * <p>The device name of the data cloud disk. This parameter applies only to full image scenarios. You can use this parameter to set the device name of the data cloud disk to match the source data cloud disk in the full image, and modify the properties of the corresponding data cloud disk. For non-full image scaling, the Device parameter is set by the system by default. When you use full image scaling:</p>
              * <ul>
-             * <li>PL0: A maximum of 10,000 random read/write IOPS per disk.</li>
-             * <li>PL1: A maximum of 50,000 random read/write IOPS per disk.</li>
+             * <li>Regardless of whether the data cloud disk parameters are explicitly set, the system restores the data cloud disks from the source image. The content is consistent with the source image data cloud disks.</li>
+             * <li>If the data cloud disk is explicitly specified but the Device parameter is not set, additional empty data cloud disks are created. The quantity and properties are specified by the data cloud disk parameters provided by the user.</li>
+             * <li>If the data cloud disk Device is explicitly specified but does not match the Device of the source image data cloud disk, additional empty data cloud disks are created. The quantity and properties are specified by the data cloud disk parameters provided by the user.</li>
+             * <li>If multiple data cloud disks and their Devices are explicitly specified, but all Devices point to the device of a single data cloud disk in the source image, only one of the specified data cloud disks matches and overwrites the source image data cloud disk. The other specified data cloud disks are silently discarded, and no additional empty data cloud disks are created.</li>
+             * <li>If the data cloud disk Device is explicitly specified and matches the Device of the source image data cloud disk, no additional empty data cloud disks are created. The data cloud disks specified by the user correspond one-to-one with the source image data cloud disks. If the Size of the data cloud disk set by the user is less than the Size of the source image data cloud disk, HTTP status code 417 and the error message &quot;Data disk Size can not be less than the image data disk snapshot size for Device &quot;/dev/xvdb&quot;&quot; are returned.</li>
+             * <li>Total number of data cloud disks = Number of data cloud disks mounted on the node + Number of data cloud disks restored from the image. For standard cloud disk groups, the maximum is 16. If CPFS is enabled, the maximum is 4.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>/dev/xvdb</p>
+             */
+            public Builder device(String device) {
+                this.device = device;
+                return this;
+            }
+
+            /**
+             * <p>Specifies whether to encrypt the data cloud disk. Valid values:</p>
+             * <ul>
+             * <li>true: Encrypted.</li>
+             * <li>false: Not encrypted.</li>
+             * </ul>
+             * <p>Default value: false.</p>
+             * <p><notice>When you use a shared encrypted image to create a cloud disk based on an encrypted snapshot, you must set the Encrypted request parameter to true for the cloud disk to ensure that the created cloud disk uses the recipient&quot;s own key.</notice></p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
+             */
+            public Builder encrypted(Boolean encrypted) {
+                this.encrypted = encrypted;
+                return this;
+            }
+
+            /**
+             * <p>The KMS key ID for the data cloud disk.</p>
+             * <p>If Encrypted is set to true and KMSKeyId is not specified, the default key is used for encryption, and the KMSKeyId value is returned after the instance is created.</p>
+             * <ul>
+             * <li>If the cloud disk is created from an unshared encrypted snapshot: The encryption key used by the snapshot is used by default.</li>
+             * <li>If the cloud disk is created from a shared encrypted snapshot: The service key is used by default.</li>
+             * <li>If the cloud disk is created in a region where account-level default encryption for Block Storage is enabled: The specified account-level key is used by default.</li>
+             * <li>In other cases: The service key is used by default.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>69dfe996-ae32-4d61-a4aa-914aff3fc3a0</p>
+             */
+            public Builder KMSKeyId(String KMSKeyId) {
+                this.KMSKeyId = KMSKeyId;
+                return this;
+            }
+
+            /**
+             * <p>The performance level of the ESSD when it is used as the system cloud disk. Valid values:</p>
+             * <ul>
+             * <li>PL0: A single disk can deliver up to 10,000 random read/write IOPS.</li>
+             * <li>PL1: A single disk can deliver up to 50,000 random read/write IOPS.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -977,7 +1070,7 @@ public class ExtendClusterRequest extends Request {
             }
 
             /**
-             * <p>The provisioned performance of read/write IOPS for the ESSD AutoPL cloud disk (per disk).</p>
+             * <p>The read and write IOPS of the provisioned performance for a single ESSD AutoPL cloud disk.</p>
              * 
              * <strong>example:</strong>
              * <p>9600</p>
@@ -1142,7 +1235,7 @@ public class ExtendClusterRequest extends Request {
             }
 
             /**
-             * <p>The hyper node ID.</p>
+             * <p>The hypernode ID.</p>
              * 
              * <strong>example:</strong>
              * <p>e01-cn-2r42tmj4z02</p>
@@ -1156,7 +1249,7 @@ public class ExtendClusterRequest extends Request {
              * <p>The logon password.</p>
              * 
              * <strong>example:</strong>
-             * <hr>
+             * <p>Demo****123!</p>
              */
             public Builder loginPassword(String loginPassword) {
                 this.loginPassword = loginPassword;
@@ -1300,6 +1393,15 @@ public class ExtendClusterRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("DeleteWithNode")
         private Boolean deleteWithNode;
 
+        @com.aliyun.core.annotation.NameInMap("Device")
+        private String device;
+
+        @com.aliyun.core.annotation.NameInMap("Encrypted")
+        private Boolean encrypted;
+
+        @com.aliyun.core.annotation.NameInMap("KMSKeyId")
+        private String KMSKeyId;
+
         @com.aliyun.core.annotation.NameInMap("PerformanceLevel")
         private String performanceLevel;
 
@@ -1313,6 +1415,9 @@ public class ExtendClusterRequest extends Request {
             this.burstingEnabled = builder.burstingEnabled;
             this.category = builder.category;
             this.deleteWithNode = builder.deleteWithNode;
+            this.device = builder.device;
+            this.encrypted = builder.encrypted;
+            this.KMSKeyId = builder.KMSKeyId;
             this.performanceLevel = builder.performanceLevel;
             this.provisionedIops = builder.provisionedIops;
             this.size = builder.size;
@@ -1348,6 +1453,27 @@ public class ExtendClusterRequest extends Request {
         }
 
         /**
+         * @return device
+         */
+        public String getDevice() {
+            return this.device;
+        }
+
+        /**
+         * @return encrypted
+         */
+        public Boolean getEncrypted() {
+            return this.encrypted;
+        }
+
+        /**
+         * @return KMSKeyId
+         */
+        public String getKMSKeyId() {
+            return this.KMSKeyId;
+        }
+
+        /**
          * @return performanceLevel
          */
         public String getPerformanceLevel() {
@@ -1372,6 +1498,9 @@ public class ExtendClusterRequest extends Request {
             private Boolean burstingEnabled; 
             private String category; 
             private Boolean deleteWithNode; 
+            private String device; 
+            private Boolean encrypted; 
+            private String KMSKeyId; 
             private String performanceLevel; 
             private Long provisionedIops; 
             private Integer size; 
@@ -1383,13 +1512,16 @@ public class ExtendClusterRequest extends Request {
                 this.burstingEnabled = model.burstingEnabled;
                 this.category = model.category;
                 this.deleteWithNode = model.deleteWithNode;
+                this.device = model.device;
+                this.encrypted = model.encrypted;
+                this.KMSKeyId = model.KMSKeyId;
                 this.performanceLevel = model.performanceLevel;
                 this.provisionedIops = model.provisionedIops;
                 this.size = model.size;
             } 
 
             /**
-             * <p>Specifies whether to enable burst (performance burst).</p>
+             * <p>Specifies whether to enable burstable performance.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -1400,7 +1532,7 @@ public class ExtendClusterRequest extends Request {
             }
 
             /**
-             * <p>The type.</p>
+             * <p>The disk category.</p>
              * 
              * <strong>example:</strong>
              * <p>cloud_essd</p>
@@ -1418,6 +1550,60 @@ public class ExtendClusterRequest extends Request {
              */
             public Builder deleteWithNode(Boolean deleteWithNode) {
                 this.deleteWithNode = deleteWithNode;
+                return this;
+            }
+
+            /**
+             * <p>The device name of the data cloud disk. This parameter applies only to full image scenarios. You can use this parameter to set the device name of the data cloud disk to match the source data cloud disk in the full image, and modify the properties of the corresponding data cloud disk. For non-full image scaling, the Device parameter is set by the system by default. When you use full image scaling:</p>
+             * <ul>
+             * <li>Regardless of whether the data cloud disk parameters are explicitly set, the system restores the data cloud disks from the source image. The content is consistent with the source image data cloud disks.</li>
+             * <li>If the data cloud disk is explicitly specified but the Device parameter is not set, additional empty data cloud disks are created. The quantity and properties are specified by the data cloud disk parameters provided by the user.</li>
+             * <li>If the data cloud disk Device is explicitly specified but does not match the Device of the source image data cloud disk, additional empty data cloud disks are created. The quantity and properties are specified by the data cloud disk parameters provided by the user.</li>
+             * <li>If multiple data cloud disks and their Devices are explicitly specified, but all Devices point to the device of a single data cloud disk in the source image, only one of the specified data cloud disks matches and overwrites the source image data cloud disk. The other specified data cloud disks are silently discarded, and no additional empty data cloud disks are created.</li>
+             * <li>If the data cloud disk Device is explicitly specified and matches the Device of the source image data cloud disk, no additional empty data cloud disks are created. The data cloud disks specified by the user correspond one-to-one with the source image data cloud disks. If the Size of the data cloud disk set by the user is less than the Size of the source image data cloud disk, HTTP status code 417 and the error message &quot;Data disk Size can not be less than the image data disk snapshot size for Device &quot;/dev/xvdb&quot;&quot; are returned.</li>
+             * <li>Total number of data cloud disks = Number of data cloud disks mounted on the node + Number of data cloud disks restored from the image. For standard cloud disk groups, the maximum is 16. If CPFS is enabled, the maximum is 4.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>/dev/xvdb</p>
+             */
+            public Builder device(String device) {
+                this.device = device;
+                return this;
+            }
+
+            /**
+             * <p>Specifies whether to encrypt the data cloud disk. Valid values:</p>
+             * <ul>
+             * <li>true: Encrypted.</li>
+             * <li>false: Not encrypted.</li>
+             * </ul>
+             * <p>Default value: false.</p>
+             * <p><notice>When you use a shared encrypted image to create a cloud disk based on an encrypted snapshot, you must set the Encrypted request parameter to true for the cloud disk to ensure that the created cloud disk uses the recipient&quot;s own key.</notice></p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
+             */
+            public Builder encrypted(Boolean encrypted) {
+                this.encrypted = encrypted;
+                return this;
+            }
+
+            /**
+             * <p>The KMS key ID for the data cloud disk.</p>
+             * <p>If Encrypted is set to true and KMSKeyId is not specified, the default key is used for encryption, and the KMSKeyId value is returned after the instance is created.</p>
+             * <ul>
+             * <li>If the cloud disk is created from an unshared encrypted snapshot: The encryption key used by the snapshot is used by default.</li>
+             * <li>If the cloud disk is created from a shared encrypted snapshot: The service key is used by default.</li>
+             * <li>If the cloud disk is created in a region where account-level default encryption for Block Storage is enabled: The specified account-level key is used by default.</li>
+             * <li>In other cases: The service key is used by default.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>719e7359-1a44-4bab-a520-6d4648b610d0</p>
+             */
+            public Builder KMSKeyId(String KMSKeyId) {
+                this.KMSKeyId = KMSKeyId;
                 return this;
             }
 
@@ -1601,7 +1787,7 @@ public class ExtendClusterRequest extends Request {
              * <p>The logon password.</p>
              * 
              * <strong>example:</strong>
-             * <hr>
+             * <p>Demo****123!</p>
              */
             public Builder loginPassword(String loginPassword) {
                 this.loginPassword = loginPassword;
@@ -1881,7 +2067,7 @@ public class ExtendClusterRequest extends Request {
             } 
 
             /**
-             * <p>The number of nodes to purchase. Valid values: 0 to 500. If Amount is set to 0, no nodes are purchased and existing nodes are used for scale-out. If Amount is set to a value from 1 to 500, the specified number of nodes are purchased and used for scale-out. Default value: 0.</p>
+             * <p>The number of nodes to purchase. Valid values: 0 to 500. If the Amount parameter is set to 0, no nodes are purchased, and existing nodes are used for scaling. If the Amount parameter is set to a value from 1 to 500, a specified number of nodes are purchased and used for scaling. Default value: 0.</p>
              * 
              * <strong>example:</strong>
              * <p>4</p>
@@ -1892,7 +2078,7 @@ public class ExtendClusterRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to enable auto-renewal for the purchased nodes. This parameter takes effect when Amount is not 0 and ChargeType is set to PREPAY or POSTPAY. Valid values: True: Enable auto-renewal. False: Disable auto-renewal. Default value: False.</p>
+             * <p>Specifies whether to enable auto-renewal for the purchased node. This parameter takes effect only when the Amount parameter is not set to 0 and the ChargeType parameter is set to PREPAY or POSTPAY. Valid values: True: Auto-renewal is enabled. False: Auto-renewal is disabled. Default value: False.</p>
              * 
              * <strong>example:</strong>
              * <p>True</p>
@@ -1903,7 +2089,7 @@ public class ExtendClusterRequest extends Request {
             }
 
             /**
-             * <p>The billing method of the nodes. This parameter does not take effect when Amount is set to 0. Valid values: PREPAY: subscription. POSTPAY: pay-as-you-go. Default value: PREPAY.</p>
+             * <p>The billing method of the node. This parameter does not take effect when the Amount parameter is set to 0. Valid values: PREPAY: subscription; POSTPAY: pay-as-you-go. Default value: PREPAY.</p>
              * 
              * <strong>example:</strong>
              * <p>PostPaid</p>
@@ -1914,7 +2100,7 @@ public class ExtendClusterRequest extends Request {
             }
 
             /**
-             * <p>The hostnames of the purchased nodes. This parameter does not take effect when Amount is set to 0.</p>
+             * <p>The hostnames of the purchased nodes. This parameter does not take effect when the Amount parameter is set to 0.</p>
              */
             public Builder hostnames(java.util.List<String> hostnames) {
                 this.hostnames = hostnames;
@@ -1922,7 +2108,7 @@ public class ExtendClusterRequest extends Request {
             }
 
             /**
-             * <p>The list of hyper nodes.</p>
+             * <p>The list of hypernodes.</p>
              */
             public Builder hyperNodes(java.util.List<HyperNodes> hyperNodes) {
                 this.hyperNodes = hyperNodes;
@@ -1930,7 +2116,7 @@ public class ExtendClusterRequest extends Request {
             }
 
             /**
-             * <p>The logon password of the purchased nodes. This parameter does not take effect when Amount is set to 0.</p>
+             * <p>The logon password of the purchased node. This parameter does not take effect when the Amount parameter is set to 0.</p>
              * 
              * <strong>example:</strong>
              * <p>skkO(*89Y</p>
@@ -1968,7 +2154,7 @@ public class ExtendClusterRequest extends Request {
             }
 
             /**
-             * <p>The subscription duration of the purchased nodes. Unit: months. Valid values: 1, 6, 12, 24, 36, and 48. This parameter takes effect when Amount is not 0 and ChargeType is set to PREPAY.</p>
+             * <p>The subscription period of the node. Unit: months. Valid values: 1, 6, 12, 24, 36, and 48. This parameter takes effect only when the Amount parameter is not set to 0 and the ChargeType parameter is set to PREPAY.</p>
              * 
              * <strong>example:</strong>
              * <p>6</p>
@@ -1990,7 +2176,7 @@ public class ExtendClusterRequest extends Request {
             }
 
             /**
-             * <p>The custom executable shell script. The script must be in Base64 encoding. The maximum size of the raw data is 16 KB.</p>
+             * <p>The custom executable shell script. The script must be Base64-encoded. The maximum size of the raw data is 16 KB.</p>
              * 
              * <strong>example:</strong>
              * <p>ZWNobyBoZWxsbyBlY3Mh</p>

@@ -107,7 +107,7 @@ public class ListVscsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>This parameter is not returned. Use the \<code>TotalCount\\</code> parameter instead.</p>
+         * <p>This parameter is not returned. Use the `TotalCount` parameter instead.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -427,7 +427,7 @@ public class ListVscsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the VSC. Valid values: \<code>primary\\</code> and \<code>standard\\</code>.</p>
+             * <p>The type of the VSC. Valid values: `primary` and `standard`.</p>
              * 
              * <strong>example:</strong>
              * <p>primary</p>

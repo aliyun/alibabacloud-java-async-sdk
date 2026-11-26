@@ -124,12 +124,12 @@ public class ListNetTestResultsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page in a paged query. Maximum value: 100.</p>
+         * <p>The maximum number of entries per page for paging in a paged query. Maximum value: 100.</p>
          * <p>Default value:</p>
          * <ul>
-         * <li><p>If this parameter is not specified or is set to a value less than 20, the default value is 20.</p>
+         * <li><p>If you do not specify the Settings or the specified Settings value is less than 20, the default value is 20.</p>
          * </li>
-         * <li><p>If this parameter is set to a value greater than 100, the default value is 100.</p>
+         * <li><p>If the specified Settings value is greater than 100, the default value is 100.</p>
          * </li>
          * </ul>
          * 
@@ -155,7 +155,7 @@ public class ListNetTestResultsRequest extends Request {
         }
 
         /**
-         * <p>The pagination token. Set this parameter to the value of NextToken that is returned from the previous API call.</p>
+         * <p>The pagination token. The value is the NextToken value returned by the previous API call.</p>
          * 
          * <strong>example:</strong>
          * <p>3a6b93229825ac667104463b5679****</p>

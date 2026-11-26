@@ -80,7 +80,7 @@ public class ListNodeGroupsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The cluster group information.</p>
+         * <p>The node group information in the cluster.</p>
          */
         public Builder groups(java.util.List<Groups> groups) {
             this.groups = groups;
@@ -88,7 +88,7 @@ public class ListNodeGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The NextToken for the next page. Include this return value when requesting the next page.</p>
+         * <p>The token for the next page. Include this token in the request to retrieve the next page.</p>
          * 
          * <strong>example:</strong>
          * <p>563d42ae0b17572449ec8c97f7f66069</p>
@@ -324,7 +324,7 @@ public class ListNodeGroupsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The cluster ID.</p>
+             * <p>The ID of the cluster.</p>
              * 
              * <strong>example:</strong>
              * <p>i113952461729854708648</p>
@@ -335,7 +335,7 @@ public class ListNodeGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The cluster name.</p>
+             * <p>The name of the cluster.</p>
              * 
              * <strong>example:</strong>
              * <p>wzq-exclusivelite-71</p>
@@ -346,7 +346,7 @@ public class ListNodeGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time. The time is in ISO 8601 format.</p>
+             * <p>The creation time in the ISO 8601 format.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-02-27T13:16:31.599</p>
@@ -368,7 +368,7 @@ public class ListNodeGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether file storage mounting is supported.</p>
+             * <p>Indicates whether file system mounting is supported.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -379,7 +379,7 @@ public class ListNodeGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The group ID.</p>
+             * <p>The ID of the group.</p>
              * 
              * <strong>example:</strong>
              * <p>238276221</p>
@@ -390,7 +390,7 @@ public class ListNodeGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The group name.</p>
+             * <p>The name of the group.</p>
              * 
              * <strong>example:</strong>
              * <p>backend-group</p>
@@ -401,7 +401,7 @@ public class ListNodeGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The image ID.</p>
+             * <p>The ID of the image.</p>
              * 
              * <strong>example:</strong>
              * <p>i194015071707321240258</p>
@@ -412,7 +412,7 @@ public class ListNodeGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The image name.</p>
+             * <p>The name of the image.</p>
              * 
              * <strong>example:</strong>
              * <p>CentOS_7.9_x86_64_FULL_20221110</p>
@@ -445,7 +445,7 @@ public class ListNodeGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The update time. The time is in ISO 8601 format.</p>
+             * <p>The update time in the ISO 8601 format.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-09-22T00:03:05.114</p>

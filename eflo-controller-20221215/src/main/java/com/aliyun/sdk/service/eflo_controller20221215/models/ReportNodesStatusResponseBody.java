@@ -67,7 +67,7 @@ public class ReportNodesStatusResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The error message.</p>
+         * <p>Error Message</p>
          * 
          * <strong>example:</strong>
          * <p>Resource not found</p>

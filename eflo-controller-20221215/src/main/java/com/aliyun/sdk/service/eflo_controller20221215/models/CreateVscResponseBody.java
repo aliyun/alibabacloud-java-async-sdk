@@ -67,7 +67,7 @@ public class CreateVscResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>887FA855-89F4-5DB3-B305-C5879EC480E6</p>
@@ -78,7 +78,7 @@ public class CreateVscResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the VSC that is created.</p>
+         * <p>The ID of the created VSC.</p>
          * 
          * <strong>example:</strong>
          * <p>vsc-001</p>

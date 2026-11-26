@@ -91,7 +91,7 @@ public class CreateNodeGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The node group name.</p>
+         * <p>The name of the node group.</p>
          * 
          * <strong>example:</strong>
          * <p>emr-default</p>

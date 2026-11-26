@@ -153,7 +153,7 @@ public class CreateVscRequest extends Request {
         }
 
         /**
-         * <p>A client token to ensure the idempotency of the request.</p>
+         * <p>The client token used to ensure idempotence.</p>
          * 
          * <strong>example:</strong>
          * <p>123e4567-e89b-12d3-a456-426655440000</p>
@@ -165,7 +165,7 @@ public class CreateVscRequest extends Request {
         }
 
         /**
-         * <p>The ID of the node.</p>
+         * <p>The node ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -178,7 +178,7 @@ public class CreateVscRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group.</p>
+         * <p>The resource group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-aek2xdkc6icwfha</p>
@@ -190,7 +190,7 @@ public class CreateVscRequest extends Request {
         }
 
         /**
-         * <p>The tags of the resource.</p>
+         * <p>The resource tags.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putBodyParameter("Tag", tag);
@@ -211,7 +211,7 @@ public class CreateVscRequest extends Request {
         }
 
         /**
-         * <p>The type of the VSC. Valid values: primary and standard. The default value is primary.</p>
+         * <p>The VSC type. Valid values: primary and standard. Default value: primary.</p>
          * 
          * <strong>example:</strong>
          * <p>primary</p>

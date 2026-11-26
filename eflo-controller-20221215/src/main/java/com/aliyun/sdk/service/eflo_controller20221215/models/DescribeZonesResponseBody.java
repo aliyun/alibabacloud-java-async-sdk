@@ -144,7 +144,7 @@ public class DescribeZonesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The zone name.</p>
+             * <p>The name of the zone.</p>
              * 
              * <strong>example:</strong>
              * <p>Hangzhou</p>

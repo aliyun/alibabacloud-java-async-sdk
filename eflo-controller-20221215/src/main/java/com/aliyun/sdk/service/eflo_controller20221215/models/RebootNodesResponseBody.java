@@ -78,7 +78,7 @@ public class RebootNodesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The job ID.</p>
+         * <p>The task ID.</p>
          * 
          * <strong>example:</strong>
          * <p>i158475611663639202234</p>

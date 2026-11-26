@@ -122,7 +122,7 @@ public class RebootNodesRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to allow skipping failed nodes. Default value: False.</p>
+         * <p>Specifies whether to skip failed nodes. Default value: false.</p>
          * 
          * <strong>example:</strong>
          * <p>False</p>
@@ -134,7 +134,7 @@ public class RebootNodesRequest extends Request {
         }
 
         /**
-         * <p>The nodes.</p>
+         * <p>The list of nodes.</p>
          */
         public Builder nodes(java.util.List<String> nodes) {
             String nodesShrink = shrink(nodes, "Nodes", "json");
