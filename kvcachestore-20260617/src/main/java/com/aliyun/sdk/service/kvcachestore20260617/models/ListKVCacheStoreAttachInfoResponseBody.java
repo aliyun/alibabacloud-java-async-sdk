@@ -119,7 +119,7 @@ public class ListKVCacheStoreAttachInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The list of mount records.</p>
+         * <p>The list of attachment information.</p>
          */
         public Builder attachInfos(java.util.List<AttachInfos> attachInfos) {
             this.attachInfos = attachInfos;
@@ -127,7 +127,7 @@ public class ListKVCacheStoreAttachInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The query token, which is used to query the next batch of data.</p>
+         * <p>The pagination token. It is used to query the next batch of data.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAARbaCuN6hiD08qrLdwJ9Fh3NUkN7qf+fcWj7joK8M6tU</p>
@@ -160,7 +160,7 @@ public class ListKVCacheStoreAttachInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID. This ID is returned regardless of whether the call is successful.</p>
+         * <p>The request ID. The request ID is returned regardless of whether the call is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>B127704C-ECB1-5B0A-AA9C-8F394A6F179F</p>
@@ -171,7 +171,7 @@ public class ListKVCacheStoreAttachInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned for a paging query.</p>
+         * <p>The total number of entries returned for the paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -200,6 +200,9 @@ public class ListKVCacheStoreAttachInfoResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Capacity")
         private Long capacity;
 
+        @com.aliyun.core.annotation.NameInMap("ControlSn")
+        private String controlSn;
+
         @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
@@ -208,6 +211,12 @@ public class ListKVCacheStoreAttachInfoResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("MountPointId")
         private String mountPointId;
+
+        @com.aliyun.core.annotation.NameInMap("Nguid")
+        private String nguid;
+
+        @com.aliyun.core.annotation.NameInMap("Protocol")
+        private String protocol;
 
         @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
@@ -227,9 +236,12 @@ public class ListKVCacheStoreAttachInfoResponseBody extends TeaModel {
         private AttachInfos(Builder builder) {
             this.attachedAt = builder.attachedAt;
             this.capacity = builder.capacity;
+            this.controlSn = builder.controlSn;
             this.instanceId = builder.instanceId;
             this.kvcsId = builder.kvcsId;
             this.mountPointId = builder.mountPointId;
+            this.nguid = builder.nguid;
+            this.protocol = builder.protocol;
             this.regionId = builder.regionId;
             this.status = builder.status;
             this.type = builder.type;
@@ -260,6 +272,13 @@ public class ListKVCacheStoreAttachInfoResponseBody extends TeaModel {
         }
 
         /**
+         * @return controlSn
+         */
+        public String getControlSn() {
+            return this.controlSn;
+        }
+
+        /**
          * @return instanceId
          */
         public String getInstanceId() {
@@ -278,6 +297,20 @@ public class ListKVCacheStoreAttachInfoResponseBody extends TeaModel {
          */
         public String getMountPointId() {
             return this.mountPointId;
+        }
+
+        /**
+         * @return nguid
+         */
+        public String getNguid() {
+            return this.nguid;
+        }
+
+        /**
+         * @return protocol
+         */
+        public String getProtocol() {
+            return this.protocol;
         }
 
         /**
@@ -318,9 +351,12 @@ public class ListKVCacheStoreAttachInfoResponseBody extends TeaModel {
         public static final class Builder {
             private String attachedAt; 
             private Long capacity; 
+            private String controlSn; 
             private String instanceId; 
             private String kvcsId; 
             private String mountPointId; 
+            private String nguid; 
+            private String protocol; 
             private String regionId; 
             private String status; 
             private String type; 
@@ -333,9 +369,12 @@ public class ListKVCacheStoreAttachInfoResponseBody extends TeaModel {
             private Builder(AttachInfos model) {
                 this.attachedAt = model.attachedAt;
                 this.capacity = model.capacity;
+                this.controlSn = model.controlSn;
                 this.instanceId = model.instanceId;
                 this.kvcsId = model.kvcsId;
                 this.mountPointId = model.mountPointId;
+                this.nguid = model.nguid;
+                this.protocol = model.protocol;
                 this.regionId = model.regionId;
                 this.status = model.status;
                 this.type = model.type;
@@ -344,7 +383,7 @@ public class ListKVCacheStoreAttachInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time of the last attach operation in ISO 8601 format. If the instance is not attached, the value is null.</p>
+             * <p>The time of the last attachment. The time follows the ISO 8601 standard. If the instance is not attached, the value is null.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-06-20T08:30:00Z</p>
@@ -355,7 +394,7 @@ public class ListKVCacheStoreAttachInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The capacity of the file system in GiB.</p>
+             * <p>The capacity of the file system. Unit: GiB.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -366,7 +405,18 @@ public class ListKVCacheStoreAttachInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the compute resource, which is the ECS instance ID or the Lingjun compute node ID.</p>
+             * <p>The serial number (SN) of the NVMe channel disk. This value is returned only when protocol is set to nvme and the channel is bound in the current round. If other protocols are used or the channel is not bound, the value is null.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>kvaaaaaaaaaaaaaaaa</p>
+             */
+            public Builder controlSn(String controlSn) {
+                this.controlSn = controlSn;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the compute resource, such as the ECS instance ID or the Lingjun compute node ID.</p>
              * 
              * <strong>example:</strong>
              * <p>i-hdsagtg61h2hf21</p>
@@ -399,6 +449,28 @@ public class ListKVCacheStoreAttachInfoResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The NGUID of the KVCacheStore data disk. This value is returned only when protocol is set to nvme and the NGUID is generated for the instance. If other protocols are used or the NGUID is missing, the value is null.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>00000000-0000-0000-0000-000000000001</p>
+             */
+            public Builder nguid(String nguid) {
+                this.nguid = nguid;
+                return this;
+            }
+
+            /**
+             * <p>The access channel protocol of the instance. Valid values: vsc (VSC channel) and nvme (TDC NVMe channel).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>nvme</p>
+             */
+            public Builder protocol(String protocol) {
+                this.protocol = protocol;
+                return this;
+            }
+
+            /**
              * <p>The region where the instance is deployed.</p>
              * 
              * <strong>example:</strong>
@@ -410,7 +482,7 @@ public class ListKVCacheStoreAttachInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The attach status. Valid values: Attaching, Attached, and Detaching. After the instance is detached, the record is deleted and not returned.</p>
+             * <p>The attachment status. Valid values: Attaching, Attached, and Detaching. After an instance is detached, the record is deleted and not returned.</p>
              * 
              * <strong>example:</strong>
              * <p>Attached</p>

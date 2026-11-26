@@ -75,7 +75,7 @@ public class AttachKVCacheStoreResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID. A request ID is returned regardless of whether the call is successful.</p>
+         * <p>The request ID. This ID is returned regardless of whether the API call is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>F7BEF1E2-7E56-5BF1-8E36-77A51C5812F1</p>
@@ -183,7 +183,7 @@ public class AttachKVCacheStoreResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The error code returned upon failure. This value is null upon success.</p>
+             * <p>The error code returned when the operation fails. This parameter is null when the operation succeeds.</p>
              * 
              * <strong>example:</strong>
              * <p>InvalidStatus.OperationDenied</p>
@@ -194,7 +194,7 @@ public class AttachKVCacheStoreResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The error message returned upon failure. This value is null upon success.</p>
+             * <p>The error message returned when the operation fails. This parameter is null when the operation succeeds.</p>
              * 
              * <strong>example:</strong>
              * <p>The operation is not allowed for instance in ATTACHED status.</p>
@@ -216,13 +216,7 @@ public class AttachKVCacheStoreResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The operation result. Valid values:</p>
-             * <ul>
-             * <li>ATTACHING: The request has been accepted and the asynchronous mount is in progress.</li>
-             * <li>ATTACHED: Idempotent. The mount is already complete.</li>
-             * <li>Success: The synchronous verification passed and the asynchronous operation is complete.</li>
-             * <li>Failed: The operation failed.</li>
-             * </ul>
+             * <p>The operation result. Valid values: ATTACHING (the request is accepted and the asynchronous mounting is in progress), ATTACHED (idempotent: the mounting is complete), Success (synchronous verification passed and asynchronous mounting is complete), and Failed (the operation failed).</p>
              * 
              * <strong>example:</strong>
              * <p>ATTACHING</p>
@@ -233,7 +227,7 @@ public class AttachKVCacheStoreResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The VSC ID on the compute side.</p>
+             * <p>The ID of the VSC on the compute side.</p>
              * 
              * <strong>example:</strong>
              * <p>vsc-001</p>

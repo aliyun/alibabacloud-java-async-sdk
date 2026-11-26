@@ -145,7 +145,7 @@ public class ListKVCacheStoresResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The list of KVCacheStore instances. Each element contains the following parameters: KvcsId, Name, Status, ExtraStatus, RegionId, ZoneId, HpnZone, Type, Capacity, PaymentType, MountPointId, CreateTime, and Description.</p>
+         * <p>The list of KVCacheStores. Each element contains sub-parameters such as KvcsId, Name, Status, ExtraStatus, RegionId, ZoneId, HpnZone, Type, Capacity, PaymentType, MountPointId, CreateTime, and Description.</p>
          */
         public Builder KVCacheStores(java.util.List<KVCacheStores> KVCacheStores) {
             this.KVCacheStores = KVCacheStores;
@@ -153,7 +153,7 @@ public class ListKVCacheStoresResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The maximum number of entries returned per page.</p>
+         * <p>The maximum number of entries returned per pagination request.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -164,7 +164,7 @@ public class ListKVCacheStoresResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The pagination token for the next page. This value is empty when no more data is available. This parameter is valid only for cursor-based pagination.</p>
+         * <p>The cursor for the next page. If no more data is available, this parameter is empty. This parameter is valid only when cursor pagination is used.</p>
          * 
          * <strong>example:</strong>
          * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -175,7 +175,7 @@ public class ListKVCacheStoresResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The current page number. This parameter is valid only for page number-based pagination.</p>
+         * <p>The current page number. This parameter is valid only when page number pagination is used.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -186,7 +186,7 @@ public class ListKVCacheStoresResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page. This parameter is valid only for page number-based pagination.</p>
+         * <p>The number of entries per page. This parameter is valid only when page number pagination is used.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -197,7 +197,7 @@ public class ListKVCacheStoresResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of pages. This parameter is returned only for page number-based pagination.</p>
+         * <p>The total number of pages. This parameter is returned only when page number pagination is used.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -208,7 +208,7 @@ public class ListKVCacheStoresResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID. A request ID is returned regardless of whether the call is successful.</p>
+         * <p>The request ID. This ID is returned regardless of whether the API call is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>56AC37CD-388E-5D21-951B-C50D16D8E812</p>
@@ -219,7 +219,7 @@ public class ListKVCacheStoresResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of instances. This parameter is returned only for page number-based pagination. For cursor-based pagination, the value is -1.</p>
+         * <p>The total number of instances. This parameter is returned only when page number pagination is used. If cursor pagination is used, the value is -1.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -538,7 +538,7 @@ public class ListKVCacheStoresResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The storage capacity, in GiB.</p>
+             * <p>The storage capacity. Unit: GiB.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -549,7 +549,7 @@ public class ListKVCacheStoresResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time in ISO 8601 format.</p>
+             * <p>The time when the instance was created. The time follows the ISO 8601 standard.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-06-18T10:00:00Z</p>
@@ -604,7 +604,7 @@ public class ListKVCacheStoresResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The file system-level mount point ID. Instances under the same file system share this mount point. For more information, use the ListKVCacheInstanceAttachInfo operation.</p>
+             * <p>The file system-level mount point ID. This mount point is shared by instances within the same file system. For more information, call the ListKVCacheInstanceAttachInfo operation.</p>
              * 
              * <strong>example:</strong>
              * <p>mp-xxxxx</p>
@@ -626,7 +626,7 @@ public class ListKVCacheStoresResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The payment type. Valid values: PREPAY and POSTPAY.</p>
+             * <p>The billing method. Valid values: PREPAY and POSTPAY.</p>
              * 
              * <strong>example:</strong>
              * <p>POSTPAY</p>
@@ -678,7 +678,7 @@ public class ListKVCacheStoresResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance type. Valid values: kvcs (KVCacheStore, CPFS).</p>
+             * <p>The instance type. Valid value: kvcs (KVCacheStore, CPFS).</p>
              * 
              * <strong>example:</strong>
              * <p>preview</p>

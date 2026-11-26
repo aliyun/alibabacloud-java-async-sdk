@@ -67,7 +67,7 @@ public class ListKVCacheStoreAvailableHpnZonesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The list of available HpnZones for instances.</p>
+         * <p>The list of available HpnZones for the instances.</p>
          */
         public Builder instanceHpnZones(java.util.List<InstanceHpnZones> instanceHpnZones) {
             this.instanceHpnZones = instanceHpnZones;
@@ -222,7 +222,7 @@ public class ListKVCacheStoreAvailableHpnZonesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the KVCacheStore instance.</p>
+             * <p>The KVCacheStore instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>kvcs-xxxxx</p>

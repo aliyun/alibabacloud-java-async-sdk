@@ -145,7 +145,7 @@ public class ListKVCacheStoreAttachInfoRequest extends Request {
         } 
 
         /**
-         * <p>The list of KvcsIds of the KVCacheStores to query. You can specify up to 100 KvcsIds.</p>
+         * <p>The list of KVCacheStore IDs to query. You can specify up to 100 IDs.</p>
          * <p>This parameter is required.</p>
          */
         public Builder kvcsIds(java.util.List<String> kvcsIds) {
@@ -155,7 +155,7 @@ public class ListKVCacheStoreAttachInfoRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries to return in a single call. Valid values: 1 to 500.</p>
+         * <p>The maximum number of entries to return for a single request. Valid values: 1 to 500.</p>
          * <p>Default value: 10.</p>
          * 
          * <strong>example:</strong>
@@ -168,7 +168,7 @@ public class ListKVCacheStoreAttachInfoRequest extends Request {
         }
 
         /**
-         * <p>The query token. Set the value to the NextToken value returned from the last call to this operation. You do not need to specify this parameter for the first call. If NextToken is specified, the PageSize and PageNumber request parameters become invalid, and the TotalCount value in the response is invalid.</p>
+         * <p>The pagination token. Set the value to the NextToken value returned from the last invocation of this operation. No settings are required for this parameter when you invoke this operation for the first time. If NextToken is specified, the PageSize and PageNumber request parameters become invalid, and the TotalCount value in the response is invalid.</p>
          * 
          * <strong>example:</strong>
          * <p>your-client-token</p>
@@ -180,7 +180,7 @@ public class ListKVCacheStoreAttachInfoRequest extends Request {
         }
 
         /**
-         * <p>The page number for a paging query. This parameter is used together with PageSize. If the specified page number exceeds the total number of pages, the last page is returned.</p>
+         * <p>The page number for paging in a paged query. This parameter is used together with PageSize. If the specified page number exceeds the total number of pages, the last page is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>6</p>
@@ -192,7 +192,7 @@ public class ListKVCacheStoreAttachInfoRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page for a paging query.</p>
+         * <p>The settings for the number of entries per page for paging in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -204,7 +204,7 @@ public class ListKVCacheStoreAttachInfoRequest extends Request {
         }
 
         /**
-         * <p>The region ID, such as cn-hangzhou.</p>
+         * <p>The region ID. Example: cn-hangzhou.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -217,7 +217,7 @@ public class ListKVCacheStoreAttachInfoRequest extends Request {
         }
 
         /**
-         * <p>The ID of the compute-side VSC. If you specify this parameter, the mount records are filtered by the specified VSC.</p>
+         * <p>The ID of the compute-side VSC. If you specify this parameter, the attachment records are filtered by the specified VSC.</p>
          * 
          * <strong>example:</strong>
          * <p>vsc-dhag651dsda</p>

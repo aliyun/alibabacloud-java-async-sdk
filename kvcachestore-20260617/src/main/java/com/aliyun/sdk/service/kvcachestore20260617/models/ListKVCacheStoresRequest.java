@@ -173,7 +173,7 @@ public class ListKVCacheStoresRequest extends Request {
         } 
 
         /**
-         * <p>The list of KvcsId values. Separate multiple IDs with commas (,). A maximum of 100 IDs can be specified.</p>
+         * <p>The list of KvcsIds. Separate multiple IDs with commas. You can specify up to 100 IDs.</p>
          * 
          * <strong>example:</strong>
          * <p>kvcs-87djda131</p>
@@ -185,7 +185,7 @@ public class ListKVCacheStoresRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries per page for cursor-based pagination. Default value: 10. Maximum value: 100. This parameter is used together with NextToken.</p>
+         * <p>The maximum number of entries per page for cursor pagination. Default value: 10. Maximum value: 100. This parameter is used together with NextToken.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -197,7 +197,7 @@ public class ListKVCacheStoresRequest extends Request {
         }
 
         /**
-         * <p>The instance name used for filtering. Prefix matching is supported.</p>
+         * <p>The instance name filter for prefix matching.</p>
          * 
          * <strong>example:</strong>
          * <p>obj-detect</p>
@@ -209,7 +209,7 @@ public class ListKVCacheStoresRequest extends Request {
         }
 
         /**
-         * <p>The pagination token. Do not specify this parameter for the first request. For subsequent requests, use the NextToken value returned in the previous response. This parameter and PageNumber are mutually exclusive.</p>
+         * <p>The pagination cursor. Do not specify this parameter for the first query. For subsequent queries, use the NextToken value returned from the previous request. This parameter and PageNumber are mutually exclusive.</p>
          * 
          * <strong>example:</strong>
          * <p>a24c3a9cc8e6da77b10cffc4c93c7922e0b5e8707e68181f</p>
@@ -258,7 +258,7 @@ public class ListKVCacheStoresRequest extends Request {
         }
 
         /**
-         * <p>The instance status used for filtering. Valid values: Creating, Available, InUse, Stopping, Stopped, and Deleting.</p>
+         * <p>The instance status filter. Valid values: Creating, Available, InUse, Stopping, Stopped, and Deleting.</p>
          * 
          * <strong>example:</strong>
          * <p>Available</p>
