@@ -63,7 +63,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example of adding a system policy named <code>AliyunECSFullAccess</code> to the access configuration <code>ac-00jhtfl8thteu6uj****</code>.</p>
+     * <p>This topic provides an example of adding the system policy AliyunECSFullAccess to the access configuration ac-00jhtfl8thteu6uj****.</p>
      * 
      * @param request the request parameters of AddPermissionPolicyToAccessConfiguration  AddPermissionPolicyToAccessConfigurationRequest
      * @return AddPermissionPolicyToAccessConfigurationResponse
@@ -84,8 +84,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>After SCIM synchronization is enabled, you cannot add users to SCIM-synchronized groups.
-     * This topic provides an example of adding the user <code>u-00q8wbq42wiltcrk****</code> to the group <code>g-00jqzghi2n3o5hkh****</code>.</p>
+     * <p>When SCIM synchronization is enabled, you cannot add users to SCIM-synchronized user groups.
+     * This topic provides an example of adding the user <code>u-00q8wbq42wiltcrk****</code> to the user group <code>g-00jqzghi2n3o5hkh****</code>.</p>
      * 
      * @param request the request parameters of AddUserToGroup  AddUserToGroupRequest
      * @return AddUserToGroupResponse
@@ -107,7 +107,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <p>You can clear the SAML IdP information only when SSO logon is disabled. Otherwise, you cannot perform this operation.
-     * This topic provides an example of clearing the configuration of the SAML IdP for the <code>d-00fc2p61****</code> directory.</p>
+     * This topic provides an example to clear the configuration of the SAML IdP in the <code>d-00fc2p61****</code> directory.</p>
      * 
      * @param request the request parameters of ClearExternalSAMLIdentityProvider  ClearExternalSAMLIdentityProviderRequest
      * @return ClearExternalSAMLIdentityProviderResponse
@@ -128,9 +128,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is asynchronous. You can use the TaskId returned in the response to call <a href="https://help.aliyun.com/document_detail/340670.html">GetTask</a> to query the task execution status.
+     * <p>This API operation is asynchronous. You can use the TaskId in the response parameter to invoke <a href="https://help.aliyun.com/document_detail/340670.html">GetTask</a> and execute a query for the node status.
      * For more information about granting access to an account in a resource directory, see <a href="https://help.aliyun.com/document_detail/266726.html">Multi-account authorization overview</a>.
-     * This topic provides an example on how to assign the access configuration <code>ac-00jhtfl8thteu6uj****</code> to the CloudSSO user <code>u-00q8wbq42wiltcrk****</code> for the account <code>114240524784****</code> in a resource directory. This allows the CloudSSO user to access authorized resources in the account.</p>
+     * This topic provides an example on how to configure permissions for the CloudSSO user <code>u-00q8wbq42wiltcrk****</code> on the account in a resource directory <code>114240524784****</code> by using the access configuration <code>ac-00jhtfl8thteu6uj****</code>, so that the CloudSSO user can access the authorized resources in the account in a resource directory.</p>
      * 
      * @param request the request parameters of CreateAccessAssignment  CreateAccessAssignmentRequest
      * @return CreateAccessAssignmentResponse
@@ -152,7 +152,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <p>For more information about access configurations, see <a href="https://help.aliyun.com/document_detail/266737.html">Access configuration overview</a>.
-     * This topic provides an example on how to create an access configuration named <code>ECS-Admin</code>.</p>
+     * This topic provides an example of creating an access configuration named <code>ECS-Admin</code>.</p>
      * 
      * @param request the request parameters of CreateAccessConfiguration  CreateAccessConfigurationRequest
      * @return CreateAccessConfigurationResponse
@@ -175,11 +175,11 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <b>description</b> :
      * <h3>Usage notes</h3>
      * <p>A directory is an instance in CloudSSO. You must create a directory before you use CloudSSO. All CloudSSO resources must be maintained in the directory.
-     * You must select a region for the CloudSSO directory. Alibaba Cloud ensures that all CloudSSO-related data is stored only in this region. This is independent of where you deploy cloud resources such as ECS and ApsaraDB RDS. You can log on to and access cloud resources in any region from anywhere in the world. You can select a region based on your security and compliance requirements and the geographic location of your target users. If you do not have special security and compliance requirements, select the region closest to your target users to improve access speed. Currently, you can create directories in the following four regions: China (Shanghai), China (Hong Kong), US (Silicon Valley), and Germany (Frankfurt).
+     * You must select a region for the CloudSSO directory. Alibaba Cloud ensures that all CloudSSO-related data is stored only in this region. This is independent of where you deploy cloud resources such as ECS and ApsaraDB RDS. You can log on to and access cloud resources in any region from anywhere in the world. You can select a region based on your security and compliance requirements and the geographic location of your target users. If you do not have special security and compliance requirements, we recommend that you select the region closest to your target users to improve access speed. Currently, you can create directories in the following four regions: China (Shanghai), China (Hong Kong), US (Silicon Valley), and Germany (Frankfurt).
      * This topic provides an example on how to create a directory named <code>example</code> in the China (Shanghai) region.</p>
      * <h3>Limits</h3>
      * <ul>
-     * <li>A management account can create only one directory.</li>
+     * <li>You can create only one directory for each management account.</li>
      * <li>To change the region of the directory, you must delete the existing directory and create a new one in another region.</li>
      * </ul>
      * 
@@ -202,7 +202,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example of creating a user group named <code>TestGroup</code>.</p>
+     * <p>This topic provides an example of creating a group named <code>TestGroup</code>.</p>
      * 
      * @param request the request parameters of CreateGroup  CreateGroupRequest
      * @return CreateGroupResponse
@@ -223,8 +223,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>A SCIM credential is required for SCIM synchronization. You can create up to two SCIM credentials.
-     * This topic provides an example on how to create a SCIM credential in the directory <code>d-00fc2p61****</code>.</p>
+     * <p>SCIM credentials are required for SCIM synchronization. You can create up to two SCIM credentials.
+     * This topic provides an example of creating a SCIM server credential in the <code>d-00fc2p61****</code> directory.</p>
      * 
      * @param request the request parameters of CreateSCIMServerCredential  CreateSCIMServerCredentialRequest
      * @return CreateSCIMServerCredentialResponse
@@ -263,7 +263,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You can create a Resource Access Management (RAM) user synchronization to synchronously create a Resource Access Management (RAM) user that has the same name as a CloudSSO user in a destination account in a resource directory. You can then use the Resource Access Management (RAM) user to access resources in the account.</p>
+     * <p>You can create a Resource Access Management (RAM) user synchronization to synchronously create a Resource Access Management (RAM) user that has the same name as a CloudSSO user in the destination account in a resource directory, and then use the Resource Access Management (RAM) user to access resources in the account.</p>
      * 
      * @param request the request parameters of CreateUserProvisioning  CreateUserProvisioningRequest
      * @return CreateUserProvisioningResponse
@@ -284,8 +284,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is asynchronous. You can use the <code>TaskId</code> returned in the response to call <a href="https://help.aliyun.com/document_detail/340670.html">GetTask</a> to query the task execution status.
-     * This topic provides an example of removing the authorization for the CloudSSO user <code>u-00q8wbq42wiltcrk****</code> to use the access configuration <code>ac-00jhtfl8thteu6uj****</code> on the account in a resource directory <code>114240524784****</code>.</p>
+     * <p>This API operation is asynchronous. You can use the <code>TaskId</code> parameter in the response to invoke <a href="https://help.aliyun.com/document_detail/340670.html">GetTask</a> to query the node execute status.
+     * This topic provides an example on how to remove the authorization that allows the CloudSSO user u-00q8wbq42wiltcrk**** to use the access configuration ac-00jhtfl8thteu6uj**** on the account in a resource directory 114240524784****.</p>
      * 
      * @param request the request parameters of DeleteAccessAssignment  DeleteAccessAssignmentRequest
      * @return DeleteAccessAssignmentResponse
@@ -363,10 +363,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <h3>Before you begin</h3>
-     * <p>Before you delete a user group, make sure that the user group is not associated with the following resources. Otherwise, the deletion failed.</p>
+     * <p>Before you delete a user group, ensure that the user group is not associated with the following resources. Otherwise, the deletion will be failed.</p>
      * <ul>
      * <li>Users: You must remove users from the user group. For more information, see <a href="https://help.aliyun.com/document_detail/335116.html">RemoveUserFromGroup</a>.</li>
-     * <li>Authorization: You must remove the authorization of the user group on the account in a resource directory. For more information, see <a href="https://help.aliyun.com/document_detail/338350.html">DeleteAccessAssignment</a>.</li>
+     * <li>Authorization: You must remove the authorization of the user group on an account in a resource directory. For more information, see <a href="https://help.aliyun.com/document_detail/338350.html">DeleteAccessAssignment</a>.</li>
      * </ul>
      * <h3>Usage notes</h3>
      * <p>If SCIM synchronization is enabled, you cannot delete user groups that are synchronized by using SCIM.
@@ -427,6 +427,34 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DeleteSCIMServerCredentialResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>CloudSSO administrators can call this operation to delete the security information bound to a specified CloudSSO user. Currently, only security email addresses are supported.</p>
+     * <blockquote>
+     * <ul>
+     * <li>After the deletion, the user is no longer associated with the original security email address, and any previously unconsumed verification links and password reset links also become invalid.</li>
+     * <li>If the user is not currently bound to a security email address, calling this operation directly returns a success response.
+     * This topic provides an example of deleting the security email address of the user <code>u-00q8wbq42wiltcrk****</code> in the directory <code>d-00fc2p61****</code>.</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * @param request the request parameters of DeleteSecurityInfo  DeleteSecurityInfoRequest
+     * @return DeleteSecurityInfoResponse
+     */
+    @Override
+    public CompletableFuture<DeleteSecurityInfoResponse> deleteSecurityInfo(DeleteSecurityInfoRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteSecurityInfo").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteSecurityInfoResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteSecurityInfoResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -521,6 +549,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>禁用云SSO委派管理员账号。禁用后，该账号不能再管理云SSO；您可以随时重新启用。</p>
+     * <h2>前提条件</h2>
+     * <ul>
+     * <li>目标账号必须是资源目录的成员账号，管理账号本身不能作为委派管理员账号。</li>
+     * <li>该成员账号已由资源目录管理账号注册为云SSO委派管理员（可信服务标识为<code>cloudsso.aliyuncs.com</code>），并已通过EnableDelegateAccount启用。</li>
+     * </ul>
+     * 
      * @param request the request parameters of DisableDelegateAccount  DisableDelegateAccountRequest
      * @return DisableDelegateAccountResponse
      */
@@ -870,6 +906,52 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetSCIMSynchronizationStatusResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>CloudSSO administrators can call this operation to query the security information (currently only security email addresses are supported) bound to a specified CloudSSO user and its verification status.</p>
+     * <blockquote>
+     * <p>If the user has not configured a security email address, the response does not include the <code>SecurityEmail</code> field.
+     * This topic provides an example to query the security information of the user <code>u-00q8wbq42wiltcrk****</code> in the <code>d-00fc2p61****</code> directory.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of GetSecurityInfo  GetSecurityInfoRequest
+     * @return GetSecurityInfoResponse
+     */
+    @Override
+    public CompletableFuture<GetSecurityInfoResponse> getSecurityInfo(GetSecurityInfoRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetSecurityInfo").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetSecurityInfoResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetSecurityInfoResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>CloudSSO administrators can call this operation to query the security information management preferences of a specified CloudSSO directory and check whether CloudSSO users in the directory are allowed to manage their security email addresses in the CloudSSO user portal. This topic provides an example to query the security information management preferences of the <code>d-00fc2p61****</code> directory.</p>
+     * 
+     * @param request the request parameters of GetSecurityInfoPreference  GetSecurityInfoPreferenceRequest
+     * @return GetSecurityInfoPreferenceResponse
+     */
+    @Override
+    public CompletableFuture<GetSecurityInfoPreferenceResponse> getSecurityInfoPreference(GetSecurityInfoPreferenceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetSecurityInfoPreference").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetSecurityInfoPreferenceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetSecurityInfoPreferenceResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1496,10 +1578,10 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>A CloudSSO administrator can reset the password of a user when the user forgets the password, the password expires, or the password poses a security risk.</p>
+     * <p>When a user forgets their password, the password expires, or the password poses a security risk, a CloudSSO administrator can reset the password for the user.</p>
      * <blockquote>
      * <p>You cannot reset user passwords after single sign-on (SSO) is enabled.
-     * This topic provides an example of resetting the password of the user u-00q8wbq42wiltcrk**** by using a system-generated password.</p>
+     * This topic provides an example of resetting the password of the user <code>u-00q8wbq42wiltcrk****</code> by using a system-generated password.</p>
      * </blockquote>
      * 
      * @param request the request parameters of ResetUserPassword  ResetUserPasswordRequest
@@ -1532,6 +1614,35 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<RetryUserProvisioningEventResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>CloudSSO administrators can call this operation to send a verification email to the currently unverified security information of a specified CloudSSO user. Currently, only security email addresses are supported. After the user completes verification by using the verification link in the email, the status of the security email address changes to verified (<code>active</code>).</p>
+     * <blockquote>
+     * <ul>
+     * <li>Before you call this operation, you must call <code>SetSecurityInfo</code> to set a security email address for the user, and the security email address must be in the pending verification state (<code>pending</code>). If the user does not have a security email address configured or the security email address is already verified, calling this operation returns an error.</li>
+     * <li>The verification link is valid for 72 hours. Resending the verification email generates a new verification link, and the previous link automatically becomes invalid.</li>
+     * <li>This operation is subject to rate limits. By default, you can send a maximum of one verification email per minute and five verification emails per hour for a single user.
+     * This topic provides an example on how to send a verification email to the unverified security email address of the user <code>u-00q8wbq42wiltcrk****</code> in the <code>d-00fc2p61****</code> directory.</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * @param request the request parameters of SendVerificationMessage  SendVerificationMessageRequest
+     * @return SendVerificationMessageResponse
+     */
+    @Override
+    public CompletableFuture<SendVerificationMessageResponse> sendVerificationMessage(SendVerificationMessageRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("SendVerificationMessage").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SendVerificationMessageResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SendVerificationMessageResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1649,6 +1760,59 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<SetSCIMSynchronizationStatusResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>CloudSSO administrators can call this operation to set or modify the security information for a specified CloudSSO user. Currently, only security email addresses are supported.</p>
+     * <blockquote>
+     * <ul>
+     * <li>Each user can be bound to only one security email address. If the user is already bound to another security email address, calling this operation replaces it with the new email address, resets the verification status to pending (<code>pending</code>), and invalidates any previously unconsumed verification and password reset links. If the provided email address is the same as the currently bound one (case-insensitive), the operation rejects the duplicate binding.</li>
+     * <li>Calling this operation does not automatically send a verification email. After the security email address is set, it remains in the pending verification state (<code>pending</code>). You must call <code>SendVerificationMessage</code> to send a verification email, and the email address takes effect (<code>active</code>) only after the user completes the verification.
+     * This topic provides an example on how to set the security email address <code>Alice@example.com</code> for the user <code>u-00q8wbq42wiltcrk****</code> in the directory <code>d-00fc2p61****</code>.</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * @param request the request parameters of SetSecurityInfo  SetSecurityInfoRequest
+     * @return SetSecurityInfoResponse
+     */
+    @Override
+    public CompletableFuture<SetSecurityInfoResponse> setSecurityInfo(SetSecurityInfoRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("SetSecurityInfo").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SetSecurityInfoResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SetSecurityInfoResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>CloudSSO administrators can call this operation to set the security information management preferences for a specified directory. This controls whether CloudSSO users in the directory are allowed to manage their security email addresses in the CloudSSO user portal.</p>
+     * <blockquote>
+     * <p>This configuration only controls the self-service management permissions of users in the CloudSSO user portal. It does not affect the ability of CloudSSO administrators to manage user security email addresses by using API operations.
+     * This topic provides an example to show how to disable the permission for users to manage their security email addresses in the <code>d-00fc2p61****</code> directory.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of SetSecurityInfoPreference  SetSecurityInfoPreferenceRequest
+     * @return SetSecurityInfoPreferenceResponse
+     */
+    @Override
+    public CompletableFuture<SetSecurityInfoPreferenceResponse> setSecurityInfoPreference(SetSecurityInfoPreferenceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("SetSecurityInfoPreference").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SetSecurityInfoPreferenceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SetSecurityInfoPreferenceResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1846,9 +2010,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You can modify <code>FirstName</code>, <code>LastName</code>, <code>DisplayName</code>, <code>Email</code>, and <code>Description</code> for a user. You cannot modify <code>UserName</code> for a user.</p>
+     * <p>You can modify the <code>FirstName</code>, <code>LastName</code>, <code>DisplayName</code>, <code>Email</code>, and <code>Description</code> of a user as needed. You cannot modify the <code>UserName</code> of a user.</p>
      * <blockquote>
-     * <p>If System for Cross-domain Identity Management (SCIM) synchronization is enabled, you cannot modify information about a user that is synchronized by using SCIM.</p>
+     * <p>When SCIM synchronization is enabled, you cannot modify the information of SCIM-synchronized users.</p>
      * </blockquote>
      * 
      * @param request the request parameters of UpdateUser  UpdateUserRequest

@@ -130,8 +130,8 @@ public class CreateAccessConfigurationRequest extends Request {
 
         /**
          * <p>The name of the access configuration.</p>
-         * <p>Format: contains letters, digits, or hyphens (-).</p>
-         * <p>Length: up to 32 characters.</p>
+         * <p>Format: The name can contain letters, digits, and hyphens (-).</p>
+         * <p>Length: The name can be up to 32 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>ECS-Admin</p>
@@ -144,7 +144,7 @@ public class CreateAccessConfigurationRequest extends Request {
 
         /**
          * <p>The description of the access configuration.</p>
-         * <p>Length: up to 1024 characters.</p>
+         * <p>Length: The description can be up to 1,024 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>This is an access configuration.</p>
@@ -169,8 +169,8 @@ public class CreateAccessConfigurationRequest extends Request {
 
         /**
          * <p>The initial access page.</p>
-         * <p>The page address that a CloudSSO user initially accesses when using the access configuration to access an account in a resource directory.</p>
-         * <p>The page must be an Alibaba Cloud Management Console page. Default value: empty, which indicates that the user is redirected to the homepage of the Alibaba Cloud Management Console.</p>
+         * <p>The URL of the initial page that is accessed when a CloudSSO user accesses an account in a resource directory by using the access configuration.</p>
+         * <p>The page must be an Alibaba Cloud Management Console page. By default, this parameter is empty, which indicates that the user is redirected to the homepage of the Alibaba Cloud Management Console.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://cloudsso.console.aliyun.com">https://cloudsso.console.aliyun.com</a></p>
@@ -183,7 +183,7 @@ public class CreateAccessConfigurationRequest extends Request {
 
         /**
          * <p>The session duration.</p>
-         * <p>The maximum duration of a session when a CloudSSO user uses the access configuration to access an account in a resource directory.</p>
+         * <p>The maximum duration of a session when a CloudSSO user accesses an account in a resource directory by using the access configuration.</p>
          * <p>Unit: seconds.</p>
          * <p>Valid values: 900 to 43200 (15 minutes to 12 hours).</p>
          * <p>Default value: 3600 (1 hour).</p>
@@ -198,7 +198,7 @@ public class CreateAccessConfigurationRequest extends Request {
         }
 
         /**
-         * <p>The list of tags.</p>
+         * <p>The tags.</p>
          */
         public Builder tags(java.util.List<Tags> tags) {
             this.putQueryParameter("Tags", tags);

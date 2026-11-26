@@ -181,8 +181,8 @@ public class CreateAccessAssignmentRequest extends Request {
         /**
          * <p>The CloudSSO identity ID. Details:</p>
          * <ul>
-         * <li>If PrincipalType is set to User, PrincipalId is the CloudSSO user ID.</li>
-         * <li>If PrincipalType is set to Group, PrincipalId is the CloudSSO group ID.</li>
+         * <li>If <code>PrincipalType</code> is set to <code>User</code>, <code>PrincipalId</code> is the CloudSSO user ID.</li>
+         * <li>If <code>PrincipalType</code> is set to <code>Group</code>, <code>PrincipalId</code> is the CloudSSO group ID.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -197,8 +197,8 @@ public class CreateAccessAssignmentRequest extends Request {
         /**
          * <p>The CloudSSO identity type. Valid values:</p>
          * <ul>
-         * <li>User: user</li>
-         * <li>Group: group</li>
+         * <li>User: A user.</li>
+         * <li>Group: A group.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -223,7 +223,7 @@ public class CreateAccessAssignmentRequest extends Request {
         }
 
         /**
-         * <p>The target type of the task. Valid value: RD-Account, which indicates that the task target is an account in a resource directory.</p>
+         * <p>The target type of the task. Valid values: RD-Account: The task target is an account in a resource directory.</p>
          * 
          * <strong>example:</strong>
          * <p>RD-Account</p>

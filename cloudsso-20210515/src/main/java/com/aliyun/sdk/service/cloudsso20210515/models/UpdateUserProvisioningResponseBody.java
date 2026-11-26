@@ -78,7 +78,7 @@ public class UpdateUserProvisioningResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the RAM user provisioning.</p>
+         * <p>The Resource Access Management (RAM) user synchronization information.</p>
          */
         public Builder userProvisioning(UserProvisioning userProvisioning) {
             this.userProvisioning = userProvisioning;
@@ -326,7 +326,7 @@ public class UpdateUserProvisioningResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The creation time.</p>
+             * <p>The creation time. The time is displayed in UTC and follows the RFC 3339 standard in the YYYY-MM-DDTHH:mm:ssZ format.</p>
              * 
              * <strong>example:</strong>
              * <p>2022-11-28T03:55:42Z</p>
@@ -337,12 +337,10 @@ public class UpdateUserProvisioningResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The deletion policy. The policy is used to manage synchronized users when you delete the RAM user provisioning. Valid values:</p>
+             * <p>The deletion policy. This policy specifies how to handle synchronized Resource Access Management (RAM) users when the Resource Access Management (RAM) user synchronization is deleted. Valid values:</p>
              * <ul>
-             * <li><p>Delete: When you delete the RAM user provisioning, the system deletes the synchronized users.</p>
-             * </li>
-             * <li><p>Keep: When you delete the RAM user provisioning, the system retains the synchronized users.</p>
-             * </li>
+             * <li>Delete: Delete the users. When the Resource Access Management (RAM) user synchronization is deleted, the system deletes the Resource Access Management (RAM) users that have been synchronized from CloudSSO to Resource Access Management (RAM).</li>
+             * <li>Keep: Keep the users. When the Resource Access Management (RAM) user synchronization is deleted, the system retains the Resource Access Management (RAM) users that have been synchronized from CloudSSO to Resource Access Management (RAM).</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -354,7 +352,7 @@ public class UpdateUserProvisioningResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description for the RAM user provisioning.</p>
+             * <p>The description of the Resource Access Management (RAM) user synchronization.</p>
              * 
              * <strong>example:</strong>
              * <p>This is a user provisioning.</p>
@@ -365,7 +363,7 @@ public class UpdateUserProvisioningResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the resource directory.</p>
+             * <p>The directory ID.</p>
              * 
              * <strong>example:</strong>
              * <p>d-003qew84****</p>
@@ -376,12 +374,10 @@ public class UpdateUserProvisioningResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The conflict handling policy. The policy is used when a RAM user has the same username as the CloudSSO user who is synchronized to RAM. Valid values:</p>
+             * <p>The duplication strategy. This strategy specifies how to handle name conflicts when a CloudSSO user is synchronized to Resource Access Management (RAM) user with the same name already exists. Valid values:</p>
              * <ul>
-             * <li><p>KeepBoth: When a CloudSSO user is synchronized to RAM, if a RAM user who has the same username as the CloudSSO user exists, the system creates a RAM user whose username is the username of the CloudSSO user plus the suffix <code>_sso</code>.</p>
-             * </li>
-             * <li><p>TakeOver: When a CloudSSO user is synchronized to RAM, if a RAM user who has the same username as the CloudSSO user exists, the system replaces the RAM user with the CloudSSO user.</p>
-             * </li>
+             * <li>KeepBoth: Keep both users. When a CloudSSO user is synchronized to Resource Access Management (RAM) user with the same name already exists, the system appends the <code>_sso</code> suffix to the CloudSSO username and attempts to create a RAM user with the new username.</li>
+             * <li>TakeOver: Replace the existing user. When a CloudSSO user is synchronized to Resource Access Management (RAM) user with the same name already exists, the system directly replaces the existing RAM user with the synchronized CloudSSO user.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -393,7 +389,7 @@ public class UpdateUserProvisioningResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the Alibaba Cloud account to which the resource directory belongs.</p>
+             * <p>The ID of the Alibaba Cloud account to which the directory belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>164987310*****</p>
@@ -404,12 +400,10 @@ public class UpdateUserProvisioningResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The identity ID of the RAM user provisioning. Valid values:</p>
+             * <p>The ID of the principal for the Resource Access Management (RAM) user synchronization. Valid values:</p>
              * <ul>
-             * <li><p>If <code>Group</code> is returned for the <code>PrincipalType</code> parameter, the value of this parameter is the ID of a CloudSSO user group (g-\<em>\</em>\<em>\</em>\<em>\</em>\<em>\</em>).</p>
-             * </li>
-             * <li><p>If <code>User</code> is returned for the <code>PrincipalType</code> parameter, the value of this parameter is the ID of a CloudSSO user (u-\<em>\</em>\<em>\</em>\<em>\</em>\<em>\</em>).</p>
-             * </li>
+             * <li>If <code>PrincipalType</code> is set to <code>Group</code>, the value is the ID of the CloudSSO group (g-********).</li>
+             * <li>If <code>PrincipalType</code> is set to <code>User</code>, the value is the ID of the CloudSSO user (u-********).</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -421,12 +415,10 @@ public class UpdateUserProvisioningResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The identity name of the RAM user provisioning. Valid values:</p>
+             * <p>The name of the principal for the Resource Access Management (RAM) user synchronization. Valid values:</p>
              * <ul>
-             * <li><p>If <code>Group</code> is returned for the <code>PrincipalType</code> parameter, the value of this parameter is the name of a CloudSSO user group.</p>
-             * </li>
-             * <li><p>If <code>User</code> is returned for the <code>PrincipalType</code> parameter, the value of this parameter is the name of a CloudSSO user.</p>
-             * </li>
+             * <li>If <code>PrincipalType</code> is set to <code>Group</code>, the value is the name of the CloudSSO group.</li>
+             * <li>If <code>PrincipalType</code> is set to <code>User</code>, the value is the CloudSSO username.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -438,12 +430,10 @@ public class UpdateUserProvisioningResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The identity type of the RAM user provisioning. Valid values:</p>
+             * <p>The type of the principal for the Resource Access Management (RAM) user synchronization. Valid values:</p>
              * <ul>
-             * <li><p>User: indicates that the identity of the RAM user provisioning is a CloudSSO user.</p>
-             * </li>
-             * <li><p>Group: indicates that the identity of the RAM user provisioning is a CloudSSO user group.</p>
-             * </li>
+             * <li>User: The principal is a CloudSSO user.</li>
+             * <li>Group: The principal is a CloudSSO group.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -455,12 +445,10 @@ public class UpdateUserProvisioningResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the RAM user provisioning. Valid values:</p>
+             * <p>The status of the Resource Access Management (RAM) user synchronization. Valid values:</p>
              * <ul>
-             * <li><p>Enabled</p>
-             * </li>
-             * <li><p>Disabled</p>
-             * </li>
+             * <li>Enabled: The Resource Access Management (RAM) user synchronization is enabled.</li>
+             * <li>Disabled: The Resource Access Management (RAM) user synchronization is disabled.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -472,7 +460,7 @@ public class UpdateUserProvisioningResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the object for which you create the RAM user provisioning. The value is fixed as the ID of the account in the resource directory.</p>
+             * <p>The ID of the target for the Resource Access Management (RAM) user synchronization. Currently, the value is the ID of the account in a resource directory.</p>
              * 
              * <strong>example:</strong>
              * <p>u-02ha881d*****</p>
@@ -483,7 +471,7 @@ public class UpdateUserProvisioningResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the object for which you create the RAM user provisioning. The value is fixed as the name of the resource directory.</p>
+             * <p>The name of the target for the Resource Access Management (RAM) user synchronization. Currently, the value is the name of the account in a resource directory.</p>
              * 
              * <strong>example:</strong>
              * <p>testMemberName</p>
@@ -494,7 +482,7 @@ public class UpdateUserProvisioningResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The path of the resource directory in which you create the RAM user provisioning for the object.</p>
+             * <p>The resource directory path of the target for the Resource Access Management (RAM) user synchronization.</p>
              */
             public Builder targetPath(String targetPath) {
                 this.targetPath = targetPath;
@@ -502,7 +490,7 @@ public class UpdateUserProvisioningResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The object for which you create the RAM user provisioning. The value is fixed as <code>RD-Account</code>.</p>
+             * <p>The type of the target for the Resource Access Management (RAM) user synchronization. Currently, the value is <code>RD-Account</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>RD-Account</p>
@@ -513,7 +501,7 @@ public class UpdateUserProvisioningResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The modification time.</p>
+             * <p>The update time. The time is displayed in UTC and follows the RFC 3339 standard in the YYYY-MM-DDTHH:mm:ssZ format.</p>
              * 
              * <strong>example:</strong>
              * <p>2022-11-28T03:55:42Z</p>
@@ -524,7 +512,7 @@ public class UpdateUserProvisioningResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the RAM user provisioning.</p>
+             * <p>The ID of the Resource Access Management (RAM) user synchronization.</p>
              * 
              * <strong>example:</strong>
              * <p>up-002axzhapcbz6e63****</p>

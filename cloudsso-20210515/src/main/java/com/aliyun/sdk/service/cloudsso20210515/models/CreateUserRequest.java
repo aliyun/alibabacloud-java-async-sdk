@@ -172,7 +172,7 @@ public class CreateUserRequest extends Request {
 
         /**
          * <p>The description of the user.</p>
-         * <p>Maximum length: 1024 characters.</p>
+         * <p>Length: up to 1024 characters.</p>
          * 
          * <strong>example:</strong>
          * <p>This is a user.</p>
@@ -197,7 +197,7 @@ public class CreateUserRequest extends Request {
 
         /**
          * <p>The display name of the user.</p>
-         * <p>Maximum length: 256 characters.</p>
+         * <p>Length: up to 256 characters.</p>
          * 
          * <strong>example:</strong>
          * <p>Alice</p>
@@ -210,7 +210,7 @@ public class CreateUserRequest extends Request {
 
         /**
          * <p>The email address of the user. The email address must be unique within the directory.</p>
-         * <p>Maximum length: 128 characters.</p>
+         * <p>Length: up to 128 characters.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="mailto:Alice@example.com">Alice@example.com</a></p>
@@ -223,7 +223,7 @@ public class CreateUserRequest extends Request {
 
         /**
          * <p>The first name of the user.</p>
-         * <p>Maximum length: 64 characters.</p>
+         * <p>Length: up to 64 characters.</p>
          * 
          * <strong>example:</strong>
          * <p>Alice</p>
@@ -236,7 +236,7 @@ public class CreateUserRequest extends Request {
 
         /**
          * <p>The last name of the user.</p>
-         * <p>Maximum length: 64 characters.</p>
+         * <p>Length: up to 64 characters.</p>
          * 
          * <strong>example:</strong>
          * <p>Lee</p>
@@ -265,6 +265,9 @@ public class CreateUserRequest extends Request {
 
         /**
          * <p>The list of tags.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;Key&quot;:&quot;Project&quot;,&quot;Value&quot;:&quot;Test&quot;}]</p>
          */
         public Builder tags(java.util.List<Tags> tags) {
             this.putQueryParameter("Tags", tags);
@@ -273,9 +276,9 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * <p>The username. The username must be unique within the directory and cannot be modified.</p>
-         * <p>Format: Can contain digits, letters, and the following special characters: <code>@_-.</code></p>
-         * <p>Maximum length: 64 characters.</p>
+         * <p>The username. It must be unique within the directory and cannot be modified.</p>
+         * <p>Format: The username can contain digits, letters, and the special characters <code>@_-.</code>.</p>
+         * <p>Length: up to 64 characters.</p>
          * 
          * <strong>example:</strong>
          * <p>Alice</p>

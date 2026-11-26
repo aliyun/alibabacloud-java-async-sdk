@@ -78,7 +78,7 @@ public class CreateSCIMServerCredentialResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The SCIM credential information.</p>
+         * <p>The SCIM server credential information.</p>
          */
         public Builder SCIMServerCredential(SCIMServerCredential SCIMServerCredential) {
             this.SCIMServerCredential = SCIMServerCredential;
@@ -209,7 +209,7 @@ public class CreateSCIMServerCredentialResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the SCIM credential was created. The time is displayed in UTC and follows the RFC 3339 standard in the YYYY-MM-DDTHH:mm:ssZ format.</p>
+             * <p>The time when the SCIM server credential was created. The time is in UTC and follows the RFC 3339 standard in the YYYY-MM-DDTHH:mm:ssZ format.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-11-09T08:12:52Z</p>
@@ -220,7 +220,7 @@ public class CreateSCIMServerCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the SCIM credential.</p>
+             * <p>The ID of the SCIM server credential.</p>
              * 
              * <strong>example:</strong>
              * <p>scimcred-004whl0kvfwcypbi****</p>
@@ -231,9 +231,9 @@ public class CreateSCIMServerCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The SCIM credential secret.</p>
+             * <p>The SCIM server credential secret.</p>
              * <blockquote>
-             * <p>The SCIM credential secret is returned only when the credential is created and cannot be queried later. Keep it secure.</p>
+             * <p>The SCIM server credential secret is returned only when the credential is created and cannot be queried later. Store it securely.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -245,7 +245,7 @@ public class CreateSCIMServerCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the SCIM credential.</p>
+             * <p>The type of the SCIM server credential.</p>
              * 
              * <strong>example:</strong>
              * <p>BearerToken</p>
@@ -267,7 +267,7 @@ public class CreateSCIMServerCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the SCIM credential expires. The time is displayed in UTC and follows the RFC 3339 standard in the YYYY-MM-DDTHH:mm:ssZ format.</p>
+             * <p>The time when the SCIM server credential expires. The time is in UTC and follows the RFC 3339 standard in the YYYY-MM-DDTHH:mm:ssZ format.</p>
              * 
              * <strong>example:</strong>
              * <p>2022-11-09T08:12:52Z</p>
@@ -278,9 +278,9 @@ public class CreateSCIMServerCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the SCIM credential. Valid values:</p>
+             * <p>The status of the SCIM server credential. Valid values:</p>
              * <ul>
-             * <li>Enabled: The SCIM credential is enabled.</li>
+             * <li>Enabled: The credential is enabled.</li>
              * </ul>
              * 
              * <strong>example:</strong>

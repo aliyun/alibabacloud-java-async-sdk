@@ -143,7 +143,7 @@ public class UpdateUserRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the directory.</p>
+         * <p>The directory ID.</p>
          * 
          * <strong>example:</strong>
          * <p>d-00fc2p61****</p>
@@ -155,7 +155,7 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * <p>The new description of the user.</p>
+         * <p>The description of the user.</p>
          * 
          * <strong>example:</strong>
          * <p>This is a user.</p>
@@ -167,7 +167,7 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * <p>The new display name of the user.</p>
+         * <p>The display name of the user.</p>
          * 
          * <strong>example:</strong>
          * <p>AliceLee</p>
@@ -179,7 +179,7 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * <p>The new email address of the user.</p>
+         * <p>The email address of the user.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="mailto:AliceLee@example.com">AliceLee@example.com</a></p>
@@ -191,7 +191,7 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * <p>The new first name of the user.</p>
+         * <p>The first name of the user.</p>
          * 
          * <strong>example:</strong>
          * <p>Alice</p>
@@ -203,7 +203,7 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * <p>The new last name of the user.</p>
+         * <p>The last name of the user.</p>
          * 
          * <strong>example:</strong>
          * <p>Lee</p>
@@ -215,7 +215,7 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * <p>The ID of the user.</p>
+         * <p>The user ID.</p>
          * 
          * <strong>example:</strong>
          * <p>u-00q8wbq42wiltcrk****</p>
