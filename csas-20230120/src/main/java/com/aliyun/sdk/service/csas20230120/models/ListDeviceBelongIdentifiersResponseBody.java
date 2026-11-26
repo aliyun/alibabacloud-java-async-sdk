@@ -106,7 +106,7 @@ public class ListDeviceBelongIdentifiersResponseBody extends TeaModel {
         } 
 
         /**
-         * Identifiers.
+         * <p>The device ownership identifier records on the current page. An empty list is returned if no matching records are found.</p>
          */
         public Builder identifiers(java.util.List<Identifiers> identifiers) {
             this.identifiers = identifiers;
@@ -114,7 +114,10 @@ public class ListDeviceBelongIdentifiersResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * <p>A reserved pagination field. No valid value is returned in the current version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -122,7 +125,10 @@ public class ListDeviceBelongIdentifiersResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>A reserved pagination cursor. No valid value is returned in the current version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d9fbd0d1ac24be90</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -130,7 +136,10 @@ public class ListDeviceBelongIdentifiersResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7A92B549-EC82-5F79-8301-63711AFC9DCE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class ListDeviceBelongIdentifiersResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of records that match the filter conditions for the current tenant.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -230,7 +242,10 @@ public class ListDeviceBelongIdentifiersResponseBody extends TeaModel {
             } 
 
             /**
-             * CreateTime.
+             * <p>The time when the record was created. The time is in RFC 3339 format and includes time zone information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-11-24T10:30:00+08:00</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -238,7 +253,10 @@ public class ListDeviceBelongIdentifiersResponseBody extends TeaModel {
             }
 
             /**
-             * IdentifierId.
+             * <p>The ID of the identifier record, returned as a decimal string. You can use the ID to query or remove the record.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>482731</p>
              */
             public Builder identifierId(String identifierId) {
                 this.identifierId = identifierId;
@@ -246,7 +264,10 @@ public class ListDeviceBelongIdentifiersResponseBody extends TeaModel {
             }
 
             /**
-             * IdentifierType.
+             * <p>The identifier type. MAC indicates the MAC address of the network interface controller (NIC), SystemSN indicates the system serial number, and BIOSSN indicates the BIOS serial number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MAC</p>
              */
             public Builder identifierType(String identifierType) {
                 this.identifierType = identifierType;
@@ -254,7 +275,10 @@ public class ListDeviceBelongIdentifiersResponseBody extends TeaModel {
             }
 
             /**
-             * IdentifierValue.
+             * <p>The identifier value in the record. MAC addresses are in the lowercase colon-separated format. System serial numbers and BIOS serial numbers are returned as recorded.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>02:00:00:00:00:01</p>
              */
             public Builder identifierValue(String identifierValue) {
                 this.identifierValue = identifierValue;

@@ -195,7 +195,7 @@ public class UpdateProhibitedSoftwareResponseBody extends TeaModel {
              * <p>The directory where the process is located.</p>
              * 
              * <strong>example:</strong>
-             * <p>C:\\autotest</p>
+             * <p>C:\autotest</p>
              */
             public Builder directory(String directory) {
                 this.directory = directory;
@@ -324,7 +324,7 @@ public class UpdateProhibitedSoftwareResponseBody extends TeaModel {
              * <p>The directory where the process is located.</p>
              * 
              * <strong>example:</strong>
-             * <p>C:\\autotest</p>
+             * <p>C:\autotest</p>
              */
             public Builder directory(String directory) {
                 this.directory = directory;
@@ -453,7 +453,7 @@ public class UpdateProhibitedSoftwareResponseBody extends TeaModel {
              * <p>The directory where the process is located.</p>
              * 
              * <strong>example:</strong>
-             * <p>C:\\autotest</p>
+             * <p>C:\autotest</p>
              */
             public Builder directory(String directory) {
                 this.directory = directory;

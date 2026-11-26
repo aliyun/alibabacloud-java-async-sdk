@@ -587,7 +587,7 @@ public class UpdateUserDevicesSharingStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>User\&quot;s department.</p>
+             * <p>User&quot;s department.</p>
              * 
              * <strong>example:</strong>
              * <p>测试部</p>

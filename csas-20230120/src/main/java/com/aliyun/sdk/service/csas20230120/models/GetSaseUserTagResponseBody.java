@@ -184,7 +184,7 @@ public class GetSaseUserTagResponseBody extends TeaModel {
              * <p>The description of the user tag.</p>
              * 
              * <strong>example:</strong>
-             * <p>These are the company\&quot;s employees</p>
+             * <p>These are the company&quot;s employees</p>
              */
             public Builder description(String description) {
                 this.description = description;

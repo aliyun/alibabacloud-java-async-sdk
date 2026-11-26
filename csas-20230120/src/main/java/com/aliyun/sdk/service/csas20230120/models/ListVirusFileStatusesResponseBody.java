@@ -411,7 +411,7 @@ public class ListVirusFileStatusesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The unique identifier of the user\&quot;s endpoint device that detected this virus file.</p>
+             * <p>The unique identifier of the user&quot;s endpoint device that detected this virus file.</p>
              * 
              * <strong>example:</strong>
              * <p>36efa42d-2c32-c4dc-e3fc-8541e33a****</p>
@@ -459,7 +459,7 @@ public class ListVirusFileStatusesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The absolute path of the virus file on the user\&quot;s endpoint device.</p>
+             * <p>The absolute path of the virus file on the user&quot;s endpoint device.</p>
              * 
              * <strong>example:</strong>
              * <p>C:\Users\Public\Downloads\setup.exe</p>
@@ -496,7 +496,7 @@ public class ListVirusFileStatusesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The hostname of the user\&quot;s endpoint device.</p>
+             * <p>The hostname of the user&quot;s endpoint device.</p>
              * 
              * <strong>example:</strong>
              * <p>DESKTOP-8A3F</p>
@@ -526,7 +526,7 @@ public class ListVirusFileStatusesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The effective period of the disposition, in the format yyyy-MM-dd HH:mm:ss (UTC+8). The later of the actual disposition time on the user\&quot;s endpoint device and the time when the administrator initiated the disposition is used. A hyphen (-) is returned when no disposition has been performed.</p>
+             * <p>The effective period of the disposition, in the format yyyy-MM-dd HH:mm:ss (UTC+8). The later of the actual disposition time on the user&quot;s endpoint device and the time when the administrator initiated the disposition is used. A hyphen (-) is returned when no disposition has been performed.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-08-21 09:31:45</p>
@@ -575,7 +575,7 @@ public class ListVirusFileStatusesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The execution result description of the disposition or scan, reported by the user\&quot;s endpoint device. If a disposition record exists, the execution result of the disposition task is returned. Otherwise, the execution result of the scan task is returned.</p>
+             * <p>The execution result description of the disposition or scan, reported by the user&quot;s endpoint device. If a disposition record exists, the execution result of the disposition task is returned. Otherwise, the execution result of the scan task is returned.</p>
              * 
              * <strong>example:</strong>
              * <p>quarantine success</p>

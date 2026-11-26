@@ -155,7 +155,7 @@ public class ListPrivateAccessApplicationL7SwitchesResponseBody extends TeaModel
             }
 
             /**
-             * <p>The end port. The value must be greater than or equal to the start port.</p>
+             * <p>The end port. Must be greater than or equal to the start port.</p>
              * 
              * <strong>example:</strong>
              * <p>24</p>
@@ -225,7 +225,7 @@ public class ListPrivateAccessApplicationL7SwitchesResponseBody extends TeaModel
             } 
 
             /**
-             * AllowMethods.
+             * <p>The list of HTTP request methods allowed for the paths in this group. An empty value indicates that request methods are not restricted.</p>
              */
             public Builder allowMethods(java.util.List<String> allowMethods) {
                 this.allowMethods = allowMethods;
@@ -233,7 +233,7 @@ public class ListPrivateAccessApplicationL7SwitchesResponseBody extends TeaModel
             }
 
             /**
-             * Urls.
+             * <p>The list of URL paths allowed for access in this group. The list must contain at least 1 path and up to 20 paths. This parameter matches the path part in the request, excluding the protocol, domain name, and query parameters.</p>
              */
             public Builder urls(java.util.List<String> urls) {
                 this.urls = urls;
@@ -404,7 +404,7 @@ public class ListPrivateAccessApplicationL7SwitchesResponseBody extends TeaModel
             } 
 
             /**
-             * <p>The ID of the internal-facing application.</p>
+             * <p>The ID of the internal access application.</p>
              * 
              * <strong>example:</strong>
              * <p>pa-application-bbbc550d7c6e4db6</p>
@@ -456,7 +456,7 @@ public class ListPrivateAccessApplicationL7SwitchesResponseBody extends TeaModel
              * <p>The source IP marking switch. Valid values:</p>
              * <ul>
              * <li><strong>Enabled</strong>: Enabled.</li>
-             * <li><strong>Disabled</strong>: Disabled.</li>
+             * <li><strong>Disabled</strong>: Disabled.**</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -468,7 +468,7 @@ public class ListPrivateAccessApplicationL7SwitchesResponseBody extends TeaModel
             }
 
             /**
-             * <p>The status of the internal-facing access policy. Valid values:</p>
+             * <p>The status of the internal access policy. Valid values:</p>
              * <ul>
              * <li><strong>Enabled</strong>: Enabled.</li>
              * <li><strong>Disabled</strong>: Disabled.</li>
@@ -494,7 +494,7 @@ public class ListPrivateAccessApplicationL7SwitchesResponseBody extends TeaModel
             }
 
             /**
-             * UrlAccessPaths.
+             * <p>The URL access whitelist rules for the application. These rules take effect only when Status is set to Enabled. An empty value indicates that URLs and request methods are not restricted. A request passes the URL check only when the request path and method meet any group of rules at the same time. Otherwise, the request is blocked. Passing the URL check does not allow requests that are already blocked by an access policy.</p>
              */
             public Builder urlAccessPaths(java.util.List<UrlAccessPaths> urlAccessPaths) {
                 this.urlAccessPaths = urlAccessPaths;
@@ -517,7 +517,7 @@ public class ListPrivateAccessApplicationL7SwitchesResponseBody extends TeaModel
             }
 
             /**
-             * <p>The host bypass prevention switch. Valid values:</p>
+             * <p>The host anti-bypass switch. Valid values:</p>
              * <ul>
              * <li><strong>Enabled</strong>: Enabled.</li>
              * <li><strong>Disabled</strong>: Disabled.</li>

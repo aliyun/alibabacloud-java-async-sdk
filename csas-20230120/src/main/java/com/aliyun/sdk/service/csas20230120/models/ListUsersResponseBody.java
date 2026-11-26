@@ -246,7 +246,7 @@ public class ListUsersResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The user\&quot;s department.</p>
+             * <p>The user&quot;s department.</p>
              * 
              * <strong>example:</strong>
              * <p>测试部</p>
@@ -257,7 +257,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The user\&quot;s email address.</p>
+             * <p>The user&quot;s email address.</p>
              * 
              * <strong>example:</strong>
              * <p>a***@example.net</p>
@@ -287,7 +287,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The user\&quot;s phone number.</p>
+             * <p>The user&quot;s phone number.</p>
              * 
              * <strong>example:</strong>
              * <p>1381111****</p>

@@ -67,7 +67,7 @@ public class UpdatePrivateAccessApplicationL7SwitchResponseBody extends TeaModel
         } 
 
         /**
-         * <p>The Layer 7 access switch configurations of the internal access application after the update.</p>
+         * <p>The Layer 7 access switch configuration of the internal access application after this update.</p>
          */
         public Builder l7Switch(L7Switch l7Switch) {
             this.l7Switch = l7Switch;
@@ -225,7 +225,7 @@ public class UpdatePrivateAccessApplicationL7SwitchResponseBody extends TeaModel
             } 
 
             /**
-             * AllowMethods.
+             * <p>The list of HTTP request methods allowed for the paths in this group. An empty value indicates that request methods are not restricted.</p>
              */
             public Builder allowMethods(java.util.List<String> allowMethods) {
                 this.allowMethods = allowMethods;
@@ -233,7 +233,7 @@ public class UpdatePrivateAccessApplicationL7SwitchResponseBody extends TeaModel
             }
 
             /**
-             * Urls.
+             * <p>The list of URL paths allowed for access in this group. You must specify at least 1 path and up to 20 paths. The paths match the path part in the request, excluding the protocol, domain name, and query parameters.</p>
              */
             public Builder urls(java.util.List<String> urls) {
                 this.urls = urls;
@@ -445,7 +445,7 @@ public class UpdatePrivateAccessApplicationL7SwitchResponseBody extends TeaModel
             }
 
             /**
-             * <p>The effective port ranges for Layer 7 access, which are the intersection of the ports specified in this request and the configured port ranges of the internal access application. If Status is set to <strong>Disabled</strong>, an empty set is returned.</p>
+             * <p>The effective port ranges for Layer 7 access, which are the intersection of the ports specified in this request and the port ranges already configured for the internal access application. An empty set is returned when Status is set to <strong>Disabled</strong>.</p>
              */
             public Builder portRanges(java.util.List<PortRanges> portRanges) {
                 this.portRanges = portRanges;
@@ -483,7 +483,7 @@ public class UpdatePrivateAccessApplicationL7SwitchResponseBody extends TeaModel
             }
 
             /**
-             * <p>The request timeout period, in seconds.</p>
+             * <p>The request timeout period in seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>60</p>
@@ -494,7 +494,7 @@ public class UpdatePrivateAccessApplicationL7SwitchResponseBody extends TeaModel
             }
 
             /**
-             * UrlAccessPaths.
+             * <p>The URL access whitelist rules for the application. This parameter takes effect only when Status is set to Enabled. An empty value indicates that URLs and request methods are not restricted. A request passes the URL check only when the request path and the method meet any group of rules at the same time. Otherwise, the request is blocked. Passing the URL check does not allow requests that are already blocked by an access policy.</p>
              */
             public Builder urlAccessPaths(java.util.List<UrlAccessPaths> urlAccessPaths) {
                 this.urlAccessPaths = urlAccessPaths;
@@ -517,7 +517,7 @@ public class UpdatePrivateAccessApplicationL7SwitchResponseBody extends TeaModel
             }
 
             /**
-             * <p>The Host bypass prevention switch. Valid values:</p>
+             * <p>The host bypass prevention switch. Valid values:</p>
              * <ul>
              * <li><strong>Enabled</strong>: Enabled.</li>
              * <li><strong>Disabled</strong>: Disabled.</li>

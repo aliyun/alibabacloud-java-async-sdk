@@ -67,7 +67,7 @@ public class AddDeviceBelongIdentifiersResponseBody extends TeaModel {
         } 
 
         /**
-         * IdentifierIds.
+         * <p>The IDs of the records actually added in the batch, returned in the input order of the added items. Skipped duplicates are not included in the array. An empty list is returned if no records are added in the batch.</p>
          */
         public Builder identifierIds(java.util.List<String> identifierIds) {
             this.identifierIds = identifierIds;
@@ -75,7 +75,10 @@ public class AddDeviceBelongIdentifiersResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID. You can use this ID to locate the API call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7A92B549-EC82-5F79-8301-63711AFC9DCE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

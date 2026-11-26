@@ -31,6 +31,10 @@ public class ListDeviceBelongIdentifiersRequest extends Request {
     private String identifierType;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IdentifierValues")
+    private java.util.List<String> identifierValues;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
@@ -48,6 +52,7 @@ public class ListDeviceBelongIdentifiersRequest extends Request {
         this.currentPage = builder.currentPage;
         this.identifierIds = builder.identifierIds;
         this.identifierType = builder.identifierType;
+        this.identifierValues = builder.identifierValues;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.pageSize = builder.pageSize;
@@ -88,6 +93,13 @@ public class ListDeviceBelongIdentifiersRequest extends Request {
     }
 
     /**
+     * @return identifierValues
+     */
+    public java.util.List<String> getIdentifierValues() {
+        return this.identifierValues;
+    }
+
+    /**
      * @return maxResults
      */
     public Integer getMaxResults() {
@@ -112,6 +124,7 @@ public class ListDeviceBelongIdentifiersRequest extends Request {
         private Integer currentPage; 
         private java.util.List<String> identifierIds; 
         private String identifierType; 
+        private java.util.List<String> identifierValues; 
         private Integer maxResults; 
         private String nextToken; 
         private Integer pageSize; 
@@ -125,13 +138,18 @@ public class ListDeviceBelongIdentifiersRequest extends Request {
             this.currentPage = request.currentPage;
             this.identifierIds = request.identifierIds;
             this.identifierType = request.identifierType;
+            this.identifierValues = request.identifierValues;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
             this.pageSize = request.pageSize;
         } 
 
         /**
+         * <p>The current page number. Valid values: 1 to 2147483647.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putBodyParameter("CurrentPage", currentPage);
@@ -140,7 +158,7 @@ public class ListDeviceBelongIdentifiersRequest extends Request {
         }
 
         /**
-         * IdentifierIds.
+         * <p>The list of record IDs to query. You can specify 1 to 100 positive integer decimal strings at a time. If this parameter is specified along with other filter parameters, the records that meet all the conditions are returned.</p>
          */
         public Builder identifierIds(java.util.List<String> identifierIds) {
             this.putBodyParameter("IdentifierIds", identifierIds);
@@ -149,7 +167,10 @@ public class ListDeviceBelongIdentifiersRequest extends Request {
         }
 
         /**
-         * IdentifierType.
+         * <p>The identifier type. MAC indicates the MAC address of the network interface controller (NIC), SystemSN indicates the system serial number, and BIOSSN indicates the BIOS serial number. This parameter is required when IdentifierValues is specified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MAC</p>
          */
         public Builder identifierType(String identifierType) {
             this.putBodyParameter("IdentifierType", identifierType);
@@ -158,7 +179,19 @@ public class ListDeviceBelongIdentifiersRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The list of identifier values for exact match. You can specify 1 to 100 items at a time, and each item can contain 1 to 128 characters. You must specify IdentifierType at the same time. Records that match any value in the array are returned. MAC addresses are uniformly converted to the lowercase colon-separated format. System serial numbers and BIOS serial numbers are case-sensitive and space-sensitive.</p>
+         */
+        public Builder identifierValues(java.util.List<String> identifierValues) {
+            this.putBodyParameter("IdentifierValues", identifierValues);
+            this.identifierValues = identifierValues;
+            return this;
+        }
+
+        /**
+         * <p>A reserved pagination parameter. This value is not used in the current version. Use PageSize to specify the number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putBodyParameter("MaxResults", maxResults);
@@ -167,7 +200,10 @@ public class ListDeviceBelongIdentifiersRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>A reserved pagination cursor. This value is not used in the current version. Use CurrentPage to specify the page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d9fbd0d1ac24be90</p>
          */
         public Builder nextToken(String nextToken) {
             this.putBodyParameter("NextToken", nextToken);
@@ -176,7 +212,11 @@ public class ListDeviceBelongIdentifiersRequest extends Request {
         }
 
         /**
+         * <p>The maximum number of records to return per page. Valid values: 1 to 1000.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);

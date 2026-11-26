@@ -54,7 +54,10 @@ public class RemoveDeviceBelongIdentifiersResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID, which can be used to locate the call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7A92B549-EC82-5F79-8301-63711AFC9DCE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

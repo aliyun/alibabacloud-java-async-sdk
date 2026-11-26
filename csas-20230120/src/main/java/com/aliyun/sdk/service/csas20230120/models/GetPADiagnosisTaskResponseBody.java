@@ -1751,7 +1751,7 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
              * <p>The firewall.</p>
              * 
              * <strong>example:</strong>
-             * <p>[{\&quot;Platform\&quot;:\&quot;windows\&quot;,\&quot;Status\&quot;:\&quot;disabled\&quot;},{\&quot;Platform\&quot;:\&quot;macos\&quot;,\&quot;Status\&quot;:\&quot;disabled\&quot;},{\&quot;Platform\&quot;:\&quot;linux\&quot;,\&quot;Status\&quot;:\&quot;disabled\&quot;}]</p>
+             * <p>[{&quot;Platform&quot;:&quot;windows&quot;,&quot;Status&quot;:&quot;disabled&quot;},{&quot;Platform&quot;:&quot;macos&quot;,&quot;Status&quot;:&quot;disabled&quot;},{&quot;Platform&quot;:&quot;linux&quot;,&quot;Status&quot;:&quot;disabled&quot;}]</p>
              */
             public Builder firewall(String firewall) {
                 this.firewall = firewall;

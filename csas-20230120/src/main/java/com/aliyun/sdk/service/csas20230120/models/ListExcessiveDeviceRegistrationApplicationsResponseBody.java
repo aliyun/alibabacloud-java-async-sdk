@@ -333,7 +333,7 @@ public class ListExcessiveDeviceRegistrationApplicationsResponseBody extends Tea
             }
 
             /**
-             * <p>The user\&quot;s department.</p>
+             * <p>The user&quot;s department.</p>
              * 
              * <strong>example:</strong>
              * <p>测试部</p>

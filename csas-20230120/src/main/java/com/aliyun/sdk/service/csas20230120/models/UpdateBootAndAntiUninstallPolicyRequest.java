@@ -281,7 +281,7 @@ public class UpdateBootAndAntiUninstallPolicyRequest extends Request {
              * <p>Dialog content.</p>
              * 
              * <strong>example:</strong>
-             * <p>After uninstalling, the device can no longer be used for company work, and it will lose access to the company\&quot;s intranet!</p>
+             * <p>After uninstalling, the device can no longer be used for company work, and it will lose access to the company&quot;s intranet!</p>
              */
             public Builder content(String content) {
                 this.content = content;

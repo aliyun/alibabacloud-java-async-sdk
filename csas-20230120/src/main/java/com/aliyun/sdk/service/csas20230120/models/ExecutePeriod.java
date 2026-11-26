@@ -93,7 +93,7 @@ public class ExecutePeriod extends TeaModel {
         } 
 
         /**
-         * <p>The effective days of the week configuration. Used when ValidType is set to Weekly.</p>
+         * <p>The effective days of the week configuration. This parameter is used when ValidType is set to Weekly.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;Monday&quot;:true,&quot;Tuesday&quot;:true,&quot;Wednesday&quot;:true,&quot;Thursday&quot;:true,&quot;Friday&quot;:true,&quot;Saturday&quot;:false,&quot;Sunday&quot;:false}</p>
@@ -130,7 +130,7 @@ public class ExecutePeriod extends TeaModel {
          * <ul>
          * <li><strong>Once</strong>: Single execution mode. Used in combination with ExecuteMode=Once.</li>
          * <li><strong>Interval</strong>: Periodic execution at a specified frequency. Used in combination with ExecuteMode=Schedule.</li>
-         * <li><strong>Weekly</strong>: Weekly execution on selected days. Used in combination with ExecuteMode=Schedule and EffectDay.</li>
+         * <li><strong>Weekly</strong>: Execution on selected days of the week. Used in combination with ExecuteMode=Schedule and EffectDay.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -265,7 +265,7 @@ public class ExecutePeriod extends TeaModel {
             } 
 
             /**
-             * <p>Specifies whether the policy takes effect on Friday when ValidType is set to Weekly. A value of true indicates that the policy takes effect, and a value of false indicates that the policy does not take effect.</p>
+             * <p>Specifies whether the policy takes effect on Friday when ValidType is set to Weekly. A value of true indicates that the policy takes effect. A value of false indicates that the policy does not take effect.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -276,7 +276,7 @@ public class ExecutePeriod extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether the policy takes effect on Monday when ValidType is set to Weekly. A value of true indicates that the policy takes effect, and a value of false indicates that the policy does not take effect.</p>
+             * <p>Specifies whether the policy takes effect on Monday when ValidType is set to Weekly. A value of true indicates that the policy takes effect. A value of false indicates that the policy does not take effect.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -287,7 +287,7 @@ public class ExecutePeriod extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether the policy takes effect on Saturday when ValidType is set to Weekly. A value of true indicates that the policy takes effect, and a value of false indicates that the policy does not take effect.</p>
+             * <p>Specifies whether the policy takes effect on Saturday when ValidType is set to Weekly. A value of true indicates that the policy takes effect. A value of false indicates that the policy does not take effect.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -298,7 +298,7 @@ public class ExecutePeriod extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether the policy takes effect on Sunday when ValidType is set to Weekly. A value of true indicates that the policy takes effect, and a value of false indicates that the policy does not take effect.</p>
+             * <p>Specifies whether the policy takes effect on Sunday when ValidType is set to Weekly. A value of true indicates that the policy takes effect. A value of false indicates that the policy does not take effect.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -309,7 +309,7 @@ public class ExecutePeriod extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether the policy takes effect on Thursday when ValidType is set to Weekly. A value of true indicates that the policy takes effect, and a value of false indicates that the policy does not take effect.</p>
+             * <p>Specifies whether the policy takes effect on Thursday when ValidType is set to Weekly. A value of true indicates that the policy takes effect. A value of false indicates that the policy does not take effect.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -320,7 +320,7 @@ public class ExecutePeriod extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether the policy takes effect on Tuesday when ValidType is set to Weekly. A value of true indicates that the policy takes effect, and a value of false indicates that the policy does not take effect.</p>
+             * <p>Specifies whether the policy takes effect on Tuesday when ValidType is set to Weekly. A value of true indicates that the policy takes effect. A value of false indicates that the policy does not take effect.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -331,7 +331,7 @@ public class ExecutePeriod extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether the policy takes effect on Wednesday when ValidType is set to Weekly. A value of true indicates that the policy takes effect, and a value of false indicates that the policy does not take effect.</p>
+             * <p>Specifies whether the policy takes effect on Wednesday when ValidType is set to Weekly. A value of true indicates that the policy takes effect. A value of false indicates that the policy does not take effect.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -401,7 +401,7 @@ public class ExecutePeriod extends TeaModel {
             } 
 
             /**
-             * <p>The end time of the daily effective time range. It uses the 24-hour HH:mm format and is interpreted based on the current system time zone of the server. It must not be earlier than Start.</p>
+             * <p>The end time of the daily effective time range. It uses the 24-hour HH:mm format and is interpreted based on the current system time zone of the server. The value cannot be earlier than Start.</p>
              * 
              * <strong>example:</strong>
              * <p>23:59</p>
@@ -482,7 +482,7 @@ public class ExecutePeriod extends TeaModel {
             } 
 
             /**
-             * <p>The frequency unit for periodic execution. It is used together with Interval to specify the execution cycle. For example, a value of day indicates daily execution.</p>
+             * <p>The frequency unit for periodic execution. This parameter is used together with Interval to specify the execution cycle. For example, a value of day indicates daily execution.</p>
              * 
              * <strong>example:</strong>
              * <p>day</p>

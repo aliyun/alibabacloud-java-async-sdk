@@ -229,7 +229,7 @@ public class UpdatePrivateAccessApplicationL7SwitchRequest extends Request {
         }
 
         /**
-         * <p>The port ranges for the internal access application. Multiple port ranges cannot overlap or be duplicated. You can specify up to 50 port ranges. This parameter takes effect and is verified only when Status is set to <strong>Enabled</strong>. If this parameter is not specified or an empty set is specified, the default ports 80, 443, 8080, and 465 are used. The effective ports are the intersection of the ports specified in this request and the configured port ranges of the internal access application.</p>
+         * <p>The port ranges for the internal access application. Multiple port ranges cannot be duplicate or overlap. You can specify up to 50 port ranges. This parameter takes effect and is verified only when Status is set to <strong>Enabled</strong>. If this parameter is not specified or an empty set is specified, the default ports 80, 443, 8080, and 465 are used. The effective ports are the intersection of the ports specified in this request and the port ranges already configured for the internal access application.</p>
          */
         public Builder portRanges(java.util.List<PortRanges> portRanges) {
             this.putBodyParameter("PortRanges", portRanges);
@@ -259,7 +259,7 @@ public class UpdatePrivateAccessApplicationL7SwitchRequest extends Request {
          * <li><strong>Enabled</strong>: Enabled.</li>
          * <li><strong>Disabled</strong>: Disabled.</li>
          * </ul>
-         * <p>When the value is set to <strong>Disabled</strong>, PortRanges is neither verified nor saved.</p>
+         * <p>When the value is <strong>Disabled</strong>, PortRanges is neither verified nor saved.</p>
          * 
          * <strong>example:</strong>
          * <p>Enabled</p>
@@ -271,7 +271,7 @@ public class UpdatePrivateAccessApplicationL7SwitchRequest extends Request {
         }
 
         /**
-         * <p>The request timeout period, in seconds. Valid values: 1 to 3600. Default value: 60. If this parameter is not specified or an invalid value is specified, the default value 60 is used.</p>
+         * <p>The request timeout period in seconds. Valid values: 1 to 3600. Default value: 60. If this parameter is not specified or an invalid value is specified, the default value 60 is used.</p>
          * 
          * <strong>example:</strong>
          * <p>60</p>
@@ -283,7 +283,7 @@ public class UpdatePrivateAccessApplicationL7SwitchRequest extends Request {
         }
 
         /**
-         * UrlAccessPaths.
+         * <p>The URL access whitelist rules for the application. You can specify up to 20 rule groups. The size cannot exceed 2,048 bytes after JSON serialization. This parameter takes effect only when Status is set to Enabled. A request passes the URL check only when its path and method meet any group of rules at the same time; otherwise, the request is blocked. Requests that are already blocked by access policies are not allowed even if they pass the URL check. If this parameter is not specified or an empty array is specified, the original rules are cleared. The rules are also cleared when Status is set to Disabled.</p>
          */
         public Builder urlAccessPaths(java.util.List<UrlAccessPaths> urlAccessPaths) {
             this.putBodyParameter("UrlAccessPaths", urlAccessPaths);
@@ -308,7 +308,7 @@ public class UpdatePrivateAccessApplicationL7SwitchRequest extends Request {
         }
 
         /**
-         * <p>The Host bypass prevention switch. Required. Valid values:</p>
+         * <p>The host bypass prevention switch. Required. Valid values:</p>
          * <ul>
          * <li><strong>Enabled</strong>: Enabled.</li>
          * <li><strong>Disabled</strong>: Disabled.</li>
@@ -464,7 +464,7 @@ public class UpdatePrivateAccessApplicationL7SwitchRequest extends Request {
             } 
 
             /**
-             * AllowMethods.
+             * <p>The list of HTTP request methods allowed for the paths in this group. You can specify up to 7 methods. If this parameter is not specified or an empty array is specified, the request methods are not restricted.</p>
              */
             public Builder allowMethods(java.util.List<String> allowMethods) {
                 this.allowMethods = allowMethods;
@@ -472,7 +472,7 @@ public class UpdatePrivateAccessApplicationL7SwitchRequest extends Request {
             }
 
             /**
-             * Urls.
+             * <p>The list of URL paths allowed for access in this group. You must specify at least 1 path and up to 20 paths. The paths match the path part in the request, excluding the protocol, domain name, and query parameters.</p>
              */
             public Builder urls(java.util.List<String> urls) {
                 this.urls = urls;

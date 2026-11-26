@@ -106,7 +106,7 @@ public class CreateApprovalProcessRequest extends Request {
          * <p>The description of the approval process. The description must be 1 to 128 characters in length, and can contain Chinese characters, uppercase and lowercase letters, digits, periods (.), underscores (_), hyphens (-), and spaces.</p>
          * 
          * <strong>example:</strong>
-         * <p>Process for approving employees\&quot; temporary access to internal network applications</p>
+         * <p>Process for approving employees&quot; temporary access to internal network applications</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
