@@ -26,6 +26,9 @@ public class ContentPlan extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ConfigRevision")
     private Long configRevision;
 
+    @com.aliyun.core.annotation.NameInMap("DeliveryMode")
+    private String deliveryMode;
+
     @com.aliyun.core.annotation.NameInMap("DiagnosisCompletedAt")
     private Long diagnosisCompletedAt;
 
@@ -68,6 +71,9 @@ public class ContentPlan extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Timezone")
     private String timezone;
 
+    @com.aliyun.core.annotation.NameInMap("WebsiteId")
+    private String websiteId;
+
     @com.aliyun.core.annotation.NameInMap("Weekdays")
     private java.util.List<Integer> weekdays;
 
@@ -75,6 +81,7 @@ public class ContentPlan extends TeaModel {
         this.additionalRequirements = builder.additionalRequirements;
         this.analysisTaskId = builder.analysisTaskId;
         this.configRevision = builder.configRevision;
+        this.deliveryMode = builder.deliveryMode;
         this.diagnosisCompletedAt = builder.diagnosisCompletedAt;
         this.diagnosisTaskId = builder.diagnosisTaskId;
         this.diagnosisType = builder.diagnosisType;
@@ -89,6 +96,7 @@ public class ContentPlan extends TeaModel {
         this.summary = builder.summary;
         this.supersededBy = builder.supersededBy;
         this.timezone = builder.timezone;
+        this.websiteId = builder.websiteId;
         this.weekdays = builder.weekdays;
     }
 
@@ -123,6 +131,13 @@ public class ContentPlan extends TeaModel {
      */
     public Long getConfigRevision() {
         return this.configRevision;
+    }
+
+    /**
+     * @return deliveryMode
+     */
+    public String getDeliveryMode() {
+        return this.deliveryMode;
     }
 
     /**
@@ -224,6 +239,13 @@ public class ContentPlan extends TeaModel {
     }
 
     /**
+     * @return websiteId
+     */
+    public String getWebsiteId() {
+        return this.websiteId;
+    }
+
+    /**
      * @return weekdays
      */
     public java.util.List<Integer> getWeekdays() {
@@ -234,6 +256,7 @@ public class ContentPlan extends TeaModel {
         private String additionalRequirements; 
         private String analysisTaskId; 
         private Long configRevision; 
+        private String deliveryMode; 
         private Long diagnosisCompletedAt; 
         private String diagnosisTaskId; 
         private String diagnosisType; 
@@ -248,6 +271,7 @@ public class ContentPlan extends TeaModel {
         private String summary; 
         private String supersededBy; 
         private String timezone; 
+        private String websiteId; 
         private java.util.List<Integer> weekdays; 
 
         private Builder() {
@@ -257,6 +281,7 @@ public class ContentPlan extends TeaModel {
             this.additionalRequirements = model.additionalRequirements;
             this.analysisTaskId = model.analysisTaskId;
             this.configRevision = model.configRevision;
+            this.deliveryMode = model.deliveryMode;
             this.diagnosisCompletedAt = model.diagnosisCompletedAt;
             this.diagnosisTaskId = model.diagnosisTaskId;
             this.diagnosisType = model.diagnosisType;
@@ -271,6 +296,7 @@ public class ContentPlan extends TeaModel {
             this.summary = model.summary;
             this.supersededBy = model.supersededBy;
             this.timezone = model.timezone;
+            this.websiteId = model.websiteId;
             this.weekdays = model.weekdays;
         } 
 
@@ -304,6 +330,14 @@ public class ContentPlan extends TeaModel {
          */
         public Builder configRevision(Long configRevision) {
             this.configRevision = configRevision;
+            return this;
+        }
+
+        /**
+         * DeliveryMode.
+         */
+        public Builder deliveryMode(String deliveryMode) {
+            this.deliveryMode = deliveryMode;
             return this;
         }
 
@@ -458,6 +492,14 @@ public class ContentPlan extends TeaModel {
          */
         public Builder timezone(String timezone) {
             this.timezone = timezone;
+            return this;
+        }
+
+        /**
+         * WebsiteId.
+         */
+        public Builder websiteId(String websiteId) {
+            this.websiteId = websiteId;
             return this;
         }
 

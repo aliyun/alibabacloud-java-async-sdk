@@ -38,6 +38,9 @@ public class BrandKnowledgeDocument extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("DocumentId")
     private String documentId;
 
+    @com.aliyun.core.annotation.NameInMap("Enabled")
+    private Boolean enabled;
+
     @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
@@ -49,6 +52,12 @@ public class BrandKnowledgeDocument extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("KeyTopics")
     private java.util.List<String> keyTopics;
+
+    @com.aliyun.core.annotation.NameInMap("KnowledgeBaseId")
+    private String knowledgeBaseId;
+
+    @com.aliyun.core.annotation.NameInMap("MaterialId")
+    private String materialId;
 
     @com.aliyun.core.annotation.NameInMap("OneLineSummary")
     private String oneLineSummary;
@@ -85,10 +94,13 @@ public class BrandKnowledgeDocument extends TeaModel {
         this.displayTitle = builder.displayTitle;
         this.docCategory = builder.docCategory;
         this.documentId = builder.documentId;
+        this.enabled = builder.enabled;
         this.errorCode = builder.errorCode;
         this.errorMessage = builder.errorMessage;
         this.fileSize = builder.fileSize;
         this.keyTopics = builder.keyTopics;
+        this.knowledgeBaseId = builder.knowledgeBaseId;
+        this.materialId = builder.materialId;
         this.oneLineSummary = builder.oneLineSummary;
         this.originalName = builder.originalName;
         this.projectId = builder.projectId;
@@ -162,6 +174,13 @@ public class BrandKnowledgeDocument extends TeaModel {
     }
 
     /**
+     * @return enabled
+     */
+    public Boolean getEnabled() {
+        return this.enabled;
+    }
+
+    /**
      * @return errorCode
      */
     public String getErrorCode() {
@@ -187,6 +206,20 @@ public class BrandKnowledgeDocument extends TeaModel {
      */
     public java.util.List<String> getKeyTopics() {
         return this.keyTopics;
+    }
+
+    /**
+     * @return knowledgeBaseId
+     */
+    public String getKnowledgeBaseId() {
+        return this.knowledgeBaseId;
+    }
+
+    /**
+     * @return materialId
+     */
+    public String getMaterialId() {
+        return this.materialId;
     }
 
     /**
@@ -260,10 +293,13 @@ public class BrandKnowledgeDocument extends TeaModel {
         private String displayTitle; 
         private String docCategory; 
         private String documentId; 
+        private Boolean enabled; 
         private String errorCode; 
         private String errorMessage; 
         private Long fileSize; 
         private java.util.List<String> keyTopics; 
+        private String knowledgeBaseId; 
+        private String materialId; 
         private String oneLineSummary; 
         private String originalName; 
         private String projectId; 
@@ -285,10 +321,13 @@ public class BrandKnowledgeDocument extends TeaModel {
             this.displayTitle = model.displayTitle;
             this.docCategory = model.docCategory;
             this.documentId = model.documentId;
+            this.enabled = model.enabled;
             this.errorCode = model.errorCode;
             this.errorMessage = model.errorMessage;
             this.fileSize = model.fileSize;
             this.keyTopics = model.keyTopics;
+            this.knowledgeBaseId = model.knowledgeBaseId;
+            this.materialId = model.materialId;
             this.oneLineSummary = model.oneLineSummary;
             this.originalName = model.originalName;
             this.projectId = model.projectId;
@@ -372,6 +411,14 @@ public class BrandKnowledgeDocument extends TeaModel {
         }
 
         /**
+         * Enabled.
+         */
+        public Builder enabled(Boolean enabled) {
+            this.enabled = enabled;
+            return this;
+        }
+
+        /**
          * <p>The stable error code for main processing failures.</p>
          * 
          * <strong>example:</strong>
@@ -409,6 +456,22 @@ public class BrandKnowledgeDocument extends TeaModel {
          */
         public Builder keyTopics(java.util.List<String> keyTopics) {
             this.keyTopics = keyTopics;
+            return this;
+        }
+
+        /**
+         * KnowledgeBaseId.
+         */
+        public Builder knowledgeBaseId(String knowledgeBaseId) {
+            this.knowledgeBaseId = knowledgeBaseId;
+            return this;
+        }
+
+        /**
+         * MaterialId.
+         */
+        public Builder materialId(String materialId) {
+            this.materialId = materialId;
             return this;
         }
 

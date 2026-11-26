@@ -26,6 +26,9 @@ public class ContentPlanTopic extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ArticleStatus")
     private String articleStatus;
 
+    @com.aliyun.core.annotation.NameInMap("DeliveryMode")
+    private String deliveryMode;
+
     @com.aliyun.core.annotation.NameInMap("DiagnosisReferences")
     private java.util.List<String> diagnosisReferences;
 
@@ -34,6 +37,12 @@ public class ContentPlanTopic extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("FailReason")
     private String failReason;
+
+    @com.aliyun.core.annotation.NameInMap("NeedsAttention")
+    private Boolean needsAttention;
+
+    @com.aliyun.core.annotation.NameInMap("OriginType")
+    private String originType;
 
     @com.aliyun.core.annotation.NameInMap("PlanId")
     private String planId;
@@ -53,6 +62,9 @@ public class ContentPlanTopic extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("SkipReason")
     private String skipReason;
 
+    @com.aliyun.core.annotation.NameInMap("SocialStatus")
+    private String socialStatus;
+
     @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
@@ -62,6 +74,15 @@ public class ContentPlanTopic extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("TopicId")
     private String topicId;
 
+    @com.aliyun.core.annotation.NameInMap("WebsiteDraftId")
+    private String websiteDraftId;
+
+    @com.aliyun.core.annotation.NameInMap("WebsiteId")
+    private String websiteId;
+
+    @com.aliyun.core.annotation.NameInMap("WebsiteStatus")
+    private String websiteStatus;
+
     @com.aliyun.core.annotation.NameInMap("WritingDirection")
     private String writingDirection;
 
@@ -69,18 +90,25 @@ public class ContentPlanTopic extends TeaModel {
         this.articleConversationId = builder.articleConversationId;
         this.articleId = builder.articleId;
         this.articleStatus = builder.articleStatus;
+        this.deliveryMode = builder.deliveryMode;
         this.diagnosisReferences = builder.diagnosisReferences;
         this.direction = builder.direction;
         this.failReason = builder.failReason;
+        this.needsAttention = builder.needsAttention;
+        this.originType = builder.originType;
         this.planId = builder.planId;
         this.projectId = builder.projectId;
         this.rationale = builder.rationale;
         this.recommendedChannels = builder.recommendedChannels;
         this.scheduledAt = builder.scheduledAt;
         this.skipReason = builder.skipReason;
+        this.socialStatus = builder.socialStatus;
         this.status = builder.status;
         this.title = builder.title;
         this.topicId = builder.topicId;
+        this.websiteDraftId = builder.websiteDraftId;
+        this.websiteId = builder.websiteId;
+        this.websiteStatus = builder.websiteStatus;
         this.writingDirection = builder.writingDirection;
     }
 
@@ -118,6 +146,13 @@ public class ContentPlanTopic extends TeaModel {
     }
 
     /**
+     * @return deliveryMode
+     */
+    public String getDeliveryMode() {
+        return this.deliveryMode;
+    }
+
+    /**
      * @return diagnosisReferences
      */
     public java.util.List<String> getDiagnosisReferences() {
@@ -136,6 +171,20 @@ public class ContentPlanTopic extends TeaModel {
      */
     public String getFailReason() {
         return this.failReason;
+    }
+
+    /**
+     * @return needsAttention
+     */
+    public Boolean getNeedsAttention() {
+        return this.needsAttention;
+    }
+
+    /**
+     * @return originType
+     */
+    public String getOriginType() {
+        return this.originType;
     }
 
     /**
@@ -181,6 +230,13 @@ public class ContentPlanTopic extends TeaModel {
     }
 
     /**
+     * @return socialStatus
+     */
+    public String getSocialStatus() {
+        return this.socialStatus;
+    }
+
+    /**
      * @return status
      */
     public String getStatus() {
@@ -202,6 +258,27 @@ public class ContentPlanTopic extends TeaModel {
     }
 
     /**
+     * @return websiteDraftId
+     */
+    public String getWebsiteDraftId() {
+        return this.websiteDraftId;
+    }
+
+    /**
+     * @return websiteId
+     */
+    public String getWebsiteId() {
+        return this.websiteId;
+    }
+
+    /**
+     * @return websiteStatus
+     */
+    public String getWebsiteStatus() {
+        return this.websiteStatus;
+    }
+
+    /**
      * @return writingDirection
      */
     public String getWritingDirection() {
@@ -212,18 +289,25 @@ public class ContentPlanTopic extends TeaModel {
         private String articleConversationId; 
         private String articleId; 
         private String articleStatus; 
+        private String deliveryMode; 
         private java.util.List<String> diagnosisReferences; 
         private String direction; 
         private String failReason; 
+        private Boolean needsAttention; 
+        private String originType; 
         private String planId; 
         private String projectId; 
         private String rationale; 
         private java.util.List<String> recommendedChannels; 
         private String scheduledAt; 
         private String skipReason; 
+        private String socialStatus; 
         private String status; 
         private String title; 
         private String topicId; 
+        private String websiteDraftId; 
+        private String websiteId; 
+        private String websiteStatus; 
         private String writingDirection; 
 
         private Builder() {
@@ -233,18 +317,25 @@ public class ContentPlanTopic extends TeaModel {
             this.articleConversationId = model.articleConversationId;
             this.articleId = model.articleId;
             this.articleStatus = model.articleStatus;
+            this.deliveryMode = model.deliveryMode;
             this.diagnosisReferences = model.diagnosisReferences;
             this.direction = model.direction;
             this.failReason = model.failReason;
+            this.needsAttention = model.needsAttention;
+            this.originType = model.originType;
             this.planId = model.planId;
             this.projectId = model.projectId;
             this.rationale = model.rationale;
             this.recommendedChannels = model.recommendedChannels;
             this.scheduledAt = model.scheduledAt;
             this.skipReason = model.skipReason;
+            this.socialStatus = model.socialStatus;
             this.status = model.status;
             this.title = model.title;
             this.topicId = model.topicId;
+            this.websiteDraftId = model.websiteDraftId;
+            this.websiteId = model.websiteId;
+            this.websiteStatus = model.websiteStatus;
             this.writingDirection = model.writingDirection;
         } 
 
@@ -282,6 +373,14 @@ public class ContentPlanTopic extends TeaModel {
         }
 
         /**
+         * DeliveryMode.
+         */
+        public Builder deliveryMode(String deliveryMode) {
+            this.deliveryMode = deliveryMode;
+            return this;
+        }
+
+        /**
          * <p>The GEO diagnostic item references.</p>
          */
         public Builder diagnosisReferences(java.util.List<String> diagnosisReferences) {
@@ -308,6 +407,22 @@ public class ContentPlanTopic extends TeaModel {
          */
         public Builder failReason(String failReason) {
             this.failReason = failReason;
+            return this;
+        }
+
+        /**
+         * NeedsAttention.
+         */
+        public Builder needsAttention(Boolean needsAttention) {
+            this.needsAttention = needsAttention;
+            return this;
+        }
+
+        /**
+         * OriginType.
+         */
+        public Builder originType(String originType) {
+            this.originType = originType;
             return this;
         }
 
@@ -375,6 +490,14 @@ public class ContentPlanTopic extends TeaModel {
         }
 
         /**
+         * SocialStatus.
+         */
+        public Builder socialStatus(String socialStatus) {
+            this.socialStatus = socialStatus;
+            return this;
+        }
+
+        /**
          * <p>The topic status.</p>
          * 
          * <strong>example:</strong>
@@ -404,6 +527,30 @@ public class ContentPlanTopic extends TeaModel {
          */
         public Builder topicId(String topicId) {
             this.topicId = topicId;
+            return this;
+        }
+
+        /**
+         * WebsiteDraftId.
+         */
+        public Builder websiteDraftId(String websiteDraftId) {
+            this.websiteDraftId = websiteDraftId;
+            return this;
+        }
+
+        /**
+         * WebsiteId.
+         */
+        public Builder websiteId(String websiteId) {
+            this.websiteId = websiteId;
+            return this;
+        }
+
+        /**
+         * WebsiteStatus.
+         */
+        public Builder websiteStatus(String websiteStatus) {
+            this.websiteStatus = websiteStatus;
             return this;
         }
 

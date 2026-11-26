@@ -26,6 +26,10 @@ public class CreateAIStaffChatRequest extends Request {
     private String chatId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
+    private String clientToken;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ConversationId")
     private String conversationId;
 
@@ -41,6 +45,7 @@ public class CreateAIStaffChatRequest extends Request {
         super(builder);
         this.bizId = builder.bizId;
         this.chatId = builder.chatId;
+        this.clientToken = builder.clientToken;
         this.conversationId = builder.conversationId;
         this.messages = builder.messages;
         this.metaData = builder.metaData;
@@ -74,6 +79,13 @@ public class CreateAIStaffChatRequest extends Request {
     }
 
     /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    /**
      * @return conversationId
      */
     public String getConversationId() {
@@ -97,6 +109,7 @@ public class CreateAIStaffChatRequest extends Request {
     public static final class Builder extends Request.Builder<CreateAIStaffChatRequest, Builder> {
         private String bizId; 
         private String chatId; 
+        private String clientToken; 
         private String conversationId; 
         private java.util.List<Messages> messages; 
         private java.util.Map<String, String> metaData; 
@@ -109,6 +122,7 @@ public class CreateAIStaffChatRequest extends Request {
             super(request);
             this.bizId = request.bizId;
             this.chatId = request.chatId;
+            this.clientToken = request.clientToken;
             this.conversationId = request.conversationId;
             this.messages = request.messages;
             this.metaData = request.metaData;
@@ -135,6 +149,15 @@ public class CreateAIStaffChatRequest extends Request {
         public Builder chatId(String chatId) {
             this.putBodyParameter("ChatId", chatId);
             this.chatId = chatId;
+            return this;
+        }
+
+        /**
+         * ClientToken.
+         */
+        public Builder clientToken(String clientToken) {
+            this.putBodyParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
             return this;
         }
 
