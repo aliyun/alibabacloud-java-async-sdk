@@ -171,7 +171,7 @@ public class ListSupabaseProjectsRequest extends Request {
         } 
 
         /**
-         * <p>The maximum number of entries to return. The default value is 10.</p>
+         * <p>The maximum number of results to return for the current request. Default value: 10.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -183,7 +183,7 @@ public class ListSupabaseProjectsRequest extends Request {
         }
 
         /**
-         * <p>The pagination token to retrieve the next page of results.</p>
+         * <p>The next token.</p>
          * 
          * <strong>example:</strong>
          * <p>caeba0bbb2be03f84eb48b699f0a****</p>
@@ -195,7 +195,7 @@ public class ListSupabaseProjectsRequest extends Request {
         }
 
         /**
-         * <p>The page number.</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -207,7 +207,7 @@ public class ListSupabaseProjectsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of entries to return on each page.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -219,9 +219,9 @@ public class ListSupabaseProjectsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region.</p>
+         * <p>The region ID.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query the available regions.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query available region IDs.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -234,7 +234,10 @@ public class ListSupabaseProjectsRequest extends Request {
         }
 
         /**
-         * SearchField.
+         * <p>The field used for searching. Valid values: ProjectID and ProjectName.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ProjectId</p>
          */
         public Builder searchField(String searchField) {
             this.putQueryParameter("SearchField", searchField);
@@ -243,7 +246,13 @@ public class ListSupabaseProjectsRequest extends Request {
         }
 
         /**
-         * SearchValue.
+         * <p>The search keyword. You can filter instances by instance ID or description.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in the specified region, including the instance IDs and descriptions.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>gp-bp***************</p>
          */
         public Builder searchValue(String searchValue) {
             this.putQueryParameter("SearchValue", searchValue);
@@ -252,7 +261,10 @@ public class ListSupabaseProjectsRequest extends Request {
         }
 
         /**
-         * SortField.
+         * <p>The field used for sorting. Valid values: <code>gmtCreate</code> and <code>gmtModified</code>. Default value: <code>gmtCreate</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UpdatedDate</p>
          */
         public Builder sortField(String sortField) {
             this.putQueryParameter("SortField", sortField);
@@ -261,7 +273,17 @@ public class ListSupabaseProjectsRequest extends Request {
         }
 
         /**
-         * SortOrder.
+         * <p>The sort order. Default value: DESC.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>ASC: ascending order.</p>
+         * </li>
+         * <li><p>DESC: descending order.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>desc</p>
          */
         public Builder sortOrder(String sortOrder) {
             this.putQueryParameter("SortOrder", sortOrder);

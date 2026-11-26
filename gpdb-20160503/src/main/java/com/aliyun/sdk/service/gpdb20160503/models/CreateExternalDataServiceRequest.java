@@ -118,7 +118,7 @@ public class CreateExternalDataServiceRequest extends Request {
         } 
 
         /**
-         * <p>Instance ID.</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -131,7 +131,7 @@ public class CreateExternalDataServiceRequest extends Request {
         }
 
         /**
-         * <p>Region ID, you can view available region IDs through the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> interface.</p>
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query available region IDs.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>
@@ -143,7 +143,7 @@ public class CreateExternalDataServiceRequest extends Request {
         }
 
         /**
-         * <p>Service description.</p>
+         * <p>The service description.</p>
          * 
          * <strong>example:</strong>
          * <p>pxf test</p>
@@ -155,7 +155,7 @@ public class CreateExternalDataServiceRequest extends Request {
         }
 
         /**
-         * <p>Service name.</p>
+         * <p>The service name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -168,7 +168,7 @@ public class CreateExternalDataServiceRequest extends Request {
         }
 
         /**
-         * <p>Service specification (in CU), value:</p>
+         * <p>The service specifications in compute units (CUs). Valid values:</p>
          * <ul>
          * <li>8</li>
          * </ul>

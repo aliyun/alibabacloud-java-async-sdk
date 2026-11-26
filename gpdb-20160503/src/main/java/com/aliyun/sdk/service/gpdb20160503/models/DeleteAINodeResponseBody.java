@@ -70,7 +70,7 @@ public class DeleteAINodeResponseBody extends TeaModel {
          * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
-         * <hr>
+         * <p>123456789</p>
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;

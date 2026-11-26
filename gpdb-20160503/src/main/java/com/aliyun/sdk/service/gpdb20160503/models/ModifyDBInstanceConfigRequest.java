@@ -128,9 +128,9 @@ public class ModifyDBInstanceConfigRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>Instance ID of the instance.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the instance IDs of all AnalyticDB for PostgreSQL instances in a specific region.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query instance IDs of all AnalyticDB for PostgreSQL instances in a specific region.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -144,7 +144,7 @@ public class ModifyDBInstanceConfigRequest extends Request {
         }
 
         /**
-         * <p>The wait period for the instance that has no traffic to become idle. Minimum value: 60. Default value: 600. Unit: seconds.</p>
+         * <p>The idle release wait time. After the instance has no service traffic for the specified duration, the instance enters the idle state. Unit: seconds. Minimum value: 60. Default value: 600.</p>
          * 
          * <strong>example:</strong>
          * <p>600</p>
@@ -156,7 +156,7 @@ public class ModifyDBInstanceConfigRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group to which the instance belongs. For more information about how to obtain the ID of a resource group, see <a href="https://help.aliyun.com/document_detail/151181.html">View basic information of a resource group</a>.</p>
+         * <p>The ID of the resource group to which the instance belongs. For information about how to obtain the resource group ID, see <a href="https://help.aliyun.com/document_detail/151181.html">View the basic information of a resource group</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-bp67acfmxazb4p****</p>
@@ -168,7 +168,7 @@ public class ModifyDBInstanceConfigRequest extends Request {
         }
 
         /**
-         * <p>The threshold of computing resources. Valid values: 8 to 32. Unit: AnalyticDB Compute Units (ACUs).</p>
+         * <p>The compute resource threshold. Valid values: 8 to 32. Unit: ACU.</p>
          * 
          * <strong>example:</strong>
          * <p>32</p>

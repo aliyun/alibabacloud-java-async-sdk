@@ -128,7 +128,7 @@ public class ListApiKeysRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of records to return in this query.</p>
+         * <p>The maximum number of records to return for the current request.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>

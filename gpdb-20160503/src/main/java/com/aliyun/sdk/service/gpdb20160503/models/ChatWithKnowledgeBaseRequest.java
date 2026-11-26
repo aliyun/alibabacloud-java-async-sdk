@@ -148,7 +148,7 @@ public class ChatWithKnowledgeBaseRequest extends Request {
         /**
          * <p>The instance ID.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/196830.html">DescribeDBInstances</a> operation to query the details of all instances in the target region, including the instance ID.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/196830.html">DescribeDBInstances</a> operation to query the details of all instances in the target region, including the instance IDs.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -174,7 +174,7 @@ public class ChatWithKnowledgeBaseRequest extends Request {
         }
 
         /**
-         * <p>The knowledge retrieval parameter object. If not specified, only chat is performed.</p>
+         * <p>The knowledge retrieval parameters. If this parameter is not specified, only chat is performed.</p>
          */
         public Builder knowledgeParams(KnowledgeParams knowledgeParams) {
             String knowledgeParamsShrink = shrink(knowledgeParams, "KnowledgeParams", "json");
@@ -184,7 +184,7 @@ public class ChatWithKnowledgeBaseRequest extends Request {
         }
 
         /**
-         * <p>The large language model (LLM) invocation parameter object.</p>
+         * <p>The call parameter object for the large language model (LLM).</p>
          * <p>This parameter is required.</p>
          */
         public Builder modelParams(ModelParams modelParams) {
@@ -204,10 +204,10 @@ public class ChatWithKnowledgeBaseRequest extends Request {
         }
 
         /**
-         * <p>The system prompt template, which must include {{ text_chunks }}, {{ user_system_prompt }}, {{ graph_entities }}, and {{ graph_relations }}. If not specified, this part does not take effect.</p>
+         * <p>The system prompt template. It must include {{ text_chunks }}, {{ user_system_prompt }}, {{ graph_entities }}, and {{ graph_relations }}. If this parameter is not specified, this part does not take effect.</p>
          * 
          * <strong>example:</strong>
-         * <p>&quot;参考以下知识回答问题:{{ text_chunks }}&quot;</p>
+         * <p>&quot;Answer the question based on the following knowledge: {{ text_chunks }}&quot;</p>
          */
         public Builder promptParams(String promptParams) {
             this.putQueryParameter("PromptParams", promptParams);
@@ -275,7 +275,7 @@ public class ChatWithKnowledgeBaseRequest extends Request {
             } 
 
             /**
-             * <p>The k constant in the scoring algorithm 1/(k+rank_i). The value must be a positive integer greater than 1.</p>
+             * <p>The constant k in the score calculation formula 1/(k+rank_i). The value must be a positive integer greater than 1.</p>
              * 
              * <strong>example:</strong>
              * <p>60</p>
@@ -474,7 +474,10 @@ public class ChatWithKnowledgeBaseRequest extends Request {
             } 
 
             /**
-             * Instruct.
+             * <p>This parameter can be configured when RerankModel.Name is set to qwen3-rerank. You can add a custom sorting task type description to guide the model to adopt different sorting strategies.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Given a web search query, retrieve relevant passages that answer the query</p>
              */
             public Builder instruct(String instruct) {
                 this.instruct = instruct;
@@ -482,7 +485,10 @@ public class ChatWithKnowledgeBaseRequest extends Request {
             }
 
             /**
-             * Name.
+             * <p>The name of the reranking model. Valid values: qwen3-rerank and gte-rerank-v2.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qwen3-rerank</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -536,7 +542,7 @@ public class ChatWithKnowledgeBaseRequest extends Request {
             } 
 
             /**
-             * <p>The number of top entities and relationship edges to return. Default value: 60.</p>
+             * <p>The top number of entities and relationship edges to return. Default value: 60.</p>
              * 
              * <strong>example:</strong>
              * <p>60</p>
@@ -619,7 +625,10 @@ public class ChatWithKnowledgeBaseRequest extends Request {
             } 
 
             /**
-             * Instruct.
+             * <p>This parameter can be configured when RerankModel.Name is set to qwen3-rerank. You can add a custom sorting task type description to guide the model to adopt different sorting strategies.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Given a web search query, retrieve relevant passages that answer the query</p>
              */
             public Builder instruct(String instruct) {
                 this.instruct = instruct;
@@ -627,7 +636,10 @@ public class ChatWithKnowledgeBaseRequest extends Request {
             }
 
             /**
-             * Name.
+             * <p>The name of the reranking model. Valid values: qwen3-rerank and gte-rerank-v2.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qwen3-rerank</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -635,7 +647,10 @@ public class ChatWithKnowledgeBaseRequest extends Request {
             }
 
             /**
-             * RerankMetadataFields.
+             * <p>The metadata fields that participate in reranking. Separate multiple fields with commas (,). By default, only the document content (content) is used for reranking. The field names must be defined in the Metadata of the Collection.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>title</p>
              */
             public Builder rerankMetadataFields(String rerankMetadataFields) {
                 this.rerankMetadataFields = rerankMetadataFields;
@@ -819,10 +834,10 @@ public class ChatWithKnowledgeBaseRequest extends Request {
             } 
 
             /**
-             * <p>The filter condition for the data to be updated, in SQL WHERE clause format.</p>
+             * <p>The filter condition for the data to be updated, in the SQL WHERE format.</p>
              * 
              * <strong>example:</strong>
-             * <p>id = \&quot;llm-t87l87fxuhn56woc_8anu8j2d3f_file_e74635e2cc314e838543e724f6b3b1f2_10658020\&quot;</p>
+             * <p>id = &quot;llm-t87l87fxuhn56woc_8anu8j2d3f_file_e74635e2cc314e838543e724f6b3b1f2_10658020&quot;</p>
              */
             public Builder filter(String filter) {
                 this.filter = filter;
@@ -841,7 +856,7 @@ public class ChatWithKnowledgeBaseRequest extends Request {
             }
 
             /**
-             * <p>The number of top entities and relationship edges to return. Default value: 60.</p>
+             * <p>The top number of entities and relationship edges to return. Default value: 60.</p>
              */
             public Builder graphSearchArgs(GraphSearchArgs graphSearchArgs) {
                 this.graphSearchArgs = graphSearchArgs;
@@ -849,12 +864,12 @@ public class ChatWithKnowledgeBaseRequest extends Request {
             }
 
             /**
-             * <p>The multi-path recall algorithm. Default is empty (i.e., directly compares and sorts the dense vector and full-text scores).</p>
+             * <p>The multi-channel recall algorithm. Default value: empty, which means directly comparing and sorting the scores of dense vectors and the full-text index.</p>
              * <p>Valid values:</p>
              * <ul>
-             * <li>RRF: Reciprocal Rank Fusion. Has a parameter k to control the fusion effect. See HybridSearchArgs configuration for details.</li>
-             * <li>Weight: Weight-based sorting. Uses parameters to control the score weights of vector and full-text retrieval, then sorts. See HybridSearchArgs configuration for details.</li>
-             * <li>Cascaded: First performs full-text retrieval, then performs vector retrieval on top of it.</li>
+             * <li>RRF: Reciprocal Rank Fusion. A parameter k is used to control the fusion effect. For more information, see the HybridSearchArgs configuration.</li>
+             * <li>Weight: Weight-based sorting. Parameters are used to control the score weights of vectors and the full-text index before sorting. For more information, see the HybridSearchArgs configuration.</li>
+             * <li>Cascaded: Performs full-text search first, and then performs vector search based on the results.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -866,9 +881,9 @@ public class ChatWithKnowledgeBaseRequest extends Request {
             }
 
             /**
-             * <p>The algorithm parameters for multi-path recall. Currently supports RRF and Weight. HybridPathsSetting can specify recall of dense vectors (dense), sparse vectors (sparse), and full-text retrieval (fulltext). If the value is empty, dense vectors (dense) and full-text retrieval (fulltext) are recalled by default.</p>
+             * <p>The algorithm parameters for multi-channel recall. Currently, RRF and Weight are supported. You can use HybridPathsSetting to specify the recall paths for dense vectors (dense), sparse vectors (sparse), and full-text search (fulltext). If this value is empty, dense vectors (dense) and full-text search (fulltext) are recalled by default.</p>
              * <ul>
-             * <li>RRF: Specifies the k constant in the scoring algorithm <code>1/(k+rank_i)</code>. The value must be a positive integer greater than 1. Format:</li>
+             * <li>RRF: The constant k in the score calculation formula <code>1/(k+rank_i)</code>. The value must be a positive integer greater than 1. Format:</li>
              * </ul>
              * <pre><code>{
              *   &quot;HybridPathsSetting&quot;: {
@@ -881,8 +896,8 @@ public class ChatWithKnowledgeBaseRequest extends Request {
              * </code></pre>
              * <ul>
              * <li>Weight: <ul>
-             * <li>Dual-path recall (without specifying HybridPathsSetting, only specifying alpha):<ul>
-             * <li>Formula: alpha * dense_score + (1-alpha) * fulltext_score. The parameter alpha represents the score weight between dense vector and full-text retrieval, ranging from 0 to 1, where 0 means full-text only and 1 means dense vector only:</li>
+             * <li>Dual-channel recall (HybridPathsSetting is not specified, only alpha is specified):<ul>
+             * <li>Calculation formula: alpha * dense_score + (1-alpha) * fulltext_score. The parameter alpha represents the score weights of dense vectors and full-text search. The value ranges from 0 to 1, where 0 indicates that only full-text search is used, and 1 indicates that only dense vectors are used:</li>
              * </ul>
              * </li>
              * </ul>
@@ -895,8 +910,8 @@ public class ChatWithKnowledgeBaseRequest extends Request {
              * }
              * </code></pre>
              * <ul>
-             * <li>Three-path recall mode:<ul>
-             * <li>Formula: normalized_dense * dense_score + normalized_sparse * sparse_score + normalized_fulltext * fulltext_score. Where dense, sparse, and fulltext represent the weights for dense vector, sparse vector, and full-text retrieval respectively, with values greater than or equal to 0. The system automatically normalizes the weights to the range 0-1 (i.e., normalized_x = x / (dense + sparse + fulltext)).</li>
+             * <li>Triple-channel recall mode:<ul>
+             * <li>Calculation formula: normalized_dense * dense_score + normalized_sparse * sparse_score + normalized_fulltext * fulltext_score. Here, dense, sparse, and fulltext represent the weights of dense vectors, sparse vectors, and full-text search, respectively. The values must be greater than or equal to 0. The system automatically normalizes the weights to scale them from 0 to 1 (that is, normalized_x = x / (dense + sparse + fulltext)).</li>
              * </ul>
              * </li>
              * </ul>
@@ -911,6 +926,9 @@ public class ChatWithKnowledgeBaseRequest extends Request {
              *   }
              * }
              * </code></pre>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;RRF&quot;:{&quot;k&quot;:60}}</p>
              */
             public Builder hybridSearchArgs(java.util.Map<String, ?> hybridSearchArgs) {
                 this.hybridSearchArgs = hybridSearchArgs;
@@ -918,10 +936,10 @@ public class ChatWithKnowledgeBaseRequest extends Request {
             }
 
             /**
-             * <p>The method used when building the vector index. Valid values:</p>
+             * <p>The method used to build the vector index. Valid values:</p>
              * <ul>
              * <li>l2: Euclidean distance.</li>
-             * <li>ip: Inner product distance.</li>
+             * <li>ip: Dot product (inner product) distance.</li>
              * <li>cosine: Cosine similarity.</li>
              * </ul>
              * 
@@ -934,13 +952,16 @@ public class ChatWithKnowledgeBaseRequest extends Request {
             }
 
             /**
-             * <p>The recall window. When this value is not empty, additional context of the retrieval results is returned. The format is a 2-element array: List&lt;A, B&gt;, where -10 &lt;= A &lt;= 0 and 0 &lt;= B &lt;= 10.</p>
+             * <p>The recall window. If this value is not empty, the context of the retrieval results is added to the response. The format is an array of two elements: List&lt;A, B&gt;, where -10 &lt;= A &lt;= 0 and 0 &lt;= B &lt;= 10.</p>
              * <blockquote>
              * <ul>
-             * <li>It is recommended to use this parameter when document segmentation is too granular and retrieval may lose contextual information.</li>
-             * <li>Reranking takes priority over windowing, meaning reranking is performed first, then windowing is applied.</li>
+             * <li>We recommend that you use this parameter when document chunks are too small and retrieval may lose context information.</li>
+             * <li>Reranking takes precedence over windowing. That is, reranking is performed before windowing.</li>
              * </ul>
              * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>[-1,1]</p>
              */
             public Builder recallWindow(java.util.List<Long> recallWindow) {
                 this.recallWindow = recallWindow;
@@ -948,11 +969,11 @@ public class ChatWithKnowledgeBaseRequest extends Request {
             }
 
             /**
-             * <p>The reranking factor. When this value is not empty, the vector retrieval results are reranked. Value range: 1 &lt; RerankFactor &lt;= 5.</p>
+             * <p>The reranking factor. If this value is not empty, the vector search results are reranked. Valid values: 1 &lt; RerankFactor &lt;= 5.</p>
              * <blockquote>
              * <ul>
-             * <li>Reranking is slow when document segmentation is sparse.</li>
-             * <li>It is recommended that the number of items to rerank (TopK * Factor, rounded up) does not exceed 50.</li>
+             * <li>When document chunks are sparse, reranking is slow.</li>
+             * <li>We recommend that the number of reranked items (TopK × Factor, rounded up) does not exceed 50.</li>
              * </ul>
              * </blockquote>
              * 
@@ -965,7 +986,7 @@ public class ChatWithKnowledgeBaseRequest extends Request {
             }
 
             /**
-             * RerankModel.
+             * <p>The reranking model parameters.</p>
              */
             public Builder rerankModel(QueryParamsRerankModel rerankModel) {
                 this.rerankModel = rerankModel;
@@ -984,7 +1005,7 @@ public class ChatWithKnowledgeBaseRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to use full-text retrieval (dual-path recall). Default value: false, which means only vector retrieval is used.</p>
+             * <p>Specifies whether to use full-text search (dual-channel recall). Default value: false, which indicates that only vector search is used.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -1082,7 +1103,7 @@ public class ChatWithKnowledgeBaseRequest extends Request {
             } 
 
             /**
-             * <p>The name of the collection to recall.</p>
+             * <p>The name of the collection to be retrieved.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1096,7 +1117,7 @@ public class ChatWithKnowledgeBaseRequest extends Request {
             /**
              * <p>The namespace. Default value: public.</p>
              * <blockquote>
-             * <p>You can create a namespace by calling the <a href="https://help.aliyun.com/document_detail/2401495.html">CreateNamespace</a> operation, and view the list by calling the <a href="https://help.aliyun.com/document_detail/2401502.html">ListNamespaces</a> operation.</p>
+             * <p>You can call the <a href="https://help.aliyun.com/document_detail/2401495.html">CreateNamespace</a> operation to create a namespace and call the <a href="https://help.aliyun.com/document_detail/2401502.html">ListNamespaces</a> operation to view the namespace list.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1108,9 +1129,9 @@ public class ChatWithKnowledgeBaseRequest extends Request {
             }
 
             /**
-             * <p>The password corresponding to the namespace.</p>
+             * <p>The password for the namespace.</p>
              * <blockquote>
-             * <p>This value is specified in the CreateNamespace operation.</p>
+             * <p>This value is specified when you call the CreateNamespace operation.</p>
              * </blockquote>
              * <p>This parameter is required.</p>
              * 
@@ -1123,7 +1144,7 @@ public class ChatWithKnowledgeBaseRequest extends Request {
             }
 
             /**
-             * <p>The parameters related to knowledge base retrieval.</p>
+             * <p>The parameters related to the retrieval of this knowledge base.</p>
              */
             public Builder queryParams(QueryParams queryParams) {
                 this.queryParams = queryParams;
@@ -1243,7 +1264,7 @@ public class ChatWithKnowledgeBaseRequest extends Request {
             } 
 
             /**
-             * <p>The method for merging multiple knowledge bases. Default is RRF. Valid values:</p>
+             * <p>The method for merging multiple knowledge bases. Default value: RRF. Valid values:</p>
              * <ul>
              * <li>RRF</li>
              * <li>Weight</li>
@@ -1258,7 +1279,7 @@ public class ChatWithKnowledgeBaseRequest extends Request {
             }
 
             /**
-             * <p>The parameters for multi-knowledge base fusion.</p>
+             * <p>The parameters for merging multiple knowledge bases.</p>
              */
             public Builder mergeMethodArgs(MergeMethodArgs mergeMethodArgs) {
                 this.mergeMethodArgs = mergeMethodArgs;
@@ -1266,11 +1287,11 @@ public class ChatWithKnowledgeBaseRequest extends Request {
             }
 
             /**
-             * <p>The reranking factor. When this value is not empty, the vector retrieval results are reranked. Value range: 1 &lt; RerankFactor &lt;= 5.</p>
+             * <p>The reranking factor. If this value is not empty, the vector search results are reranked. Valid values: 1 &lt; RerankFactor &lt;= 5.</p>
              * <blockquote>
              * <ul>
-             * <li>Reranking is slow when document segmentation is sparse.</li>
-             * <li>It is recommended that the number of items to rerank (TopK * Factor, rounded up) does not exceed 50.</li>
+             * <li>When document chunks are sparse, reranking is slow.</li>
+             * <li>We recommend that the number of reranked items (TopK × Factor, rounded up) does not exceed 50.</li>
              * </ul>
              * </blockquote>
              * 
@@ -1283,7 +1304,7 @@ public class ChatWithKnowledgeBaseRequest extends Request {
             }
 
             /**
-             * RerankModel.
+             * <p>The reranking model parameters.</p>
              */
             public Builder rerankModel(RerankModel rerankModel) {
                 this.rerankModel = rerankModel;
@@ -1300,7 +1321,7 @@ public class ChatWithKnowledgeBaseRequest extends Request {
             }
 
             /**
-             * <p>The number of top results to return after merging the recall results from multiple vector collections.</p>
+             * <p>The number of top results to return after the multi-vector collection recall results are merged.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -1376,7 +1397,7 @@ public class ChatWithKnowledgeBaseRequest extends Request {
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
-             * <p>You are a helpful assistant.</p>
+             * <p>You are a helpful assistant</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -1473,10 +1494,10 @@ public class ChatWithKnowledgeBaseRequest extends Request {
             } 
 
             /**
-             * <p>The function tool description.</p>
+             * <p>The description of the function tool.</p>
              * 
              * <strong>example:</strong>
-             * <p>获取天气。</p>
+             * <p>Get the weather</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1484,7 +1505,7 @@ public class ChatWithKnowledgeBaseRequest extends Request {
             }
 
             /**
-             * <p>The function tool name.</p>
+             * <p>The name of the function tool.</p>
              * 
              * <strong>example:</strong>
              * <p>get_weather</p>
@@ -1495,7 +1516,7 @@ public class ChatWithKnowledgeBaseRequest extends Request {
             }
 
             /**
-             * <p>The function parameters in JSON Schema format.</p>
+             * <p>The JSON Schema of the function parameters.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;type&quot;: &quot;object&quot;, ...}</p>
@@ -1745,7 +1766,7 @@ public class ChatWithKnowledgeBaseRequest extends Request {
             }
 
             /**
-             * <p>The name of the large model to use. For valid values, see: <a href="https://help.aliyun.com/zh/model-studio/compatibility-of-openai-with-dashscope?spm=a2c4g.11186623.help-menu-2400256.d_2_10_0.45b5516eZIciC8&scm=20140722.H_2833609._.OR_help-T_cn~zh-V_1#eadfc13038jd5">Bailian Help Documentation</a></p>
+             * <p>The name of the large language model to use. For valid values, see <a href="https://www.alibabacloud.com/help/en/model-studio/compatibility-of-openai-with-dashscope#eadfc13038jd5">Model Studio documentation</a>.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1768,7 +1789,7 @@ public class ChatWithKnowledgeBaseRequest extends Request {
             }
 
             /**
-             * <p>The presence penalty coefficient (-2.0 to 2.0).</p>
+             * <p>The presence penalty coefficient. Valid values: -2.0 to 2.0.</p>
              * 
              * <strong>example:</strong>
              * <p>1.0</p>
@@ -1790,7 +1811,7 @@ public class ChatWithKnowledgeBaseRequest extends Request {
             }
 
             /**
-             * <p>The stop word list.</p>
+             * <p>The list of stop words.</p>
              */
             public Builder stop(java.util.List<String> stop) {
                 this.stop = stop;
@@ -1798,7 +1819,7 @@ public class ChatWithKnowledgeBaseRequest extends Request {
             }
 
             /**
-             * <p>The sampling temperature (0 to 2).</p>
+             * <p>The sampling temperature. Valid values: 0 to 2.</p>
              * 
              * <strong>example:</strong>
              * <p>0.6</p>
@@ -1817,7 +1838,7 @@ public class ChatWithKnowledgeBaseRequest extends Request {
             }
 
             /**
-             * <p>The nucleus sampling probability threshold (0 to 1).</p>
+             * <p>The probability threshold for nucleus sampling. Valid values: 0 to 1.</p>
              * 
              * <strong>example:</strong>
              * <p>0.9</p>

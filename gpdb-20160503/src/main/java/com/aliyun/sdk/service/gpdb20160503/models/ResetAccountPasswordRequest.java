@@ -90,7 +90,7 @@ public class ResetAccountPasswordRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The name of the database account.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -103,7 +103,12 @@ public class ResetAccountPasswordRequest extends Request {
         }
 
         /**
-         * <p>The name of the account.</p>
+         * <p>The password of the database account.</p>
+         * <ul>
+         * <li>The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</li>
+         * <li>Special characters include: <code>!@#$%^&amp;*()_+-=</code></li>
+         * <li>The password must be 8 to 32 characters in length.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,11 +121,10 @@ public class ResetAccountPasswordRequest extends Request {
         }
 
         /**
-         * <p>Before you call this operation, make sure that the following requirements are met:</p>
-         * <ul>
-         * <li>The instance is in the running state.</li>
-         * <li>The instance is not locked.</li>
-         * </ul>
+         * <p>The instance ID.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the IDs of all AnalyticDB for PostgreSQL instances in the target region.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -105,7 +105,7 @@ public class ModifyDBInstanceDeploymentModeRequest extends Request {
         /**
          * <p>The instance ID.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the IDs of all AnalyticDB for PostgreSQL instances in a region.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the IDs of all AnalyticDB for PostgreSQL instances in the specified region.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -136,11 +136,11 @@ public class ModifyDBInstanceDeploymentModeRequest extends Request {
         }
 
         /**
-         * <p>The vSwitch ID in the secondary zone.</p>
+         * <p>The vSwitch ID of the secondary zone.</p>
          * <blockquote>
          * <ul>
          * <li>This parameter is required only for multi-zone deployment.</li>
-         * <li>The zone of the vSwitch specified by this parameter must be the same as the zone specified by StandbyZoneId.</li>
+         * <li>The zone of the vSwitch in the secondary zone must match the StandbyZoneId.</li>
          * </ul>
          * </blockquote>
          * 
@@ -154,7 +154,7 @@ public class ModifyDBInstanceDeploymentModeRequest extends Request {
         }
 
         /**
-         * <p>The secondary zone ID.</p>
+         * <p>The ID of the secondary zone.</p>
          * <blockquote>
          * <ul>
          * <li>This parameter is required only for multi-zone deployment.</li>

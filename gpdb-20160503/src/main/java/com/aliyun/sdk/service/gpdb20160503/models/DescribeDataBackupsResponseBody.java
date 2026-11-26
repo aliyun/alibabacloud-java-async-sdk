@@ -119,7 +119,7 @@ public class DescribeDataBackupsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The instance ID.</p>
+         * <p>The list of backup sets.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -138,7 +138,7 @@ public class DescribeDataBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of backup sets on the current page.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -149,7 +149,7 @@ public class DescribeDataBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>3E387971-33A5-5019-AD7F-DC**********</p>
@@ -160,7 +160,7 @@ public class DescribeDataBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total backup set size. Unit: Byte.</p>
+         * <p>The total size of the backup sets. Unit: bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>1111111111</p>
@@ -171,7 +171,7 @@ public class DescribeDataBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -383,7 +383,7 @@ public class DescribeDataBackupsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The UTC time when the backup ended. The time is in the yyyy-MM-ddTHH:mmZ format. The time is displayed in UTC.</p>
+             * <p>The end time of the backup. The time is displayed in the yyyy-MM-ddTHH:mm:ssZ format and in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-12-22T12:01:43Z</p>
@@ -394,7 +394,7 @@ public class DescribeDataBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The local time when the backup ended. The time is in the yyyy-MM-dd HH:mm:ss format. The time is your local time.</p>
+             * <p>The end time of the backup in local time.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-12-22 20:00:25</p>
@@ -405,11 +405,10 @@ public class DescribeDataBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The method that is used to generate the backup set. Valid values:</p>
+             * <p>The backup method. Valid values:</p>
              * <ul>
-             * <li><strong>Logical</strong>: logical backup</li>
-             * <li><strong>Physical</strong>: physical backup</li>
-             * <li><strong>Snapshot</strong>: snapshot backup</li>
+             * <li><strong>Physical</strong>: physical backup.</li>
+             * <li><strong>Snapshot</strong>: snapshot backup.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -422,16 +421,16 @@ public class DescribeDataBackupsResponseBody extends TeaModel {
 
             /**
              * <p>The backup mode.</p>
-             * <p>Valid values for full backup:</p>
+             * <p>Valid values for full backups:</p>
              * <ul>
-             * <li>Automated: automatic backup</li>
-             * <li>Manual: manual backup</li>
+             * <li><strong>Automated</strong>: automatic backup performed by the system.</li>
+             * <li><strong>Manual</strong>: manual backup.</li>
              * </ul>
-             * <p>Valid values for point-in-time backup:</p>
+             * <p>Valid values for restorable points:</p>
              * <ul>
-             * <li>Automated: point-in-time backup after full backup</li>
-             * <li>Manual: manual point-in-time backup</li>
-             * <li>Period: point-in-time backup that is triggered by a backup policy</li>
+             * <li><strong>Automated</strong>: restorable point generated after a full backup.</li>
+             * <li><strong>Manual</strong>: restorable point manually triggered by the user.</li>
+             * <li><strong>Period</strong>: restorable point periodically triggered by the backup policy.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -465,7 +464,7 @@ public class DescribeDataBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The UTC time when the backup started. The time is in the yyyy-MM-ddTHH:mmZ format. The time is displayed in UTC.</p>
+             * <p>The start time of the backup. The time is displayed in the yyyy-MM-ddTHH:mm:ssZ format and in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-12-22T12:00:25Z</p>
@@ -476,7 +475,7 @@ public class DescribeDataBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The local time when the backup started. The time is in the yyyy-MM-dd HH:mm:ss format. The time is your local time.</p>
+             * <p>The start time of the backup in local time.</p>
              * 
              * <strong>example:</strong>
              * <p>2011-05-30 03:29:00</p>
@@ -489,8 +488,8 @@ public class DescribeDataBackupsResponseBody extends TeaModel {
             /**
              * <p>The status of the backup set. Valid values:</p>
              * <ul>
-             * <li>Success</li>
-             * <li>Failure</li>
+             * <li><strong>Success</strong>: successful.</li>
+             * <li><strong>Failure</strong>: failed.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -502,7 +501,7 @@ public class DescribeDataBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of a point-in-time backup set or the full backup set.</p>
+             * <p>The name of the restorable point or the full backup set.</p>
              * 
              * <strong>example:</strong>
              * <p>adbpgbackup_555*****_20211222200019</p>
@@ -514,8 +513,8 @@ public class DescribeDataBackupsResponseBody extends TeaModel {
 
             /**
              * <ul>
-             * <li>For full backup, this parameter indicates the point in time at which the data in the data backup file is consistent.</li>
-             * <li>For point-in-time backup, this parameter indicates that the returned point in time is a timestamp.</li>
+             * <li>Full backup: the timestamp of the consistency point in time.</li>
+             * <li>Restorable point: the timestamp of the restorable point in time.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -527,7 +526,7 @@ public class DescribeDataBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the instance.</p>
+             * <p>The instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>gp-bp**************-master</p>
@@ -538,10 +537,10 @@ public class DescribeDataBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the backup. Valid values:</p>
+             * <p>The backup type. Valid values:</p>
              * <ul>
-             * <li>DATA: full backup</li>
-             * <li>RESTOREPOI: point-in-time backup</li>
+             * <li><strong>DATA</strong>: full backup.</li>
+             * <li><strong>RESTOREPOI</strong>: restorable point.</li>
              * </ul>
              * 
              * <strong>example:</strong>

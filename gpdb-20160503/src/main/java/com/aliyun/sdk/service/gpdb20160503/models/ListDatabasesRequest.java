@@ -149,7 +149,7 @@ public class ListDatabasesRequest extends Request {
         /**
          * <p>The instance ID.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including the instance IDs.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -176,7 +176,7 @@ public class ListDatabasesRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries per page. Valid values: 1 to 100.</p>
+         * <p>The maximum number of entries to return per page. Valid values: 1 to 100.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -188,7 +188,7 @@ public class ListDatabasesRequest extends Request {
         }
 
         /**
-         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+         * <p>The token used to start the next query.</p>
          * 
          * <strong>example:</strong>
          * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -222,9 +222,9 @@ public class ListDatabasesRequest extends Request {
         }
 
         /**
-         * <p>The Alibaba Cloud Resource Name (ARN) of the access credential for the created Data API account. You can call the CreateSecret operation to create an access credential.</p>
+         * <p>The access credential created by calling the CreateSecret operation.</p>
          * <blockquote>
-         * <p> To call the DescribeTable operation as a Resource Access Management (RAM) user, the RAM user must have the permissions to call the UseSecret or GetSecretValue operation on the ARN of the access credential.</p>
+         * <p>When you call this operation as a RAM user, you must have the UseSecret or GetSecretValue permission on the secret ARN.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 

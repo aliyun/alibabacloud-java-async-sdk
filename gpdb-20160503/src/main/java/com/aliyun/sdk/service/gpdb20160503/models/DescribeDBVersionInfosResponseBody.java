@@ -78,7 +78,7 @@ public class DescribeDBVersionInfosResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The queried minor versions.</p>
+         * <p>The data structure.</p>
          */
         public Builder versionDetails(VersionDetails versionDetails) {
             this.versionDetails = versionDetails;
@@ -144,7 +144,7 @@ public class DescribeDBVersionInfosResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The queried minor version information about the instance in Serverless mode.</p>
+             * <p>The kernel version information for the cloud-native mode.</p>
              * 
              * <strong>example:</strong>
              * <p>&quot;Serverless&quot;: [
@@ -176,7 +176,7 @@ public class DescribeDBVersionInfosResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The queried minor version information about the instance in elastic storage mode.</p>
+             * <p>The kernel version information for the storage elastic mode.</p>
              * 
              * <strong>example:</strong>
              * <p>&quot;StorageElasic&quot;: [

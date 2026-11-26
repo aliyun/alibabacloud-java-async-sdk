@@ -77,7 +77,7 @@ public class DeleteBackupRequest extends Request {
         /**
          * <p>The backup set ID.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/210093.html">DescribeDataBackups</a> operation to query the IDs of all backup sets in an instance.</p>
+         * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/210093.html">DescribeDataBackups</a> operation to query the IDs of all backup sets for the target instance.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -93,7 +93,7 @@ public class DeleteBackupRequest extends Request {
         /**
          * <p>The instance ID.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in the specified region, including instance IDs.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 

@@ -90,7 +90,7 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
         /**
          * <p>The network type of the instance. Valid values:</p>
          * <ul>
-         * <li>Classic: classic network.</li>
+         * <li>Classic: Classic network.</li>
          * <li>VPC: VPC.</li>
          * </ul>
          * 

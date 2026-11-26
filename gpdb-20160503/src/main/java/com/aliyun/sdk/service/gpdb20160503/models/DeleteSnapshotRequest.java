@@ -115,7 +115,7 @@ public class DeleteSnapshotRequest extends Request {
         }
 
         /**
-         * <p>The region ID. Specifies the region in which to query or perform the operation.</p>
+         * <p>The region ID. This parameter restricts the query or operation to a specific region.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>

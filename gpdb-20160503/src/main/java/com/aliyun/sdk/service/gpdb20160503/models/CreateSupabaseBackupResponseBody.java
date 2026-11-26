@@ -67,7 +67,7 @@ public class CreateSupabaseBackupResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the backup job. You can call ListSupabaseBackupJobs to query the status and progress of the corresponding job.</p>
+         * <p>The backup job ID. You can call ListSupabaseBackupJobs to query the status and progress of the job.</p>
          * 
          * <strong>example:</strong>
          * <p>123</p>

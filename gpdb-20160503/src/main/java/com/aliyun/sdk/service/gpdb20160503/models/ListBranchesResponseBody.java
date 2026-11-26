@@ -140,7 +140,7 @@ public class ListBranchesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The maximum number of records to return in this query.</p>
+         * <p>The maximum number of entries to return for the current query.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -151,7 +151,7 @@ public class ListBranchesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The cursor for paging query. You do not need to specify this parameter for the first query. For subsequent queries, use the NextToken value returned in the previous response.</p>
+         * <p>The cursor for the paging query. You do not need to specify this parameter for the first query. For subsequent queries, use the NextToken value returned from the previous query.</p>
          * 
          * <strong>example:</strong>
          * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -173,7 +173,7 @@ public class ListBranchesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of records per page.</p>
+         * <p>The number of entries per page.</p>
          * <p>Valid values:</p>
          * <ul>
          * <li>10</li>
@@ -203,7 +203,7 @@ public class ListBranchesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of branches that match the query conditions.</p>
+         * <p>The total number of branches that meet the query conditions.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>

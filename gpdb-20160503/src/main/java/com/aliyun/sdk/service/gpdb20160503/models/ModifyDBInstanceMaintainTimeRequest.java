@@ -104,9 +104,9 @@ public class ModifyDBInstanceMaintainTimeRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including instance IDs.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including instance IDs.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -120,7 +120,7 @@ public class ModifyDBInstanceMaintainTimeRequest extends Request {
         }
 
         /**
-         * <p>The end time of the maintenance window. The end time must be later than the start time. Specify the time in the HH:mmZ format. The time must be in UTC.</p>
+         * <p>The end time of the maintenance window, which must be later than the start time. Format: HH:mmZ (UTC time).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -133,7 +133,7 @@ public class ModifyDBInstanceMaintainTimeRequest extends Request {
         }
 
         /**
-         * <p>This parameter is no longer used.</p>
+         * <p><strong>[Deprecated]</strong> This parameter is deprecated. You do not need to specify this parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -145,7 +145,7 @@ public class ModifyDBInstanceMaintainTimeRequest extends Request {
         }
 
         /**
-         * <p>The start time of the maintenance window. Specify the time in the HH:mmZ format. The time must be in UTC.</p>
+         * <p>The start time of the maintenance window. Format: HH:mmZ (UTC time).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

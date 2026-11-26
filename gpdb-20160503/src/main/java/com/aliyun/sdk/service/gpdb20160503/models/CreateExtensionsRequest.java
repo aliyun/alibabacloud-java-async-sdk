@@ -106,7 +106,7 @@ public class CreateExtensionsRequest extends Request {
         /**
          * <p>The instance ID.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the IDs of all AnalyticDB for PostgreSQL instances in a specific region.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the IDs of all AnalyticDB for PostgreSQL instances in the specified region.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -120,7 +120,7 @@ public class CreateExtensionsRequest extends Request {
         }
 
         /**
-         * <p>The name of the database.</p>
+         * <p>The name of the database in the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -133,7 +133,7 @@ public class CreateExtensionsRequest extends Request {
         }
 
         /**
-         * <p>The name of the extension that you want to install. Separate multiple extension names with commas (,).</p>
+         * <p>The extensions to install. Separate multiple extensions with commas (,).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -148,7 +148,7 @@ public class CreateExtensionsRequest extends Request {
         /**
          * <p>The region ID.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query available region IDs.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

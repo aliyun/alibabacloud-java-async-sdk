@@ -114,7 +114,7 @@ public class ChatWithKnowledgeBaseStreamResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response message.</p>
+         * <p>The returned message.</p>
          * 
          * <strong>example:</strong>
          * <p>Successful</p>
@@ -319,7 +319,7 @@ public class ChatWithKnowledgeBaseStreamResponseBody extends TeaModel {
             }
 
             /**
-             * <p>ID。</p>
+             * <p>The ID.</p>
              * 
              * <strong>example:</strong>
              * <p>&quot;chatcmpl-c1bebafa-cc48-44e2-88c6-1a3572952f8e&quot;</p>
@@ -429,7 +429,7 @@ public class ChatWithKnowledgeBaseStreamResponseBody extends TeaModel {
              * <p>The document content.</p>
              * 
              * <strong>example:</strong>
-             * <p>The weather in Hangzhou is sunny.</p>
+             * <p>The weather in Hangzhou is sunny</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -437,10 +437,10 @@ public class ChatWithKnowledgeBaseStreamResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The chain-of-thought content of the model.</p>
+             * <p>The model chain-of-thought content.</p>
              * 
              * <strong>example:</strong>
-             * <p>Logical reasoning process</p>
+             * <p>Logical deduction process</p>
              */
             public Builder reasoningContent(String reasoningContent) {
                 this.reasoningContent = reasoningContent;
@@ -452,7 +452,7 @@ public class ChatWithKnowledgeBaseStreamResponseBody extends TeaModel {
              * <ul>
              * <li>system</li>
              * <li>user</li>
-             * <li>assistant.</li>
+             * <li>assistant</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -464,7 +464,7 @@ public class ChatWithKnowledgeBaseStreamResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tool invocation response.</p>
+             * <p>The tool invoke response.</p>
              */
             public Builder toolCalls(java.util.List<ToolCalls> toolCalls) {
                 this.toolCalls = toolCalls;
@@ -555,7 +555,7 @@ public class ChatWithKnowledgeBaseStreamResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The response index.</p>
+             * <p>The index of the reply.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -566,7 +566,7 @@ public class ChatWithKnowledgeBaseStreamResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The large language model response.</p>
+             * <p>The response message from the large language model.</p>
              */
             public Builder message(Message message) {
                 this.message = message;
@@ -620,7 +620,7 @@ public class ChatWithKnowledgeBaseStreamResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of tokens that hit the cache.</p>
+             * <p>The number of cache hit tokens.</p>
              * 
              * <strong>example:</strong>
              * <p>24</p>
@@ -716,7 +716,7 @@ public class ChatWithKnowledgeBaseStreamResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of tokens consumed for generating the content.</p>
+             * <p>The number of tokens consumed to generate the content.</p>
              * 
              * <strong>example:</strong>
              * <p>42</p>
@@ -738,7 +738,7 @@ public class ChatWithKnowledgeBaseStreamResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The prompt token details.</p>
+             * <p>The details of the prompt tokens.</p>
              */
             public Builder promptTokensDetails(PromptTokensDetails promptTokensDetails) {
                 this.promptTokensDetails = promptTokensDetails;
@@ -896,7 +896,7 @@ public class ChatWithKnowledgeBaseStreamResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of tokens used by the large language model output.</p>
+             * <p>The number of tokens used for the large language model output.</p>
              */
             public Builder usage(Usage usage) {
                 this.usage = usage;
@@ -1070,7 +1070,7 @@ public class ChatWithKnowledgeBaseStreamResponseBody extends TeaModel {
              * <p>The document content.</p>
              * 
              * <strong>example:</strong>
-             * <p>AnalyticDB PostgreSQL vector database.</p>
+             * <p>ADBPG vector database</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -1089,8 +1089,7 @@ public class ChatWithKnowledgeBaseStreamResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The public URL of the image in the query result. The URL is valid for 2 hours by default.</p>
-             * <p>You can specify a custom validity period by using the UrlExpiration parameter.</p>
+             * <p>The public URL of the query result image. The default validity period is 2 hours. You can specify the validity period by using the UrlExpiration request parameter.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://dailyshort-sh.oss-cn-shanghai.aliyuncs.com/vod-8efba5/f06147795c6c71f080605420848d0302/0ca34d5743a84bf7c68f489a60715dac-ld.mp4">http://dailyshort-sh.oss-cn-shanghai.aliyuncs.com/vod-8efba5/f06147795c6c71f080605420848d0302/0ca34d5743a84bf7c68f489a60715dac-ld.mp4</a></p>
@@ -1103,7 +1102,7 @@ public class ChatWithKnowledgeBaseStreamResponseBody extends TeaModel {
             /**
              * <p>The unique ID of this vector data entry.</p>
              * <blockquote>
-             * <p>If this value is empty, the database automatically generates a UUID. If this value is not empty and conflicts with an existing ID in the database, the API data overwrites the existing value in the database.</p>
+             * <p>If this parameter is empty, the ID is automatically generated by the database uuidgen function. If this parameter is not empty and conflicts with an existing ID in the database, the value in the database is updated with the data from the API.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1115,7 +1114,7 @@ public class ChatWithKnowledgeBaseStreamResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The metadata generated by the document loader during loading.</p>
+             * <p>The metadata generated when the document loader loads the document.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;page&quot;:1}</p>
@@ -1127,6 +1126,9 @@ public class ChatWithKnowledgeBaseStreamResponseBody extends TeaModel {
 
             /**
              * <p>The metadata.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;update_time&quot;:&quot;1754446789199&quot;,&quot;is_publish&quot;:&quot;1&quot;}</p>
              */
             public Builder metadata(java.util.Map<String, ?> metadata) {
                 this.metadata = metadata;
@@ -1145,10 +1147,10 @@ public class ChatWithKnowledgeBaseStreamResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The source of the retrieve result. A value of 1 indicates AISearch retrieve, 2 indicates full-text index retrieve, and 3 indicates multi-channel recall.</p>
+             * <p>The source of the retrieve result. A value of 1 indicates AISearch. A value of 2 indicates full-text index. A value of 3 indicates dual-channel recall.</p>
              * 
              * <strong>example:</strong>
-             * <p>0.12</p>
+             * <p>1</p>
              */
             public Builder retrievalSource(Long retrievalSource) {
                 this.retrievalSource = retrievalSource;
@@ -1156,7 +1158,7 @@ public class ChatWithKnowledgeBaseStreamResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The similarity score of this data entry. The scoring algorithm is related to the algorithm specified during index creation (l2, ip, or cosine).</p>
+             * <p>The similarity score of this data entry. The scoring algorithm is related to the algorithm specified when the index is created, such as (l2/ip/cosine).</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -1221,9 +1223,9 @@ public class ChatWithKnowledgeBaseStreamResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of tokens used during vectorization.</p>
+             * <p>The number of tokens used for vectorization.</p>
              * <blockquote>
-             * <p>A token is the smallest unit into which input text is segmented. A token can be a word, a phrase, a punctuation mark, or a character.</p>
+             * <p>A token is the smallest unit into which the input text is divided. A token can be a word, a phrase, a punctuation mark, or a character.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1367,7 +1369,7 @@ public class ChatWithKnowledgeBaseStreamResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The recall items.</p>
+             * <p>The recalled items.</p>
              */
             public Builder matches(java.util.List<Matches> matches) {
                 this.matches = matches;
@@ -1375,7 +1377,7 @@ public class ChatWithKnowledgeBaseStreamResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The relation names.</p>
+             * <p>The relation name.</p>
              */
             public Builder relations(java.util.List<String> relations) {
                 this.relations = relations;
@@ -1397,7 +1399,7 @@ public class ChatWithKnowledgeBaseStreamResponseBody extends TeaModel {
              * <p>The API execution status. Valid values:</p>
              * <ul>
              * <li><strong>success</strong>: The execution is successful.</li>
-             * <li><strong>fail</strong>: The execution failed.</li>
+             * <li><strong>fail</strong>: The execution fails.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1420,7 +1422,7 @@ public class ChatWithKnowledgeBaseStreamResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of tokens or entries consumed by document understanding or embedding.</p>
+             * <p>The number of tokens or entries consumed for document understanding or embedding.</p>
              */
             public Builder usage(MultiCollectionRecallResultUsage usage) {
                 this.usage = usage;

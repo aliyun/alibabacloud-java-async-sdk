@@ -197,7 +197,7 @@ public class DescribeDatabaseResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The permission control information.</p>
+         * <p>The access control information.</p>
          * 
          * <strong>example:</strong>
          * <p>=Tc/test_001\ntest_001=CTc/test_001</p>
@@ -209,7 +209,7 @@ public class DescribeDatabaseResponseBody extends TeaModel {
 
         /**
          * <p>The character set.</p>
-         * <p>For more information about the value range, see Document <a href="https://www.postgresql.org/docs/current/multibyte.html">https://www.postgresql.org/docs/current/multibyte.html</a>.</p>
+         * <p>For the valid values, refer to the References at <a href="https://www.postgresql.org/docs/current/multibyte.html">https://www.postgresql.org/docs/current/multibyte.html</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>UTF8</p>
@@ -220,15 +220,13 @@ public class DescribeDatabaseResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Database locale parameter that specifies string comparison and sorting rules.</p>
+         * <p>The locale setting of the database, which specifies the string comparison and sorting rules.</p>
          * <blockquote>
-         * </blockquote>
          * <ul>
-         * <li><p>The locale must be compatible with the character set specified by the CharacterSetName parameter.</p>
-         * </li>
-         * <li><p>Collate: You can query available collations using the command SELECT DISTINCT collname FROM pg_collation;. If not specified, the default value is en_US.utf8.</p>
-         * </li>
+         * <li>The locale must be compatible with the character set specified by the CharacterSetName parameter.</li>
+         * <li>Valid values: You can run the SELECT DISTINCT collname FROM pg_collation; command to query the valid values. If this parameter is not specified, the default value is en_US.utf8.</li>
          * </ul>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>en_US.utf8</p>
@@ -239,7 +237,7 @@ public class DescribeDatabaseResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Limits the number of concurrent connections. -1 indicates unlimited.</p>
+         * <p>The maximum number of concurrent connections. A value of -1 indicates no limit.</p>
          * 
          * <strong>example:</strong>
          * <p>-1</p>
@@ -250,15 +248,13 @@ public class DescribeDatabaseResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Database locale parameter that specifies character classification and case conversion rules.</p>
+         * <p>The locale setting of the database, which specifies the character classification and case conversion rules.</p>
          * <blockquote>
-         * </blockquote>
          * <ul>
-         * <li><p>The locale must be compatible with the character set specified by the CharacterSetName parameter.</p>
-         * </li>
-         * <li><p>You can execute the SELECT DISTINCT collctype FROM pg_collation; statement to obtain the field value. The default value is en_US.utf8.</p>
-         * </li>
+         * <li>The locale must be compatible with the character set specified by the CharacterSetName parameter.</li>
+         * <li>You can run the SELECT DISTINCT collctype FROM pg_collation; command to query the valid values. If this parameter is not specified, the default value is en_US.utf8.</li>
          * </ul>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>en_US.utf8</p>
@@ -269,7 +265,7 @@ public class DescribeDatabaseResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The cluster ID.</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>gp-xxxxxxxxx</p>
@@ -280,11 +276,14 @@ public class DescribeDatabaseResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The database name.</p>
+         * <p>The name of the database.</p>
          * <ul>
-         * <li>Only contain letters, digits, and underscores (_).</li>
-         * <li>Must start with a letter.</li>
-         * <li>Up to 63 characters in length.</li>
+         * <li><p>It can contain only letters, digits, and underscores (_).</p>
+         * </li>
+         * <li><p>It must start with a letter.</p>
+         * </li>
+         * <li><p>It cannot exceed 63 characters in length.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -296,7 +295,7 @@ public class DescribeDatabaseResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The database comment.</p>
+         * <p>The description of the database.</p>
          * 
          * <strong>example:</strong>
          * <p>A user management database storing customer profiles.</p>
@@ -307,12 +306,16 @@ public class DescribeDatabaseResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The owner of the table.</p>
+         * <p>The owner of the database.</p>
          * <ul>
-         * <li>Contain lowercase letters, digits, and underscores (_).</li>
-         * <li>Must start with a lowercase letter and end with a lowercase letter or a digit.</li>
-         * <li>Cannot start with gp.</li>
-         * <li>Must be 2 to 16 characters in length.</li>
+         * <li><p>It can contain only lowercase letters, digits, and underscores (_).</p>
+         * </li>
+         * <li><p>It must start with a lowercase letter and end with a lowercase letter or a digit.</p>
+         * </li>
+         * <li><p>It cannot start with gp.</p>
+         * </li>
+         * <li><p>It must be 2 to 16 characters in length.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -324,7 +327,7 @@ public class DescribeDatabaseResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The unique ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ABB39CC3-4488-4857-905D-2E4A051D0521</p>
@@ -335,7 +338,7 @@ public class DescribeDatabaseResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The database size.</p>
+         * <p>The size of the database.</p>
          * 
          * <strong>example:</strong>
          * <p>2000 MB</p>
@@ -346,7 +349,7 @@ public class DescribeDatabaseResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The database tablespace.</p>
+         * <p>The tablespace of the database.</p>
          * 
          * <strong>example:</strong>
          * <p>pg_default</p>

@@ -74,7 +74,7 @@ public class GetServiceAccessInfoRequest extends Request {
         } 
 
         /**
-         * <p>The region ID where the SaaS service resides.</p>
+         * <p>The region ID of the SaaS service.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>

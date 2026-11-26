@@ -67,7 +67,7 @@ public class DescribeBranchResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The branch information. Each element represents a Supabase branch.</p>
+         * <p>The list of branches. Each element represents a Supabase branch.</p>
          */
         public Builder branch(Branch branch) {
             this.branch = branch;
@@ -444,7 +444,7 @@ public class DescribeBranchResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The branch name.</p>
+             * <p>The name of the branch.</p>
              * 
              * <strong>example:</strong>
              * <p>dev</p>
@@ -477,7 +477,7 @@ public class DescribeBranchResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The branch description.</p>
+             * <p>The description of the branch.</p>
              * 
              * <strong>example:</strong>
              * <p>test branch</p>
@@ -488,7 +488,7 @@ public class DescribeBranchResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the branch expires and is automatically deleted, in ISO 8601 UTC format.</p>
+             * <p>The time when the branch is automatically deleted upon expiration, in ISO 8601 UTC format.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-10-08T09:11:12Z</p>
@@ -499,8 +499,7 @@ public class DescribeBranchResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The initialization source of the branch.</p>
-             * <p>Valid values:</p>
+             * <p>The initialization source of the branch. Valid values:</p>
              * <ul>
              * <li>ParentData: Copies the schema and data from the parent branch. This is the default value.</li>
              * <li>SchemaOnly: Copies only the schema structure.</li>
@@ -515,7 +514,7 @@ public class DescribeBranchResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether this is the default branch.</p>
+             * <p>Indicates whether the branch is the default branch.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -526,7 +525,7 @@ public class DescribeBranchResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The parent branch ID, which specifies the parent branch of a new branch or a query condition.</p>
+             * <p>The ID of the parent branch, which is used to specify the parent branch for a new branch or a query condition.</p>
              * 
              * <strong>example:</strong>
              * <p>br-main</p>
@@ -537,7 +536,7 @@ public class DescribeBranchResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The parent branch name. This value is empty or displayed as - for the primary branch.</p>
+             * <p>The name of the parent branch. For a primary branch, this value is empty or displayed as a hyphen (-).</p>
              * 
              * <strong>example:</strong>
              * <p>main</p>
@@ -548,7 +547,7 @@ public class DescribeBranchResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The LSN of the parent branch at the time this branch was created.</p>
+             * <p>The LSN of the parent branch when the branch was created.</p>
              * 
              * <strong>example:</strong>
              * <p>0/3522648</p>
@@ -559,11 +558,11 @@ public class DescribeBranchResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The data synchronization point in time selected from the parent branch when this branch was created, in ISO 8601 UTC format.</p>
-             * <p>Description:</p>
+             * <p>The data synchronization point in time selected when the branch was created from the parent branch, in ISO 8601 UTC format.</p>
+             * <p>Note:</p>
              * <ul>
-             * <li>For child branches, this value indicates the point in time of the parent branch selected during creation.</li>
-             * <li>If no parent branch exists, the value 1970-01-01T00:00:00.000Z is returned.</li>
+             * <li>For a child branch, the point in time of the parent branch selected during creation is returned.</li>
+             * <li>If the branch has no parent branch, 1970-01-01T00:00:00.000Z is returned.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -575,7 +574,7 @@ public class DescribeBranchResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Supabase project ID that corresponds to the primary branch.</p>
+             * <p>The ID of the Supabase project that corresponds to the primary branch.</p>
              * 
              * <strong>example:</strong>
              * <p>spb-xxxx</p>
@@ -586,7 +585,7 @@ public class DescribeBranchResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether branch protection is enabled. A value of true indicates that branch protection is enabled. A value of false indicates that branch protection is disabled.</p>
+             * <p>Indicates whether branch protection is enabled. A value of true indicates that branch protection is enabled, and a value of false indicates that branch protection is disabled.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -597,11 +596,10 @@ public class DescribeBranchResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The service type.</p>
-             * <p>Valid values:</p>
+             * <p>The service type. Valid values:</p>
              * <ul>
-             * <li>Supabase: Supabase service.</li>
-             * <li>Memory: Memory service.</li>
+             * <li>Supabase: Supabase service</li>
+             * <li>Memory: Memory service</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -613,7 +611,7 @@ public class DescribeBranchResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Supabase project ID that corresponds to the current branch.</p>
+             * <p>The ID of the Supabase project that corresponds to the current branch.</p>
              * 
              * <strong>example:</strong>
              * <p>spb-xxxx</p>
@@ -624,7 +622,7 @@ public class DescribeBranchResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The branch status.</p>
+             * <p>The status of the branch.</p>
              * 
              * <strong>example:</strong>
              * <p>Running</p>
@@ -635,7 +633,7 @@ public class DescribeBranchResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of branch tags.</p>
+             * <p>The list of tags for the branch.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;

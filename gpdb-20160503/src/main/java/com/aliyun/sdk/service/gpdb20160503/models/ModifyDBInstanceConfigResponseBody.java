@@ -93,7 +93,7 @@ public class ModifyDBInstanceConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>gp-bp12ga6v69h86****</p>
@@ -104,10 +104,10 @@ public class ModifyDBInstanceConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message returned if the operation fails.</p>
+         * <p>The error message. This parameter is returned only when the call fails.</p>
          * 
          * <strong>example:</strong>
-         * <p>\&quot;error message\&quot;</p>
+         * <p>&quot;error message&quot;</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -126,14 +126,14 @@ public class ModifyDBInstanceConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The state of the operation. Valid values:</p>
+         * <p>The modification status. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: The operation failed.</li>
-         * <li><strong>1</strong>: The operation is successful.</li>
+         * <li><strong>0</strong>: The modification failed.</li>
+         * <li><strong>1</strong>: The modification succeeded.</li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>1</p>
+         * <p>true</p>
          */
         public Builder status(Boolean status) {
             this.status = status;

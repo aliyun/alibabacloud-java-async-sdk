@@ -106,7 +106,7 @@ public class GetSupabaseProjectDashboardAccountResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The username for accessing the project\&quot;s dashboard.</p>
+         * <p>The password for the Supabase dashboard.</p>
          * 
          * <strong>example:</strong>
          * <p>xxpassword</p>
@@ -117,7 +117,7 @@ public class GetSupabaseProjectDashboardAccountResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The password associated with the dashboard username.</p>
+         * <p>The username for the Supabase dashboard.</p>
          * 
          * <strong>example:</strong>
          * <p>xxuser</p>
@@ -128,7 +128,7 @@ public class GetSupabaseProjectDashboardAccountResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the Supabase project.</p>
+         * <p>The Supabase instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>sbp-twmoe9bakow</p>
@@ -139,7 +139,7 @@ public class GetSupabaseProjectDashboardAccountResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The name of the Supabase project.</p>
+         * <p>The name of the Supabase project. This field is not used.</p>
          * 
          * <strong>example:</strong>
          * <p>supabase_prod</p>
@@ -150,7 +150,7 @@ public class GetSupabaseProjectDashboardAccountResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The unique ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ABB39CC3-4488-4857-905D-2E4A051D****</p>

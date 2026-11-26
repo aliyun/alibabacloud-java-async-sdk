@@ -59,7 +59,7 @@ public class GetSupabaseProjectSpecRequest extends Request {
         } 
 
         /**
-         * <p>The region ID.</p>
+         * <p>The region ID. Specifies the region for the query or operation.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>

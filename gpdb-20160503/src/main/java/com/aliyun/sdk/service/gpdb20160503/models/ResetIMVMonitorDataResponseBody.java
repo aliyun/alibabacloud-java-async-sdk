@@ -78,10 +78,10 @@ public class ResetIMVMonitorDataResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>The execution status of the API operation. Valid values:</p>
          * <ul>
-         * <li><strong>false</strong></li>
-         * <li><strong>true</strong></li>
+         * <li><strong>false</strong>: The execution failed.</li>
+         * <li><strong>true</strong>: The execution succeeded.</li>
          * </ul>
          * 
          * <strong>example:</strong>

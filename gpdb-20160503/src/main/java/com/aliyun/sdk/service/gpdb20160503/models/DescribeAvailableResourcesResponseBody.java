@@ -102,7 +102,7 @@ public class DescribeAvailableResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The available resources.</p>
+         * <p>The information about available resources.</p>
          */
         public Builder resources(java.util.List<Resources> resources) {
             this.resources = resources;
@@ -181,7 +181,7 @@ public class DescribeAvailableResourcesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The maximum number of Segment nodes.</p>
+             * <p>The maximum number of segment nodes.</p>
              * 
              * <strong>example:</strong>
              * <p>256</p>
@@ -192,7 +192,7 @@ public class DescribeAvailableResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The minimum number of Segment nodes.</p>
+             * <p>The minimum number of segment nodes.</p>
              * 
              * <strong>example:</strong>
              * <p>4</p>
@@ -204,7 +204,7 @@ public class DescribeAvailableResourcesResponseBody extends TeaModel {
 
             /**
              * <p>The step size for adding nodes.</p>
-             * <p>For example, if this parameter is set to 4, the number of nodes added must be a multiple of 4 when adding Segment nodes.</p>
+             * <p>For example, if this parameter is set to 4, the number of segment nodes to be added must be a multiple of 4.</p>
              * 
              * <strong>example:</strong>
              * <p>4</p>
@@ -287,7 +287,7 @@ public class DescribeAvailableResourcesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The maximum Segment storage capacity.</p>
+             * <p>The maximum storage capacity of the segment node.</p>
              * 
              * <strong>example:</strong>
              * <p>1000</p>
@@ -298,7 +298,7 @@ public class DescribeAvailableResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The minimum Segment storage capacity.</p>
+             * <p>The minimum storage capacity of the segment node.</p>
              * 
              * <strong>example:</strong>
              * <p>50</p>
@@ -309,7 +309,7 @@ public class DescribeAvailableResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Segment storage expansion step size.</p>
+             * <p>The step size for storage expansion of the segment node.</p>
              * 
              * <strong>example:</strong>
              * <p>50</p>
@@ -444,12 +444,10 @@ public class DescribeAvailableResourcesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The instance series. Valid values:</p>
+             * <p>The instance edition. Valid values:</p>
              * <ul>
-             * <li><p><strong>HighAvailability</strong>: High-availability edition.</p>
-             * </li>
-             * <li><p><strong>Basic</strong>: Basic edition</p>
-             * </li>
+             * <li><strong>HighAvailability</strong>: High-availability Edition.</li>
+             * <li><strong>Basic</strong>: Basic Edition.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -461,7 +459,7 @@ public class DescribeAvailableResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the segment node instance type.</p>
+             * <p>The description of the segment node specifications.</p>
              * 
              * <strong>example:</strong>
              * <p>Single-segment node with 2 cores and 16 GB of memory.</p>
@@ -472,7 +470,7 @@ public class DescribeAvailableResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The display name of the segment node instance type.</p>
+             * <p>The display class of the segment specifications.</p>
              * 
              * <strong>example:</strong>
              * <p>2C16G</p>
@@ -483,7 +481,7 @@ public class DescribeAvailableResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance type of the segment node.</p>
+             * <p>The display class of the segment specifications.</p>
              * 
              * <strong>example:</strong>
              * <p>2C16G</p>
@@ -494,7 +492,7 @@ public class DescribeAvailableResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Details of the segment nodes.</p>
+             * <p>The information about the segment nodes.</p>
              */
             public Builder nodeCount(NodeCount nodeCount) {
                 this.nodeCount = nodeCount;
@@ -502,7 +500,7 @@ public class DescribeAvailableResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Segment storage capacity.</p>
+             * <p>The storage capacity of the segment node.</p>
              */
             public Builder storageSize(StorageSize storageSize) {
                 this.storageSize = storageSize;
@@ -512,12 +510,9 @@ public class DescribeAvailableResourcesResponseBody extends TeaModel {
             /**
              * <p>The storage type. Valid values:</p>
              * <ul>
-             * <li><p><strong>cloud_essd</strong>: ESSD cloud disk.</p>
-             * </li>
-             * <li><p><strong>cloud_efficiency</strong>: Standard cloud disk.</p>
-             * </li>
-             * <li><p><strong>oss</strong>:OSS.</p>
-             * </li>
+             * <li><strong>cloud_essd</strong>: ESSD.</li>
+             * <li><strong>cloud_efficiency</strong>: ultra cloud disk.</li>
+             * <li><strong>oss</strong>: OSS.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -603,10 +598,8 @@ public class DescribeAvailableResourcesResponseBody extends TeaModel {
             /**
              * <p>The instance resource type. Valid values:</p>
              * <ul>
-             * <li><p><strong>ecs</strong>: Elastic storage mode.</p>
-             * </li>
-             * <li><p><strong>serverless</strong>: Serverless mode.</p>
-             * </li>
+             * <li><strong>ecs</strong>: elastic storage mode.</li>
+             * <li><strong>serverless</strong>: Serverless mode.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -618,7 +611,7 @@ public class DescribeAvailableResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The supported engine version.</p>
+             * <p>The supported DPI engine version.</p>
              * 
              * <strong>example:</strong>
              * <p>6.0</p>
@@ -629,7 +622,7 @@ public class DescribeAvailableResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The supported instance types.</p>
+             * <p>The supported instance classes.</p>
              */
             public Builder supportedInstanceClasses(java.util.List<SupportedInstanceClasses> supportedInstanceClasses) {
                 this.supportedInstanceClasses = supportedInstanceClasses;
@@ -696,7 +689,7 @@ public class DescribeAvailableResourcesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Details of the supported engines and instance types.</p>
+             * <p>The supported engines and instance specifications.</p>
              */
             public Builder supportedEngines(java.util.List<SupportedEngines> supportedEngines) {
                 this.supportedEngines = supportedEngines;

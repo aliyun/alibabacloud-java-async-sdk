@@ -128,7 +128,7 @@ public class GetAccountResponseBody extends TeaModel {
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>The instance used by this account to log in is DBInstanceId. The name used to log in is AccountName.</p>
+         * <p>该账号用来登录的实例为DBInstanceId。用来登录的名称为AccountName。</p>
          */
         public Builder accountDescription(String accountDescription) {
             this.accountDescription = accountDescription;

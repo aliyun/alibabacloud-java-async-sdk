@@ -202,7 +202,7 @@ public class TagSupabaseProjectRequest extends Request {
             } 
 
             /**
-             * <p>The tag key. This parameter cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>The tag key. The value cannot be an empty string. The key can be up to 64 characters in length, cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>test-key</p>
@@ -213,7 +213,7 @@ public class TagSupabaseProjectRequest extends Request {
             }
 
             /**
-             * <p>The tag value. This parameter can be an empty string. The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>The tag value. The value can be an empty string. The value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>test-value</p>

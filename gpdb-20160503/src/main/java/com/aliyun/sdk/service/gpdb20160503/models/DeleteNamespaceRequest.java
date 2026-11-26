@@ -153,7 +153,7 @@ public class DeleteNamespaceRequest extends Request {
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>gp-bp152460513z7****</p>
+         * <p>gp-xxxxxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);

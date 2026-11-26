@@ -90,9 +90,9 @@ public class DescribeExtensionRequest extends Request {
         } 
 
         /**
-         * <p>The instance ID.</p>
+         * <p>The ID of the instance.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> Interface to query the details of all AnalyticDB PostgreSQL Instances in the target region, including Instance IDs.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in a specified region, including instance IDs.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -106,11 +106,14 @@ public class DescribeExtensionRequest extends Request {
         }
 
         /**
-         * <p>Database name.</p>
+         * <p>The name of the database.</p>
          * <ul>
-         * <li>Only contain letters, digits, and underscores (_).</li>
-         * <li>Must start with a letter.</li>
-         * <li>Up to 63 characters in length.</li>
+         * <li><p>It can contain only letters, digits, and underscores (_).</p>
+         * </li>
+         * <li><p>It must start with a letter.</p>
+         * </li>
+         * <li><p>It cannot exceed 63 characters in length.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -124,7 +127,7 @@ public class DescribeExtensionRequest extends Request {
         }
 
         /**
-         * <p>The extension name.</p>
+         * <p>The name of the extension.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

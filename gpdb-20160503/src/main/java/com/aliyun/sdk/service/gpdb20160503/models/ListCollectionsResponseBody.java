@@ -153,7 +153,7 @@ public class ListCollectionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -186,7 +186,7 @@ public class ListCollectionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The name of the namespace.</p>
+         * <p>The namespace.</p>
          * 
          * <strong>example:</strong>
          * <p>mynamespace</p>
@@ -197,7 +197,7 @@ public class ListCollectionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The region ID of the instance.</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -219,10 +219,10 @@ public class ListCollectionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>The execution status of the API operation. Valid values:</p>
          * <ul>
-         * <li><strong>success</strong></li>
-         * <li><strong>fail</strong></li>
+         * <li><strong>success</strong>: The operation succeeded.</li>
+         * <li><strong>fail</strong>: The operation failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>

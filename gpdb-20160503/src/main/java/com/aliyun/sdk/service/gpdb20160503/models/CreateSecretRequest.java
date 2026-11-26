@@ -176,7 +176,7 @@ public class CreateSecretRequest extends Request {
         /**
          * <p>The instance ID.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including the instance IDs.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -189,7 +189,7 @@ public class CreateSecretRequest extends Request {
         }
 
         /**
-         * <p>The description of the access credential.</p>
+         * <p>The description of the credential. The description can be up to 255 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -210,7 +210,7 @@ public class CreateSecretRequest extends Request {
         }
 
         /**
-         * <p>The password of the database account that is used to access the instance.</p>
+         * <p>The password for database access.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -236,7 +236,7 @@ public class CreateSecretRequest extends Request {
         }
 
         /**
-         * <p>The name of the access credential. The name must be 1 to 16 characters in length and can contain letters, digits, and underscores (_). If you leave this parameter empty, the value of the Username parameter is used.</p>
+         * <p>The name of the credential. The name can contain letters, digits, and underscores (_), and must be 1 to 16 characters in length. If this parameter is left empty, the value of the Username parameter is used as the secret name.</p>
          * 
          * <strong>example:</strong>
          * <p>testsecret</p>
@@ -248,7 +248,7 @@ public class CreateSecretRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to check the connectivity to the instance by using the name and password of the database account.</p>
+         * <p>Specifies whether to test the instance connection by using the username and password.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -260,7 +260,14 @@ public class CreateSecretRequest extends Request {
         }
 
         /**
-         * <p>The name of the database account that is used to access the instance.</p>
+         * <p>The username for database access.</p>
+         * <blockquote>
+         * <p>Limits:</p>
+         * <ul>
+         * <li>The username can contain lowercase letters, digits, and underscores (_), and must start with a lowercase letter.</li>
+         * <li>The username can be up to 64 characters in length.</li>
+         * </ul>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -273,7 +280,7 @@ public class CreateSecretRequest extends Request {
         }
 
         /**
-         * <p>The ID of the workspace that consists of multiple AnalyticDB for PostgreSQL instances. You must specify one of the WorkspaceId and DBInstanceId parameters. If you specify both parameters, the WorkspaceId parameter takes precedence.</p>
+         * <p>The ID of the workspace that consists of multiple database instances. This parameter and the DBInstanceId parameter cannot be left empty at the same time. If both parameters are specified, this parameter takes precedence.</p>
          * 
          * <strong>example:</strong>
          * <p>gp-ws-*****</p>

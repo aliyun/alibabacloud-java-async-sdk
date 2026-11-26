@@ -221,7 +221,7 @@ public class DescribeDiagnosisSQLInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The execution duration of the query. Unit: seconds.</p>
+         * <p>The total execution duration of the query, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>16</p>
@@ -254,10 +254,10 @@ public class DescribeDiagnosisSQLInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the operator.</p>
+         * <p>The operator information.</p>
          * 
          * <strong>example:</strong>
-         * <p>{\&quot;children\&quot;:********\&quot;startTime\&quot;:1660719602199}</p>
+         * <p>{&quot;children&quot;:********&quot;startTime&quot;:1660719602199}</p>
          */
         public Builder queryPlan(String queryPlan) {
             this.queryPlan = queryPlan;
@@ -287,7 +287,7 @@ public class DescribeDiagnosisSQLInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the session that contains the query.</p>
+         * <p>The ID of the session to which the query belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>658****</p>
@@ -298,10 +298,10 @@ public class DescribeDiagnosisSQLInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The sequence of metrics.</p>
+         * <p>The sorting structure based on metrics.</p>
          * 
          * <strong>example:</strong>
-         * <p>{\&quot;costSort\&quot;:******:\&quot;Seq Scan-9\&quot;,\&quot;value\&quot;:0.0}]}</p>
+         * <p>{&quot;costSort&quot;:******:&quot;Seq Scan-9&quot;,&quot;value&quot;:0.0}]}</p>
          */
         public Builder sortedMetrics(String sortedMetrics) {
             this.sortedMetrics = sortedMetrics;
@@ -309,7 +309,7 @@ public class DescribeDiagnosisSQLInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The start time of the query. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <p>The start time of the query. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1660719602199</p>
@@ -320,10 +320,10 @@ public class DescribeDiagnosisSQLInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The execution state of the query. Valid values:</p>
+         * <p>The execution status of the SQL statement. Valid values:</p>
          * <ul>
-         * <li><strong>running</strong></li>
-         * <li><strong>finished</strong></li>
+         * <li><strong>running</strong>: The SQL statement is being executed.</li>
+         * <li><strong>finished</strong>: The execution of the SQL statement is complete.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -335,10 +335,10 @@ public class DescribeDiagnosisSQLInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the execution plan.</p>
+         * <p>The query plan information.</p>
          * 
          * <strong>example:</strong>
-         * <hr>
+         * <p>Seq Scan on example_table</p>
          */
         public Builder textPlan(String textPlan) {
             this.textPlan = textPlan;

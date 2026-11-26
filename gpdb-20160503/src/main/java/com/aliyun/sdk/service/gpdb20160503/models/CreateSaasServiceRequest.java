@@ -173,13 +173,13 @@ public class CreateSaasServiceRequest extends Request {
         /**
          * <p>The billing method. Valid values:</p>
          * <ul>
-         * <li><strong>Postpaid</strong>: pay-as-you-go.</li>
-         * <li><strong>Prepaid</strong>: subscription.</li>
+         * <li><strong>Postpaid</strong>: pay-as-you-go</li>
+         * <li><strong>Prepaid</strong>: subscription</li>
          * </ul>
          * <blockquote>
          * <ul>
-         * <li>If you leave this parameter empty, a Free type is created by default.</li>
-         * <li>The subscription billing method offers discounts for purchases of one year or longer. Select a billing method as needed.</li>
+         * <li>If you do not specify this parameter, a free service is created by default.</li>
+         * <li>In subscription mode, you can get a discount if you purchase a subscription with a duration of one year or longer. Select a billing method as needed.</li>
          * </ul>
          * </blockquote>
          * 
@@ -193,13 +193,13 @@ public class CreateSaasServiceRequest extends Request {
         }
 
         /**
-         * <p>The unit of the duration for which you want to purchase the resource. Valid values:</p>
+         * <p>The unit of the subscription duration. Valid values:</p>
          * <ul>
-         * <li><strong>Month</strong>: month.</li>
-         * <li><strong>Year</strong>: year.</li>
+         * <li><strong>Month</strong>: month</li>
+         * <li><strong>Year</strong>: year</li>
          * </ul>
          * <blockquote>
-         * <p>This parameter is required when you create a subscription instance.</p>
+         * <p>This parameter is required when you create a subscription service.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -212,7 +212,7 @@ public class CreateSaasServiceRequest extends Request {
         }
 
         /**
-         * <p>Deprecated.</p>
+         * <p><strong>[Deprecated]</strong></p>
          * 
          * <strong>example:</strong>
          * <p>deprecated</p>
@@ -253,13 +253,13 @@ public class CreateSaasServiceRequest extends Request {
         }
 
         /**
-         * <p>The duration for which you want to purchase the resource. Valid values:</p>
+         * <p>The subscription duration of the purchased resource. Valid values:</p>
          * <ul>
-         * <li>If <strong>Period</strong> is set to <strong>Month</strong>, the valid values are 1 to 11.</li>
-         * <li>If <strong>Period</strong> is set to <strong>Year</strong>, the valid values are 1 to 3.</li>
+         * <li>If <strong>Period</strong> is set to <strong>Month</strong>, valid values are 1 to 11.</li>
+         * <li>If <strong>Period</strong> is set to <strong>Year</strong>, valid values are 1 to 3.</li>
          * </ul>
          * <blockquote>
-         * <p>This parameter is required when you create a subscription instance.</p>
+         * <p>This parameter is required when you create a subscription service.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

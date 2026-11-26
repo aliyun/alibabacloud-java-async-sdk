@@ -171,7 +171,7 @@ public class ListBranchesRequest extends Request {
         } 
 
         /**
-         * <p>The maximum number of records to return in this query.</p>
+         * <p>The maximum number of entries to return for the current query.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -183,7 +183,7 @@ public class ListBranchesRequest extends Request {
         }
 
         /**
-         * <p>The cursor for paging query. You do not need to specify this parameter for the first query. For subsequent queries, use the NextToken value returned in the previous response.</p>
+         * <p>The cursor for the paging query. You do not need to specify this parameter for the first query. For subsequent queries, use the NextToken value returned from the previous query.</p>
          * 
          * <strong>example:</strong>
          * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -207,7 +207,7 @@ public class ListBranchesRequest extends Request {
         }
 
         /**
-         * <p>The number of records per page.</p>
+         * <p>The number of entries per page.</p>
          * <p>Valid values:</p>
          * <ul>
          * <li>10</li>
@@ -227,7 +227,7 @@ public class ListBranchesRequest extends Request {
         }
 
         /**
-         * <p>The parent branch ID. Specifies the parent branch for a new branch or as a query filter condition.</p>
+         * <p>The ID of the parent branch. This parameter is used to specify the parent branch for a new branch or a query condition.</p>
          * 
          * <strong>example:</strong>
          * <p>br-main</p>
@@ -239,7 +239,7 @@ public class ListBranchesRequest extends Request {
         }
 
         /**
-         * <p>The region ID. This parameter is required when you create a primary branch. When you create a sub-branch, the region is inherited from the primary branch by default.</p>
+         * <p>The region ID. This parameter is required when you create a primary branch. When you create a child branch, the region of the primary branch is inherited by default.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>
@@ -251,7 +251,7 @@ public class ListBranchesRequest extends Request {
         }
 
         /**
-         * <p>The search keyword. Supports fuzzy search by branch ID or branch name.</p>
+         * <p>The search keyword. Fuzzy search by branch ID or branch name is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>main</p>
@@ -263,12 +263,12 @@ public class ListBranchesRequest extends Request {
         }
 
         /**
-         * <p>The sort field.</p>
+         * <p>The sorting field.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>BranchName: sorts by branch name.</li>
-         * <li>CreateTime: sorts by creation time.</li>
-         * <li>LastRunTime: sorts by last run time.</li>
+         * <li>BranchName: Sort by branch name.</li>
+         * <li>CreateTime: Sort by creation time.</li>
+         * <li>LastRunTime: Sort by last run time.</li>
          * </ul>
          * <p>Default value: CreateTime.</p>
          * 
@@ -282,11 +282,11 @@ public class ListBranchesRequest extends Request {
         }
 
         /**
-         * <p>The sort direction.</p>
+         * <p>The sorting order.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>Asc: ascending order.</li>
-         * <li>Desc: descending order.</li>
+         * <li>Asc: Ascending order.</li>
+         * <li>Desc: Descending order.</li>
          * </ul>
          * <p>Default value: Desc.</p>
          * 

@@ -150,7 +150,7 @@ public class CancelUploadDocumentJobRequest extends Request {
         /**
          * <p>The name of the document collection.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/2618448.html">CreateDocumentCollection</a> operation to create a document collection and call the <a href="https://help.aliyun.com/document_detail/2618452.html">ListDocumentCollections</a> operation to query a list of document collections.</p>
+         * <p>The document collection is created by calling the <a href="https://help.aliyun.com/document_detail/2618448.html">CreateDocumentCollection</a> operation. You can call the <a href="https://help.aliyun.com/document_detail/2618452.html">ListDocumentCollections</a> operation to view the created document collections.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -164,9 +164,9 @@ public class CancelUploadDocumentJobRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance for which vector engine optimization is enabled.</p>
+         * <p>The ID of the instance for which the vector engine optimization feature is enabled.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including the instance IDs.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -180,7 +180,7 @@ public class CancelUploadDocumentJobRequest extends Request {
         }
 
         /**
-         * <p>The ID of the document upload job. You can call the <code>UploadDocumentAsync</code> operation to query the job ID.</p>
+         * <p>The ID of the document upload task. You can obtain the task ID from the response of the UploadDocumentAsync operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -193,9 +193,9 @@ public class CancelUploadDocumentJobRequest extends Request {
         }
 
         /**
-         * <p>The name of the namespace. Default value: public.</p>
+         * <p>The namespace. Default value: public.</p>
          * <blockquote>
-         * <p> You can call the CreateNamespace operation to create a namespace and call the ListNamespaces operation to query a list of namespaces.</p>
+         * <p>You can call the CreateNamespace operation to create a namespace and call the ListNamespaces operation to view the namespace list.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -210,7 +210,7 @@ public class CancelUploadDocumentJobRequest extends Request {
         /**
          * <p>The password of the namespace.</p>
          * <blockquote>
-         * <p> The value of this parameter is specified when you call the CreateNamespace operation.</p>
+         * <p>This value is specified when you call the CreateNamespace operation.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 

@@ -149,7 +149,7 @@ public class DescribeDBClusterPerformanceRequest extends Request {
         /**
          * <p>The instance ID.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query details about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in a specified region, including the instance IDs.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -163,9 +163,9 @@ public class DescribeDBClusterPerformanceRequest extends Request {
         }
 
         /**
-         * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the <code>YYYY-MM-DDTHH:mmZ</code> format.</p>
+         * <p>The end time of the query. Specify the time in the <code>YYYY-MM-DDTHH:mmZ</code> format.</p>
          * <blockquote>
-         * <p>The end time must be later than the start time. The maximum time range that can be specified is seven days.</p>
+         * <p>The end time must be later than the start time, and the time interval between the start time and the end time cannot exceed 7 days.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -179,7 +179,7 @@ public class DescribeDBClusterPerformanceRequest extends Request {
         }
 
         /**
-         * <p>The performance metric that you want to query. Separate multiple values with commas (,). For more information, see <a href="https://help.aliyun.com/document_detail/86943.html">Performance parameters</a>.</p>
+         * <p>The names of the performance metrics. Separate multiple metrics with commas (,). For more information, see <a href="https://help.aliyun.com/document_detail/86943.html">Performance metric table</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -194,11 +194,11 @@ public class DescribeDBClusterPerformanceRequest extends Request {
         /**
          * <p>The node type. Valid values:</p>
          * <ul>
-         * <li><strong>master</strong>: coordinator node.</li>
-         * <li><strong>segment</strong>: compute node.</li>
+         * <li><strong>master</strong>: Master node.</li>
+         * <li><strong>segment</strong>: Segment node.</li>
          * </ul>
          * <blockquote>
-         * <p>If you do not specify this parameter, the performance metrics of all nodes are returned.</p>
+         * <p>If you do not specify this parameter, the monitoring metrics of all nodes are returned.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -211,13 +211,13 @@ public class DescribeDBClusterPerformanceRequest extends Request {
         }
 
         /**
-         * <p>The nodes for which you want to query performance metrics. Separate multiple values with commas (,). Example: <code>master-10******1,master-10******2</code>. You can call the <a href="https://help.aliyun.com/document_detail/390136.html">DescribeDBClusterNode</a> operation to query the names of nodes.</p>
-         * <p>You can also filter the nodes based on their metric values. Valid values:</p>
+         * <p>The names of the nodes for which you want to query monitoring metrics. Separate multiple node names with commas (,), such as <code>master-10******1,master-10******2</code>. You can call the <a href="https://help.aliyun.com/document_detail/390136.html">DescribeDBClusterNode</a> operation to obtain the node names.</p>
+         * <p>You can also filter nodes based on the values of monitoring metrics. Valid values:</p>
          * <ul>
-         * <li><strong>top10</strong>: the 10 nodes that have the highest metric values.</li>
-         * <li><strong>top20</strong>: the 20 nodes that have the highest metric values.</li>
-         * <li><strong>bottom10</strong>: the 10 nodes that have the lowest metric values.</li>
-         * <li><strong>bottom20</strong>: the 20 nodes that have the lowest metric values.</li>
+         * <li><strong>top10</strong>: The top 10 nodes with the highest monitoring metric values.</li>
+         * <li><strong>top20</strong>: The top 20 nodes with the highest monitoring metric values.</li>
+         * <li><strong>bottom10</strong>: The bottom 10 nodes with the lowest monitoring metric values.</li>
+         * <li><strong>bottom20</strong>: The bottom 20 nodes with the lowest monitoring metric values.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -242,9 +242,9 @@ public class DescribeDBClusterPerformanceRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <code>YYYY-MM-DDTHH:mmZ</code> format.</p>
+         * <p>The start time of the query. Specify the time in the <code>YYYY-MM-DDTHH:mmZ</code> format.</p>
          * <blockquote>
-         * <p>You can query monitoring information only within the last 30 days.</p>
+         * <p>You can query monitoring information only for the last 30 days.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 

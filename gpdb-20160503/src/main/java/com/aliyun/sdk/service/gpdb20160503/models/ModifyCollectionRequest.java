@@ -195,7 +195,7 @@ public class ModifyCollectionRequest extends Request {
          * <p>A JSON string that specifies the operations to add or modify metadata fields. For the required format, see the example.</p>
          * <p>Use this parameter to add new metadata fields, rename existing metadata fields, or perform implicit data type conversion on existing fields.</p>
          * <p>Details:</p>
-         * <p>To add a new metadata field, set <code>operations[*].operator = add</code>. Then, use <code>operations[*].newMetaName</code> to specify the field\&quot;s name, <code>operations[*].newMetaType</code> for its data type, and <code>operations[*].fullTextRetrieval</code> to enable full-text retrieval for it.</p>
+         * <p>To add a new metadata field, set <code>operations[*].operator = add</code>. Then, use <code>operations[*].newMetaName</code> to specify the field&quot;s name, <code>operations[*].newMetaType</code> for its data type, and <code>operations[*].fullTextRetrieval</code> to enable full-text retrieval for it.</p>
          * <p>To modify an existing metadata field, set <code>operations[*].operator = replace</code>. You must specify the current field name in <code>operations[*].oldMetaName</code>. To rename the field, provide the new name in <code>operations[*].newMetaName</code>. To change its data type, provide the new type in <code>operations[*].newMetaType</code>.</p>
          * <blockquote>
          * <ul>

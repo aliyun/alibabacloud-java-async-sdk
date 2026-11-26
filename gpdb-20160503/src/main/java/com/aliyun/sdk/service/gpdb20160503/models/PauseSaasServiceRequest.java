@@ -86,7 +86,7 @@ public class PauseSaasServiceRequest extends Request {
         }
 
         /**
-         * <p>The service ID.</p>
+         * <p>The ID of the service.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

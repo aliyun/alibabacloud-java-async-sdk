@@ -67,7 +67,7 @@ public class DescribeDataReDistributeInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The data redistribution information.</p>
+         * <p>The data redistribution task information.</p>
          */
         public Builder dataReDistributeInfo(DataReDistributeInfo dataReDistributeInfo) {
             this.dataReDistributeInfo = dataReDistributeInfo;
@@ -196,7 +196,7 @@ public class DescribeDataReDistributeInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The execution information. If an error occurs, the error message is returned.</p>
+             * <p>The runtime information. If an error occurs, detailed error information is displayed.</p>
              * 
              * <strong>example:</strong>
              * <p>redistributing</p>
@@ -207,7 +207,7 @@ public class DescribeDataReDistributeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The progress of data redistribution. Unit: %.</p>
+             * <p>The data redistribution progress, in percentage.</p>
              * 
              * <strong>example:</strong>
              * <p>33</p>
@@ -251,7 +251,7 @@ public class DescribeDataReDistributeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The execution type. The value <strong>immediate</strong> is returned, indicating immediate execution.</p>
+             * <p>The execution type. The value is fixed as <strong>immediate</strong>, which indicates immediate execution.</p>
              * 
              * <strong>example:</strong>
              * <p>immediate</p>

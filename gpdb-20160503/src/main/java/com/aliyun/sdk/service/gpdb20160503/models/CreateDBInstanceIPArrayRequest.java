@@ -104,9 +104,9 @@ public class CreateDBInstanceIPArrayRequest extends Request {
         } 
 
         /**
-         * <p>The cluster ID.</p>
+         * <p>The instance ID.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in a specified region, including instance IDs.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -120,7 +120,7 @@ public class CreateDBInstanceIPArrayRequest extends Request {
         }
 
         /**
-         * <p>The attribute of the IP whitelist group.</p>
+         * <p>The property value of the IP address whitelist group.</p>
          * 
          * <strong>example:</strong>
          * <p>taffyFish</p>
@@ -132,7 +132,7 @@ public class CreateDBInstanceIPArrayRequest extends Request {
         }
 
         /**
-         * <p>The name of the IP whitelist group.</p>
+         * <p>The name of the IP address whitelist group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -145,7 +145,7 @@ public class CreateDBInstanceIPArrayRequest extends Request {
         }
 
         /**
-         * <p>The IP addresses in the IP whitelist group. A maximum of 1,000 IP addresses or CIDR blocks are allowed.</p>
+         * <p>The list of IP addresses in the IP address whitelist group. You can specify up to 1,000 IP addresses.</p>
          * <p>This parameter is required.</p>
          */
         public Builder securityIPList(java.util.List<String> securityIPList) {

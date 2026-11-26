@@ -106,7 +106,7 @@ public class QueryCollectionDataResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The matched results.</p>
+         * Matches.
          */
         public Builder matches(Matches matches) {
             this.matches = matches;
@@ -114,7 +114,7 @@ public class QueryCollectionDataResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Details about the error, returned if the request fails.</p>
+         * <p>The detailed information returned when the request fails.</p>
          * 
          * <strong>example:</strong>
          * <p>0.1234</p>
@@ -136,12 +136,10 @@ public class QueryCollectionDataResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The status of the request. Valid values:</p>
+         * <p>The status. Valid values:</p>
          * <ul>
-         * <li><p><strong>success</strong>: The request was successful.</p>
-         * </li>
-         * <li><p><strong>fail</strong>: The request failed.</p>
-         * </li>
+         * <li><strong>success</strong>: Successful.</li>
+         * <li><strong>fail</strong>: Failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -153,7 +151,7 @@ public class QueryCollectionDataResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of hits for the search. This parameter is returned only when the Offset parameter in the request is not 0.</p>
+         * <p>The total number of hits for the search condition. This parameter is returned only when the Offset parameter in the request is not 0.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>

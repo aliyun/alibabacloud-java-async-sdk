@@ -122,7 +122,7 @@ public class DescribeDBInstanceIPArrayListRequest extends Request {
          * <p>The ID of the resource group to which the instance belongs. For information about how to obtain the ID of a resource group, see <a href="https://help.aliyun.com/document_detail/151181.html">View basic information of a resource group</a>.</p>
          * 
          * <strong>example:</strong>
-         * <p>null</p>
+         * <p>rg-bp67acfmxazb4p****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

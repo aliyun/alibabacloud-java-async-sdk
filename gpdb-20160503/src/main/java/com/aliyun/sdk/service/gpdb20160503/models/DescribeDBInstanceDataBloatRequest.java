@@ -116,9 +116,9 @@ public class DescribeDBInstanceDataBloatRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including instance IDs.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including the instance IDs.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -144,7 +144,7 @@ public class DescribeDBInstanceDataBloatRequest extends Request {
         }
 
         /**
-         * <p>The sorting order.</p>
+         * <p>The sorting condition.</p>
          * 
          * <strong>example:</strong>
          * <p>{Field: TableName, Type: Desc}</p>
@@ -156,7 +156,7 @@ public class DescribeDBInstanceDataBloatRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return. The value must be an integer that is greater than 0. Default value: <strong>1</strong>.</p>
+         * <p>The page number. The value must be greater than 0 and cannot exceed the maximum value of the Integer type. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -168,7 +168,7 @@ public class DescribeDBInstanceDataBloatRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page. Valid values:</p>
+         * <p>The number of entries per page. Valid values:</p>
          * <ul>
          * <li><strong>30</strong></li>
          * <li><strong>50</strong></li>

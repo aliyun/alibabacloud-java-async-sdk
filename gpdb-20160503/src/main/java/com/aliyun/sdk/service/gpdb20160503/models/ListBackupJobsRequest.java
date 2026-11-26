@@ -76,10 +76,10 @@ public class ListBackupJobsRequest extends Request {
         /**
          * <p>The backup mode. Valid values:</p>
          * <ul>
-         * <li>Automated</li>
-         * <li>Manual</li>
+         * <li>Automated: automatic backup</li>
+         * <li>Manual: manual backup</li>
          * </ul>
-         * <p>If you do not specify this parameter, all backup sets are returned.</p>
+         * <p>If this parameter is not specified, all backup tasks are returned.</p>
          * 
          * <strong>example:</strong>
          * <p>Automated</p>
@@ -91,9 +91,9 @@ public class ListBackupJobsRequest extends Request {
         }
 
         /**
-         * <p>The instance ID.</p>
+         * <p>The ID of the instance.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in the specified region, including the instance IDs.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 

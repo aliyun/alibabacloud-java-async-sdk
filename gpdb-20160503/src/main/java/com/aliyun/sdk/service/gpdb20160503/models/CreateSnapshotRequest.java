@@ -116,7 +116,7 @@ public class CreateSnapshotRequest extends Request {
         } 
 
         /**
-         * <p>The idempotence token. Ensures that repeated requests do not result in duplicate operations.</p>
+         * <p>The idempotency token. It ensures that duplicate requests do not execute the same operation.</p>
          * 
          * <strong>example:</strong>
          * <p>123e4567-e89b-12d3-a456-426655440000</p>
@@ -128,7 +128,7 @@ public class CreateSnapshotRequest extends Request {
         }
 
         /**
-         * <p>The LSN for the snapshot. You must specify either this parameter or SnapshotTimestamp. If this parameter is specified, the snapshot is created based on the specified LSN.</p>
+         * <p>The log sequence number (LSN) for the snapshot. You must specify either this parameter or SnapshotTimestamp. If specified, the snapshot is created based on this LSN.</p>
          * 
          * <strong>example:</strong>
          * <p>0/3522648</p>
@@ -140,7 +140,7 @@ public class CreateSnapshotRequest extends Request {
         }
 
         /**
-         * <p>The Supabase project ID.</p>
+         * <p>The ID of the Supabase project.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -153,7 +153,7 @@ public class CreateSnapshotRequest extends Request {
         }
 
         /**
-         * <p>The region ID. Specifies the region in which to perform the operation.</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -165,7 +165,7 @@ public class CreateSnapshotRequest extends Request {
         }
 
         /**
-         * <p>The point in time for the snapshot. You must specify either this parameter or Lsn. If this parameter is specified, the snapshot is created based on the specified point in time.</p>
+         * <p>The point in time for the snapshot. You must specify either this parameter or Lsn. If specified, the snapshot is created based on this point in time.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-04-08T09:11:12Z</p>

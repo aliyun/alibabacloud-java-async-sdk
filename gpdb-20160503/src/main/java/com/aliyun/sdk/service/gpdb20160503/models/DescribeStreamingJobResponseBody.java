@@ -379,7 +379,7 @@ public class DescribeStreamingJobResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Target database account.</p>
+         * <p>The destination database account.</p>
          * 
          * <strong>example:</strong>
          * <p>test-account</p>
@@ -390,7 +390,7 @@ public class DescribeStreamingJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Delivery guarantee.</p>
+         * <p>The delivery guarantee.</p>
          * 
          * <strong>example:</strong>
          * <p>ATLEAST / EXACTLY</p>
@@ -401,7 +401,7 @@ public class DescribeStreamingJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Creation time.</p>
+         * <p>The creation time.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
          * 
          * <strong>example:</strong>
@@ -413,7 +413,7 @@ public class DescribeStreamingJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Data source ID.</p>
+         * <p>The data source ID.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -424,7 +424,7 @@ public class DescribeStreamingJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Data source name.</p>
+         * <p>The data source name.</p>
          * 
          * <strong>example:</strong>
          * <p>test_kafka</p>
@@ -435,7 +435,7 @@ public class DescribeStreamingJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Target data table mapping field list.</p>
+         * <p>The list of mapped columns in the destination table.</p>
          */
         public Builder destColumns(java.util.List<String> destColumns) {
             this.destColumns = destColumns;
@@ -443,7 +443,7 @@ public class DescribeStreamingJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Target database name.</p>
+         * <p>The destination database name.</p>
          * 
          * <strong>example:</strong>
          * <p>dest-db</p>
@@ -454,7 +454,7 @@ public class DescribeStreamingJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Target namespace.</p>
+         * <p>The destination namespace.</p>
          * 
          * <strong>example:</strong>
          * <p>dest-schema</p>
@@ -465,7 +465,7 @@ public class DescribeStreamingJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Target table name.</p>
+         * <p>The destination table name.</p>
          * 
          * <strong>example:</strong>
          * <p>dest-table</p>
@@ -476,7 +476,7 @@ public class DescribeStreamingJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>When data in Kafka does not match the ADBPG target table, it can cause write failures. This value represents the number of error rows allowed; if exceeded, the task will fail.</p>
+         * <p>The maximum number of allowed error rows. If data in Kafka does not match the destination AnalyticDB for PostgreSQL table, a write failure occurs. If the number of error rows exceeds this value, the job fails.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -487,7 +487,7 @@ public class DescribeStreamingJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Service status information, such as the reason for an exception. It is empty in the normal Running state.</p>
+         * <p>The service status message. For example, if an exception occurs, the cause of the exception is displayed. This parameter is empty when the service is in the Running state.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;&quot;</p>
@@ -498,9 +498,9 @@ public class DescribeStreamingJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Fallback offset, which is the fallback position</p>
+         * <p>The fallback offset.</p>
          * <ul>
-         * <li>The FallbackOffset parameter defines the behavior when the consumer has not requested a specific offset to consume or the requested offset exceeds the current record\&quot;s offset information in the Kafka cluster. You can choose to start consuming from the earliest (newest) or latest (oldest) offset.</li>
+         * <li>The FallbackOffset parameter defines the behavior when a consumer does not request a specific offset to consume, or when the requested offset exceeds the offset range recorded in the current Kafka cluster. You can choose to start consuming from the earliest or latest offset.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -512,7 +512,7 @@ public class DescribeStreamingJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Kafka group name</p>
+         * <p>The Kafka group name.</p>
          * 
          * <strong>example:</strong>
          * <p>test_group</p>
@@ -523,7 +523,7 @@ public class DescribeStreamingJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Job configuration file.</p>
+         * <p>The job configuration file.</p>
          * 
          * <strong>example:</strong>
          * <p>DATABASE: adbpgss_test
@@ -543,7 +543,7 @@ public class DescribeStreamingJobResponseBody extends TeaModel {
          *         TYPE: int
          *       FORMAT: delimited
          *       DELIMITED_OPTION:
-         *         DELIMITER: \&quot;|\&quot;
+         *         DELIMITER: &quot;|&quot;
          *     VALUE:
          *       COLUMNS:
          *       - TYPE: integer
@@ -580,7 +580,7 @@ public class DescribeStreamingJobResponseBody extends TeaModel {
          *         NAME: l_comment
          *       FORMAT: delimited
          *       DELIMITED_OPTION:
-         *         DELIMITER: \&quot;|\&quot;
+         *         DELIMITER: &quot;|&quot;
          *     ERROR_LIMIT: 10
          *   OUTPUT:
          *     SCHEMA: adbpgss_test
@@ -653,7 +653,7 @@ public class DescribeStreamingJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Job description.</p>
+         * <p>The job description.</p>
          * 
          * <strong>example:</strong>
          * <p>test_job</p>
@@ -664,7 +664,7 @@ public class DescribeStreamingJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Job ID.</p>
+         * <p>The job ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -675,7 +675,7 @@ public class DescribeStreamingJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Job name.</p>
+         * <p>The job name.</p>
          * 
          * <strong>example:</strong>
          * <p>test-job</p>
@@ -686,7 +686,7 @@ public class DescribeStreamingJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Match columns, usually all primary key columns of the target table. If all column values in this configuration are the same, the two rows of data are considered duplicates.</p>
+         * <p>The match columns. Typically, these are all primary key columns of the destination table. If the values of all columns in this configuration are the same, the two rows of data are considered duplicate.</p>
          */
         public Builder matchColumns(java.util.List<String> matchColumns) {
             this.matchColumns = matchColumns;
@@ -694,10 +694,10 @@ public class DescribeStreamingJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Configuration mode</p>
+         * <p>The configuration mode.</p>
          * <ol>
-         * <li>Basic mode requires specifying some configuration fields</li>
-         * <li>Professional mode supports submitting YAML files</li>
+         * <li>basic: requires specific configuration fields.</li>
+         * <li>professional: supports submitting YAML files.</li>
          * </ol>
          * 
          * <strong>example:</strong>
@@ -709,7 +709,7 @@ public class DescribeStreamingJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Last modified time.</p>
+         * <p>The last modification time.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
          * 
          * <strong>example:</strong>
@@ -721,7 +721,7 @@ public class DescribeStreamingJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Target database password.</p>
+         * <p>The destination database password.</p>
          * 
          * <strong>example:</strong>
          * <p>pwd123</p>
@@ -732,7 +732,7 @@ public class DescribeStreamingJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>B4CAF581-2AC7-41AD-8940-D56DF7AADF5B</p>
@@ -743,7 +743,7 @@ public class DescribeStreamingJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Source field list.</p>
+         * <p>The list of source columns.</p>
          */
         public Builder srcColumns(java.util.List<String> srcColumns) {
             this.srcColumns = srcColumns;
@@ -751,15 +751,15 @@ public class DescribeStreamingJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Service status, with possible values:</p>
+         * <p>The service status. Valid values:</p>
          * <ul>
-         * <li><p>Init: Initializing</p>
+         * <li><p>Init: initializing.</p>
          * </li>
-         * <li><p>Running: Running</p>
+         * <li><p>Running: running.</p>
          * </li>
-         * <li><p>Exception: Exception</p>
+         * <li><p>Exception: an exception occurred.</p>
          * </li>
-         * <li><p>Paused: Paused</p>
+         * <li><p>Paused: paused.</p>
          * </li>
          * </ul>
          * 
@@ -772,7 +772,7 @@ public class DescribeStreamingJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Update columns, usually all non-primary key columns of the target table. When data duplication is determined through MatchColumns, updating the UpdateColumns column values will result in new data overwriting old data.</p>
+         * <p>The update columns. Typically, these are all non-primary key columns of the destination table. When duplicate data is identified based on the match columns, the values of the update columns are updated so that the new data overwrites the old data.</p>
          */
         public Builder updateColumns(java.util.List<String> updateColumns) {
             this.updateColumns = updateColumns;
@@ -780,7 +780,7 @@ public class DescribeStreamingJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Write mode.</p>
+         * <p>The write mode.</p>
          * 
          * <strong>example:</strong>
          * <p>INSERT/UPDATE/MERGE</p>

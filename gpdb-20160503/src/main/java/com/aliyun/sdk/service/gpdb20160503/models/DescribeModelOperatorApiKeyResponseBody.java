@@ -35,6 +35,9 @@ public class DescribeModelOperatorApiKeyResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
+    @com.aliyun.core.annotation.NameInMap("Status")
+    private String status;
+
     private DescribeModelOperatorApiKeyResponseBody(Builder builder) {
         this.apiKey = builder.apiKey;
         this.apiKeyId = builder.apiKeyId;
@@ -42,6 +45,7 @@ public class DescribeModelOperatorApiKeyResponseBody extends TeaModel {
         this.description = builder.description;
         this.endpoint = builder.endpoint;
         this.requestId = builder.requestId;
+        this.status = builder.status;
     }
 
     public static Builder builder() {
@@ -98,6 +102,13 @@ public class DescribeModelOperatorApiKeyResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    /**
+     * @return status
+     */
+    public String getStatus() {
+        return this.status;
+    }
+
     public static final class Builder {
         private String apiKey; 
         private Integer apiKeyId; 
@@ -105,6 +116,7 @@ public class DescribeModelOperatorApiKeyResponseBody extends TeaModel {
         private String description; 
         private String endpoint; 
         private String requestId; 
+        private String status; 
 
         private Builder() {
         } 
@@ -116,10 +128,11 @@ public class DescribeModelOperatorApiKeyResponseBody extends TeaModel {
             this.description = model.description;
             this.endpoint = model.endpoint;
             this.requestId = model.requestId;
+            this.status = model.status;
         } 
 
         /**
-         * <p>The API key content.</p>
+         * <p>The plaintext API key. This field is returned only when Status is Running.</p>
          * 
          * <strong>example:</strong>
          * <p>QEDGOTAJOG</p>
@@ -130,7 +143,7 @@ public class DescribeModelOperatorApiKeyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>API KEY ID。</p>
+         * <p>The API key ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -163,7 +176,7 @@ public class DescribeModelOperatorApiKeyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The endpoint.</p>
+         * <p>The endpoint of the model operator service. This field is returned only when Status is Running.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://xxxx">https://xxxx</a></p>
@@ -181,6 +194,24 @@ public class DescribeModelOperatorApiKeyResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * <p>The status of the API key. Valid values:</p>
+         * <ul>
+         * <li>Creating: The API key is being created.</li>
+         * <li>Running: The API key is running.</li>
+         * <li>Locked: The API key is locked and cannot be used to call the model operator service.</li>
+         * <li>Deleting: The API key is being deleted. You can still query it by calling this operation, but it is no longer displayed in the results of ListModelOperatorApiKeys.</li>
+         * </ul>
+         * <p>The plaintext API key and endpoint are returned only when Status is Running. After the deletion is complete, this operation returns a resource not found error. The status indicates the processing result of the control plane. A short propagation delay may occur before the status takes effect on the data plane.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
+         */
+        public Builder status(String status) {
+            this.status = status;
             return this;
         }
 

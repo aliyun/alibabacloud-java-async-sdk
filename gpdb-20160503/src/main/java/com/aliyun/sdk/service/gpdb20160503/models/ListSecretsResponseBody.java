@@ -106,7 +106,7 @@ public class ListSecretsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The number of access credentials.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>4</p>
@@ -117,7 +117,7 @@ public class ListSecretsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message.</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>Successful</p>
@@ -147,10 +147,10 @@ public class ListSecretsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The status of the operation. Valid values:</p>
+         * <p>The API execution status. Valid values:</p>
          * <ul>
-         * <li><strong>success</strong></li>
-         * <li><strong>fail</strong></li>
+         * <li><strong>success</strong>: The execution succeeded.</li>
+         * <li><strong>fail</strong>: The execution failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>

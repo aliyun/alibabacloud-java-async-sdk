@@ -74,7 +74,7 @@ public class GetSupabaseUpdateVersionRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the Supabase project.</p>
+         * <p>The Supabase project ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,7 +87,7 @@ public class GetSupabaseUpdateVersionRequest extends Request {
         }
 
         /**
-         * <p>The region ID.</p>
+         * <p>The region ID. Specifies the region for the query or operation.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>

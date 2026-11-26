@@ -67,7 +67,7 @@ public class CreateExtensionsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The name of the extension that you want to install. Multiple extension names are separated with commas (,).</p>
+         * <p>The extensions to install. Separate multiple extensions with commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>citext, dblink</p>

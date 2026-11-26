@@ -145,7 +145,7 @@ public class RestoreSnapshotRequest extends Request {
         } 
 
         /**
-         * <p>The idempotency token. Ensures that repeated requests do not execute the same operation more than once.</p>
+         * <p>The idempotency token used to ensure that repeated requests do not execute the same operation.</p>
          * 
          * <strong>example:</strong>
          * <p>123e4567-e89b-12d3-a456-426655440000</p>
@@ -182,7 +182,7 @@ public class RestoreSnapshotRequest extends Request {
         }
 
         /**
-         * <p>The region ID. Specifies the region in which to query or perform the operation.</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -194,7 +194,7 @@ public class RestoreSnapshotRequest extends Request {
         }
 
         /**
-         * <p>The name of the restored branch. If not specified, the backend generates a name automatically.</p>
+         * <p>The name of the restored branch. If you do not specify this parameter, the backend generates a name.</p>
          * 
          * <strong>example:</strong>
          * <p>restore_preview</p>
@@ -206,7 +206,7 @@ public class RestoreSnapshotRequest extends Request {
         }
 
         /**
-         * <p>The snapshot LSN used for restoration.</p>
+         * <p>The snapshot LSN used for the restoration.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -219,7 +219,7 @@ public class RestoreSnapshotRequest extends Request {
         }
 
         /**
-         * <p>The target branch ID. If not specified, the backend selects the target branch based on the restoration process.</p>
+         * <p>The target branch ID. If you do not specify this parameter, the backend selects the target branch based on the restoration process.</p>
          * 
          * <strong>example:</strong>
          * <p>br-main</p>

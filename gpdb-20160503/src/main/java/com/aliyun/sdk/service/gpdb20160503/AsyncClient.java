@@ -21,10 +21,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a>Usage notes</h2>
-     * <p>This operation is used to add an AINode node.</p>
-     * <h2><a href="#qps-"></a>QPS limit</h2>
-     * <p>You can call this operation up to 1,000 times per second per account. Exceeding the limit will trigger API rate limiting, which may impact your business. Please call the API responsibly.</p>
+     * <h2>Usage notes</h2>
+     * <p>You can call this operation to add an AI node.</p>
+     * <h2>QPS limits</h2>
+     * <p>The default QPS limit per user for this operation is 1,000 calls per second. If this limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable rate.
+     * &lt;props=&quot;china&quot;&gt;The QPS limits in this document are for reference only. For accurate information, see <a href="https://quotas.console.aliyun.com/flow-control-products/gpdb/quotas">API rate limits</a>.</p>
      * 
      * @param request the request parameters of AddAINode  AddAINodeRequest
      * @return AddAINodeResponse
@@ -56,9 +57,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This operation is related to the UploadDocumentAsync operation. You can call this operation to cancel a document upload job.</p>
+     * <p>This operation is related to UploadDocumentAsync and is used to cancel an upload task.</p>
      * <blockquote>
-     * <p> If the canceling operation is complete, failed, or is canceled, you cannot call the operation again. The canceling operation only interrupts the document upload job. To remove the uploaded data, you must manually remove it or call the DeleteCollectionData operation. You can also call the document upload operation to overwrite the data by using the same FileName parameter.</p>
+     * <p>You cannot call this operation again if the task has already succeeded, failed, or been canceled. Calling this operation only interrupts the upload task. For the data that has already been written, you must manually delete it, call the DeleteCollectionData operation to delete it, or upload a file with the same FileName to overwrite it.</p>
      * </blockquote>
      * 
      * @param request the request parameters of CancelUploadDocumentJob  CancelUploadDocumentJobRequest
@@ -68,9 +69,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This operation is related to the <code>UpsertCollectionDataAsync</code> operation. You can call this operation to cancel an upload job.</p>
+     * <p>This operation is related to <code>UpsertCollectionDataAsync</code>. It is used to cancel an upload task.</p>
      * <blockquote>
-     * <p> If the canceling operation is complete, failed, or is canceled, you cannot call the operation again. The canceling operation only interrupts the upload job. To remove the uploaded data, you must manually remove it or call the DeleteCollectionData operation.</p>
+     * <p>You cannot call this operation to cancel a task that has already succeeded, failed, or been canceled. Calling this operation only interrupts the upload task. You must manually delete the data that has already been written or call the DeleteCollectionData operation to delete it.</p>
      * </blockquote>
      * 
      * @param request the request parameters of CancelUpsertCollectionDataJob  CancelUpsertCollectionDataJobRequest
@@ -80,12 +81,12 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This API allows users to interact with a large model through specified knowledge base collections to obtain answers based on knowledge base content. It supports configuring various parameters to customize requests, including but not limited to database instance ID, knowledge retrieval parameters, model inference parameters, etc. Additionally, it provides a default system prompt template and allows users to customize system prompts.</p>
+     * <p>This API allows you to interact with large language models through specified knowledge base collections to obtain answers based on knowledge base content. You can configure various parameters to customize requests, including but not limited to the database instance ID, knowledge retrieval parameters, and model inference parameters. In addition, a default system prompt template is provided, and you can customize system prompts.</p>
      * <ul>
-     * <li><strong>DBInstanceId</strong>: Required. Specifies the database instance ID.</li>
-     * <li><strong>KnowledgeParams</strong>: Optional. Contains parameters related to knowledge retrieval, such as retrieval content, merge strategies, etc.</li>
-     * <li><strong>ModelParams</strong>: Required. Contains parameters related to model inference, such as message list, model name, etc.</li>
-     * <li><strong>PromptTemplate</strong>: Optional. Used to customize the system prompt template.</li>
+     * <li><strong>DBInstanceId</strong>: Required. The ID of the database instance.</li>
+     * <li><strong>KnowledgeParams</strong>: Optional. The parameters related to knowledge retrieval, such as retrieval content and merge strategies.</li>
+     * <li><strong>ModelParams</strong>: Required. The parameters related to model inference, such as the message list and the model name.</li>
+     * <li><strong>PromptTemplate</strong>: Optional. The custom system prompt template.</li>
      * </ul>
      * 
      * @param request the request parameters of ChatWithKnowledgeBase  ChatWithKnowledgeBaseRequest
@@ -95,12 +96,12 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This API allows you to interact with a large language model by using specified knowledge base collections to obtain answers based on knowledge base content. You can configure various parameters to customize requests, including but not limited to the database instance ID, knowledge retrieval parameters, and model inference parameters. A default system prompt template is provided, and you can also customize the system prompt.</p>
+     * <p>This API allows you to interact with large language models through specified knowledge base collections to obtain answers based on the knowledge base content. You can configure various parameters to customize requests, including but not limited to the database instance ID, knowledge retrieval parameters, and model inference parameters. Additionally, this API provides a default system prompt template and allows you to customize system prompts.</p>
      * <ul>
-     * <li>DBInstanceId: Required. Specifies the database instance ID.</li>
-     * <li>KnowledgeParams: Optional. Contains knowledge retrieval parameters such as retrieval content and merge strategy.</li>
-     * <li>ModelParams: Required. Contains model inference parameters such as the message list and model name.</li>
-     * <li>PromptTemplate: Optional. Specifies a custom system prompt template.</li>
+     * <li>DBInstanceId: required. Specifies the ID of the database instance.</li>
+     * <li>KnowledgeParams: optional. Contains parameters related to knowledge retrieval, such as retrieval content and merge strategies.</li>
+     * <li>ModelParams: required. Contains parameters related to model inference, such as the message list and the model name.</li>
+     * <li>PromptTemplate: optional. Used to customize the system prompt template.</li>
      * </ul>
      * 
      * @param request the request parameters of ChatWithKnowledgeBaseStream  ChatWithKnowledgeBaseStreamRequest
@@ -130,7 +131,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Checks the available update versions for a SaaS service.</p>
+     * <p>Checks for available updates for a SaaS service.</p>
      * 
      * @param request the request parameters of CheckSaasServiceVersion  CheckSaasServiceVersionRequest
      * @return CheckSaasServiceVersionResponse
@@ -157,12 +158,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>  Before you can use an AnalyticDB for PostgreSQL instance, you must create an initial account for the instance.</p>
      * <ul>
-     * <li>You can call this operation to create only initial accounts. For information about how to create other types of accounts, see <a href="https://help.aliyun.com/document_detail/50206.html">Create a database account</a>.</li>
+     * <li>Before using an AnalyticDB for PostgreSQL instance, you must create an initial account.</li>
+     * <li>This operation only supports creating an initial account. To create other accounts, refer to <a href="https://help.aliyun.com/document_detail/50206.html">Create a database account</a>.</li>
      * </ul>
-     * <h2>Limits</h2>
-     * <p>You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
      * 
      * @param request the request parameters of CreateAccount  CreateAccountRequest
      * @return CreateAccountResponse
@@ -186,7 +185,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Creates a new Supabase branch based on a specified parent branch. By default, a child branch inherits the region, network, storage, and other resource configurations from the primary branch.</p>
+     * <p>Creates a new Supabase branch based on a specified parent branch. By default, a child branch inherits resource configurations such as region, network, and storage from the main branch.</p>
      * 
      * @param request the request parameters of CreateBranch  CreateBranchRequest
      * @return CreateBranchResponse
@@ -216,10 +215,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>  The plan management feature is supported only for pay-as-you-go instances.</p>
      * <ul>
-     * <li>When you change the compute node specifications or change the number of compute nodes, transient connections may occur. We recommend that you perform these operations during off-peak hours.
-     * Before you call this operation, make sure that you are familiar with the billing of AnalyticDB for PostgreSQL. For more information, see <a href="https://help.aliyun.com/document_detail/35406.html">Billing methods</a> and <a href="https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing">AnalyticDB for PostgreSQL pricing</a>.</li>
+     * <li>The billing method of the instance must be pay-as-you-go.</li>
+     * <li>When you change the specifications or scale the instance, transient disconnections may occur. Set the execution time to off-peak hours.
+     * Make sure that you fully understand the <a href="https://help.aliyun.com/document_detail/35406.html">billing methods</a> and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/gpdb/detail/GreenplumPost">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing">pricing</a> of AnalyticDB for PostgreSQL before you call this operation.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateDBInstancePlan  CreateDBInstancePlanRequest
@@ -283,6 +282,17 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
+     * <p><em>Before invoking this operation, make sure that you fully understand the billing methods and pricing of the model creation operator sub-service, and confirm the prices for the target region and specifications in the console.</em>*
+     * This operation creates a model creation operator sub-service and generates a sales order. If the request is successful, a ServiceId and an OrderId are returned. The sub-service is asynchronously activated by a sales callback, which does not mean that the sub-service is immediately active. You can invoke ListModelOperatorServices to query the sub-service status. After the sub-service is activated, you can invoke CreateModelOperatorApiKey to create invocation credentials.
+     * Each successful invocation may generate a new order. Do not query the progress by repeatedly creating sub-services. If an invocation timeout occurs or the result is ambiguous, check the original order and sub-service before you decide whether to retry.</p>
+     * 
+     * @param request the request parameters of CreateModelOperatorService  CreateModelOperatorServiceRequest
+     * @return CreateModelOperatorServiceResponse
+     */
+    CompletableFuture<CreateModelOperatorServiceResponse> createModelOperatorService(CreateModelOperatorServiceRequest request);
+
+    /**
+     * <b>description</b> :
      * <p>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/35406.html">billing methods</a> and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/gpdb/detail/GreenplumPost">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing">pricing</a> of AnalyticDB for PostgreSQL.</p>
      * 
      * @param request the request parameters of CreateModelService  CreateModelServiceRequest
@@ -304,7 +314,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Before you use this operation, make sure that you fully understand the <a href="https://help.aliyun.com/document_detail/35406.html">billing methods</a> and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/gpdb/detail/GreenplumPost">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing">pricing</a> of AnalyticDB for PostgreSQL.</p>
+     * <p>Before you call this operation, make sure that you fully understand the <a href="https://help.aliyun.com/document_detail/35406.html">billing methods</a> and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/gpdb/detail/GreenplumPost">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing">pricing</a> of AnalyticDB for PostgreSQL.</p>
      * 
      * @param request the request parameters of CreateSaasService  CreateSaasServiceRequest
      * @return CreateSaasServiceResponse
@@ -338,7 +348,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Creates a snapshot for a Supabase project based on a specified point in time or Log Sequence Number (LSN). You must specify either SnapshotTimestamp or Lsn. ClientToken is used to ensure idempotence of the request.</p>
+     * <p>This operation creates a snapshot for a Supabase project based on a specified point in time or log sequence number (LSN). You must specify either SnapshotTimestamp or Lsn. ClientToken ensures request idempotence.</p>
      * 
      * @param request the request parameters of CreateSnapshot  CreateSnapshotRequest
      * @return CreateSnapshotResponse
@@ -365,7 +375,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>The instance must be in the Running state. After a successful call, you can call ListSupabaseBackupJobs to query the progress of the backup job and call ListSupabaseDataBackups to query backup sets.</p>
+     * <p>The instance must be in the running state. After a successful call, you can call ListSupabaseBackupJobs to query the progress of the backup job and call ListSupabaseDataBackups to query the backup sets.</p>
      * 
      * @param request the request parameters of CreateSupabaseBackup  CreateSupabaseBackupRequest
      * @return CreateSupabaseBackupResponse
@@ -398,9 +408,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>  Subscription instances cannot be manually released. They are automatically released when they expire.</p>
      * <ul>
-     * <li>You can call this operation to release pay-as-you-go instances only when they are in the <strong>Running</strong> state.</li>
+     * <li>Subscription instances do not support manual release, and automatic release is triggered when the instance expires.</li>
+     * <li>Only pay-as-you-go instances in the <strong>Running</strong> state can be released by calling this operation.</li>
      * </ul>
      * 
      * @param request the request parameters of DeleteAINode  DeleteAINodeRequest
@@ -437,7 +447,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Deletes a specified Supabase branch. The default branch or a branch that still has child branches cannot be deleted.</p>
+     * <p>Deletes a specified Supabase branch. You cannot delete the default branch or a branch that has child branches.</p>
      * 
      * @param request the request parameters of DeleteBranch  DeleteBranchRequest
      * @return DeleteBranchResponse
@@ -464,12 +474,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>  Subscription instances cannot be manually released. They are automatically released when they expire.</p>
      * <ul>
-     * <li>You can call this operation to release pay-as-you-go instances only when they are in the <strong>Running</strong> state.</li>
+     * <li>Subscription instances do not support manual release. Automatic release is triggered when the instance expires.</li>
+     * <li>Only pay-as-you-go instances in the <strong>Running</strong> state can be released by calling this operation.</li>
      * </ul>
-     * <h2>Limits</h2>
-     * <p>You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
      * 
      * @param request the request parameters of DeleteDBInstance  DeleteDBInstanceRequest
      * @return DeleteDBInstanceResponse
@@ -549,6 +557,29 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
+     * <p>Deletes a specified API key. A successful request indicates that the deletion intent is accepted, and external credentials are asynchronously cleaned up by the system. This does not mean that all underlying resources have been deleted.
+     * After the deletion is accepted, the key no longer appears in the ListModelOperatorApiKeys response. During the cleanup process, DescribeModelOperatorApiKey returns Deleting and does not return the plaintext key or the endpoint. After the cleanup is complete, it returns a resource not found error.
+     * Use the endpoint of the region to which the target key belongs, and specify an ApiKeyId greater than 0.</p>
+     * 
+     * @param request the request parameters of DeleteModelOperatorApiKey  DeleteModelOperatorApiKeyRequest
+     * @return DeleteModelOperatorApiKeyResponse
+     */
+    CompletableFuture<DeleteModelOperatorApiKeyResponse> deleteModelOperatorApiKey(DeleteModelOperatorApiKeyRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Releases a specified model operator service. Standard deletion supports services in the active or locked state. You cannot initiate a new release for services in processing states such as locking or unlocking.
+     * Delete all API keys under the service that have not been marked for deletion. Subscription services must be unsubscribed or refunded through the sales process and cannot be released directly through this operation. Pay-as-you-go services are accepted for deletion after passing ownership, billing type, and associated key checks.
+     * A successful request indicates that the deletion intent is accepted and the system asynchronously cleans up associated resources. It does not mean that all underlying resources are deleted. You can call ListModelOperatorServices to query the deleting state. After all keys and gateway resources are physically cleaned up, the service no longer appears in the list.
+     * Use the endpoint of the region where the service resides to make the call. The Force parameter is not provided as a user parameter for this operation and cannot be used to bypass the associated key check.</p>
+     * 
+     * @param request the request parameters of DeleteModelOperatorService  DeleteModelOperatorServiceRequest
+     * @return DeleteModelOperatorServiceResponse
+     */
+    CompletableFuture<DeleteModelOperatorServiceResponse> deleteModelOperatorService(DeleteModelOperatorServiceRequest request);
+
+    /**
+     * <b>description</b> :
      * <p>Deletes a model service.</p>
      * 
      * @param request the request parameters of DeleteModelService  DeleteModelServiceRequest
@@ -591,7 +622,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Deletes a snapshot from a specified Supabase project by ProjectId and Lsn.</p>
+     * <p>Deletes a snapshot in a specified Supabase project by ProjectId and Lsn.</p>
      * 
      * @param request the request parameters of DeleteSnapshot  DeleteSnapshotRequest
      * @return DeleteSnapshotResponse
@@ -659,11 +690,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeAIServiceResponse> describeAIService(DescribeAIServiceRequest request);
 
     /**
-     * <b>description</b> :
-     * <p>This operation is called to query the information of the privileged account in an AnalyticDB for PostgreSQL instance, such as its state, description, and the instance.</p>
-     * <h2>Limit</h2>
-     * <p>You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered and may affect your business. We recommend that you take note of the limit when you call this operation.</p>
-     * 
      * @param request the request parameters of DescribeAccounts  DescribeAccountsRequest
      * @return DescribeAccountsResponse
      */
@@ -677,7 +703,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Before creating an AnalyticDB for PostgreSQL instance, you can use this operation to query the available instance offerings in a specified availability zone.</p>
+     * <p>When you create an AnalyticDB for PostgreSQL instance, you can call this operation to query the available resources in the destination zone.</p>
      * 
      * @param request the request parameters of DescribeAvailableResources  DescribeAvailableResourcesRequest
      * @return DescribeAvailableResourcesResponse
@@ -692,9 +718,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to query the backup settings of an AnalyticDB for PostgreSQL instance in elastic storage mode. Periodically backing data can prevent data loss. For more information about how to modify backup policies, see <a href="https://help.aliyun.com/document_detail/210095.html">ModifyBackupPolicy</a>.</p>
-     * <h2>Limits</h2>
-     * <p>You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <p>Periodic data backups effectively prevent data loss. You can call this operation to query the backup policy of an instance in elastic storage mode. To modify the backup policy, see <a href="https://help.aliyun.com/document_detail/210095.html">ModifyBackupPolicy</a>.</p>
      * 
      * @param request the request parameters of DescribeBackupPolicy  DescribeBackupPolicyRequest
      * @return DescribeBackupPolicyResponse
@@ -736,7 +760,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Monitoring information can only be queried for the last 30 days.</p>
+     * <p>You can query monitoring information only for the last 30 days.</p>
      * 
      * @param request the request parameters of DescribeDBClusterPerformance  DescribeDBClusterPerformanceRequest
      * @return DescribeDBClusterPerformanceResponse
@@ -745,11 +769,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
-     * <p>This operation is used to query information about an AnalyticDB for PostgreSQL instance, such as the instance specifications, network type, and instance status.</p>
-     * <h2>QPS limit</h2>
-     * <p>The default QPS limit for a single user for this operation is 1,000 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation as needed.
-     * &lt;props=&quot;china&quot;&gt;The QPS limit in this topic is a default reference value. For accurate information, refer to the <a href="https://quotas.console.aliyun.com/flow-control-products/gpdb/quotas">API rate limit list</a>.</p>
+     * <h2>Usage notes</h2>
+     * <p>This operation is typically used to query the specifications, network type, and instance status of an AnalyticDB for PostgreSQL instance.</p>
+     * <h2>QPS limits</h2>
+     * <p>The default QPS limit per user for this operation is 1,000. If the limit is exceeded, API invocations are throttled, which may affect your services. Invoke this operation at a reasonable frequency.
+     * &lt;props=&quot;china&quot;&gt;The QPS values in this topic are for reference only. For accurate information, see <a href="https://quotas.console.aliyun.com/flow-control-products/gpdb/quotas">API rate limits</a>.</p>
      * 
      * @param request the request parameters of DescribeDBInstanceAttribute  DescribeDBInstanceAttributeRequest
      * @return DescribeDBInstanceAttributeResponse
@@ -758,9 +782,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to query the details of data bloat on an AnalyticDB for PostgreSQL instance in elastic storage mode. The minor version of the instance must be V6.3.10.1 or later. For more information about how to view and update the minor version of an instance, see <a href="https://help.aliyun.com/document_detail/277424.html">View the minor engine version</a> and <a href="https://help.aliyun.com/document_detail/139271.html">Update the minor engine version</a>.</p>
-     * <h2>Limits</h2>
-     * <p>You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <p>This operation queries the data bloat status of an AnalyticDB for PostgreSQL instance in elastic storage mode. The minor engine version of the instance must be V6.3.10.1 or later. For more information about how to view and upgrade the minor engine version, see <a href="https://help.aliyun.com/document_detail/277424.html">Minor engine version</a> and <a href="https://help.aliyun.com/document_detail/139271.html">Version upgrade</a>.</p>
      * 
      * @param request the request parameters of DescribeDBInstanceDataBloat  DescribeDBInstanceDataBloatRequest
      * @return DescribeDBInstanceDataBloatResponse
@@ -769,9 +791,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>To prevent data skew from affecting your database service, you can call this operation to query the details about data skew on an AnalyticDB for PostgreSQL instance.</p>
-     * <h2>Limits</h2>
-     * <p>You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <p>Data skew affects database performance. AnalyticDB for PostgreSQL provides the DescribeDBInstanceDataSkew operation to help you query the data skew of an instance so that you can eliminate data skew promptly.</p>
      * 
      * @param request the request parameters of DescribeDBInstanceDataSkew  DescribeDBInstanceDataSkewRequest
      * @return DescribeDBInstanceDataSkewResponse
@@ -780,7 +800,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to query the distribution and states of coordinator and compute nodes in an AnalyticDB for PostgreSQL instance.</p>
+     * <p>Queries the distribution and status of coordinator and compute nodes in an AnalyticDB for PostgreSQL instance.</p>
      * 
      * @param request the request parameters of DescribeDBInstanceDiagnosisSummary  DescribeDBInstanceDiagnosisSummaryRequest
      * @return DescribeDBInstanceDiagnosisSummaryResponse
@@ -788,11 +808,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeDBInstanceDiagnosisSummaryResponse> describeDBInstanceDiagnosisSummary(DescribeDBInstanceDiagnosisSummaryRequest request);
 
     /**
-     * <b>description</b> :
-     * <p>You can call this operation to query the error logs of an AnalyticDB for PostgreSQL instance.</p>
-     * <h2>Limits</h2>
-     * <p>You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
-     * 
      * @param request the request parameters of DescribeDBInstanceErrorLog  DescribeDBInstanceErrorLogRequest
      * @return DescribeDBInstanceErrorLogResponse
      */
@@ -811,8 +826,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Appropriate indexes can accelerate database queries. You can call this operation to query the index usage of an AnalyticDB for PostgreSQL instance.
-     * This operation is available only for instances of V6.3.10.1 or later in elastic storage mode. For information about how to view and update the minor version of an instance, see <a href="https://help.aliyun.com/document_detail/277424.html">View the minor engine version</a> and <a href="https://help.aliyun.com/document_detail/139271.html">Update the minor engine version</a>.</p>
+     * <p>Proper use of indexes can improve database query speeds. This operation queries the index usage of an AnalyticDB for PostgreSQL instance.
+     * Currently, this feature is supported only for instances in elastic storage mode with a minor engine version of V6.3.10.1 or later. For more information about how to view and upgrade the minor engine version, see <a href="https://help.aliyun.com/document_detail/277424.html">View the minor engine version</a> and <a href="https://help.aliyun.com/document_detail/139271.html">Upgrade the Milvus version</a>.</p>
      * 
      * @param request the request parameters of DescribeDBInstanceIndexUsage  DescribeDBInstanceIndexUsageRequest
      * @return DescribeDBInstanceIndexUsageResponse
@@ -894,7 +909,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to query a list of backup sets and backup details only for instances in elastic storage mode.</p>
+     * <p>Currently, only instances in elastic storage mode support viewing the backup list and backup details.</p>
      * 
      * @param request the request parameters of DescribeDataBackups  DescribeDataBackupsRequest
      * @return DescribeDataBackupsResponse
@@ -909,7 +924,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Data sharing is supported only for instances in Serverless mode.</p>
+     * <p>Currently, only serverless instances support the data sharing feature.</p>
      * 
      * @param request the request parameters of DescribeDataShareInstances  DescribeDataShareInstancesRequest
      * @return DescribeDataShareInstancesResponse
@@ -918,7 +933,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Only serverless instances support the data sharing feature.</p>
+     * <p>Currently, only serverless instances support the data sharing feature.</p>
      * 
      * @param request the request parameters of DescribeDataSharePerformance  DescribeDataSharePerformanceRequest
      * @return DescribeDataSharePerformanceResponse
@@ -932,33 +947,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeDatabaseResponse> describeDatabase(DescribeDatabaseRequest request);
 
     /**
-     * <b>description</b> :
-     * <p>To facilitate management, you can call this operation to query all databases and database accounts on an AnalyticDB for PostgreSQL instance.</p>
-     * <h2>Limits</h2>
-     * <p>You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
-     * 
      * @param request the request parameters of DescribeDiagnosisDimensions  DescribeDiagnosisDimensionsRequest
      * @return DescribeDiagnosisDimensionsResponse
      */
     CompletableFuture<DescribeDiagnosisDimensionsResponse> describeDiagnosisDimensions(DescribeDiagnosisDimensionsRequest request);
 
     /**
-     * <b>description</b> :
-     * <p>You can call this operation to query the details of query execution on an AnalyticDB for PostgreSQL instance in elastic storage mode within a specified time range.</p>
-     * <h2>Limits</h2>
-     * <p>You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
-     * 
      * @param request the request parameters of DescribeDiagnosisMonitorPerformance  DescribeDiagnosisMonitorPerformanceRequest
      * @return DescribeDiagnosisMonitorPerformanceResponse
      */
     CompletableFuture<DescribeDiagnosisMonitorPerformanceResponse> describeDiagnosisMonitorPerformance(DescribeDiagnosisMonitorPerformanceRequest request);
 
     /**
-     * <b>description</b> :
-     * <p>You can call this operation to query the details of SQL queries on an AnalyticDB for PostgreSQL instance within a specified time range.</p>
-     * <h2>Limits</h2>
-     * <p>You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
-     * 
      * @param request the request parameters of DescribeDiagnosisRecords  DescribeDiagnosisRecordsRequest
      * @return DescribeDiagnosisRecordsResponse
      */
@@ -966,8 +966,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to query the information about a query for an AnalyticDB for PostgreSQL instance, including the SQL statement, execution plan text, and execution plan tree.
-     * This operation is available only for instances of V6.3.10.1 or later in elastic storage mode. For information about how to view and update the minor version of an instance, see <a href="https://help.aliyun.com/document_detail/277424.html">View the minor engine version</a> and <a href="https://help.aliyun.com/document_detail/139271.html">Update the minor engine version</a>.</p>
+     * <p>This operation queries the details of a specified query in an AnalyticDB for PostgreSQL instance, such as the query statement, execution plan text, and execution plan tree. Currently, this feature is supported only for instances in elastic storage mode with a minor engine version of V6.3.10.1 or later. For more information about how to view and upgrade the minor engine version, see <a href="https://help.aliyun.com/document_detail/277424.html">View the minor engine version</a> and <a href="https://help.aliyun.com/document_detail/139271.html">Upgrade the Milvus version</a>.</p>
      * 
      * @param request the request parameters of DescribeDiagnosisSQLInfo  DescribeDiagnosisSQLInfoRequest
      * @return DescribeDiagnosisSQLInfoResponse
@@ -1028,9 +1027,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This operation is called to query the health status of an AnalyticDB for PostgreSQL instance in elastic storage mode or Serverless mode and its coordinator and compute nodes.</p>
-     * <h2>Limits</h2>
-     * <p>You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <p>This operation queries the health status of instances, coordinator nodes (also known as master nodes), and compute nodes (also known as segment nodes) in AnalyticDB for PostgreSQL instances of the elastic storage mode and Serverless edition.</p>
      * 
      * @param request the request parameters of DescribeHealthStatus  DescribeHealthStatusRequest
      * @return DescribeHealthStatusResponse
@@ -1099,9 +1096,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This operation can be called to query the details of parameters in an AnalyticDB for PostgreSQL instance in elastic storage mode or Serverless mode.</p>
-     * <h2>Limits</h2>
-     * <p>You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered and may affect your business. We recommend that you take note of the limit when you call this operation.</p>
+     * <p>This operation only supports querying the configuration parameters and related information of AnalyticDB for PostgreSQL instances in elastic storage mode and Serverless Edition.</p>
      * 
      * @param request the request parameters of DescribeParameters  DescribeParametersRequest
      * @return DescribeParametersResponse
@@ -1116,9 +1111,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>When you create AnalyticDB for PostgreSQL instances, you can call this operation to query the details of vSwitches within a specified region or zone.</p>
-     * <h2>Limits</h2>
-     * <p>You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <p>When you create an AnalyticDB for PostgreSQL instance, you can call this operation to query available vSwitches in the specified region and zone.</p>
      * 
      * @param request the request parameters of DescribeRdsVSwitchs  DescribeRdsVSwitchsRequest
      * @return DescribeRdsVSwitchsResponse
@@ -1127,9 +1120,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>When you create an AnalyticDB for PostgreSQL instance, you can call this operation to query the available VPCs within a specified region or zone.</p>
-     * <h2>Limits</h2>
-     * <p>You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <p>When you create an AnalyticDB for PostgreSQL instance, you can call this operation to query available VPCs in the specified region and zone.</p>
      * 
      * @param request the request parameters of DescribeRdsVpcs  DescribeRdsVpcsRequest
      * @return DescribeRdsVpcsResponse
@@ -1159,7 +1150,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This API does not support instances of the storage-reserved type.</p>
+     * <p>This operation does not support instances in reserved storage mode.</p>
      * 
      * @param request the request parameters of DescribeSQLLogCount  DescribeSQLLogCountRequest
      * @return DescribeSQLLogCountResponse
@@ -1169,7 +1160,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>This operation is no longer used. To query SQL execution logs, call the <a href="https://help.aliyun.com/document_detail/453722.html">DescribeSQLLogsV2</a> operation.</p>
+     * <p>This operation is deprecated. To query SQL execution records, refer to <a href="https://help.aliyun.com/document_detail/453722.html">DescribeSQLLogsV2</a>.</p>
      * </blockquote>
      * 
      * @param request the request parameters of DescribeSQLLogs  DescribeSQLLogsRequest
@@ -1261,9 +1252,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to query the lock diagnostics records only for an AnalyticDB for PostgreSQL V6.0 instance in elastic storage mode.</p>
-     * <h2>Limits</h2>
-     * <p>You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <p>This operation only supports querying the lock diagnosis list for instances of V6.0 in elastic storage mode.</p>
      * 
      * @param request the request parameters of DescribeWaitingSQLRecords  DescribeWaitingSQLRecordsRequest
      * @return DescribeWaitingSQLRecordsResponse
@@ -1291,10 +1280,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to download the query diagnostic information of an AnalyticDB for PostgreSQL instance. After the download is complete, you can call the <a href="https://help.aliyun.com/document_detail/447712.html">DescribeDownloadRecords</a> operation to query download records and download URLs.
-     * This operation is available only for instances of V6.3.10.1 or later in elastic storage mode. For more information about how to view and update the minor engine version of an instance, see <a href="https://help.aliyun.com/document_detail/277424.html">View the minor engine version</a> and <a href="https://help.aliyun.com/document_detail/139271.html">Update the minor engine version</a>.</p>
-     * <h2>Limits</h2>
-     * <p>You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <p>This operation downloads the query diagnostic records of an AnalyticDB for PostgreSQL instance. After the download is complete, you can call the <a href="https://help.aliyun.com/document_detail/447712.html">DescribeDownloadRecords</a> operation to view download records and obtain the download URL.
+     * This feature is supported only for instances in elastic storage mode with a minor engine version of V6.3.10.1 or later. For more information about how to view and upgrade the minor engine version, see <a href="https://help.aliyun.com/document_detail/277424.html">View the minor engine version</a> and <a href="https://help.aliyun.com/document_detail/139271.html">Upgrade the Milvus version</a>.</p>
      * 
      * @param request the request parameters of DownloadDiagnosisRecords  DownloadDiagnosisRecordsRequest
      * @return DownloadDiagnosisRecordsResponse
@@ -1321,10 +1308,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation only for AnalyticDB for PostgreSQL V6.0 instances in elastic storage mode whose minor version is V6.6.1.0 or later.</p>
      * <ul>
-     * <li>You can call this operation to enable resource group management only for AnalyticDB for PostgreSQL instances that are in the <strong>Running</strong> state.</li>
-     * <li>**Note: When the resource management mode is changed, your AnalyticDB for PostgreSQL instance is restarted and remains unavailable within 5 minutes. To prevent your business from being affected, call this operation during off-peak hours.</li>
+     * <li>This operation is supported only for instances in elastic storage mode V6.0 with a minor version of v6.6.1.0 or later.</li>
+     * <li>You can call this operation to enable resource group management only for instances in the <strong>Running</strong> state.</li>
+     * <li><strong>Note: The instance is restarted during the switchover process and will be unavailable for about 5 minutes. Plan your business accordingly to avoid impacts.</strong></li>
      * </ul>
      * 
      * @param request the request parameters of EnableDBResourceGroup  EnableDBResourceGroupRequest
@@ -1364,7 +1351,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Queries the schema SQL content of a specified database in a specified branch. The system databases postgres, template0, and template1 are not supported.</p>
+     * <p>This operation queries the schema SQL content of a specified database in a specified branch. System databases such as postgres, template0, and template1 are not supported.</p>
      * 
      * @param request the request parameters of GetBranchSchema  GetBranchSchemaRequest
      * @return GetBranchSchemaResponse
@@ -1376,6 +1363,15 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetGraphRAGJobResponse
      */
     CompletableFuture<GetGraphRAGJobResponse> getGraphRAGJob(GetGraphRAGJobRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Summarizes SaaS DataUnit usage by scenario, project, and UTC hour or day. A single query can span up to 7 days, and the start time must be within the last 30 days. The statistics are based on the rules at the time of the query, not the historical actual billing records.</p>
+     * 
+     * @param request the request parameters of GetSaasDataUnitUsage  GetSaasDataUnitUsageRequest
+     * @return GetSaasDataUnitUsageResponse
+     */
+    CompletableFuture<GetSaasDataUnitUsageResponse> getSaasDataUnitUsage(GetSaasDataUnitUsageRequest request);
 
     /**
      * <b>description</b> :
@@ -1394,10 +1390,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
-     * <p>This operation is used to query information about all model services.</p>
+     * <h2>Usage notes</h2>
+     * <p>This operation queries information about all model services.</p>
      * <h2>QPS limit</h2>
-     * <p>The default single-user QPS limit for this operation is 1,000 calls per second. If this limit is exceeded, the API calls are throttled, which may affect your business. Call this operation as needed.</p>
+     * <p>The default queries per second (QPS) limit per user for this operation is 1,000. If you exceed the limit, API calls are throttled, which may affect your business. Make API calls at a reasonable rate.</p>
      * 
      * @param request the request parameters of GetServiceAccessInfo  GetServiceAccessInfoRequest
      * @return GetServiceAccessInfoResponse
@@ -1421,7 +1417,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This operation queries the API keys and JWT secrets for a Supabase instance.</p>
+     * <p>Queries the API keys and JWT secrets of a Supabase instance.</p>
      * 
      * @param request the request parameters of GetSupabaseProjectApiKeys  GetSupabaseProjectApiKeysRequest
      * @return GetSupabaseProjectApiKeysResponse
@@ -1430,7 +1426,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Query Supabase Project Dashboard Account Information</p>
+     * <p>Queries the dashboard account information of a Supabase project.</p>
      * 
      * @param request the request parameters of GetSupabaseProjectDashboardAccount  GetSupabaseProjectDashboardAccountRequest
      * @return GetSupabaseProjectDashboardAccountResponse
@@ -1439,7 +1435,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Queries the specifications and zones available for creating Supabase projects in a specified region.</p>
+     * <p>This operation queries the specifications and zones available for creating Supabase projects in a specified region.</p>
      * 
      * @param request the request parameters of GetSupabaseProjectSpec  GetSupabaseProjectSpecRequest
      * @return GetSupabaseProjectSpecResponse
@@ -1459,9 +1455,9 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <b>description</b> :
      * <p>This operation is related to UploadDocumentAsync. You can call UploadDocumentAsync to create an upload task and obtain a job ID, and then call this operation to view the execution information of the job.</p>
      * <blockquote>
-     * <p>Usage notes</p>
+     * <p>Usage recommendations</p>
      * <ul>
-     * <li>Estimate the timeout based on the document complexity and the number of vector entries after chunking. The timeout generally does not exceed 2 hours.</li>
+     * <li>Evaluate the timeout period based on the document complexity and the number of vectors after chunking. Generally, the timeout period does not exceed 2 hours.</li>
      * </ul>
      * </blockquote>
      * 
@@ -1472,9 +1468,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This operation is related to the <code>UpsertCollectionDataAsync</code> operation. You can call the <code>UpsertCollectionDataAsync</code> operation to create an upload job and obtain a job ID, and then call the GetUpsertCollectionDataJob operation to query the execution information of the job.</p>
+     * <p>This operation is related to <code>UpsertCollectionDataAsync</code>. You can call <code>UpsertCollectionDataAsync</code> to create an upload task and obtain a job ID, and then call this operation to query the execution information of the job.</p>
      * <blockquote>
-     * <p> We recommend that you evaluate the amount of time required for the upload job based on 1,000 data entries every second, and then query the job progress every 5 seconds. The timeout period can be set to 30 minutes after the evaluated amount of time.</p>
+     * <p>Recommendation: Estimate the duration of the upload task based on 1 second per 1,000 vector data records, and then query the task progress every 5 seconds. Set the timeout period to 30 minutes plus the initially estimated duration.</p>
      * </blockquote>
      * 
      * @param request the request parameters of GetUpsertCollectionDataJob  GetUpsertCollectionDataJobRequest
@@ -1538,7 +1534,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Queries a list of API keys.</p>
+     * <p>Queries the list of API keys.</p>
      * 
      * @param request the request parameters of ListApiKeys  ListApiKeysRequest
      * @return ListApiKeysResponse
@@ -1553,7 +1549,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This operation performs a paging query of all branches under a specified Supabase project. You can filter results by parent branch, keyword, and sorting conditions.</p>
+     * <p>This operation performs a paging query for all branches under a specified Supabase project and supports filtering by parent branch, keyword, and sorting conditions.</p>
      * 
      * @param request the request parameters of ListBranches  ListBranchesRequest
      * @return ListBranchesResponse
@@ -1723,7 +1719,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>This operation queries the tag list of Supabase instances.</li>
+     * <li>This operation queries the list of Supabase instances.</li>
      * </ul>
      * 
      * @param request the request parameters of ListSupabaseProjectTags  ListSupabaseProjectTagsRequest
@@ -1734,7 +1730,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Lists Supabase instances.</li>
+     * <li>This operation queries the list of Supabase instances.</li>
      * </ul>
      * 
      * @param request the request parameters of ListSupabaseProjects  ListSupabaseProjectsRequest
@@ -1765,8 +1761,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
-     * <p>This operation is used to view information about all workspaces.</p>
+     * <h2>Usage notes</h2>
+     * <p>This operation queries the information about all workspaces.</p>
      * 
      * @param request the request parameters of ListWorkspaces  ListWorkspacesRequest
      * @return ListWorkspacesResponse
@@ -1816,22 +1812,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyDBInstanceDeploymentModeResponse> modifyDBInstanceDeploymentMode(ModifyDBInstanceDeploymentModeRequest request);
 
     /**
-     * <b>description</b> :
-     * <p>To make it easy to identify AnalyticDB for PostgreSQL instances, you can call this operation to modify the description of instances.</p>
-     * <h2>Limits</h2>
-     * <p>You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
-     * 
      * @param request the request parameters of ModifyDBInstanceDescription  ModifyDBInstanceDescriptionRequest
      * @return ModifyDBInstanceDescriptionResponse
      */
     CompletableFuture<ModifyDBInstanceDescriptionResponse> modifyDBInstanceDescription(ModifyDBInstanceDescriptionRequest request);
 
     /**
-     * <b>description</b> :
-     * <p>The system maintains AnalyticDB for PostgreSQL instances during the maintenance window that you specify. We recommend that you set the maintenance window to off-peak hours to minimize the impact on your business.</p>
-     * <h2>Limits</h2>
-     * <p>You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
-     * 
      * @param request the request parameters of ModifyDBInstanceMaintainTime  ModifyDBInstanceMaintainTimeRequest
      * @return ModifyDBInstanceMaintainTimeResponse
      */
@@ -1839,10 +1825,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2></h2>
-     * <p>This operation is available only for AnalyticDB for PostgreSQL instances in reserved storage mode.</p>
+     * <h2>Usage notes</h2>
+     * <p>This operation only supports changing the network type of AnalyticDB for PostgreSQL instances that use the reserved storage mode.</p>
      * <h2>QPS limits</h2>
-     * <p>You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <p>The default QPS limit per user for this operation is 1,000 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable frequency.
+     * &lt;props=&quot;china&quot;&gt;The QPS values in this document are default reference values only. For accurate information, see <a href="https://quotas.console.aliyun.com/flow-control-products/gpdb/quotas">API rate limit quotas</a>.</p>
      * 
      * @param request the request parameters of ModifyDBInstanceNetworkType  ModifyDBInstanceNetworkTypeRequest
      * @return ModifyDBInstanceNetworkTypeResponse
@@ -1857,7 +1844,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Resource Management allows you to build an organizational structure for resources based on your business requirements. You can use resource directories, folders, accounts, and resource groups to hierarchically organize and manage resources. For more information, see <a href="https://help.aliyun.com/document_detail/94475.html">What is Resource Management?</a></p>
+     * <p>Resource Management allows you to build appropriate resource organizational structures based on your business needs. You can use directories, folders, accounts, and resource groups to hierarchically organize and manage your cloud resources. For more information, see <a href="https://help.aliyun.com/document_detail/94475.html">What is Resource Management?</a>.</p>
      * 
      * @param request the request parameters of ModifyDBInstanceResourceGroup  ModifyDBInstanceResourceGroupRequest
      * @return ModifyDBInstanceResourceGroupResponse
@@ -1906,9 +1893,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This operation can be called to modify parameters of an AnalyticDB for PostgreSQL instance in elastic storage mode or Serverless mode.</p>
-     * <h2>Limits</h2>
-     * <p>You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered and may affect your business. We recommend that you take note of the limit when you call this operation.</p>
+     * <p>This operation modifies the configuration parameters only for AnalyticDB for PostgreSQL instances in elastic storage mode or Serverless Edition.</p>
      * 
      * @param request the request parameters of ModifyParameters  ModifyParametersRequest
      * @return ModifyParametersResponse
@@ -1923,9 +1908,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation only for AnalyticDB for PostgreSQL instances in reserved storage mode.</p>
      * <ul>
-     * <li>You can call this operation only for AnalyticDB for PostgreSQL instances in Serverless automatic scheduling mode.</li>
+     * <li>Only storage-reserved instances are supported.</li>
+     * <li>Only the Serverless auto-scheduling edition is supported.</li>
      * </ul>
      * 
      * @param request the request parameters of ModifySQLCollectorPolicy  ModifySQLCollectorPolicyRequest
@@ -1984,7 +1969,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can call DescribeSupabaseBackupPolicy to query the current backup policy, and then call this operation again to confirm the configurations after the modification.</p>
+     * <p>You can call the DescribeSupabaseBackupPolicy operation to query the current backup policy, and then call this operation again to confirm the configuration after modification.</p>
      * 
      * @param request the request parameters of ModifySupabaseBackupPolicy  ModifySupabaseBackupPolicyRequest
      * @return ModifySupabaseBackupPolicyResponse
@@ -1993,7 +1978,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p><em>Before you use this operation, make sure that you fully understand the billing method and <a href="https://www.alibabacloud.com/help/en/analyticdb/analyticdb-for-postgresql/product-overview/pricing-1#9eefcc7b5acz1">pricing</a> of AnalyticDB for PostgreSQL Supabase</em>*.。</p>
+     * <p><em>Before calling this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/help/en/analyticdb/analyticdb-for-postgresql/product-overview/pricing-1#9eefcc7b5acz1">pricing</a> of AnalyticDB for PostgreSQL Supabase.</em>*</p>
      * 
      * @param request the request parameters of ModifySupabaseProjectDescription  ModifySupabaseProjectDescriptionRequest
      * @return ModifySupabaseProjectDescriptionResponse
@@ -2002,7 +1987,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p><em>Before using this operation, make sure that you fully understand the billing method and <a href="https://www.alibabacloud.com/help/en/analyticdb/analyticdb-for-postgresql/product-overview/pricing-1#9eefcc7b5acz1">pricing</a> of AnalyticDB for PostgreSQL Supabase</em>*.</p>
+     * <p><em>Before calling this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/help/en/analyticdb/analyticdb-for-postgresql/product-overview/pricing-1#9eefcc7b5acz1">pricing</a> of AnalyticDB for PostgreSQL Supabase.</em>*</p>
      * 
      * @param request the request parameters of ModifySupabaseProjectResource  ModifySupabaseProjectResourceRequest
      * @return ModifySupabaseProjectResourceResponse
@@ -2047,7 +2032,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Deletes a model service.</p>
+     * <p>Deletes the model service.</p>
      * 
      * @param request the request parameters of PauseSaasService  PauseSaasServiceRequest
      * @return PauseSaasServiceResponse
@@ -2056,7 +2041,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Pauses a Supabase instance.</p>
+     * <p>This operation pauses a Supabase instance.</p>
      * 
      * @param request the request parameters of PauseSupabaseProject  PauseSupabaseProjectRequest
      * @return PauseSupabaseProjectResponse
@@ -2101,7 +2086,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Resets a child branch to the latest data of its parent branch. The main branch, branches without a parent branch, branches with child branches, and protected branches cannot be reset.</p>
+     * <p>This operation resets a child branch to the latest data of its parent branch. You cannot reset the main branch, branches without a parent branch, branches that have child branches, or protected branches.</p>
      * 
      * @param request the request parameters of ResetBranch  ResetBranchRequest
      * @return ResetBranchResponse
@@ -2125,9 +2110,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>A restart takes about 3 to 30 minutes. During the restart, services are unavailable. We recommend that you restart the instance during off-peak hours. After the instance is restarted and enters the running state, you can access the instance.</p>
-     * <h2>Limit</h2>
-     * <p>You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered and may affect your business. We recommend that you take note of the limit when you call this operation.</p>
+     * <p>The restart process typically takes 3 to 30 minutes. During the restart, the instance cannot provide external services. Perform this operation during off-peak hours. After the restart is complete, the instance status changes to Running, and you can access the instance normally.</p>
      * 
      * @param request the request parameters of RestartDBInstance  RestartDBInstanceRequest
      * @return RestartDBInstanceResponse
@@ -2136,7 +2119,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Restarts a specified Supabase project. After a successful call, a request ID is returned, and the restart process is executed asynchronously in the backend.</p>
+     * <p>Restarts a specified Supabase project. A request ID is returned upon a successful call, and the restart process runs asynchronously in the backend.</p>
      * 
      * @param request the request parameters of RestartSupabaseProject  RestartSupabaseProjectRequest
      * @return RestartSupabaseProjectResponse
@@ -2145,7 +2128,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Recovers a target branch to a specified point in time or LSN of the source branch. Before recovery, you can specify a backup branch name to preserve the original target branch.</p>
+     * <p>This operation restores the target branch to a specified point in time or LSN of the source branch. You can specify a backup branch name to preserve the original target branch before the restoration.</p>
      * 
      * @param request the request parameters of RestoreBranch  RestoreBranchRequest
      * @return RestoreBranchResponse
@@ -2154,7 +2137,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Restores to a target branch based on a snapshot LSN. You can specify the restored branch name and the target branch. FinalizeRestore controls whether to complete the restoration immediately.</p>
+     * <p>This operation restores a project to a target branch based on a snapshot LSN. You can specify the name of the restored branch and the target branch. The FinalizeRestore parameter specifies whether to complete the restoration immediately.</p>
      * 
      * @param request the request parameters of RestoreSnapshot  RestoreSnapshotRequest
      * @return RestoreSnapshotResponse
@@ -2193,7 +2176,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Queries the details of a Supabase instance.</p>
+     * <p>This operation queries the details of a Supabase instance.</p>
      * 
      * @param request the request parameters of ResumeSupabaseProject  ResumeSupabaseProjectRequest
      * @return ResumeSupabaseProjectResponse
@@ -2202,7 +2185,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Revokes the access permissions of an API key to SaaS services.</p>
+     * <p>Revokes the access permissions of an API key pair to SaaS services.</p>
      * 
      * @param request the request parameters of RevokeApiKey  RevokeApiKeyRequest
      * @return RevokeApiKeyResponse
@@ -2211,7 +2194,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Sets a specified branch as the default branch for a Supabase project.</p>
+     * <p>Sets the specified branch as the default branch for a Supabase project.</p>
      * 
      * @param request the request parameters of SetAsDefaultBranch  SetAsDefaultBranchRequest
      * @return SetAsDefaultBranchResponse
@@ -2240,7 +2223,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This operation is not supported for AnalyticDB for PostgreSQL instances in elastic storage mode or Serverless mode.</p>
+     * <p>This operation is not supported for instances in elastic storage mode or serverless instances.</p>
      * 
      * @param request the request parameters of SwitchDBInstanceNetType  SwitchDBInstanceNetTypeRequest
      * @return SwitchDBInstanceNetTypeResponse
@@ -2293,7 +2276,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Queries the details of a Supabase instance.</p>
+     * <p>This operation queries the details of a Supabase instance.</p>
      * 
      * @param request the request parameters of UntagSupabaseProject  UntagSupabaseProjectRequest
      * @return UntagSupabaseProjectResponse
@@ -2337,7 +2320,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Upgrades a specified Supabase project to a target minor version. You can query the supported target versions by calling GetSupabaseUpdateVersion.</p>
+     * <p>This operation upgrades a specified Supabase project to a target minor version. You can query the supported target versions by calling GetSupabaseUpdateVersion.</p>
      * 
      * @param request the request parameters of UpdateSupabaseVersion  UpdateSupabaseVersionRequest
      * @return UpdateSupabaseVersionResponse
@@ -2368,7 +2351,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>The vector algorithm that is used for the document is specified when you call the CreateDocumentCollection operation.</p>
+     * <p>The vectorization algorithm used for the documents is the one specified in the CreateDocumentCollection operation when the knowledge base is created.</p>
      * 
      * @param request the request parameters of UpsertChunks  UpsertChunksRequest
      * @return UpsertChunksResponse
@@ -2379,13 +2362,13 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <b>description</b> :
      * <blockquote>
      * <p>Notice: 
-     * <strong>SDK于2023-11-8日升级，从最大512KB数据请求量升级到10MB。</strong>
-     * 请使用最新版SDK或不低于此版本：</p>
+     * <strong>The SDK was upgraded on November 8, 2023, increasing the maximum data request size from 512 KB to 10 MB.</strong>
+     * Use the latest SDK or a version no earlier than the following:</p>
      * </blockquote>
      * <ul>
-     * <li>Java：1.2.1 </li>
-     * <li>Go：v3.3.1 </li>
-     * <li>Python：3.3.1</li>
+     * <li>Java: 1.2.1 </li>
+     * <li>Go: v3.3.1 </li>
+     * <li>Python: 3.3.1</li>
      * </ul>
      * 
      * @param request the request parameters of UpsertCollectionData  UpsertCollectionDataRequest

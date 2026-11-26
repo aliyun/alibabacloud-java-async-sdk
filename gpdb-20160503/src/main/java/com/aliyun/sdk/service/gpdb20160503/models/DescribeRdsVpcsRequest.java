@@ -175,9 +175,9 @@ public class DescribeRdsVpcsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region.</p>
+         * <p>The region ID.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query available region IDs.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -190,7 +190,7 @@ public class DescribeRdsVpcsRequest extends Request {
         }
 
         /**
-         * <p>This parameter is no longer used.</p>
+         * <p><strong>[Deprecated]</strong> This parameter is deprecated. You do not need to specify this parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -229,7 +229,7 @@ public class DescribeRdsVpcsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the zone.</p>
+         * <p>The zone ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-h</p>

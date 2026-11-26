@@ -216,7 +216,7 @@ public class CreateBranchRequest extends Request {
         } 
 
         /**
-         * <p>The branch name.</p>
+         * <p>The name of the branch.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -229,7 +229,7 @@ public class CreateBranchRequest extends Request {
         }
 
         /**
-         * <p>The client idempotency token. This token ensures the idempotence of retry requests.</p>
+         * <p>The client token used to ensure the idempotence of retry requests.</p>
          * 
          * <strong>example:</strong>
          * <p>123e4567-e89b-12d3-a456-426614174000</p>
@@ -253,7 +253,7 @@ public class CreateBranchRequest extends Request {
         }
 
         /**
-         * <p>The time when the branch automatically expires and is deleted. The value is in the ISO 8601 UTC format.</p>
+         * <p>The time when the branch is automatically deleted after expiration. The time is in the ISO 8601 UTC format.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-10-08T09:11:12Z</p>
@@ -265,8 +265,7 @@ public class CreateBranchRequest extends Request {
         }
 
         /**
-         * <p>The initialization source of the branch.</p>
-         * <p>Valid values:</p>
+         * <p>The initialization source for the branch. Valid values:</p>
          * <ul>
          * <li>ParentData: copies the schema and data from the parent branch. This is the default value.</li>
          * <li>SchemaOnly: copies only the schema structure.</li>
@@ -282,7 +281,7 @@ public class CreateBranchRequest extends Request {
         }
 
         /**
-         * <p>The ID of the parent branch. This parameter specifies the parent branch for the new branch or query condition.</p>
+         * <p>The ID of the parent branch. This parameter specifies the parent branch for the new branch or query conditions.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -295,7 +294,7 @@ public class CreateBranchRequest extends Request {
         }
 
         /**
-         * <p>The log sequence number (LSN) selected when creating a branch from the parent branch.</p>
+         * <p>The log sequence number (LSN) selected when you create a branch from the parent branch.</p>
          * 
          * <strong>example:</strong>
          * <p>0/3522648</p>
@@ -307,8 +306,8 @@ public class CreateBranchRequest extends Request {
         }
 
         /**
-         * <p>The point in time for data synchronization when creating a branch from the parent branch. The value is in the ISO 8601 UTC format.</p>
-         * <p>Default value: the current time.</p>
+         * <p>The point in time for data synchronization when you create a branch from the parent branch. The time is in the ISO 8601 UTC format.
+         * Default value: the current time.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-04-08T09:11:12Z</p>
@@ -320,7 +319,7 @@ public class CreateBranchRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Supabase project that corresponds to the primary branch.</p>
+         * <p>The ID of the Supabase project to which the main branch belongs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -333,11 +332,10 @@ public class CreateBranchRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable branch protection.</p>
-         * <p>Valid values:</p>
+         * <p>Specifies whether to enable branch protection. Valid values:</p>
          * <ul>
-         * <li>true: Enables branch protection.</li>
-         * <li>false: Disables branch protection. This is the default value.</li>
+         * <li>true: enables branch protection.</li>
+         * <li>false: disables branch protection. This is the default value.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -350,7 +348,7 @@ public class CreateBranchRequest extends Request {
         }
 
         /**
-         * <p>The region ID. This parameter is required when you create a primary branch. When you create a child branch, the region is inherited from the primary branch by default.</p>
+         * <p>The region ID. This parameter is required when you create a main branch. When you create a child branch, it inherits the region of the main branch by default.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>
@@ -362,7 +360,7 @@ public class CreateBranchRequest extends Request {
         }
 
         /**
-         * <p>The list of branch tags.</p>
+         * <p>The list of tags for the branch.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);

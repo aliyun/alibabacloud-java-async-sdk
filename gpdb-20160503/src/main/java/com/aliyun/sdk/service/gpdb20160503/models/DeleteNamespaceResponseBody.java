@@ -83,7 +83,7 @@ public class DeleteNamespaceResponseBody extends TeaModel {
          * <p>The returned message.</p>
          * 
          * <strong>example:</strong>
-         * <p>success</p>
+         * <p>Successful</p>
          */
         public Builder message(String message) {
             this.message = message;

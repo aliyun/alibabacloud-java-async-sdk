@@ -103,12 +103,12 @@ public class ModifyAccountDescriptionRequest extends Request {
         } 
 
         /**
-         * <p>The new description of the database account.</p>
+         * <p>The modified account description. The description must meet the following requirements:</p>
          * <ul>
-         * <li>The description must start with a letter.</li>
-         * <li>The description cannot start with <code>http://</code> or <code>https://</code>.</li>
-         * <li>The description can contain letters, underscores (_), hyphens (-), and digits.</li>
-         * <li>The description must be 2 to 256 characters in length.</li>
+         * <li>It must start with a letter or a Chinese character.</li>
+         * <li>It cannot start with <code>http://</code> or <code>https://</code>.</li>
+         * <li>It can contain letters, Chinese characters, underscores (_), hyphens (-), and digits.</li>
+         * <li>It must be 2 to 256 characters in length.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -134,7 +134,7 @@ public class ModifyAccountDescriptionRequest extends Request {
         }
 
         /**
-         * <p>Idempotence check. For more information, see <a href="https://help.aliyun.com/document_detail/327176.html">How to Ensure Idempotence</a>.</p>
+         * <p>The client token that is used to ensure idempotence. For more information, see <a href="https://help.aliyun.com/document_detail/327176.html">Ensure idempotence</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>0c593ea1-3bea-11e9-b96b-88**********</p>
@@ -146,9 +146,9 @@ public class ModifyAccountDescriptionRequest extends Request {
         }
 
         /**
-         * <p>The instance ID.</p>
+         * <p>Instance ID of the instance.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the IDs of all AnalyticDB for PostgreSQL instances within a region.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query instance IDs of all AnalyticDB for PostgreSQL instances in the specified region.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 

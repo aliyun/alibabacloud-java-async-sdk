@@ -160,7 +160,10 @@ public class UpsertCollectionDataRequest extends Request {
         } 
 
         /**
-         * <p>The name of the collection.</p>
+         * <p>The collection name.</p>
+         * <blockquote>
+         * <p>You can create a collection by calling <a href="https://help.aliyun.com/document_detail/2401497.html">CreateCollection</a> and view the list of collections by calling <a href="https://help.aliyun.com/document_detail/2401503.html">ListCollections</a>.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -175,7 +178,7 @@ public class UpsertCollectionDataRequest extends Request {
         /**
          * <p>The instance ID.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in a specified region, including the instance IDs.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -188,9 +191,9 @@ public class UpsertCollectionDataRequest extends Request {
         }
 
         /**
-         * <p>The name of the namespace. Default value: public.</p>
+         * <p>The namespace used for tenant isolation. Default value: public.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/2401495.html">CreateNamespace</a> operation to create a namespace and call the <a href="https://help.aliyun.com/document_detail/2401502.html">ListNamespaces</a> operation to query a list of namespaces.</p>
+         * <p>You can create a namespace by calling <a href="https://help.aliyun.com/document_detail/2401495.html">CreateNamespace</a> and view the list of namespaces by calling <a href="https://help.aliyun.com/document_detail/2401502.html">ListNamespaces</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -203,7 +206,7 @@ public class UpsertCollectionDataRequest extends Request {
         }
 
         /**
-         * <p>The password of the namespace.</p>
+         * <p>The password for the namespace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -226,9 +229,6 @@ public class UpsertCollectionDataRequest extends Request {
 
         /**
          * <p>The region ID of the instance.</p>
-         * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query the most recent region list.</p>
-         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -241,7 +241,7 @@ public class UpsertCollectionDataRequest extends Request {
         }
 
         /**
-         * <p>The vector data that you want to upload.</p>
+         * <p>The list of vector data.</p>
          */
         public Builder rows(java.util.List<Rows> rows) {
             String rowsShrink = shrink(rows, "Rows", "json");
@@ -251,7 +251,7 @@ public class UpsertCollectionDataRequest extends Request {
         }
 
         /**
-         * <p>The ID of the workspace that consists of multiple AnalyticDB for PostgreSQL instances. You must specify one of the WorkspaceId and DBInstanceId parameters. If you specify both parameters, the WorkspaceId parameter takes effect.</p>
+         * <p>The ID of the workspace that consists of multiple database instances. This parameter and the DBInstanceId parameter cannot be both empty. If both parameters are specified, this parameter takes precedence.</p>
          * 
          * <strong>example:</strong>
          * <p>gp-ws-*****</p>
@@ -322,9 +322,9 @@ public class UpsertCollectionDataRequest extends Request {
             } 
 
             /**
-             * <p>The indices.</p>
+             * <p>The index array.</p>
              * <blockquote>
-             * <p> The size of indices cannot exceed 4000.</p>
+             * <p>The list size cannot exceed 4,000.</p>
              * </blockquote>
              */
             public Builder indices(java.util.List<Long> indices) {
@@ -333,7 +333,7 @@ public class UpsertCollectionDataRequest extends Request {
             }
 
             /**
-             * <p>The sparse vector values.</p>
+             * <p>The sparse vector array.</p>
              */
             public Builder values(java.util.List<Double> values) {
                 this.values = values;
@@ -427,9 +427,9 @@ public class UpsertCollectionDataRequest extends Request {
             } 
 
             /**
-             * <p>The unique ID of the vector data.</p>
+             * <p>The unique ID of the vector data record.</p>
              * <blockquote>
-             * <p> If you leave this parameter empty, a unique ID is automatically generated by using uuidgen. If you specify a value that is the same as an existing ID, an updated vector data ID is used.</p>
+             * <p>If this parameter is left empty, a unique ID is automatically generated by the database uuidgen function. If this parameter is not empty and conflicts with an existing ID in the database, the value in the database is updated with the data from the API request.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -441,7 +441,10 @@ public class UpsertCollectionDataRequest extends Request {
             }
 
             /**
-             * <p>The metadata of the vector data. The key field of this parameter must be the same as the key field of Metadata that is specified when you call the <a href="https://help.aliyun.com/document_detail/2401497.html">CreateCollection</a> operation.</p>
+             * <p>The metadata corresponding to the vector data record. The keys must be consistent with the metadata keys defined in the <a href="https://help.aliyun.com/document_detail/2401497.html">CreateCollection</a> operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;title&quot;:&quot;test title&quot;,&quot;content&quot;:&quot;test content&quot;}</p>
              */
             public Builder metadata(java.util.Map<String, String> metadata) {
                 this.metadata = metadata;
@@ -449,7 +452,7 @@ public class UpsertCollectionDataRequest extends Request {
             }
 
             /**
-             * <p>The sparse vector data.</p>
+             * <p>The list of sparse vector data.</p>
              */
             public Builder sparseVector(SparseVector sparseVector) {
                 this.sparseVector = sparseVector;
@@ -457,8 +460,11 @@ public class UpsertCollectionDataRequest extends Request {
             }
 
             /**
-             * <p>The vector data. The length of the vector data must be the same as the value of Dimension that is specified when you call the <a href="https://help.aliyun.com/document_detail/2401497.html">CreateCollection</a> operation.</p>
+             * <p>The vector data list. The length must be consistent with the dimensions defined in the <a href="https://help.aliyun.com/document_detail/2401497.html">CreateCollection</a> operation.</p>
              * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[1.0123,-0.1234]</p>
              */
             public Builder vector(java.util.List<Double> vector) {
                 this.vector = vector;

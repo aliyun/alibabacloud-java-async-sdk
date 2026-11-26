@@ -236,7 +236,10 @@ public class ColumnMetadata extends TeaModel {
         } 
 
         /**
-         * ColumnDefault.
+         * <p>The default value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;example&quot;::text</p>
          */
         public Builder columnDefault(String columnDefault) {
             this.columnDefault = columnDefault;
@@ -244,7 +247,10 @@ public class ColumnMetadata extends TeaModel {
         }
 
         /**
-         * Comment.
+         * <p>The column description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Sample column comment</p>
          */
         public Builder comment(String comment) {
             this.comment = comment;
@@ -252,7 +258,10 @@ public class ColumnMetadata extends TeaModel {
         }
 
         /**
-         * DataType.
+         * <p>The data type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>text</p>
          */
         public Builder dataType(String dataType) {
             this.dataType = dataType;
@@ -260,7 +269,7 @@ public class ColumnMetadata extends TeaModel {
         }
 
         /**
-         * IsCaseSensitive.
+         * <p>Indicates whether the column is case-sensitive.</p>
          */
         public Builder isCaseSensitive(Boolean isCaseSensitive) {
             this.isCaseSensitive = isCaseSensitive;
@@ -268,7 +277,7 @@ public class ColumnMetadata extends TeaModel {
         }
 
         /**
-         * IsCurrency.
+         * <p>Indicates whether the column stores currency values.</p>
          */
         public Builder isCurrency(Boolean isCurrency) {
             this.isCurrency = isCurrency;
@@ -276,7 +285,7 @@ public class ColumnMetadata extends TeaModel {
         }
 
         /**
-         * IsPrimaryKey.
+         * <p>Indicates whether the column is a primary key.</p>
          */
         public Builder isPrimaryKey(Boolean isPrimaryKey) {
             this.isPrimaryKey = isPrimaryKey;
@@ -284,7 +293,7 @@ public class ColumnMetadata extends TeaModel {
         }
 
         /**
-         * IsSigned.
+         * <p>Indicates whether the column is signed.</p>
          */
         public Builder isSigned(Boolean isSigned) {
             this.isSigned = isSigned;
@@ -292,7 +301,10 @@ public class ColumnMetadata extends TeaModel {
         }
 
         /**
-         * MaxLength.
+         * <p>The maximum character length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>255</p>
          */
         public Builder maxLength(Integer maxLength) {
             this.maxLength = maxLength;
@@ -300,7 +312,10 @@ public class ColumnMetadata extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>The column name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>content</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -308,7 +323,7 @@ public class ColumnMetadata extends TeaModel {
         }
 
         /**
-         * Nullable.
+         * <p>Indicates whether NULL values are allowed.</p>
          */
         public Builder nullable(Boolean nullable) {
             this.nullable = nullable;
@@ -316,7 +331,10 @@ public class ColumnMetadata extends TeaModel {
         }
 
         /**
-         * Precision.
+         * <p>The column precision, which indicates the total number of digits in the integer and fractional parts of a decimal number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder precision(Integer precision) {
             this.precision = precision;
@@ -324,7 +342,10 @@ public class ColumnMetadata extends TeaModel {
         }
 
         /**
-         * Scale.
+         * <p>The column scale, which indicates the number of digits in the fractional part of a decimal number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder scale(Integer scale) {
             this.scale = scale;
@@ -332,7 +353,10 @@ public class ColumnMetadata extends TeaModel {
         }
 
         /**
-         * SchemaName.
+         * <p>The schema name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ns1</p>
          */
         public Builder schemaName(String schemaName) {
             this.schemaName = schemaName;
@@ -340,7 +364,10 @@ public class ColumnMetadata extends TeaModel {
         }
 
         /**
-         * TableName.
+         * <p>The table name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dc1</p>
          */
         public Builder tableName(String tableName) {
             this.tableName = tableName;
@@ -348,7 +375,10 @@ public class ColumnMetadata extends TeaModel {
         }
 
         /**
-         * UdtName.
+         * <p>The name of the base data type used by the column.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>text</p>
          */
         public Builder udtName(String udtName) {
             this.udtName = udtName;

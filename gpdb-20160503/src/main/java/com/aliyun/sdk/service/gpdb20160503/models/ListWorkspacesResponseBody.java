@@ -140,7 +140,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The maximum number of entries to return. Default value: 10.</p>
+         * <p>The maximum number of entries to return for this request. Default value: 10.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -151,7 +151,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The token for the next query.</p>
+         * <p>The token used to start the next query.</p>
          * 
          * <strong>example:</strong>
          * <p>caeba0bbb2be03f84eb48b699f0a****</p>
@@ -173,7 +173,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of records on the current page.</p>
+         * <p>The number of entries on the current page.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -195,7 +195,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of records.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -575,7 +575,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The creation time of the API key.</p>
+             * <p>The creation time.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-03-09T02:26:48Z</p>
@@ -586,7 +586,10 @@ public class ListWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * Cu.
+             * <p>The compute resources.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder cu(String cu) {
                 this.cu = cu;
@@ -594,7 +597,10 @@ public class ListWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * DeletionProtection.
+             * <p>Specifies whether release protection is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>True</p>
              */
             public Builder deletionProtection(Boolean deletionProtection) {
                 this.deletionProtection = deletionProtection;
@@ -602,7 +608,14 @@ public class ListWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The service component status. Valid values:</p>
+             * <ul>
+             * <li>creating: The component is being created.</li>
+             * <li>active: The component is running.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -610,7 +623,10 @@ public class ListWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * componentId.
+             * <p>The component ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sas-xxxx</p>
              */
             public Builder componentId(String componentId) {
                 this.componentId = componentId;
@@ -618,7 +634,13 @@ public class ListWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * componentType.
+             * <p>The component type. Valid values:</p>
+             * <ul>
+             * <li>game</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>game</p>
              */
             public Builder componentType(String componentType) {
                 this.componentType = componentType;
@@ -802,7 +824,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
             } 
 
             /**
-             * Components.
+             * <p>The list of service components.</p>
              */
             public Builder components(java.util.List<Components> components) {
                 this.components = components;
@@ -821,7 +843,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The compute resource.</p>
+             * <p>The compute resources.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -832,7 +854,10 @@ public class ListWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * DeletionProtection.
+             * <p>Specifies whether release protection is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder deletionProtection(Boolean deletionProtection) {
                 this.deletionProtection = deletionProtection;
@@ -851,15 +876,15 @@ public class ListWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The billing type. Valid values:</p>
+             * <p>The billing method. Valid values:</p>
              * <ul>
-             * <li><strong>POSTPAY</strong>: pay-as-you-go.</li>
-             * <li><strong>PREPAY</strong>: subscription.</li>
+             * <li><strong>POSTPAY</strong>: pay-as-you-go</li>
+             * <li><strong>PREPAY</strong>: subscription</li>
              * </ul>
              * <blockquote>
              * <ul>
-             * <li>If this parameter is not specified, the default value is pay-as-you-go.</li>
-             * <li>In subscription billing mode, a discount is available when you purchase a duration of one year or longer. Select the billing type as needed.</li>
+             * <li>If this parameter is not specified, the pay-as-you-go billing method is used by default.</li>
+             * <li>In subscription mode, a discount is provided when you purchase a subscription for one year or longer. Select a billing method based on your business requirements.</li>
              * </ul>
              * </blockquote>
              * 
@@ -1033,7 +1058,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The list of API keys for the workspace.</p>
+             * <p>The list of API keys in the workspace.</p>
              */
             public Builder apikeys(java.util.List<Apikeys> apikeys) {
                 this.apikeys = apikeys;
@@ -1073,7 +1098,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
             /**
              * <p>The workspace name.</p>
              * <ul>
-             * <li>Maximum length: 50.</li>
+             * <li>Maximum length: 50 characters.</li>
              * <li>Must be unique.</li>
              * <li>Special characters are not allowed.</li>
              * </ul>

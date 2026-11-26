@@ -59,7 +59,7 @@ public class CheckServiceLinkedRoleRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the region. You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query available region IDs.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>

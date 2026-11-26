@@ -180,7 +180,7 @@ public class DescribeExtensionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The extension ID.</p>
+         * <p>The ID of the extension.</p>
          * 
          * <strong>example:</strong>
          * <p>37</p>
@@ -191,7 +191,7 @@ public class DescribeExtensionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The extension name.</p>
+         * <p>The name of the extension.</p>
          * 
          * <strong>example:</strong>
          * <p>zhparser</p>
@@ -202,7 +202,7 @@ public class DescribeExtensionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether an instance restart is required after you install the extension.</p>
+         * <p>Indicates whether the instance must be restarted to install the extension.</p>
          * 
          * <strong>example:</strong>
          * <p>False</p>
@@ -213,7 +213,7 @@ public class DescribeExtensionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Whether it is the latest version extension.</p>
+         * <p>Indicates whether the extension is the latest version.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>
@@ -235,7 +235,7 @@ public class DescribeExtensionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>ABB39CC3-4488-4857-905D-2E4A051D0521</p>

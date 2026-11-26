@@ -174,12 +174,12 @@ public class UntagResourcesRequest extends Request {
         } 
 
         /**
-         * <p>Whether to untag all tags on the instance. This parameter is only effective when TagKey.N is not set in the request. The value range is:</p>
+         * <p>Specifies whether to detach all tags from the instances. This parameter is valid only when TagKey.N is not specified in the request. Valid values:</p>
          * <ul>
          * <li>true</li>
          * <li>false</li>
          * </ul>
-         * <p>Default value: false</p>
+         * <p>Default value: false.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -209,7 +209,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * <p>Region ID, you can view available region IDs through the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> interface.</p>
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query available region IDs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -222,7 +222,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * <p>Instance ID. N\&quot;s value range: 1~50</p>
+         * <p>The instance ID. Valid values of N: 1 to 50.</p>
          * <p>This parameter is required.</p>
          */
         public Builder resourceId(java.util.List<String> resourceId) {
@@ -250,10 +250,10 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * <p>Resource type. The value range is:</p>
+         * <p>The resource type. Valid values:</p>
          * <ul>
-         * <li><code>instance</code>: Reserved mode instance.</li>
-         * <li><code>ALIYUN::GPDB::INSTANCE</code>: Elastic mode instance.</li>
+         * <li><code>instance</code>: reserved mode instance.</li>
+         * <li><code>ALIYUN::GPDB::INSTANCE</code>: elastic mode instance.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -267,7 +267,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * <p>Resource tag key. N\&quot;s value range: 1~20</p>
+         * <p>The tag key of the resource. Valid values of N: 1 to 20.</p>
          */
         public Builder tagKey(java.util.List<String> tagKey) {
             this.putQueryParameter("TagKey", tagKey);

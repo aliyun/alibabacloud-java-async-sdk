@@ -188,7 +188,7 @@ public class DescribeDBInstanceErrorLogRequest extends Request {
         /**
          * <p>The instance ID.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including the instance IDs.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -202,7 +202,7 @@ public class DescribeDBInstanceErrorLogRequest extends Request {
         }
 
         /**
-         * <p>The name of the database.</p>
+         * <p>The database name.</p>
          * 
          * <strong>example:</strong>
          * <p>adbtest</p>
@@ -214,7 +214,7 @@ public class DescribeDBInstanceErrorLogRequest extends Request {
         }
 
         /**
-         * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time must be in UTC. The end time must be later than the start time.</p>
+         * <p>The end time of the query. The end time must be later than the start time. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z format. The time must be in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-04-25T06:59Z</p>
@@ -226,7 +226,7 @@ public class DescribeDBInstanceErrorLogRequest extends Request {
         }
 
         /**
-         * <p>This parameter is not supported in Alibaba Cloud public cloud.</p>
+         * <p>This parameter is not supported in the public cloud. You do not need to specify this parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -238,7 +238,7 @@ public class DescribeDBInstanceErrorLogRequest extends Request {
         }
 
         /**
-         * <p>One or more keywords that are used to query error logs.</p>
+         * <p>The keyword in the error logs.</p>
          * 
          * <strong>example:</strong>
          * <p>error</p>
@@ -250,12 +250,12 @@ public class DescribeDBInstanceErrorLogRequest extends Request {
         }
 
         /**
-         * <p>The level of the logs to query. Valid values:</p>
+         * <p>The log level. Valid values:</p>
          * <ul>
-         * <li><strong>ALL</strong>: queries all error logs.</li>
-         * <li><strong>PANIC</strong>: queries only abnormal logs.</li>
-         * <li><strong>FATAL</strong>: queries only critical logs.</li>
-         * <li><strong>ERROR</strong>: queries only error logs.</li>
+         * <li><strong>ALL</strong>: Displays logs of all levels.</li>
+         * <li><strong>PANIC</strong>: Displays only panic-level logs.</li>
+         * <li><strong>FATAL</strong>: Displays only fatal-level logs.</li>
+         * <li><strong>ERROR</strong>: Displays only error-level logs.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -268,7 +268,7 @@ public class DescribeDBInstanceErrorLogRequest extends Request {
         }
 
         /**
-         * <p>The page number. Pages start from page 1. Default value: <strong>1</strong>.</p>
+         * <p>The page number. The value must be greater than 0 and cannot exceed the maximum value of the Integer type. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -298,7 +298,7 @@ public class DescribeDBInstanceErrorLogRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time must be in UTC.</p>
+         * <p>The start time of the query. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z format. The time must be in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-04-24T06:59Z</p>

@@ -174,9 +174,9 @@ public class DescribeDataBackupsRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the backup set. If you specify BackupId, the details of the backup set are returned.</p>
+         * <p>The ID of the backup set. If this parameter is specified, the details of the backup set are queried.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/210093.html">DescribeDataBackups</a> operation to query the information about all backup sets of an instance, including backup set IDs.</p>
+         * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/210093.html">DescribeDataBackups</a> operation to query the information about all backup sets of the target instance, including the backup set IDs.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -191,10 +191,10 @@ public class DescribeDataBackupsRequest extends Request {
         /**
          * <p>The backup mode. Valid values:</p>
          * <ul>
-         * <li>Automated</li>
-         * <li>Manual</li>
+         * <li>Automated: automatic backup.</li>
+         * <li>Manual: manual backup.</li>
          * </ul>
-         * <p>If you do not specify this parameter, all backup sets are returned.</p>
+         * <p>If you do not specify this parameter, all backup modes are returned.</p>
          * 
          * <strong>example:</strong>
          * <p>Automated</p>
@@ -206,12 +206,12 @@ public class DescribeDataBackupsRequest extends Request {
         }
 
         /**
-         * <p>The state of the backup set. Valid values:</p>
+         * <p>The status of the backup set. Valid values:</p>
          * <ul>
-         * <li>Success</li>
-         * <li>Failed</li>
+         * <li>Success: The backup is completed.</li>
+         * <li>Failed: The backup failed.</li>
          * </ul>
-         * <p>If you do not specify this parameter, all backup sets are returned.</p>
+         * <p>If you do not specify this parameter, backup sets in all states are returned.</p>
          * 
          * <strong>example:</strong>
          * <p>Success</p>
@@ -223,9 +223,9 @@ public class DescribeDataBackupsRequest extends Request {
         }
 
         /**
-         * <p>The instance ID.</p>
+         * <p>The ID of the instance.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including the instance IDs.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -242,9 +242,9 @@ public class DescribeDataBackupsRequest extends Request {
          * <p>The backup type. Valid values:</p>
          * <ul>
          * <li><strong>DATA</strong>: full backup.</li>
-         * <li><strong>RESTOREPOI</strong>: point-in-time recovery backup.</li>
+         * <li><strong>RESTOREPOI</strong>: restorable point.</li>
          * </ul>
-         * <p>If you do not specify this parameter, the backup sets of full backup are returned.</p>
+         * <p>If you do not specify this parameter, full backup sets are returned by default.</p>
          * 
          * <strong>example:</strong>
          * <p>DATA</p>
@@ -256,7 +256,7 @@ public class DescribeDataBackupsRequest extends Request {
         }
 
         /**
-         * <p>The end of the time range to query. The end time must be later than the start time. Specify the time in the yyyy-MM-ddTHH:mmZ format. The time must be in UTC.</p>
+         * <p>The end time of the query. The end time must be later than the start time. Specify the time in the yyyy-MM-ddTHH:mmZ format. The time must be in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2011-06-01T16:00Z</p>
@@ -268,7 +268,7 @@ public class DescribeDataBackupsRequest extends Request {
         }
 
         /**
-         * <p>The page number. Pages start from page 1. Default value: 1</p>
+         * <p>The page number. The value must be a positive integer. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -298,7 +298,7 @@ public class DescribeDataBackupsRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query. Specify the time in the yyyy-MM-ddTHH:mmZ format. The time must be in UTC.</p>
+         * <p>The start time of the query. Specify the time in the yyyy-MM-ddTHH:mmZ format. The time must be in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2011-06-01T15:00Z</p>

@@ -106,7 +106,7 @@ public class ListDocumentCollectionsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The total number of items.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -125,7 +125,7 @@ public class ListDocumentCollectionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response message.</p>
+         * <p>The returned message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -136,7 +136,7 @@ public class ListDocumentCollectionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ABB39CC3-4488-4857-905D-2E4A051D0521</p>
@@ -149,10 +149,8 @@ public class ListDocumentCollectionsResponseBody extends TeaModel {
         /**
          * <p>The creation status. Valid values:</p>
          * <ul>
-         * <li><p><strong>success</strong>: The operation succeeded.</p>
-         * </li>
-         * <li><p><strong>fail</strong>: The operation failed.</p>
-         * </li>
+         * <li><strong>success</strong>: Succeeded.</li>
+         * <li><strong>fail</strong>: Failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>

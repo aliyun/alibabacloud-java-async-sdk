@@ -159,9 +159,9 @@ public class DownloadDiagnosisRecordsRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including instance IDs.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to view the details of all AnalyticDB for PostgreSQL instances in a specific region, including the instance ID.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -175,7 +175,7 @@ public class DownloadDiagnosisRecordsRequest extends Request {
         }
 
         /**
-         * <p>The name of the database.</p>
+         * <p>The database name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -188,7 +188,7 @@ public class DownloadDiagnosisRecordsRequest extends Request {
         }
 
         /**
-         * <p>The end of the time range to query. Specify the time in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time must be in UTC.</p>
+         * <p>The end time of the query. The end time must be later than the start time. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z format. The time must be in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-05-07T07:59Z</p>
@@ -200,12 +200,12 @@ public class DownloadDiagnosisRecordsRequest extends Request {
         }
 
         /**
-         * <p>The language of the file that contains the query diagnostic information. Valid values:</p>
+         * <p>The language of the downloaded file. Valid values:</p>
          * <ul>
-         * <li><strong>zh</strong>: simplified Chinese</li>
-         * <li><strong>en</strong>: English</li>
-         * <li><strong>ja</strong>: Japanese</li>
-         * <li><strong>zh-tw</strong>: traditional Chinese</li>
+         * <li><strong>zh</strong>: Simplified Chinese.</li>
+         * <li><strong>en</strong>: English.</li>
+         * <li><strong>ja</strong>: Japanese.</li>
+         * <li><strong>zh-tw</strong>: Traditional Chinese.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -218,15 +218,15 @@ public class DownloadDiagnosisRecordsRequest extends Request {
         }
 
         /**
-         * <p>The filter condition on queries. The value is in the JSON format. Valid values:</p>
+         * <p>The query filter conditions in JSON format. Valid values:</p>
          * <ul>
-         * <li><code>{&quot;Type&quot;:&quot;maxCost&quot;, &quot;Value&quot;:&quot;100&quot;}</code>: filters the top 100 queries that are the most time-consuming.</li>
-         * <li><code>{&quot;Type&quot;:&quot;status&quot;,&quot;Value&quot;:&quot;finished&quot;}</code>: filters completed queries.</li>
-         * <li><code>{&quot;Type&quot;:&quot;status&quot;,&quot;Value&quot;:&quot;running&quot;}</code>: filters running queries.</li>
-         * <li><code>{&quot;Type&quot;:&quot;cost&quot;,&quot;Max&quot;:&quot;200&quot;}</code>: filters the queries that consume less than 200 milliseconds.</li>
-         * <li><code>{&quot;Type&quot;:&quot;cost&quot;,&quot;Min&quot;:&quot;200&quot;,&quot;Max&quot;:&quot;60000&quot;}</code>: filters the queries that consume 200 milliseconds or more and less than 1 minute.</li>
-         * <li><code>{&quot;Type&quot;:&quot;cost&quot;,&quot;Min&quot;:&quot;60000&quot;}</code>: filters the queries that consume 1 minute or more.</li>
-         * <li><code>{&quot;Type&quot;:&quot;cost&quot;,&quot;Min&quot;:&quot;30&quot;,&quot;Max&quot;:&quot;50&quot;}</code>: filters the queries that consume 30 milliseconds or more and less than 50 milliseconds. You can customize a filter condition by setting <strong>Min</strong> and <strong>Max</strong>.</li>
+         * <li><code>{&quot;Type&quot;:&quot;maxCost&quot;, &quot;Value&quot;:&quot;100&quot;}</code>: The 100 queries with the longest execution duration.</li>
+         * <li><code>{&quot;Type&quot;:&quot;status&quot;,&quot;Value&quot;:&quot;finished&quot;}</code>: Completed queries.</li>
+         * <li><code>{&quot;Type&quot;:&quot;status&quot;,&quot;Value&quot;:&quot;running&quot;}</code>: Running queries.</li>
+         * <li><code>{&quot;Type&quot;:&quot;cost&quot;,&quot;Max&quot;:&quot;200&quot;}</code>: Short-duration queries, which are queries with an execution duration of less than 200 milliseconds.</li>
+         * <li><code>{&quot;Type&quot;:&quot;cost&quot;,&quot;Min&quot;:&quot;200&quot;,&quot;Max&quot;:&quot;60000&quot;}</code>: Medium-duration queries, which are queries with an execution duration of 200 milliseconds or more but less than 1 minute.</li>
+         * <li><code>{&quot;Type&quot;:&quot;cost&quot;,&quot;Min&quot;:&quot;60000&quot;}</code>: Long-duration queries, which are queries with an execution duration of 1 minute or more.</li>
+         * <li><code>{&quot;Type&quot;:&quot;cost&quot;,&quot;Min&quot;:&quot;30&quot;,&quot;Max&quot;:&quot;50&quot;}</code>: Custom-duration queries. You can specify the minimum and maximum execution duration of the queries. <strong>Min</strong> specifies the minimum execution duration, and <strong>Max</strong> specifies the maximum execution duration. Unit: milliseconds.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -239,7 +239,7 @@ public class DownloadDiagnosisRecordsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group to which the instance belongs. For more information about how to obtain the ID of a resource group, see <a href="https://help.aliyun.com/document_detail/151181.html">View basic information of a resource group</a>.</p>
+         * <p><strong>[Deprecated]</strong> This parameter is deprecated. You do not need to specify this parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -251,7 +251,7 @@ public class DownloadDiagnosisRecordsRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query. Specify the time in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time must be in UTC.</p>
+         * <p>The start time of the query. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z format. The time must be in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-05-07T06:59Z</p>
@@ -263,7 +263,7 @@ public class DownloadDiagnosisRecordsRequest extends Request {
         }
 
         /**
-         * <p>The name of the database account.</p>
+         * <p>The username.</p>
          * 
          * <strong>example:</strong>
          * <p>adbpguser</p>

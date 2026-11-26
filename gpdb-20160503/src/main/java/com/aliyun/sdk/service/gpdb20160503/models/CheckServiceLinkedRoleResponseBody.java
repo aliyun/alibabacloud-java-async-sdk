@@ -80,7 +80,7 @@ public class CheckServiceLinkedRoleResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Indicates whether an SLR is created.</p>
+         * <p>Indicates whether the service-linked role (SLR) is created.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -91,7 +91,7 @@ public class CheckServiceLinkedRoleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the region.</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -102,7 +102,7 @@ public class CheckServiceLinkedRoleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>B4CAF581-2AC7-41AD-8940-D56DF7AADF5B</p>

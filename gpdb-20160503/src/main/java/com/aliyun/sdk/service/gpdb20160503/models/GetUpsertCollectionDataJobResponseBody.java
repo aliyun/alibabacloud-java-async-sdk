@@ -93,7 +93,7 @@ public class GetUpsertCollectionDataJobResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about the vector data upload job.</p>
+         * <p>The details of the task for uploading vector data.</p>
          */
         public Builder job(Job job) {
             this.job = job;
@@ -125,8 +125,8 @@ public class GetUpsertCollectionDataJobResponseBody extends TeaModel {
         /**
          * <p>The status of the operation. Valid values:</p>
          * <ul>
-         * <li><strong>success</strong></li>
-         * <li><strong>fail</strong></li>
+         * <li><strong>success</strong>: The operation is successful.</li>
+         * <li><strong>fail</strong>: The operation fails.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -261,7 +261,7 @@ public class GetUpsertCollectionDataJobResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether the operation is complete.</p>
+             * <p>Indicates whether the operation is completed.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -272,7 +272,7 @@ public class GetUpsertCollectionDataJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the job was created.</p>
+             * <p>The time when the task was created.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-01-08 16:52:04.864664</p>
@@ -283,7 +283,7 @@ public class GetUpsertCollectionDataJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The error message.</p>
+             * <p>The error message returned when the current operation is abnormal or fails.</p>
              * 
              * <strong>example:</strong>
              * <p>Failed to connect database.</p>
@@ -305,7 +305,7 @@ public class GetUpsertCollectionDataJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The progress of the vector data upload job. The value of this parameter indicates the number of data entries that have been uploaded.</p>
+             * <p>The upload progress. The value indicates the number of data records that have been uploaded.</p>
              * 
              * <strong>example:</strong>
              * <p>1600</p>
@@ -316,24 +316,17 @@ public class GetUpsertCollectionDataJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the job.</p>
+             * <p>The task status. Valid values:</p>
              * <blockquote>
-             * <p> Valid values:</p>
-             * </blockquote>
              * <ul>
-             * <li><p>Success</p>
-             * </li>
-             * <li><p>Failed (See the Error parameter for failure reasons.)</p>
-             * </li>
-             * <li><p>Cancelling</p>
-             * </li>
-             * <li><p>Cancelled</p>
-             * </li>
-             * <li><p>Start</p>
-             * </li>
-             * <li><p>Running</p>
-             * </li>
+             * <li>Success: The task is successful.</li>
+             * <li>Failed: The task fails. You can view the Error field for the cause of the failure.</li>
+             * <li>Cancelling: The task is being canceled.</li>
+             * <li>Cancelled: The task is canceled.</li>
+             * <li>Start: The task is started.</li>
+             * <li>Running: The task is running.</li>
              * </ul>
+             * </blockquote>
              * 
              * <strong>example:</strong>
              * <p>Success</p>
@@ -344,7 +337,7 @@ public class GetUpsertCollectionDataJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the job was updated.</p>
+             * <p>The time when the task was updated.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-01-08 16:53:04.864664</p>

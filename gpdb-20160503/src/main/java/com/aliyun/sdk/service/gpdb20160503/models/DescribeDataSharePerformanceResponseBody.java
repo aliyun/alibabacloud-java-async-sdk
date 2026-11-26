@@ -117,7 +117,7 @@ public class DescribeDataSharePerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The end of the queried time range.</p>
+         * <p>The end time of the query.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-08-03T15:10Z</p>
@@ -128,7 +128,7 @@ public class DescribeDataSharePerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of performance metrics.</p>
+         * <p>The list of performance metric values for data sharing.</p>
          */
         public Builder performanceKeys(java.util.List<PerformanceKeys> performanceKeys) {
             this.performanceKeys = performanceKeys;
@@ -147,7 +147,7 @@ public class DescribeDataSharePerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The start of the queried time range.</p>
+         * <p>The start time of the query.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-08-03T15:00Z</p>
@@ -203,7 +203,7 @@ public class DescribeDataSharePerformanceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>An array that contains the timestamp and the corresponding metric value.</p>
+             * <p>The value of the performance metric.</p>
              */
             public Builder point(java.util.List<String> point) {
                 this.point = point;
@@ -281,7 +281,7 @@ public class DescribeDataSharePerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The data points of the time series.</p>
+             * <p>The list of performance metric values. The list contains one or more values.</p>
              */
             public Builder values(java.util.List<Values> values) {
                 this.values = values;
@@ -372,7 +372,7 @@ public class DescribeDataSharePerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The details of the time series data for the metric.</p>
+             * <p>The series of the performance metric.</p>
              */
             public Builder series(java.util.List<Series> series) {
                 this.series = series;

@@ -145,9 +145,9 @@ public class ModifyDBInstanceResourceGroupRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the instance IDs of all AnalyticDB for PostgreSQL instances in a specific region.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the IDs of all AnalyticDB for PostgreSQL instances in the specified region.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -161,7 +161,7 @@ public class ModifyDBInstanceResourceGroupRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group to which you want to move the instance. For more information about how to obtain the ID of a resource group, see <a href="https://help.aliyun.com/document_detail/151181.html">View basic information of a resource group</a>.</p>
+         * <p>The ID of the destination resource group. For more information about how to obtain a resource group ID, see <a href="https://help.aliyun.com/document_detail/151181.html">View basic information of a resource group</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -192,7 +192,7 @@ public class ModifyDBInstanceResourceGroupRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group to which the instance belongs. For more information about how to obtain the ID of a resource group, see <a href="https://help.aliyun.com/document_detail/151181.html">View basic information of a resource group</a>.</p>
+         * <p><strong>[Deprecated]</strong> The ID of the resource group to which the instance currently belongs. For more information about how to obtain a resource group ID, see <a href="https://help.aliyun.com/document_detail/151181.html">View basic information of a resource group</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-bp67acfmxazb4p****</p>

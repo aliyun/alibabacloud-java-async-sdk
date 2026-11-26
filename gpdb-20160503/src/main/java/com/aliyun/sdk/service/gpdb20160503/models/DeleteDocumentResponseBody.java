@@ -80,7 +80,7 @@ public class DeleteDocumentResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Detailed information returned by the API.</p>
+         * <p>The detailed information returned by the API operation.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -91,7 +91,7 @@ public class DeleteDocumentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ABB39CC3-4488-4857-905D-2E4A051D0521</p>
@@ -102,7 +102,11 @@ public class DeleteDocumentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Creation status, value description: - <strong>success</strong>: Success - <strong>fail</strong>: Fail</p>
+         * <p>The creation status. Valid values:</p>
+         * <ul>
+         * <li><strong>success</strong>: Successful.</li>
+         * <li><strong>fail</strong>: Failed.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>success</p>

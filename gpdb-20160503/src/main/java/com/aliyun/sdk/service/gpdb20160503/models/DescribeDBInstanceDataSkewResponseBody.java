@@ -93,7 +93,7 @@ public class DescribeDBInstanceDataSkewResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Details about data skew.</p>
+         * <p>The list of data skew details.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -101,7 +101,7 @@ public class DescribeDBInstanceDataSkewResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -112,7 +112,7 @@ public class DescribeDBInstanceDataSkewResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>B4CAF581-2AC7-41AD-8940-D56DF7AADF5B</p>
@@ -123,7 +123,7 @@ public class DescribeDBInstanceDataSkewResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -327,7 +327,7 @@ public class DescribeDBInstanceDataSkewResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The sequence number of the data skew case. All data skew cases are sorted by severity in descending order.</p>
+             * <p>The sequence number. The entries are sorted in descending order of data skew.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -360,7 +360,7 @@ public class DescribeDBInstanceDataSkewResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The skew ratio of the table. Valid values: 0 to 100. Unit: %. A greater value indicates that the table is more severely skewed. A smaller value indicates less impact on query performance. A value of 0 indicates no data skew.</p>
+             * <p>The data skew percentage of the table. Valid values: 0 to 100. Unit: %. A larger value indicates more severe data skew. A smaller value is more beneficial to the query performance of the database. A value of 0 indicates no data skew.</p>
              * 
              * <strong>example:</strong>
              * <p>10.23</p>
@@ -371,7 +371,7 @@ public class DescribeDBInstanceDataSkewResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the table was last deleted, inserted, or updated.</p>
+             * <p>The time when the table was last updated by a DELETE, INSERT, or UPDATE operation.</p>
              * 
              * <strong>example:</strong>
              * <p>2020-09-08T20:00:00Z</p>

@@ -145,7 +145,7 @@ public class DescribeModelOperatorUsageRequest extends Request {
         /**
          * <p>The list of API key IDs. Separate multiple IDs with commas (,). If this parameter is not specified, all API key IDs under the instance ID are used by default.</p>
          * <blockquote>
-         * <p>The list can contain up to 50 items.</p>
+         * <p>A maximum of 50 items can be included in the list.</p>
          * </blockquote>
          */
         public Builder apiKeyIds(java.util.List<Integer> apiKeyIds) {
@@ -156,9 +156,9 @@ public class DescribeModelOperatorUsageRequest extends Request {
         }
 
         /**
-         * <p>The end time of the query. Specify the time in the <i>YYYY-MM-DDThh:mmZ</i> format (UTC).</p>
+         * <p>The end time of the query. The format is <i>YYYY-MM-DDThh:mmZ</i> (UTC time).</p>
          * <blockquote>
-         * <p>The end time must be later than the start time, and the interval between the start time and end time cannot exceed 7 days.</p>
+         * <p>The end time must be later than the start time, and the interval between the start time and the end time cannot exceed 7 days.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -171,11 +171,11 @@ public class DescribeModelOperatorUsageRequest extends Request {
         }
 
         /**
-         * <p>The dimension by which to split the series. Separate multiple dimensions with commas (,). The order is not significant. Valid values:</p>
+         * <p>The dimension for splitting series. Separate multiple dimensions with commas (,). The order does not matter. Valid values:</p>
          * <ul>
-         * <li>model (default): splits by model.</li>
-         * <li>api_key: splits by API key.</li>
-         * <li>model,api_key: splits by model and API key.</li>
+         * <li>model (default): Splits by model.</li>
+         * <li>api_key: Splits by API key.</li>
+         * <li>model,api_key: Splits by model and API key.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -190,13 +190,13 @@ public class DescribeModelOperatorUsageRequest extends Request {
         /**
          * <p>The list of metrics. Separate multiple metrics with commas (,). Valid values:</p>
          * <ul>
-         * <li>request_count: the number of requests.</li>
-         * <li>success_count: the number of successful requests.</li>
-         * <li>error_count: the number of failed requests.</li>
-         * <li>success_rate: the request success rate.</li>
-         * <li>input_token: the number of input tokens.</li>
-         * <li>output_token: the number of output tokens.</li>
-         * <li>total_token: the total number of tokens.</li>
+         * <li>request_count: The number of requests.</li>
+         * <li>success_count: The number of successful requests.</li>
+         * <li>error_count: The number of failed requests.</li>
+         * <li>success_rate: The request success rate.</li>
+         * <li>input_token: The number of input tokens.</li>
+         * <li>output_token: The number of output tokens.</li>
+         * <li>total_token: The total number of tokens.</li>
          * </ul>
          */
         public Builder keys(java.util.List<String> keys) {
@@ -221,23 +221,23 @@ public class DescribeModelOperatorUsageRequest extends Request {
          * <blockquote>
          * <ul>
          * <li><ol>
-         * <li>If Period is not specified, the default value is determined by the following rules:</li>
+         * <li>If Period is not specified, the default value is selected based on the following rules:</li>
          * </ol>
          * </li>
          * <li><ul>
-         * <li>Window range ≤ 1 hour: Period = 1.</li>
+         * <li>If the time window is less than or equal to 1 hour, Period is set to 1.</li>
          * </ul>
          * </li>
          * <li><ul>
-         * <li>Window range ≤ 1 day: Period = 60.</li>
+         * <li>If the time window is less than or equal to 1 day, Period is set to 60.</li>
          * </ul>
          * </li>
          * <li><ul>
-         * <li>Window range ≤ 7 days: Period = 60.</li>
+         * <li>If the time window is less than or equal to 7 days, Period is set to 60.</li>
          * </ul>
          * </li>
          * <li><ol start="2">
-         * <li>When Period is set to 1, the window must be ≤ 1 day.</li>
+         * <li>If Period is set to 1, the time window must be less than or equal to 1 day.</li>
          * </ol>
          * </li>
          * </ul>
@@ -253,9 +253,9 @@ public class DescribeModelOperatorUsageRequest extends Request {
         }
 
         /**
-         * <p>The start time of the query. Specify the time in the <i>YYYY-MM-DDThh:mmZ</i> format (UTC).</p>
+         * <p>The start time of the query. The format is <i>YYYY-MM-DDThh:mmZ</i> (UTC time).</p>
          * <blockquote>
-         * <p>Only metrics within the last 30 days can be queried.</p>
+         * <p>You can query only metrics from the last 30 days.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

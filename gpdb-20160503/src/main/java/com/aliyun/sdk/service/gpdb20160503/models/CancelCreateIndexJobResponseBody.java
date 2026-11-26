@@ -80,7 +80,7 @@ public class CancelCreateIndexJobResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The returned message.</p>
+         * <p>The detailed information returned in the response.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -91,7 +91,7 @@ public class CancelCreateIndexJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The unique ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ABB39CC3-4488-4857-905D-2E4A051D0521</p>
@@ -102,10 +102,10 @@ public class CancelCreateIndexJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The status of the operation. Valid values:</p>
+         * <p>The execution status of the operation. Valid values:</p>
          * <ul>
-         * <li><strong>success</strong></li>
-         * <li><strong>fail</strong></li>
+         * <li><strong>success</strong>: The execution succeeded.</li>
+         * <li><strong>fail</strong>: The execution failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>

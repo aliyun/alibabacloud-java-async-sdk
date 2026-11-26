@@ -106,11 +106,16 @@ public class DescribeHadoopConfigsRequest extends Request {
         /**
          * <p>The name of the configuration file. Valid values:</p>
          * <ul>
-         * <li>hdfs-site</li>
-         * <li>core-site</li>
-         * <li>yarn-site</li>
-         * <li>mapred-site</li>
-         * <li>hive-site</li>
+         * <li><p>hdfs-site: hdfs-site.xml file</p>
+         * </li>
+         * <li><p>core-site: core-site.xml file</p>
+         * </li>
+         * <li><p>yarn-site: yarn-site.xml file</p>
+         * </li>
+         * <li><p>mapred-site: mapred-site.xml file</p>
+         * </li>
+         * <li><p>hive-site: hive-site.xml file</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -137,7 +142,7 @@ public class DescribeHadoopConfigsRequest extends Request {
         }
 
         /**
-         * <p>The E-MapReduce (EMR) Hadoop cluster ID.</p>
+         * <p>The EMR instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -150,9 +155,9 @@ public class DescribeHadoopConfigsRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the instance.</p>
+         * <p>The region ID.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query available region IDs.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

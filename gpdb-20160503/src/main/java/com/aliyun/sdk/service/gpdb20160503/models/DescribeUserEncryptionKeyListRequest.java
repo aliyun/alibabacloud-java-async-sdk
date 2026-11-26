@@ -103,7 +103,7 @@ public class DescribeUserEncryptionKeyListRequest extends Request {
          * <p>The number of KMS keys to return on each page. Default value: 10.</p>
          * 
          * <strong>example:</strong>
-         * <p>30</p>
+         * <p>10</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -116,7 +116,7 @@ public class DescribeUserEncryptionKeyListRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
+         * <p>ap-southeast-1</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

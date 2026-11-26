@@ -117,7 +117,7 @@ public class ModifySupabaseProjectResourceRequest extends Request {
         } 
 
         /**
-         * <p>The specification change type.</p>
+         * <p>The modification type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -167,7 +167,7 @@ public class ModifySupabaseProjectResourceRequest extends Request {
         }
 
         /**
-         * <p>The storage size, in GB.</p>
+         * <p>The storage capacity. Unit: GB.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>

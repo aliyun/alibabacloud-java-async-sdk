@@ -102,7 +102,7 @@ public class CheckHadoopNetConnectionRequest extends Request {
         } 
 
         /**
-         * <p>Instance ID.</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,9 +116,9 @@ public class CheckHadoopNetConnectionRequest extends Request {
 
         /**
          * <ol>
-         * <li>Either DataSourceId or EmrInstanceId must be specified as input, otherwise an error will occur.</li>
-         * <li>If both of the above parameters are specified, EmrInstanceId will be used preferentially.</li>
-         * <li>If the data source specified by DataSourceId is a self-built Hadoop cluster, an error will occur directly.</li>
+         * <li>You must specify either DataSourceId or EmrInstanceId as input. Otherwise, an error is returned.</li>
+         * <li>If both parameters are specified, EmrInstanceId takes precedence.</li>
+         * <li>If the data source specified by DataSourceId is a self-managed Hadoop cluster, an error is returned.</li>
          * </ol>
          * 
          * <strong>example:</strong>
@@ -131,7 +131,7 @@ public class CheckHadoopNetConnectionRequest extends Request {
         }
 
         /**
-         * <p>EMR instance ID.</p>
+         * <p>The EMR instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>c-xxx</p>
@@ -143,7 +143,7 @@ public class CheckHadoopNetConnectionRequest extends Request {
         }
 
         /**
-         * <p>Region ID.</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>

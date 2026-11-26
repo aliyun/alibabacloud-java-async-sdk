@@ -109,7 +109,7 @@ public class ModifyCollectionResponseBody extends TeaModel {
          * <ul>
          * <li><p>See <a href="https://help.aliyun.com/document_detail/424383.html">Data types</a> for the list of supported data types.</p>
          * </li>
-         * <li><p>The \&quot;money\&quot; data type is not supported.</p>
+         * <li><p>The &quot;money&quot; data type is not supported.</p>
          * </li>
          * </ul>
          * </blockquote>

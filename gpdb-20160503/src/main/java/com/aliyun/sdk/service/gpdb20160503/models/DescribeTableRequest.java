@@ -164,7 +164,7 @@ public class DescribeTableRequest extends Request {
         /**
          * <p>The instance ID.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in a region, including instance IDs.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in the specified region, including the instance IDs.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -177,7 +177,7 @@ public class DescribeTableRequest extends Request {
         }
 
         /**
-         * <p>The database name.</p>
+         * <p>The name of the database.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -199,7 +199,7 @@ public class DescribeTableRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the instance.</p>
+         * <p>The ID of the region where the instance resides.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -212,7 +212,7 @@ public class DescribeTableRequest extends Request {
         }
 
         /**
-         * <p>The name of the schema that contains the table.</p>
+         * <p>The name of the schema where the table resides.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -225,9 +225,9 @@ public class DescribeTableRequest extends Request {
         }
 
         /**
-         * <p>The access credential. Created by calling the CreateSecret operation.</p>
+         * <p>The access credential created by calling the CreateSecret operation.</p>
          * <blockquote>
-         * <p>When you access this operation by using a RAM user, you must have the UseSecret or GetSecretValue permission on this SecretArn.</p>
+         * <p>When you call this operation as a RAM user, the RAM user must have the UseSecret or GetSecretValue permission on the SecretArn.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -241,7 +241,7 @@ public class DescribeTableRequest extends Request {
         }
 
         /**
-         * <p>The table name.</p>
+         * <p>The name of the table.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -254,7 +254,7 @@ public class DescribeTableRequest extends Request {
         }
 
         /**
-         * <p>The ID of the workspace that consists of multiple database instances. This parameter and DBInstanceId cannot both be empty. If both this parameter and DBInstanceId are specified, this parameter takes precedence.</p>
+         * <p>The ID of the workspace that consists of multiple database instances. This parameter and the DBInstanceId parameter cannot be both empty. If both parameters are specified, this parameter takes precedence.</p>
          * 
          * <strong>example:</strong>
          * <p>gp-ws-*****</p>

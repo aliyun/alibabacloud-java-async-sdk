@@ -102,7 +102,7 @@ public class ListSupabaseProjectTagsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The details.</p>
+         * <p>The tag resource details.</p>
          */
         public Builder tagResources(java.util.List<TagResources> tagResources) {
             this.tagResources = tagResources;

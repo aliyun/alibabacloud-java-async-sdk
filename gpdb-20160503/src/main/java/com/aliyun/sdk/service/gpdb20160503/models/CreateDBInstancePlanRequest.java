@@ -178,7 +178,7 @@ public class CreateDBInstancePlanRequest extends Request {
         /**
          * <p>The instance ID.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the IDs of all AnalyticDB for PostgreSQL instances within a region.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the IDs of all AnalyticDB for PostgreSQL instances in a specific region.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -201,7 +201,7 @@ public class CreateDBInstancePlanRequest extends Request {
         }
 
         /**
-         * <p>The execution information of the plan. Specify the parameter in the JSON format. The parameter value varies based on the values of <strong>PlanType</strong> and <strong>PlanScheduleType</strong>. The following section describes the PlanConfig parameter.</p>
+         * <p>The detailed information about the execution plan. The value must be in JSON format. The content must be adjusted based on the values of the <strong>PlanType</strong> and <strong>PlanScheduleType</strong> parameters. For more information, see the following supplementary instructions.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -226,15 +226,13 @@ public class CreateDBInstancePlanRequest extends Request {
         }
 
         /**
-         * <p>The end time of the plan. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC. The end time must be later than the start time.</p>
+         * <p>The end time of the plan. The end time must be later than the start time. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time must be in UTC.</p>
          * <blockquote>
-         * </blockquote>
          * <ul>
-         * <li><p>This parameter must be specified only when <strong>PlanScheduleType</strong> is set to <strong>Regular</strong>.</p>
-         * </li>
-         * <li><p>If you do not specify this parameter, the plan stops until the plan is deleted.</p>
-         * </li>
+         * <li>This parameter is required only when <strong>PlanScheduleType</strong> is set to <strong>Regular</strong>.</li>
+         * <li>This parameter is optional. If you do not specify an end time, the plan stops when the cycle ends.</li>
          * </ul>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>2023-04-17T23:00:00Z</p>
@@ -261,8 +259,8 @@ public class CreateDBInstancePlanRequest extends Request {
         /**
          * <p>The execution mode of the plan. Valid values:</p>
          * <ul>
-         * <li><strong>Postpone</strong>: The plan is executed later.</li>
-         * <li><strong>Regular</strong>: The plan is executed periodically.</li>
+         * <li><strong>Postpone</strong>: execute later.</li>
+         * <li><strong>Regular</strong>: periodic execution.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -276,15 +274,13 @@ public class CreateDBInstancePlanRequest extends Request {
         }
 
         /**
-         * <p>The start time of the plan. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+         * <p>The start time of the plan. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time must be in UTC.</p>
          * <blockquote>
-         * </blockquote>
          * <ul>
-         * <li><p>This parameter must be specified only when <strong>PlanScheduleType</strong> is set to <strong>Regular</strong>.</p>
-         * </li>
-         * <li><p>If you do not specify this parameter, the current time is used.</p>
-         * </li>
+         * <li>This parameter is required only when <strong>PlanScheduleType</strong> is set to <strong>Regular</strong>.</li>
+         * <li>If you do not specify this parameter, the current time is used by default.</li>
          * </ul>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>2022-04-17T23:00:00Z</p>
@@ -298,14 +294,16 @@ public class CreateDBInstancePlanRequest extends Request {
         /**
          * <p>The type of the plan. Valid values:</p>
          * <ul>
-         * <li><strong>PauseResume</strong>: pauses and resumes an instance.</li>
-         * <li><strong>Resize</strong>: changes the number of compute nodes.</li>
-         * <li><strong>ModifySpec</strong>: changes compute node specifications.</li>
+         * <li><strong>PauseResume</strong>: automatic start and stop.</li>
+         * <li><strong>Resize</strong>: instance upgrade/downgrade, which increases or decreases the number of compute nodes.</li>
+         * <li><strong>ModifySpec</strong>: specification change, which changes the node specifications.</li>
+         * <li><strong>InPlaceModifySpec</strong>: in-place elastic scaling, which scales the compute resources on the local node without changing the base specifications.</li>
          * </ul>
          * <blockquote>
          * <ul>
-         * <li>You can specify the value to ModifySpec only for instances in elastic storage mode.</li>
-         * <li>You can specify the value to ModifySpec only for instances in elastic storage mode.</li>
+         * <li>Instance upgrade/downgrade is supported only for instances in Serverless mode.</li>
+         * <li>Specification changes are supported only for instances in elastic storage mode.</li>
+         * <li>In-place elastic scaling is supported only for high availability (HA) instances in elastic storage mode.</li>
          * </ul>
          * </blockquote>
          * <p>This parameter is required.</p>

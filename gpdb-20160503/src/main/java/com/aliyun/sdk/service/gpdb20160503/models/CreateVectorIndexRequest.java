@@ -289,15 +289,11 @@ public class CreateVectorIndexRequest extends Request {
         } 
 
         /**
-         * <p>The vector indexing algorithm.</p>
-         * <p>Valid values:</p>
+         * <p>The vector index algorithm. Valid values:</p>
          * <ul>
-         * <li><p><code>hnswflat</code>: (Default) An HNSW index that does not use quantization compression.</p>
-         * </li>
-         * <li><p><code>novam</code>: A graph-based index that does not use quantization compression. This algorithm is suitable for high-performance scenarios, such as real-time recommendations.</p>
-         * </li>
-         * <li><p><code>novad</code>: A partitioned index that uses rabitq quantization. This algorithm is suitable for large-scale, cost-effective retrieval scenarios.</p>
-         * </li>
+         * <li>hnswflat: HNSW index without quantization compression (default).</li>
+         * <li>novam: graph index without quantization compression, suitable for high-performance scenarios such as real-time recommendation.</li>
+         * <li>novad: partitioned index with RaBitQ quantization, suitable for large-scale, low-cost retrieval scenarios.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -312,7 +308,7 @@ public class CreateVectorIndexRequest extends Request {
         /**
          * <p>The collection name.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/2401503.html">ListCollections</a> operation to list all collections.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/2401503.html">ListCollections</a> operation to query the list.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -328,7 +324,7 @@ public class CreateVectorIndexRequest extends Request {
         /**
          * <p>The instance ID.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to view the details of all AnalyticDB for PostgreSQL instances in a specific region, including the instance ID.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including the instance IDs.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -342,13 +338,11 @@ public class CreateVectorIndexRequest extends Request {
         }
 
         /**
-         * <p>The vector dimension.</p>
+         * <p>The vector dimensions.</p>
          * <blockquote>
          * <ul>
-         * <li><p>This parameter is required for dense vectors.</p>
-         * </li>
-         * <li><p>This value must match the length of the <code>Rows.Vector</code> data provided when calling the <a href="https://help.aliyun.com/document_detail/2401493.html">UpsertCollectionData</a> operation.</p>
-         * </li>
+         * <li>This parameter is required for dense vectors.</li>
+         * <li>The value must be the same as the length of the vector data Rows.Vector in the <a href="https://help.aliyun.com/document_detail/2401493.html">UpsertCollectionData</a> operation.</li>
          * </ul>
          * </blockquote>
          * 
@@ -362,18 +356,15 @@ public class CreateVectorIndexRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to use <code>mmap</code> to build the HNSW index. The default value is 0. Set this to 1 for high-performance data uploads in scenarios where data deletion is not required.</p>
+         * <p>Specifies whether to use mmap to build the HNSW index. Default value: 0. If data does not need to be deleted and you have high requirements for data upload speed, we recommend that you set this parameter to 1.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li><p><code>0</code>: (Default) Builds the index by using segmented page storage. This mode uses the <code>shared_buffer</code> in PostgreSQL for caching and supports delete and update operations.</p>
-         * </li>
-         * <li><p><code>1</code>: Builds the index by using <code>mmap</code>. This mode does not support delete and update operations.</p>
-         * </li>
+         * <li>0: uses the default segment-page storage to build the index. In this mode, shared_buffer in PostgreSQL can be used for caching, and operations such as deletion and update are supported.</li>
+         * <li>1: uses mmap to build the index. This mode does not support operations such as deletion and update.</li>
          * </ul>
          * <blockquote>
-         * <p>Notice: </p>
+         * <p>Notice: The ExternalStorage parameter is supported only in V6.0. It is not supported in V7.0.</notice></p>
          * </blockquote>
-         * <p>The <code>ExternalStorage</code> parameter is supported only by AnalyticDB for PostgreSQL V6.0.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -385,9 +376,9 @@ public class CreateVectorIndexRequest extends Request {
         }
 
         /**
-         * <p>The size of the candidate set for the HNSW algorithm during index construction. The value must be in the range of 4 to 1,000. The default value is 64.</p>
+         * <p>The size of the candidate set when the HNSW algorithm builds the index. Valid values: 4 to 1000. Default value: 64.</p>
          * <blockquote>
-         * <p>This parameter applies only to AnalyticDB for PostgreSQL V7.0 instances, and its value must be greater than or equal to <code>2 * HnswM</code>.</p>
+         * <p>This parameter is required only for AnalyticDB for PostgreSQL V7.0 instances, and the value must be greater than or equal to 2 × HNSW_M.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -400,27 +391,21 @@ public class CreateVectorIndexRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of neighbors for the Hierarchical Navigable Small World (HNSW) algorithm. The system automatically sets this value based on the vector dimension. You do not typically need to configure this parameter manually.</p>
+         * <p>The maximum number of neighbors in the HNSW algorithm. The operation automatically sets this value based on the vector dimensions. You do not need to manually set this value in most cases.</p>
          * <blockquote>
          * <p>Valid values:</p>
          * <ul>
-         * <li><p>For AnalyticDB for PostgreSQL V6.0 instances: 1 to 1,000.</p>
-         * </li>
-         * <li><p>For AnalyticDB for PostgreSQL V7.0 instances: 2 to 100. The default value is 16.</p>
-         * </li>
+         * <li>AnalyticDB for PostgreSQL V6.0 instances: 1 to 1000.</li>
+         * <li>AnalyticDB for PostgreSQL V7.0 instances: 2 to 100. Default value: 16.</li>
          * </ul>
          * </blockquote>
          * <blockquote>
-         * <p>We recommend the following values based on the vector dimension:</p>
+         * <p>Recommended settings based on vector dimensions:</p>
          * <ul>
-         * <li><p>For dimensions of 384 or less: 16</p>
-         * </li>
-         * <li><p>For dimensions from 385 to 768: 32</p>
-         * </li>
-         * <li><p>For dimensions from 769 to 1,024: 64</p>
-         * </li>
-         * <li><p>For dimensions greater than 1,024: 128</p>
-         * </li>
+         * <li>384 or less: 16</li>
+         * <li>Greater than 384 and less than or equal to 768: 32</li>
+         * <li>Greater than 768 and less than or equal to 1024: 64</li>
+         * <li>Greater than 1024: 128</li>
          * </ul>
          * </blockquote>
          * 
@@ -434,9 +419,9 @@ public class CreateVectorIndexRequest extends Request {
         }
 
         /**
-         * <p>The name of the management account that has <code>rds_superuser</code> permissions.</p>
+         * <p>The name of the management account that has the rds_superuser permission.</p>
          * <blockquote>
-         * <p>You can create an account on the \<em>\<em>account management\</em>\</em> page in the console or by calling the <a href="https://help.aliyun.com/document_detail/2361789.html">CreateAccount</a> operation.</p>
+         * <p>You can create an account in the console by navigating to Account Management, or call the <a href="https://help.aliyun.com/document_detail/2361789.html">CreateAccount</a> operation.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -465,15 +450,12 @@ public class CreateVectorIndexRequest extends Request {
         /**
          * <p>The distance metric used to build the vector index. Valid values:</p>
          * <ul>
-         * <li><p><code>l2</code>: euclidean distance</p>
-         * </li>
-         * <li><p><code>ip</code>: dot product (inner product)</p>
-         * </li>
-         * <li><p><code>cosine</code>: cosine similarity</p>
-         * </li>
+         * <li>l2: Euclidean distance.</li>
+         * <li>ip: inner product.</li>
+         * <li>cosine: cosine similarity.</li>
          * </ul>
          * <blockquote>
-         * <p>Sparse vectors support only <code>ip</code>.</p>
+         * <p>Only ip is supported for sparse vectors.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -486,9 +468,9 @@ public class CreateVectorIndexRequest extends Request {
         }
 
         /**
-         * <p>The namespace. The default value is <code>public</code>.</p>
+         * <p>The namespace. Default value: public.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/2401502.html">ListNamespaces</a> operation to list all namespaces.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/2401502.html">ListNamespaces</a> operation to query the list.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -501,7 +483,7 @@ public class CreateVectorIndexRequest extends Request {
         }
 
         /**
-         * <p>The number of lists (partitions) for the Novad algorithm. The value must be in the range of 2 to 1,073,741,824. The default value is 256.</p>
+         * <p>The number of lists (partitions) for Novad. Valid values: 2 to 1073741824. Default value: 256.</p>
          * 
          * <strong>example:</strong>
          * <p>256</p>
@@ -522,12 +504,10 @@ public class CreateVectorIndexRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable Product Quantization (PQ) to accelerate indexing. Recommended for collections with over 500,000 vectors. Valid values:</p>
+         * <p>Specifies whether to enable product quantization (PQ) algorithm acceleration for the index. We recommend that you enable this feature when the data volume exceeds 500,000. Valid values:</p>
          * <ul>
-         * <li><p><code>0</code>: Disabled.</p>
-         * </li>
-         * <li><p><code>1</code>: Enabled. (Default)</p>
-         * </li>
+         * <li>0: disabled.</li>
+         * <li>1: enabled (default).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -540,7 +520,7 @@ public class CreateVectorIndexRequest extends Request {
         }
 
         /**
-         * <p>The number of bits for rabitq compression. The valid range is 1 to 8. The default value is 3.</p>
+         * <p>The number of bits for RaBitQ compression. Valid values: 1 to 8. Default value: 3.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -567,10 +547,8 @@ public class CreateVectorIndexRequest extends Request {
         /**
          * <p>The vector type. Valid values:</p>
          * <ul>
-         * <li><p><code>Dense</code>: (Default) a dense vector</p>
-         * </li>
-         * <li><p><code>Sparse</code>: a sparse vector</p>
-         * </li>
+         * <li>Dense: dense vector (default).</li>
+         * <li>Sparse: sparse vector.</li>
          * </ul>
          * 
          * <strong>example:</strong>

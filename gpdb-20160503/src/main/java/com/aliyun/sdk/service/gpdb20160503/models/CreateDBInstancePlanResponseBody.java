@@ -118,10 +118,10 @@ public class CreateDBInstancePlanResponseBody extends TeaModel {
 
         /**
          * <p>The error message.</p>
-         * <p>This parameter is returned only if the request fails.</p>
+         * <p>This parameter is returned only when the API operation fails.</p>
          * 
          * <strong>example:</strong>
-         * <hr>
+         * <p>Sample error message</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -151,8 +151,8 @@ public class CreateDBInstancePlanResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
-         * <p>If the request was successful, <strong>success</strong> is returned. If the request failed, this parameter is not returned.</p>
+         * <p>The execution status of the API operation.</p>
+         * <p>If the execution is successful, <strong>success</strong> is returned. If the execution fails, this parameter is not returned.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>

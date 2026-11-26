@@ -67,7 +67,7 @@ public class DescribeRdsVSwitchsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>B0BA251D-6854-5A99-A964-3C**********</p>
@@ -78,7 +78,7 @@ public class DescribeRdsVSwitchsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Details of the vSwitches.</p>
+         * <p>The list of vSwitches.</p>
          */
         public Builder vSwitches(VSwitches vSwitches) {
             this.vSwitches = vSwitches;
@@ -261,7 +261,7 @@ public class DescribeRdsVSwitchsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>An invalid parameter. It is no longer returned when you call this operation.</p>
+             * <p><strong>[Deprecated]</strong> This parameter is deprecated and no value is returned.</p>
              * 
              * <strong>example:</strong>
              * <p>null</p>
@@ -272,7 +272,7 @@ public class DescribeRdsVSwitchsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>An invalid parameter. It is no longer returned when you call this operation.</p>
+             * <p><strong>[Deprecated]</strong> This parameter is deprecated and no value is returned.</p>
              * 
              * <strong>example:</strong>
              * <p>null</p>
@@ -294,7 +294,7 @@ public class DescribeRdsVSwitchsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>An invalid parameter. It is no longer returned when you call this operation.</p>
+             * <p><strong>[Deprecated]</strong> This parameter is deprecated and no value is returned.</p>
              * 
              * <strong>example:</strong>
              * <p>null</p>
@@ -305,7 +305,7 @@ public class DescribeRdsVSwitchsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>An invalid parameter. It is no longer returned when you call this operation.</p>
+             * <p><strong>[Deprecated]</strong> This parameter is deprecated and no value is returned.</p>
              * 
              * <strong>example:</strong>
              * <p>null</p>
@@ -318,8 +318,8 @@ public class DescribeRdsVSwitchsResponseBody extends TeaModel {
             /**
              * <p>Indicates whether the vSwitch is the default vSwitch. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong></li>
+             * <li><strong>true</strong>: Yes.</li>
+             * <li><strong>false</strong>: No.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -331,7 +331,7 @@ public class DescribeRdsVSwitchsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the zone.</p>
+             * <p>The zone ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou-h</p>
@@ -342,7 +342,7 @@ public class DescribeRdsVSwitchsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>An invalid parameter. It is no longer returned when you call this operation.</p>
+             * <p><strong>[Deprecated]</strong> This parameter is deprecated and no value is returned.</p>
              * 
              * <strong>example:</strong>
              * <p>null</p>
@@ -353,7 +353,7 @@ public class DescribeRdsVSwitchsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The state of the vSwitch. If <strong>Available</strong> is returned, the vSwitch is available.</p>
+             * <p>The status of the vSwitch. A value of <strong>Available</strong> indicates that the vSwitch is available.</p>
              * 
              * <strong>example:</strong>
              * <p>Available</p>
@@ -364,7 +364,7 @@ public class DescribeRdsVSwitchsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the vSwitch.</p>
+             * <p>The vSwitch ID.</p>
              * 
              * <strong>example:</strong>
              * <p>vsw-bp*******************</p>
@@ -432,7 +432,7 @@ public class DescribeRdsVSwitchsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Details of the vSwitch.</p>
+             * <p>The vSwitch information.</p>
              */
             public Builder vSwitch(java.util.List<VSwitch> vSwitch) {
                 this.vSwitch = vSwitch;

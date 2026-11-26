@@ -74,7 +74,7 @@ public class ResumeSupabaseProjectRequest extends Request {
         } 
 
         /**
-         * <p>The instance ID of the Supabase instance.</p>
+         * <p>The Supabase instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

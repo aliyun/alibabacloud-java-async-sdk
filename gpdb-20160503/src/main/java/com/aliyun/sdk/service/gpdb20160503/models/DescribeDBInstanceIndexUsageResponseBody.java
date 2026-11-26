@@ -93,7 +93,7 @@ public class DescribeDBInstanceIndexUsageResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The queried index usage.</p>
+         * <p>The list of index usage details.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -101,7 +101,7 @@ public class DescribeDBInstanceIndexUsageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number.</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -123,7 +123,7 @@ public class DescribeDBInstanceIndexUsageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -399,7 +399,7 @@ public class DescribeDBInstanceIndexUsageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the table was last deleted, inserted, or updated.</p>
+             * <p>The time when the table was last updated by a DELETE, INSERT, or UPDATE operation.</p>
              * 
              * <strong>example:</strong>
              * <p>2022-08-08T20:00:00Z</p>

@@ -118,8 +118,8 @@ public class DescribeDBVersionInfosRequest extends Request {
         /**
          * <p>The resource type of the instance. Valid values:</p>
          * <ul>
-         * <li><strong>StorageElastic</strong>: elastic storage mode.</li>
-         * <li><strong>Serverless</strong>: Serverless mode.</li>
+         * <li><strong>StorageElastic</strong>: storage elastic mode</li>
+         * <li><strong>Serverless</strong>: Serverless mode</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -132,7 +132,7 @@ public class DescribeDBVersionInfosRequest extends Request {
         }
 
         /**
-         * <p>The minor version number that does not include the prefix.</p>
+         * <p>The kernel version number without a prefix.</p>
          * 
          * <strong>example:</strong>
          * <p>6.3.10.20。</p>
@@ -153,9 +153,9 @@ public class DescribeDBVersionInfosRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the instance.</p>
+         * <p>The region ID.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query available region IDs.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -169,7 +169,7 @@ public class DescribeDBVersionInfosRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group to which the instance belongs. For information about how to obtain the ID of a resource group, see <a href="https://help.aliyun.com/document_detail/151181.html">View basic information of a resource group</a>.</p>
+         * <p>The ID of the resource group to which the instance belongs. For more information about how to obtain a resource group ID, see <a href="https://help.aliyun.com/document_detail/151181.html">View basic information of a resource group</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-bp67acfmxazb4p****</p>

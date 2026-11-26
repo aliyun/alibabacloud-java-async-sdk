@@ -93,7 +93,7 @@ public class GetSupabaseUpdateVersionResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The latest upgradable version.</p>
+         * <p>The latest version available for upgrade.</p>
          * 
          * <strong>example:</strong>
          * <p>20240731</p>
@@ -104,7 +104,7 @@ public class GetSupabaseUpdateVersionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the Supabase project.</p>
+         * <p>The Supabase project ID.</p>
          * 
          * <strong>example:</strong>
          * <p>spb-xxxx</p>

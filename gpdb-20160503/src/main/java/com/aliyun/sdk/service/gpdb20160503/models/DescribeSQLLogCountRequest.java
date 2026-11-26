@@ -232,7 +232,7 @@ public class DescribeSQLLogCountRequest extends Request {
         /**
          * <p>The instance ID.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in a specified region, including instance IDs.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -258,9 +258,9 @@ public class DescribeSQLLogCountRequest extends Request {
         }
 
         /**
-         * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time must be in UTC.</p>
+         * <p>The end time of the query. The format is <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z (UTC time).</p>
          * <blockquote>
-         * <p>The end time must be later than the start time. The maximum time range that can be specified is seven days.</p>
+         * <p>The end time must be later than the start time, and the time interval between the start time and the end time cannot exceed seven days.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -274,7 +274,7 @@ public class DescribeSQLLogCountRequest extends Request {
         }
 
         /**
-         * <p>The execution duration of the SQL statement. Unit: seconds.</p>
+         * <p>The execution duration, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -286,11 +286,11 @@ public class DescribeSQLLogCountRequest extends Request {
         }
 
         /**
-         * <p>The execution status of the query. Valid values:</p>
+         * <p>The execution status. Valid values:</p>
          * <ul>
-         * <li>1: successful.</li>
-         * <li>0: failed.</li>
-         * <li>0,1 or 1,0: all.</li>
+         * <li>1: Success.</li>
+         * <li>0: Failure.</li>
+         * <li>0,1 or 1,0: All.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -303,7 +303,7 @@ public class DescribeSQLLogCountRequest extends Request {
         }
 
         /**
-         * <p>The maximum amount of time consumed by a slow query. Unit: seconds. Minimum value: 0.</p>
+         * <p>The maximum execution duration of slow SQL queries. The value must be greater than or equal to 0, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
@@ -315,7 +315,7 @@ public class DescribeSQLLogCountRequest extends Request {
         }
 
         /**
-         * <p>The minimum amount of time consumed by a slow query. Unit: seconds. Minimum value: 0.</p>
+         * <p>The minimum execution duration of slow SQL queries. The value must be greater than or equal to 0, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -327,7 +327,7 @@ public class DescribeSQLLogCountRequest extends Request {
         }
 
         /**
-         * <p>The type of the query language. Valid values:</p>
+         * <p>The operation class. Valid values:</p>
          * <ul>
          * <li><strong>DQL</strong></li>
          * <li><strong>DML</strong></li>
@@ -346,17 +346,14 @@ public class DescribeSQLLogCountRequest extends Request {
         }
 
         /**
-         * <p>The type of the SQL statement.</p>
+         * <p>The type of the executed SQL statement.</p>
          * <blockquote>
-         * </blockquote>
          * <ul>
-         * <li><p>If you specify <strong>OperationClass</strong>, the value of <strong>OperationType</strong> must be of the corresponding query language. For example, if you set <strong>OperationClass</strong> to <strong>DQL</strong>, the value of <strong>OperationType</strong> must be a <strong>DQL</strong> statement such as <strong>SELECT</strong>.</p>
-         * </li>
-         * <li><p>If you leave <strong>OperationClass</strong> empty, the value of <strong>OperationType</strong> can be an SQL statement of any query language.</p>
-         * </li>
-         * <li><p>If you leave <strong>OperationClass</strong> and <strong>OperationType</strong> empty, all types of SQL statements are returned.</p>
-         * </li>
+         * <li>If the <strong>OperationClass</strong> parameter is specified, the value of <strong>OperationType</strong> must belong to the corresponding language type. For example, if the value of <strong>OperationClass</strong> is <strong>DQL</strong>, the value of <strong>OperationType</strong> must be a <strong>DQL</strong> SQL statement, such as <strong>SELECT</strong>.</li>
+         * <li>If the <strong>OperationClass</strong> parameter is not specified, the value of <strong>OperationType</strong> can be any type of SQL statement.</li>
+         * <li>If neither the <strong>OperationClass</strong> nor the <strong>OperationType</strong> parameter is specified, all types of SQL statements are returned.</li>
          * </ul>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>SELECT</p>
@@ -368,7 +365,7 @@ public class DescribeSQLLogCountRequest extends Request {
         }
 
         /**
-         * <p>The keywords that are used to query audit logs.</p>
+         * <p>The query keywords.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -392,7 +389,7 @@ public class DescribeSQLLogCountRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time must be in UTC.</p>
+         * <p>The start time of the query. The format is <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z (UTC time).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -405,7 +402,7 @@ public class DescribeSQLLogCountRequest extends Request {
         }
 
         /**
-         * <p>The name of the database account that is used to connect to the database.</p>
+         * <p>The database username.</p>
          * 
          * <strong>example:</strong>
          * <p>adbpgadmin</p>

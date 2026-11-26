@@ -141,7 +141,7 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The database engine of the instance.</p>
+         * <p>The database engine.</p>
          * 
          * <strong>example:</strong>
          * <p>gpdb</p>
@@ -152,7 +152,7 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The queried performance metrics.</p>
+         * <p>The list of performance metric values for the instance.</p>
          */
         public Builder performanceKeys(java.util.List<String> performanceKeys) {
             this.performanceKeys = performanceKeys;
@@ -160,7 +160,7 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>5E85244A-AB47-46A3-A3AD-5F307DCB407E</p>

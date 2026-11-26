@@ -191,7 +191,7 @@ public class ListChunksRequest extends Request {
         /**
          * <p>The name of the document collection.</p>
          * <blockquote>
-         * <p>The document collection is created by calling the <a href="https://help.aliyun.com/document_detail/2618448.html">CreateDocumentCollection</a> operation. You can call the <a href="https://help.aliyun.com/document_detail/2618452.html">ListDocumentCollections</a> operation to query existing document collections.</p>
+         * <p>The document collection is created by calling the <a href="https://help.aliyun.com/document_detail/2618448.html">CreateDocumentCollection</a> operation. You can call the <a href="https://help.aliyun.com/document_detail/2618452.html">ListDocumentCollections</a> operation to view the created document collections.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -207,7 +207,7 @@ public class ListChunksRequest extends Request {
         /**
          * <p>The instance ID.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in a region, including instance IDs.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including the instance IDs.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -223,7 +223,7 @@ public class ListChunksRequest extends Request {
         /**
          * <p>The file name.</p>
          * <blockquote>
-         * <p>The name of a previously uploaded file. You can call the <a href="https://help.aliyun.com/document_detail/2618453.html">ListDocuments</a> operation to query the file list.</p>
+         * <p>The name of the uploaded file. You can call the <a href="https://help.aliyun.com/document_detail/2618453.html">ListDocuments</a> operation to query the file list.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -236,15 +236,15 @@ public class ListChunksRequest extends Request {
         }
 
         /**
-         * <p>The filter condition for the data to query, in SQL WHERE clause format. The filter is an expression that returns a Boolean value (true or false). Conditions can be simple comparison operators such as equal to (=), not equal to (&lt;&gt; or !=), greater than (&gt;), less than (&lt;), greater than or equal to (&gt;=), and less than or equal to (&lt;=). You can also use logical operators (AND, OR, NOT) to combine more complex expressions, as well as conditions with the IN, BETWEEN, and LIKE keywords.</p>
+         * <p>The filter condition for the data to be queried, in the SQL WHERE clause format. It is an expression that returns a Boolean value (true or false). The condition can be a simple comparison operator, such as equal to (=), not equal to (&lt;&gt; or !=), greater than (&gt;), less than (&lt;), greater than or equal to (&gt;=), or less than or equal to (&lt;=). It can also be a more complex expression combined with logical operators (AND, OR, NOT), or a condition that uses keywords such as IN, BETWEEN, and LIKE.</p>
          * <blockquote>
          * <ul>
-         * <li>For detailed syntax, refer to: <a href="https://www.postgresqltutorial.com/postgresql-tutorial/postgresql-where/">https://www.postgresqltutorial.com/postgresql-tutorial/postgresql-where/</a></li>
+         * <li>For detailed syntax, refer to <a href="https://www.postgresqltutorial.com/postgresql-tutorial/postgresql-where/">https://www.postgresqltutorial.com/postgresql-tutorial/postgresql-where/</a></li>
          * </ul>
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>title = \&quot;test\&quot; AND name like \&quot;test%\&quot;</p>
+         * <p>title = &quot;test&quot; AND name like &quot;test%&quot;</p>
          */
         public Builder filter(String filter) {
             this.putQueryParameter("Filter", filter);
@@ -256,8 +256,8 @@ public class ListChunksRequest extends Request {
          * <p>Specifies whether to return vectors. Default value: false.</p>
          * <blockquote>
          * <ul>
-         * <li><strong>false</strong>: Does not return vectors.</li>
-         * <li><strong>true</strong>: Returns vectors.</li>
+         * <li><strong>false</strong>: Vectors are not returned.</li>
+         * <li><strong>true</strong>: Vectors are returned.</li>
          * </ul>
          * </blockquote>
          * 
@@ -273,7 +273,7 @@ public class ListChunksRequest extends Request {
         /**
          * <p>The namespace. Default value: public.</p>
          * <blockquote>
-         * <p>You can create a namespace by calling the <a href="https://help.aliyun.com/document_detail/2401495.html">CreateNamespace</a> operation and query the list of namespaces by calling the <a href="https://help.aliyun.com/document_detail/2401502.html">ListNamespaces</a> operation.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/2401495.html">CreateNamespace</a> operation to create a namespace and call the <a href="https://help.aliyun.com/document_detail/2401502.html">ListNamespaces</a> operation to view the namespace list.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -288,7 +288,7 @@ public class ListChunksRequest extends Request {
         /**
          * <p>The password of the namespace.</p>
          * <blockquote>
-         * <p>This value is specified by the <a href="https://help.aliyun.com/document_detail/2401495.html">CreateNamespace</a> operation.</p>
+         * <p>This value is specified when you call the <a href="https://help.aliyun.com/document_detail/2401495.html">CreateNamespace</a> operation.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -314,7 +314,7 @@ public class ListChunksRequest extends Request {
         }
 
         /**
-         * <p>The number of records per page. Valid values:</p>
+         * <p>The number of entries per page. Valid values:</p>
          * <ul>
          * <li><strong>20</strong></li>
          * <li><strong>50</strong></li>

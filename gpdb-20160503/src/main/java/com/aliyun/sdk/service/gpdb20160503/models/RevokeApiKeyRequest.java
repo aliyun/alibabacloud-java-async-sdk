@@ -104,7 +104,7 @@ public class RevokeApiKeyRequest extends Request {
         } 
 
         /**
-         * <p>API KEY ID。</p>
+         * <p>The API key ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -129,7 +129,7 @@ public class RevokeApiKeyRequest extends Request {
         }
 
         /**
-         * <p>The list of service IDs to be authorized.</p>
+         * <p>The list of service IDs to authorize.</p>
          * <p>This parameter is required.</p>
          */
         public Builder serviceIds(java.util.List<String> serviceIds) {

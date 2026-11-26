@@ -119,7 +119,7 @@ public class ListDocumentsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -138,7 +138,7 @@ public class ListDocumentsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message.</p>
+         * <p>The detailed information returned by the API operation.</p>
          * 
          * <strong>example:</strong>
          * <p>Successful</p>
@@ -149,7 +149,7 @@ public class ListDocumentsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
+         * <p>The paging token used to start the next paged query. If this parameter is empty, the current page is the last page.</p>
          * 
          * <strong>example:</strong>
          * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -171,10 +171,10 @@ public class ListDocumentsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>The execution status of the API operation. Valid values:</p>
          * <ul>
-         * <li><strong>success</strong></li>
-         * <li><strong>fail</strong></li>
+         * <li><strong>success</strong>: The operation is successful.</li>
+         * <li><strong>fail</strong>: The operation fails.</li>
          * </ul>
          * 
          * <strong>example:</strong>

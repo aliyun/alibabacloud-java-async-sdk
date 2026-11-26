@@ -119,7 +119,7 @@ public class DescribeDBInstanceDiagnosisSummaryResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The group ID.</p>
+         * <p>The list of node details for the instance.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -127,7 +127,7 @@ public class DescribeDBInstanceDiagnosisSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The state information about the coordinator node.</p>
+         * <p>The statistics information about the status of coordinator nodes.</p>
          */
         public Builder masterStatusInfo(MasterStatusInfo masterStatusInfo) {
             this.masterStatusInfo = masterStatusInfo;
@@ -135,7 +135,7 @@ public class DescribeDBInstanceDiagnosisSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number.</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -157,7 +157,7 @@ public class DescribeDBInstanceDiagnosisSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The state information about compute nodes.</p>
+         * <p>The statistics information about the status of compute nodes.</p>
          */
         public Builder segmentStatusInfo(SegmentStatusInfo segmentStatusInfo) {
             this.segmentStatusInfo = segmentStatusInfo;
@@ -165,7 +165,7 @@ public class DescribeDBInstanceDiagnosisSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>6</p>
@@ -373,7 +373,7 @@ public class DescribeDBInstanceDiagnosisSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The node group ID.</p>
+             * <p>The group ID.</p>
              * 
              * <strong>example:</strong>
              * <p>-1</p>
@@ -417,12 +417,12 @@ public class DescribeDBInstanceDiagnosisSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The initial role of the node. Valid values:</p>
+             * <p>The original role of the node. Valid values:</p>
              * <ul>
-             * <li><strong>primary</strong>: primary node.</li>
-             * <li><strong>mirror</strong>: secondary node.</li>
+             * <li><strong>primary</strong>: The primary node.</li>
+             * <li><strong>mirror</strong>: The mirror node.</li>
              * </ul>
-             * <p>If the value of this parameter is the same as that of <strong>NodeRole</strong>, no primary/secondary switchover occurs. If the value of this parameter is different from that of <strong>NodeRole</strong>, a primary/secondary switchover occurs.</p>
+             * <p>If the value of this parameter is the same as the value of the <strong>NodeRole</strong> parameter, no role reversal (primary/secondary switchover) has occurred. If the values are different, a role reversal has occurred.</p>
              * 
              * <strong>example:</strong>
              * <p>primary</p>
@@ -433,11 +433,11 @@ public class DescribeDBInstanceDiagnosisSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The data synchronization state of the node. Valid values:</p>
+             * <p>The data synchronization status of the node. Valid values:</p>
              * <ul>
-             * <li><strong>Synced</strong>: The node data is synchronized.</li>
-             * <li><strong>Not Syncing</strong>: The node data is not synchronized.</li>
-             * <li><strong>No sync required</strong>: Data synchronization is not required. This value may be returned only for the coordinator node.</li>
+             * <li><strong>Synced</strong>: The data is synchronized.</li>
+             * <li><strong>Not Syncing</strong>: The data is not synchronized.</li>
+             * <li><strong>No sync required</strong>: No synchronization is required. This mode applies only to coordinator nodes.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -451,8 +451,8 @@ public class DescribeDBInstanceDiagnosisSummaryResponseBody extends TeaModel {
             /**
              * <p>The current role of the node. Valid values:</p>
              * <ul>
-             * <li><strong>primary</strong>: primary node.</li>
-             * <li><strong>mirror</strong>: secondary node.</li>
+             * <li><strong>primary</strong>: The primary node.</li>
+             * <li><strong>mirror</strong>: The mirror node.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -464,10 +464,10 @@ public class DescribeDBInstanceDiagnosisSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The running state of the node. Valid values:</p>
+             * <p>The running status of the node. Valid values:</p>
              * <ul>
              * <li><strong>UP</strong>: The node is running.</li>
-             * <li><strong>DOWN</strong>: The node is faulty.</li>
+             * <li><strong>DOWN</strong>: The node has failed.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -479,11 +479,11 @@ public class DescribeDBInstanceDiagnosisSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the node. Valid values:</p>
+             * <p>The node type. Valid values:</p>
              * <ul>
-             * <li><strong>master</strong>: primary coordinator node.</li>
-             * <li><strong>slave</strong>: standby coordinator node.</li>
-             * <li><strong>segment</strong>: compute node.</li>
+             * <li><strong>master</strong>: The coordinator node.</li>
+             * <li><strong>slave</strong>: The secondary coordinator node.</li>
+             * <li><strong>segment</strong>: The compute node.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -606,7 +606,7 @@ public class DescribeDBInstanceDiagnosisSummaryResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of abnormal nodes.</p>
+             * <p>The number of nodes in the abnormal state.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -617,7 +617,7 @@ public class DescribeDBInstanceDiagnosisSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of normal nodes.</p>
+             * <p>The number of nodes in the normal state.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -628,7 +628,7 @@ public class DescribeDBInstanceDiagnosisSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of nodes whose roles are reversed.</p>
+             * <p>The number of nodes whose roles have been switched due to a primary/secondary switchover.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -650,7 +650,7 @@ public class DescribeDBInstanceDiagnosisSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of nodes whose roles are normal.</p>
+             * <p>The number of nodes with normal roles.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -783,7 +783,7 @@ public class DescribeDBInstanceDiagnosisSummaryResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of abnormal nodes.</p>
+             * <p>The number of nodes in the abnormal state.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -794,7 +794,7 @@ public class DescribeDBInstanceDiagnosisSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of normal nodes.</p>
+             * <p>The number of nodes in the normal state.</p>
              * 
              * <strong>example:</strong>
              * <p>4</p>
@@ -805,7 +805,7 @@ public class DescribeDBInstanceDiagnosisSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of nodes whose roles are reversed.</p>
+             * <p>The number of nodes whose roles have been switched due to a primary/secondary switchover.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -827,7 +827,7 @@ public class DescribeDBInstanceDiagnosisSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of nodes whose roles are normal.</p>
+             * <p>The number of nodes with normal roles.</p>
              * 
              * <strong>example:</strong>
              * <p>4</p>

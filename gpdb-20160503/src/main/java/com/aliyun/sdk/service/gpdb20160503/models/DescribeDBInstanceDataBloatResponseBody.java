@@ -93,7 +93,7 @@ public class DescribeDBInstanceDataBloatResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The queried data bloat.</p>
+         * <p>The list of data bloat details.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -101,7 +101,7 @@ public class DescribeDBInstanceDataBloatResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -112,7 +112,7 @@ public class DescribeDBInstanceDataBloatResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>B4CAF581-2AC7-41AD-8940-D56DF7AADF5B</p>
@@ -123,7 +123,7 @@ public class DescribeDBInstanceDataBloatResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries.</p>
+         * <p>The total number of tables. The total number of pages is calculated by dividing this value by the page size.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -322,8 +322,8 @@ public class DescribeDBInstanceDataBloatResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The coefficient of data bloat. It is calculated by using the following formula:</p>
-             * <p>Bloat coefficient = Number of dead rows/Number of active rows.</p>
+             * <p>The data bloat coefficient. The formula for calculating the bloat coefficient is as follows:</p>
+             * <p>Number of dead rows counted by the system / Number of active rows counted by the system.</p>
              * 
              * <strong>example:</strong>
              * <p>1.03</p>
@@ -334,7 +334,7 @@ public class DescribeDBInstanceDataBloatResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The bloat size of the table. It indicates the amount of space that can be released.</p>
+             * <p>The size of the bloated table, which indicates the amount of space that can be released.</p>
              * 
              * <strong>example:</strong>
              * <p>0.2MB</p>
@@ -356,8 +356,8 @@ public class DescribeDBInstanceDataBloatResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The expected size of the table.</p>
-             * <p>It indicates the size of the table that has no data bloat.</p>
+             * <p>The expected table size.</p>
+             * <p>The expected table size is the estimated table size when no data bloat occurs.</p>
              * 
              * <strong>example:</strong>
              * <p>1MB</p>
@@ -368,7 +368,7 @@ public class DescribeDBInstanceDataBloatResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The actual size of the table.</p>
+             * <p>The actual table size.</p>
              * 
              * <strong>example:</strong>
              * <p>1.2MB</p>
@@ -403,9 +403,9 @@ public class DescribeDBInstanceDataBloatResponseBody extends TeaModel {
             /**
              * <p>The storage type of the table. Valid values:</p>
              * <ul>
-             * <li><strong>Heap Table</strong></li>
-             * <li><strong>Append-Only Heap Table</strong></li>
-             * <li><strong>Append-Only Columnar Table</strong></li>
+             * <li><strong>Heap Table</strong>: Heap table.</li>
+             * <li><strong>Append-Only Heap Table</strong>: Append-Only heap table.</li>
+             * <li><strong>Append-Only Columnar Table</strong>: Column-oriented table.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -439,7 +439,7 @@ public class DescribeDBInstanceDataBloatResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the table was last deleted, inserted, or updated.</p>
+             * <p>The time when the table was last updated by a DELETE, INSERT, or UPDATE operation.</p>
              * 
              * <strong>example:</strong>
              * <p>2022-08-08T20:00:00Z</p>
@@ -450,7 +450,7 @@ public class DescribeDBInstanceDataBloatResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the table was last vacuumed. The time is displayed in UTC.</p>
+             * <p>The time when the table was last vacuumed (UTC).</p>
              * 
              * <strong>example:</strong>
              * <p>2022-08-08T16:00:00Z</p>

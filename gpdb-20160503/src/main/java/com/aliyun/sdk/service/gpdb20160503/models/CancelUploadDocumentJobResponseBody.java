@@ -102,10 +102,10 @@ public class CancelUploadDocumentJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The status of the operation. Valid values:</p>
+         * <p>The execution status of the operation. Valid values:</p>
          * <ul>
-         * <li><strong>success</strong></li>
-         * <li><strong>fail</strong></li>
+         * <li><strong>success</strong>: The operation is successful.</li>
+         * <li><strong>fail</strong>: The operation fails.</li>
          * </ul>
          * 
          * <strong>example:</strong>

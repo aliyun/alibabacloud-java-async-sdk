@@ -127,7 +127,7 @@ public class GetUploadDocumentJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The details of the document upload task.</p>
+         * <p>The detailed information of the document upload task.</p>
          */
         public Builder job(Job job) {
             this.job = job;
@@ -157,7 +157,7 @@ public class GetUploadDocumentJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The status of this operation. Valid values:</p>
+         * <p>The status of the operation. Valid values:</p>
          * <ul>
          * <li><strong>success</strong>: The operation is successful.</li>
          * <li><strong>fail</strong>: The operation failed.</li>
@@ -251,7 +251,7 @@ public class GetUploadDocumentJobResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The URL of the chunked file. The URL is valid for 2 hours. The file is in JSONL format, and each line is in the format <code>{&quot;page_content&quot;:&quot;*****&quot;, &quot;metadata&quot;: {&quot;**&quot;:&quot;***&quot;,&quot;**&quot;:&quot;***&quot;}</code>.</p>
+             * <p>The URL of the chunked file. The URL is valid for 2 hours. The file format is JSONL, and each line is in the following format: <code>{&quot;page_content&quot;:&quot;*****&quot;, &quot;metadata&quot;: {&quot;**&quot;:&quot;***&quot;,&quot;**&quot;:&quot;***&quot;}</code>.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://xxx/test.jsonl">http://xxx/test.jsonl</a></p>
@@ -262,7 +262,7 @@ public class GetUploadDocumentJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The markdown result file parsed by ADBPGLoader. The URL is valid for 2 hours.</p>
+             * <p>The URL of the Markdown result file parsed by ADBPGLoader. The URL is valid for 2 hours.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://oss.xxx/adbpg_loader_result.md">http://oss.xxx/adbpg_loader_result.md</a></p>
@@ -273,7 +273,7 @@ public class GetUploadDocumentJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The URL of the chunked file without metadata. The URL is valid for 2 hours. The file is in plain text format, and each line represents a chunk. This file can be conveniently used for embedding.</p>
+             * <p>The URL of the chunked file without metadata. The URL is valid for 2 hours. The file format is plain text, and each line represents a chunk. This file can be conveniently used for embedding.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://xxx/test.txt">http://xxx/test.txt</a></p>
@@ -421,7 +421,7 @@ public class GetUploadDocumentJobResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether the operation is complete.</p>
+             * <p>Indicates whether the operation is completed.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -443,7 +443,7 @@ public class GetUploadDocumentJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The error message returned when the operation encounters an exception or fails.</p>
+             * <p>The error message returned when the current operation is abnormal or fails.</p>
              * 
              * <strong>example:</strong>
              * <p>Failed to connect database.</p>
@@ -465,7 +465,7 @@ public class GetUploadDocumentJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Job ID。</p>
+             * <p>The job ID.</p>
              * 
              * <strong>example:</strong>
              * <p>231460f8-75dc-405e-a669-0c5204887e91</p>
@@ -476,7 +476,7 @@ public class GetUploadDocumentJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The upload progress. This value is a percentage. A value of 100 indicates that the upload is complete.</p>
+             * <p>The upload progress. The value is a percentage. A value of 100 indicates that the upload is completed.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>
@@ -490,10 +490,10 @@ public class GetUploadDocumentJobResponseBody extends TeaModel {
              * <p>The task status. Valid values:</p>
              * <ul>
              * <li>Success: The task is successful.</li>
-             * <li>Failed: The task failed. You can view the Error field for the failure reason.</li>
-             * <li>Cancelling: The task is being canceled.</li>
-             * <li>Cancelled: The task is canceled.</li>
-             * <li>Start: The task has started.</li>
+             * <li>Failed: The task failed. You can view the Error field for the cause of the failure.</li>
+             * <li>Cancelling: The task is being cancelled.</li>
+             * <li>Cancelled: The task is cancelled.</li>
+             * <li>Start: The task is started.</li>
              * <li>Running: The task is running.</li>
              * <li>Pending: The task is pending.</li>
              * </ul>
@@ -507,7 +507,7 @@ public class GetUploadDocumentJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the task was last updated.</p>
+             * <p>The time when the task was updated.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-01-08 16:53:04.864664</p>
@@ -577,7 +577,7 @@ public class GetUploadDocumentJobResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of entries used during embedding.</p>
+             * <p>The number of entries used for vectorization.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -588,7 +588,7 @@ public class GetUploadDocumentJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of tokens used during embedding.</p>
+             * <p>The number of tokens used for vectorization.</p>
              * <blockquote>
              * <p>A token is the smallest unit into which the input text is split. A token can be a word, a phrase, a punctuation mark, or a character.</p>
              * </blockquote>

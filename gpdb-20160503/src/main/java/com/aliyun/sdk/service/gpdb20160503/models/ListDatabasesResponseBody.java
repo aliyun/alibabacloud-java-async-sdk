@@ -114,7 +114,7 @@ public class ListDatabasesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message.</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -125,7 +125,7 @@ public class ListDatabasesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
+         * <p>The token used to start the next query.</p>
          * 
          * <strong>example:</strong>
          * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -147,10 +147,10 @@ public class ListDatabasesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The status of the operation. Valid values:</p>
+         * <p>The execution status of the API operation. Valid values:</p>
          * <ul>
-         * <li><strong>success</strong></li>
-         * <li><strong>fail</strong></li>
+         * <li><strong>success</strong>: The execution was successful.</li>
+         * <li><strong>fail</strong>: The execution failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>

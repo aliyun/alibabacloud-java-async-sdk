@@ -188,9 +188,9 @@ public class DescribeWaitingSQLRecordsRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the instance IDs of all AnalyticDB for PostgreSQL instances in a specific region.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the IDs of all AnalyticDB for PostgreSQL instances in the specified region.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -217,8 +217,8 @@ public class DescribeWaitingSQLRecordsRequest extends Request {
         }
 
         /**
-         * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time must be in UTC. The end time must be later than the start time.</p>
-         * <p>If this parameter is not specified, all lock diagnostics records that are generated after the query start time are returned. If the query start time is not specified either, all lock diagnostics records are returned.</p>
+         * <p>The end time of the query. The end time must be later than the start time. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z format. The time must be in UTC.</p>
+         * <p>If you do not specify this parameter, no end time is set, and all lock diagnosis information after the start time is returned. If the start time is also not specified, all lock diagnosis information is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-08-20T07:59Z</p>
@@ -230,7 +230,7 @@ public class DescribeWaitingSQLRecordsRequest extends Request {
         }
 
         /**
-         * <p>The keyword used to filter queries.</p>
+         * <p>The keyword for the query.</p>
          * 
          * <strong>example:</strong>
          * <p>table</p>
@@ -242,8 +242,8 @@ public class DescribeWaitingSQLRecordsRequest extends Request {
         }
 
         /**
-         * <p>The field used to sort lock diagnostics records and the sorting order.</p>
-         * <p>Default value: <code>{&quot;Field&quot;:&quot;StartTime&quot;,&quot;Type&quot;:&quot;Desc&quot;}</code>, which indicates that lock diagnostics records are sorted by the start time in descending order. No other values are supported.</p>
+         * <p>The sort field and sort order.</p>
+         * <p>Default value: <code>{&quot;Field&quot;:&quot;StartTime&quot;,&quot;Type&quot;:&quot;Desc&quot;}</code>, which indicates that the results are sorted by start time in descending order. Other sort fields and sort orders are not supported.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;Field&quot;:&quot;StartTime&quot;,&quot;Type&quot;:&quot;Desc&quot;}</p>
@@ -255,7 +255,7 @@ public class DescribeWaitingSQLRecordsRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return. The value must be an integer that is greater than 0. Default value: <strong>1</strong>.</p>
+         * <p>The page number. The value must be greater than 0 and cannot exceed the maximum value of the Integer type. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -267,7 +267,7 @@ public class DescribeWaitingSQLRecordsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page. Valid values:</p>
+         * <p>The number of entries per page. Valid values:</p>
          * <ul>
          * <li><strong>30</strong></li>
          * <li><strong>50</strong></li>
@@ -285,11 +285,11 @@ public class DescribeWaitingSQLRecordsRequest extends Request {
         }
 
         /**
-         * <p>The filter condition on queries. Valid values:</p>
+         * <p>The filter condition for the query. Valid values:</p>
          * <ul>
-         * <li><code>{&quot;Type&quot;:&quot;maxCost&quot;,&quot;Value&quot;:&quot;10&quot;}</code>: filters the top 10 longest-waiting queries.</li>
-         * <li><code>{&quot;Type&quot;:&quot;status&quot;,&quot;Value&quot;:&quot;LockWaiting&quot;}</code>: filters lock-waiting queries.</li>
-         * <li><code>{&quot;Type&quot;:&quot;status&quot;,&quot;Value&quot;:&quot;ResourceWaiting&quot;}</code>: filters resource-waiting queries.</li>
+         * <li><code>{&quot;Type&quot;:&quot;maxCost&quot;,&quot;Value&quot;:&quot;10&quot;}</code>: the top 10 queries with the longest wait time.</li>
+         * <li><code>{&quot;Type&quot;:&quot;status&quot;,&quot;Value&quot;:&quot;LockWaiting&quot;}</code>: queries that are waiting for locks.</li>
+         * <li><code>{&quot;Type&quot;:&quot;status&quot;,&quot;Value&quot;:&quot;ResourceWaiting&quot;}</code>: queries that are waiting for resources.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -303,8 +303,8 @@ public class DescribeWaitingSQLRecordsRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time must be in UTC.</p>
-         * <p>If this parameter is not specified, all lock diagnostics records that are generated before the query end time are returned. If the query end time is not specified either, all lock diagnostics records are returned.</p>
+         * <p>The start time of the query. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z format. The time must be in UTC.</p>
+         * <p>If you do not specify this parameter, no start time is set, and all lock diagnosis information before the end time is returned. If the end time is also not specified, all lock diagnosis information is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-08-15T06:59Z</p>
@@ -316,7 +316,7 @@ public class DescribeWaitingSQLRecordsRequest extends Request {
         }
 
         /**
-         * <p>The name of the database account. If this parameter is not specified, the lock diagnostics records of all database accounts are queried.</p>
+         * <p>The username. If you do not specify this parameter, the lock wait information of all users is queried.</p>
          * 
          * <strong>example:</strong>
          * <p>testUser</p>

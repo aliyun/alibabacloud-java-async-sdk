@@ -174,7 +174,7 @@ public class DescribeActiveSQLRecordsRequest extends Request {
         /**
          * <p>The instance ID.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to view the details of all AnalyticDB for PostgreSQL instances in the target region, including the instance ID.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -188,7 +188,7 @@ public class DescribeActiveSQLRecordsRequest extends Request {
         }
 
         /**
-         * <p>The name of the database.</p>
+         * <p>The database name. Default value: all databases.</p>
          * 
          * <strong>example:</strong>
          * <p>testdb</p>
@@ -200,7 +200,7 @@ public class DescribeActiveSQLRecordsRequest extends Request {
         }
 
         /**
-         * <p>The end of the time range to query. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format. The end time must be later than the start time.</p>
+         * <p>The end time of the query. Format: <code>yyyy-MM-ddTHH:mm:ssZ</code>. The end time must be later than the start time.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-05-07T07:59Z</p>
@@ -212,7 +212,7 @@ public class DescribeActiveSQLRecordsRequest extends Request {
         }
 
         /**
-         * <p>The keyword used to filter queries.</p>
+         * <p>The query keyword.</p>
          * 
          * <strong>example:</strong>
          * <p>SELECT</p>
@@ -224,7 +224,7 @@ public class DescribeActiveSQLRecordsRequest extends Request {
         }
 
         /**
-         * <p>The maxmum amount of time consumed by traces. Unit: milliseconds.</p>
+         * <p>The maximum execution duration, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>600</p>
@@ -236,7 +236,7 @@ public class DescribeActiveSQLRecordsRequest extends Request {
         }
 
         /**
-         * <p>The minimum amount of time consumed by traces. Unit: milliseconds.</p>
+         * <p>The minimum execution duration, in seconds. For example, a value of 100 specifies queries that run for more than 100 seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>300</p>
@@ -248,8 +248,8 @@ public class DescribeActiveSQLRecordsRequest extends Request {
         }
 
         /**
-         * <p>The field used to sort lock diagnostics records and the sorting order.</p>
-         * <p>Default value: <code>{&quot;Field&quot;:&quot;StartTime&quot;,&quot;Type&quot;:&quot;Desc&quot;}</code>, which indicates that lock diagnostics records are sorted by the start time in descending order. No other values are supported.</p>
+         * <p>The sort field and sort order.</p>
+         * <p>Default value: <code>{&quot;Field&quot;:&quot;StartTime&quot;,&quot;Type&quot;:&quot;Desc&quot;}</code>, which indicates sorting by start time in descending order. Other sort fields and sort orders are not supported.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;Field&quot;:&quot;StartTime&quot;,&quot;Type&quot;:&quot;Desc&quot;}</p>
@@ -261,7 +261,7 @@ public class DescribeActiveSQLRecordsRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query. Specify the time in the yyyy-MM-ddTHH:mmZ format. The time must be in UTC.</p>
+         * <p>The start time of the query. Format: <code>yyyy-MM-ddTHH:mm:ssZ</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-08-03T09:30Z</p>
@@ -273,7 +273,7 @@ public class DescribeActiveSQLRecordsRequest extends Request {
         }
 
         /**
-         * <p>The name of the database account.</p>
+         * <p>The username.</p>
          * 
          * <strong>example:</strong>
          * <p>testuser</p>

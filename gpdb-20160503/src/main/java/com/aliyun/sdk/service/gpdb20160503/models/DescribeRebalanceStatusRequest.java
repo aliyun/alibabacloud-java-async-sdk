@@ -64,7 +64,7 @@ public class DescribeRebalanceStatusRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>gp-uf671c65jhszj****</p>
+         * <p>gp-xxxxxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);

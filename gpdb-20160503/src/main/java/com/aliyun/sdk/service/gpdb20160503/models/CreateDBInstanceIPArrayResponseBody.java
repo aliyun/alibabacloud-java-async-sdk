@@ -54,7 +54,7 @@ public class CreateDBInstanceIPArrayResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>API-d971c90f-c801-41bd-b8e5-5b8bd79326c8</p>

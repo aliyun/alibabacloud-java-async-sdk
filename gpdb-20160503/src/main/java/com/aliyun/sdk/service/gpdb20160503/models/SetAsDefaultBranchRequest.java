@@ -89,7 +89,7 @@ public class SetAsDefaultBranchRequest extends Request {
         } 
 
         /**
-         * <p>The branch ID that uniquely identifies a Supabase branch.</p>
+         * <p>The branch ID, which uniquely identifies a Supabase branch.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,7 +102,7 @@ public class SetAsDefaultBranchRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Supabase project that corresponds to the primary branch.</p>
+         * <p>The ID of the Supabase project to which the main branch belongs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,7 +115,7 @@ public class SetAsDefaultBranchRequest extends Request {
         }
 
         /**
-         * <p>The region ID. This parameter is required when you create a primary branch. When you create a sub-branch, this parameter inherits the region of the primary branch by default.</p>
+         * <p>The region ID. This parameter is required when you create a main branch. When you create a child branch, it inherits the region of the main branch by default.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>

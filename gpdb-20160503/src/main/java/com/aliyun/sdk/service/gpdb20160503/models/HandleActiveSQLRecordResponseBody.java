@@ -115,7 +115,7 @@ public class HandleActiveSQLRecordResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The processing result of the active query.</p>
+         * <p>The processing results of the active queries.</p>
          */
         public Builder results(java.util.List<Results> results) {
             this.results = results;
@@ -123,10 +123,10 @@ public class HandleActiveSQLRecordResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>The execution status of the API operation. Valid values:</p>
          * <ul>
-         * <li><strong>false</strong></li>
-         * <li><strong>true</strong></li>
+         * <li><strong>false</strong>: The execution failed.</li>
+         * <li><strong>true</strong>: The execution succeeded.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -196,7 +196,7 @@ public class HandleActiveSQLRecordResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The process ID, which is a unique identifier of the query.</p>
+             * <p>The process ID, which is the unique identifier of the active query SQL statement.</p>
              * 
              * <strong>example:</strong>
              * <p>3003925</p>
@@ -207,10 +207,10 @@ public class HandleActiveSQLRecordResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the processing was successful. Valid values:</p>
+             * <p>The status of the processing result. Valid values:</p>
              * <ul>
-             * <li><strong>false</strong></li>
-             * <li><strong>true</strong></li>
+             * <li><strong>false</strong>: The processing failed.</li>
+             * <li><strong>true</strong>: The processing succeeded.</li>
              * </ul>
              * 
              * <strong>example:</strong>

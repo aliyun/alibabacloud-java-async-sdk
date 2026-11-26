@@ -80,7 +80,7 @@ public class UpsertCollectionDataResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The returned message.</p>
+         * <p>The message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -102,10 +102,10 @@ public class UpsertCollectionDataResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>The upload status. Valid values:</p>
          * <ul>
-         * <li><strong>success</strong></li>
-         * <li><strong>fail</strong></li>
+         * <li><strong>success</strong>: The upload succeeded.</li>
+         * <li><strong>fail</strong>: The upload failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -112,7 +112,7 @@ public class ListSupabaseBackupJobsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The pagination token for the next page, which can be used as the NextToken parameter in the next request.</p>
+         * <p>The pagination token for the next page. You can use this value as the NextToken parameter in the next request.</p>
          * 
          * <strong>example:</strong>
          * <p>caeba0bbb2be03f84eb48b699f0a****</p>
@@ -244,8 +244,8 @@ public class ListSupabaseBackupJobsResponseBody extends TeaModel {
             /**
              * <p>The backup mode. Valid values:</p>
              * <ul>
-             * <li><strong>Automated</strong>: automatic backup</li>
-             * <li><strong>Manual</strong>: manual backup</li>
+             * <li><strong>Automated</strong>: automatic backup.</li>
+             * <li><strong>Manual</strong>: manual backup.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -257,7 +257,7 @@ public class ListSupabaseBackupJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the backup task. Valid statuses include: schedule (waiting to be scheduled) and backup (in progress).</p>
+             * <p>The status of the backup task. Known statuses include: schedule (waiting to be scheduled) and backup (in progress).</p>
              * 
              * <strong>example:</strong>
              * <p>backup</p>
@@ -268,7 +268,7 @@ public class ListSupabaseBackupJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The progress percentage of the backup task, such as 0%. This value may be an empty string when the task is in the schedule (waiting to be scheduled) state.</p>
+             * <p>The progress percentage of the backup task, such as 0%. This value may be an empty string when the task is in the schedule state.</p>
              * 
              * <strong>example:</strong>
              * <p>0%</p>
@@ -279,7 +279,7 @@ public class ListSupabaseBackupJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time of the backup task. The time is displayed in UTC in the yyyy-MM-ddTHH:mm:ssZ format. This value may be an empty string when the task is in the schedule (waiting to be scheduled) state.</p>
+             * <p>The start time of the backup task. The time is in UTC and follows the yyyy-MM-ddTHH:mm:ssZ format. This value may be an empty string when the task is in the schedule state.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-10-09T04:37:01Z</p>

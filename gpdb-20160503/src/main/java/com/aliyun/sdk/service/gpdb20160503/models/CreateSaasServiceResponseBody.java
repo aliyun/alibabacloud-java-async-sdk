@@ -80,10 +80,10 @@ public class CreateSaasServiceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The order ID.</p>
+         * <p>The ID of the order.</p>
          * 
          * <strong>example:</strong>
-         * <hr>
+         * <p>123456789</p>
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -91,7 +91,7 @@ public class CreateSaasServiceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>7565770E-7C45-462D-BA4A-8A5396F2CAD1</p>
@@ -102,7 +102,7 @@ public class CreateSaasServiceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The service ID.</p>
+         * <p>The ID of the service.</p>
          * 
          * <strong>example:</strong>
          * <p>agdb-eqxwj5tj5ojx</p>

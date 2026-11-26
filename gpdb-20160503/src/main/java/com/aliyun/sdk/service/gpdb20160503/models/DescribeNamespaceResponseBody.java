@@ -154,7 +154,7 @@ public class DescribeNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The name of the namespace.</p>
+         * <p>The namespace.</p>
          * 
          * <strong>example:</strong>
          * <p>mynamespace</p>
@@ -165,7 +165,10 @@ public class DescribeNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The queried namespace.</p>
+         * <p>The namespace information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;key&quot;:&quot;{}&quot;}</p>
          */
         public Builder namespaceInfo(java.util.Map<String, String> namespaceInfo) {
             this.namespaceInfo = namespaceInfo;
@@ -173,7 +176,7 @@ public class DescribeNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The region ID of the instance.</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -195,10 +198,10 @@ public class DescribeNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>The API execution status. Valid values:</p>
          * <ul>
-         * <li><strong>success</strong></li>
-         * <li><strong>fail</strong></li>
+         * <li><strong>success</strong>: The execution succeeded.</li>
+         * <li><strong>fail</strong>: The execution failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>

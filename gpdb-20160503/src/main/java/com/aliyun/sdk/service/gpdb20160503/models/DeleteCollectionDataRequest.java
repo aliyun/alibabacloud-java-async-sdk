@@ -174,7 +174,10 @@ public class DeleteCollectionDataRequest extends Request {
         } 
 
         /**
-         * <p>The name of the collection.</p>
+         * <p>The collection name.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/2401503.html">ListCollections</a> operation to view the list.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -187,7 +190,7 @@ public class DeleteCollectionDataRequest extends Request {
         }
 
         /**
-         * <p>The data that you want to delete.</p>
+         * <p>The data fields and values to delete. The value is a JSON string in dictionary format, where the key is the field name and the value is a list of data values to delete.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;title&quot;:[&quot;a&quot;,&quot;b&quot;]}</p>
@@ -199,7 +202,7 @@ public class DeleteCollectionDataRequest extends Request {
         }
 
         /**
-         * <p>The filter conditions for the data to be deleted.</p>
+         * <p>The filter condition for the data to delete. The format is SQL WHERE syntax.</p>
          * 
          * <strong>example:</strong>
          * <p>a &lt; 10</p>
@@ -213,7 +216,7 @@ public class DeleteCollectionDataRequest extends Request {
         /**
          * <p>The instance ID.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the IDs of all AnalyticDB for PostgreSQL instances within a region.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to view the IDs of all AnalyticDB for PostgreSQL instances in the target region.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -226,9 +229,9 @@ public class DeleteCollectionDataRequest extends Request {
         }
 
         /**
-         * <p>The name of the namespace. Default value: public.</p>
+         * <p>The namespace. Default value: public.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/2401502.html">ListNamespaces</a> operation to query a list of namespaces.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/2401502.html">ListNamespaces</a> operation to view the list.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -241,7 +244,7 @@ public class DeleteCollectionDataRequest extends Request {
         }
 
         /**
-         * <p>The password of the namespace.</p>
+         * <p>The password for the namespace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -263,9 +266,9 @@ public class DeleteCollectionDataRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the instance.</p>
+         * <p>The region ID.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to view the available region IDs.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -279,7 +282,7 @@ public class DeleteCollectionDataRequest extends Request {
         }
 
         /**
-         * <p>The ID of the workspace that consists of multiple AnalyticDB for PostgreSQL instances. You must specify one of the WorkspaceId and DBInstanceId parameters. If you specify both parameters, the WorkspaceId parameter takes effect.</p>
+         * <p>The ID of the workspace that consists of multiple database instances. This parameter and the DBInstanceId parameter cannot be empty at the same time. If both parameters are specified, this parameter takes precedence.</p>
          * 
          * <strong>example:</strong>
          * <p>gp-ws-*****</p>

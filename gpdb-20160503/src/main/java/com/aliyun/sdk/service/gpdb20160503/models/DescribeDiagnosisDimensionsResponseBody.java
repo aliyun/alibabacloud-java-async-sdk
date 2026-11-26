@@ -80,7 +80,7 @@ public class DescribeDiagnosisDimensionsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The names of the databases.</p>
+         * <p>The database names.</p>
          */
         public Builder databases(java.util.List<String> databases) {
             this.databases = databases;
@@ -99,7 +99,7 @@ public class DescribeDiagnosisDimensionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The names of the database accounts.</p>
+         * <p>The usernames.</p>
          */
         public Builder userNames(java.util.List<String> userNames) {
             this.userNames = userNames;

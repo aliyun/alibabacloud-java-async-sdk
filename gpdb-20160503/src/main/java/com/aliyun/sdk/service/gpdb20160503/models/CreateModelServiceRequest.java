@@ -293,7 +293,7 @@ public class CreateModelServiceRequest extends Request {
          * <p>The model parameters. This parameter is not supported.</p>
          * 
          * <strong>example:</strong>
-         * <p>Not yet available.</p>
+         * <p>暂未开放</p>
          */
         public Builder modelParams(java.util.Map<String, ?> modelParams) {
             String modelParamsShrink = shrink(modelParams, "ModelParams", "json");

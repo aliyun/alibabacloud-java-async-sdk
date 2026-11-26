@@ -23,9 +23,13 @@ public class CreateModelOperatorApiKeyResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
+    @com.aliyun.core.annotation.NameInMap("Status")
+    private String status;
+
     private CreateModelOperatorApiKeyResponseBody(Builder builder) {
         this.apiKeyId = builder.apiKeyId;
         this.requestId = builder.requestId;
+        this.status = builder.status;
     }
 
     public static Builder builder() {
@@ -54,9 +58,17 @@ public class CreateModelOperatorApiKeyResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    /**
+     * @return status
+     */
+    public String getStatus() {
+        return this.status;
+    }
+
     public static final class Builder {
         private Integer apiKeyId; 
         private String requestId; 
+        private String status; 
 
         private Builder() {
         } 
@@ -64,10 +76,11 @@ public class CreateModelOperatorApiKeyResponseBody extends TeaModel {
         private Builder(CreateModelOperatorApiKeyResponseBody model) {
             this.apiKeyId = model.apiKeyId;
             this.requestId = model.requestId;
+            this.status = model.status;
         } 
 
         /**
-         * <p>API KEY ID。</p>
+         * <p>The API key ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -85,6 +98,17 @@ public class CreateModelOperatorApiKeyResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * <p>The acceptance status of the creation request. If the request is successfully accepted, the value is always Creating, which does not indicate that the API key is available. Call DescribeModelOperatorApiKey or ListModelOperatorApiKeys to query the subsequent status. You can obtain the endpoint only when the status is Running, and obtain the plaintext key by calling DescribeModelOperatorApiKey. Each call to this operation creates a new API key. Do not repeatedly call this operation to check the progress.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Creating</p>
+         */
+        public Builder status(String status) {
+            this.status = status;
             return this;
         }
 

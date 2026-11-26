@@ -93,7 +93,7 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The threshold that determines whether the SQL statement must be truncated. The value is the number of characters.</p>
+         * <p>The list of SQL queries.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -101,7 +101,7 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number.</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -112,7 +112,7 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>B4CAF581-2AC7-41AD-8940-D56DF7AADF5B</p>
@@ -123,7 +123,7 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -307,7 +307,7 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The execution duration of the query. Unit: seconds.</p>
+             * <p>The total execution duration of the query. Unit: seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -318,7 +318,7 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the query. It is a unique identifier of the query.</p>
+             * <p>The ID of the query, which is the unique identifier of the query.</p>
              * 
              * <strong>example:</strong>
              * <p>2022042612465401000000012903151998970</p>
@@ -340,10 +340,10 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the SQL statement needs to be truncated. Valid values:</p>
+             * <p>Specifies whether the SQL statement is truncated. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong>: The SQL statement needs to be truncated.</li>
-             * <li><strong>false</strong>: The SQL statement does not need to be truncated.</li>
+             * <li><strong>true</strong>: The SQL statement is truncated.</li>
+             * <li><strong>false</strong>: The SQL statement is not truncated.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -355,7 +355,7 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The threshold used to determine whether an SQL statement must be truncated. The value is the number of characters.</p>
+             * <p>The truncation threshold of the SQL statement. The value is the number of characters in the string.</p>
              * 
              * <strong>example:</strong>
              * <p>5120</p>
@@ -366,7 +366,7 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the session that contains the query.</p>
+             * <p>The ID of the session to which the query belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>50</p>
@@ -377,7 +377,7 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time of the query. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+             * <p>The start time of the query. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1651877940000</p>
@@ -388,10 +388,10 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The execution state of the query. Valid values:</p>
+             * <p>The execution status of the query. Valid values:</p>
              * <ul>
-             * <li><strong>running</strong>: The query is being executed.</li>
-             * <li><strong>finished</strong>: The query is complete.</li>
+             * <li><strong>running</strong>: The query is running.</li>
+             * <li><strong>finished</strong>: The query is completed.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -403,7 +403,7 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the database account.</p>
+             * <p>The username.</p>
              * 
              * <strong>example:</strong>
              * <p>adbpguser</p>

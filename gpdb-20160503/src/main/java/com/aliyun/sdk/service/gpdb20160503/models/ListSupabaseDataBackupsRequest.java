@@ -226,7 +226,11 @@ public class ListSupabaseDataBackupsRequest extends Request {
         }
 
         /**
-         * <p>The backup pattern. Valid values: Automated: automatic backup. Manual: manual backup.</p>
+         * <p>The backup pattern. Valid values:</p>
+         * <ul>
+         * <li>Automated: automatic backup.</li>
+         * <li>Manual: manual backup.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Automated</p>
@@ -238,7 +242,11 @@ public class ListSupabaseDataBackupsRequest extends Request {
         }
 
         /**
-         * <p>The status of the backup set. Valid values: Success: the backup is successful; Failed: the backup fails.</p>
+         * <p>The status of the backup set. Valid values:</p>
+         * <ul>
+         * <li>Success: successful.</li>
+         * <li>Failed: failed.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Success</p>
@@ -250,7 +258,11 @@ public class ListSupabaseDataBackupsRequest extends Request {
         }
 
         /**
-         * <p>The backup type. Valid values: DATA: full backup; RESTOREPOI: restorable point.</p>
+         * <p>The backup type. Valid values:</p>
+         * <ul>
+         * <li>DATA: full backup.</li>
+         * <li>RESTOREPOI: restorable point.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>DATA</p>
@@ -286,7 +298,7 @@ public class ListSupabaseDataBackupsRequest extends Request {
         }
 
         /**
-         * <p>The paging token for paged query. Do not specify this parameter for the first request. For subsequent requests, specify the NextToken value returned by the previous response.</p>
+         * <p>The paging mark for paged query. Do not specify this parameter for the first request. For subsequent requests, specify the NextToken value returned by the previous response.</p>
          * 
          * <strong>example:</strong>
          * <p>caeba0bbb2be03f84eb48b699f0a****</p>

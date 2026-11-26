@@ -59,7 +59,7 @@ public class DescribeModelOperatorApiKeyRequest extends Request {
         } 
 
         /**
-         * <p>API KEY ID。</p>
+         * <p>The API key ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

@@ -93,7 +93,7 @@ public class CreateSnapshotResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The branch ID to which the snapshot belongs.</p>
+         * <p>The ID of the branch to which the snapshot belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>br-xxxx</p>
@@ -104,7 +104,7 @@ public class CreateSnapshotResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The LSN for the snapshot. You must specify either this parameter or SnapshotTimestamp. If this parameter is specified, the snapshot is created based on the specified LSN.</p>
+         * <p>The log sequence number (LSN) for the snapshot. You must specify either this parameter or SnapshotTimestamp. If specified, the snapshot is created based on this LSN.</p>
          * 
          * <strong>example:</strong>
          * <p>0/3522648</p>
@@ -126,7 +126,7 @@ public class CreateSnapshotResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The actual point in time corresponding to the created snapshot.</p>
+         * <p>The actual point in time when the snapshot was created.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-04-08T09:11:12Z</p>

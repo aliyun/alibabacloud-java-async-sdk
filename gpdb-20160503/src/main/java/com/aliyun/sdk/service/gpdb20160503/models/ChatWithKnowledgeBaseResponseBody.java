@@ -114,7 +114,7 @@ public class ChatWithKnowledgeBaseResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The return message.</p>
+         * <p>The returned message.</p>
          * 
          * <strong>example:</strong>
          * <p>Successful</p>
@@ -125,7 +125,7 @@ public class ChatWithKnowledgeBaseResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The multi-knowledge base recall information.</p>
+         * <p>The recall information from multiple knowledge bases.</p>
          */
         public Builder multiCollectionRecallResult(MultiCollectionRecallResult multiCollectionRecallResult) {
             this.multiCollectionRecallResult = multiCollectionRecallResult;
@@ -146,7 +146,7 @@ public class ChatWithKnowledgeBaseResponseBody extends TeaModel {
         /**
          * <p>The status. Valid values:</p>
          * <ul>
-         * <li><strong>success</strong>: Succeeded.</li>
+         * <li><strong>success</strong>: Successful.</li>
          * <li><strong>fail</strong>: Failed.</li>
          * </ul>
          * 
@@ -217,7 +217,7 @@ public class ChatWithKnowledgeBaseResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The called function parameters.</p>
+             * <p>The arguments for the called function.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;city&quot;:&quot;hangzhou&quot;}</p>
@@ -228,7 +228,7 @@ public class ChatWithKnowledgeBaseResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The called function name.</p>
+             * <p>The name of the called function.</p>
              * 
              * <strong>example:</strong>
              * <p>&quot;get_weather&quot;</p>
@@ -311,7 +311,7 @@ public class ChatWithKnowledgeBaseResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The called function information.</p>
+             * <p>The information about the called function.</p>
              */
             public Builder function(Function function) {
                 this.function = function;
@@ -330,7 +330,7 @@ public class ChatWithKnowledgeBaseResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tool call sequence number.</p>
+             * <p>The ordinal number of the tool calling invoke.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -429,7 +429,7 @@ public class ChatWithKnowledgeBaseResponseBody extends TeaModel {
              * <p>The document content.</p>
              * 
              * <strong>example:</strong>
-             * <p>The weather in Hangzhou is sunny.</p>
+             * <p>The weather in Hangzhou is sunny</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -448,7 +448,7 @@ public class ChatWithKnowledgeBaseResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The message role:</p>
+             * <p>The message role. Valid values:</p>
              * <ul>
              * <li>system</li>
              * <li>user</li>
@@ -464,7 +464,7 @@ public class ChatWithKnowledgeBaseResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tool call response list.</p>
+             * <p>The list of tool calling invoke responses.</p>
              */
             public Builder toolCalls(java.util.List<ToolCalls> toolCalls) {
                 this.toolCalls = toolCalls;
@@ -555,7 +555,7 @@ public class ChatWithKnowledgeBaseResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The reply sequence number.</p>
+             * <p>The reply index.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -566,7 +566,7 @@ public class ChatWithKnowledgeBaseResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The large model reply response.</p>
+             * <p>The response message from the large language model.</p>
              */
             public Builder message(Message message) {
                 this.message = message;
@@ -620,7 +620,7 @@ public class ChatWithKnowledgeBaseResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of tokens that hit the cache.</p>
+             * <p>The number of cached tokens.</p>
              * 
              * <strong>example:</strong>
              * <p>24</p>
@@ -716,7 +716,7 @@ public class ChatWithKnowledgeBaseResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of tokens consumed for generating content.</p>
+             * <p>The number of tokens consumed to generate the content.</p>
              * 
              * <strong>example:</strong>
              * <p>42</p>
@@ -738,7 +738,7 @@ public class ChatWithKnowledgeBaseResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The prompt token details.</p>
+             * <p>The details of the prompt tokens.</p>
              */
             public Builder promptTokensDetails(PromptTokensDetails promptTokensDetails) {
                 this.promptTokensDetails = promptTokensDetails;
@@ -855,7 +855,7 @@ public class ChatWithKnowledgeBaseResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The real-time generated text content.</p>
+             * <p>The text content generated in real time.</p>
              */
             public Builder choices(java.util.List<Choices> choices) {
                 this.choices = choices;
@@ -885,7 +885,7 @@ public class ChatWithKnowledgeBaseResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The model name used.</p>
+             * <p>The name of the model used.</p>
              * 
              * <strong>example:</strong>
              * <p>qwen-plus</p>
@@ -896,7 +896,7 @@ public class ChatWithKnowledgeBaseResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The token usage of the large model output.</p>
+             * <p>The number of tokens used for the large language model output.</p>
              */
             public Builder usage(Usage usage) {
                 this.usage = usage;
@@ -1070,7 +1070,7 @@ public class ChatWithKnowledgeBaseResponseBody extends TeaModel {
              * <p>The document content.</p>
              * 
              * <strong>example:</strong>
-             * <p>AnalyticDB PostgreSQL vector database.</p>
+             * <p>ADBPG vector database</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -1089,8 +1089,7 @@ public class ChatWithKnowledgeBaseResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The public URL of the query result image, valid for 2 hours by default.</p>
-             * <p>You can specify the validity period using the UrlExpiration input parameter.</p>
+             * <p>The public URL of the query result image. The default validity period is 2 hours. You can specify the validity period by using the UrlExpiration request parameter.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://viapi-customer-pop.oss-cn-shanghai.aliyuncs.com/b4d8_207196811002111319_570c0e199f03428f812ab21fcc00dd6a">http://viapi-customer-pop.oss-cn-shanghai.aliyuncs.com/b4d8_207196811002111319_570c0e199f03428f812ab21fcc00dd6a</a></p>
@@ -1112,7 +1111,7 @@ public class ChatWithKnowledgeBaseResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The metadata information loaded by the document loader.</p>
+             * <p>The metadata generated when the document loader loads the document.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;page&quot;:1}</p>
@@ -1124,6 +1123,9 @@ public class ChatWithKnowledgeBaseResponseBody extends TeaModel {
 
             /**
              * <p>The metadata.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;update_time&quot;:1749348435357,&quot;title&quot;:&quot;example&quot;}</p>
              */
             public Builder metadata(java.util.Map<String, ?> metadata) {
                 this.metadata = metadata;
@@ -1142,7 +1144,7 @@ public class ChatWithKnowledgeBaseResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The source of the retrieval result. 1 indicates vector retrieval, 2 indicates full-text retrieval, and 3 indicates dual-path recall.</p>
+             * <p>The source of the retrieve result. A value of 1 indicates AISearch. A value of 2 indicates full-text index. A value of 3 indicates dual-channel recall.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -1153,7 +1155,7 @@ public class ChatWithKnowledgeBaseResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The similarity score of this data entry. The scoring algorithm is related to the algorithm specified when creating the index (l2/ip/cosine).</p>
+             * <p>The similarity score of this data entry. The scoring algorithm depends on the algorithm specified during index creation, such as l2, ip, or cosine.</p>
              * 
              * <strong>example:</strong>
              * <p>12</p>
@@ -1220,7 +1222,7 @@ public class ChatWithKnowledgeBaseResponseBody extends TeaModel {
             /**
              * <p>The number of tokens used for vectorization.</p>
              * <blockquote>
-             * <p>A token is the smallest unit into which input text is divided. A token can be a word, a phrase, a punctuation mark, a character, etc.</p>
+             * <p>A token is the smallest unit into which input text is divided. A token can be a word, a phrase, a punctuation mark, or a character.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1364,7 +1366,7 @@ public class ChatWithKnowledgeBaseResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The recall items.</p>
+             * <p>The recalled items.</p>
              */
             public Builder matches(java.util.List<Matches> matches) {
                 this.matches = matches;
@@ -1372,7 +1374,7 @@ public class ChatWithKnowledgeBaseResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The relationship edge details.</p>
+             * <p>The file name.</p>
              */
             public Builder relations(java.util.List<String> relations) {
                 this.relations = relations;
@@ -1393,8 +1395,8 @@ public class ChatWithKnowledgeBaseResponseBody extends TeaModel {
             /**
              * <p>The API execution status. Valid values:</p>
              * <ul>
-             * <li><strong>success</strong>: Execution succeeded.</li>
-             * <li><strong>fail</strong>: Execution failed.</li>
+             * <li><strong>success</strong>: The execution was successful.</li>
+             * <li><strong>fail</strong>: The execution failed.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1417,7 +1419,7 @@ public class ChatWithKnowledgeBaseResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tokens or items consumed by document understanding or embedding.</p>
+             * <p>The number of tokens or items consumed for document understanding or embedding.</p>
              */
             public Builder usage(MultiCollectionRecallResultUsage usage) {
                 this.usage = usage;

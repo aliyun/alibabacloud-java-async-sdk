@@ -91,7 +91,7 @@ public class DescribeActiveSQLRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The queried SQL records.</p>
+         * <p>The query details.</p>
          */
         public Builder queries(java.util.List<Queries> queries) {
             this.queries = queries;
@@ -285,7 +285,7 @@ public class DescribeActiveSQLRecordsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The IP address of the client.</p>
+             * <p>The client address.</p>
              * 
              * <strong>example:</strong>
              * <p>0.0.0.0</p>
@@ -296,7 +296,7 @@ public class DescribeActiveSQLRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the database.</p>
+             * <p>The database name.</p>
              * 
              * <strong>example:</strong>
              * <p>xg_analyse</p>
@@ -307,7 +307,7 @@ public class DescribeActiveSQLRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The progress ID.</p>
+             * <p>The process ID.</p>
              * 
              * <strong>example:</strong>
              * <p>6164</p>
@@ -318,7 +318,7 @@ public class DescribeActiveSQLRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The SQL statement of the query.</p>
+             * <p>The SQL text of the query.</p>
              * 
              * <strong>example:</strong>
              * <p>Select * from t1,t2 where t1.id=t2.id;</p>
@@ -329,7 +329,7 @@ public class DescribeActiveSQLRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The execution duration of the query. Unit: seconds.</p>
+             * <p>The execution duration of the query, in seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>60</p>
@@ -351,7 +351,7 @@ public class DescribeActiveSQLRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The session ID.</p>
+             * <p>The ID of the session to which the query belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>6612</p>
@@ -362,10 +362,10 @@ public class DescribeActiveSQLRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the SQL statement is truncated. Valid values:</p>
+             * <p>Specifies whether the SQL statement is truncated. Valid values:</p>
              * <ul>
-             * <li>true</li>
-             * <li>false</li>
+             * <li>true: Yes.</li>
+             * <li>false: No.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -377,7 +377,7 @@ public class DescribeActiveSQLRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The threshold that is used to truncate the SQL statement.</p>
+             * <p>The truncation threshold for the SQL statement.</p>
              * 
              * <strong>example:</strong>
              * <p>1024</p>
@@ -388,10 +388,10 @@ public class DescribeActiveSQLRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the asynchronous request. Valid values:</p>
+             * <p>The execution status of the asynchronous request. Valid values:</p>
              * <ul>
-             * <li><strong>running</strong></li>
-             * <li><strong>block</strong></li>
+             * <li><strong>running</strong>: Running.</li>
+             * <li><strong>block</strong>: Blocked.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -403,7 +403,7 @@ public class DescribeActiveSQLRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the database account.</p>
+             * <p>The username.</p>
              * 
              * <strong>example:</strong>
              * <p>testuser</p>

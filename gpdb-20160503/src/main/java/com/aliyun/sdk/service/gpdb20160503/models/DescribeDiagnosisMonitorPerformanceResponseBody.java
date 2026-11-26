@@ -93,7 +93,7 @@ public class DescribeDiagnosisMonitorPerformanceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Details of query execution.</p>
+         * <p>The list of SQL queries.</p>
          */
         public Builder performances(java.util.List<Performances> performances) {
             this.performances = performances;
@@ -112,10 +112,10 @@ public class DescribeDiagnosisMonitorPerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the queries are truncated when the number of queries exceeds the threshold. Valid values:</p>
+         * <p>Indicates whether the number of queries is truncated. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: The queries are truncated.</li>
-         * <li><strong>false</strong>: The queries are not truncated.</li>
+         * <li><strong>true</strong>: Truncated.</li>
+         * <li><strong>false</strong>: Not truncated.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -248,7 +248,7 @@ public class DescribeDiagnosisMonitorPerformanceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The execution duration of the query. Unit: milliseconds.</p>
+             * <p>The total execution time of the query. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -270,7 +270,7 @@ public class DescribeDiagnosisMonitorPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the query. It is a unique identifier of the query.</p>
+             * <p>The ID of the query, which is the unique identifier of the query.</p>
              * 
              * <strong>example:</strong>
              * <p>2022042612465401000000012903151998970</p>
@@ -281,7 +281,7 @@ public class DescribeDiagnosisMonitorPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time of the query. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+             * <p>The start time of the query. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1651877940000</p>
@@ -292,10 +292,10 @@ public class DescribeDiagnosisMonitorPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The execution state of the query. Valid values:</p>
+             * <p>The execution status of the query. Valid values:</p>
              * <ul>
-             * <li><strong>running</strong>: The query is being executed.</li>
-             * <li><strong>finished</strong>: The query is complete.</li>
+             * <li><strong>running</strong>: Running.</li>
+             * <li><strong>finished</strong>: Completed.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -307,7 +307,7 @@ public class DescribeDiagnosisMonitorPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the database account.</p>
+             * <p>The username.</p>
              * 
              * <strong>example:</strong>
              * <p>adbpguser</p>

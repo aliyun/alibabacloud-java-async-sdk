@@ -118,7 +118,7 @@ public class DescribeDBInstanceIndexUsageRequest extends Request {
         /**
          * <p>The instance ID.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including the instance IDs.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -144,7 +144,7 @@ public class DescribeDBInstanceIndexUsageRequest extends Request {
         }
 
         /**
-         * <p>order by search condition</p>
+         * <p>The sorting condition.</p>
          * 
          * <strong>example:</strong>
          * <p>{Field: SchemaName, Type: Desc}</p>
@@ -156,7 +156,7 @@ public class DescribeDBInstanceIndexUsageRequest extends Request {
         }
 
         /**
-         * <p>The page number. Pages start from page 1. Default value: <strong>1</strong>.</p>
+         * <p>The page number. The value must be greater than 0 and cannot exceed the maximum value of the Integer type. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

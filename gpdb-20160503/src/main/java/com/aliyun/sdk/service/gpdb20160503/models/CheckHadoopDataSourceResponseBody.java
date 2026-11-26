@@ -80,7 +80,7 @@ public class CheckHadoopDataSourceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The returned message. If the service failed, an error message is returned. Otherwise, a pair of double quotation marks (&quot;&quot;) is returned.</p>
+         * <p>The message returned by the service. If the service is unavailable, an error message is returned. If the service is available, an empty string is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>serivce unavaliable</p>
@@ -102,10 +102,12 @@ public class CheckHadoopDataSourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The status of the service. Valid values:</p>
+         * <p>The service status. Valid values:</p>
          * <ul>
-         * <li>Running</li>
-         * <li>Failed</li>
+         * <li><p>Running: The service is available.</p>
+         * </li>
+         * <li><p>Failed: The service is unavailable.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

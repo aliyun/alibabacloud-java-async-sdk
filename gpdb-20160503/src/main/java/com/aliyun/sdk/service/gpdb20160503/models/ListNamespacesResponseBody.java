@@ -132,7 +132,7 @@ public class ListNamespacesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -173,7 +173,7 @@ public class ListNamespacesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The region ID of the instance.</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -195,10 +195,10 @@ public class ListNamespacesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>The execution status of the API operation. Valid values:</p>
          * <ul>
-         * <li><strong>success</strong></li>
-         * <li><strong>fail</strong></li>
+         * <li><strong>success</strong>: The execution is successful.</li>
+         * <li><strong>fail</strong>: The execution fails.</li>
          * </ul>
          * 
          * <strong>example:</strong>

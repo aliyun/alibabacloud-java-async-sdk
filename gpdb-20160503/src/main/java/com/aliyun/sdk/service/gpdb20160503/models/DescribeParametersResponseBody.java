@@ -67,7 +67,7 @@ public class DescribeParametersResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The queried configuration parameters.</p>
+         * <p>The list of configuration parameters.</p>
          */
         public Builder parameters(java.util.List<Parameters> parameters) {
             this.parameters = parameters;
@@ -75,7 +75,7 @@ public class DescribeParametersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>62506167-D284-562A-B7C2-0A**********</p>
@@ -220,10 +220,10 @@ public class DescribeParametersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether a restart is required for parameter modifications to take effect. Valid values:</p>
+             * <p>Indicates whether the instance must be restarted. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong></li>
+             * <li><strong>true</strong>: The instance must be restarted.</li>
+             * <li><strong>false</strong>: The instance does not need to be restarted.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -237,8 +237,8 @@ public class DescribeParametersResponseBody extends TeaModel {
             /**
              * <p>Indicates whether the configuration parameter can be modified. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong></li>
+             * <li><strong>true</strong>: The parameter can be modified.</li>
+             * <li><strong>false</strong>: The parameter cannot be modified.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -250,7 +250,7 @@ public class DescribeParametersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The valid values of the configuration parameter.</p>
+             * <p>The value range of the configuration parameter.</p>
              * 
              * <strong>example:</strong>
              * <p>[0-2147483647]</p>

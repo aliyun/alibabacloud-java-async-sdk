@@ -160,7 +160,7 @@ public class RestoreBranchRequest extends Request {
         } 
 
         /**
-         * <p>The branch ID that uniquely identifies a Supabase branch.</p>
+         * <p>The branch ID, which uniquely identifies a Supabase branch.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -173,7 +173,7 @@ public class RestoreBranchRequest extends Request {
         }
 
         /**
-         * <p>The client idempotency token that ensures the idempotence of retry requests.</p>
+         * <p>The client token that is used to ensure the idempotence of retry requests.</p>
          * 
          * <strong>example:</strong>
          * <p>123e4567-e89b-12d3-a456-426614174000</p>
@@ -185,7 +185,7 @@ public class RestoreBranchRequest extends Request {
         }
 
         /**
-         * <p>The backup branch name. If specified, automatic creation of a backup branch is performed before recovery.</p>
+         * <p>The name of the backup branch. If you specify this parameter, automatic creation of a backup branch is performed before you recover the branch.</p>
          * 
          * <strong>example:</strong>
          * <p>backup-main</p>
@@ -197,7 +197,7 @@ public class RestoreBranchRequest extends Request {
         }
 
         /**
-         * <p>The Supabase project ID associated with the primary branch.</p>
+         * <p>The ID of the Supabase project to which the primary branch belongs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -210,7 +210,7 @@ public class RestoreBranchRequest extends Request {
         }
 
         /**
-         * <p>The region ID. This parameter is required when you create a primary branch. When you create a sub-branch, the region is inherited from the primary branch by default.</p>
+         * <p>The region ID. This parameter is required when you create a primary branch. When you create a child branch, the region ID of the primary branch is inherited by default.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>
@@ -222,7 +222,7 @@ public class RestoreBranchRequest extends Request {
         }
 
         /**
-         * <p>The ID of the source branch from which to recover.</p>
+         * <p>The ID of the source branch for the restoration.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -235,7 +235,7 @@ public class RestoreBranchRequest extends Request {
         }
 
         /**
-         * <p>The LSN of the source branch to recover to.</p>
+         * <p>The LSN of the source branch for the restoration.</p>
          * 
          * <strong>example:</strong>
          * <p>0/3522648</p>
@@ -247,7 +247,7 @@ public class RestoreBranchRequest extends Request {
         }
 
         /**
-         * <p>The point in time of the source branch to recover to. The value must be within the recoverable time window.</p>
+         * <p>The point in time of the source branch for the restoration. The specified point in time must be within the restorable window.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-04-08T09:11:12Z</p>

@@ -67,7 +67,7 @@ public class CreateHadoopDataSourceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Data source ID.</p>
+         * <p>The data source ID.</p>
          * 
          * <strong>example:</strong>
          * <p>123</p>
@@ -78,7 +78,7 @@ public class CreateHadoopDataSourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>2C125605-266F-41CA-8AC5-3A643D4F42C5</p>

@@ -93,7 +93,7 @@ public class DeleteCollectionDataResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The number of rows that are affected by the request.</p>
+         * <p>The applied rows.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -126,10 +126,10 @@ public class DeleteCollectionDataResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>The execution status of the API operation. Valid values:</p>
          * <ul>
-         * <li><strong>success</strong></li>
-         * <li><strong>fail</strong></li>
+         * <li><strong>success</strong>: Execution succeeded.</li>
+         * <li><strong>fail</strong>: Execution failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>

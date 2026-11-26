@@ -193,7 +193,7 @@ public class GetSecretValueResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The description of the access credential.</p>
+         * <p>The description.</p>
          * 
          * <strong>example:</strong>
          * <p>test secret</p>
@@ -215,7 +215,7 @@ public class GetSecretValueResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The password of the database account.</p>
+         * <p>The password of the target database.</p>
          * 
          * <strong>example:</strong>
          * <p>pwd123</p>
@@ -226,7 +226,7 @@ public class GetSecretValueResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>ABB39CC3-4488-4857-905D-2E4A051D0521</p>
@@ -237,7 +237,7 @@ public class GetSecretValueResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ARN of the access credential for the created Data API account. Format: <code>acs:gpdb:{{region}}:{{accountId}}:secret/{{secretName}}-{{32 digits random string}</code>.</p>
+         * <p>The ARN that uniquely specifies the logon credentials and permissions of the Data API account created by the user. Format: <code>acs:gpdb:{{region}}:{{accountId}}:secret/{{secretName}}-{{32 digits random string}</code></p>
          * 
          * <strong>example:</strong>
          * <p>acs:gpdb:cn-beijing:1033**:secret/testsecret-eG2AQGRIwQ0zFp4VA7mYL3uiCXTfDQbQ</p>
@@ -248,7 +248,7 @@ public class GetSecretValueResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The name of the access credential.</p>
+         * <p>The name of the credential.</p>
          * 
          * <strong>example:</strong>
          * <p>testsecret</p>
@@ -259,10 +259,10 @@ public class GetSecretValueResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The status of the operation. Valid values:</p>
+         * <p>The status. Valid values:</p>
          * <ul>
-         * <li><strong>success</strong></li>
-         * <li><strong>fail</strong></li>
+         * <li><strong>success</strong>: Successful.</li>
+         * <li><strong>fail</strong>: Failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -274,7 +274,7 @@ public class GetSecretValueResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The name of the database account.</p>
+         * <p>The username.</p>
          * 
          * <strong>example:</strong>
          * <p>testacc</p>

@@ -120,7 +120,7 @@ public class ListDocumentCollectionsRequest extends Request {
         /**
          * <p>The ID of the instance.</p>
          * <blockquote>
-         * <p>To view details of all AnalyticDB for PostgreSQL instances in a region, including their IDs, call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to view the details of all AnalyticDB for PostgreSQL instances in the target region, including instance IDs.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -136,7 +136,7 @@ public class ListDocumentCollectionsRequest extends Request {
         /**
          * <p>The namespace. Default value: public.</p>
          * <blockquote>
-         * <p>To create a namespace, call the <a href="https://help.aliyun.com/document_detail/2401495.html">CreateNamespace</a> operation. To list namespaces, call the <a href="https://help.aliyun.com/document_detail/2401502.html">ListNamespaces</a> operation.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/2401495.html">CreateNamespace</a> operation to create a namespace and the <a href="https://help.aliyun.com/document_detail/2401502.html">ListNamespaces</a> operation to view the namespace list.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -151,7 +151,7 @@ public class ListDocumentCollectionsRequest extends Request {
         /**
          * <p>The password for the namespace.</p>
          * <blockquote>
-         * <p>You set this password when you call the <a href="https://help.aliyun.com/document_detail/2401495.html">CreateNamespace</a> operation.</p>
+         * <p>This value is specified when you call the <a href="https://help.aliyun.com/document_detail/2401495.html">CreateNamespace</a> operation.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -174,7 +174,7 @@ public class ListDocumentCollectionsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region where the instance resides.</p>
+         * <p>The region ID of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

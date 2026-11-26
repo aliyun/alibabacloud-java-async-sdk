@@ -102,11 +102,11 @@ public class HandleActiveSQLRecordRequest extends Request {
         }
 
         /**
-         * <p>The type of the operation on the process ID. Valid values:</p>
+         * <p>The operation type for the process ID. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: cancel.</li>
-         * <li><strong>1</strong>: terminate.</li>
-         * <li><strong>2</strong>: forcefully terminate.</li>
+         * <li><strong>0</strong>: cancel</li>
+         * <li><strong>1</strong>: terminate</li>
+         * <li><strong>2</strong>: force terminate</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -119,7 +119,7 @@ public class HandleActiveSQLRecordRequest extends Request {
         }
 
         /**
-         * <p>The process IDs. A process ID is a unique identifier of a query.</p>
+         * <p>The process IDs, which are the unique identifiers of the queries.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

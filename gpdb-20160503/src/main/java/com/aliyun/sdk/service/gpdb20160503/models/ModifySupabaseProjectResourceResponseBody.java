@@ -83,7 +83,7 @@ public class ModifySupabaseProjectResourceResponseBody extends TeaModel {
          * <p>The order ID.</p>
          * 
          * <strong>example:</strong>
-         * <hr>
+         * <p>123456789</p>
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;

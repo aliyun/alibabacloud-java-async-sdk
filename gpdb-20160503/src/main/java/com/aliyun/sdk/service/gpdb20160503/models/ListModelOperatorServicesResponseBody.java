@@ -173,8 +173,12 @@ public class ListModelOperatorServicesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ServiceId")
         private String serviceId;
 
+        @com.aliyun.core.annotation.NameInMap("Status")
+        private String status;
+
         private Services(Builder builder) {
             this.serviceId = builder.serviceId;
+            this.status = builder.status;
         }
 
         public static Builder builder() {
@@ -192,14 +196,23 @@ public class ListModelOperatorServicesResponseBody extends TeaModel {
             return this.serviceId;
         }
 
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
         public static final class Builder {
             private String serviceId; 
+            private String status; 
 
             private Builder() {
             } 
 
             private Builder(Services model) {
                 this.serviceId = model.serviceId;
+                this.status = model.status;
             } 
 
             /**
@@ -210,6 +223,25 @@ public class ListModelOperatorServicesResponseBody extends TeaModel {
              */
             public Builder serviceId(String serviceId) {
                 this.serviceId = serviceId;
+                return this;
+            }
+
+            /**
+             * <p>The lifecycle status of the model operator service. The return value from the server is retained. Valid values:</p>
+             * <ul>
+             * <li>active: Running.</li>
+             * <li>locking: Locking.</li>
+             * <li>locked: Locked.</li>
+             * <li>unlocking: Unlocking.</li>
+             * <li>deleting: Deleting. The underlying resources are still being asynchronously cleaned up.</li>
+             * </ul>
+             * <p>This field indicates the service status, which differs from the Creating, Running, Locked, and Deleting statuses of an API key. A transitional status does not indicate that the operation is complete. After a service is deleted, it no longer appears in the list.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>active</p>
+             */
+            public Builder status(String status) {
+                this.status = status;
                 return this;
             }
 

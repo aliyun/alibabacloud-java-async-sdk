@@ -163,7 +163,7 @@ public class ListDocumentsRequest extends Request {
         /**
          * <p>The name of the document collection.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/2618448.html">CreateDocumentCollection</a> operation to create a document collection and call the <a href="https://help.aliyun.com/document_detail/2618452.html">ListDocumentCollections</a> operation to query a list of document collections.</p>
+         * <p>The document collection is created by calling the <a href="https://help.aliyun.com/document_detail/2618448.html">CreateDocumentCollection</a> operation. You can call the <a href="https://help.aliyun.com/document_detail/2618452.html">ListDocumentCollections</a> operation to view the created document collections.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -179,7 +179,7 @@ public class ListDocumentsRequest extends Request {
         /**
          * <p>The instance ID.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query details about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to view the details of all AnalyticDB for PostgreSQL instances in the target region, including instance IDs.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -193,7 +193,7 @@ public class ListDocumentsRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries per page. Valid values: 1 to 100.</p>
+         * <p>The maximum number of documents to return per page. Valid values: 1 to 100.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -205,9 +205,9 @@ public class ListDocumentsRequest extends Request {
         }
 
         /**
-         * <p>The name of the namespace. Default value: public.</p>
+         * <p>The namespace. Default value: public.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/2401495.html">CreateNamespace</a> operation to create a namespace and call the <a href="https://help.aliyun.com/document_detail/2401502.html">ListNamespaces</a> operation to query a list of namespaces.</p>
+         * <p>You can create a namespace by calling the <a href="https://help.aliyun.com/document_detail/2401495.html">CreateNamespace</a> operation and view the namespace list by calling the <a href="https://help.aliyun.com/document_detail/2401502.html">ListNamespaces</a> operation.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -222,7 +222,7 @@ public class ListDocumentsRequest extends Request {
         /**
          * <p>The password of the namespace.</p>
          * <blockquote>
-         * <p> This value is specified when you call the <a href="https://help.aliyun.com/document_detail/2401495.html">CreateNamespace</a> operation.</p>
+         * <p>This value is specified when you call the <a href="https://help.aliyun.com/document_detail/2401495.html">CreateNamespace</a> operation.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -236,7 +236,7 @@ public class ListDocumentsRequest extends Request {
         }
 
         /**
-         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+         * <p>The paging token used to start the next paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>caeba0bbb2be03f84eb48b699f0a4883</p>

@@ -89,7 +89,7 @@ public class ModifyVectorConfigurationRequest extends Request {
         /**
          * <p>The instance ID.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the IDs of all AnalyticDB for PostgreSQL instances in a region.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the IDs of all AnalyticDB for PostgreSQL instances in a specific region.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -111,17 +111,19 @@ public class ModifyVectorConfigurationRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable vector engine optimization. Valid values:</p>
+         * <p>Specifies whether to enable the vector engine optimization configuration. Valid values:</p>
          * <ul>
-         * <li><strong>enabled</strong></li>
-         * <li><strong>disabled</strong></li>
+         * <li><strong>enabled</strong>: Enables vector engine optimization.</li>
+         * <li><strong>disabled</strong>: Disables vector engine optimization.</li>
          * </ul>
          * <blockquote>
          * <ul>
-         * <li>We recommend that you <strong>do not enable</strong> vector engine optimization in mainstream analysis and real-time data warehousing scenarios.</li>
-         * <li>We recommend that you <strong>enable</strong> vector engine optimization in AI Generated Content (AIGC) and vector retrieval scenarios that require the vector analysis engine.</li>
+         * <li>For mainstream analytics, data warehouse, and real-time data warehouse scenarios, <strong>do not enable</strong> vector engine optimization.</li>
          * </ul>
          * </blockquote>
+         * <ul>
+         * <li>For users who use the vector analysis engine for AIGC and vector retrieval scenarios, <strong>enable</strong> vector engine optimization.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>enabled</p>

@@ -293,6 +293,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DeployMode")
         private String deployMode;
 
+        @com.aliyun.core.annotation.NameInMap("DiskNotifyThreshold")
+        private String diskNotifyThreshold;
+
         @com.aliyun.core.annotation.NameInMap("EncryptionKey")
         private String encryptionKey;
 
@@ -323,6 +326,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceSpec")
         private String instanceSpec;
 
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
+        private String instanceType;
+
         @com.aliyun.core.annotation.NameInMap("LockMode")
         private String lockMode;
 
@@ -340,6 +346,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("MasterCU")
         private Integer masterCU;
+
+        @com.aliyun.core.annotation.NameInMap("MasterDiskLockThreshold")
+        private String masterDiskLockThreshold;
 
         @com.aliyun.core.annotation.NameInMap("MasterNodeNum")
         private Integer masterNodeNum;
@@ -364,6 +373,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("Port")
         private String port;
+
+        @com.aliyun.core.annotation.NameInMap("PrimaryDBInstanceId")
+        private String primaryDBInstanceId;
 
         @com.aliyun.core.annotation.NameInMap("ProdType")
         private String prodType;
@@ -394,6 +406,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("SegmentCounts")
         private Integer segmentCounts;
+
+        @com.aliyun.core.annotation.NameInMap("SegmentDiskLockThreshold")
+        private String segmentDiskLockThreshold;
 
         @com.aliyun.core.annotation.NameInMap("ServerlessMode")
         private String serverlessMode;
@@ -460,6 +475,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             this.DBInstanceStatus = builder.DBInstanceStatus;
             this.DBInstanceStorage = builder.DBInstanceStorage;
             this.deployMode = builder.deployMode;
+            this.diskNotifyThreshold = builder.diskNotifyThreshold;
             this.encryptionKey = builder.encryptionKey;
             this.encryptionType = builder.encryptionType;
             this.engine = builder.engine;
@@ -470,12 +486,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             this.idleTime = builder.idleTime;
             this.instanceNetworkType = builder.instanceNetworkType;
             this.instanceSpec = builder.instanceSpec;
+            this.instanceType = builder.instanceType;
             this.lockMode = builder.lockMode;
             this.lockReason = builder.lockReason;
             this.maintainEndTime = builder.maintainEndTime;
             this.maintainStartTime = builder.maintainStartTime;
             this.masterAISpec = builder.masterAISpec;
             this.masterCU = builder.masterCU;
+            this.masterDiskLockThreshold = builder.masterDiskLockThreshold;
             this.masterNodeNum = builder.masterNodeNum;
             this.maxConnections = builder.maxConnections;
             this.memoryPerNode = builder.memoryPerNode;
@@ -484,6 +502,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             this.minorVersion = builder.minorVersion;
             this.payType = builder.payType;
             this.port = builder.port;
+            this.primaryDBInstanceId = builder.primaryDBInstanceId;
             this.prodType = builder.prodType;
             this.readDelayTime = builder.readDelayTime;
             this.regionId = builder.regionId;
@@ -494,6 +513,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             this.segNodeNum = builder.segNodeNum;
             this.segmentAISpec = builder.segmentAISpec;
             this.segmentCounts = builder.segmentCounts;
+            this.segmentDiskLockThreshold = builder.segmentDiskLockThreshold;
             this.serverlessMode = builder.serverlessMode;
             this.serverlessResource = builder.serverlessResource;
             this.standbyZoneId = builder.standbyZoneId;
@@ -673,6 +693,13 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * @return diskNotifyThreshold
+         */
+        public String getDiskNotifyThreshold() {
+            return this.diskNotifyThreshold;
+        }
+
+        /**
          * @return encryptionKey
          */
         public String getEncryptionKey() {
@@ -743,6 +770,13 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * @return instanceType
+         */
+        public String getInstanceType() {
+            return this.instanceType;
+        }
+
+        /**
          * @return lockMode
          */
         public String getLockMode() {
@@ -782,6 +816,13 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
          */
         public Integer getMasterCU() {
             return this.masterCU;
+        }
+
+        /**
+         * @return masterDiskLockThreshold
+         */
+        public String getMasterDiskLockThreshold() {
+            return this.masterDiskLockThreshold;
         }
 
         /**
@@ -838,6 +879,13 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
          */
         public String getPort() {
             return this.port;
+        }
+
+        /**
+         * @return primaryDBInstanceId
+         */
+        public String getPrimaryDBInstanceId() {
+            return this.primaryDBInstanceId;
         }
 
         /**
@@ -908,6 +956,13 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
          */
         public Integer getSegmentCounts() {
             return this.segmentCounts;
+        }
+
+        /**
+         * @return segmentDiskLockThreshold
+         */
+        public String getSegmentDiskLockThreshold() {
+            return this.segmentDiskLockThreshold;
         }
 
         /**
@@ -1031,6 +1086,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             private String DBInstanceStatus; 
             private Long DBInstanceStorage; 
             private String deployMode; 
+            private String diskNotifyThreshold; 
             private String encryptionKey; 
             private String encryptionType; 
             private String engine; 
@@ -1041,12 +1097,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             private Integer idleTime; 
             private String instanceNetworkType; 
             private String instanceSpec; 
+            private String instanceType; 
             private String lockMode; 
             private String lockReason; 
             private String maintainEndTime; 
             private String maintainStartTime; 
             private String masterAISpec; 
             private Integer masterCU; 
+            private String masterDiskLockThreshold; 
             private Integer masterNodeNum; 
             private Integer maxConnections; 
             private Integer memoryPerNode; 
@@ -1055,6 +1113,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             private String minorVersion; 
             private String payType; 
             private String port; 
+            private String primaryDBInstanceId; 
             private String prodType; 
             private String readDelayTime; 
             private String regionId; 
@@ -1065,6 +1124,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             private Integer segNodeNum; 
             private String segmentAISpec; 
             private Integer segmentCounts; 
+            private String segmentDiskLockThreshold; 
             private String serverlessMode; 
             private Integer serverlessResource; 
             private String standbyZoneId; 
@@ -1106,6 +1166,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
                 this.DBInstanceStatus = model.DBInstanceStatus;
                 this.DBInstanceStorage = model.DBInstanceStorage;
                 this.deployMode = model.deployMode;
+                this.diskNotifyThreshold = model.diskNotifyThreshold;
                 this.encryptionKey = model.encryptionKey;
                 this.encryptionType = model.encryptionType;
                 this.engine = model.engine;
@@ -1116,12 +1177,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
                 this.idleTime = model.idleTime;
                 this.instanceNetworkType = model.instanceNetworkType;
                 this.instanceSpec = model.instanceSpec;
+                this.instanceType = model.instanceType;
                 this.lockMode = model.lockMode;
                 this.lockReason = model.lockReason;
                 this.maintainEndTime = model.maintainEndTime;
                 this.maintainStartTime = model.maintainStartTime;
                 this.masterAISpec = model.masterAISpec;
                 this.masterCU = model.masterCU;
+                this.masterDiskLockThreshold = model.masterDiskLockThreshold;
                 this.masterNodeNum = model.masterNodeNum;
                 this.maxConnections = model.maxConnections;
                 this.memoryPerNode = model.memoryPerNode;
@@ -1130,6 +1193,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
                 this.minorVersion = model.minorVersion;
                 this.payType = model.payType;
                 this.port = model.port;
+                this.primaryDBInstanceId = model.primaryDBInstanceId;
                 this.prodType = model.prodType;
                 this.readDelayTime = model.readDelayTime;
                 this.regionId = model.regionId;
@@ -1140,6 +1204,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
                 this.segNodeNum = model.segNodeNum;
                 this.segmentAISpec = model.segmentAISpec;
                 this.segmentCounts = model.segmentCounts;
+                this.segmentDiskLockThreshold = model.segmentDiskLockThreshold;
                 this.serverlessMode = model.serverlessMode;
                 this.serverlessResource = model.serverlessResource;
                 this.standbyZoneId = model.standbyZoneId;
@@ -1333,6 +1398,17 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
+             * <p>实例磁盘告警阈值，百分比字符串；未配置时为空。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80%</p>
+             */
+            public Builder diskNotifyThreshold(String diskNotifyThreshold) {
+                this.diskNotifyThreshold = diskNotifyThreshold;
+                return this;
+            }
+
+            /**
              * EncryptionKey.
              */
             public Builder encryptionKey(String encryptionKey) {
@@ -1413,6 +1489,17 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
+             * <p>实例类型：main表示主实例，readonly表示只读实例</p>
+             * 
+             * <strong>example:</strong>
+             * <p>readonly</p>
+             */
+            public Builder instanceType(String instanceType) {
+                this.instanceType = instanceType;
+                return this;
+            }
+
+            /**
              * LockMode.
              */
             public Builder lockMode(String lockMode) {
@@ -1457,6 +1544,17 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              */
             public Builder masterCU(Integer masterCU) {
                 this.masterCU = masterCU;
+                return this;
+            }
+
+            /**
+             * <p>master磁盘锁定阈值，百分比字符串；未配置时为空。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>95%</p>
+             */
+            public Builder masterDiskLockThreshold(String masterDiskLockThreshold) {
+                this.masterDiskLockThreshold = masterDiskLockThreshold;
                 return this;
             }
 
@@ -1521,6 +1619,17 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              */
             public Builder port(String port) {
                 this.port = port;
+                return this;
+            }
+
+            /**
+             * <p>主实例ID；当前实例为主实例时为空</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gp-2ze3iph733ou550t7</p>
+             */
+            public Builder primaryDBInstanceId(String primaryDBInstanceId) {
+                this.primaryDBInstanceId = primaryDBInstanceId;
                 return this;
             }
 
@@ -1601,6 +1710,17 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              */
             public Builder segmentCounts(Integer segmentCounts) {
                 this.segmentCounts = segmentCounts;
+                return this;
+            }
+
+            /**
+             * <p>segment磁盘锁定阈值，百分比字符串；未配置时为空。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>95%</p>
+             */
+            public Builder segmentDiskLockThreshold(String segmentDiskLockThreshold) {
+                this.segmentDiskLockThreshold = segmentDiskLockThreshold;
                 return this;
             }
 

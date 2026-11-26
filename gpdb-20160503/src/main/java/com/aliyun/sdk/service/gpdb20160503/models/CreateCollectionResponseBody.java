@@ -80,7 +80,7 @@ public class CreateCollectionResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The response message.</p>
+         * <p>The detailed information returned by the operation.</p>
          * 
          * <strong>example:</strong>
          * <p>create successfully</p>
@@ -102,12 +102,10 @@ public class CreateCollectionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The status of the operation. Valid values:</p>
+         * <p>The creation status. Valid values:</p>
          * <ul>
-         * <li><p><strong>success</strong>: The operation succeeded.</p>
-         * </li>
-         * <li><p><strong>fail</strong>: The operation failed.</p>
-         * </li>
+         * <li><strong>success</strong>: Succeeded.</li>
+         * <li><strong>fail</strong>: Failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>

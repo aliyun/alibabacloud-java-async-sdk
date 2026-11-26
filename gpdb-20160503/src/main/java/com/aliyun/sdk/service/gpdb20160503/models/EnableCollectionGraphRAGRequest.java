@@ -223,7 +223,7 @@ public class EnableCollectionGraphRAGRequest extends Request {
         /**
          * <p>The name of the document collection.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/2618448.html">CreateDocumentCollection</a> operation to create a document collection and call the <a href="https://help.aliyun.com/document_detail/2618452.html">ListDocumentCollections</a> operation to query a list of document collections.</p>
+         * <p>The document collection is created by calling the <a href="https://help.aliyun.com/document_detail/2618448.html">CreateDocumentCollection</a> operation. You can call the <a href="https://help.aliyun.com/document_detail/2618452.html">ListDocumentCollections</a> operation to view the created document collections.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -237,9 +237,9 @@ public class EnableCollectionGraphRAGRequest extends Request {
         }
 
         /**
-         * <p>The cluster ID.</p>
+         * <p>The instance ID.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including the instance IDs.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -255,7 +255,7 @@ public class EnableCollectionGraphRAGRequest extends Request {
         /**
          * <p>The list of entity types.</p>
          * <blockquote>
-         * <p>If the knowledge graph construction is enabled, this parameter is required.</p>
+         * <p>This parameter is required when knowledge graph construction is enabled.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -270,18 +270,16 @@ public class EnableCollectionGraphRAGRequest extends Request {
         }
 
         /**
-         * <p>The name of the LLM model.</p>
+         * <p>The name of the large language model (LLM).</p>
          * <blockquote>
          * <p>Valid values:</p>
-         * </blockquote>
          * <ul>
-         * <li><p>knowledge-extract-standard: the default value.</p>
-         * </li>
-         * <li><p>knowledge-extract-mini</p>
-         * </li>
+         * <li>knowledge-extract-standard: Default value.</li>
+         * <li>knowledge-extract-mini</li>
          * </ul>
+         * </blockquote>
          * <blockquote>
-         * <p>This parameter takes effect only when the knowledge graph construction is enabled.</p>
+         * <p>This parameter takes effect only when knowledge graph construction is enabled.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -294,13 +292,13 @@ public class EnableCollectionGraphRAGRequest extends Request {
         }
 
         /**
-         * <p>The language used to build the knowledge graph. Valid values:</p>
+         * <p>The language used to construct the knowledge graph. Valid values:</p>
          * <ul>
-         * <li>Simplified Chinese. The default value.</li>
-         * <li>English.</li>
+         * <li>Simplified Chinese: Simplified Chinese. Default value.</li>
+         * <li>English: English.</li>
          * </ul>
          * <blockquote>
-         * <p>This parameter takes effect only when the knowledge graph construction is enabled.</p>
+         * <p>This parameter takes effect only when knowledge graph construction is enabled.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -313,7 +311,7 @@ public class EnableCollectionGraphRAGRequest extends Request {
         }
 
         /**
-         * <p>The name of the privileged database account that has the rds_superuser permission.</p>
+         * <p>The name of the administrator account that has the rds_superuser permission.</p>
          * <blockquote>
          * <p>You can call the <a href="https://help.aliyun.com/document_detail/2361789.html">CreateAccount</a> operation to create an account.</p>
          * </blockquote>
@@ -329,7 +327,7 @@ public class EnableCollectionGraphRAGRequest extends Request {
         }
 
         /**
-         * <p>The password for the privileged database account.</p>
+         * <p>The password of the administrator account.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -342,9 +340,9 @@ public class EnableCollectionGraphRAGRequest extends Request {
         }
 
         /**
-         * <p>The name of the namespace. Default value: public.</p>
+         * <p>The namespace. Default value: public.</p>
          * <blockquote>
-         * <p>You can call the CreateNamespace operation to create a namespace and call the ListNamespaces operation to query a list of namespaces.</p>
+         * <p>You can call the CreateNamespace operation to create a namespace and call the ListNamespaces operation to view the namespace list.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -357,9 +355,9 @@ public class EnableCollectionGraphRAGRequest extends Request {
         }
 
         /**
-         * <p>The password of the namespace.</p>
+         * <p>The password for the namespace.</p>
          * <blockquote>
-         * <p>The value of this parameter is specified by <a href="https://help.aliyun.com/document_detail/2401495.html">CreateNamespace</a> operation.</p>
+         * <p>This value is specified when you call the <a href="https://help.aliyun.com/document_detail/2401495.html">CreateNamespace</a> operation.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -382,9 +380,9 @@ public class EnableCollectionGraphRAGRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the cluster.</p>
+         * <p>The region ID.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query available region IDs.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -400,7 +398,7 @@ public class EnableCollectionGraphRAGRequest extends Request {
         /**
          * <p>The list of relationship edge types.</p>
          * <blockquote>
-         * <p>If the knowledge graph construction is enabled, this parameter is required.</p>
+         * <p>This parameter is required when knowledge graph construction is enabled.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 

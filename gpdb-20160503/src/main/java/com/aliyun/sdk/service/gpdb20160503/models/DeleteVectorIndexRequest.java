@@ -162,9 +162,9 @@ public class DeleteVectorIndexRequest extends Request {
         } 
 
         /**
-         * <p>The name of the collection.</p>
+         * <p>The collection name.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/2401503.html">ListCollections</a> operation to query a list of collections.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/2401503.html">ListCollections</a> operation to view the list.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -180,7 +180,7 @@ public class DeleteVectorIndexRequest extends Request {
         /**
          * <p>The instance ID.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to view the details of all AnalyticDB for PostgreSQL instances in the specified region, including instance IDs.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -194,9 +194,9 @@ public class DeleteVectorIndexRequest extends Request {
         }
 
         /**
-         * <p>The name of the manager account that has the rds_superuser permission.</p>
+         * <p>The name of the management account that has the rds_superuser permission.</p>
          * <blockquote>
-         * <p> You can create an account on the <strong>Account Management</strong> page of the AnalyticDB for PostgreSQL console or by calling the <a href="https://help.aliyun.com/document_detail/2361789.html">CreateAccount</a> operation.</p>
+         * <p>You can create an account on the <strong>Accounts</strong> page in the console or by calling the <a href="https://help.aliyun.com/document_detail/2361789.html">CreateAccount</a> operation.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -210,7 +210,7 @@ public class DeleteVectorIndexRequest extends Request {
         }
 
         /**
-         * <p>The password of the manager account.</p>
+         * <p>The password of the management account.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -223,9 +223,9 @@ public class DeleteVectorIndexRequest extends Request {
         }
 
         /**
-         * <p>The name of the namespace. Default value: public.</p>
+         * <p>The namespace. Default value: public.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/2401502.html">ListNamespaces</a> operation to query a list of namespaces.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/2401502.html">ListNamespaces</a> operation to view the list.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -262,8 +262,8 @@ public class DeleteVectorIndexRequest extends Request {
         /**
          * <p>The vector type. Valid values:</p>
          * <ul>
-         * <li>Dense (default)</li>
-         * <li>Sparse</li>
+         * <li>Dense: dense vector. This is the default value.</li>
+         * <li>Sparse: sparse vector.</li>
          * </ul>
          * 
          * <strong>example:</strong>

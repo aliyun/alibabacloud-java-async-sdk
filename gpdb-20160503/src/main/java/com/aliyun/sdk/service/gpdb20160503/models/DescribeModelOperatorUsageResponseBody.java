@@ -106,7 +106,7 @@ public class DescribeModelOperatorUsageResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The end time of the query. The time is in the <i>YYYY-MM-DDThh:mmZ</i> format (UTC).</p>
+         * <p>The end time of the query. The format is <i>YYYY-MM-DDThh:mmZ</i> (UTC time).</p>
          * 
          * <strong>example:</strong>
          * <p>2026-06-02T00:00Z</p>
@@ -125,7 +125,7 @@ public class DescribeModelOperatorUsageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The actual bucket size used, in seconds.</p>
+         * <p>The final bucket size used in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -147,7 +147,7 @@ public class DescribeModelOperatorUsageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The start time of the query. The time is in the <i>YYYY-MM-DDThh:mmZ</i> format (UTC).</p>
+         * <p>The start time of the query. The format is <i>YYYY-MM-DDThh:mmZ</i> (UTC time).</p>
          * 
          * <strong>example:</strong>
          * <p>2026-06-01T00:00Z</p>
@@ -203,7 +203,7 @@ public class DescribeModelOperatorUsageResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The specific metric information, consisting of a timestamp and a metric value.</p>
+             * <p>The specific metric information, which consists of the time and the metric value.</p>
              */
             public Builder point(java.util.List<String> point) {
                 this.point = point;
@@ -296,7 +296,7 @@ public class DescribeModelOperatorUsageResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The API key ID. This value is returned only when GroupBy contains api_key.</p>
+             * <p>This value is returned only when GroupBy includes api_key.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -307,7 +307,7 @@ public class DescribeModelOperatorUsageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The model name when GroupBy contains model. The api_key_id string when GroupBy contains only api_key.</p>
+             * <p>The model name if GroupBy includes model, or the api_key_id string if GroupBy includes only api_key.</p>
              * 
              * <strong>example:</strong>
              * <p>qwen3.6-plus</p>
@@ -420,7 +420,7 @@ public class DescribeModelOperatorUsageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The collection of metric values.</p>
+             * <p>The metric value set.</p>
              */
             public Builder series(java.util.List<Series> series) {
                 this.series = series;

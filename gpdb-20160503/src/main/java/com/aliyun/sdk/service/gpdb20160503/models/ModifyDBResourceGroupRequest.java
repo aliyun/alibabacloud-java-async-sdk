@@ -89,9 +89,9 @@ public class ModifyDBResourceGroupRequest extends Request {
         } 
 
         /**
-         * <p>The instance ID.</p>
+         * <p>The ID of the instance.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in a specified region, including instance IDs.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -114,7 +114,7 @@ public class ModifyDBResourceGroupRequest extends Request {
         }
 
         /**
-         * <p>The information about the resource group.</p>
+         * <p>The details of the resource groups.</p>
          * <p>This parameter is required.</p>
          */
         public Builder resourceGroupItems(java.util.List<ResourceGroupItems> resourceGroupItems) {
@@ -186,21 +186,16 @@ public class ModifyDBResourceGroupRequest extends Request {
             } 
 
             /**
-             * <p>The configurations of the resource group to which you want to modify.</p>
+             * <p>The configuration of the resource group.</p>
              * <blockquote>
+             * <ol>
+             * <li>CpuRateLimit: the percentage of CPU resources available to the resource group. Unit: %.</li>
+             * <li>MemoryLimit: the percentage of memory resources available to the resource group. Unit: %.</li>
+             * <li>MemorySharedQuota: the percentage of memory resources shared among transactions submitted to the resource group. Unit: %. Default value: 80.</li>
+             * <li>MemorySpillRatio: the memory usage threshold for memory-intensive transactions. When a transaction reaches this threshold, it spills to disk. Unit: %. Default value: 0.</li>
+             * <li>Concurrency: the maximum concurrency allowed for the resource group. Default value: 20.</li>
+             * </ol>
              * </blockquote>
-             * <ul>
-             * <li><p>CpuRateLimit: the percentage of CPU resources that are available for the resource group. Unit: %.</p>
-             * </li>
-             * <li><p>MemoryLimit: the percentage of memory resources that are available for the resource group. Unit: %.</p>
-             * </li>
-             * <li><p>MemorySharedQuota: the percentage of memory resources shared among transactions that are submitted to the resource group. Unit: %. Default value: 80.</p>
-             * </li>
-             * <li><p>MemorySpillRatio: the memory spill ratio for memory-intensive transactions. When the memory that is used by memory-intensive transactions reaches this value, data is spilled to disks. Unit: %. Default value: 0.</p>
-             * </li>
-             * <li><p>Concurrency: the maximum number of concurrent transactions or parallel queries that are allowed for a resource group. Default value: 20.</p>
-             * </li>
-             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

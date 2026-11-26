@@ -89,9 +89,9 @@ public class ModifyParametersRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including instance IDs.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including the instance IDs.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -107,8 +107,8 @@ public class ModifyParametersRequest extends Request {
         /**
          * <p>Specifies whether to forcibly restart the instance. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><strong>true</strong>: Forcibly restarts the instance.</li>
+         * <li><strong>false</strong> (default): Does not forcibly restart the instance.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -121,8 +121,8 @@ public class ModifyParametersRequest extends Request {
         }
 
         /**
-         * <p>The name and value of the parameter to be modified. Specify the parameter in the <code>&lt;Parameter name&gt;:&lt;Parameter value&gt;</code> format.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/208310.html">DescribeParameters</a> operation to query the parameters that can be modified.</p>
+         * <p>The names and values of the parameters to be modified. The format is <code>&lt;ParameterName&gt;:&lt;ParameterValue&gt;</code>.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/208310.html">DescribeParameters</a> operation to query the configuration parameters that can be modified.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

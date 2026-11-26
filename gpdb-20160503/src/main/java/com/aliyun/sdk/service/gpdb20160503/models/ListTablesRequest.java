@@ -178,7 +178,7 @@ public class ListTablesRequest extends Request {
         /**
          * <p>The instance ID.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/196830.html">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/196830.html">DescribeDBInstances</a> operation to query the details of all instances in a specified region, including instance IDs.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -205,7 +205,7 @@ public class ListTablesRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries per page. Valid values: 1 to 100.</p>
+         * <p>The maximum number of entries to return per page. Valid values: 1 to 100.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -217,7 +217,7 @@ public class ListTablesRequest extends Request {
         }
 
         /**
-         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+         * <p>The token that is used to start the next query.</p>
          * 
          * <strong>example:</strong>
          * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -264,9 +264,9 @@ public class ListTablesRequest extends Request {
         }
 
         /**
-         * <p>The Alibaba Cloud Resource Name (ARN) of the access credential for the created Data API account. You can call the CreateSecret operation to create an access credential.</p>
+         * <p>The access credential. It is created by calling the CreateSecret operation.</p>
          * <blockquote>
-         * <p> To call the ListTables operation as a Resource Access Management (RAM) user, the RAM user must have the permissions to call the UseSecret or GetSecretValue operation on the ARN of the access credential.</p>
+         * <p>If you call this operation as a RAM user, the RAM user must have the UseSecret or GetSecretValue permission on this SecretArn.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -280,7 +280,7 @@ public class ListTablesRequest extends Request {
         }
 
         /**
-         * <p>The table name pattern for matching. For example, <code>ab%</code> specifies to match table names that start with ab.</p>
+         * <p>The matching pattern for table names. For example, <code>ab%</code> specifies table names that start with ab.</p>
          * 
          * <strong>example:</strong>
          * <p>ab%</p>

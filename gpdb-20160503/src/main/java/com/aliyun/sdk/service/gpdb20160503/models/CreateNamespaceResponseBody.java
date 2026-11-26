@@ -80,7 +80,7 @@ public class CreateNamespaceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The returned message.</p>
+         * <p>The detailed information returned by the operation.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -102,10 +102,10 @@ public class CreateNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>The execution status of the API operation. Valid values:</p>
          * <ul>
-         * <li><strong>success</strong></li>
-         * <li><strong>fail</strong></li>
+         * <li><strong>success</strong>: The execution succeeded.</li>
+         * <li><strong>fail</strong>: The execution failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>

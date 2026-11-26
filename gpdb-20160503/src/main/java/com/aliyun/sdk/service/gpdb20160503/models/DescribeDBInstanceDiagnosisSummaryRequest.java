@@ -132,7 +132,7 @@ public class DescribeDBInstanceDiagnosisSummaryRequest extends Request {
         /**
          * <p>The instance ID.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query details about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including the instance IDs.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -146,7 +146,7 @@ public class DescribeDBInstanceDiagnosisSummaryRequest extends Request {
         }
 
         /**
-         * <p>The page number. Pages start from page 1. Default value: <strong>1</strong>.</p>
+         * <p>The page number. The value must be greater than 0 and cannot exceed the maximum value of the Integer type. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -160,11 +160,11 @@ public class DescribeDBInstanceDiagnosisSummaryRequest extends Request {
         /**
          * <p>The number of entries per page. Valid values:</p>
          * <ul>
-         * <li><strong>20</strong></li>
+         * <li><strong>30</strong></li>
          * <li><strong>50</strong></li>
          * <li><strong>100</strong></li>
          * </ul>
-         * <p>Default value: <strong>20</strong>.</p>
+         * <p>Default value: <strong>30</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -176,10 +176,10 @@ public class DescribeDBInstanceDiagnosisSummaryRequest extends Request {
         }
 
         /**
-         * <p>The role state of the node. It specifies whether a primary/secondary switchover occurs. Valid values:</p>
+         * <p>The role status of the node, which indicates whether a primary/secondary switchover has occurred. Valid values:</p>
          * <ul>
-         * <li><strong>normal</strong>: The node role is normal. No primary/secondary switchover occurs.</li>
-         * <li><strong>reverse</strong>: The node role is reversed. A primary/secondary switchover occurs.</li>
+         * <li><strong>normal</strong>: The role status is normal, indicating that no primary/secondary switchover has occurred.</li>
+         * <li><strong>reverse</strong>: The role is reversed, indicating that a primary/secondary switchover has occurred.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -192,12 +192,12 @@ public class DescribeDBInstanceDiagnosisSummaryRequest extends Request {
         }
 
         /**
-         * <p>The running state of the node. Valid values:</p>
+         * <p>The running status of the node. Valid values:</p>
          * <ul>
          * <li><strong>UP</strong>: The node is running.</li>
-         * <li><strong>DOWN</strong>: The node is faulty.</li>
+         * <li><strong>DOWN</strong>: The node has failed.</li>
          * </ul>
-         * <p>If you do not specify this parameter, the information about nodes in all running states is returned.</p>
+         * <p>If you do not specify this parameter, information about nodes in all running statuses is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>UP</p>
@@ -209,12 +209,12 @@ public class DescribeDBInstanceDiagnosisSummaryRequest extends Request {
         }
 
         /**
-         * <p>The data synchronization state of the node. Valid values:</p>
+         * <p>The synchronization status of the node. Valid values:</p>
          * <ul>
-         * <li><strong>synced</strong>: The node data is synchronized.</li>
-         * <li><strong>notSyncing</strong>: The node data is not synchronized.</li>
+         * <li><strong>synced</strong>: The node is synchronized.</li>
+         * <li><strong>notSyncing</strong>: The node is not synchronized.</li>
          * </ul>
-         * <p>If you do not specify this parameter, the information about nodes in all synchronization states is returned.</p>
+         * <p>If you do not specify this parameter, information about nodes in all synchronization statuses is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>synced</p>

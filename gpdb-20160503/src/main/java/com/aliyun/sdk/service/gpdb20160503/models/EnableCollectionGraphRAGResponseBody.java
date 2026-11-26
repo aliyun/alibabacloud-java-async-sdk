@@ -93,7 +93,7 @@ public class EnableCollectionGraphRAGResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the job. You can use the <code>GetGraphRAGJob</code> to view the job status.</p>
+         * <p>The job ID. You can use this ID to call the GetGraphRAGJob operation to query the job status later.</p>
          * 
          * <strong>example:</strong>
          * <p>231460f8-75dc-405e-a669-0c5204887e91</p>
@@ -104,7 +104,7 @@ public class EnableCollectionGraphRAGResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response message.</p>
+         * <p>The returned message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -115,7 +115,7 @@ public class EnableCollectionGraphRAGResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The unique ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ABB39CC3-4488-4857-905D-2E4A051D0521</p>
@@ -126,10 +126,10 @@ public class EnableCollectionGraphRAGResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The status of the operation. Valid values:</p>
+         * <p>The status. Valid values:</p>
          * <ul>
-         * <li><strong>success</strong></li>
-         * <li><strong>fail</strong></li>
+         * <li><strong>success</strong>: Success.</li>
+         * <li><strong>fail</strong>: Failure.</li>
          * </ul>
          * 
          * <strong>example:</strong>

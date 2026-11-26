@@ -102,7 +102,7 @@ public class CheckJDBCSourceNetConnectionRequest extends Request {
         } 
 
         /**
-         * <p>Instance ID.</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,7 +115,7 @@ public class CheckJDBCSourceNetConnectionRequest extends Request {
         }
 
         /**
-         * <p>Either DataSourceId or JdbcConnectionString must be specified as input, otherwise an error will occur. If both parameters are specified, JdbcConnectionString will be used preferentially.</p>
+         * <p>You must specify either DataSourceId or JdbcConnectionString. Otherwise, an error occurs. If both parameters are specified, JdbcConnectionString takes precedence.</p>
          * 
          * <strong>example:</strong>
          * <p>123</p>
@@ -127,7 +127,7 @@ public class CheckJDBCSourceNetConnectionRequest extends Request {
         }
 
         /**
-         * <p>JDBC connection string.</p>
+         * <p>The JDBC connection string.</p>
          * 
          * <strong>example:</strong>
          * <p>jdbc:mysql://rm-xxx.mysql.rds.aliyuncs.com:3306/testadmin</p>
@@ -139,7 +139,7 @@ public class CheckJDBCSourceNetConnectionRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region where the instance is located.</p>
+         * <p>The region ID of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>

@@ -106,7 +106,7 @@ public class ListModelOperatorApiKeysResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The list of API keys.</p>
+         * <p>The list of API keys for which no deletion request has been initiated. After a deletion request is accepted, the key no longer appears in this list.</p>
          */
         public Builder apiKeys(java.util.List<ApiKeys> apiKeys) {
             this.apiKeys = apiKeys;
@@ -125,7 +125,7 @@ public class ListModelOperatorApiKeysResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of records on the current page.</p>
+         * <p>The number of entries on the current page.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -147,7 +147,7 @@ public class ListModelOperatorApiKeysResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of records.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -182,11 +182,15 @@ public class ListModelOperatorApiKeysResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Endpoint")
         private String endpoint;
 
+        @com.aliyun.core.annotation.NameInMap("Status")
+        private String status;
+
         private ApiKeys(Builder builder) {
             this.apiKeyId = builder.apiKeyId;
             this.createTime = builder.createTime;
             this.description = builder.description;
             this.endpoint = builder.endpoint;
+            this.status = builder.status;
         }
 
         public static Builder builder() {
@@ -225,11 +229,19 @@ public class ListModelOperatorApiKeysResponseBody extends TeaModel {
             return this.endpoint;
         }
 
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
         public static final class Builder {
             private Integer apiKeyId; 
             private String createTime; 
             private String description; 
             private String endpoint; 
+            private String status; 
 
             private Builder() {
             } 
@@ -239,10 +251,11 @@ public class ListModelOperatorApiKeysResponseBody extends TeaModel {
                 this.createTime = model.createTime;
                 this.description = model.description;
                 this.endpoint = model.endpoint;
+                this.status = model.status;
             } 
 
             /**
-             * <p>API KEY ID。</p>
+             * <p>The API key ID.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -275,13 +288,30 @@ public class ListModelOperatorApiKeysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The endpoint.</p>
+             * <p>The complete HTTP(S) endpoint for calling the model operator service. This field is returned only when Status is Running. This field is not returned for other statuses. The list operation does not return the plaintext API key. To obtain the plaintext API key, call DescribeModelOperatorApiKey.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://xxxx">https://xxxx</a></p>
              */
             public Builder endpoint(String endpoint) {
                 this.endpoint = endpoint;
+                return this;
+            }
+
+            /**
+             * <p>The status of the API key. The statuses returned in the list include:</p>
+             * <ul>
+             * <li>Creating: The API key is being created.</li>
+             * <li>Running: The API key is running.</li>
+             * <li>Locked: The API key is locked and cannot be used to call the model operator service. This status may also be displayed when the API key is being locked or unlocked.</li>
+             * </ul>
+             * <p>API keys for which a deletion request has been accepted no longer appear in the list. You can call DescribeModelOperatorApiKey to query the Deleting status. After the cleanup is complete, a detail query returns a resource not found error. The status indicates the processing result on the control plane. A short propagation delay may occur before the status takes effect on the data plane.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
+             */
+            public Builder status(String status) {
+                this.status = status;
                 return this;
             }
 

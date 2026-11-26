@@ -22,6 +22,10 @@ public class CreateDBInstanceRequest extends Request {
     private java.util.List<AINodeSpecInfos> AINodeSpecInfos;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoRenew")
+    private String autoRenew;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("BackupId")
     private String backupId;
 
@@ -209,6 +213,7 @@ public class CreateDBInstanceRequest extends Request {
     private CreateDBInstanceRequest(Builder builder) {
         super(builder);
         this.AINodeSpecInfos = builder.AINodeSpecInfos;
+        this.autoRenew = builder.autoRenew;
         this.backupId = builder.backupId;
         this.cacheStorageSize = builder.cacheStorageSize;
         this.clientToken = builder.clientToken;
@@ -274,6 +279,13 @@ public class CreateDBInstanceRequest extends Request {
      */
     public java.util.List<AINodeSpecInfos> getAINodeSpecInfos() {
         return this.AINodeSpecInfos;
+    }
+
+    /**
+     * @return autoRenew
+     */
+    public String getAutoRenew() {
+        return this.autoRenew;
     }
 
     /**
@@ -593,6 +605,7 @@ public class CreateDBInstanceRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateDBInstanceRequest, Builder> {
         private java.util.List<AINodeSpecInfos> AINodeSpecInfos; 
+        private String autoRenew; 
         private String backupId; 
         private String cacheStorageSize; 
         private String clientToken; 
@@ -646,6 +659,7 @@ public class CreateDBInstanceRequest extends Request {
         private Builder(CreateDBInstanceRequest request) {
             super(request);
             this.AINodeSpecInfos = request.AINodeSpecInfos;
+            this.autoRenew = request.autoRenew;
             this.backupId = request.backupId;
             this.cacheStorageSize = request.cacheStorageSize;
             this.clientToken = request.clientToken;
@@ -703,9 +717,31 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The backup set ID.</p>
+         * <p>Specifies whether to enable auto-renewal for the instance. This parameter is valid only when you create a subscription instance. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/210093.html">DescribeDataBackups</a> operation to query the backup set IDs of all backup sets for the target instance.</p>
+         * <ul>
+         * <li>If you purchase the instance on a monthly basis, the auto-renewal epoch is one month.</li>
+         * <li>If you purchase the instance on a yearly basis, the auto-renewal epoch is one year.</li>
+         * </ul>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        public Builder autoRenew(String autoRenew) {
+            this.putQueryParameter("AutoRenew", autoRenew);
+            this.autoRenew = autoRenew;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the backup set.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/210093.html">DescribeDataBackups</a> operation to query the IDs of all backup sets for the target instance.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -718,7 +754,7 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The Serverless cache storage size. Valid values: 800 to 102400. The step size is 32 GB. Unit: GB.</p>
+         * <p>The cache space for Serverless mode. Valid values: 800 to 102400. Step size: 32. Unit: GB.</p>
          * 
          * <strong>example:</strong>
          * <p>800</p>
@@ -730,7 +766,7 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The client token used for idempotence checks. For more information, see <a href="https://help.aliyun.com/document_detail/327176.html">How to ensure idempotence</a>.</p>
+         * <p>The client token that is used to ensure idempotence. For more information, see <a href="https://help.aliyun.com/document_detail/327176.html">Ensure idempotence</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>0c593ea1-3bea-11e9-b96b-88**********</p>
@@ -742,13 +778,13 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to load a sample dataset after the instance is created. Valid values:</p>
+         * <p>Specifies whether to load the sample dataset after the instance is created. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: Load a sample dataset.</li>
-         * <li><strong>false</strong>: Do not load a sample dataset.</li>
+         * <li><strong>true</strong>: Load the sample dataset.</li>
+         * <li><strong>false</strong>: Do not load the sample dataset.</li>
          * </ul>
          * <blockquote>
-         * <p>If you do not specify this parameter, the default value is false.</p>
+         * <p>If you do not specify this parameter, the default value false is used.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -763,11 +799,11 @@ public class CreateDBInstanceRequest extends Request {
         /**
          * <p>The instance edition. Valid values:</p>
          * <ul>
-         * <li><strong>HighAvailability</strong>: high-availability edition.</li>
-         * <li><strong>Basic</strong>: basic edition.</li>
+         * <li><strong>HighAvailability</strong>: High-availability Edition.</li>
+         * <li><strong>Basic</strong>: Basic Edition.</li>
          * </ul>
          * <blockquote>
-         * <p>This parameter is required when you create a storage elastic mode instance.</p>
+         * <p>This parameter is required when you create an instance in the elastic storage pattern.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -780,9 +816,9 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The instance specifications. For more information, see the supplementary description of the DBInstanceClass parameter.</p>
+         * <p>The instance type. For more information, see the supplementary description of the DBInstanceClass parameter.</p>
          * <blockquote>
-         * <p>This parameter is required when you create a storage reservation mode instance.</p>
+         * <p>This parameter is required when you create an instance in reserved storage mode.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -809,7 +845,7 @@ public class CreateDBInstanceRequest extends Request {
         /**
          * <p>The number of compute groups. Valid values: 2, 4, 8, 12, 16, 24, 32, 64, 96, and 128.</p>
          * <blockquote>
-         * <p>This parameter is required when you create a storage reservation mode instance.</p>
+         * <p>This parameter is required when you create an instance in reserved storage mode.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -824,10 +860,10 @@ public class CreateDBInstanceRequest extends Request {
         /**
          * <p>The resource type of the instance. Valid values:</p>
          * <ul>
-         * <li><strong>StorageElastic</strong>: storage elastic mode.</li>
+         * <li><strong>StorageElastic</strong>: elastic storage mode.</li>
          * <li><strong>Serverless</strong>: Serverless mode.</li>
          * <li><strong>ServerlessPro</strong>: Serverless Pro mode.</li>
-         * <li><strong>Classic</strong>: storage reservation mode.</li>
+         * <li><strong>Classic</strong>: reserved storage mode.</li>
          * </ul>
          * <blockquote>
          * <p>This parameter is required.</p>
@@ -851,8 +887,8 @@ public class CreateDBInstanceRequest extends Request {
          * </ul>
          * <blockquote>
          * <ul>
-         * <li>If you do not specify this parameter, the default value is single-zone deployment.</li>
-         * <li>Currently, only single-zone deployment is supported.</li>
+         * <li>If you do not specify this parameter, the default value single is used.</li>
+         * <li>Only single-zone deployment is supported.</li>
          * </ul>
          * </blockquote>
          * 
@@ -866,10 +902,10 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>Indicates whether to enable Secure Sockets Layer (SSL) encryption. Valid values:</p>
+         * <p>Specifies whether to enable Secure Sockets Layer (SSL) encryption. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: Enable SSL encryption.</li>
-         * <li><strong>false</strong> (default): Do not enable SSL encryption.</li>
+         * <li><strong>true</strong>: enables Secure Sockets Layer (SSL) encryption.</li>
+         * <li><strong>false</strong>: disables Secure Sockets Layer (SSL) encryption. This is the default value.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -882,9 +918,9 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The encryption key ID.</p>
+         * <p>The ID of the encryption key.</p>
          * <blockquote>
-         * <p>If the <strong>EncryptionType</strong> parameter is set to <strong>CloudDisk</strong>, specify the encryption key ID in the same region. Otherwise, leave this parameter empty.</p>
+         * <p>If <strong>EncryptionType</strong> is set to <strong>CloudDisk</strong>, you must use this parameter to specify the ID of the encryption key in the same region. Otherwise, leave this parameter empty.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -899,8 +935,8 @@ public class CreateDBInstanceRequest extends Request {
         /**
          * <p>The encryption type. Valid values:</p>
          * <ul>
-         * <li><strong>NULL</strong>: Encryption is not enabled. This is the default value.</li>
-         * <li><strong>CloudDisk</strong>: Cloud disk encryption is enabled. Use the <strong>EncryptionKey</strong> parameter to specify the encryption key.</li>
+         * <li><strong>NULL</strong>: disables encryption. This is the default value.</li>
+         * <li><strong>CloudDisk</strong>: enables cloud disk encryption and specifies the key by using the <strong>EncryptionKey</strong> parameter.</li>
          * </ul>
          * <blockquote>
          * <p>Cloud disk encryption cannot be disabled after it is enabled.</p>
@@ -929,10 +965,10 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The database engine version. Valid values:</p>
+         * <p>The DPI engine version. Valid values:</p>
          * <ul>
-         * <li><strong>6.0</strong>: version 6.0.</li>
-         * <li><strong>7.0</strong>: version 7.0.</li>
+         * <li><strong>6.0</strong>: Version 6.0.</li>
+         * <li><strong>7.0</strong>: Version 7.0.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -946,9 +982,9 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The idle release wait time. The instance transitions to an idle state after no service traffic is detected for the specified duration. Unit: seconds. Minimum value: 60. Default value: 600.</p>
+         * <p>The waiting duration before the instance is released due to idleness. After the instance has no service traffic for the specified duration, it enters the idle state. Unit: seconds. Minimum value: 60. Default value: 600.</p>
          * <blockquote>
-         * <p>This parameter is required only for Serverless instances in automatic scheduling mode.</p>
+         * <p>This parameter is required only for instances in the Serverless auto-scheduling pattern.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -964,8 +1000,8 @@ public class CreateDBInstanceRequest extends Request {
          * <p>The network type of the instance. Set the value to <strong>VPC</strong>.</p>
          * <blockquote>
          * <ul>
-         * <li>Only VPC is supported on the public cloud.</li>
-         * <li>If you do not specify this parameter, the default value is VPC.</li>
+         * <li>Only VPCs are supported in Alibaba Cloud public cloud.</li>
+         * <li>If you do not specify this parameter, the default value VPC is used.</li>
          * </ul>
          * </blockquote>
          * 
@@ -979,27 +1015,27 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The node specifications of compute nodes.</p>
-         * <p>Valid values for storage elastic mode (high-availability edition):</p>
+         * <p>The compute node specifications.</p>
+         * <p>Valid values for the High-availability Edition in the elastic storage pattern:</p>
          * <ul>
          * <li><strong>2C16G</strong></li>
          * <li><strong>4C32G</strong></li>
          * <li><strong>16C128G</strong></li>
          * </ul>
-         * <p>Valid values for storage elastic mode (basic edition):</p>
+         * <p>Valid values for the Basic Edition in the elastic storage pattern:</p>
          * <ul>
          * <li><strong>2C8G</strong></li>
          * <li><strong>4C16G</strong></li>
          * <li><strong>8C32G</strong></li>
          * <li><strong>16C64G</strong></li>
          * </ul>
-         * <p>Valid values for Serverless mode:</p>
+         * <p>Valid values for the Serverless pattern:</p>
          * <ul>
          * <li><strong>4C16G</strong></li>
          * <li><strong>8C32G</strong></li>
          * </ul>
          * <blockquote>
-         * <p>This parameter is required when you create a storage elastic mode instance or a Serverless mode instance.</p>
+         * <p>This parameter is required when you create an instance in the elastic storage pattern or Serverless pattern.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1012,13 +1048,13 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>Specify this parameter if you want to change the master node to a MasterAI node.</p>
+         * <p>If you want to change the master node to a MasterAI node, specify this parameter.</p>
          * <blockquote>
          * <ul>
          * <li>This parameter and MasterCU cannot be specified at the same time.</li>
-         * <li>Only specific regions and zones support changing the master node to a MasterAI node.</li>
-         * <li>Only basic edition instances of AnalyticDB for PostgreSQL 7.0 support MasterAI nodes.</li>
-         * <li>You can view all valid values of this parameter on the specification change page for the master node.</li>
+         * <li>Changing the master node to a MasterAI node is supported only in specific regions and zones.</li>
+         * <li>MasterAI nodes are supported only for Basic Edition instances of AnalyticDB for PostgreSQL V7.0.</li>
+         * <li>You can query all possible values of this parameter on the buy page for changing the specifications of the master node.</li>
          * </ul>
          * </blockquote>
          * 
@@ -1032,20 +1068,20 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The master resources. Valid values: </p>
+         * <p>The resources for the master node. Valid values: </p>
          * <ul>
-         * <li>2 CU </li>
-         * <li>4 CU </li>
-         * <li>8 CU </li>
-         * <li>16 CU </li>
-         * <li>32 CU <blockquote>
-         * <p>Master resources above 8 CU incur additional fees.</p>
+         * <li>2 CUs </li>
+         * <li>4 CUs </li>
+         * <li>8 CUs </li>
+         * <li>16 CUs </li>
+         * <li>32 CUs <blockquote>
+         * <p>Master resources of more than 8 CUs incur fees.</p>
          * </blockquote>
          * </li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>8 CU</p>
+         * <p>8</p>
          */
         public Builder masterCU(Integer masterCU) {
             this.putQueryParameter("MasterCU", masterCU);
@@ -1082,8 +1118,8 @@ public class CreateDBInstanceRequest extends Request {
          * </ul>
          * <blockquote>
          * <ul>
-         * <li>If you do not specify this parameter, the default value is pay-as-you-go.</li>
-         * <li>Discounts are available for subscription instances when you purchase them for one year or longer. Select a billing method based on your business requirements.</li>
+         * <li>If you do not specify this parameter, the default value Postpaid is used.</li>
+         * <li>In subscription mode, a discount is offered if you purchase resources for one year or longer. We recommend that you select a billing method based on your business requirements.</li>
          * </ul>
          * </blockquote>
          * 
@@ -1097,7 +1133,7 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The unit of the subscription duration. Valid values:</p>
+         * <p>The unit of the subscription period. Valid values:</p>
          * <ul>
          * <li><strong>Month</strong>: month.</li>
          * <li><strong>Year</strong>: year.</li>
@@ -1134,7 +1170,7 @@ public class CreateDBInstanceRequest extends Request {
          * <li><strong>cost-effective</strong>: Economy Edition.</li>
          * </ul>
          * <blockquote>
-         * <p>If you do not specify this parameter, the default value is Standard Edition.</p>
+         * <p>If you do not specify this parameter, the default value standard is used.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1163,7 +1199,7 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the enterprise resource group to which the instance belongs.</p>
+         * <p>The ID of the resource group to which the instance belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-bp67acfmxazb4p****</p>
@@ -1188,7 +1224,7 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The performance level (PL) of the ESSD cloud disk. Valid values:</p>
+         * <p>The performance level (PL) of the ESSD standard SSD. Valid values:</p>
          * <ul>
          * <li><strong>pl0</strong>: PL0.</li>
          * <li><strong>pl1</strong>: PL1.</li>
@@ -1196,8 +1232,8 @@ public class CreateDBInstanceRequest extends Request {
          * </ul>
          * <blockquote>
          * <ul>
-         * <li>This parameter takes effect only when the cloud disk storage type is ESSD cloud disk.</li>
-         * <li>If you do not specify this parameter, the default value is PL1.</li>
+         * <li>This parameter takes effect only when the disk storage type is set to ESSD standard SSD.</li>
+         * <li>If you do not specify this parameter, the default value PL1 is used.</li>
          * </ul>
          * </blockquote>
          * 
@@ -1213,12 +1249,12 @@ public class CreateDBInstanceRequest extends Request {
         /**
          * <p>The number of compute nodes. Valid values:</p>
          * <ul>
-         * <li>Storage elastic mode (high-availability edition): 4 to 512. The value must be a multiple of 4.</li>
-         * <li>Storage elastic mode (basic edition): 2 to 512. The value must be a multiple of 2.</li>
-         * <li>Serverless mode: 2 to 512. The value must be a multiple of 2.</li>
+         * <li>For High-availability Edition in elastic storage mode: 4 to 512. The value must be a multiple of 4.</li>
+         * <li>For Basic Edition in elastic storage mode: 2 to 512. The value must be a multiple of 2.</li>
+         * <li>For Serverless mode: 2 to 512. The value must be a multiple of 2.</li>
          * </ul>
          * <blockquote>
-         * <p>This parameter is required when you create a storage elastic mode instance or a Serverless mode instance.</p>
+         * <p>This parameter is required when you create an instance in elastic storage mode or Serverless mode.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1231,9 +1267,9 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The cloud disk storage type. Currently, only ESSD cloud disks are supported. Set the value to <strong>cloud_essd</strong>.</p>
+         * <p>The disk storage type. Only ESSD standard SSDs are supported. Set the value to <strong>cloud_essd</strong>.</p>
          * <blockquote>
-         * <p>This parameter is required when you create a storage elastic mode instance.</p>
+         * <p>This parameter is required when you create an instance in the elastic storage pattern.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1249,12 +1285,12 @@ public class CreateDBInstanceRequest extends Request {
          * <p>The mode of the Serverless instance. Valid values:</p>
          * <ul>
          * <li><strong>Manual</strong>: manual scheduling. This is the default value.</li>
-         * <li><strong>Auto</strong>: automatic scheduling.</li>
+         * <li><strong>Auto</strong>: auto-scheduling.</li>
          * </ul>
          * <blockquote>
          * <ul>
-         * <li>This parameter is required only for Serverless mode instances.</li>
-         * <li>The automatic scheduling mode for AnalyticDB for PostgreSQL Serverless is in invitational preview. To use this feature, <a href="https://smartservice.console.aliyun.com/service/create-ticket?product=rds">submit a ticket</a> to apply for access.</li>
+         * <li>This parameter is required only for instances in Serverless mode.</li>
+         * <li>The Serverless auto-scheduling mode of AnalyticDB for PostgreSQL is in invitational preview. To use this mode, <a href="https://smartservice.console.aliyun.com/service/create-ticket?product=rds">submit a ticket</a> to apply for the preview qualification.</li>
          * </ul>
          * </blockquote>
          * 
@@ -1268,9 +1304,9 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The compute resource threshold. Valid values: 16 to 1024. The step size is 8. Unit: ACU.</p>
+         * <p>The threshold for compute resources. Valid values: 16 to 1024. Step size: 8. Unit: ACU.</p>
          * <blockquote>
-         * <p>This parameter is required only for Serverless instances in automatic scheduling mode.</p>
+         * <p>This parameter is required only for instances in Serverless auto-scheduling mode.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1283,9 +1319,9 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the source instance to clone.</p>
+         * <p>The ID of the source instance to be cloned.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in the target region, including instance IDs.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in the target region, including the instance IDs.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1302,7 +1338,7 @@ public class CreateDBInstanceRequest extends Request {
          * <blockquote>
          * <ul>
          * <li>This parameter is required only for multi-zone deployment.</li>
-         * <li>The vSwitch must be in the same zone as the value specified by StandbyZoneId.</li>
+         * <li>The zone of the vSwitch in the secondary zone must be the same as the value of StandbyZoneId.</li>
          * </ul>
          * </blockquote>
          * 
@@ -1316,7 +1352,7 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The secondary zone ID.</p>
+         * <p>The ID of the secondary zone.</p>
          * <blockquote>
          * <ul>
          * <li>This parameter is required only for multi-zone deployment.</li>
@@ -1337,7 +1373,7 @@ public class CreateDBInstanceRequest extends Request {
         /**
          * <p>The storage capacity. Unit: GB. Valid values: &lt;props=&quot;china&quot;&gt;50 to 8000&lt;props=&quot;intl&quot;&gt;50 to 6000.</p>
          * <blockquote>
-         * <p>This parameter is required when you create a storage elastic mode instance.</p>
+         * <p>This parameter is required when you create an instance in elastic storage mode.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1371,10 +1407,10 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The subscription duration. Valid values:</p>
+         * <p>The subscription period. Valid values:</p>
          * <ul>
-         * <li>If <strong>Period</strong> is set to <strong>Month</strong>, valid values are 1 to 9.</li>
-         * <li>If <strong>Period</strong> is set to <strong>Year</strong>, valid values are 1 to 3.</li>
+         * <li>Valid values when <strong>Period</strong> is set to <strong>Month</strong>: 1 to 9.</li>
+         * <li>Valid values when <strong>Period</strong> is set to <strong>Year</strong>: 1 to 3.</li>
          * </ul>
          * <blockquote>
          * <p>This parameter is required when you create a subscription instance.</p>
@@ -1394,7 +1430,7 @@ public class CreateDBInstanceRequest extends Request {
          * <blockquote>
          * <ul>
          * <li><strong>VPCId</strong> is required.</li>
-         * <li>The VPC must be in the same region as the value specified by <strong>RegionId</strong>.</li>
+         * <li>The region of the <strong>VPC</strong> must be the same as the value of <strong>RegionId</strong>.</li>
          * </ul>
          * </blockquote>
          * 
@@ -1411,8 +1447,8 @@ public class CreateDBInstanceRequest extends Request {
          * <p>The vSwitch ID.</p>
          * <blockquote>
          * <ul>
-         * <li><strong>vSwitchId</strong> is required.</li>
-         * <li>The vSwitch must be in the same zone as the value specified by <strong>ZoneId</strong>.</li>
+         * <li><strong>VSwitchId</strong> is required.</li>
+         * <li>The zone of the <strong>vSwitch</strong> must be the same as the value of <strong>ZoneId</strong>.</li>
          * </ul>
          * </blockquote>
          * 
@@ -1426,15 +1462,15 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable vector engine optimization. Valid values:</p>
+         * <p>Specifies whether to enable vector DPI engine optimization. Valid values:</p>
          * <ul>
-         * <li><strong>enabled</strong>: Enable vector engine optimization.</li>
-         * <li><strong>disabled</strong> (default): Do not enable vector engine optimization.</li>
+         * <li><strong>enabled</strong>: enables vector DPI engine optimization.</li>
+         * <li><strong>disabled</strong>: disables vector DPI engine optimization. This is the default value.</li>
          * </ul>
          * <blockquote>
          * <ul>
-         * <li>For mainstream analytics, data warehousing, and real-time data warehouse scenarios, <strong>do not enable</strong> vector engine optimization.</li>
-         * <li>For scenarios that use the vector analysis engine for AIGC and AISearch, <strong>enable</strong> vector engine optimization.</li>
+         * <li>Disable vector DPI engine optimization for mainstream analytics, data warehousing, and real-time data warehousing scenarios.</li>
+         * <li>Enable vector DPI engine optimization if you use the vector analytics DPI engine for AIGC and vector retrieve scenarios.</li>
          * </ul>
          * </blockquote>
          * 
@@ -1604,11 +1640,11 @@ public class CreateDBInstanceRequest extends Request {
             } 
 
             /**
-             * <p>The tag key. The following limits apply:</p>
+             * <p>The tag key. Limits:</p>
              * <ul>
-             * <li>The tag key cannot be an empty string.</li>
-             * <li>The tag key can be up to 128 characters in length.</li>
-             * <li>The tag key cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</li>
+             * <li>It cannot be an empty string.</li>
+             * <li>It can be up to 128 characters in length.</li>
+             * <li>It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1620,11 +1656,11 @@ public class CreateDBInstanceRequest extends Request {
             }
 
             /**
-             * <p>The tag value. The following limits apply:</p>
+             * <p>The tag value. Limits:</p>
              * <ul>
-             * <li>The tag value can be an empty string.</li>
-             * <li>The tag value can be up to 128 characters in length.</li>
-             * <li>The tag value cannot start with <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</li>
+             * <li>It can be an empty string.</li>
+             * <li>It can be up to 128 characters in length.</li>
+             * <li>It cannot start with <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</li>
              * </ul>
              * 
              * <strong>example:</strong>

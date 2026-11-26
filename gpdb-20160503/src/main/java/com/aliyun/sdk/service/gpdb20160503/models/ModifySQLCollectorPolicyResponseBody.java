@@ -54,7 +54,7 @@ public class ModifySQLCollectorPolicyResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>API-48109b5c-a157-44e3-9f54-eb27f02bdd15</p>

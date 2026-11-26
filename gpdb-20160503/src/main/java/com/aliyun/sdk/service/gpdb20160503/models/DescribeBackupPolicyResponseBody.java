@@ -119,7 +119,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The number of days for which data backup files are retained.</p>
+         * <p>The retention period of data backups in days.</p>
          * 
          * <strong>example:</strong>
          * <p>7</p>
@@ -130,10 +130,10 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether automatic point-in-time backup is enabled. Valid values:</p>
+         * <p>Indicates whether automatic recovery points are enabled. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: Automatic point-in-time backup is enabled.</li>
-         * <li><strong>false</strong>: Automatic point-in-time backup is disabled.</li>
+         * <li><strong>true</strong>: Enabled.</li>
+         * <li><strong>false</strong>: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -145,15 +145,15 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The cycle based on which backups are performed. If more than one day of the week is specified, the days of the week are separated by commas (,). Valid values:</p>
+         * <p>The backup cycle. Separate multiple values with commas (,). Valid values:</p>
          * <ul>
-         * <li><strong>Monday</strong></li>
-         * <li><strong>Tuesday</strong></li>
-         * <li><strong>Wednesday</strong></li>
-         * <li><strong>Thursday</strong></li>
-         * <li><strong>Friday</strong></li>
-         * <li><strong>Saturday</strong></li>
-         * <li><strong>Sunday</strong></li>
+         * <li><strong>Monday</strong>: Monday.</li>
+         * <li><strong>Tuesday</strong>: Tuesday.</li>
+         * <li><strong>Wednesday</strong>: Wednesday.</li>
+         * <li><strong>Thursday</strong>: Thursday.</li>
+         * <li><strong>Friday</strong>: Friday.</li>
+         * <li><strong>Saturday</strong>: Saturday.</li>
+         * <li><strong>Sunday</strong>: Sunday.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -165,7 +165,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The backup time. The time is in the HH:mmZ-HH:mmZ format. The time is displayed in UTC.</p>
+         * <p>The backup time. Format: HH:mmZ-HH:mmZ (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>12:00Z-13:00Z</p>
@@ -176,12 +176,12 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The frequency of the point-in-time backup. Valid values:</p>
+         * <p>The recovery point frequency. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: per hour</li>
-         * <li><strong>2</strong>: per 2 hours</li>
-         * <li><strong>4</strong>: per 4 hours</li>
-         * <li><strong>8</strong>: per 8 hours</li>
+         * <li><strong>1</strong>: Every hour.</li>
+         * <li><strong>2</strong>: Every two hours.</li>
+         * <li><strong>4</strong>: Every four hours.</li>
+         * <li><strong>8</strong>: Every eight hours.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -193,7 +193,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>9E6B3287-A3E2-5A87-B8D8-E9**********</p>

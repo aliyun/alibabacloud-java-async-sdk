@@ -144,10 +144,10 @@ public class TextEmbeddingRequest extends Request {
         }
 
         /**
-         * <p>The vector dimensions. Default value: the dimensions supported by the embedding model.</p>
+         * <p>The vector dimensions. The default value is the dimension supported by the vectorization algorithm.</p>
          * <blockquote>
          * <ul>
-         * <li>text-embedding-v3 supports 1024, 768, and 512 dimensions. Default value: 1024.</li>
+         * <li>text-embedding-v3 supports 1024, 768, and 512 dimensions. The default value is 1024.</li>
          * </ul>
          * </blockquote>
          * 
@@ -161,7 +161,7 @@ public class TextEmbeddingRequest extends Request {
         }
 
         /**
-         * <p>The list of text content to vectorize. The list can contain up to 100 entries.</p>
+         * <p>The list of text content to vectorize. The list can contain up to 100 items.</p>
          * 
          * <strong>example:</strong>
          * <p>What is ADBPG?</p>
@@ -178,7 +178,7 @@ public class TextEmbeddingRequest extends Request {
          * <ul>
          * <li>text-embedding-v1: 1536 dimensions</li>
          * <li>text-embedding-v2: 1536 dimensions</li>
-         * <li>text-embedding-v3 (default): 1024, 768, or 512 dimensions</li>
+         * <li>text-embedding-v3 (default): 1024, 768, and 512 dimensions</li>
          * <li>text2vec (not recommended): 1024 dimensions</li>
          * <li>m3e-base (not recommended): 768 dimensions</li>
          * <li>m3e-small (not recommended): 512 dimensions</li>

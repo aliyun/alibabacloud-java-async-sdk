@@ -67,7 +67,7 @@ public class GetSupabaseProjectApiKeysResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>A list of API keys.</p>
+         * <p>The list of API keys.</p>
          */
         public Builder apiKeys(java.util.List<ApiKeys> apiKeys) {
             this.apiKeys = apiKeys;
@@ -144,7 +144,7 @@ public class GetSupabaseProjectApiKeysResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The value of the API key.</p>
+             * <p>The content of the API key.</p>
              * 
              * <strong>example:</strong>
              * <p>Tmz2Z59caMDeq/Xi9vuc****</p>
@@ -155,7 +155,7 @@ public class GetSupabaseProjectApiKeysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the API key, such as anon key, service role key, or JWT secret.</p>
+             * <p>The name of the API key, including the anon key, service role key, and JWT secrets.</p>
              * 
              * <strong>example:</strong>
              * <p>anon key</p>

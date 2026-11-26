@@ -125,7 +125,7 @@ public class DescribeDataShareInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of entries on the current page.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -147,7 +147,7 @@ public class DescribeDataShareInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

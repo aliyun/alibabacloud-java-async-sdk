@@ -73,7 +73,7 @@ public class ListModelOperatorApiKeysRequest extends Request {
         } 
 
         /**
-         * <p>The page number. The value must be greater than 0 and cannot exceed the maximum value of Integer. Default value: 1.</p>
+         * <p>The page number. The value must be greater than 0 and cannot exceed the maximum value of an integer. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -85,7 +85,7 @@ public class ListModelOperatorApiKeysRequest extends Request {
         }
 
         /**
-         * <p>The number of records per page. Valid values:</p>
+         * <p>The number of entries per page. Valid values:</p>
          * <ul>
          * <li><strong>20</strong></li>
          * <li><strong>50</strong></li>

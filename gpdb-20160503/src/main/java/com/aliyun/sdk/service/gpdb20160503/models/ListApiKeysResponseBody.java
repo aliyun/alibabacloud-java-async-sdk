@@ -106,7 +106,7 @@ public class ListApiKeysResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The list of API keys.</p>
+         * <p>The list of plans.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -114,7 +114,7 @@ public class ListApiKeysResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The maximum number of records to return in this query.</p>
+         * <p>The maximum number of records to return for the current request.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -125,7 +125,7 @@ public class ListApiKeysResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The token for the next page in a paged query.</p>
+         * <p>The start token for the next paging query.</p>
          * 
          * <strong>example:</strong>
          * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -216,7 +216,7 @@ public class ListApiKeysResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The service IDs.</p>
+             * <p>The service ID.</p>
              * 
              * <strong>example:</strong>
              * <p>agdb-xxxxxx</p>
@@ -354,7 +354,7 @@ public class ListApiKeysResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The service IDs.</p>
+             * <p>The service ID.</p>
              */
             public Builder authServices(java.util.List<AuthServices> authServices) {
                 this.authServices = authServices;
@@ -373,7 +373,7 @@ public class ListApiKeysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the API key.</p>
+             * <p>The plugin description.</p>
              * 
              * <strong>example:</strong>
              * <p>my first api key</p>

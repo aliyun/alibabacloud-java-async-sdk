@@ -75,9 +75,9 @@ public class DeleteDatabaseRequest extends Request {
         } 
 
         /**
-         * <p>The cluster ID.</p>
+         * <p>Instance ID of the instance.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the IDs of all AnalyticDB for PostgreSQL instances in the specified region.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query instance IDs of all AnalyticDB for PostgreSQL instances in the specified region.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -91,7 +91,7 @@ public class DeleteDatabaseRequest extends Request {
         }
 
         /**
-         * <p>The name of the queried database.</p>
+         * <p>The name of the database.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

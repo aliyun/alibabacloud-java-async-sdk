@@ -229,7 +229,7 @@ public class CreateIndexRequest extends Request {
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;b-tree&quot;:{&quot;fillFactor&quot;:90}} or {&quot;gin&quot;:{&quot;fastUpdate&quot;:false}}</p>
+         * <p>{&quot;b-tree&quot;:{&quot;fillFactor&quot;:90}} 或者 {&quot;gin&quot;:{&quot;fastUpdate&quot;:false}}</p>
          */
         public Builder indexConfig(String indexConfig) {
             this.putQueryParameter("IndexConfig", indexConfig);

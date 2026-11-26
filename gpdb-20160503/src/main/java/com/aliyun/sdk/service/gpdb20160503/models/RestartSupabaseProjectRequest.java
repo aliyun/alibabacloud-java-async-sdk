@@ -74,7 +74,7 @@ public class RestartSupabaseProjectRequest extends Request {
         } 
 
         /**
-         * <p>The Supabase project ID.</p>
+         * <p>The ID of the Supabase project.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,7 +87,7 @@ public class RestartSupabaseProjectRequest extends Request {
         }
 
         /**
-         * <p>The region ID. Specifies the region in which to query or perform the operation.</p>
+         * <p>The region ID. Specifies the region for the query or operation.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>

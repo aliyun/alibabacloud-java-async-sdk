@@ -228,7 +228,7 @@ public class CreateHadoopDataSourceRequest extends Request {
         } 
 
         /**
-         * <p>Instance ID.</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -241,7 +241,7 @@ public class CreateHadoopDataSourceRequest extends Request {
         }
 
         /**
-         * <p>Service description.</p>
+         * <p>The description of the data source.</p>
          * 
          * <strong>example:</strong>
          * <p>pxf for hdfs data source</p>
@@ -253,7 +253,7 @@ public class CreateHadoopDataSourceRequest extends Request {
         }
 
         /**
-         * <p>Service name.</p>
+         * <p>The service name.</p>
          * 
          * <strong>example:</strong>
          * <p>hdfs_pxf</p>
@@ -265,12 +265,10 @@ public class CreateHadoopDataSourceRequest extends Request {
         }
 
         /**
-         * <p>Type of Hadoop external table to be enabled, with values:</p>
+         * <p>The type of the Hadoop external table to enable. Valid values:</p>
          * <ul>
-         * <li><p>HDFS </p>
-         * </li>
-         * <li><p>Hive</p>
-         * </li>
+         * <li>HDFS</li>
+         * <li>Hive</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -283,7 +281,7 @@ public class CreateHadoopDataSourceRequest extends Request {
         }
 
         /**
-         * <p>When HadoopCreateType=Emr, this field should contain the EMR instance ID.</p>
+         * <p>The ID of the EMR instance. This parameter is required when HadoopCreateType is set to Emr.</p>
          * 
          * <strong>example:</strong>
          * <p>c-1234567</p>
@@ -295,7 +293,7 @@ public class CreateHadoopDataSourceRequest extends Request {
         }
 
         /**
-         * <p>Content string of the Hadoop hdfs-site.xml file. This field is required when enabling an HDFS external table.</p>
+         * <p>The content string of the Hadoop hdfs-site.xml file. This parameter is required when you enable HDFS external tables.</p>
          * 
          * <strong>example:</strong>
          * <?xml version="1.0" ?>
@@ -318,7 +316,7 @@ public class CreateHadoopDataSourceRequest extends Request {
         }
 
         /**
-         * <p>Content string of the Hadoop core-site.xml file.</p>
+         * <p>The content string of the Hadoop core-site.xml file.</p>
          * 
          * <strong>example:</strong>
          * <?xml version="1.0" ?>
@@ -345,12 +343,10 @@ public class CreateHadoopDataSourceRequest extends Request {
         }
 
         /**
-         * <p>External service type:</p>
+         * <p>The type of the external service. Valid values:</p>
          * <ul>
-         * <li><p>emr</p>
-         * </li>
-         * <li><p>hadoop: Self-built Hadoop</p>
-         * </li>
+         * <li>emr</li>
+         * <li>hadoop: self-managed Hadoop.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -363,7 +359,7 @@ public class CreateHadoopDataSourceRequest extends Request {
         }
 
         /**
-         * <p>Address and hostname of the Hadoop cluster\&quot;s source node in the /etc/hosts file.</p>
+         * <p>The IP addresses and hostnames of the source nodes in the Hadoop cluster in the /etc/hosts file.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.220.128 master-1-1.c-xxx.cn-shanghai.emr.aliyuncs.com
@@ -377,7 +373,7 @@ public class CreateHadoopDataSourceRequest extends Request {
         }
 
         /**
-         * <p>Content string of the Hadoop hive-site.xml file. This field is required when enabling a HIVE external table.</p>
+         * <p>The content string of the Hadoop hive-site.xml file. This parameter is required when you enable Hive external tables.</p>
          * 
          * <strong>example:</strong>
          * <?xml version="1.0" ?>
@@ -400,10 +396,12 @@ public class CreateHadoopDataSourceRequest extends Request {
         }
 
         /**
-         * <p>Content string of the Hadoop mapred-site.xml file. This field is required when enabling an HDFS external table.</p>
+         * <p>The content string of the Hadoop mapred-site.xml file. This parameter is required when you enable HDFS external tables.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxxxxx</p>
+         * <?xml version="1.0" ?>
+         * <configuration>
+         * </configuration>
          */
         public Builder mapReduceConf(String mapReduceConf) {
             this.putQueryParameter("MapReduceConf", mapReduceConf);
@@ -412,10 +410,7 @@ public class CreateHadoopDataSourceRequest extends Request {
         }
 
         /**
-         * <p>Region ID.</p>
-         * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> interface to view available region IDs.</p>
-         * </blockquote>
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query available region IDs.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -427,7 +422,7 @@ public class CreateHadoopDataSourceRequest extends Request {
         }
 
         /**
-         * <p>Content string of the Hadoop yarn-site.xml file. This field is required when enabling an HDFS external table.</p>
+         * <p>The content string of the Hadoop yarn-site.xml file. This parameter is required when you enable HDFS external tables.</p>
          * 
          * <strong>example:</strong>
          * <?xml version="1.0" ?>

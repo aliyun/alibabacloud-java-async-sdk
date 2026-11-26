@@ -132,7 +132,7 @@ public class ModifyBackupPolicyRequest extends Request {
         } 
 
         /**
-         * <p>The number of days for which data backup files are retained. Default value: 7. Maximum value: 7. Valid values: 1 to 7.</p>
+         * <p>The data backup retention period. Default value: 7. Maximum value: 7. Valid values: 1 to 7.</p>
          * 
          * <strong>example:</strong>
          * <p>7</p>
@@ -144,7 +144,10 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including the instance IDs.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -157,12 +160,11 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable automatic point-in-time backup.</p>
+         * <p>Specifies whether to enable automatic recovery point creation. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li>true (default): enabled.</li>
+         * <li>false: disabled.</li>
          * </ul>
-         * <p>Default value: true.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -174,15 +176,15 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * <p>The cycle based on which backups are performed. If more than one day of the week is specified, the days of the week are separated by commas (,). Valid values:</p>
+         * <p>The data backup cycle. Separate multiple values with commas (,). Valid values:</p>
          * <ul>
-         * <li>Monday</li>
-         * <li>Tuesday</li>
-         * <li>Wednesday</li>
-         * <li>Thursday</li>
-         * <li>Friday</li>
-         * <li>Saturday</li>
-         * <li>Sunday</li>
+         * <li>Monday: Monday.</li>
+         * <li>Tuesday: Tuesday.</li>
+         * <li>Wednesday: Wednesday.</li>
+         * <li>Thursday: Thursday.</li>
+         * <li>Friday: Friday.</li>
+         * <li>Saturday: Saturday.</li>
+         * <li>Sunday: Sunday.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -196,7 +198,7 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * <p>The backup window. Specify the backup window in the HH:mmZ-HH:mmZ format. The backup window must be in UTC. Default value: 00:00-01:00.</p>
+         * <p>The data backup time. Default value: 00:00Z-01:00Z. Format: HH:mmZ-HH:mmZ (UTC).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -209,14 +211,13 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * <p>The frequency of point-in-time backup.</p>
+         * <p>The recovery point frequency. Valid values:</p>
          * <ul>
-         * <li>1: per hour</li>
-         * <li>2: per 2 hours</li>
-         * <li>4: per 4 hours</li>
-         * <li>8: per 8 hours</li>
+         * <li><strong>1</strong> (default): every hour.</li>
+         * <li><strong>2</strong>: every two hours.</li>
+         * <li><strong>4</strong>: every four hours.</li>
+         * <li><strong>8</strong>: every eight hours.</li>
          * </ul>
-         * <p>Default value: 8.</p>
          * 
          * <strong>example:</strong>
          * <p>8</p>

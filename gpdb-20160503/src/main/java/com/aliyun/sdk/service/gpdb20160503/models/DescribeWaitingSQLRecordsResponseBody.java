@@ -93,7 +93,7 @@ public class DescribeWaitingSQLRecordsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The list of lock diagnostics records.</p>
+         * <p>The list of queries.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -101,7 +101,7 @@ public class DescribeWaitingSQLRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -112,7 +112,7 @@ public class DescribeWaitingSQLRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>B4CAF581-2AC7-41AD-8940-D56DF7AADF5B</p>
@@ -123,7 +123,7 @@ public class DescribeWaitingSQLRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -281,7 +281,7 @@ public class DescribeWaitingSQLRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the process that uniquely identifies the query.</p>
+             * <p>The process ID, which is the unique identifier of the SQL statement for the waiting query.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -292,7 +292,7 @@ public class DescribeWaitingSQLRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The SQL statement of the query.</p>
+             * <p>The SQL text of the query.</p>
              * 
              * <strong>example:</strong>
              * <p>Select * from t1,t2 where t1.id=t2.id;</p>
@@ -303,7 +303,7 @@ public class DescribeWaitingSQLRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the session that contains the query.</p>
+             * <p>The ID of the session to which the query belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>50</p>
@@ -314,7 +314,7 @@ public class DescribeWaitingSQLRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time of the query. This value is in the timestamp format. Unit: milliseconds.</p>
+             * <p>The start time of the query. The value is a timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1660902033374</p>
@@ -325,10 +325,10 @@ public class DescribeWaitingSQLRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The waiting state of the query. Valid values:</p>
+             * <p>The wait status of the query. Valid values:</p>
              * <ul>
-             * <li><strong>LockWaiting</strong></li>
-             * <li><strong>ResourceWaiting</strong></li>
+             * <li><strong>LockWaiting</strong>: The query is waiting for a lock.</li>
+             * <li><strong>ResourceWaiting</strong>: The query is waiting for resources.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -340,7 +340,7 @@ public class DescribeWaitingSQLRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The database account that is used to perform the query.</p>
+             * <p>The user who executed the query.</p>
              * 
              * <strong>example:</strong>
              * <p>testUser</p>
@@ -351,7 +351,7 @@ public class DescribeWaitingSQLRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The waiting period of the query. Unit: milliseconds.</p>
+             * <p>The wait time of the SQL statement, in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>26911000</p>

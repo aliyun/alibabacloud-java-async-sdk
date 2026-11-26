@@ -118,8 +118,8 @@ public class ListSupabaseBackupJobsRequest extends Request {
         /**
          * <p>The backup mode. Valid values:</p>
          * <ul>
-         * <li>Automated: automatic backup</li>
-         * <li>Manual: manual backup</li>
+         * <li>Automated: automatic backup.</li>
+         * <li>Manual: manual backup.</li>
          * </ul>
          * <p>If this parameter is not specified, all backup tasks are returned.</p>
          * 

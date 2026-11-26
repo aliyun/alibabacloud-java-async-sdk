@@ -106,7 +106,7 @@ public class ListSlowSQLRecordsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>List of slow queries.</p>
+         * <p>The list of slow query records.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -114,7 +114,7 @@ public class ListSlowSQLRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -125,7 +125,7 @@ public class ListSlowSQLRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of records on the current page.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -136,7 +136,7 @@ public class ListSlowSQLRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The unique ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ABB39CC3-4488-4857-905D-2E4A051D0521</p>
@@ -147,7 +147,7 @@ public class ListSlowSQLRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of log entries returned.</p>
+         * <p>The total number of records.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -385,7 +385,7 @@ public class ListSlowSQLRecordsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The total CPU time (in milliseconds) consumed by the query execution.</p>
+             * <p>The total CPU time consumed by the query execution. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1000</p>
@@ -396,7 +396,7 @@ public class ListSlowSQLRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the database.</p>
+             * <p>The database name.</p>
              * 
              * <strong>example:</strong>
              * <p>adbpgadmin</p>
@@ -407,7 +407,7 @@ public class ListSlowSQLRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Total execution time in milliseconds.</p>
+             * <p>The total execution duration. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>2000</p>
@@ -418,7 +418,7 @@ public class ListSlowSQLRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total lock wait time (in milliseconds).</p>
+             * <p>The total lock wait time of the query. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1000</p>
@@ -429,7 +429,7 @@ public class ListSlowSQLRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total memory (in bytes) occupied by the query execution.</p>
+             * <p>The total memory occupied by the query execution. Unit: bytes.</p>
              * 
              * <strong>example:</strong>
              * <p>1000</p>
@@ -440,7 +440,7 @@ public class ListSlowSQLRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Execution optimizer.</p>
+             * <p>The execution optimizer.</p>
              * 
              * <strong>example:</strong>
              * <p>planner</p>
@@ -451,7 +451,7 @@ public class ListSlowSQLRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The end time of the query.</p>
+             * <p>The end time of the execution.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-12-04T18:00:00Z</p>
@@ -462,7 +462,7 @@ public class ListSlowSQLRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The query ID. It is a unique identifier of the query.</p>
+             * <p>The query ID, which is the unique identifier of the query.</p>
              * 
              * <strong>example:</strong>
              * <p>7775338456746339025</p>
@@ -473,7 +473,7 @@ public class ListSlowSQLRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time of the query.</p>
+             * <p>The start time of the execution.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-12-04T17:00:00Z</p>
@@ -484,7 +484,7 @@ public class ListSlowSQLRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The query queueing time (in milliseconds) in resource groups/queues.</p>
+             * <p>The time the query spent waiting in resource queues and resource groups. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1000</p>
@@ -495,7 +495,7 @@ public class ListSlowSQLRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total size (in bytes) of the files generated by the query.</p>
+             * <p>The total size of files spilled to disk during the query. Unit: bytes.</p>
              * 
              * <strong>example:</strong>
              * <p>1000</p>
@@ -506,7 +506,7 @@ public class ListSlowSQLRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>SQL statements in audit logs.</p>
+             * <p>The SQL statement in the audit log.</p>
              * 
              * <strong>example:</strong>
              * <p>SHOW COLUMNS FROM <code>t_project</code></p>
@@ -517,10 +517,10 @@ public class ListSlowSQLRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the SQL statement is truncated. Valid values:</p>
+             * <p>Specifies whether the SQL statement is truncated. Valid values:</p>
              * <ul>
-             * <li>true: Truncated.</li>
-             * <li>false: Not truncated.</li>
+             * <li>true: The SQL statement is truncated.</li>
+             * <li>false: The SQL statement is not truncated.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -532,7 +532,7 @@ public class ListSlowSQLRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The threshold that is used to truncate the SQL statement.</p>
+             * <p>The truncation threshold for SQL statements.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -543,7 +543,7 @@ public class ListSlowSQLRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The account that initiates the query.</p>
+             * <p>The database username.</p>
              * 
              * <strong>example:</strong>
              * <p>test_user</p>

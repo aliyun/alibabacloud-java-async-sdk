@@ -186,9 +186,9 @@ public class DownloadSlowSQLRecordsRequest extends Request {
         } 
 
         /**
-         * <p>The cluster ID.</p>
+         * <p>The instance ID.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including the instance IDs.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -214,8 +214,8 @@ public class DownloadSlowSQLRecordsRequest extends Request {
         }
 
         /**
-         * <p>The end of the time range to query. The time must be in UTC and formatted as <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z. The time must be in UTC. The end time must be later than the start time.</p>
-         * <p>Defaults to the current time</p>
+         * <p>The end time of the query. The end time must be later than the start time. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z format. The time must be in UTC.</p>
+         * <p>Default value: the current time.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-12-04T17:00:00Z</p>
@@ -227,7 +227,7 @@ public class DownloadSlowSQLRecordsRequest extends Request {
         }
 
         /**
-         * <p>The search keyword.</p>
+         * <p>The query keyword.</p>
          * 
          * <strong>example:</strong>
          * <p>SELECT</p>
@@ -239,7 +239,7 @@ public class DownloadSlowSQLRecordsRequest extends Request {
         }
 
         /**
-         * <p>The longest execution duration. Unit: seconds.</p>
+         * <p>The maximum execution duration. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>600</p>
@@ -263,7 +263,7 @@ public class DownloadSlowSQLRecordsRequest extends Request {
         }
 
         /**
-         * <p>Sort criteria.</p>
+         * <p>The sorting condition.</p>
          * 
          * <strong>example:</strong>
          * <p>{Field: SchemaName, Type: Desc}</p>
@@ -287,8 +287,8 @@ public class DownloadSlowSQLRecordsRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query. The time must be in UTC and formatted as <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z.</p>
-         * <p>Defaults to the current time minus 5 minutes.</p>
+         * <p>The start time of the query. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z format. The time must be in UTC.</p>
+         * <p>Default value: 5 minutes before the current time.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-12-04T16:00:00Z</p>
@@ -300,7 +300,7 @@ public class DownloadSlowSQLRecordsRequest extends Request {
         }
 
         /**
-         * <p>The database account.</p>
+         * <p>The database username.</p>
          * 
          * <strong>example:</strong>
          * <p>test_user</p>

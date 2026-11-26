@@ -106,7 +106,7 @@ public class RerankResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Detailed information returned by the interface.</p>
+         * <p>The detailed information returned in the response.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -117,7 +117,7 @@ public class RerankResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ABB39CC3-4488-4857-905D-2E4A051D0521</p>
@@ -136,10 +136,10 @@ public class RerankResponseBody extends TeaModel {
         }
 
         /**
-         * <p>API execution status, value description:</p>
+         * <p>The execution status of the API operation. Valid values:</p>
          * <ul>
-         * <li><strong>success</strong>: Execution succeeded.</li>
-         * <li><strong>fail</strong>: Execution failed.</li>
+         * <li><strong>success</strong>: The operation is successful.</li>
+         * <li><strong>fail</strong>: The operation fails.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -151,7 +151,7 @@ public class RerankResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Number of consumed tokens.</p>
+         * <p>The number of tokens consumed.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>

@@ -119,7 +119,10 @@ public class Field extends TeaModel {
         } 
 
         /**
-         * BlobValue.
+         * <p>The Base64-encoded binary.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aGVsbG8=</p>
          */
         public Builder blobValue(String blobValue) {
             this.blobValue = blobValue;
@@ -127,7 +130,7 @@ public class Field extends TeaModel {
         }
 
         /**
-         * BooleanValue.
+         * <p>The Boolean value.</p>
          */
         public Builder booleanValue(Boolean booleanValue) {
             this.booleanValue = booleanValue;
@@ -135,7 +138,10 @@ public class Field extends TeaModel {
         }
 
         /**
-         * DoubleValue.
+         * <p>The Double value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.25</p>
          */
         public Builder doubleValue(Double doubleValue) {
             this.doubleValue = doubleValue;
@@ -143,7 +149,7 @@ public class Field extends TeaModel {
         }
 
         /**
-         * IsNull.
+         * <p>The null status.</p>
          */
         public Builder isNull(Boolean isNull) {
             this.isNull = isNull;
@@ -151,7 +157,10 @@ public class Field extends TeaModel {
         }
 
         /**
-         * LongValue.
+         * <p>The Long value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456789</p>
          */
         public Builder longValue(Long longValue) {
             this.longValue = longValue;
@@ -159,7 +168,10 @@ public class Field extends TeaModel {
         }
 
         /**
-         * StringValue.
+         * <p>The string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Sample text</p>
          */
         public Builder stringValue(String stringValue) {
             this.stringValue = stringValue;

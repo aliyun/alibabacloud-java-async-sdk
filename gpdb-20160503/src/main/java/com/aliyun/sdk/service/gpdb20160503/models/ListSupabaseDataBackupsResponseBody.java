@@ -429,7 +429,7 @@ public class ListSupabaseDataBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The local time representation of the backup end time. Format: yyyy-MM-ddTHH:mm:ssZ. The current return value is in Beijing time (UTC+8). The trailing Z is a fixed character in the compatibility format and does not indicate the zero time zone. To parse the time in a standard format, use BackupEndTime.</p>
+             * <p>The local time representation of the backup end time. Format: yyyy-MM-ddTHH:mm:ssZ. The returned value is in Beijing time (UTC+8). The trailing Z is a fixed character for format compatibility and does not indicate the UTC+0 time zone. To parse the time in a standard format, use BackupEndTime.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-10-09T09:24:44Z</p>
@@ -440,7 +440,11 @@ public class ListSupabaseDataBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The backup method. Valid values: Physical: physical backup; Snapshot: snapshot backup.</p>
+             * <p>The backup method. Valid values:</p>
+             * <ul>
+             * <li>Physical: physical backup.</li>
+             * <li>Snapshot: snapshot backup.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>Snapshot</p>
@@ -459,9 +463,9 @@ public class ListSupabaseDataBackupsResponseBody extends TeaModel {
              * </ul>
              * <p>Valid values for restorable points:</p>
              * <ul>
-             * <li><strong>Automated</strong>: the restorable point after a automatic backup.</li>
-             * <li><strong>Manual</strong>: the restorable point manually triggered by the user.</li>
-             * <li><strong>Period</strong>: the restorable point triggered periodically based on the backup policy.</li>
+             * <li><strong>Automated</strong>: restorable point after a automatic backup.</li>
+             * <li><strong>Manual</strong>: restorable point manually triggered by a user.</li>
+             * <li><strong>Period</strong>: restorable point triggered periodically based on the backup policy.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -506,7 +510,7 @@ public class ListSupabaseDataBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The local time representation of the backup start time. Format: yyyy-MM-ddTHH:mm:ssZ. The current return value is in Beijing time (UTC+8). The trailing Z is a fixed character in the compatibility format and does not indicate the zero time zone. To parse the time in a standard format, use BackupStartTime.</p>
+             * <p>The local time representation of the backup start time. Format: yyyy-MM-ddTHH:mm:ssZ. The returned value is in Beijing time (UTC+8). The trailing Z is a fixed character for format compatibility and does not indicate the UTC+0 time zone. To parse the time in a standard format, use BackupStartTime.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-10-09T09:23:02Z</p>
@@ -543,7 +547,7 @@ public class ListSupabaseDataBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The consistency point in time. The value is a UNIX timestamp in seconds. For a full backup, this parameter indicates the consistency point in time of the backup. For a restorable point, this parameter indicates the point in time to which data can be restored.</p>
+             * <p>The consistency point in time. The value is a UNIX timestamp in seconds. For a full backup, this parameter indicates the consistency point in time of the backup. For a restorable point, this parameter indicates the restorable point in time.</p>
              * 
              * <strong>example:</strong>
              * <p>1791508983</p>

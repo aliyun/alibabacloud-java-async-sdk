@@ -74,7 +74,7 @@ public class DescribeSupabaseBackupPolicyRequest extends Request {
         } 
 
         /**
-         * <p>Instance ID of the Supabase instance. You can obtain instance ID from the Supabase page in the console.</p>
+         * <p>Instance ID of the Supabase instance. You can obtain instance ID on the Supabase page in the console.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

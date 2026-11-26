@@ -132,7 +132,7 @@ public class DescribeSupabaseBackupPolicyResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The interval between automatic recovery points, in minutes. A value greater than 0 indicates that automatic recovery points are enabled. If the feature is disabled, -1 is returned.</p>
+         * <p>The interval of automatic recovery points. Unit: minutes. A value greater than 0 indicates that automatic recovery points are enabled. If automatic recovery points are disabled, -1 is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>-1</p>
@@ -143,7 +143,7 @@ public class DescribeSupabaseBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The data backup retention period, in days.</p>
+         * <p>The data backup retention period. Unit: days.</p>
          * 
          * <strong>example:</strong>
          * <p>7</p>
@@ -188,7 +188,7 @@ public class DescribeSupabaseBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The interval for the automatic creation of recovery points, in hours. Valid values: 1/6 (10 minutes), 1/2 (30 minutes), 1, 2, 4, and 8. This value is valid only when EnableRecoveryPoint is set to true. If automatic recovery points are shutdown, 0 is returned.</p>
+         * <p>The interval for the automatic creation of recovery points. Unit: hours. Valid values: 1/6 (10 minutes), 1/2 (30 minutes), 1, 2, 4, and 8. This value is valid only when EnableRecoveryPoint is set to true. 0 is returned upon shutdown of automatic recovery points.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>

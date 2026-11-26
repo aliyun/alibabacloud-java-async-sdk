@@ -162,7 +162,7 @@ public class ModifySupabaseBackupPolicyRequest extends Request {
          * <ul>
          * <li>true: Enabled.</li>
          * <li>false: Disabled.
-         * If this parameter is not specified, false is used.</li>
+         * If this parameter is not specified, the default value false is used.</li>
          * </ul>
          */
         public Builder enableRecoveryPoint(Boolean enableRecoveryPoint) {
@@ -185,7 +185,7 @@ public class ModifySupabaseBackupPolicyRequest extends Request {
         }
 
         /**
-         * <p>The start time of the data backup. The time is in UTC and follows the HH:mmZ format, such as 01:00Z. The HH:mmZ-HH:mmZ time range format is also supported, and the server uses the start time of the range.</p>
+         * <p>The start time of the data backup. The time must be in UTC and in the HH:mmZ format, such as 01:00Z. The HH:mmZ-HH:mmZ time range format is also supported, and the server uses the start time of the range.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -211,7 +211,7 @@ public class ModifySupabaseBackupPolicyRequest extends Request {
         }
 
         /**
-         * <p>The interval for the automatic creation of recovery points. Unit: hours. Valid values: 1/6 (10 minutes), 1/2 (30 minutes), 1, 2, 4, and 8. This parameter takes effect only when EnableRecoveryPoint is set to true. If this parameter is not specified, the default value 1 is used. If EnableRecoveryPoint is set to false, this parameter is ignored.</p>
+         * <p>The interval for automatic creation of recovery points. Unit: hours. Valid values: 1/6 (10 minutes), 1/2 (30 minutes), 1, 2, 4, and 8. This parameter takes effect only when EnableRecoveryPoint is set to true. If EnableRecoveryPoint is set to true and this parameter is not specified, the default value 1 is used. If EnableRecoveryPoint is set to false, this parameter is ignored.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

@@ -106,9 +106,9 @@ public class UpsertChunksResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The number of tokens that are consumed during vectorization.</p>
+         * <p>The number of tokens used for vectorization.</p>
          * <blockquote>
-         * <p>A token is the minimum unit for splitting text. A token can be a word, phrase, punctuation, or character.</p>
+         * <p>A token is the smallest unit into which input text is divided. A token can be a word, a phrase, a punctuation mark, or a character.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -120,9 +120,9 @@ public class UpsertChunksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The job ID. You can use the <code>GetGraphRAGJob</code> to view the job status.</p>
+         * <p>The job ID. You can use this ID to call the GetGraphRAGJob operation to query the job status later.</p>
          * <blockquote>
-         * <p>This parameter is returned only when the knowledge base is enabled.</p>
+         * <p>This parameter is returned only when knowledge graph construction is enabled for the knowledge base.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -134,7 +134,7 @@ public class UpsertChunksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response message.</p>
+         * <p>The returned message.</p>
          * 
          * <strong>example:</strong>
          * <p>Successful</p>
@@ -145,7 +145,7 @@ public class UpsertChunksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The unique ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ABB39CC3-4488-4857-905D-2E4A051D0521</p>
@@ -156,10 +156,10 @@ public class UpsertChunksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The status of the operation. Valid values:</p>
+         * <p>The execution status of the API operation. Valid values:</p>
          * <ul>
-         * <li><strong>success</strong></li>
-         * <li><strong>fail</strong></li>
+         * <li><strong>success</strong>: The operation is successful.</li>
+         * <li><strong>fail</strong>: The operation fails.</li>
          * </ul>
          * 
          * <strong>example:</strong>

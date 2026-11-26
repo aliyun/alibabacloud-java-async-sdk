@@ -115,7 +115,7 @@ public class ListWorkspacesRequest extends Request {
         } 
 
         /**
-         * <p>The maximum number of entries to return. Default value: 10.</p>
+         * <p>The maximum number of entries to return for this request. Default value: 10.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -127,7 +127,7 @@ public class ListWorkspacesRequest extends Request {
         }
 
         /**
-         * <p>The token for the next query.</p>
+         * <p>The token used to start the next query.</p>
          * 
          * <strong>example:</strong>
          * <p>caeba0bbb2be03f84eb48b699f0a****</p>

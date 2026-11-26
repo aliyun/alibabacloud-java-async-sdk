@@ -187,9 +187,9 @@ public class DescribeDiagnosisRecordsRequest extends Request {
         } 
 
         /**
-         * <p>The instance ID.</p>
+         * <p>The ID of the instance.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to view the details of all AnalyticDB for PostgreSQL instances in a specific region, including the instance IDs.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -216,7 +216,7 @@ public class DescribeDiagnosisRecordsRequest extends Request {
         }
 
         /**
-         * <p>The end of the time range to query. Specify the time in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time must be in UTC. The end time must be later than the start time.</p>
+         * <p>The end time of the query. The end time must be later than the start time. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z format. The time must be in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-05-07T07:59Z</p>
@@ -228,7 +228,7 @@ public class DescribeDiagnosisRecordsRequest extends Request {
         }
 
         /**
-         * <p>The keyword of the SQL statement.</p>
+         * <p>The SQL keyword.</p>
          * 
          * <strong>example:</strong>
          * <p>SELECT</p>
@@ -240,7 +240,7 @@ public class DescribeDiagnosisRecordsRequest extends Request {
         }
 
         /**
-         * <p>The order of fields in the console. You do not need to specify this parameter.</p>
+         * <p>This parameter is used to sort fields in the console. You do not need to specify this parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -252,7 +252,7 @@ public class DescribeDiagnosisRecordsRequest extends Request {
         }
 
         /**
-         * <p>The page number. Pages start from page 1. Default value: <strong>1</strong>.</p>
+         * <p>The page number. The value must be greater than 0 and cannot exceed the maximum value of the Integer type. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -282,19 +282,15 @@ public class DescribeDiagnosisRecordsRequest extends Request {
         }
 
         /**
-         * <p>The filter condition on queries. Specify the value in the JSON format. Valid values:</p>
+         * <p>The filter conditions for the query. The value must be in JSON format. Valid values:</p>
          * <ul>
-         * <li><p><code>{&quot;Type&quot;:&quot;maxCost&quot;, &quot;Value&quot;:&quot;100&quot;}</code>: filters the top 100 queries that are the most time-consuming.</p>
-         * </li>
-         * <li><p><code>{&quot;Type&quot;:&quot;status&quot;,&quot;Value&quot;:&quot;finished&quot;}</code>: filters completed queries.</p>
-         * </li>
-         * <li><p><code>{&quot;Type&quot;:&quot;status&quot;,&quot;Value&quot;:&quot;running&quot;}</code>: filters running queries.</p>
-         * </li>
-         * <li><p><code>{&quot;Type&quot;:&quot;cost&quot;,&quot;Min&quot;:&quot;30&quot;,&quot;Max&quot;:&quot;50&quot;}</code>: filters the queries that consume a period of 30 milliseconds to less than 50 milliseconds. You can customize a filter condition by setting <strong>Min</strong> and <strong>Max</strong>.</p>
-         * <ul>
-         * <li>If only <strong>Min</strong> is specified, the queries that consume a period of time that is greater than the Min value are filtered.</li>
-         * <li>If only <strong>Max</strong> is specified, the queries that consume a period of time that is less than the Max value are filtered.</li>
-         * <li>If both <strong>Min</strong> and <strong>Max</strong> are specified, the queries that consume a period of time that is greater than or equal to the <strong>Min</strong> value and less than or equal to the <strong>Max</strong> value are filtered.</li>
+         * <li><code>{&quot;Type&quot;:&quot;maxCost&quot;, &quot;Value&quot;:&quot;100&quot;}</code>: the 100 queries with the longest execution duration</li>
+         * <li><code>{&quot;Type&quot;:&quot;status&quot;,&quot;Value&quot;:&quot;finished&quot;}</code>: completed queries</li>
+         * <li><code>{&quot;Type&quot;:&quot;status&quot;,&quot;Value&quot;:&quot;running&quot;}</code>: running queries</li>
+         * <li><code>{&quot;Type&quot;:&quot;cost&quot;,&quot;Min&quot;:&quot;30&quot;,&quot;Max&quot;:&quot;50&quot;}</code>: queries with a custom execution duration. You can specify the minimum and maximum execution durations. <strong>Min</strong> specifies the minimum execution duration, and <strong>Max</strong> specifies the maximum execution duration. Unit: milliseconds.<ul>
+         * <li>If you specify only <strong>Min</strong>, the system returns queries whose execution duration is greater than the specified value.</li>
+         * <li>If you specify only <strong>Max</strong>, the system returns queries whose execution duration is less than the specified value.</li>
+         * <li>If you specify both <strong>Min</strong> and <strong>Max</strong>, the system returns queries whose execution duration is greater than or equal to the value of <strong>Min</strong> and less than or equal to the value of <strong>Max</strong>.</li>
          * </ul>
          * </li>
          * </ul>
@@ -309,7 +305,7 @@ public class DescribeDiagnosisRecordsRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time must be in UTC.</p>
+         * <p>The start time of the query. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z format. The time must be in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-05-07T06:59Z</p>
@@ -321,7 +317,7 @@ public class DescribeDiagnosisRecordsRequest extends Request {
         }
 
         /**
-         * <p>The name of the database account.</p>
+         * <p>The username.</p>
          * 
          * <strong>example:</strong>
          * <p>adbpguser</p>

@@ -295,7 +295,7 @@ public class ListExternalDataServicesResponseBody extends TeaModel {
              * <p>The description of the service.</p>
              * 
              * <strong>example:</strong>
-             * <p>test-pxf</p>
+             * <p>test-adbpgss</p>
              */
             public Builder serviceDescription(String serviceDescription) {
                 this.serviceDescription = serviceDescription;
@@ -317,7 +317,7 @@ public class ListExternalDataServicesResponseBody extends TeaModel {
              * <p>The name of the service.</p>
              * 
              * <strong>example:</strong>
-             * <p>test-pxf</p>
+             * <p>test-adbpgss</p>
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
@@ -328,7 +328,7 @@ public class ListExternalDataServicesResponseBody extends TeaModel {
              * <p>The specifications of the service. Unit: compute units (CUs).</p>
              * 
              * <strong>example:</strong>
-             * <p>8</p>
+             * <p>2</p>
              */
             public Builder serviceSpec(String serviceSpec) {
                 this.serviceSpec = serviceSpec;

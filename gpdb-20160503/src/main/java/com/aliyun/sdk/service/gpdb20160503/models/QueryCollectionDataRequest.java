@@ -343,9 +343,9 @@ public class QueryCollectionDataRequest extends Request {
         } 
 
         /**
-         * <p>The name of the collection.</p>
+         * <p>The collection name.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/2401503.html">ListCollections</a> operation to list available collections.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/2401503.html">ListCollections</a> operation to view the list.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -359,9 +359,9 @@ public class QueryCollectionDataRequest extends Request {
         }
 
         /**
-         * <p>The content for full-text search. If this parameter is omitted, only vector search is performed. If this parameter is specified, the system performs a hybrid search of vector search and full-text search.</p>
+         * <p>The content used for full-text retrieval. If this parameter is left empty, only vector retrieval is used. If this parameter is not empty, both vector and full-text dual-channel retrieval are used.</p>
          * <blockquote>
-         * <p>You must specify one of the Content and Vector parameters.</p>
+         * <p>This parameter and the Vector parameter cannot be left empty at the same time.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -374,9 +374,9 @@ public class QueryCollectionDataRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query details for all AnalyticDB for PostgreSQL instances in a region, including their instance IDs.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including the instance IDs.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -389,15 +389,15 @@ public class QueryCollectionDataRequest extends Request {
         }
 
         /**
-         * <p>The filter conditions for data retrieval. It is in the format of a WHERE clause in SQL. This expression returns a boolean value, which can be a simple comparison operator, such as <code>=</code>, <code>&lt;&gt;</code>, <code>!=</code>, <code>&gt;</code>, <code>&lt;</code>, <code>&gt;=</code>, and <code>&lt;=</code>, or a more complex expression combined with logical operators, such as <code>AND</code>, <code>OR</code>, and <code>NOT</code>, and keywords such as <code>IN</code>, <code>BETWEEN</code>, and <code>LIKE</code>.</p>
+         * <p>The filter condition for the data to be queried, in the SQL WHERE clause format. It is an expression that returns a Boolean value (true or false). The condition can be a simple comparison operator, such as equal to (=), not equal to (&lt;&gt; or !=), greater than (&gt;), less than (&lt;), greater than or equal to (&gt;=), or less than or equal to (&lt;=). It can also be a more complex expression combined with logical operators (AND, OR, NOT), or a condition that uses keywords such as IN, BETWEEN, and LIKE.</p>
          * <blockquote>
          * <ul>
-         * <li>For more information about the syntax, see <a href="https://www.postgresqltutorial.com/postgresql-tutorial/postgresql-where/">PostgreSQL WHERE</a>.</li>
+         * <li>For detailed syntax, refer to <a href="https://www.postgresqltutorial.com/postgresql-tutorial/postgresql-where/">https://www.postgresqltutorial.com/postgresql-tutorial/postgresql-where/</a></li>
          * </ul>
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>pipeline_id=\&quot;1yhpmo0rbn\&quot; AND (spu=\&quot;10025667796135\&quot; AND dept_id=\&quot;226\&quot;)</p>
+         * <p>pipeline_id=&quot;1yhpmo0rbn&quot; AND (spu=&quot;10025667796135&quot; AND dept_id=&quot;226&quot;)</p>
          */
         public Builder filter(String filter) {
             this.putBodyParameter("Filter", filter);
@@ -406,15 +406,12 @@ public class QueryCollectionDataRequest extends Request {
         }
 
         /**
-         * <p>The hybrid search algorithm. If this parameter is empty, the system ranks results by directly comparing the scores from the vector search and the full-text search.</p>
+         * <p>The dual-channel recall algorithm. Default value: empty. If this parameter is left empty, the scores of vector and full-text index are directly compared and sorting is performed.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li><p><code>RRF</code>: Reciprocal Rank Fusion. This algorithm has a parameter k to control the fusion effect. For more information, see the description of the <code>HybridSearchArgs</code> parameter.</p>
-         * </li>
-         * <li><p><code>Weight</code>: weighted sort. This algorithm uses a parameter alpha to control the score ratio of vector search and full-text search, and then sorts the results. For more information about the parameter, see the <code>HybridSearchArgs</code> parameter.</p>
-         * </li>
-         * <li><p><code>Cascaded</code>: performs a full-text search, and then performs a vector search on the search results.</p>
-         * </li>
+         * <li>RRF: Reciprocal Rank Fusion (RRF). A parameter k is used to control the fusion effect. For more information, see the HybridSearchArgs configuration.</li>
+         * <li>Weight: Weighted reranking. A parameter alpha is used to control the weight of vector and full-text index scores before reranking. For more information, see the HybridSearchArgs configuration.</li>
+         * <li>Cascaded: Performs full-text retrieval first, and then performs vector retrieval based on the results.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -427,9 +424,9 @@ public class QueryCollectionDataRequest extends Request {
         }
 
         /**
-         * <p>The parameters for the hybrid search algorithm. The following algorithms are supported: RRF and Weight.</p>
+         * <p>The algorithm parameters for hybrid search. Currently, RRF and Weight are supported:</p>
          * <ul>
-         * <li>For RRF, specify the constant k in the scoring algorithm <code>1/(k+rank_i)</code>. The value must be a positive integer greater than 1. The format is as follows:</li>
+         * <li>RRF: Specifies the constant k in the score calculation formula <code>1/(k+rank_i)</code>. The value must be a positive integer greater than 1. Format:</li>
          * </ul>
          * <pre><code>{ 
          *    &quot;RRF&quot;: {
@@ -438,7 +435,7 @@ public class QueryCollectionDataRequest extends Request {
          * }
          * </code></pre>
          * <ul>
-         * <li>For Weight, in the formula <code>alpha * vector_score + (1-alpha) * text_score</code>, the alpha parameter indicates the score ratio of the vector search to the full-text search. The value ranges from 0 to 1. 0 indicates that only the full-text search is used, and 1 indicates that only the vector search is used.</li>
+         * <li>Weight: The calculation formula is <code>alpha * vector_score + (1-alpha) * text_score</code>. The parameter alpha represents the weight of the vector and full-text search scores. The value ranges from 0 to 1, where 0 indicates full-text search only and 1 indicates vector search only. Format:</li>
          * </ul>
          * <pre><code>{ 
          *    &quot;Weight&quot;: {
@@ -446,6 +443,9 @@ public class QueryCollectionDataRequest extends Request {
          *    }
          * }
          * </code></pre>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;RRF&quot;:{&quot;k&quot;:60}}</p>
          */
         public Builder hybridSearchArgs(java.util.Map<String, java.util.Map<String, ?>> hybridSearchArgs) {
             String hybridSearchArgsShrink = shrink(hybridSearchArgs, "HybridSearchArgs", "json");
@@ -455,7 +455,7 @@ public class QueryCollectionDataRequest extends Request {
         }
 
         /**
-         * <p>This parameter is left empty by default. It specifies the metadata fields to be returned. You can specify multiple fields and separate them with commas (,).</p>
+         * <p>The metadata fields to be returned. Default value: empty. Separate multiple fields with commas.</p>
          * 
          * <strong>example:</strong>
          * <p>title,content</p>
@@ -469,10 +469,8 @@ public class QueryCollectionDataRequest extends Request {
         /**
          * <p>Specifies whether to return sparse vector data. Valid values:</p>
          * <ul>
-         * <li><p><strong>true</strong>: returns sparse vector data.</p>
-         * </li>
-         * <li><p><strong>false</strong>: does not return sparse vector data.</p>
-         * </li>
+         * <li><strong>true</strong>: Returns sparse vector data.</li>
+         * <li><strong>false</strong>: Does not return sparse vector data.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -487,10 +485,8 @@ public class QueryCollectionDataRequest extends Request {
         /**
          * <p>Specifies whether to return dense vector data. Valid values:</p>
          * <ul>
-         * <li><p><strong>true</strong>: returns dense vector data.</p>
-         * </li>
-         * <li><p><strong>false</strong>: does not return dense vector data.</p>
-         * </li>
+         * <li><strong>true</strong>: Returns dense vector data.</li>
+         * <li><strong>false</strong>: Does not return dense vector data.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -503,17 +499,14 @@ public class QueryCollectionDataRequest extends Request {
         }
 
         /**
-         * <p>The similarity algorithm for search. Valid values:</p>
+         * <p>The similarity algorithm used during search. Valid values:</p>
          * <ul>
-         * <li><p><strong>l2</strong>: the Euclidean distance.</p>
-         * </li>
-         * <li><p><strong>ip</strong>: the dot product distance.</p>
-         * </li>
-         * <li><p><strong>cosine</strong>: the cosine similarity.</p>
-         * </li>
+         * <li><strong>l2</strong>: Euclidean distance.</li>
+         * <li><strong>ip</strong>: Inner product distance.</li>
+         * <li><strong>cosine</strong>: Cosine similarity.</li>
          * </ul>
          * <blockquote>
-         * <p>If this parameter is not specified, the algorithm specified when the index is created is used.</p>
+         * <p>If this parameter is left empty, the algorithm specified during index creation is used.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -526,9 +519,9 @@ public class QueryCollectionDataRequest extends Request {
         }
 
         /**
-         * <p>The name of the namespace.</p>
+         * <p>The namespace.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/2401502.html">ListNamespaces</a> operation to list available namespaces.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/2401502.html">ListNamespaces</a> operation to view the list.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -554,15 +547,12 @@ public class QueryCollectionDataRequest extends Request {
         }
 
         /**
-         * <p>This parameter is left empty by default. It specifies the start position of a paged query. This parameter is not supported in hybrid search.</p>
-         * <p>The value must be greater than or equal to 0. When this parameter is not empty, Total in the response indicates the total number of hits. This parameter is used with TopK. For example, if you want to retrieve chunks 0 to 44 with a page size of 20, you must send three requests:</p>
+         * <p>The starting point for retrieval in a paged query. Default value: empty. This parameter is not supported in dual-channel recall scenarios.</p>
+         * <p>The value must be greater than or equal to 0. If this parameter is not empty, the Total parameter is returned to indicate the total number of hits. This parameter is used together with TopK. For example, to retrieve chunks with chunk_id from 0 to 44 with a paging size of 20, you need to make three requests:</p>
          * <ul>
-         * <li><p><code>Offset=0, TopK=20</code> returns chunks 0 to 19.</p>
-         * </li>
-         * <li><p><code>Offset=20, TopK=20</code> returns chunks 20 to 39.</p>
-         * </li>
-         * <li><p><code>Offset=40, TopK=20</code> returns chunks 40 to 44.</p>
-         * </li>
+         * <li>Offset=0, TopK=20: returns chunks with chunk_id from 0 to 19.</li>
+         * <li>Offset=20, TopK=20: returns chunks with chunk_id from 20 to 39.</li>
+         * <li>Offset=30, TopK=20: returns chunks with chunk_id from 40 to 44.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -575,15 +565,12 @@ public class QueryCollectionDataRequest extends Request {
         }
 
         /**
-         * <p>This parameter is left empty by default. It specifies the field based on which to sort the results. This parameter is not supported in hybrid search.</p>
-         * <p>The field must be a metadata field or a default field in the table, such as <code>id</code>. The following formats are supported:</p>
+         * <p>The field based on which the results are sorted. Default value: empty. This parameter is not supported in hybrid search scenarios.</p>
+         * <p>The field must belong to the metadata or be a default field in the table, such as id. Supported formats:</p>
          * <ul>
-         * <li><p>A single field, such as <code>chunk_id</code>.</p>
-         * </li>
-         * <li><p>Multiple fields separated by commas (,), such as <code>block_id, chunk_id</code>.</p>
-         * </li>
-         * <li><p>Descending order, such as <code>block_id DESC, chunk_id DESC</code>.</p>
-         * </li>
+         * <li>A single field, such as chunk_id.</li>
+         * <li>Multiple fields separated by commas, such as block_id, chunk_id.</li>
+         * <li>Descending order, such as block_id DESC, chunk_id DESC.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -618,9 +605,9 @@ public class QueryCollectionDataRequest extends Request {
         }
 
         /**
-         * <p>Uses another relational table to filter vector data, which is similar to the JOIN operation.</p>
+         * <p>Uses another relational table to filter vector data, similar to the JOIN operation.</p>
          * <blockquote>
-         * <p>The data of the relational table can be returned by setting the IncludeMetadataFields parameter. For example, <code>rds_table_name.id</code> indicates that the id field of the relational table is returned.</p>
+         * <p>You can return the data of the relational table by setting the IncludeMetadataFields parameter. For example, rds_table_name.id indicates that the id field of the relational table is returned.</p>
          * </blockquote>
          */
         public Builder relationalTableFilter(RelationalTableFilter relationalTableFilter) {
@@ -631,7 +618,7 @@ public class QueryCollectionDataRequest extends Request {
         }
 
         /**
-         * <p>The sparse vector data.</p>
+         * <p>The list of sparse vector data.</p>
          */
         public Builder sparseVector(SparseVector sparseVector) {
             String sparseVectorShrink = shrink(sparseVector, "SparseVector", "json");
@@ -641,7 +628,7 @@ public class QueryCollectionDataRequest extends Request {
         }
 
         /**
-         * <p>Specifies the number of top results to return.</p>
+         * <p>The number of top results to return.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -654,13 +641,11 @@ public class QueryCollectionDataRequest extends Request {
         }
 
         /**
-         * <p>The vector data. The length of the vector data must be the same as that specified in the <a href="https://help.aliyun.com/document_detail/2401497.html">CreateCollection</a> operation.</p>
+         * <p>The vector data. The length must be consistent with the dimensions specified in the <a href="https://help.aliyun.com/document_detail/2401497.html">CreateCollection</a> operation.</p>
          * <blockquote>
          * <ul>
-         * <li><p>If <code>SparseVector</code> is empty, only the dense vector search results are returned.</p>
-         * </li>
-         * <li><p>If both <code>Vector</code> and <code>SparseVector</code> are empty, only the full-text search results are returned.</p>
-         * </li>
+         * <li>If SparseVector is empty, only dense vector retrieve results are returned.</li>
+         * <li>If both Vector and SparseVector are empty, only full-text retrieve results are returned.</li>
          * </ul>
          * </blockquote>
          */
@@ -672,7 +657,7 @@ public class QueryCollectionDataRequest extends Request {
         }
 
         /**
-         * <p>The ID of the workspace that consists of multiple database instances. You must specify this parameter or the DBInstanceId parameter. If both this parameter and DBInstanceId are specified, this parameter is used.</p>
+         * <p>The ID of the workspace that consists of multiple database instances. This parameter and the DBInstanceId parameter cannot be left empty at the same time. If both parameters are specified, this parameter takes precedence.</p>
          * 
          * <strong>example:</strong>
          * <p>gp-ws-*****</p>
@@ -769,7 +754,7 @@ public class QueryCollectionDataRequest extends Request {
             } 
 
             /**
-             * <p>The metadata field of the vector collection, which is used to associate with the fields of the vector table.</p>
+             * <p>The metadata field of the vector collection, used to associate with the fields of the vector table.</p>
              * 
              * <strong>example:</strong>
              * <p>doc_id</p>
@@ -780,10 +765,10 @@ public class QueryCollectionDataRequest extends Request {
             }
 
             /**
-             * <p>The filter conditions for the relational table.</p>
+             * <p>The filter condition for the relational table.</p>
              * 
              * <strong>example:</strong>
-             * <p>tags @&gt; ARRAY[\&quot;art\&quot;]</p>
+             * <p>tags @&gt; ARRAY[&quot;art&quot;]</p>
              */
             public Builder condition(String condition) {
                 this.condition = condition;
@@ -791,7 +776,7 @@ public class QueryCollectionDataRequest extends Request {
             }
 
             /**
-             * <p>The field of the relational table, which is used to associate with the metadata field of the vector collection.</p>
+             * <p>The field of the relational table, used to associate with the metadata fields of the vector collection.</p>
              * 
              * <strong>example:</strong>
              * <p>id</p>
@@ -872,9 +857,9 @@ public class QueryCollectionDataRequest extends Request {
             } 
 
             /**
-             * <p>The array of indexes.</p>
+             * <p>The index array.</p>
              * <blockquote>
-             * <p>The number of elements in the array cannot exceed 4,000.</p>
+             * <p>The list size cannot exceed 4,000.</p>
              * </blockquote>
              */
             public Builder indices(java.util.List<Long> indices) {
@@ -883,7 +868,7 @@ public class QueryCollectionDataRequest extends Request {
             }
 
             /**
-             * <p>The array of sparse vectors.</p>
+             * <p>The sparse vector array.</p>
              */
             public Builder values(java.util.List<Double> values) {
                 this.values = values;

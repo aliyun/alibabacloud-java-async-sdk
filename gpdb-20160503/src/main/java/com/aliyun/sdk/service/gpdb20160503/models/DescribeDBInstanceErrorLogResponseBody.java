@@ -93,7 +93,7 @@ public class DescribeDBInstanceErrorLogResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The content of the error log.</p>
+         * <p>The list of error logs.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -101,7 +101,7 @@ public class DescribeDBInstanceErrorLogResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number.</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -123,7 +123,7 @@ public class DescribeDBInstanceErrorLogResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -244,7 +244,7 @@ public class DescribeDBInstanceErrorLogResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of the database.</p>
+             * <p>The database name.</p>
              * 
              * <strong>example:</strong>
              * <p>adbtest</p>
@@ -277,7 +277,7 @@ public class DescribeDBInstanceErrorLogResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The level of the queried log.</p>
+             * <p>The level of the collected log.</p>
              * 
              * <strong>example:</strong>
              * <p>FATAL</p>
@@ -288,7 +288,7 @@ public class DescribeDBInstanceErrorLogResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the log was generated. The time is displayed in UTC.</p>
+             * <p>The time when the log was generated. The time is in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2022-04-24 11:28:14</p>
@@ -299,7 +299,7 @@ public class DescribeDBInstanceErrorLogResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the database account.</p>
+             * <p>The username.</p>
              * 
              * <strong>example:</strong>
              * <p>adbpguser</p>

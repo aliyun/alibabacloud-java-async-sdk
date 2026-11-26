@@ -106,7 +106,7 @@ public class CreateSecretResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The returned message.</p>
+         * <p>The detailed information returned by the operation.</p>
          * 
          * <strong>example:</strong>
          * <p>Successful</p>
@@ -128,7 +128,8 @@ public class CreateSecretResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The Alibaba Cloud Resource Name (ARN) of the access credential for the created Data API account. Format: <code>acs:gpdb:{{region}}:{{accountId}}:secret/{{secretName}}-{{32 digits random string}</code>.</p>
+         * <p>The ARN that uniquely identifies the logon credential and permissions of the Data API account created by the user.
+         * Format: <code>acs:gpdb:{{region}}:{{accountId}}:secret/{{secretName}}-{{32 digits random string}}</code></p>
          * 
          * <strong>example:</strong>
          * <p>acs:gpdb:cn-beijing:1033**:secret/testsecret-eG2AQGRIwQ0zFp4VA7mYL3uiCXTfDQbQ</p>
@@ -139,7 +140,7 @@ public class CreateSecretResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The name of the access credential.</p>
+         * <p>The name of the credential.</p>
          * 
          * <strong>example:</strong>
          * <p>testsecret</p>
@@ -150,10 +151,10 @@ public class CreateSecretResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The status of the operation. Valid values:</p>
+         * <p>The status. Valid values:</p>
          * <ul>
-         * <li><strong>success</strong></li>
-         * <li><strong>fail</strong></li>
+         * <li><strong>success</strong>: The operation is successful.</li>
+         * <li><strong>fail</strong>: The operation failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>

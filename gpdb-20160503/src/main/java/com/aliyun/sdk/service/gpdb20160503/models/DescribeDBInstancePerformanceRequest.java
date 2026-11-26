@@ -119,9 +119,9 @@ public class DescribeDBInstancePerformanceRequest extends Request {
         } 
 
         /**
-         * <p>The instance ID.</p>
+         * <p>Instance ID of the instance. The instance must be in reserved storage mode.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the IDs of all AnalyticDB for PostgreSQL instances within a region.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to view instance IDs of all AnalyticDB for PostgreSQL instances in the target region.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -135,7 +135,7 @@ public class DescribeDBInstancePerformanceRequest extends Request {
         }
 
         /**
-         * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time must be in UTC. The end time must be later than the start time.</p>
+         * <p>The end time of the query. The end time must be later than the start time. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z format. The time must be in UTC.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -148,7 +148,7 @@ public class DescribeDBInstancePerformanceRequest extends Request {
         }
 
         /**
-         * <p>The performance metric. Separate multiple values with commas (,). For more information, see <a href="https://help.aliyun.com/document_detail/86943.html">Performance parameters</a>.</p>
+         * <p>The performance metrics. Separate multiple metrics with commas (,). For more information, see <a href="https://help.aliyun.com/document_detail/86943.html">Performance metrics</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -161,7 +161,7 @@ public class DescribeDBInstancePerformanceRequest extends Request {
         }
 
         /**
-         * <p>This parameter is no longer used.</p>
+         * <p><strong>[Deprecated]</strong> This parameter is deprecated. You do not need to specify this parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -173,7 +173,7 @@ public class DescribeDBInstancePerformanceRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time must be in UTC.</p>
+         * <p>The start time of the query. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z format. The time must be in UTC.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

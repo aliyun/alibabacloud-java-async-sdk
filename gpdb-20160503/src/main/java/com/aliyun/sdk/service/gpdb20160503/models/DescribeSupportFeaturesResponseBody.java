@@ -80,7 +80,7 @@ public class DescribeSupportFeaturesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>gp-bp12ga6v69h86****</p>
@@ -91,7 +91,7 @@ public class DescribeSupportFeaturesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>63E5BE60-91FF-57F1-B873-7F1EB734B93D_2724</p>
@@ -102,10 +102,10 @@ public class DescribeSupportFeaturesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The features supported by the instance. Valid values:</p>
+         * <p>The features supported by the current instance. Currently, you can query only the following features:</p>
          * <ul>
-         * <li>sample_data: sample dataset. For more information, see <a href="https://help.aliyun.com/document_detail/452278.html">Sample dataset</a>.</li>
-         * <li>diagnose_and_optimize: diagnostics and optimization. For more information, see <a href="https://help.aliyun.com/document_detail/323453.html">Diagnostics and optimization</a>.</li>
+         * <li>sample_data: Sample dataset. For more information, see <a href="https://help.aliyun.com/document_detail/452278.html">Sample dataset</a>.</li>
+         * <li>diagnose_and_optimize: Diagnostics and optimization. For more information, see <a href="https://help.aliyun.com/document_detail/323453.html">Diagnostics and optimization</a>.</li>
          * </ul>
          * 
          * <strong>example:</strong>

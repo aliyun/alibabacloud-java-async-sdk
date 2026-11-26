@@ -187,9 +187,9 @@ public class RerankRequest extends Request {
         } 
 
         /**
-         * <p>Instance ID.</p>
+         * <p>The instance ID.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> API to view details of all AnalyticDB PostgreSQL instances in the target region, including the instance ID.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to view the details of all AnalyticDB for PostgreSQL instances in the specified region, including instance IDs.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -203,7 +203,7 @@ public class RerankRequest extends Request {
         }
 
         /**
-         * <p>List of documents to be re-ordered.</p>
+         * <p>The list of documents to be reranked.</p>
          * 
          * <strong>example:</strong>
          * <p>ADBPG is an Alibaba Cloud OLAP database.</p>
@@ -216,7 +216,10 @@ public class RerankRequest extends Request {
         }
 
         /**
-         * Instruct.
+         * <p>The description of the custom ranking task type. This parameter can be set when RerankModel.Name is qwen3-rerank. It guides the model to use different ranking strategies.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Given a web search query, retrieve relevant passages that answer the query</p>
          */
         public Builder instruct(String instruct) {
             this.putBodyParameter("Instruct", instruct);
@@ -225,15 +228,15 @@ public class RerankRequest extends Request {
         }
 
         /**
-         * <p>Maximum number of chunks allowed when the text exceeds the model window:</p>
+         * <p>The maximum number of chunks allowed when the text exceeds the model window. Valid values:</p>
          * <ul>
-         * <li>bge-reranker-v2-m3: default value is 10.</li>
-         * <li>bge-reranker-v2-minicpm-layerwise: default value is 5:</li>
+         * <li>bge-reranker-v2-m3: 10. This is the default value.</li>
+         * <li>bge-reranker-v2-minicpm-layerwise: 5. This is the default value.</li>
          * </ul>
          * <blockquote>
-         * <p>Example of splitting</p>
+         * <p>Chunking example</p>
          * <ul>
-         * <li>If using the bge-reranker-v2-minicpm-layerwise model, the maximum single inference window is 2048 tokens. If the query is 48 tokens and the content of a single document parameter is 9000 tokens, it will be divided as follows: 1-2000 for the first, 2001-4000 for the second, and so on. If the number of splits exceeds MaxChunksPerDoc, the remaining sentences will be discarded.</li>
+         * <li>If you use the bge-reranker-v2-minicpm-layerwise model, the maximum single inference window is 2,048 tokens. If the query is 48 tokens and a single document parameter contains 9,000 tokens, the document is split into chunks: tokens 1 to 2,000 form the first chunk, tokens 2,001 to 4,000 form the second chunk, and so on. If the number of chunks exceeds the value of MaxChunksPerDoc, the subsequent text is discarded.</li>
          * </ul>
          * </blockquote>
          * 
@@ -247,10 +250,10 @@ public class RerankRequest extends Request {
         }
 
         /**
-         * <p>Rerank model, currently supports:</p>
+         * <p>The rerank model. Valid values:</p>
          * <ul>
-         * <li>bge-reranker-v2-m3: (default), better performance, supports 8192 tokens per inference, if exceeded, it will be split, which may reduce the effect.</li>
-         * <li>bge-reranker-v2-minicpm-layerwise: better performance than v2-m3, supports 2048 tokens per inference, if exceeded, it will be split, which may reduce the effect.</li>
+         * <li>bge-reranker-v2-m3: provides good performance and supports up to 8,192 tokens for a single inference. Text that exceeds this limit is split into chunks, which may degrade performance. This is the default value.</li>
+         * <li>bge-reranker-v2-minicpm-layerwise: provides better performance than bge-reranker-v2-m3 and supports up to 2,048 tokens for a single inference. Text that exceeds this limit is split into chunks, which may degrade performance.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -272,7 +275,7 @@ public class RerankRequest extends Request {
         }
 
         /**
-         * <p>Query statement for Rerank.</p>
+         * <p>The query statement for reranking.</p>
          * 
          * <strong>example:</strong>
          * <p>What is ADBPG?</p>
@@ -284,7 +287,7 @@ public class RerankRequest extends Request {
         }
 
         /**
-         * <p>Region ID where the instance is located.</p>
+         * <p>The region ID of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -297,7 +300,7 @@ public class RerankRequest extends Request {
         }
 
         /**
-         * <p>If set to false, does not return the Documents text, only returns the index of the document order and the rerank score.</p>
+         * <p>Specifies whether to return the document text. If this parameter is set to false, the document text is not returned. Only the indexes and rerank scores of the sorted documents are returned.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -309,7 +312,7 @@ public class RerankRequest extends Request {
         }
 
         /**
-         * <p>Number of most relevant documents to return.</p>
+         * <p>The number of most relevant documents to return.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>

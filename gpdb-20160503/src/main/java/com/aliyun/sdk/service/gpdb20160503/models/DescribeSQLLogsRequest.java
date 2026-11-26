@@ -262,7 +262,7 @@ public class DescribeSQLLogsRequest extends Request {
         /**
          * <p>The instance ID.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the IDs of all AnalyticDB for PostgreSQL instances within a region.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the IDs of all AnalyticDB for PostgreSQL instances in a specific region.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -288,9 +288,9 @@ public class DescribeSQLLogsRequest extends Request {
         }
 
         /**
-         * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-ddTHH:mmZ</em> format. The time must be in UTC.</p>
+         * <p>The end time of the query. Specify the time in the <i>YYYY-MM-DDThh:mmZ</i> format. The time must be in UTC.</p>
          * <blockquote>
-         * <p>The end time must be later than the start time. The maximum time range that can be specified is seven days.</p>
+         * <p>The end time must be later than the start time. The interval between the start time and the end time cannot exceed seven days.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -304,7 +304,7 @@ public class DescribeSQLLogsRequest extends Request {
         }
 
         /**
-         * <p>The execution duration of the SQL statement. Unit: seconds.</p>
+         * <p>The execution duration. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -316,10 +316,10 @@ public class DescribeSQLLogsRequest extends Request {
         }
 
         /**
-         * <p>The execution status of the SQL statement. Valid values:</p>
+         * <p>The execution state. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: successful.</li>
-         * <li><strong>0</strong>: failed.</li>
+         * <li><strong>1</strong>: Successful.</li>
+         * <li><strong>0</strong>: Failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -332,7 +332,7 @@ public class DescribeSQLLogsRequest extends Request {
         }
 
         /**
-         * <p>The maximum amount of time consumed by a slow query. Unit: seconds. Minimum value: 0.</p>
+         * <p>The maximum execution duration of slow SQL statements. The value must be greater than or equal to 0. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
@@ -344,7 +344,7 @@ public class DescribeSQLLogsRequest extends Request {
         }
 
         /**
-         * <p>The minimum amount of time consumed by a slow query. Unit: seconds. Minimum value: 0.</p>
+         * <p>The minimum execution duration of slow SQL statements. The value must be greater than or equal to 0. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -356,7 +356,7 @@ public class DescribeSQLLogsRequest extends Request {
         }
 
         /**
-         * <p>The type of the query language. Valid values:</p>
+         * <p>The operation class. Valid values:</p>
          * <ul>
          * <li><strong>DQL</strong></li>
          * <li><strong>DML</strong></li>
@@ -375,16 +375,15 @@ public class DescribeSQLLogsRequest extends Request {
         }
 
         /**
-         * <p>The type of the SQL statement.</p>
+         * <p>The type of the executed SQL statement.</p>
          * <blockquote>
+         * <ul>
+         * <li>If the <strong>OperationClass</strong> parameter is specified, the value of <strong>OperationType</strong> must belong to the corresponding language type. For example, if the value of <strong>OperationClass</strong> is <strong>DQL</strong>, the value of <strong>OperationType</strong> must be a DQL statement, such as <strong>SELECT</strong>.</li>
+         * </ul>
          * </blockquote>
          * <ul>
-         * <li><p>If <strong>OperationClass</strong> is specified, the value of <strong>OperationType</strong> must belong to the corresponding query language. For example, if <strong>OperationClass</strong> is set to <strong>DQL</strong>, the value of <strong>OperationType</strong> must be a <strong>DQL</strong> statement such as <strong>SELECT</strong>.</p>
-         * </li>
-         * <li><p>If <strong>OperationClass</strong> is not specified, the value of <strong>OperationType</strong> can be an SQL statement of any query language.</p>
-         * </li>
-         * <li><p>If <strong>OperationClass</strong> and <strong>OperationType</strong> are not specified, all types of SQL statements are returned.</p>
-         * </li>
+         * <li>If the <strong>OperationClass</strong> parameter is not specified, the value of <strong>OperationType</strong> can be any type of SQL statement.</li>
+         * <li>If neither the <strong>OperationClass</strong> parameter nor the <strong>OperationType</strong> parameter is specified, all types of SQL statements are returned.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -397,7 +396,7 @@ public class DescribeSQLLogsRequest extends Request {
         }
 
         /**
-         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * <p>The page number. The value must be greater than 0 and cannot exceed the maximum value of the Integer type. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -427,7 +426,7 @@ public class DescribeSQLLogsRequest extends Request {
         }
 
         /**
-         * <p>The keywords of the SQL statement.</p>
+         * <p>The SQL keyword.</p>
          * 
          * <strong>example:</strong>
          * <p>select 1</p>
@@ -451,7 +450,7 @@ public class DescribeSQLLogsRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-ddTHH:mmZ</em> format. The time must be in UTC.</p>
+         * <p>The start time of the query. Specify the time in the <i>YYYY-MM-DDThh:mmZ</i> format. The time must be in UTC.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -464,7 +463,7 @@ public class DescribeSQLLogsRequest extends Request {
         }
 
         /**
-         * <p>The name of the database account.</p>
+         * <p>The username.</p>
          * 
          * <strong>example:</strong>
          * <p>testadmin</p>

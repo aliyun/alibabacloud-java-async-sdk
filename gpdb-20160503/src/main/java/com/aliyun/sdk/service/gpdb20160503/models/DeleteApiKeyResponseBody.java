@@ -67,7 +67,7 @@ public class DeleteApiKeyResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>API KEY ID。</p>
+         * <p>The API key ID.</p>
          * 
          * <strong>example:</strong>
          * <p>api-xxxxxx</p>

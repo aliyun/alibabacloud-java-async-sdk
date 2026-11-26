@@ -125,7 +125,7 @@ public class ListChunksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of records on the current page.</p>
+         * <p>The number of entries on the current page.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -147,7 +147,7 @@ public class ListChunksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of records.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>

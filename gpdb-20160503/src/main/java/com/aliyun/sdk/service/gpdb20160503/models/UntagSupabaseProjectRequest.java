@@ -115,7 +115,7 @@ public class UntagSupabaseProjectRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether to unbind all tags from the instance. This parameter takes effect only when TagKey.N is not specified in the request. Valid values:</p>
+         * <p>Specifies whether to remove all tags from the instance. This parameter is valid only when TagKey.N is not specified in the request. Valid values:</p>
          * <ul>
          * <li>true</li>
          * <li>false</li>
@@ -155,8 +155,8 @@ public class UntagSupabaseProjectRequest extends Request {
         /**
          * <p>The resource type. Valid values:</p>
          * <ul>
-         * <li><code>instance</code>: reserved mode instance.</li>
-         * <li><code>ALIYUN::GPDB::INSTANCE</code>: elastic mode instance.</li>
+         * <li><code>instance</code>: reserved mode instance</li>
+         * <li><code>ALIYUN::GPDB::INSTANCE</code>: elastic mode instance</li>
          * </ul>
          * 
          * <strong>example:</strong>

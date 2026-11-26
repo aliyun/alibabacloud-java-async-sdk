@@ -117,7 +117,7 @@ public class ListTablesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
+         * <p>The token that is used to start the next query.</p>
          * 
          * <strong>example:</strong>
          * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -139,10 +139,10 @@ public class ListTablesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The status of the operation. Valid values:</p>
+         * <p>The status. Valid values:</p>
          * <ul>
-         * <li><strong>success</strong></li>
-         * <li><strong>fail</strong></li>
+         * <li><strong>success</strong>: Successful.</li>
+         * <li><strong>fail</strong>: Failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>

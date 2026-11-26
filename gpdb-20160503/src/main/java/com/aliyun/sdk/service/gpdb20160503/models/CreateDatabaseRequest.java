@@ -147,8 +147,8 @@ public class CreateDatabaseRequest extends Request {
 
         /**
          * <p>The character set.</p>
-         * <p>For more information about the value range, see Document <a href="url">https://www.postgresql.org/docs/current/multibyte.html</a>.</p>
-         * <p>Default value: UTF-8.</p>
+         * <p>For valid values, see References <a href="url">https://www.postgresql.org/docs/current/multibyte.html</a>.</p>
+         * <p>Default value: UTF8.</p>
          * 
          * <strong>example:</strong>
          * <p>UTF8</p>
@@ -160,15 +160,13 @@ public class CreateDatabaseRequest extends Request {
         }
 
         /**
-         * <p>Database locale parameter (specifies string comparison/sorting rules).</p>
+         * <p>The collation parameter of the database, which specifies the string comparison and sorting rules.</p>
          * <blockquote>
-         * </blockquote>
          * <ul>
-         * <li><p>The locale must be compatible with the character set specified by the CharacterSetName parameter.</p>
-         * </li>
-         * <li><p>Valid values for the Collate field: You can execute the SELECT DISTINCT collname FROM pg_collation; statement to obtain the field value. The default value is en_US.utf8.</p>
-         * </li>
+         * <li>The locale must be compatible with the character set specified by the CharacterSetName parameter.</li>
+         * <li>Valid values for Collate: You can run the <code>SELECT DISTINCT collname FROM pg_collation;</code> command to query the valid values. If this parameter is not specified, the default value is en_US.utf8.</li>
          * </ul>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>en_US.utf8</p>
@@ -180,15 +178,13 @@ public class CreateDatabaseRequest extends Request {
         }
 
         /**
-         * <p>Database locale parameter (defines character classification/case conversion rules).</p>
+         * <p>The character type parameter of the database, which specifies the character classification and case conversion rules.</p>
          * <blockquote>
-         * </blockquote>
          * <ul>
-         * <li><p>The locale must be compatible with the character set specified by the CharacterSetName parameter.</p>
-         * </li>
-         * <li><p>You can execute the SELECT DISTINCT collctype FROM pg_collation; statement to obtain the field value. The default value is en_US.utf8.</p>
-         * </li>
+         * <li>The locale must be compatible with the character set specified by the CharacterSetName parameter.</li>
+         * <li>You can run the <code>SELECT DISTINCT collctype FROM pg_collation;</code> command to query the valid values. If this parameter is not specified, the default value is en_US.utf8.</li>
          * </ul>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>en_US.utf8</p>
@@ -200,9 +196,9 @@ public class CreateDatabaseRequest extends Request {
         }
 
         /**
-         * <p>The cluster ID.</p>
+         * <p>The instance ID.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including the instance IDs.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -216,11 +212,11 @@ public class CreateDatabaseRequest extends Request {
         }
 
         /**
-         * <p>The name of the database.</p>
+         * <p>The name of the database. The name must meet the following requirements:</p>
          * <ul>
-         * <li>Only contains letters, digits, and underscores (_).</li>
-         * <li>Must start with a letter.</li>
-         * <li>Up to 63 characters in length.</li>
+         * <li>It can contain only letters, digits, and underscores (_).</li>
+         * <li>It must start with a letter.</li>
+         * <li>It can be up to 63 characters in length.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -236,10 +232,14 @@ public class CreateDatabaseRequest extends Request {
         /**
          * <p>The description of the database.</p>
          * <ul>
-         * <li>Must start with a letter.</li>
-         * <li>Cannot start with http:// or https://.</li>
-         * <li>Only contains letters, underscores (_), hyphens (-), and digits.</li>
-         * <li>Must be 2 to 256 characters in length.</li>
+         * <li><p>It must start with a Chinese character or a letter.</p>
+         * </li>
+         * <li><p>It cannot start with http:// or https://.</p>
+         * </li>
+         * <li><p>It can contain Chinese characters, letters, underscores (_), hyphens (-), and digits.</p>
+         * </li>
+         * <li><p>It must be 2 to 256 characters in length.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -254,10 +254,14 @@ public class CreateDatabaseRequest extends Request {
         /**
          * <p>The owner of the table.</p>
          * <ul>
-         * <li>Only contains lowercase letters, digits, and underscores (_).</li>
-         * <li>Must start with a lowercase letter and end with a lowercase letter or a digit.</li>
-         * <li>Cannot start with gp.</li>
-         * <li>Must be 2 to 16 characters in length.</li>
+         * <li><p>It can contain only lowercase letters, digits, and underscores (_).</p>
+         * </li>
+         * <li><p>It must start with a lowercase letter and end with a lowercase letter or a digit.</p>
+         * </li>
+         * <li><p>It cannot start with gp.</p>
+         * </li>
+         * <li><p>It must be 2 to 16 characters in length.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

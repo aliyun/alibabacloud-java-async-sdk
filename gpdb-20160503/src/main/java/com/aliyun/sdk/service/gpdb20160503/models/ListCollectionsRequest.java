@@ -133,7 +133,7 @@ public class ListCollectionsRequest extends Request {
         /**
          * <p>The instance ID.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including the instance IDs.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -146,7 +146,10 @@ public class ListCollectionsRequest extends Request {
         }
 
         /**
-         * <p>The name of the namespace.</p>
+         * <p>The namespace. Default value: public.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/2401495.html">CreateNamespace</a> operation to create a namespace, and call the <a href="https://help.aliyun.com/document_detail/2401502.html">ListNamespaces</a> operation to query the list of namespaces.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>mynamespace</p>
@@ -158,7 +161,7 @@ public class ListCollectionsRequest extends Request {
         }
 
         /**
-         * <p>The password of the namespace.</p>
+         * <p>The password for the namespace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -181,9 +184,6 @@ public class ListCollectionsRequest extends Request {
 
         /**
          * <p>The region ID of the instance.</p>
-         * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query the most recent region list.</p>
-         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -196,7 +196,7 @@ public class ListCollectionsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the workspace that consists of multiple AnalyticDB for PostgreSQL instances. You must specify one of the WorkspaceId and DBInstanceId parameters. If you specify both parameters, the WorkspaceId parameter takes effect.</p>
+         * <p>The ID of the workspace that consists of multiple database instances. This parameter and the DBInstanceId parameter cannot be both empty. If both parameters are specified, this parameter takes precedence.</p>
          * 
          * <strong>example:</strong>
          * <p>gp-ws-*****</p>

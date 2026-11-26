@@ -119,7 +119,7 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The name of the SSL certificate.</p>
+         * <p>The SSL certificate information.</p>
          * 
          * <strong>example:</strong>
          * <p>*.gpdbmaster.xxx.rds.aliyuncs.com</p>
@@ -130,7 +130,7 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>gp-bp12ga6v69h86****</p>
@@ -141,7 +141,7 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The name of the instance.</p>
+         * <p>The instance name.</p>
          * 
          * <strong>example:</strong>
          * <p>gp-bp12ga6v69h86****</p>
@@ -152,7 +152,7 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>D5FF8636-37F6-4CE0-8002-F8734C62C686</p>
@@ -163,7 +163,11 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether SSL encryption is enabled.</p>
+         * <p>Indicates whether Secure Sockets Layer (SSL) encryption is enabled. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: SSL encryption is enabled.</li>
+         * <li><strong>false</strong>: SSL encryption is disabled.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>

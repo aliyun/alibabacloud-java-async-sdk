@@ -67,7 +67,7 @@ public class DescribeDBResourceManagementModeResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>ABB39CC3-4488-4857-905D-2E4A051D0521</p>
@@ -80,8 +80,8 @@ public class DescribeDBResourceManagementModeResponseBody extends TeaModel {
         /**
          * <p>The resource management mode. Valid values:</p>
          * <ul>
-         * <li>resourceGroup: resource group management.</li>
-         * <li>resourceQueue: resource queue management.</li>
+         * <li>resourceGroup: resource group</li>
+         * <li>resourceQueue: resource queue</li>
          * </ul>
          * 
          * <strong>example:</strong>

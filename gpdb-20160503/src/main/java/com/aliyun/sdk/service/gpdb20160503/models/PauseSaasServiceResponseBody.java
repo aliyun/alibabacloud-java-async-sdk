@@ -67,7 +67,7 @@ public class PauseSaasServiceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>ABB39CC3-4488-4857-905D-2E4A051D0521</p>
@@ -78,7 +78,7 @@ public class PauseSaasServiceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The service ID.</p>
+         * <p>The ID of the service.</p>
          * 
          * <strong>example:</strong>
          * <p>drama-123456</p>

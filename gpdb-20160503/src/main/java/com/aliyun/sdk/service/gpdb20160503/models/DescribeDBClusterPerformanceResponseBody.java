@@ -117,7 +117,7 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The end time of the query. The time follows the ISO 8601 standard in the <code>YYYY-MM-DDTHH:mmZ</code> format. The time is displayed in UTC.</p>
+         * <p>The end time of the query in UTC. Specify the time in the <code>YYYY-MM-DDTHH:mmZ</code> format.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-11-03T15:10Z</p>
@@ -128,7 +128,7 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The name of the performance metric. For more information, see <a href="https://help.aliyun.com/document_detail/86943.html">Performance parameters</a>.</p>
+         * <p>The list of performance metric values for the instance.</p>
          */
         public Builder performanceKeys(java.util.List<PerformanceKeys> performanceKeys) {
             this.performanceKeys = performanceKeys;
@@ -147,7 +147,7 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The start time of the query. The time follows the ISO 8601 standard in the <code>YYYY-MM-DDTHH:mmZ</code> format. The time is displayed in UTC.</p>
+         * <p>The start time of the query in UTC. Specify the time in the <code>YYYY-MM-DDTHH:mmZ</code> format.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-11-03T15:00Z</p>
@@ -203,7 +203,7 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The value of the performance metric and the time when the metric value was collected.</p>
+             * <p>The performance metric value.</p>
              */
             public Builder point(java.util.List<String> point) {
                 this.point = point;
@@ -296,9 +296,9 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
             /**
              * <p>The role of the node. Valid values:</p>
              * <ul>
-             * <li><strong>master</strong>: primary coordinator node</li>
-             * <li><strong>standby</strong>: standby coordinator node</li>
-             * <li><strong>segment</strong>: compute node</li>
+             * <li><strong>master</strong>: Master node.</li>
+             * <li><strong>standby</strong>: Standby node.</li>
+             * <li><strong>segment</strong>: Compute node.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -310,7 +310,7 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The value of the performance metric collected at a point in time.</p>
+             * <p>The performance metric values. Each value corresponds to a collection time point.</p>
              */
             public Builder values(java.util.List<Values> values) {
                 this.values = values;
@@ -390,7 +390,7 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of the performance metric. For more information, see <a href="https://help.aliyun.com/document_detail/86943.html">Performance parameters</a>.</p>
+             * <p>The name of the performance metric. For more information, see <a href="https://help.aliyun.com/document_detail/86943.html">Performance metric table</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>adbpg_group_cpu_used_percent</p>
@@ -401,7 +401,7 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Details of the performance metric of a node.</p>
+             * <p>The collection of performance metrics.</p>
              */
             public Builder series(java.util.List<Series> series) {
                 this.series = series;
@@ -409,7 +409,7 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The unit of the performance metric.</p>
+             * <p>The unit of the monitoring metrics.</p>
              * 
              * <strong>example:</strong>
              * <p>%</p>

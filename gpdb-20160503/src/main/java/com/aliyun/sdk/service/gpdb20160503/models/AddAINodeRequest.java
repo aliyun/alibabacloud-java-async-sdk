@@ -101,7 +101,7 @@ public class AddAINodeRequest extends Request {
         }
 
         /**
-         * <p>The AI node specifications.</p>
+         * <p>The node specifications of the AI nodes.</p>
          * <p>This parameter is required.</p>
          */
         public Builder AINodeSpecInfos(java.util.List<AINodeSpecInfos> AINodeSpecInfos) {
@@ -111,7 +111,7 @@ public class AddAINodeRequest extends Request {
         }
 
         /**
-         * <p>The cluster ID.</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -185,7 +185,7 @@ public class AddAINodeRequest extends Request {
             } 
 
             /**
-             * <p>The number of AI nodes.</p>
+             * <p>The number of nodes.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -197,7 +197,7 @@ public class AddAINodeRequest extends Request {
             }
 
             /**
-             * <p>The AI node specifications.</p>
+             * <p>The node specifications.</p>
              * <pre><code>ADB.AIStandard.1
              * ADB.AIMedium.1
              * ADB.AILarge.1

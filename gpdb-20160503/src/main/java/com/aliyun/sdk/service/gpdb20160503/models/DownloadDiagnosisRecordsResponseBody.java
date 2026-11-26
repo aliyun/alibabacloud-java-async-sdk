@@ -80,7 +80,7 @@ public class DownloadDiagnosisRecordsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>gp-bp12ga6v69h86****</p>
@@ -91,7 +91,7 @@ public class DownloadDiagnosisRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the download task.</p>
+         * <p>The download task ID.</p>
          * 
          * <strong>example:</strong>
          * <p>11</p>
@@ -102,7 +102,7 @@ public class DownloadDiagnosisRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>B4CAF581-2AC7-41AD-8940-D56DF7AADF5B</p>

@@ -221,7 +221,7 @@ public class DescribeCollectionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of vector dimensions.</p>
+         * <p>The vector dimensions.</p>
          * 
          * <strong>example:</strong>
          * <p>1024</p>
@@ -232,7 +232,7 @@ public class DescribeCollectionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The fields that are used for full-text search. Multiple fields are separated by commas (,).</p>
+         * <p>The fields used for full-text retrieval. Multiple fields are separated by commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>title,content</p>
@@ -243,7 +243,7 @@ public class DescribeCollectionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message.</p>
+         * <p>The detailed information returned by the API operation.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -254,9 +254,13 @@ public class DescribeCollectionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The metadata of vector data, which is a JSON string in the MAP format. The key specifies the field name, and the value specifies the data type.</p>
-         * <p>**</p>
-         * <p><strong>Warning</strong> Reserved fields such as id, vector, and to_tsvector cannot be used.</p>
+         * <p>The metadata of the vector data, which is a JSON string in MAP format. The key represents the field name, and the value represents the data type.</p>
+         * <blockquote>
+         * <p>Warning: The id, vector, and to_tsvector fields are reserved and cannot be used.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;title&quot;:&quot;text&quot;,&quot;content&quot;:&quot;text&quot;}</p>
          */
         public Builder metadata(java.util.Map<String, String> metadata) {
             this.metadata = metadata;
@@ -275,7 +279,7 @@ public class DescribeCollectionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The name of the namespace.</p>
+         * <p>The namespace.</p>
          * 
          * <strong>example:</strong>
          * <p>mynamespace</p>
@@ -286,7 +290,7 @@ public class DescribeCollectionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The analyzer that is used for full-text search.</p>
+         * <p>The tokenizer used for full-text retrieval.</p>
          * 
          * <strong>example:</strong>
          * <p>zh_cn</p>
@@ -297,7 +301,7 @@ public class DescribeCollectionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The region ID of the instance.</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -319,7 +323,7 @@ public class DescribeCollectionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The method that is used to create sparse vector indexes.</p>
+         * <p>The method used to build indexes for sparse vectors.</p>
          * 
          * <strong>example:</strong>
          * <p>ip</p>
@@ -330,10 +334,10 @@ public class DescribeCollectionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>The execution status of the API operation. Valid values:</p>
          * <ul>
-         * <li><strong>success</strong></li>
-         * <li><strong>fail</strong></li>
+         * <li><strong>success</strong>: The execution succeeded.</li>
+         * <li><strong>fail</strong>: The execution failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>

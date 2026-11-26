@@ -145,7 +145,7 @@ public class DescribeExternalDataServiceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The time when the service was created.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>2019-09-08T16:00:00Z</p>
@@ -156,7 +156,7 @@ public class DescribeExternalDataServiceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The time when the service was last modified.</p>
+         * <p>The last modification time.</p>
          * 
          * <strong>example:</strong>
          * <p>2019-09-08T17:00:00Z</p>
@@ -178,7 +178,7 @@ public class DescribeExternalDataServiceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The description of the service.</p>
+         * <p>The service description.</p>
          * 
          * <strong>example:</strong>
          * <p>pxf test</p>
@@ -200,7 +200,7 @@ public class DescribeExternalDataServiceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The name of the service.</p>
+         * <p>The service name.</p>
          * 
          * <strong>example:</strong>
          * <p>test-pxf</p>
@@ -211,7 +211,7 @@ public class DescribeExternalDataServiceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The specifications of the service. Unit: compute units (CUs).</p>
+         * <p>The service specification (unit: CU).</p>
          * 
          * <strong>example:</strong>
          * <p>8</p>
@@ -222,7 +222,17 @@ public class DescribeExternalDataServiceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The status of the operation.</p>
+         * <p>The service status. Valid values:</p>
+         * <ul>
+         * <li><p>Init: The service is being initialized.</p>
+         * </li>
+         * <li><p>Running: The service is running.</p>
+         * </li>
+         * <li><p>Exception: An exception occurred.</p>
+         * </li>
+         * <li><p>Paused: The service is paused.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Running</p>

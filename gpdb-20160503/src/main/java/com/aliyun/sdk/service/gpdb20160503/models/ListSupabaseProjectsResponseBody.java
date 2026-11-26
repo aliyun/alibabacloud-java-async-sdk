@@ -132,7 +132,7 @@ public class ListSupabaseProjectsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>A list of instance details.</p>
+         * <p>The list of instance details.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -140,7 +140,7 @@ public class ListSupabaseProjectsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The maximum number of entries returned per page.</p>
+         * <p>The maximum number of results to return for the current request. Default value: 10.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -151,7 +151,7 @@ public class ListSupabaseProjectsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>A pagination token for retrieving the next page of results. If this parameter is not returned, it indicates that all results have been displayed.</p>
+         * <p>The next token.</p>
          * 
          * <strong>example:</strong>
          * <p>caeba0bbb2be03f84eb48b699f0a****</p>
@@ -162,7 +162,7 @@ public class ListSupabaseProjectsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number.</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -173,7 +173,7 @@ public class ListSupabaseProjectsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries on the current page.</p>
+         * <p>The number of records on the current page.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -195,7 +195,7 @@ public class ListSupabaseProjectsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries.</p>
+         * <p>The total number of records.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -524,13 +524,11 @@ public class ListSupabaseProjectsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates if the <strong>auto start and stop</strong> feature is enabled.
+             * <p>Specifies whether to enable <strong>auto-start and auto-stop</strong>.
              * Valid values:</p>
              * <ul>
-             * <li><p><code>true</code>: The feature is enabled. The Supabase instance automatically pauses and resumes based on traffic.</p>
-             * </li>
-             * <li><p><code>false</code>: The auto start and stop feature is disabled.</p>
-             * </li>
+             * <li>true: enabled. After this feature is enabled, Supabase automatically pauses and resumes the instance based on traffic.</li>
+             * <li>false: disabled. After this feature is disabled, the auto-start and auto-stop feature of Supabase is turned off.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -542,7 +540,7 @@ public class ListSupabaseProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the resource was created.</p>
+             * <p>The time when the instance was created.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-10-09T04:54:08Z</p>
@@ -553,7 +551,7 @@ public class ListSupabaseProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The password for the Supabase dashboard. This parameter is reserved.</p>
+             * <p>The password for the Supabase dashboard. This parameter is not used.</p>
              * 
              * <strong>example:</strong>
              * <p>xxpassword</p>
@@ -564,7 +562,7 @@ public class ListSupabaseProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The username for the Supabase dashboard. This parameter is reserved.</p>
+             * <p>The username for the Supabase dashboard. This parameter is not used.</p>
              * 
              * <strong>example:</strong>
              * <p>null</p>
@@ -575,7 +573,7 @@ public class ListSupabaseProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The disk performance level.</p>
+             * <p>The performance level of the cloud disk.</p>
              * 
              * <strong>example:</strong>
              * <p>PL0</p>
@@ -597,7 +595,7 @@ public class ListSupabaseProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The engine version.</p>
+             * <p>The database engine version.</p>
              * 
              * <strong>example:</strong>
              * <p>6.0</p>
@@ -608,7 +606,7 @@ public class ListSupabaseProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The expiration time.</p>
+             * <p>The time when the instance expires.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-04-27T16:00:00Z</p>
@@ -621,12 +619,9 @@ public class ListSupabaseProjectsResponseBody extends TeaModel {
             /**
              * <p>The billing method. Valid values:</p>
              * <ul>
-             * <li><p><strong>Postpaid</strong>: pay-as-you-go.</p>
-             * </li>
-             * <li><p><strong>Prepaid</strong>: subscription.</p>
-             * </li>
-             * <li><p><strong>Free</strong>: The instance is free of charge.</p>
-             * </li>
+             * <li><strong>Postpaid</strong>: pay-as-you-go.</li>
+             * <li><strong>Prepaid</strong>: subscription.</li>
+             * <li><strong>Free</strong>: free of charge.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -638,7 +633,7 @@ public class ListSupabaseProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The private endpoint for the Supabase dashboard.</p>
+             * <p>The internal network connection string for the Supabase dashboard.</p>
              * 
              * <strong>example:</strong>
              * <p>192.168.0.1</p>
@@ -682,7 +677,7 @@ public class ListSupabaseProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Supabase instance specification.</p>
+             * <p>The specifications of the Supabase instance.</p>
              * 
              * <strong>example:</strong>
              * <p>1C1G</p>
@@ -693,7 +688,7 @@ public class ListSupabaseProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The public endpoint for the Supabase dashboard.</p>
+             * <p>The public network connection string for the Supabase dashboard.</p>
              * 
              * <strong>example:</strong>
              * <p>10.154.11.10</p>
@@ -715,14 +710,11 @@ public class ListSupabaseProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IP whitelist. IP addresses are separated by commas. The following formats are supported:</p>
+             * <p>The IP addresses in the IP whitelist. Separate multiple IP addresses with commas. The following three formats are supported:</p>
              * <ul>
-             * <li><p>0.0.0.0/0</p>
-             * </li>
-             * <li><p>10.23.12.24 (IP)</p>
-             * </li>
-             * <li><p>10.23.12.24/24 (a Classless Inter-Domain Routing (CIDR) block; the prefix length, which is the number after the <code>/</code>, must be an integer from 1 to 32.)</p>
-             * </li>
+             * <li>0.0.0.0/0</li>
+             * <li>10.23.12.24 (IP address)</li>
+             * <li>10.23.12.24/24 (CIDR block. <code>/24</code> specifies the length of the prefix in the IP address. Valid values of the prefix length: 1 to 32.)</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -734,7 +726,7 @@ public class ListSupabaseProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the instance.</p>
+             * <p>The status of the Supabase instance.</p>
              * 
              * <strong>example:</strong>
              * <p>running</p>
@@ -745,7 +737,7 @@ public class ListSupabaseProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The storage size in GB.</p>
+             * <p>The storage capacity. Unit: GB.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>

@@ -104,8 +104,8 @@ public class ModifyVectorConfigurationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message that is returned.</p>
-         * <p>This parameter is returned only if the request fails.</p>
+         * <p>The error message.</p>
+         * <p>This parameter is returned only when the API call fails.</p>
          * 
          * <strong>example:</strong>
          * <p>Failed to modify vector configuration.</p>
@@ -127,10 +127,10 @@ public class ModifyVectorConfigurationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>The API execution status. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><strong>true</strong>: The execution succeeded.</li>
+         * <li><strong>false</strong>: The execution failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>

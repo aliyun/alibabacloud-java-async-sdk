@@ -128,7 +128,7 @@ public class DescribeSQLLogCountResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The name of the instance.</p>
+         * <p>The list of returned items.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -203,7 +203,7 @@ public class DescribeSQLLogCountResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the audit logs were generated and the number of the audit logs.</p>
+             * <p>The list of audit log statistical points. Each element contains the generation time and count of audit logs.</p>
              */
             public Builder point(java.util.List<String> point) {
                 this.point = point;
@@ -257,7 +257,7 @@ public class DescribeSQLLogCountResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Details of the audit logs.</p>
+             * <p>The return values.</p>
              */
             public Builder values(java.util.List<Values> values) {
                 this.values = values;
@@ -324,7 +324,7 @@ public class DescribeSQLLogCountResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of the table.</p>
+             * <p>The instance name.</p>
              * 
              * <strong>example:</strong>
              * <p>gp-xxxxxxxx</p>
@@ -335,7 +335,7 @@ public class DescribeSQLLogCountResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Details of the audit logs.</p>
+             * <p>The collection of return values.</p>
              */
             public Builder series(java.util.List<Series> series) {
                 this.series = series;

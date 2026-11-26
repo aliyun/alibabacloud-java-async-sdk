@@ -189,9 +189,9 @@ public class UpsertChunksRequest extends Request {
         } 
 
         /**
-         * <p>Based on the Filter input specified under TextChunks, this parameter controls whether data insertion is allowed when a Filter is provided.</p>
-         * <p>If AllowInsertWithFilter = true, the insert operation is performed when the filter does not match any data.</p>
-         * <p>If AllowInsertWithFilter = false, no action is performed if the filter does not match any data.</p>
+         * <p>Specifies whether to allow data insertion when a filter is specified. This parameter takes effect only when the Filter parameter in TextChunks is specified.</p>
+         * <p>If AllowInsertWithFilter is set to true, an insert operation is performed when the filter does not match any data.</p>
+         * <p>If AllowInsertWithFilter is set to false, no operation is performed when the filter does not match any data.</p>
          * <p>Default value: true.</p>
          * 
          * <strong>example:</strong>
@@ -206,7 +206,7 @@ public class UpsertChunksRequest extends Request {
         /**
          * <p>The name of the document collection.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/2618448.html">CreateDocumentCollection</a> operation to create a document collection and call the <a href="https://help.aliyun.com/document_detail/2618452.html">ListDocumentCollections</a> operation to query a list of document collections.</p>
+         * <p>The document collection is created by calling the <a href="https://help.aliyun.com/document_detail/2618448.html">CreateDocumentCollection</a> operation. You can call the <a href="https://help.aliyun.com/document_detail/2618452.html">ListDocumentCollections</a> operation to view the created document collections.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -220,9 +220,9 @@ public class UpsertChunksRequest extends Request {
         }
 
         /**
-         * <p>The cluster ID.</p>
+         * <p>The instance ID.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including the instance IDs.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -236,9 +236,9 @@ public class UpsertChunksRequest extends Request {
         }
 
         /**
-         * <p>The file name of the document.</p>
+         * <p>The file name.</p>
          * <blockquote>
-         * <p>When a non-empty filename is specified, the system will decide whether to overwrite the data associated with that filename based on the value of the ShouldReplaceFile parameter. If you leave this parameter empty, the data of chunks is appended to the document collection.</p>
+         * <p>If this parameter is not empty, the system determines whether to overwrite the data associated with this file name based on the value of the ShouldReplaceFile parameter. If this parameter is empty, the chunk data is directly appended and uploaded to the document collection.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -251,9 +251,9 @@ public class UpsertChunksRequest extends Request {
         }
 
         /**
-         * <p>The name of the namespace. Default value: public.</p>
+         * <p>The namespace. Default value: public.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/2401495.html">CreateNamespace</a> operation to create a namespace and call the <a href="https://help.aliyun.com/document_detail/2401502.html">ListNamespaces</a> operation to query a list of namespaces.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/2401495.html">CreateNamespace</a> operation to create a namespace and call the <a href="https://help.aliyun.com/document_detail/2401502.html">ListNamespaces</a> operation to view the namespace list.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -266,9 +266,9 @@ public class UpsertChunksRequest extends Request {
         }
 
         /**
-         * <p>The password of the namespace.</p>
+         * <p>The password for the namespace.</p>
          * <blockquote>
-         * <p>The value of this parameter is specified when you call the <a href="https://help.aliyun.com/document_detail/2401495.html">CreateNamespace</a> operation.</p>
+         * <p>This value is specified in the <a href="https://help.aliyun.com/document_detail/2401495.html">CreateNamespace</a> operation.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -291,7 +291,7 @@ public class UpsertChunksRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the cluster.</p>
+         * <p>The region ID of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -304,9 +304,9 @@ public class UpsertChunksRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to overwrite the data associated with the file name specified by the FileName parameter.</p>
-         * <p>If you set ShouldReplaceFile to true, the system deletes all data associated with the file name and then inserts new data.</p>
-         * <p>If you set ShouldReplaceFile to false, the system does not delete the data associated with the file name, but inserts or updates the data of chunks based on the TextChunks parameter.</p>
+         * <p>Specifies whether to overwrite the data associated with the specified file name. This parameter takes effect only when the FileName parameter is specified.</p>
+         * <p>If ShouldReplaceFile is set to true, all data associated with the file name is deleted before new data is inserted.</p>
+         * <p>If ShouldReplaceFile is set to false, the data associated with the file name is not deleted. Instead, chunks are inserted or updated based on the specific TextChunks parameter.</p>
          * <p>Default value: true.</p>
          * 
          * <strong>example:</strong>
@@ -319,7 +319,7 @@ public class UpsertChunksRequest extends Request {
         }
 
         /**
-         * <p>List of document chunks after splitting.</p>
+         * <p>The list of chunked documents.</p>
          */
         public Builder textChunks(java.util.List<TextChunks> textChunks) {
             String textChunksShrink = shrink(textChunks, "TextChunks", "json");
@@ -415,7 +415,7 @@ public class UpsertChunksRequest extends Request {
             } 
 
             /**
-             * <p>The content of the document.</p>
+             * <p>The document content.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -427,10 +427,10 @@ public class UpsertChunksRequest extends Request {
             }
 
             /**
-             * <p>The condition that is used to filter the data to be updated. Specify this parameter in a format that is the same as the WHERE clause.</p>
+             * <p>The filter condition for the data to be updated, in the format of an SQL WHERE clause.</p>
              * 
              * <strong>example:</strong>
-             * <p>title = \&quot;seagull\&quot;</p>
+             * <p>title = &quot;seagull&quot;</p>
              */
             public Builder filter(String filter) {
                 this.filter = filter;

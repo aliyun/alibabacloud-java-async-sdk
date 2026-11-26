@@ -67,7 +67,7 @@ public class ListDatabaseExtensionsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Extension list.</p>
+         * <p>The list of extensions.</p>
          */
         public Builder extensions(java.util.List<Extensions> extensions) {
             this.extensions = extensions;
@@ -75,7 +75,7 @@ public class ListDatabaseExtensionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The unique ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ABB39CC3-4488-4857-905D-2E4A051D0521</p>
@@ -168,7 +168,7 @@ public class ListDatabaseExtensionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The extension name.</p>
+             * <p>The name of the extension.</p>
              * 
              * <strong>example:</strong>
              * <p>zhparser</p>

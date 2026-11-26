@@ -80,7 +80,7 @@ public class CheckHadoopNetConnectionResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Return message: Returns error information if the connection fails, otherwise returns an empty string (&quot;&quot;).</p>
+         * <p>The returned message. If the connection fails, an error message is returned. Otherwise, an empty string is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>connection timeout</p>
@@ -91,11 +91,11 @@ public class CheckHadoopNetConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Connection status:</p>
+         * <p>The connection status. Valid values:</p>
          * <ul>
-         * <li><p>Network connected: Success</p>
+         * <li><p>Success: The network is connected.</p>
          * </li>
-         * <li><p>Network not connected: Failed</p>
+         * <li><p>Failed: The network is disconnected.</p>
          * </li>
          * </ul>
          * 
@@ -108,7 +108,7 @@ public class CheckHadoopNetConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>B4CAF581-2AC7-41AD-8940-D56DF7AADF5B</p>

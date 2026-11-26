@@ -93,7 +93,7 @@ public class DescribeCreateIndexJobResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details of the index creation job.</p>
+         * <p>The details of the index creation task.</p>
          */
         public Builder job(Job job) {
             this.job = job;
@@ -101,7 +101,7 @@ public class DescribeCreateIndexJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message.</p>
+         * <p>The detailed information returned by the API operation.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -112,7 +112,7 @@ public class DescribeCreateIndexJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The unique ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ABB39CC3-4488-4857-905D-2E4A051D0521</p>
@@ -123,10 +123,10 @@ public class DescribeCreateIndexJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The status of the operation. Valid values:</p>
+         * <p>The execution status of the API operation. Valid values:</p>
          * <ul>
-         * <li><strong>success</strong>.</li>
-         * <li><strong>fail</strong>.</li>
+         * <li><strong>success</strong>: Successful.</li>
+         * <li><strong>fail</strong>: Failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -261,7 +261,7 @@ public class DescribeCreateIndexJobResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether the operation is complete.</p>
+             * <p>Indicates whether the operation is completed.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -272,7 +272,7 @@ public class DescribeCreateIndexJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The job creation time.</p>
+             * <p>The time when the task was created.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-01-08 16:52:04.864664</p>
@@ -283,7 +283,7 @@ public class DescribeCreateIndexJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The error message that is returned when the current operation is abnormal or fails.</p>
+             * <p>The error message returned when the current operation encounters an exception or fails.</p>
              * 
              * <strong>example:</strong>
              * <p>Failed to connect database.</p>
@@ -305,12 +305,12 @@ public class DescribeCreateIndexJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The progress of the index creation job. Unit: %. A value of 100 indicates that the job is complete.</p>
+             * <p>The creation progress. This value is a percentage, and a value of 100 indicates that the task is completed.</p>
              * <blockquote>
-             * </blockquote>
              * <ul>
-             * <li>Only AnalyticDB for PostgreSQL V7.0 supports the Progress parameter.</li>
+             * <li>Only AnalyticDB for PostgreSQL 7.0 instances support progress updates.</li>
              * </ul>
+             * </blockquote>
              * 
              * <strong>example:</strong>
              * <p>20</p>
@@ -321,12 +321,12 @@ public class DescribeCreateIndexJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the job. Valid values:</p>
+             * <p>The task status. Valid values:</p>
              * <ul>
-             * <li><strong>Success.</strong></li>
-             * <li><strong>Failed</strong> (See the Error parameter for failure reasons).</li>
-             * <li><strong>Cancelled.</strong></li>
-             * <li>**Running.</li>
+             * <li><strong>Success</strong>: Successful.</li>
+             * <li><strong>Failed</strong>: Failed. You can check the Error field for the cause of the failure.</li>
+             * <li><strong>Cancelled</strong>: Canceled.</li>
+             * <li><strong>Running</strong>: Running.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -338,7 +338,7 @@ public class DescribeCreateIndexJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The job last updated time.</p>
+             * <p>The time when the task was updated.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-01-08 16:53:04.864664</p>

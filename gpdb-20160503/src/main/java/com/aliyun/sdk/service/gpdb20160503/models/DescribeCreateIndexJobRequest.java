@@ -164,7 +164,7 @@ public class DescribeCreateIndexJobRequest extends Request {
         /**
          * <p>The name of the collection.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/2401503.html">ListCollections</a> operation to query a list of collections.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/2401503.html">ListCollections</a> operation to query the list.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -178,9 +178,9 @@ public class DescribeCreateIndexJobRequest extends Request {
         }
 
         /**
-         * <p>The cluster ID.</p>
+         * <p>The instance ID.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in the specified region, including instance IDs.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -193,7 +193,7 @@ public class DescribeCreateIndexJobRequest extends Request {
         }
 
         /**
-         * <p>The ID of the index creation job, which is returned from the <code>CreateIndex</code> operation.</p>
+         * <p>The ID of the index creation task, which is obtained from the CreateIndex operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -206,9 +206,9 @@ public class DescribeCreateIndexJobRequest extends Request {
         }
 
         /**
-         * <p>The namespace name.</p>
+         * <p>The namespace.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/2401502.html">ListNamespaces</a> operation to query a list of namespaces.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/2401502.html">ListNamespaces</a> operation to query the list.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -224,7 +224,7 @@ public class DescribeCreateIndexJobRequest extends Request {
         /**
          * <p>The password for the namespace.</p>
          * <blockquote>
-         * <p>The value of this parameter is specified by the <a href="https://help.aliyun.com/document_detail/2401495.html">CreateNamespace</a> operation.</p>
+         * <p>This value is specified in the <a href="https://help.aliyun.com/document_detail/2401495.html">CreateNamespace</a> operation.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -247,9 +247,9 @@ public class DescribeCreateIndexJobRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the cluster.</p>
+         * <p>The region ID.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query the available region list.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query available region IDs.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -263,13 +263,7 @@ public class DescribeCreateIndexJobRequest extends Request {
         }
 
         /**
-         * <p>The ID of the workspace that consists of multiple AnalyticDB for PostgreSQL instances. You must specify one of the WorkspaceId and DBInstanceId parameters. If you specify both parameters, the WorkspaceId parameter takes precedence.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>ip</li>
-         * <li>l2</li>
-         * <li>cosine</li>
-         * </ul>
+         * <p>The ID of the workspace that consists of multiple database instances. This parameter and the DBInstanceId parameter cannot be both left empty. If both are specified, this parameter takes precedence.</p>
          * 
          * <strong>example:</strong>
          * <p>gp-ws-*****</p>

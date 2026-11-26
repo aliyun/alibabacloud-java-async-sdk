@@ -370,7 +370,7 @@ public class ListExternalDataSourcesResponseBody extends TeaModel {
              * <p>The type of the data source.</p>
              * 
              * <strong>example:</strong>
-             * <p>hdfs</p>
+             * <p>HDFS</p>
              */
             public Builder dataSourceType(String dataSourceType) {
                 this.dataSourceType = dataSourceType;

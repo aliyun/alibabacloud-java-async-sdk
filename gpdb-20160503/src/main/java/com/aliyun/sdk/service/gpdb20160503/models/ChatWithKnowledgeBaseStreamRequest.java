@@ -148,7 +148,7 @@ public class ChatWithKnowledgeBaseStreamRequest extends Request {
         /**
          * <p>The instance ID.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the IDs of all AnalyticDB for PostgreSQL instances in a region.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the IDs of all AnalyticDB for PostgreSQL instances in the specified region.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -162,7 +162,7 @@ public class ChatWithKnowledgeBaseStreamRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to return recall results. Default value: false.</p>
+         * <p>Specifies whether to return the retrieval results. Default value: false.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -174,7 +174,7 @@ public class ChatWithKnowledgeBaseStreamRequest extends Request {
         }
 
         /**
-         * <p>The knowledge retrieval parameter object. If this parameter is not specified, only chat is performed.</p>
+         * <p>The knowledge retrieval parameters. If this parameter is not specified, only the chat feature is used.</p>
          */
         public Builder knowledgeParams(KnowledgeParams knowledgeParams) {
             String knowledgeParamsShrink = shrink(knowledgeParams, "KnowledgeParams", "json");
@@ -184,7 +184,7 @@ public class ChatWithKnowledgeBaseStreamRequest extends Request {
         }
 
         /**
-         * <p>The large language model (LLM) invocation parameter object.</p>
+         * <p>The call parameters for the large language model (LLM).</p>
          * <p>This parameter is required.</p>
          */
         public Builder modelParams(ModelParams modelParams) {
@@ -204,10 +204,10 @@ public class ChatWithKnowledgeBaseStreamRequest extends Request {
         }
 
         /**
-         * <p>The system prompt template. The template must include {{ text_chunks }}, {{ user_system_prompt }}, {{ graph_entities }}, and {{ graph_relations }}. If not specified, this part does not take effect.</p>
+         * <p>The system prompt template. It must include {{ text_chunks }}, {{ user_system_prompt }}, {{ graph_entities }}, and {{ graph_relations }}. If this parameter is not specified, this part does not take effect.</p>
          * 
          * <strong>example:</strong>
-         * <p>&quot;参考以下知识回答问题:{{ text_chunks }}&quot;</p>
+         * <p>&quot;Answer the question based on the following knowledge: {{ text_chunks }}&quot;</p>
          */
         public Builder promptParams(String promptParams) {
             this.putQueryParameter("PromptParams", promptParams);
@@ -275,7 +275,7 @@ public class ChatWithKnowledgeBaseStreamRequest extends Request {
             } 
 
             /**
-             * <p>The k constant in the score calculation formula <code>1/(k+rank_i)</code>. The value must be a positive integer greater than 1.</p>
+             * <p>The constant k in the score calculation formula 1/(k+rank_i). The value must be a positive integer greater than 1.</p>
              * 
              * <strong>example:</strong>
              * <p>60</p>
@@ -474,7 +474,7 @@ public class ChatWithKnowledgeBaseStreamRequest extends Request {
             } 
 
             /**
-             * <p>This parameter can be set when RerankModel.Name is set to qwen3-rerank. Specifies a custom ranking task type description to guide the model to adopt different ranking strategies.</p>
+             * <p>This parameter can be configured when RerankModel.Name is set to qwen3-rerank. It specifies the description of a custom sorting task type to guide the model to adopt different sorting strategies.</p>
              * 
              * <strong>example:</strong>
              * <p>Given a web search query, retrieve relevant passages that answer the query</p>
@@ -485,7 +485,7 @@ public class ChatWithKnowledgeBaseStreamRequest extends Request {
             }
 
             /**
-             * <p>The reranking model name. Valid values: qwen3-rerank, gte-rerank-v2.</p>
+             * <p>The name of the reranking model. Valid values: qwen3-rerank and gte-rerank-v2.</p>
              * 
              * <strong>example:</strong>
              * <p>qwen3-rerank</p>
@@ -625,7 +625,7 @@ public class ChatWithKnowledgeBaseStreamRequest extends Request {
             } 
 
             /**
-             * <p>This parameter can be set when RerankModel.Name is set to qwen3-rerank. Specifies a custom ranking task type description to guide the model to adopt different ranking strategies.</p>
+             * <p>This parameter can be configured when RerankModel.Name is set to qwen3-rerank. It specifies the description of a custom sorting task type to guide the model to adopt different sorting strategies.</p>
              * 
              * <strong>example:</strong>
              * <p>Given a web search query, retrieve relevant passages that answer the query</p>
@@ -636,7 +636,7 @@ public class ChatWithKnowledgeBaseStreamRequest extends Request {
             }
 
             /**
-             * <p>The reranking model name. Valid values: qwen3-rerank, gte-rerank-v2.</p>
+             * <p>The name of the reranking model. Valid values: qwen3-rerank and gte-rerank-v2.</p>
              * 
              * <strong>example:</strong>
              * <p>qwen3-rerank</p>
@@ -647,7 +647,10 @@ public class ChatWithKnowledgeBaseStreamRequest extends Request {
             }
 
             /**
-             * RerankMetadataFields.
+             * <p>Specifies the metadata fields that participate in reranking. Separate multiple fields with commas (,). By default, only the document content (content) is used for reranking. The field names must be defined in the Metadata of the Collection.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>title</p>
              */
             public Builder rerankMetadataFields(String rerankMetadataFields) {
                 this.rerankMetadataFields = rerankMetadataFields;
@@ -831,10 +834,10 @@ public class ChatWithKnowledgeBaseStreamRequest extends Request {
             } 
 
             /**
-             * <p>The filter condition for the data to update, in SQL WHERE clause format.</p>
+             * <p>The filter condition for the data, in the SQL WHERE clause format.</p>
              * 
              * <strong>example:</strong>
-             * <p>method_id=\&quot;e41695f0-2851-40ac-b21d-dd337b60d71c\&quot;</p>
+             * <p>method_id=&quot;e41695f0-2851-40ac-b21d-dd337b60d71c&quot;</p>
              */
             public Builder filter(String filter) {
                 this.filter = filter;
@@ -861,12 +864,12 @@ public class ChatWithKnowledgeBaseStreamRequest extends Request {
             }
 
             /**
-             * <p>The multi-channel recall algorithm. Default value: empty (AISearch and full-text index scores are directly compared and sorted).</p>
+             * <p>The dual-path recall algorithm. Default value: empty, which means the vector and full-text scores are directly compared and sorted.</p>
              * <p>Valid values:</p>
              * <ul>
-             * <li>RRF: Reciprocal rank fusion. A parameter k controls the fusion effect. For more information, see HybridSearchArgs.</li>
-             * <li>Weight: Weighted reranking. A parameter alpha controls the score weight between AISearch and full-text index results, then performs reranking. For more information, see HybridSearchArgs.</li>
-             * <li>Cascaded: Full-text index retrieve is performed first, followed by AISearch retrieve on the full-text index results.</li>
+             * <li>RRF: reciprocal rank fusion. A parameter k is used to control the fusion effect. For more information, see the HybridSearchArgs configuration.</li>
+             * <li>Weight: weighted sorting. A parameter alpha is used to control the weight of vector and full-text scores before sorting. For more information, see the HybridSearchArgs configuration.</li>
+             * <li>Cascaded: full-text retrieval is performed first, followed by vector retrieval based on the results.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -878,9 +881,9 @@ public class ChatWithKnowledgeBaseStreamRequest extends Request {
             }
 
             /**
-             * <p>The algorithm parameters for multi-channel recall. RRF and Weight are supported:</p>
+             * <p>The algorithm parameters for dual-path retrieval. RRF and Weight are supported:</p>
              * <ul>
-             * <li>RRF: The k constant in the score calculation formula <code>1/(k+rank_i)</code>. The value must be a positive integer greater than 1. Format:</li>
+             * <li>RRF: specifies the constant k in the score calculation formula <code>1/(k+rank_i)</code>. The value must be a positive integer greater than 1. Format:</li>
              * </ul>
              * <pre><code>{ 
              *    &quot;RRF&quot;: {
@@ -889,15 +892,17 @@ public class ChatWithKnowledgeBaseStreamRequest extends Request {
              * }
              * </code></pre>
              * <ul>
-             * <li>Weight: The calculation formula is <code>alpha * vector_score + (1-alpha) * text_score</code>. The parameter alpha specifies the score weight between vector and full-text retrieval. Valid values: 0 to 1, where 0 indicates full-text only and 1 indicates vector only:</li>
+             * <li>Weight: the calculation formula is <code>alpha * vector_score + (1-alpha) * text_score</code>. The parameter alpha represents the weight of vector and full-text retrieval scores, ranging from 0 to 1. A value of 0 indicates full-text only, and 1 indicates vector only. Format:</li>
              * </ul>
              * <pre><code>{ 
              *    &quot;Weight&quot;: {
              *     &quot;alpha&quot;: 0.5
              *    }
              * }
-             * ```.
              * </code></pre>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;RRF&quot;:{&quot;k&quot;:60}}</p>
              */
             public Builder hybridSearchArgs(java.util.Map<String, ?> hybridSearchArgs) {
                 this.hybridSearchArgs = hybridSearchArgs;
@@ -908,7 +913,7 @@ public class ChatWithKnowledgeBaseStreamRequest extends Request {
              * <p>The method used to build the vector index. Valid values:</p>
              * <ul>
              * <li>l2: Euclidean distance.</li>
-             * <li>ip: inner product distance.</li>
+             * <li>ip: dot product (inner product) distance.</li>
              * <li>cosine: cosine similarity.</li>
              * </ul>
              * 
@@ -921,13 +926,16 @@ public class ChatWithKnowledgeBaseStreamRequest extends Request {
             }
 
             /**
-             * <p>The recall window. If this value is not empty, additional context is returned for retrieval results. The format is a two-element array: List&lt;A, B&gt;, where -10 &lt;= A &lt;= 0 and 0 &lt;= B &lt;= 10.</p>
+             * <p>The recall window. If this value is not empty, the context of the retrieval results is additionally returned. The format is an array of two elements: List&lt;A, B&gt;, where -10 &lt;= A &lt;= 0 and 0 &lt;= B &lt;= 10.</p>
              * <blockquote>
              * <ul>
-             * <li>Use this parameter when documents are segmented too finely and retrieval may lose contextual information.</li>
-             * <li>Reranking takes priority over windowing. Reranking is performed first, followed by windowing.</li>
+             * <li>Use this parameter when document chunks are too small and retrieval may lose context information.</li>
+             * <li>Reranking takes precedence over windowing. That is, reranking is performed before windowing.</li>
              * </ul>
              * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>[-1,1]</p>
              */
             public Builder recallWindow(java.util.List<Long> recallWindow) {
                 this.recallWindow = recallWindow;
@@ -935,11 +943,11 @@ public class ChatWithKnowledgeBaseStreamRequest extends Request {
             }
 
             /**
-             * <p>The reranking factor. If this value is not empty, the AISearch retrieve results are reranked. Valid values: 1 &lt; RerankFactor &lt;= 5.</p>
+             * <p>The reranking factor. If this value is not empty, the vector retrieval results are reranked. Valid values: 1 &lt; RerankFactor &lt;= 5.</p>
              * <blockquote>
              * <ul>
-             * <li>Reranking is slow when document chunks are sparse.</li>
-             * <li>The recommended number of reranked items (TopK × Factor, rounded up) should not exceed 50.</li>
+             * <li>When document chunks are sparse, reranking is slow.</li>
+             * <li>The number of reranked items (TopK × Factor, rounded up) should not exceed 50.</li>
              * </ul>
              * </blockquote>
              * 
@@ -971,7 +979,7 @@ public class ChatWithKnowledgeBaseStreamRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to use full-text index (multi-channel recall). Default value: false. Only AISearch retrieve is used.</p>
+             * <p>Specifies whether to use full-text retrieval (dual-path recall). Default value: false, which means only vector retrieval is used.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -1069,7 +1077,7 @@ public class ChatWithKnowledgeBaseStreamRequest extends Request {
             } 
 
             /**
-             * <p>The name of the collection to recall.</p>
+             * <p>The name of the collection to be retrieved.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1095,9 +1103,9 @@ public class ChatWithKnowledgeBaseStreamRequest extends Request {
             }
 
             /**
-             * <p>The password of the namespace.</p>
+             * <p>The password for the namespace.</p>
              * <blockquote>
-             * <p>This value is specified in the CreateNamespace operation.</p>
+             * <p>This value is specified when you call the CreateNamespace operation.</p>
              * </blockquote>
              * <p>This parameter is required.</p>
              * 
@@ -1110,7 +1118,7 @@ public class ChatWithKnowledgeBaseStreamRequest extends Request {
             }
 
             /**
-             * <p>The parameters related to retrieval from this knowledge base.</p>
+             * <p>The parameters related to the retrieval of this knowledge base.</p>
              */
             public Builder queryParams(QueryParams queryParams) {
                 this.queryParams = queryParams;
@@ -1230,10 +1238,10 @@ public class ChatWithKnowledgeBaseStreamRequest extends Request {
             } 
 
             /**
-             * <p>The method for merging results from multiple knowledge bases. Default value: RRF. Valid values:</p>
+             * <p>The method for merging multiple knowledge bases. Default value: RRF. Valid values:</p>
              * <ul>
              * <li>RRF</li>
-             * <li>Weight.</li>
+             * <li>Weight</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1245,7 +1253,7 @@ public class ChatWithKnowledgeBaseStreamRequest extends Request {
             }
 
             /**
-             * <p>The parameters for merging results from multiple knowledge bases.</p>
+             * <p>The parameters for merging multiple knowledge bases.</p>
              */
             public Builder mergeMethodArgs(MergeMethodArgs mergeMethodArgs) {
                 this.mergeMethodArgs = mergeMethodArgs;
@@ -1253,11 +1261,11 @@ public class ChatWithKnowledgeBaseStreamRequest extends Request {
             }
 
             /**
-             * <p>The reranking factor. If this value is not empty, the AISearch retrieve results are reranked. Valid values: 1 &lt; RerankFactor &lt;= 5.</p>
+             * <p>The reranking factor. If this value is not empty, the vector retrieval results are reranked. Valid values: 1 &lt; RerankFactor &lt;= 5.</p>
              * <blockquote>
              * <ul>
-             * <li>Reranking is slow when document chunks are sparse.</li>
-             * <li>The recommended number of reranked items (TopK × Factor, rounded up) should not exceed 50.</li>
+             * <li>When document chunks are sparse, reranking is slow.</li>
+             * <li>The number of reranked items (TopK × Factor, rounded up) should not exceed 50.</li>
              * </ul>
              * </blockquote>
              * 
@@ -1270,7 +1278,7 @@ public class ChatWithKnowledgeBaseStreamRequest extends Request {
             }
 
             /**
-             * <p>The reranking model parameters for performing an additional reranking on the merged results from multiple retrieval paths.</p>
+             * <p>The reranking model parameters used to rerank the merged results from multiple retrieval paths.</p>
              */
             public Builder rerankModel(RerankModel rerankModel) {
                 this.rerankModel = rerankModel;
@@ -1278,7 +1286,7 @@ public class ChatWithKnowledgeBaseStreamRequest extends Request {
             }
 
             /**
-             * <p>The knowledge base.</p>
+             * <p>The source knowledge bases.</p>
              * <p>This parameter is required.</p>
              */
             public Builder sourceCollection(java.util.List<SourceCollection> sourceCollection) {
@@ -1287,7 +1295,7 @@ public class ChatWithKnowledgeBaseStreamRequest extends Request {
             }
 
             /**
-             * <p>The number of top results to return after merging recall results from multiple vector collections.</p>
+             * <p>The number of top results to return after the recall results from multiple vector collections are merged.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -1363,7 +1371,7 @@ public class ChatWithKnowledgeBaseStreamRequest extends Request {
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
-             * <p>You are a helpful assistant.</p>
+             * <p>&quot;You are a helpful assistant.&quot;</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -1375,7 +1383,7 @@ public class ChatWithKnowledgeBaseStreamRequest extends Request {
              * <ul>
              * <li>system</li>
              * <li>user</li>
-             * <li>assistant.</li>
+             * <li>assistant</li>
              * </ul>
              * <p>This parameter is required.</p>
              * 
@@ -1463,7 +1471,7 @@ public class ChatWithKnowledgeBaseStreamRequest extends Request {
              * <p>The description of the function tool.</p>
              * 
              * <strong>example:</strong>
-             * <p>Get weather.</p>
+             * <p>&quot;Get the weather.&quot;</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1777,7 +1785,7 @@ public class ChatWithKnowledgeBaseStreamRequest extends Request {
             }
 
             /**
-             * <p>The list of stop words.</p>
+             * <p>The stop word list.</p>
              */
             public Builder stop(java.util.List<String> stop) {
                 this.stop = stop;
@@ -1804,7 +1812,7 @@ public class ChatWithKnowledgeBaseStreamRequest extends Request {
             }
 
             /**
-             * <p>The nucleus sampling probability threshold. Valid values: 0 to 1.</p>
+             * <p>The probability threshold for nucleus sampling. Valid values: 0 to 1.</p>
              * 
              * <strong>example:</strong>
              * <p>0.9</p>

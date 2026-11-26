@@ -342,7 +342,7 @@ public class ListAIServicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The internal endpoint for API debugging.</p>
+             * <p>The internal URL for API debugging.</p>
              * 
              * <strong>example:</strong>
              * <p>192.168.0.1/api-docs</p>
@@ -353,7 +353,7 @@ public class ListAIServicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The internal endpoint of the workbench.</p>
+             * <p>The internal URL of the workbench.</p>
              * 
              * <strong>example:</strong>
              * <p>192.168.0.1</p>
@@ -364,7 +364,7 @@ public class ListAIServicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The public endpoint for API debugging.</p>
+             * <p>The public URL for API debugging.</p>
              * 
              * <strong>example:</strong>
              * <p>8.8.8.8/api-docs</p>
@@ -375,7 +375,7 @@ public class ListAIServicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The public endpoint of the workbench.</p>
+             * <p>The public URL of the workbench.</p>
              * 
              * <strong>example:</strong>
              * <p>8.8.8.8</p>
@@ -386,7 +386,7 @@ public class ListAIServicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of IP addresses in the IP address whitelist group, separated by commas.</p>
+             * <p>The list of IP addresses in the IP address whitelist, separated by commas.</p>
              * 
              * <strong>example:</strong>
              * <p>127.0.0.1</p>
@@ -421,8 +421,8 @@ public class ListAIServicesResponseBody extends TeaModel {
             /**
              * <p>The service status. Valid values:</p>
              * <ul>
-             * <li>deploying: being deployed</li>
-             * <li>active: running</li>
+             * <li>deploying: deploying</li>
+             * <li>active: active</li>
              * </ul>
              * 
              * <strong>example:</strong>

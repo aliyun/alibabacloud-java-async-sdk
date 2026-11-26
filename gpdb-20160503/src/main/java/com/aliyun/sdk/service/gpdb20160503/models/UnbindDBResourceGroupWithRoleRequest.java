@@ -104,9 +104,9 @@ public class UnbindDBResourceGroupWithRoleRequest extends Request {
         } 
 
         /**
-         * <p>The instance ID.</p>
+         * <p>The ID of the instance.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in the specified region, including instance IDs.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -142,7 +142,7 @@ public class UnbindDBResourceGroupWithRoleRequest extends Request {
         }
 
         /**
-         * <p>The roles.</p>
+         * <p>The list of roles.</p>
          * <p>This parameter is required.</p>
          */
         public Builder roleList(java.util.List<String> roleList) {

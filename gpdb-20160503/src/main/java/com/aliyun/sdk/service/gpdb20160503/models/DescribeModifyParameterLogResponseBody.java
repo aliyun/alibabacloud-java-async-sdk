@@ -67,7 +67,7 @@ public class DescribeModifyParameterLogResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The queried parameter modification logs.</p>
+         * <p>The change history.</p>
          */
         public Builder changelogs(java.util.List<Changelogs> changelogs) {
             this.changelogs = changelogs;
@@ -183,7 +183,7 @@ public class DescribeModifyParameterLogResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The effective time.</p>
+             * <p>The effective period.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-01-03T17:00:00Z</p>
@@ -194,7 +194,7 @@ public class DescribeModifyParameterLogResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the parameter.</p>
+             * <p>The parameter name.</p>
              * 
              * <strong>example:</strong>
              * <p>testkey</p>
@@ -216,7 +216,7 @@ public class DescribeModifyParameterLogResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The original value of the parameter.</p>
+             * <p>The parameter value before the modification.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -227,7 +227,7 @@ public class DescribeModifyParameterLogResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The new value of the parameter.</p>
+             * <p>The parameter value after the modification.</p>
              * 
              * <strong>example:</strong>
              * <p>200</p>

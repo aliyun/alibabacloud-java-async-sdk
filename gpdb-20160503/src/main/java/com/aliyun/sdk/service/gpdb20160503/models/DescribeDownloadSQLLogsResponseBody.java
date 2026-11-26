@@ -67,7 +67,7 @@ public class DescribeDownloadSQLLogsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>List of download records.</p>
+         * <p>The list of download records.</p>
          */
         public Builder records(java.util.List<Records> records) {
             this.records = records;
@@ -75,7 +75,7 @@ public class DescribeDownloadSQLLogsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>FDE9942A-D919-527B-B559-5D0F6F20CCEC</p>
@@ -183,7 +183,7 @@ public class DescribeDownloadSQLLogsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Download record ID.</p>
+             * <p>The ID of the download record.</p>
              * 
              * <strong>example:</strong>
              * <p>1150</p>
@@ -194,7 +194,7 @@ public class DescribeDownloadSQLLogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Download link.</p>
+             * <p>The download URL.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://perth-download-task.oss-cn-beijing.aliyuncs.com/">https://perth-download-task.oss-cn-beijing.aliyuncs.com/</a>*****</p>
@@ -205,7 +205,7 @@ public class DescribeDownloadSQLLogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Error message.</p>
+             * <p>The error message.</p>
              * 
              * <strong>example:</strong>
              * <p>Error message</p>
@@ -216,7 +216,7 @@ public class DescribeDownloadSQLLogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>File name.</p>
+             * <p>The file name.</p>
              * 
              * <strong>example:</strong>
              * <p>20220509113448-20220509173448.csv</p>
@@ -227,11 +227,11 @@ public class DescribeDownloadSQLLogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Task status, with possible values being:</p>
+             * <p>The task status. Valid values:</p>
              * <ul>
-             * <li><strong>running</strong>: Downloading.</li>
-             * <li><strong>finished</strong>: Completed.</li>
-             * <li><strong>failed</strong>: Download failed.</li>
+             * <li><strong>running</strong>: The download is in progress.</li>
+             * <li><strong>finished</strong>: The download is completed.</li>
+             * <li><strong>failed</strong>: The download failed.</li>
              * </ul>
              * 
              * <strong>example:</strong>

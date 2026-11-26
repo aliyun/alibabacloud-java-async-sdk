@@ -67,7 +67,7 @@ public class DescribeRdsVpcsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>53924AF0-1628-5AA2-9C95-D4**********</p>
@@ -78,7 +78,7 @@ public class DescribeRdsVpcsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The queried VPCs.</p>
+         * <p>The list of VPCs.</p>
          */
         public Builder vpcs(Vpcs vpcs) {
             this.vpcs = vpcs;
@@ -233,7 +233,7 @@ public class DescribeRdsVpcsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>An invalid parameter. It is no longer returned when you call this operation.</p>
+             * <p><strong>[Deprecated]</strong> This parameter is deprecated. No value is returned for this parameter.</p>
              * 
              * <strong>example:</strong>
              * <p>null</p>
@@ -244,7 +244,7 @@ public class DescribeRdsVpcsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>An invalid parameter. It is no longer returned when you call this operation.</p>
+             * <p><strong>[Deprecated]</strong> This parameter is deprecated. No value is returned for this parameter.</p>
              * 
              * <strong>example:</strong>
              * <p>null</p>
@@ -257,8 +257,8 @@ public class DescribeRdsVpcsResponseBody extends TeaModel {
             /**
              * <p>Indicates whether the vSwitch is the default vSwitch. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong></li>
+             * <li><strong>true</strong>: yes</li>
+             * <li><strong>false</strong>: no</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -270,7 +270,7 @@ public class DescribeRdsVpcsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the zone to which the vSwitch belongs.</p>
+             * <p>The zone to which the vSwitch belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou-i</p>
@@ -281,7 +281,7 @@ public class DescribeRdsVpcsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The state of the vSwitch. If <strong>Available</strong> is returned, the vSwitch is available.</p>
+             * <p>The status of the vSwitch. A value of <strong>Available</strong> indicates that the vSwitch is available.</p>
              * 
              * <strong>example:</strong>
              * <p>Available</p>
@@ -490,7 +490,7 @@ public class DescribeRdsVpcsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>An invalid parameter. It is no longer returned when you call this operation.</p>
+             * <p><strong>[Deprecated]</strong> This parameter is deprecated. No value is returned for this parameter.</p>
              * 
              * <strong>example:</strong>
              * <p>null</p>
@@ -501,7 +501,7 @@ public class DescribeRdsVpcsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>An invalid parameter. It is no longer returned when you call this operation.</p>
+             * <p><strong>[Deprecated]</strong> This parameter is deprecated. No value is returned for this parameter.</p>
              * 
              * <strong>example:</strong>
              * <p>null</p>
@@ -523,7 +523,7 @@ public class DescribeRdsVpcsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>An invalid parameter. It is no longer returned when you call this operation.</p>
+             * <p><strong>[Deprecated]</strong> This parameter is deprecated. No value is returned for this parameter.</p>
              * 
              * <strong>example:</strong>
              * <p>null</p>
@@ -534,7 +534,7 @@ public class DescribeRdsVpcsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>An invalid parameter. It is no longer returned when you call this operation.</p>
+             * <p><strong>[Deprecated]</strong> This parameter is deprecated. No value is returned for this parameter.</p>
              * 
              * <strong>example:</strong>
              * <p>null</p>
@@ -547,8 +547,8 @@ public class DescribeRdsVpcsResponseBody extends TeaModel {
             /**
              * <p>Indicates whether the VPC is the default VPC. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong></li>
+             * <li><strong>true</strong>: yes</li>
+             * <li><strong>false</strong>: no</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -560,7 +560,7 @@ public class DescribeRdsVpcsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region ID of the instance.</p>
+             * <p>The region ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou</p>
@@ -571,7 +571,7 @@ public class DescribeRdsVpcsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The state of the VPC. If <strong>Available</strong> is returned, the VPC is available.</p>
+             * <p>The status of the VPC. A value of <strong>Available</strong> indicates that the VPC is available.</p>
              * 
              * <strong>example:</strong>
              * <p>Available</p>
@@ -582,7 +582,7 @@ public class DescribeRdsVpcsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The queried vSwitches.</p>
+             * <p>The list of vSwitches.</p>
              */
             public Builder vSwitchs(java.util.List<VSwitchs> vSwitchs) {
                 this.vSwitchs = vSwitchs;
@@ -658,7 +658,7 @@ public class DescribeRdsVpcsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The queried VPC.</p>
+             * <p>The VPC information.</p>
              */
             public Builder vpc(java.util.List<Vpc> vpc) {
                 this.vpc = vpc;

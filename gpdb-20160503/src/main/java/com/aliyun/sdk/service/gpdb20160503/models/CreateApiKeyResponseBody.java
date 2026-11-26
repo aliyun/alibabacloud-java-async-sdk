@@ -80,7 +80,7 @@ public class CreateApiKeyResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The API key content.</p>
+         * <p>The content of the API key.</p>
          * 
          * <strong>example:</strong>
          * <p>sk-xxxxxxx</p>
@@ -91,7 +91,7 @@ public class CreateApiKeyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>API KEY ID。</p>
+         * <p>The API key ID.</p>
          * 
          * <strong>example:</strong>
          * <p>api-xxxxxxx</p>

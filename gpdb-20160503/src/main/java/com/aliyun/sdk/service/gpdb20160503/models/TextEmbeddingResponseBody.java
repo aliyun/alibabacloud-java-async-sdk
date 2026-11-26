@@ -138,8 +138,8 @@ public class TextEmbeddingResponseBody extends TeaModel {
         /**
          * <p>The API execution status. Valid values:</p>
          * <ul>
-         * <li><strong>success</strong>: The execution is successful.</li>
-         * <li><strong>fail</strong>: The execution failed.</li>
+         * <li><strong>success</strong>: Execution succeeded.</li>
+         * <li><strong>fail</strong>: Execution failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -151,7 +151,7 @@ public class TextEmbeddingResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of tokens consumed.</p>
+         * <p>The total number of consumed tokens.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>

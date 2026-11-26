@@ -89,7 +89,7 @@ public class DescribeStreamingJobRequest extends Request {
         } 
 
         /**
-         * <p>Instance ID.</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,7 +102,7 @@ public class DescribeStreamingJobRequest extends Request {
         }
 
         /**
-         * <p>Job ID.</p>
+         * <p>The job ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,9 +115,9 @@ public class DescribeStreamingJobRequest extends Request {
         }
 
         /**
-         * <p>Region ID.</p>
+         * <p>The region ID.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> interface to view available region IDs.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query available region IDs.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

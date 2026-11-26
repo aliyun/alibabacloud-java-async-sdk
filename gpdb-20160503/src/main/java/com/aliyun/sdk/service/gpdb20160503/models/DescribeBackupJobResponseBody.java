@@ -134,7 +134,7 @@ public class DescribeBackupJobResponseBody extends TeaModel {
         /**
          * <p>The backup set ID.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/210093.html">DescribeDataBackups</a> operation to query the IDs of all backup sets in the instance.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/210093.html">DescribeDataBackups</a> operation to query the IDs of all backup sets for the target instance.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -146,7 +146,7 @@ public class DescribeBackupJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The backup job ID.</p>
+         * <p>The backup task ID.</p>
          * 
          * <strong>example:</strong>
          * <p>123</p>
@@ -159,8 +159,8 @@ public class DescribeBackupJobResponseBody extends TeaModel {
         /**
          * <p>The backup mode. Valid values:</p>
          * <ul>
-         * <li><strong>Automated</strong></li>
-         * <li><strong>Manual</strong></li>
+         * <li><strong>Automated</strong>: automatic backup</li>
+         * <li><strong>Manual</strong>: manual backup</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -174,10 +174,10 @@ public class DescribeBackupJobResponseBody extends TeaModel {
         /**
          * <p>The backup status. Valid values:</p>
          * <ul>
-         * <li><strong>schedule</strong></li>
-         * <li><strong>check</strong></li>
-         * <li><strong>backup</strong></li>
-         * <li><strong>finish</strong></li>
+         * <li><strong>schedule</strong>: initializing</li>
+         * <li><strong>check</strong>: checking</li>
+         * <li><strong>backup</strong>: backing up</li>
+         * <li><strong>finish</strong>: completed</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -189,7 +189,7 @@ public class DescribeBackupJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The progress of the backup job.</p>
+         * <p>The progress percentage of the backup task.</p>
          * 
          * <strong>example:</strong>
          * <p>50%</p>
@@ -211,7 +211,7 @@ public class DescribeBackupJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The time when the backup job started. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The start time of the backup task in UTC. The format is YYYY-MM-DDThh:mm:ssZ.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-01-03T16:00:00Z</p>

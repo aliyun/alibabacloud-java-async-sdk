@@ -74,7 +74,7 @@ public class GetApiKeyRequest extends Request {
         } 
 
         /**
-         * <p>API KEY ID。</p>
+         * <p>The API key ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

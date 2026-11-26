@@ -75,9 +75,9 @@ public class DescribeZonesPrivateRAGServiceRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in the specified region, including the instance ID.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -91,9 +91,9 @@ public class DescribeZonesPrivateRAGServiceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region.</p>
+         * <p>The region ID.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation get a list of available region IDs.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query available region IDs.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 

@@ -93,7 +93,7 @@ public class DescribeSQLLogsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The queried SQL execution logs.</p>
+         * <p>The list of results.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -101,7 +101,7 @@ public class DescribeSQLLogsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number.</p>
+         * <p>The page number of the returned query result.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -112,7 +112,7 @@ public class DescribeSQLLogsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of entries returned per page.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -348,7 +348,7 @@ public class DescribeSQLLogsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The database account that executes the SQL statement.</p>
+             * <p>The database account that executed the SQL statement.</p>
              * 
              * <strong>example:</strong>
              * <p>testadmin</p>
@@ -370,7 +370,7 @@ public class DescribeSQLLogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The role of the database.</p>
+             * <p>The database role.</p>
              * 
              * <strong>example:</strong>
              * <p>master</p>
@@ -381,7 +381,7 @@ public class DescribeSQLLogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The execution duration of the SQL statement.</p>
+             * <p>The execution duration.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -392,10 +392,10 @@ public class DescribeSQLLogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The execution status of the SQL statement. Valid values:</p>
+             * <p>The execution state. Valid values:</p>
              * <ul>
-             * <li><strong>success</strong></li>
-             * <li><strong>fail</strong></li>
+             * <li><strong>success</strong>: Successful.</li>
+             * <li><strong>fail</strong>: Failed.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -407,7 +407,7 @@ public class DescribeSQLLogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the query language.</p>
+             * <p>The operation class.</p>
              * 
              * <strong>example:</strong>
              * <p>DQL</p>
@@ -418,7 +418,7 @@ public class DescribeSQLLogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the SQL statement was executed.</p>
+             * <p>The execution time.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-03-15T17:02:32Z</p>
@@ -429,7 +429,7 @@ public class DescribeSQLLogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the SQL statement.</p>
+             * <p>The type of the executed SQL statement.</p>
              * 
              * <strong>example:</strong>
              * <p>SELECT</p>
@@ -440,7 +440,7 @@ public class DescribeSQLLogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of entries returned.</p>
+             * <p>The number of rows returned in the execution result.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -462,7 +462,7 @@ public class DescribeSQLLogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The SQL statement.</p>
+             * <p>The content of the SQL statement.</p>
              * 
              * <strong>example:</strong>
              * <p>select 1</p>
@@ -473,7 +473,7 @@ public class DescribeSQLLogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of entries scanned.</p>
+             * <p>The number of scanned rows.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -495,7 +495,7 @@ public class DescribeSQLLogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of the source port.</p>
+             * <p>The source port.</p>
              * 
              * <strong>example:</strong>
              * <p>50514</p>

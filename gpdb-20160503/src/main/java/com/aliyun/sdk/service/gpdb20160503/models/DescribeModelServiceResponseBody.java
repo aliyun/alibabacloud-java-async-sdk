@@ -252,7 +252,7 @@ public class DescribeModelServiceResponseBody extends TeaModel {
          * <p>The model parameters.</p>
          * 
          * <strong>example:</strong>
-         * <p>Not yet available.</p>
+         * <p>暂未开放</p>
          */
         public Builder modelParams(java.util.Map<String, ?> modelParams) {
             this.modelParams = modelParams;

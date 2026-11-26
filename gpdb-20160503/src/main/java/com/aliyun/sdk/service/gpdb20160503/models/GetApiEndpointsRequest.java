@@ -87,7 +87,7 @@ public class GetApiEndpointsRequest extends Request {
         } 
 
         /**
-         * <p>The maximum number of records to return in this query.</p>
+         * <p>The maximum number of records to return in this request.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -99,7 +99,7 @@ public class GetApiEndpointsRequest extends Request {
         }
 
         /**
-         * <p>The pagination token for the next query.</p>
+         * <p>The token used to start the next query.</p>
          * 
          * <strong>example:</strong>
          * <p>caeba0bbb2be03f84eb48b699f0a4883</p>

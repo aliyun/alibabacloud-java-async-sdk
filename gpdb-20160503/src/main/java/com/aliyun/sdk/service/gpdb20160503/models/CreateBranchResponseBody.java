@@ -91,7 +91,7 @@ public class CreateBranchResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the Supabase project that corresponds to the primary branch.</p>
+         * <p>The ID of the Supabase project to which the main branch belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>spb-xxxx</p>

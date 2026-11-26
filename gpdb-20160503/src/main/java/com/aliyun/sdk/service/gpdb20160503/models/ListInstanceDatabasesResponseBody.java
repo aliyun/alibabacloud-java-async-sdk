@@ -93,9 +93,9 @@ public class ListInstanceDatabasesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The cluster ID.</p>
+         * <p>The instance ID.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in a specified region, including the instance IDs.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -107,7 +107,7 @@ public class ListInstanceDatabasesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The queried databases.</p>
+         * <p>The list of queried databases.</p>
          */
         public Builder databases(java.util.List<Databases> databases) {
             this.databases = databases;
@@ -115,7 +115,7 @@ public class ListInstanceDatabasesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The unique ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ABB39CC3-4488-4857-905D-2E4A051D0521</p>
@@ -197,9 +197,12 @@ public class ListInstanceDatabasesResponseBody extends TeaModel {
             /**
              * <p>The database name.</p>
              * <ul>
-             * <li>Only contain letters, digits, and underscores (_).</li>
-             * <li>Must start with a letter.</li>
-             * <li>Up to 63 characters in length.</li>
+             * <li><p>The name can contain only letters, digits, and underscores (_).</p>
+             * </li>
+             * <li><p>The name must start with a letter.</p>
+             * </li>
+             * <li><p>The name cannot exceed 63 characters in length.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>

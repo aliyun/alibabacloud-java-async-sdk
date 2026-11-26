@@ -240,7 +240,7 @@ public class ListAINodePoolsResponseBody extends TeaModel {
              * </ul>
              * 
              * <strong>example:</strong>
-             * <p>bound</p>
+             * <p>bound：表示已绑定。</p>
              */
             public Builder bindStatus(String bindStatus) {
                 this.bindStatus = bindStatus;

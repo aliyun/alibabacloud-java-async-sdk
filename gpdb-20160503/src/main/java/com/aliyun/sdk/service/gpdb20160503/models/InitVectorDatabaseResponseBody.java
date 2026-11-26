@@ -80,7 +80,7 @@ public class InitVectorDatabaseResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The error message returned if the request fails.</p>
+         * <p>The details of the error message.</p>
          * 
          * <strong>example:</strong>
          * <p>failed to connect database, detailMsg: getConnection fail::SQL State: 28P01, Error Code: 0, Error Message: FATAL: password</p>
@@ -102,10 +102,10 @@ public class InitVectorDatabaseResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>The execution status of the API operation. Valid values:</p>
          * <ul>
-         * <li><strong>Success</strong></li>
-         * <li><strong>fail</strong></li>
+         * <li><strong>success</strong>: The execution succeeded.</li>
+         * <li><strong>fail</strong>: The execution failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>

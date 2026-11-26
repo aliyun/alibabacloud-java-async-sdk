@@ -214,9 +214,9 @@ public class ListSlowSQLRecordsRequest extends Request {
         } 
 
         /**
-         * <p>The cluster ID.</p>
+         * <p>The instance ID.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including the instance IDs.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -230,7 +230,7 @@ public class ListSlowSQLRecordsRequest extends Request {
         }
 
         /**
-         * <p>The name of the database.</p>
+         * <p>The database name.</p>
          * 
          * <strong>example:</strong>
          * <p>testdb01</p>
@@ -242,8 +242,8 @@ public class ListSlowSQLRecordsRequest extends Request {
         }
 
         /**
-         * <p>The end of the time range to query. The time must be in UTC and formatted as <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z. The time must be in UTC. The end time must be later than the start time.</p>
-         * <p>Defaults to the current time.</p>
+         * <p>The end time of the query. The end time must be later than the start time. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z format. The time must be in UTC.</p>
+         * <p>Default value: The current time.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-12-04T17:00:00Z</p>
@@ -255,7 +255,7 @@ public class ListSlowSQLRecordsRequest extends Request {
         }
 
         /**
-         * <p>The search keyword.</p>
+         * <p>The query keyword.</p>
          * 
          * <strong>example:</strong>
          * <p>SELECT</p>
@@ -267,7 +267,7 @@ public class ListSlowSQLRecordsRequest extends Request {
         }
 
         /**
-         * <p>The longest execution duration. Unit: seconds.</p>
+         * <p>The maximum execution duration. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>600</p>
@@ -291,26 +291,40 @@ public class ListSlowSQLRecordsRequest extends Request {
         }
 
         /**
-         * <p>Sort criteria (JSON string). {&quot;Field&quot;:&quot;QueryStartTime&quot;,&quot;Type&quot;:&quot;Desc&quot;}</p>
-         * <p>Field: Specifies the field to sort by.</p>
+         * <p>The sorting conditions in JSON format. Example: {&quot;Field&quot;:&quot;QueryStartTime&quot;,&quot;Type&quot;:&quot;Desc&quot;}.</p>
+         * <p>Field: the field to sort by. Valid values:</p>
          * <ul>
-         * <li>QueryID: Query ID.</li>
-         * <li>UserName: The username.</li>
-         * <li>DBName: The name of the database.</li>
-         * <li>QueryStartTime: The start time.</li>
-         * <li>QueryEndTime: The end time.</li>
-         * <li>DurationTime: The execution duration of the query.</li>
-         * <li>Optimizer.</li>
-         * <li>LockWaitTime: The lock waiting time.</li>
-         * <li>QueueWaitTime: Time in Queue.</li>
-         * <li>CpuTimeMs: CPU time.</li>
-         * <li>MemBytes: The memory usage.</li>
-         * <li>SpillBytes: Spill File Size.</li>
+         * <li><p>QueryID: the query ID.</p>
+         * </li>
+         * <li><p>UserName: the username.</p>
+         * </li>
+         * <li><p>DBName: the database name.</p>
+         * </li>
+         * <li><p>QueryStartTime: the start time.</p>
+         * </li>
+         * <li><p>QueryEndTime: the end time.</p>
+         * </li>
+         * <li><p>DurationTime: the execution duration.</p>
+         * </li>
+         * <li><p>Optimizer: the optimizer.</p>
+         * </li>
+         * <li><p>LockWaitTime: the lock wait time.</p>
+         * </li>
+         * <li><p>QueueWaitTime: the queue wait time.</p>
+         * </li>
+         * <li><p>CpuTimeMs: the CPU time.</p>
+         * </li>
+         * <li><p>MemBytes: the memory usage.</p>
+         * </li>
+         * <li><p>SpillBytes: the size of spilled files.</p>
+         * </li>
          * </ul>
-         * <p>Type: Sort order.</p>
+         * <p>Type: the sorting order. Valid values:</p>
          * <ul>
-         * <li>Desc: descending.</li>
-         * <li>Asc: ascending.</li>
+         * <li><p>Desc: descending order.</p>
+         * </li>
+         * <li><p>Asc: ascending order.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -323,7 +337,8 @@ public class ListSlowSQLRecordsRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return. The value must be a positive integer in the range [1, 100]. Default value: 1.</p>
+         * <p>The page number. The value must be greater than 0 and less than or equal to 100.</p>
+         * <p>Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -365,8 +380,8 @@ public class ListSlowSQLRecordsRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query. The time must be in UTC and formatted as yyyy-MM-ddTHH:mmZ.</p>
-         * <p>Defaults to the current time minus 5 minutes.</p>
+         * <p>The start time of the query. Specify the time in the yyyy-MM-ddTHH:mmZ format. The time must be in UTC.</p>
+         * <p>Default value: 5 minutes before the current time.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-12-04T16:00:00Z</p>
@@ -378,7 +393,7 @@ public class ListSlowSQLRecordsRequest extends Request {
         }
 
         /**
-         * <p>The account name.</p>
+         * <p>The database username.</p>
          * 
          * <strong>example:</strong>
          * <p>test_user</p>

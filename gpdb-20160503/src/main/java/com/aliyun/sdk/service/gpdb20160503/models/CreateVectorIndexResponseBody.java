@@ -80,7 +80,7 @@ public class CreateVectorIndexResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The response message.</p>
+         * <p>The detailed information returned by the operation.</p>
          * 
          * <strong>example:</strong>
          * <p>Successful</p>
@@ -102,12 +102,10 @@ public class CreateVectorIndexResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The status of the request. Valid values:</p>
+         * <p>The execution status of the API operation. Valid values:</p>
          * <ul>
-         * <li><p><strong>success</strong>: The request was successful.</p>
-         * </li>
-         * <li><p><strong>fail</strong>: The request failed.</p>
-         * </li>
+         * <li><strong>success</strong>: The operation is successful.</li>
+         * <li><strong>fail</strong>: The operation fails.</li>
          * </ul>
          * 
          * <strong>example:</strong>

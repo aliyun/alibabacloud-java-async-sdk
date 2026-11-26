@@ -75,7 +75,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>7565770E-7C45-462D-BA4A-8A5396F2CAD1</p>

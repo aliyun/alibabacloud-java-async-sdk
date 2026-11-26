@@ -82,11 +82,16 @@ public class DescribeHadoopConfigsResponseBody extends TeaModel {
         /**
          * <p>The name of the configuration file. Valid values:</p>
          * <ul>
-         * <li>hdfs-site</li>
-         * <li>core-site</li>
-         * <li>yarn-site</li>
-         * <li>mapred-site</li>
-         * <li>hive-site</li>
+         * <li><p>hdfs-site</p>
+         * </li>
+         * <li><p>core-site</p>
+         * </li>
+         * <li><p>yarn-site</p>
+         * </li>
+         * <li><p>mapred-site</p>
+         * </li>
+         * <li><p>hive-site</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

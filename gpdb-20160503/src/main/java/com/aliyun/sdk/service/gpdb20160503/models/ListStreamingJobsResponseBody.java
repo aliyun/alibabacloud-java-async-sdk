@@ -646,7 +646,7 @@ public class ListStreamingJobsResponseBody extends TeaModel {
              * </ol>
              * 
              * <strong>example:</strong>
-             * <p>basic / professional</p>
+             * <p>Basic / Professional</p>
              */
             public Builder mode(String mode) {
                 this.mode = mode;

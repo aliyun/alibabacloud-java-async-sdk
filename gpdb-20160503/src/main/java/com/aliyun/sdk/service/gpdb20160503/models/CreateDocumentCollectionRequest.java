@@ -447,8 +447,8 @@ public class CreateDocumentCollectionRequest extends Request {
          * <p>Valid values:</p>
          * <ul>
          * <li>hnswflat: HNSW index without quantization compression (default).</li>
-         * <li>novam: graph index without quantization compression, suitable for high-performance scenarios such as real-time recommendations.</li>
-         * <li>novad: partitioned index with RaBitQ quantization, suitable for large-scale low-cost retrieval scenarios.</li>
+         * <li>novam: Graph index without quantization compression, suitable for high-performance scenarios such as real-time recommendation.</li>
+         * <li>novad: Partitioned index with rabitq quantization, suitable for large-scale, low-cost retrieval scenarios.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -461,9 +461,9 @@ public class CreateDocumentCollectionRequest extends Request {
         }
 
         /**
-         * <p>The name of the knowledge base to create.</p>
+         * <p>The name of the document library to create.</p>
          * <blockquote>
-         * <p>The name must comply with PostgreSQL object naming conventions.</p>
+         * <p>The name must comply with the object naming conventions of PostgreSQL.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -479,7 +479,7 @@ public class CreateDocumentCollectionRequest extends Request {
         /**
          * <p>The instance ID.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in a region, including instance IDs.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including the instance IDs.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -493,7 +493,7 @@ public class CreateDocumentCollectionRequest extends Request {
         }
 
         /**
-         * <p>The vector dimensions. The default value is the dimension supported by the embedding model.</p>
+         * <p>The vector dimensions. The default value is the dimension supported by the embedding algorithm.</p>
          * 
          * <strong>example:</strong>
          * <p>1024</p>
@@ -505,26 +505,26 @@ public class CreateDocumentCollectionRequest extends Request {
         }
 
         /**
-         * <p>The embedding model. Default value: text-embedding-v3.</p>
+         * <p>The embedding algorithm. Default value: text-embedding-v3.</p>
          * <blockquote>
-         * <p>Supported models:</p>
+         * <p>Supported algorithms:</p>
          * <ul>
          * <li>text-embedding-v3 (recommended, default): 1024, 768, or 512 dimensions</li>
-         * <li>multimodal-embedding-v1 (recommended): 1024 dimensions, multimodal embedding model</li>
+         * <li>multimodal-embedding-v1 (recommended): 1024 dimensions, multimodal embedding algorithm</li>
          * <li>text-embedding-v1: 1536 dimensions</li>
          * <li>text-embedding-v2: 1536 dimensions</li>
          * <li>text2vec (not recommended): 1024 dimensions</li>
          * <li>m3e-base (not recommended): 768 dimensions</li>
          * <li>m3e-small (not recommended): 512 dimensions</li>
-         * <li>clip-vit-b-32 (not recommended): CLIP ViT-B/32 model, 512 dimensions, image embedding model</li>
-         * <li>clip-vit-b-16 (not recommended): CLIP ViT-B/16 model, 512 dimensions, image embedding model</li>
-         * <li>clip-vit-l-14 (not recommended): CLIP ViT-L/14 model, 768 dimensions, image embedding model</li>
-         * <li>clip-vit-l-14-336px (not recommended): CLIP ViT-L/14@336px model, 768 dimensions, image embedding model</li>
-         * <li>clip-rn50 (not recommended): CLIP RN50 model, 1024 dimensions, image embedding model</li>
-         * <li>clip-rn101 (not recommended): CLIP RN101 model, 512 dimensions, image embedding model</li>
-         * <li>clip-rn50x4 (not recommended): CLIP RN50x4 model, 640 dimensions, image embedding model</li>
-         * <li>clip-rn50x16 (not recommended): CLIP RN50x16 model, 768 dimensions, image embedding model</li>
-         * <li>clip-rn50x64 (not recommended): CLIP RN50x64 model, 1024 dimensions, image embedding model</li>
+         * <li>clip-vit-b-32 (not recommended): CLIP ViT-B/32 model, 512 dimensions, image embedding algorithm</li>
+         * <li>clip-vit-b-16 (not recommended): CLIP ViT-B/16 model, 512 dimensions, image embedding algorithm</li>
+         * <li>clip-vit-l-14 (not recommended): CLIP ViT-L/14 model, 768 dimensions, image embedding algorithm</li>
+         * <li>clip-vit-l-14-336px (not recommended): CLIP ViT-L/14@336px model, 768 dimensions, image embedding algorithm</li>
+         * <li>clip-rn50 (not recommended): CLIP RN50 model, 1024 dimensions, image embedding algorithm</li>
+         * <li>clip-rn101 (not recommended): CLIP RN101 model, 512 dimensions, image embedding algorithm</li>
+         * <li>clip-rn50x4 (not recommended): CLIP RN50x4 model, 640 dimensions, image embedding algorithm</li>
+         * <li>clip-rn50x16 (not recommended): CLIP RN50x16 model, 768 dimensions, image embedding algorithm</li>
+         * <li>clip-rn50x64 (not recommended): CLIP RN50x64 model, 1024 dimensions, image embedding algorithm</li>
          * </ul>
          * </blockquote>
          * 
@@ -540,7 +540,7 @@ public class CreateDocumentCollectionRequest extends Request {
         /**
          * <p>Specifies whether to enable knowledge graph construction. Default value: false.</p>
          * <blockquote>
-         * <p>Before using this parameter, upgrade the instance to a version that supports the graph engine. (During the public preview, submit a ticket to upgrade the version.)</p>
+         * <p>Before you use this parameter, the instance must be upgraded to a version that supports the graph engine. (During the public preview, submit a ticket to upgrade the version.)</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -569,14 +569,14 @@ public class CreateDocumentCollectionRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to use mmap to build the HNSW index. Default value: 0. If data does not need to be deleted and you require high upload performance, set this parameter to 1.</p>
+         * <p>Specifies whether to use mmap to build the HNSW index. Default value: 0. If data deletion is not required and high data upload speed is needed, we recommend that you set this parameter to 1.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>0: uses segment-page storage to build the index. This mode uses shared_buffer in PostgreSQL as cache and supports delete and update operations.</li>
-         * <li>1: uses mmap to build the index. This mode does not support delete or update operations.</li>
+         * <li>0: Uses the default segment-page storage to build the index. In this mode, shared_buffer in PostgreSQL can be used for caching, and operations such as deletion and update are supported.</li>
+         * <li>1: Uses mmap to build the index. In this mode, operations such as deletion and update are not supported.</li>
          * </ul>
          * <blockquote>
-         * <p>Notice: Only version 6.0 supports the ExternalStorage parameter. Version 7.0 does not support this parameter.</p>
+         * <p>Notice: The ExternalStorage parameter is supported only in V6.0. It is not supported in V7.0.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -589,7 +589,7 @@ public class CreateDocumentCollectionRequest extends Request {
         }
 
         /**
-         * <p>The fields used for full-text retrieval. Separate multiple fields with commas (,). The fields must be keys defined in Metadata.</p>
+         * <p>The fields used to retrieve data from the full-text index. Separate multiple fields with commas (,). The fields must be keys defined in Metadata.</p>
          * 
          * <strong>example:</strong>
          * <p>title,page</p>
@@ -601,12 +601,12 @@ public class CreateDocumentCollectionRequest extends Request {
         }
 
         /**
-         * <p>The candidate set size when building an index with the HNSW algorithm. The value must be &gt;= 2*HNSW_M.</p>
+         * <p>The size of the candidate set when building the index with the HNSW algorithm. The value must be greater than or equal to 2 × HNSW_M.</p>
          * <blockquote>
          * <p>Valid values:</p>
          * <ul>
-         * <li>AnalyticDB for PostgreSQL 6.0 instances: 40 to 4000.</li>
-         * <li>AnalyticDB for PostgreSQL 7.0 instances: 4 to 1000. Default value: 64.</li>
+         * <li>AnalyticDB for PostgreSQL V6.0 instances: 40 to 4000.</li>
+         * <li>AnalyticDB for PostgreSQL V7.0 instances: 4 to 1000. Default value: 64.</li>
          * </ul>
          * </blockquote>
          * 
@@ -620,20 +620,20 @@ public class CreateDocumentCollectionRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of neighbors in the HNSW algorithm. This value is automatically set based on the vector dimensions. Manual configuration is generally not required.</p>
+         * <p>The maximum number of neighbors in the HNSW algorithm. The operation automatically sets this value based on the vector dimensions. Manual configuration is generally not required.</p>
          * <blockquote>
          * <p>Valid values:</p>
          * <ul>
-         * <li>AnalyticDB for PostgreSQL 6.0 instances: 1 to 1000.</li>
-         * <li>AnalyticDB for PostgreSQL 7.0 instances: 2 to 100. Default value: 16.</li>
+         * <li>AnalyticDB for PostgreSQL V6.0 instances: 1 to 1000.</li>
+         * <li>AnalyticDB for PostgreSQL V7.0 instances: 2 to 100. Default value: 16.</li>
          * </ul>
          * </blockquote>
          * <blockquote>
          * <p>Recommended values based on vector dimensions:</p>
          * <ul>
-         * <li>384 or fewer: 16</li>
-         * <li>Greater than 384 and up to 768: 32</li>
-         * <li>Greater than 768 and up to 1024: 64</li>
+         * <li>Less than or equal to 384: 16</li>
+         * <li>Greater than 384 and less than or equal to 768: 32</li>
+         * <li>Greater than 768 and less than or equal to 1024: 64</li>
          * <li>Greater than 1024: 128</li>
          * </ul>
          * </blockquote>
@@ -648,9 +648,9 @@ public class CreateDocumentCollectionRequest extends Request {
         }
 
         /**
-         * <p>The LLM model name. Valid values:</p>
+         * <p>The name of the LLM. Valid values:</p>
          * <ul>
-         * <li>knowledge-extract-standard: default value.</li>
+         * <li>knowledge-extract-standard: Default value.</li>
          * <li>knowledge-extract-mini<blockquote>
          * <p>This parameter takes effect only when knowledge graph construction is enabled.</p>
          * </blockquote>
@@ -667,7 +667,7 @@ public class CreateDocumentCollectionRequest extends Request {
         }
 
         /**
-         * <p>The language used for knowledge graph construction. Valid values:</p>
+         * <p>The language used to construct the knowledge graph. Valid values:</p>
          * <ul>
          * <li>Simplified Chinese: Simplified Chinese. Default value.</li>
          * <li>English: English.<blockquote>
@@ -715,16 +715,16 @@ public class CreateDocumentCollectionRequest extends Request {
         }
 
         /**
-         * <p>The metadata of vector data, in the format of a JSON string representing a MAP. The key represents the field name, and the value represents the data type.</p>
+         * <p>The metadata of the vector data, which is a JSON string in MAP format. The key represents the field name, and the value represents the data type.</p>
          * <blockquote>
          * <p>Supported data types:</p>
          * <ul>
-         * <li>For the list of data types, see <a href="https://help.aliyun.com/document_detail/424383.html">Data types</a>.</li>
+         * <li>For a list of data types, see <a href="https://help.aliyun.com/document_detail/424383.html">Data types</a>.</li>
          * <li>The money type is not supported.</li>
          * </ul>
          * </blockquote>
          * <blockquote>
-         * <p>Warning: The following fields are reserved and cannot be used: id, vector, doc_name, content, loader_metadata, source, and to_tsvector.</p>
+         * <p>Warning: The id, vector, doc_name, content, loader_metadata, source, and to_tsvector fields are reserved and cannot be used.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -749,12 +749,12 @@ public class CreateDocumentCollectionRequest extends Request {
         }
 
         /**
-         * <p>The distance metric used for building vector indexes.</p>
+         * <p>The distance metric used when building the vector index.</p>
          * <p>Valid values:</p>
          * <ul>
          * <li><strong>l2</strong>: Euclidean distance.</li>
-         * <li><strong>ip</strong>: inner product distance.</li>
-         * <li><strong>cosine</strong> (default): cosine similarity.</li>
+         * <li><strong>ip</strong>: Dot product (inner product) distance.</li>
+         * <li><strong>cosine</strong> (default): Cosine similarity.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -769,7 +769,7 @@ public class CreateDocumentCollectionRequest extends Request {
         /**
          * <p>The namespace. Default value: public.</p>
          * <blockquote>
-         * <p>You can create a namespace by calling the <a href="https://help.aliyun.com/document_detail/2401495.html">CreateNamespace</a> operation and query the list of namespaces by calling the <a href="https://help.aliyun.com/document_detail/2401502.html">ListNamespaces</a> operation.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/2401495.html">CreateNamespace</a> operation to create a namespace, or call the <a href="https://help.aliyun.com/document_detail/2401502.html">ListNamespaces</a> operation to view the namespace list.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -791,7 +791,7 @@ public class CreateDocumentCollectionRequest extends Request {
         }
 
         /**
-         * <p>The tokenizer used for full-text retrieval. Default value: zh_cn.</p>
+         * <p>The tokenizer used to retrieve data from the full-text index. Default value: zh_cn.</p>
          * 
          * <strong>example:</strong>
          * <p>zh_cn</p>
@@ -803,10 +803,10 @@ public class CreateDocumentCollectionRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable Product Quantization (PQ) algorithm acceleration for the index. We recommend enabling this feature when the data volume exceeds 500,000. Valid values:</p>
+         * <p>Specifies whether to enable the Product Quantization (PQ) algorithm to accelerate index building. It is recommended to enable this feature when the data volume exceeds 500,000. Valid values:</p>
          * <ul>
-         * <li>0: disabled.</li>
-         * <li>1: enabled (default).</li>
+         * <li>0: Disable.</li>
+         * <li>1: Enable (default).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -848,7 +848,7 @@ public class CreateDocumentCollectionRequest extends Request {
         }
 
         /**
-         * <p>The metadata fields used for building sparse vectors. Separate multiple fields with commas (,). The fields must be keys defined in Metadata.</p>
+         * <p>The metadata fields used to build sparse vectors. Separate multiple fields with commas (,). The fields must be keys defined in Metadata.</p>
          * 
          * <strong>example:</strong>
          * <p>title,abstract</p>
@@ -860,7 +860,7 @@ public class CreateDocumentCollectionRequest extends Request {
         }
 
         /**
-         * <p>The sparse vector index configuration. If specified, a sparse vector index is created.</p>
+         * <p>The sparse vector index configuration. If this parameter is specified, a sparse vector index is created.</p>
          */
         public Builder sparseVectorIndexConfig(SparseVectorIndexConfig sparseVectorIndexConfig) {
             String sparseVectorIndexConfigShrink = shrink(sparseVectorIndexConfig, "SparseVectorIndexConfig", "json");
@@ -968,7 +968,7 @@ public class CreateDocumentCollectionRequest extends Request {
              * <p>Valid values:</p>
              * <ul>
              * <li>hnswflat: HNSW index without quantization compression (default).</li>
-             * <li>novam: graph index without quantization compression, suitable for high-performance scenarios such as real-time recommendations.</li>
+             * <li>novam: Graph index without quantization compression, suitable for high-performance scenarios such as real-time recommendation.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -980,9 +980,9 @@ public class CreateDocumentCollectionRequest extends Request {
             }
 
             /**
-             * <p>The candidate set size when building an index with the HNSW algorithm. Valid values: 4 to 1000. Default value: 64.</p>
+             * <p>The size of the candidate set when building the index with the HNSW algorithm. Valid values: 4 to 1000. Default value: 64.</p>
              * <blockquote>
-             * <p>This parameter is required only for AnalyticDB for PostgreSQL 7.0 instances, and the value must be &gt;= 2*HNSW_M.</p>
+             * <p>This parameter is required only for AnalyticDB for PostgreSQL V7.0 instances, and the value must be greater than or equal to 2 × HNSW_M.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -994,20 +994,20 @@ public class CreateDocumentCollectionRequest extends Request {
             }
 
             /**
-             * <p>The maximum number of neighbors in the HNSW algorithm. This value is automatically set based on the vector dimensions. Manual configuration is generally not required.</p>
+             * <p>The maximum number of neighbors in the HNSW algorithm. The operation automatically sets this value based on the vector dimensions. Manual configuration is generally not required.</p>
              * <blockquote>
              * <p>Valid values:</p>
              * <ul>
-             * <li>AnalyticDB for PostgreSQL 6.0 instances: 1 to 1000.</li>
-             * <li>AnalyticDB for PostgreSQL 7.0 instances: 2 to 100. Default value: 16.</li>
+             * <li>AnalyticDB for PostgreSQL V6.0 instances: 1 to 1000.</li>
+             * <li>AnalyticDB for PostgreSQL V7.0 instances: 2 to 100. Default value: 16.</li>
              * </ul>
              * </blockquote>
              * <blockquote>
              * <p>Recommended values based on vector dimensions:</p>
              * <ul>
-             * <li>384 or fewer: 16</li>
-             * <li>Greater than 384 and up to 768: 32</li>
-             * <li>Greater than 768 and up to 1024: 64</li>
+             * <li>Less than or equal to 384: 16</li>
+             * <li>Greater than 384 and less than or equal to 768: 32</li>
+             * <li>Greater than 768 and less than or equal to 1024: 64</li>
              * <li>Greater than 1024: 128</li>
              * </ul>
              * </blockquote>
@@ -1080,7 +1080,7 @@ public class CreateDocumentCollectionRequest extends Request {
             } 
 
             /**
-             * <p>The Novad list count (number of partitions). Valid values: 2 to 1073741824. Default value: 256.</p>
+             * <p>The number of lists (partitions) for Novad. Valid values: [2, 1073741824]. Default value: 256.</p>
              * 
              * <strong>example:</strong>
              * <p>256</p>
@@ -1091,7 +1091,7 @@ public class CreateDocumentCollectionRequest extends Request {
             }
 
             /**
-             * <p>The number of RaBitQ compression bits. Valid values: 1 to 8. Default value: 3.</p>
+             * <p>The number of compression bits for rabitq. Valid values: [1, 8]. Default value: 3.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>

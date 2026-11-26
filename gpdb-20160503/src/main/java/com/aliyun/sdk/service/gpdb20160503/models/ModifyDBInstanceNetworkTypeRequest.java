@@ -119,7 +119,7 @@ public class ModifyDBInstanceNetworkTypeRequest extends Request {
         /**
          * <p>The instance ID.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including the instance IDs.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -133,10 +133,10 @@ public class ModifyDBInstanceNetworkTypeRequest extends Request {
         }
 
         /**
-         * <p>The new network type of the instance. Valid values:</p>
+         * <p>The network type. Valid values:</p>
          * <ul>
-         * <li>VPC</li>
-         * <li>Classic</li>
+         * <li>VPC: VPC.</li>
+         * <li>Classic: classic network.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -150,7 +150,7 @@ public class ModifyDBInstanceNetworkTypeRequest extends Request {
         }
 
         /**
-         * <p>The internal IP address of the instance.</p>
+         * <p>The internal IP address.</p>
          * 
          * <strong>example:</strong>
          * <p>10.10.XX.XX</p>
@@ -162,7 +162,7 @@ public class ModifyDBInstanceNetworkTypeRequest extends Request {
         }
 
         /**
-         * <p>The virtual private cloud (VPC) ID of the instance.</p>
+         * <p>The VPC ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-bp19ame5m1r3oejns****</p>
@@ -174,7 +174,7 @@ public class ModifyDBInstanceNetworkTypeRequest extends Request {
         }
 
         /**
-         * <p>The vSwitch ID of the instance. This parameter must be specified when VPCId is specified.</p>
+         * <p>The vSwitch ID. This parameter is required if you specify a VPC ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-bp1cpq8mr64paltkb****</p>

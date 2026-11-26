@@ -105,7 +105,7 @@ public class UpgradeExtensionsRequest extends Request {
         /**
          * <p>The instance ID.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in a specified region, including instance IDs.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -119,7 +119,7 @@ public class UpgradeExtensionsRequest extends Request {
         }
 
         /**
-         * <p>Database name.</p>
+         * <p>The name of the database.</p>
          * 
          * <strong>example:</strong>
          * <p>test01</p>
@@ -131,7 +131,7 @@ public class UpgradeExtensionsRequest extends Request {
         }
 
         /**
-         * <p>The extensions that you want to update. Separate multiple extensions with commas (,).</p>
+         * <p>The plug-ins to be upgraded. Separate multiple plug-ins with commas (,).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -75,7 +75,10 @@ public class ModifySQLCollectorPolicyRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the IDs of all AnalyticDB for PostgreSQL instances in the specified region.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -88,10 +91,10 @@ public class ModifySQLCollectorPolicyRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable or disable SQL collection.</p>
+         * <p>The SQL collection status. Valid values:</p>
          * <ul>
-         * <li>Enable: enables SQL collection.</li>
-         * <li>Disabled: disables SQL collection.</li>
+         * <li>Enable: SQL collection is enabled.</li>
+         * <li>Disabled: SQL collection is disabled.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

@@ -67,7 +67,7 @@ public class RestoreBranchResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The branch ID that uniquely identifies a Supabase branch.</p>
+         * <p>The branch ID, which uniquely identifies a Supabase branch.</p>
          * 
          * <strong>example:</strong>
          * <p>br-xxxx</p>

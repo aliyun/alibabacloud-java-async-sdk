@@ -74,7 +74,7 @@ public class GetSupabaseProjectDashboardAccountRequest extends Request {
         } 
 
         /**
-         * <p>The Supabase project ID.</p>
+         * <p>The Supabase instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

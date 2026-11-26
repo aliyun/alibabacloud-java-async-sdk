@@ -74,9 +74,9 @@ public class DescribeDBInstanceNetInfoRequest extends Request {
         } 
 
         /**
-         * <p>The endpoint that is used to connect to the instance.</p>
+         * <p>The database endpoint.</p>
          * <blockquote>
-         * <p> If you do not specify this parameter, the information about all endpoints of the instance is returned.</p>
+         * <p>If you do not specify this parameter, the information about all database endpoints is returned.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -91,7 +91,7 @@ public class DescribeDBInstanceNetInfoRequest extends Request {
         /**
          * <p>The instance ID.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including instance IDs.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
