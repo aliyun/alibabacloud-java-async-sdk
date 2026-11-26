@@ -74,7 +74,10 @@ public class ListQualityCheckSchemeRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the baseMe agent.</p>
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder baseMeAgentId(Long baseMeAgentId) {
             this.putQueryParameter("BaseMeAgentId", baseMeAgentId);
@@ -83,12 +86,12 @@ public class ListQualityCheckSchemeRequest extends Request {
         }
 
         /**
-         * <p>The complete JSON string. For more information, see the details that follow.</p>
+         * <p>The complete JSON string. For details, see the following information.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>{
-         *       &quot;name&quot;: &quot;质检方案A&quot;
+         *       &quot;name&quot;: &quot;Quality Check Scheme A&quot;
          * }</p>
          */
         public Builder jsonStr(String jsonStr) {

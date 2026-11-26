@@ -424,7 +424,10 @@ public class ListRulesV4Request extends Request {
         } 
 
         /**
-         * <p>Workspace ID.</p>
+         * <p>The ID of the business workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder baseMeAgentId(Long baseMeAgentId) {
             this.putQueryParameter("BaseMeAgentId", baseMeAgentId);
@@ -433,10 +436,10 @@ public class ListRulesV4Request extends Request {
         }
 
         /**
-         * <p>Name of the business that owns the rule.</p>
+         * <p>The name of the business to which the rule belongs.</p>
          * 
          * <strong>example:</strong>
-         * <p>所有业务</p>
+         * <p>All businesses</p>
          */
         public Builder businessName(String businessName) {
             this.putBodyParameter("BusinessName", businessName);
@@ -445,10 +448,10 @@ public class ListRulesV4Request extends Request {
         }
 
         /**
-         * <p>Top-level business category.</p>
+         * <p>The major business category.</p>
          * 
          * <strong>example:</strong>
-         * <p>无</p>
+         * <p>None</p>
          */
         public Builder businessRange(Integer businessRange) {
             this.putBodyParameter("BusinessRange", businessRange);
@@ -457,10 +460,10 @@ public class ListRulesV4Request extends Request {
         }
 
         /**
-         * <p>Category name.</p>
+         * <p>The category name.</p>
          * 
          * <strong>example:</strong>
-         * <p>分类名称A</p>
+         * <p>Category name A</p>
          */
         public Builder categoryName(String categoryName) {
             this.putBodyParameter("CategoryName", categoryName);
@@ -469,7 +472,7 @@ public class ListRulesV4Request extends Request {
         }
 
         /**
-         * <p>Whether to count the total number of items.</p>
+         * <p>Specifies whether to count the total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -481,7 +484,7 @@ public class ListRulesV4Request extends Request {
         }
 
         /**
-         * <p>ID of the rule creator. Same as CreateUserId. Specify one only.</p>
+         * <p>The ID of the rule creator. This parameter is equivalent to CreateUserId. Specify only one of them.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -493,7 +496,7 @@ public class ListRulesV4Request extends Request {
         }
 
         /**
-         * <p>ID of the rule creator. Same as CreateEmpId. Specify one only.</p>
+         * <p>The ID of the rule creator. This parameter is equivalent to CreateEmpid. Specify only one of them.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -505,7 +508,7 @@ public class ListRulesV4Request extends Request {
         }
 
         /**
-         * <p>Current page number.</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -517,7 +520,7 @@ public class ListRulesV4Request extends Request {
         }
 
         /**
-         * <p>Filter by creation time (right boundary).</p>
+         * <p>The end time for filtering by creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-11-29 19:11:09</p>
@@ -529,7 +532,7 @@ public class ListRulesV4Request extends Request {
         }
 
         /**
-         * <p>ID of the rule updater. Same as UpdateUserId. Specify one only.</p>
+         * <p>The ID of the rule updater. This parameter is equivalent to UpdateUserId. Specify only one of them.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -541,7 +544,7 @@ public class ListRulesV4Request extends Request {
         }
 
         /**
-         * <p>Current page number.</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -553,7 +556,7 @@ public class ListRulesV4Request extends Request {
         }
 
         /**
-         * <p>Number of items per page.</p>
+         * <p>The number of entries to return on each page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -565,7 +568,7 @@ public class ListRulesV4Request extends Request {
         }
 
         /**
-         * <p>Required fields.</p>
+         * <p>The required fields.</p>
          */
         public Builder requireInfos(java.util.List<String> requireInfos) {
             this.putBodyParameter("RequireInfos", requireInfos);
@@ -574,7 +577,7 @@ public class ListRulesV4Request extends Request {
         }
 
         /**
-         * <p>Search by rule ID.</p>
+         * <p>The rule ID to search for.</p>
          * 
          * <strong>example:</strong>
          * <p>895EAD5312634F5AA708E3B3FA79662E</p>
@@ -586,7 +589,7 @@ public class ListRulesV4Request extends Request {
         }
 
         /**
-         * <p>Search by rule ID or rule name.</p>
+         * <p>The rule ID or rule name to search for.</p>
          * 
          * <strong>example:</strong>
          * <p>xx</p>
@@ -598,7 +601,7 @@ public class ListRulesV4Request extends Request {
         }
 
         /**
-         * <p>Scoring type.</p>
+         * <p>The scoring type.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -610,7 +613,7 @@ public class ListRulesV4Request extends Request {
         }
 
         /**
-         * <p>Rule category.</p>
+         * <p>The rule category.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -622,7 +625,7 @@ public class ListRulesV4Request extends Request {
         }
 
         /**
-         * <p>Quality inspection scheme ID.</p>
+         * <p>The ID of the quality inspection plan.</p>
          * 
          * <strong>example:</strong>
          * <p>1000000090</p>
@@ -634,7 +637,7 @@ public class ListRulesV4Request extends Request {
         }
 
         /**
-         * <p>Source type.</p>
+         * <p>The source type.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -646,7 +649,7 @@ public class ListRulesV4Request extends Request {
         }
 
         /**
-         * <p>Filter by creation time (left boundary).</p>
+         * <p>The start time for filtering by creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-11-29 18:11:09</p>
@@ -658,7 +661,7 @@ public class ListRulesV4Request extends Request {
         }
 
         /**
-         * <p>Rule status.</p>
+         * <p>The rule status.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -670,7 +673,10 @@ public class ListRulesV4Request extends Request {
         }
 
         /**
-         * TargetType.
+         * <p>The rule type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>21</p>
          */
         public Builder targetType(String targetType) {
             this.putBodyParameter("TargetType", targetType);
@@ -679,7 +685,7 @@ public class ListRulesV4Request extends Request {
         }
 
         /**
-         * <p>Type value of the rule category that the rule belongs to.</p>
+         * <p>The type value of the rule type to which the rule belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -691,10 +697,10 @@ public class ListRulesV4Request extends Request {
         }
 
         /**
-         * <p>Name of the rule category that the rule belongs to.</p>
+         * <p>The name of the rule type to which the rule belongs.</p>
          * 
          * <strong>example:</strong>
-         * <p>所有类型</p>
+         * <p>All types</p>
          */
         public Builder typeName(String typeName) {
             this.putBodyParameter("TypeName", typeName);
@@ -703,7 +709,7 @@ public class ListRulesV4Request extends Request {
         }
 
         /**
-         * <p>Filter by update time (right boundary).</p>
+         * <p>The end time for filtering by update time.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-11-29 18:11:09</p>
@@ -715,7 +721,7 @@ public class ListRulesV4Request extends Request {
         }
 
         /**
-         * <p>Filter by update time (left boundary).</p>
+         * <p>The start time for filtering by update time.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-11-29 16:11:09</p>
@@ -727,7 +733,7 @@ public class ListRulesV4Request extends Request {
         }
 
         /**
-         * <p>ID of the rule updater. Same as LastUpdateEmpId. Specify one only.</p>
+         * <p>The ID of the rule updater. This parameter is equivalent to LastUpdateEmpid. Specify only one of them.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

@@ -106,9 +106,9 @@ public class SubmitReviewInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The result code. 200 indicates success.</p>
+         * <p>The result code. A value of 200 indicates success.</p>
          * <blockquote>
-         * <p>If the value is different, it indicates failure. Callers can use this field to determine the cause of failure.</p>
+         * <p>If the value is not 200, the request failed. You can use this field to determine the cause of the failure.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -120,7 +120,7 @@ public class SubmitReviewInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Returns the quality inspection score after review upon successful saving.</p>
+         * <p>The quality inspection score after the review. This field is returned when the review results are saved.</p>
          * 
          * <strong>example:</strong>
          * <p>95</p>
@@ -131,7 +131,7 @@ public class SubmitReviewInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates error details on failure, or <strong>successful</strong> on success.</p>
+         * <p>The error details when an error occurs. The value is <strong>successful</strong> when the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>successful</p>
@@ -142,7 +142,7 @@ public class SubmitReviewInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>9987D326-83D9-4A42-B9A5-0B27F9B40539</p>
@@ -153,13 +153,11 @@ public class SubmitReviewInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
-         * <p>Callers can use this field to determine if the request was successful:</p>
+         * <p>Indicates whether the request is successful.</p>
+         * <p>You can use this field to determine whether the request is successful:</p>
          * <ul>
-         * <li><p>true indicates success</p>
-         * </li>
-         * <li><p>false/null indicates failure</p>
-         * </li>
+         * <li>true: The request is successful.</li>
+         * <li>false or null: The request failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>

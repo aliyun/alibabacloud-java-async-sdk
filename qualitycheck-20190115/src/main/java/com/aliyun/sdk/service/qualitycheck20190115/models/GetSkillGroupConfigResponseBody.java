@@ -106,9 +106,9 @@ public class GetSkillGroupConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The response code. A value of <strong>200</strong> indicates a successful response.</p>
+         * <p>The result code. A value of <strong>200</strong> indicates success.</p>
          * <blockquote>
-         * <p>Other values indicate a failed response. You can use this field to identify the cause of the failure.</p>
+         * <p>Any other value indicates failure. You can use this field to determine the cause of the failure.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -120,7 +120,7 @@ public class GetSkillGroupConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The details of the skill group rule configuration.</p>
+         * <p>The list of skill group rule configuration details.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -128,7 +128,7 @@ public class GetSkillGroupConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response message. If the request is successful, a value of <strong>successful</strong> is returned. If the request fails, an error message is returned.</p>
+         * <p>The error details when an error occurs, or <strong>successful</strong> when the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>successful</p>
@@ -150,13 +150,11 @@ public class GetSkillGroupConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
-         * <p>The caller can use this field to determine whether the request was successful:</p>
+         * <p>Indicates whether the request is successful.</p>
+         * <p>You can use this field to determine whether the request is successful:</p>
          * <ul>
-         * <li><p><strong>true</strong>: The request was successful.</p>
-         * </li>
-         * <li><p>false or <strong>null</strong>: The request failed.</p>
-         * </li>
+         * <li><strong>true</strong>: The request is successful.</li>
+         * <li><strong>false/null</strong>: The request failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -718,12 +716,10 @@ public class GetSkillGroupConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether to perform a full-text quality check after the real-time quality check is complete. Valid values:</p>
+             * <p>Specifies whether to perform full-text quality check after the real-time quality check ends. Valid values:</p>
              * <ul>
-             * <li><p>1: yes</p>
-             * </li>
-             * <li><p>0: no</p>
-             * </li>
+             * <li>1: Perform full-text quality check.</li>
+             * <li>0: Do not perform full-text quality check.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -735,7 +731,7 @@ public class GetSkillGroupConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the rule used for the full-text quality check.</p>
+             * <p>The quality check rule IDs for full-text quality check.</p>
              * 
              * <strong>example:</strong>
              * <p>223</p>
@@ -754,7 +750,7 @@ public class GetSkillGroupConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the configuration was created.</p>
+             * <p>The creation time.</p>
              * 
              * <strong>example:</strong>
              * <p>2020-12-01T15:12Z</p>
@@ -776,10 +772,10 @@ public class GetSkillGroupConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>This is an internal parameter. You can ignore it.</p>
+             * <p>An internal field. Ignore this field.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxx</p>
+             * <p>Deprecated field</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -801,7 +797,7 @@ public class GetSkillGroupConfigResponseBody extends TeaModel {
              * <p>The language model name.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxx</p>
+             * <p>General model</p>
              */
             public Builder modelName(String modelName) {
                 this.modelName = modelName;
@@ -812,7 +808,7 @@ public class GetSkillGroupConfigResponseBody extends TeaModel {
              * <p>The configuration name.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxx</p>
+             * <p>General configuration</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -822,10 +818,8 @@ public class GetSkillGroupConfigResponseBody extends TeaModel {
             /**
              * <p>The quality check type. Valid values:</p>
              * <ul>
-             * <li><p>0: offline</p>
-             * </li>
-             * <li><p>1: real-time</p>
-             * </li>
+             * <li>0: Offline quality check.</li>
+             * <li>1: Real-time quality check.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -856,7 +850,7 @@ public class GetSkillGroupConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The source of the skill group. The value is fixed at 0.</p>
+             * <p>The source of the skill group. The value is fixed to 0.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -881,7 +875,7 @@ public class GetSkillGroupConfigResponseBody extends TeaModel {
              * <p>The skill group name.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxx</p>
+             * <p>General skill group</p>
              */
             public Builder skillGroupName(String skillGroupName) {
                 this.skillGroupName = skillGroupName;
@@ -889,7 +883,11 @@ public class GetSkillGroupConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the configuration. Valid values: 0 (disabled) and 1 (enabled).</p>
+             * <p>The enabling status. Valid values:</p>
+             * <ul>
+             * <li>0: Disabled.</li>
+             * <li>1: Enabled.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -900,7 +898,11 @@ public class GetSkillGroupConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The configuration type. Valid values: 1 (custom configuration) and 0 (built-in configuration).</p>
+             * <p>The configuration type. Valid values:</p>
+             * <ul>
+             * <li>1: Custom configuration.</li>
+             * <li>0: Built-in system configuration.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -911,7 +913,7 @@ public class GetSkillGroupConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the configuration was last updated.</p>
+             * <p>The update time.</p>
              * 
              * <strong>example:</strong>
              * <p>2020-12-01T19:28Z</p>
@@ -922,7 +924,7 @@ public class GetSkillGroupConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The hotword ID.</p>
+             * <p>The hot word ID.</p>
              * 
              * <strong>example:</strong>
              * <p>123</p>
@@ -933,7 +935,7 @@ public class GetSkillGroupConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The hotword name.</p>
+             * <p>The hot word name.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>

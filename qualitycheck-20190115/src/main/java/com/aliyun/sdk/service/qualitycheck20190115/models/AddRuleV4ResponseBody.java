@@ -132,7 +132,7 @@ public class AddRuleV4ResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The result code. \<code>**200**\\</code> indicates that the request was successful. Other values indicate that the request failed. You can use this parameter to identify the cause of a failure.</p>
+         * <p>The result code. `**200**` indicates that the request was successful. Other values indicate that the request failed. You can use this parameter to identify the cause of a failure.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -146,7 +146,7 @@ public class AddRuleV4ResponseBody extends TeaModel {
          * <p>The ID of the new rule.</p>
          * 
          * <strong>example:</strong>
-         * <p>无</p>
+         * <p>82546</p>
          */
         public Builder data(Long data) {
             this.data = data;
@@ -195,7 +195,7 @@ public class AddRuleV4ResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. \<code>true\\</code>: The request was successful. \<code>false\\</code> or \<code>null\\</code>: The request failed.</p>
+         * <p>Indicates whether the request was successful. `true`: The request was successful. `false` or `null`: The request failed.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

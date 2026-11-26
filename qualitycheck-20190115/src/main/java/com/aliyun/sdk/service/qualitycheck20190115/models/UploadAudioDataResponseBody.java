@@ -106,7 +106,7 @@ public class UploadAudioDataResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The response code. A value of 200 indicates success. Other values indicate failure. You can use this field to determine the cause of failure.</p>
+         * <p>The result code. A value of 200 indicates success. Any other value indicates failure. You can use this field to determine the cause of the failure.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -117,7 +117,7 @@ public class UploadAudioDataResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The task ID, which is used when retrieving task results.</p>
+         * <p>The task ID. This ID is used when you obtain the task result.</p>
          * 
          * <strong>example:</strong>
          * <p>76DB5D8C-5BD9-42A7-B527-5AF3A5***</p>
@@ -128,7 +128,7 @@ public class UploadAudioDataResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message when the request fails. The value is &quot;successful&quot; when the request succeeds.</p>
+         * <p>The error message. If the request fails, this field displays the error details. If the request is successful, the value is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>successful</p>
@@ -139,7 +139,7 @@ public class UploadAudioDataResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID, which uniquely identifies the request.</p>
+         * <p>The request ID. This ID uniquely identifies the request.</p>
          * 
          * <strong>example:</strong>
          * <p>76DB5D8C-5BD9-42A7-B527-5AF3A5F8***</p>
@@ -150,11 +150,7 @@ public class UploadAudioDataResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request is successful. Valid values:</p>
-         * <ul>
-         * <li>true: The request is successful.</li>
-         * <li>false/null: The request failed.</li>
-         * </ul>
+         * <p>Indicates whether the request is successful. You can use this field to determine whether the request is successful. A value of true indicates success. A value of false or null indicates failure.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

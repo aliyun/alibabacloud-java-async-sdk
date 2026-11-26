@@ -73,7 +73,7 @@ public class UpdateAgentRequest extends Request {
         } 
 
         /**
-         * <p>The business space ID.</p>
+         * <p>The workspace ID.</p>
          * 
          * <strong>example:</strong>
          * <p>12345</p>

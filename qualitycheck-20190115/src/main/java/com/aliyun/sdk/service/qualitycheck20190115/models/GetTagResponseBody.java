@@ -106,7 +106,7 @@ public class GetTagResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The result code. A value of 200 indicates success. Other values indicate failure. You can use this field to determine the cause of a failure.</p>
+         * <p>The result code. A value of 200 indicates success, and other values indicate failure. You can determine the cause of the failure based on this field.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -125,7 +125,7 @@ public class GetTagResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message, if any.</p>
+         * <p>The error message returned if an error occurs.</p>
          * 
          * <strong>example:</strong>
          * <p>successful</p>
@@ -147,11 +147,7 @@ public class GetTagResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the call was successful. Valid values:</p>
-         * <ul>
-         * <li>true: The call was successful.</li>
-         * <li>false: The call failed.</li>
-         * </ul>
+         * <p>Indicates whether the call was successful. Valid values: true: The call was successful. false: The call failed.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -309,7 +305,7 @@ public class GetTagResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the label was created.</p>
+             * <p>The time when the tag was created.</p>
              * 
              * <strong>example:</strong>
              * <p>1748428991000</p>
@@ -320,10 +316,10 @@ public class GetTagResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The label description.</p>
+             * <p>The tag description.</p>
              * 
              * <strong>example:</strong>
-             * <p>用于归集售后服务相关的所有意图与 FAQ</p>
+             * <p>Used to aggregate all intents and FAQs related to after-sales services</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -342,7 +338,7 @@ public class GetTagResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the label was last modified.</p>
+             * <p>The time when the tag was last modified.</p>
              * 
              * <strong>example:</strong>
              * <p>1748428991000</p>
@@ -353,10 +349,10 @@ public class GetTagResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The label name.</p>
+             * <p>The tag name.</p>
              * 
              * <strong>example:</strong>
-             * <p>售后问题</p>
+             * <p>After-sales issues</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -364,7 +360,7 @@ public class GetTagResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the parent label node.</p>
+             * <p>The parent tag node ID.</p>
              * 
              * <strong>example:</strong>
              * <p>-1</p>
@@ -375,7 +371,7 @@ public class GetTagResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The label ID.</p>
+             * <p>The tag ID.</p>
              * 
              * <strong>example:</strong>
              * <p>128</p>

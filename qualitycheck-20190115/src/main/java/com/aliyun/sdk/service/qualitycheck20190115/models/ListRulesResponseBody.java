@@ -435,7 +435,7 @@ public class ListRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type value of the rule\&quot;s rule type.</p>
+             * <p>The type value of the rule&quot;s rule type.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -446,7 +446,7 @@ public class ListRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the rule\&quot;s rule type.</p>
+             * <p>The name of the rule&quot;s rule type.</p>
              * 
              * <strong>example:</strong>
              * <p>服务规范</p>

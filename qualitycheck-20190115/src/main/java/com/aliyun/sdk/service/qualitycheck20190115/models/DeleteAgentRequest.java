@@ -85,10 +85,10 @@ public class DeleteAgentRequest extends Request {
         }
 
         /**
-         * <p>A JSON-formatted string. For more information about the complete JSON string, see the following details.</p>
+         * <p>The JSON-formatted string. For the complete JSON string information, see the following details.</p>
          * 
          * <strong>example:</strong>
-         * <p>{\&quot;id\&quot;:486}</p>
+         * <p>{&quot;id&quot;:486}</p>
          */
         public Builder jsonStr(String jsonStr) {
             this.putBodyParameter("JsonStr", jsonStr);

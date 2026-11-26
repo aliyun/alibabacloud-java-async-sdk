@@ -75,6 +75,9 @@ public class GetSkillGroupConfigRequest extends Request {
 
         /**
          * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder baseMeAgentId(Long baseMeAgentId) {
             this.putQueryParameter("BaseMeAgentId", baseMeAgentId);
@@ -83,11 +86,11 @@ public class GetSkillGroupConfigRequest extends Request {
         }
 
         /**
-         * <p>The complete JSON string. For more information, see the details below.</p>
+         * <p>The complete JSON string. For more information, see the following details.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;id&quot;:&quot;配置ID&quot;}</p>
+         * <p>{&quot;id&quot;:&quot;Configuration ID&quot;}</p>
          */
         public Builder jsonStr(String jsonStr) {
             this.putQueryParameter("JsonStr", jsonStr);

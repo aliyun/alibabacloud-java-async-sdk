@@ -106,7 +106,7 @@ public class UpdateTagResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The result code. A value of <strong>200</strong> indicates success. Other values indicate failure. You can use this field to determine the cause of the failure.</p>
+         * <p>The result code. A value of <strong>200</strong> indicates success, whereas any other value indicates failure. You can use this field to determine the cause of the failure.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -268,7 +268,7 @@ public class UpdateTagResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the label node was created.</p>
+             * <p>The time when the tag node was created.</p>
              * 
              * <strong>example:</strong>
              * <p>1748428991000</p>
@@ -279,10 +279,10 @@ public class UpdateTagResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The label description.</p>
+             * <p>The tag description.</p>
              * 
              * <strong>example:</strong>
-             * <p>涵盖退款、退货、维修、咨询等售后链路</p>
+             * <p>Covers after-sales processes such as refunds, returns, repairs, and consultations</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -290,7 +290,7 @@ public class UpdateTagResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the label node was last modified.</p>
+             * <p>The time when the tag node was last modified.</p>
              * 
              * <strong>example:</strong>
              * <p>1748431368000</p>
@@ -301,10 +301,10 @@ public class UpdateTagResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The label name.</p>
+             * <p>The tag name.</p>
              * 
              * <strong>example:</strong>
-             * <p>售后服务</p>
+             * <p>After-sales service</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -312,7 +312,7 @@ public class UpdateTagResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the parent label node.</p>
+             * <p>The ID of the parent tag node.</p>
              * 
              * <strong>example:</strong>
              * <p>-1</p>
@@ -323,7 +323,7 @@ public class UpdateTagResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The label ID.</p>
+             * <p>The tag ID.</p>
              * 
              * <strong>example:</strong>
              * <p>128</p>

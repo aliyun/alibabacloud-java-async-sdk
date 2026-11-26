@@ -104,7 +104,7 @@ public class DeleteWarningConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>If the request fails, this field provides the error details. If the request is successful, the value is \<code>successful\\</code>.</p>
+         * <p>If the request fails, this field provides the error details. If the request is successful, the value is `successful`.</p>
          * 
          * <strong>example:</strong>
          * <p>successful</p>
@@ -126,7 +126,7 @@ public class DeleteWarningConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. A value of \<code>true\\</code> indicates success. A value of \<code>false\\</code> or \<code>null\\</code> indicates failure.</p>
+         * <p>Indicates whether the request was successful. A value of `true` indicates success. A value of `false` or `null` indicates failure.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

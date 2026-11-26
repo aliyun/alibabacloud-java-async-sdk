@@ -75,6 +75,9 @@ public class GetRuleByIdRequest extends Request {
 
         /**
          * <p>The business space ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder baseMeAgentId(Long baseMeAgentId) {
             this.putQueryParameter("BaseMeAgentId", baseMeAgentId);

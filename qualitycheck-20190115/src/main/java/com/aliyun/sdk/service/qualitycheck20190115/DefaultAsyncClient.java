@@ -268,6 +268,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CreateHttpEventConfig  CreateHttpEventConfigRequest
+     * @return CreateHttpEventConfigResponse
+     */
+    @Override
+    public CompletableFuture<CreateHttpEventConfigResponse> createHttpEventConfig(CreateHttpEventConfigRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateHttpEventConfig").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateHttpEventConfigResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateHttpEventConfigResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of CreateMiningTask  CreateMiningTaskRequest
      * @return CreateMiningTaskResponse
      */
@@ -561,6 +579,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DeleteHttpEventConfig  DeleteHttpEventConfigRequest
+     * @return DeleteHttpEventConfigResponse
+     */
+    @Override
+    public CompletableFuture<DeleteHttpEventConfigResponse> deleteHttpEventConfig(DeleteHttpEventConfigRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteHttpEventConfig").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteHttpEventConfigResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteHttpEventConfigResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DeleteQualityCheckScheme  DeleteQualityCheckSchemeRequest
      * @return DeleteQualityCheckSchemeResponse
      */
@@ -808,8 +844,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Queries data uploaded through <a href="https://help.aliyun.com/document_detail/139399.html">UploadAudioData</a> or <a href="https://help.aliyun.com/document_detail/111394.html">UploadData</a>, or queries data from a dataset quality check task <a href="https://help.aliyun.com/document_detail/158890.html">SubmitQualityCheckTask</a>. You can query by task ID (taskId) or by time range.
-     * By default, only partial parameters are returned in the response. Use the requiredFields request parameter to specify which fields to include in the response.</p>
+     * <p>You can query data uploaded by calling <a href="https://help.aliyun.com/document_detail/139399.html">UploadAudioData</a> or <a href="https://help.aliyun.com/document_detail/111394.html">UploadData</a>, as well as data for dataset quality check tasks submitted by calling <a href="https://help.aliyun.com/document_detail/158890.html">SubmitQualityCheckTask</a>. You can query the data by task ID or time range. By default, the response of this operation returns only a subset of parameters. You can use the requiredFields request parameter to specify the fields to be returned.</p>
      * 
      * @param request the request parameters of GetAgentTaskResult  GetAgentTaskResultRequest
      * @return GetAgentTaskResultResponse
@@ -877,6 +912,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetCustomizationConfigListResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetHttpEventConfig  GetHttpEventConfigRequest
+     * @return GetHttpEventConfigResponse
+     */
+    @Override
+    public CompletableFuture<GetHttpEventConfigResponse> getHttpEventConfig(GetHttpEventConfigRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetHttpEventConfig").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetHttpEventConfigResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetHttpEventConfigResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -974,7 +1027,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You can query data uploaded using <a href="https://help.aliyun.com/document_detail/139399.html">UploadAudioData</a> or <a href="https://help.aliyun.com/document_detail/111394.html">UploadData</a>. You can also query data from dataset-based quality inspection tasks created with <a href="https://help.aliyun.com/document_detail/158890.html">SubmitQualityCheckTask</a>. You can search by task ID (taskId) or by time range.</p>
+     * <p>Queries data uploaded by calling <a href="https://help.aliyun.com/document_detail/139399.html">UploadAudioData</a> or <a href="https://help.aliyun.com/document_detail/111394.html">UploadData</a>, and data of dataset quality check tasks submitted by calling <a href="https://help.aliyun.com/document_detail/158890.html">SubmitQualityCheckTask</a>. You can query data by task ID or time range. By default, the response includes only a subset of parameters. You can use the requiredFields request parameter to specify the fields to return.</p>
      * 
      * @param request the request parameters of GetResult  GetResultRequest
      * @return GetResultResponse
@@ -1636,7 +1689,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You can manually review files after quality inspection. After completing the review, call this API to save the review results. This involves manually reviewing rules identified by the system as hits to determine if they are true hits or false positives. Refer to the file review feature on the console page. For more information, see <a href="https://help.aliyun.com/document_detail/139653.html#h2-u6587u4EF6u590Du68385">File Review</a>.</p>
+     * <p>Manually reviews files that have completed quality inspection. After the review is complete, call this operation to save the review results. This allows you to manually verify whether the rules identified as hits by the system are actual hits or false positives. You can refer to the file review feature in the console. For more information, see <a href="https://help.aliyun.com/document_detail/139653.html#h2-u6587u4EF6u590Du68385">File review</a>.</p>
      * 
      * @param request the request parameters of SubmitReviewInfo  SubmitReviewInfoRequest
      * @return SubmitReviewInfoResponse
@@ -1706,9 +1759,28 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @param request the request parameters of TestRuleV4  TestRuleV4Request
+     * @param request the request parameters of TestHttpEventConfig  TestHttpEventConfigRequest
+     * @return TestHttpEventConfigResponse
+     */
+    @Override
+    public CompletableFuture<TestHttpEventConfigResponse> testHttpEventConfig(TestHttpEventConfigRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("TestHttpEventConfig").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(TestHttpEventConfigResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<TestHttpEventConfigResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @deprecated OpenAPI TestRuleV4 is deprecated  * @param request  the request parameters of TestRuleV4  TestRuleV4Request
      * @return TestRuleV4Response
      */
+    @Deprecated
     @Override
     public CompletableFuture<TestRuleV4Response> testRuleV4(TestRuleV4Request request) {
         try {
@@ -1772,6 +1844,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateCheckTypeToSchemeResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateHttpEventConfig  UpdateHttpEventConfigRequest
+     * @return UpdateHttpEventConfigResponse
+     */
+    @Override
+    public CompletableFuture<UpdateHttpEventConfigResponse> updateHttpEventConfig(UpdateHttpEventConfigRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateHttpEventConfig").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateHttpEventConfigResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateHttpEventConfigResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -2042,32 +2132,32 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Process description</h3>
-     * <p>Call the API to upload audio quality inspection =&gt; Convert the recording file to text =&gt; Separate roles in the text based on the specified channel splitting method (distinguish between agent and customer) =&gt; Analyze using quality inspection rules =&gt; Quality inspection complete.</p>
+     * <h3>Workflow</h3>
+     * <p>Call the API to upload audio for quality inspection =&gt; Convert the audio file to text =&gt; Separate the text into roles (agent and customer) based on the specified track splitting method =&gt; Analyze the text by using quality inspection rules =&gt; Complete the quality inspection.</p>
      * <h3>Task execution efficiency</h3>
-     * <p>The speed of task execution depends on the speed of converting the recording file to text. Ideally, a 5-minute recording file can be transcribed within 2 minutes. However, when the transcription service has many queued tasks, there will be a queuing wait time. Generally, transcription completes within 6 hours, except for bulk uploads of large-scale data (more than 500 hours of recordings uploaded within 30 minutes). After transcription is complete, quality inspection analysis takes only milliseconds.</p>
-     * <h3>Recording file URL requirements</h3>
+     * <p>The execution speed of a task depends on the speed of converting the audio file to text. Ideally, a 5-minute audio file can be transcribed within 2 minutes. However, if the file transcription service has a large queue, a waiting time is required. Generally, the transcription is completed within 6 hours, except when a large amount of data is uploaded at a time (more than 500 hours of audio uploaded within half an hour). After the transcription is completed, the quality inspection analysis is performed in milliseconds.</p>
+     * <h3>Requirements for audio file URLs</h3>
      * <ul>
-     * <li>Supports single-channel/dual-channel WAV and MP3 format recording files. The file size must be less than 512 MB.</li>
-     * <li>The URL must be an HTTP-accessible URL address. Local file submission is not supported. The recording file access permissions must be set to public.</li>
-     * <li>The URL can only use domain names, not IP addresses. The URL cannot contain spaces. Avoid using Chinese characters.</li>
-     * <li>After converting the recording to text, the system deletes the downloaded recording file and does not retain a copy.</li>
-     * <li>If your recording URL has an access expiration period (for example, the recording is stored in Alibaba Cloud OSS and you specified an expiration period when generating the recording URL through OSS), set the expiration period to at least 12 hours, or 24 hours if possible. This is because file transcription takes time and occasional queuing may occur. If the queuing time is long, the recording is downloaded only when transcription begins. This prevents the recording URL from expiring before the download.</li>
-     * <li>After quality inspection analysis is complete, the recording is still played using the URL you provided when reviewing files in the console. Ensure that the URL remains active long-term. Otherwise, the recording cannot be played.</li>
+     * <li>Supports single-track or dual-track audio files in WAV or MP3 format. The file size must be less than 512 MB.</li>
+     * <li>The URL must be accessible over HTTP. Committing local files is not supported. The access permissions of the audio file must be public.</li>
+     * <li>The URL must contain only a domain name, not an IP address. The URL cannot contain spaces. Avoid using Chinese characters in the URL.</li>
+     * <li>After the audio is converted to text, the system deletes the downloaded audio file and does not retain a copy.</li>
+     * <li>If your audio URL has an expiration time, for example, the audio is stored in Alibaba Cloud OSS and an expiration time is specified when the URL is generated, we recommend that you set the expiration time to at least 12 hours, or preferably set the expiration time in Settings to 24 hours if conditions permit. This is because file transcription takes time and may occasionally be queued. If the queue is long, the audio is downloaded only when the transcription starts. A longer expiration time prevents the URL from expiring before the audio is downloaded.</li>
+     * <li>After the quality inspection analysis is completed, the URL you provided is still used to play the audio when you review the file in the console. Therefore, you must ensure that the URL remains active for a long time. Otherwise, the audio cannot be played.</li>
      * </ul>
-     * <h3>Role separation description</h3>
-     * <p>After the recording is converted to text, the system automatically separates the text into two conversation roles. However, the system cannot determine which role is the agent and which is the customer. You need to perform role separation based on certain rules. The accuracy of role separation is critical because the rules used for quality inspection analysis often have role detection restrictions (a rule only checks the agent or the customer). If role separation is incorrect, the accuracy of quality inspection results is significantly affected.
-     * Recording files are typically divided into two types: single-channel (mono) and dual-channel (stereo):</p>
+     * <h3>Role separation</h3>
+     * <p>After the audio is converted to text, the system automatically separates the text into two conversation roles. However, the system cannot determine which role is the agent and which is the customer. Therefore, you must separate the roles based on specific rules. The accuracy of role separation is crucial because the rules used for quality inspection analysis often have role restrictions (that is, a rule only checks the agent or the customer). Incorrect role separation greatly affects the accuracy of the quality inspection results.
+     * Audio files are generally divided into single-track (mono) and dual-track (dual-channel/stereo) types:</p>
      * <ul>
-     * <li>Single-channel recording: The voices of both the agent and customer are stored on one channel. After the recording file is converted to text, the system uses a built-in algorithm to distinguish between two roles. By setting a list of keywords that the agent is likely to say, the system analyzes the transcribed text sentence by sentence from top to bottom. When a sentence matches a keyword, the role of that sentence is determined to be the agent, and the other role is the customer. For details, see recognizeRoleDataSetId and serviceChannelKeywords in the request parameters. Due to the unpredictability of conversation content (for example, cross-talk between two roles or both people speaking simultaneously), role separation for single-channel recordings cannot be guaranteed to be 100% accurate. Save recording files as dual-channel recordings whenever possible.</li>
-     * <li>Dual-channel recording: The voices of the agent and customer are stored on two separate channels. Even if the conversation overlaps, the recording-to-text conversion can accurately distinguish between the two. Specify the agent and customer by using the serviceChannel and clientChannel request parameters.</li>
+     * <li>Single-track audio: The voices of the agent and the customer are stored on a single track. After the audio file is converted to text, the system uses a built-in algorithm to separate the conversation into two roles. You can set a list of keywords that the agent may say. The system analyzes the transcribed text sentence by sentence from top to bottom. If a sentence hits a keyword, the role of the sentence is determined to be the agent, and the other role is the customer. For details, see recognizeRoleDataSetId and serviceChannelKeywords in the request parameters. Due to the uncontrollability of the conversation content (for example, the two roles may interrupt each other or speak at the same time), role separation for single-track audio cannot be 100% accurate. We strongly recommend that you save audio files as dual-track audio.</li>
+     * <li>Dual-track audio: The voices of the agent and the customer are stored on two separate tracks. Even if the conversation overlaps, the system can accurately distinguish the roles when the audio is converted to text. You can specify the agent and the customer by using the serviceChannel and clientChannel request parameters.</li>
      * </ul>
-     * <h3>Retrieve quality inspection analysis results</h3>
-     * <p>Because recording file recognition is not real-time, you need to asynchronously retrieve quality inspection analysis results. The following three methods are available:</p>
+     * <h3>Obtain quality inspection analysis results</h3>
+     * <p>Because audio file recognition is not real-time, you must obtain the quality inspection analysis results asynchronously. You can use one of the following three methods to obtain the results:</p>
      * <ul>
-     * <li>Message notification: For details, see <a href="https://help.aliyun.com/document_detail/213237.html">MSMQ</a>. After receiving a message, invoke the GetResult operation to retrieve detailed results. (Recommended)</li>
-     * <li>Callback: Specify a callbackUrl in the request parameters. The system initiates a callback after the task is complete. After receiving the callback, invoke the GetResult operation to retrieve detailed results.</li>
-     * <li>Polling: The operation returns a task ID (taskId). Use the taskId to poll the <code>getResult</code> operation to asynchronously retrieve results. Check whether the <code>status</code> in the response parameters indicates completion. Do not set the polling interval too short. Analysis normally completes within a few minutes. Set the polling interval to 30 seconds or more. (Not recommended)</li>
+     * <li>Message notification: For details, see <a href="https://help.aliyun.com/document_detail/213237.html">MSMQ</a>. After you receive a message, call the GetResult operation to obtain the detailed results. (Recommended)</li>
+     * <li>Callback: Specify callbackUrl in the request parameters. After the node is completed, the system initiates a callback. After you receive the callback, call the GetResult operation to obtain the detailed results.</li>
+     * <li>Polling: The operation returns a node ID (taskId). You can use the taskId to poll the <code>getResult</code> operation to asynchronously obtain the results and check whether the <code>status</code> response parameter indicates completion. We recommend that you do not set the polling interval too short. Normally, the analysis is completed within a few minutes. We recommend that you set the polling interval to 30 seconds or more. (Not recommended)</li>
      * </ul>
      * 
      * @param request the request parameters of UploadAudioData  UploadAudioDataRequest
@@ -2113,10 +2203,10 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Pushes text data in a specific format to SCA for real-time quality inspection analysis based on user-specified rules, and synchronously returns the analysis results. Compared with uploaded text quality inspection, which typically uploads the complete conversation text after a conversation ends, real-time text quality inspection allows you to push text to SCA for analysis after one role finishes one or more sentences, providing higher real-time performance. Notes:</p>
+     * <p>Pushes text data to be inspected in a specific format to SCA, performs real-time quality inspection and analysis on the text data based on user-specified rules, and synchronously returns the analysis results. Compared with uploaded text quality inspection, which usually uploads the complete conversation text after a conversation ends, real-time text quality inspection can push the text to SCA for analysis after a role finishes speaking one or more sentences, providing higher real-time performance. Special notes:</p>
      * <ul>
-     * <li>If the pushed text is a single sentence from one role, some operators in the rules become ineffective due to the lack of conversation context, such as context repetition check, interruption check, and call silence check.</li>
-     * <li>Real-time quality inspection synchronously returns analysis results. SCA does not save call records, so you cannot query quality inspection results through APIs.</li>
+     * <li>If the pushed text is a single sentence from a role, some operators in the rules, such as context repetition check, interruption check, and call silence check, will become invalid due to the lack of conversation context.</li>
+     * <li>Real-time quality inspection synchronously returns analysis results. SCA does not save call records, so you cannot query the quality inspection results through the API.</li>
      * </ul>
      * 
      * @param request the request parameters of UploadDataSync  UploadDataSyncRequest

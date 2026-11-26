@@ -117,6 +117,9 @@ public class UpdateRuleByIdRequest extends Request {
 
         /**
          * <p>Workspace ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder baseMeAgentId(Long baseMeAgentId) {
             this.putQueryParameter("BaseMeAgentId", baseMeAgentId);
@@ -153,7 +156,7 @@ public class UpdateRuleByIdRequest extends Request {
          * <p>Returns the IDs and names of quality inspection schemes associated with this rule.</p>
          * 
          * <strong>example:</strong>
-         * <p>1</p>
+         * <p>true</p>
          */
         public Builder returnRelatedSchemes(Boolean returnRelatedSchemes) {
             this.putBodyParameter("ReturnRelatedSchemes", returnRelatedSchemes);

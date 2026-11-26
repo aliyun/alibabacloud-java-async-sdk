@@ -102,7 +102,10 @@ public class DeleteRuleRequest extends Request {
         } 
 
         /**
-         * <p>Workspace ID.</p>
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder baseMeAgentId(Long baseMeAgentId) {
             this.putQueryParameter("BaseMeAgentId", baseMeAgentId);
@@ -111,7 +114,7 @@ public class DeleteRuleRequest extends Request {
         }
 
         /**
-         * <p>Whether to delete the rule even if it is associated with a quality check task.</p>
+         * <p>Specifies whether to delete the rule even if it is associated with a quality check task.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -123,7 +126,7 @@ public class DeleteRuleRequest extends Request {
         }
 
         /**
-         * <p>Indicates whether this is the new version of quality check. 0: old version. 1: new version. Default is 1.</p>
+         * <p>Specifies whether to use the new version of quality check. Valid values: 0: Legacy quality check. 1: New version quality check. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -135,7 +138,7 @@ public class DeleteRuleRequest extends Request {
         }
 
         /**
-         * <p>Rule ID.</p>
+         * <p>The rule ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

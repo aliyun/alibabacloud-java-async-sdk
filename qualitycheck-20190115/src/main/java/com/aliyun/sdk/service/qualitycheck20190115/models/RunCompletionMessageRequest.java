@@ -87,7 +87,7 @@ public class RunCompletionMessageRequest extends Request {
         } 
 
         /**
-         * <p>A list of messages that form the conversation history and the current prompt.</p>
+         * <p>The list of messages in the model request.</p>
          */
         public Builder messages(java.util.List<Messages> messages) {
             String messagesShrink = shrink(messages, "Messages", "json");
@@ -97,7 +97,7 @@ public class RunCompletionMessageRequest extends Request {
         }
 
         /**
-         * <p>The model specification to use. Valid values: <code>TYXM_PLUS</code> and <code>TYXM_TURBO</code>.</p>
+         * <p>The model specification. Valid values: TYXM_PLUS and TYXM_TURBO.</p>
          * 
          * <strong>example:</strong>
          * <p>TYXM_PLUS</p>
@@ -109,7 +109,7 @@ public class RunCompletionMessageRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to stream the response using Server-Sent Events (SSE). If <code>true</code>, the response is streamed. Defaults to <code>false</code>.</p>
+         * <p>Specifies whether to enable Server-Sent Events (SSE) responses. Default value: false.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -180,10 +180,10 @@ public class RunCompletionMessageRequest extends Request {
             } 
 
             /**
-             * <p>The content of the message.</p>
+             * <p>The prompt content.</p>
              * 
              * <strong>example:</strong>
-             * <p>请用50字总结一下对话</p>
+             * <p>Summarize the conversation in 50 words</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -191,7 +191,7 @@ public class RunCompletionMessageRequest extends Request {
             }
 
             /**
-             * <p>The role of the message sender. Valid values: <code>user</code>, <code>agent</code>, <code>system</code>, and <code>function</code>.</p>
+             * <p>The conversation role. Valid values: user (customer), assistant (customer service representative), system (system message), and function (function).</p>
              * 
              * <strong>example:</strong>
              * <p>user</p>

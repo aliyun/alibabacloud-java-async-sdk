@@ -132,10 +132,10 @@ public class JudgeNodeMetaDesc extends TeaModel {
         } 
 
         /**
-         * <p>Actual value</p>
+         * <p>The actual value. <strong>[Deprecated]</strong></p>
          * 
          * <strong>example:</strong>
-         * <p>xx</p>
+         * <p><strong>[Deprecated]</strong></p>
          */
         public Builder actualValue(String actualValue) {
             this.actualValue = actualValue;
@@ -143,7 +143,7 @@ public class JudgeNodeMetaDesc extends TeaModel {
         }
 
         /**
-         * <p>Data type</p>
+         * <p>The data type.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -154,7 +154,7 @@ public class JudgeNodeMetaDesc extends TeaModel {
         }
 
         /**
-         * ExpressionMetaDesc.
+         * <p><strong>[Deprecated]</strong></p>
          */
         public Builder expressionMetaDesc(ExpressionMetaDesc expressionMetaDesc) {
             this.expressionMetaDesc = expressionMetaDesc;
@@ -162,7 +162,7 @@ public class JudgeNodeMetaDesc extends TeaModel {
         }
 
         /**
-         * <p>System field</p>
+         * <p>The system field.</p>
          * 
          * <strong>example:</strong>
          * <p>remark1</p>
@@ -173,7 +173,7 @@ public class JudgeNodeMetaDesc extends TeaModel {
         }
 
         /**
-         * <p>Field data source type: 1: System predefined field. 2: Quality inspection field for passed parameters.</p>
+         * <p>The field data source type. 1: System predefined field. 2: Parameter-passed quality inspection field.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -184,7 +184,7 @@ public class JudgeNodeMetaDesc extends TeaModel {
         }
 
         /**
-         * <p>Expression</p>
+         * <p>The logical expression.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -195,10 +195,10 @@ public class JudgeNodeMetaDesc extends TeaModel {
         }
 
         /**
-         * <p>Preset value</p>
+         * <p>The preset value. <strong>[Deprecated]</strong></p>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p><strong>[Deprecated]</strong></p>
          */
         public Builder value(String value) {
             this.value = value;
@@ -316,7 +316,10 @@ public class JudgeNodeMetaDesc extends TeaModel {
             } 
 
             /**
-             * LeftFieldType.
+             * <p><strong>[Deprecated]</strong></p>
+             * 
+             * <strong>example:</strong>
+             * <p><strong>[Deprecated]</strong></p>
              */
             public Builder leftFieldType(Integer leftFieldType) {
                 this.leftFieldType = leftFieldType;
@@ -324,7 +327,10 @@ public class JudgeNodeMetaDesc extends TeaModel {
             }
 
             /**
-             * LeftOperand.
+             * <p><strong>[Deprecated]</strong></p>
+             * 
+             * <strong>example:</strong>
+             * <p><strong>[Deprecated]</strong></p>
              */
             public Builder leftOperand(String leftOperand) {
                 this.leftOperand = leftOperand;
@@ -332,7 +338,10 @@ public class JudgeNodeMetaDesc extends TeaModel {
             }
 
             /**
-             * Operator.
+             * <p><strong>[Deprecated]</strong></p>
+             * 
+             * <strong>example:</strong>
+             * <p><strong>[Deprecated]</strong></p>
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -340,7 +349,10 @@ public class JudgeNodeMetaDesc extends TeaModel {
             }
 
             /**
-             * RightFieldType.
+             * <p><strong>[Deprecated]</strong></p>
+             * 
+             * <strong>example:</strong>
+             * <p><strong>[Deprecated]</strong></p>
              */
             public Builder rightFieldType(Integer rightFieldType) {
                 this.rightFieldType = rightFieldType;
@@ -348,7 +360,10 @@ public class JudgeNodeMetaDesc extends TeaModel {
             }
 
             /**
-             * RightOperand.
+             * <p><strong>[Deprecated]</strong></p>
+             * 
+             * <strong>example:</strong>
+             * <p><strong>[Deprecated]</strong></p>
              */
             public Builder rightOperand(String rightOperand) {
                 this.rightOperand = rightOperand;
@@ -356,7 +371,10 @@ public class JudgeNodeMetaDesc extends TeaModel {
             }
 
             /**
-             * RoundingMode.
+             * <p><strong>[Deprecated]</strong></p>
+             * 
+             * <strong>example:</strong>
+             * <p><strong>[Deprecated]</strong></p>
              */
             public Builder roundingMode(String roundingMode) {
                 this.roundingMode = roundingMode;

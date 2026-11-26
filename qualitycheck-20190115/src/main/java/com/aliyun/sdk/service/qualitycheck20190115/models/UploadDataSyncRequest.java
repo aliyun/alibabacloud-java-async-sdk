@@ -74,7 +74,10 @@ public class UploadDataSyncRequest extends Request {
         } 
 
         /**
-         * <p>The business space ID.</p>
+         * <p>The ID of the business workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder baseMeAgentId(Long baseMeAgentId) {
             this.putQueryParameter("BaseMeAgentId", baseMeAgentId);
@@ -83,7 +86,7 @@ public class UploadDataSyncRequest extends Request {
         }
 
         /**
-         * <p>A JSON string that contains all custom parameters for this operation. For more information, see the <strong>jsonStr property description</strong> below.</p>
+         * <p>The jsonStr parameter is a JSON string that contains all custom parameters for this API operation. For details, see the <strong>jsonStr property description</strong> below.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

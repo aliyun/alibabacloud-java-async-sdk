@@ -647,7 +647,7 @@ public class GetQualityCheckSchemeResponseBody extends TeaModel {
              * <p>The username of the creator.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxx</p>
+             * <p>zhangsan</p>
              */
             public Builder createUserName(String createUserName) {
                 this.createUserName = createUserName;
@@ -691,7 +691,7 @@ public class GetQualityCheckSchemeResponseBody extends TeaModel {
              * <p>The name of the quality check plan.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxx</p>
+             * <p>示例质检方案</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -792,7 +792,7 @@ public class GetQualityCheckSchemeResponseBody extends TeaModel {
              * <p>The username of the user who last updated the plan.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxx</p>
+             * <p>lisi</p>
              */
             public Builder updateUserName(String updateUserName) {
                 this.updateUserName = updateUserName;

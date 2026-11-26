@@ -74,7 +74,10 @@ public class SubmitReviewInfoRequest extends Request {
         } 
 
         /**
-         * <p>Workspace ID</p>
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         public Builder baseMeAgentId(Long baseMeAgentId) {
             this.putQueryParameter("BaseMeAgentId", baseMeAgentId);
@@ -83,13 +86,13 @@ public class SubmitReviewInfoRequest extends Request {
         }
 
         /**
-         * <p>The complete JSON string information. See the following details for specific content.</p>
+         * <p>The complete JSON string. For more information, see the following details.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>{
-         *     &quot;taskId&quot;: &quot;任务ID&quot;,
-         *     &quot;vid&quot;: &quot;文件ID&quot;
+         *     &quot;taskId&quot;: &quot;Task ID&quot;,
+         *     &quot;vid&quot;: &quot;File ID&quot;
          * }</p>
          */
         public Builder jsonStr(String jsonStr) {

@@ -75,6 +75,9 @@ public class UpdateSkillGroupConfigRequest extends Request {
 
         /**
          * <p>The ID of the workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder baseMeAgentId(Long baseMeAgentId) {
             this.putQueryParameter("BaseMeAgentId", baseMeAgentId);

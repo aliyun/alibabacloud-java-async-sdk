@@ -100,7 +100,7 @@ public class AddRuleV4Request extends Request {
         }
 
         /**
-         * <p>Specifies whether to copy the rule. Set this to \<code>true\\</code> to copy the rule.</p>
+         * <p>Specifies whether to copy the rule. Set this to `true` to copy the rule.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>

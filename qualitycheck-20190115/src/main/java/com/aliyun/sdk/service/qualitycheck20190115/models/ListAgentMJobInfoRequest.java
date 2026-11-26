@@ -73,7 +73,7 @@ public class ListAgentMJobInfoRequest extends Request {
         } 
 
         /**
-         * <p>The business space ID.</p>
+         * <p>The workspace ID.</p>
          * 
          * <strong>example:</strong>
          * <p>12345</p>
@@ -85,7 +85,7 @@ public class ListAgentMJobInfoRequest extends Request {
         }
 
         /**
-         * <p>The complete JSON string. For more information, see the following detailed information.</p>
+         * <p>The complete JSON string. For more information, see the following details.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>

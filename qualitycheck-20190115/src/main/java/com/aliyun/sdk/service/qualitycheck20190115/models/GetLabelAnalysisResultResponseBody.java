@@ -106,7 +106,7 @@ public class GetLabelAnalysisResultResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The response code. <strong>200</strong> indicates success. Other values indicate failure. You can use this field to determine the cause of the failure.</p>
+         * <p>The result code. A value of <strong>200</strong> indicates success. Other values indicate failure. You can use this field to determine the cause of the failure.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -117,7 +117,7 @@ public class GetLabelAnalysisResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned result.</p>
+         * <p>The returned results.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -125,7 +125,7 @@ public class GetLabelAnalysisResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message returned when the call fails.</p>
+         * <p>The error message returned when an error occurs.</p>
          * 
          * <strong>example:</strong>
          * <p>successful</p>
@@ -147,11 +147,7 @@ public class GetLabelAnalysisResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the call was successful. Valid values:</p>
-         * <ul>
-         * <li>true: The call was successful.</li>
-         * <li>false: The call failed.</li>
-         * </ul>
+         * <p>Indicates whether the call was successful. Valid values: true: The call was successful. false: The call failed.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -220,10 +216,10 @@ public class GetLabelAnalysisResultResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The description of the tag analysis.</p>
+             * <p>The tag analysis description.</p>
              * 
              * <strong>example:</strong>
-             * <p>当前层级未命中有效标签</p>
+             * <p>No valid tag was matched at the current level</p>
              */
             public Builder remarks(String remarks) {
                 this.remarks = remarks;
@@ -234,7 +230,7 @@ public class GetLabelAnalysisResultResponseBody extends TeaModel {
              * <p>The tag name.</p>
              * 
              * <strong>example:</strong>
-             * <p>无效会话</p>
+             * <p>Invalid session</p>
              */
             public Builder tagName(String tagName) {
                 this.tagName = tagName;
@@ -322,10 +318,10 @@ public class GetLabelAnalysisResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the tag analysis.</p>
+             * <p>The tag analysis description.</p>
              * 
              * <strong>example:</strong>
-             * <p>用户在千问内通过高德打车支付17元失败，转支付宝后变原价；客服围绕支付失败与余额、实名认证、授权绑定进行排查。问题发生在千问调用高德打车场景，属千问×高德。</p>
+             * <p>The user failed to pay 17 CNY for an Amap ride-hailing service within Qwen. After switching to Alipay, the price changed to the original price. Customer service investigated the payment failure, balance, real-name verification, and authorization binding. The issue occurred in the scenario where Qwen calls the Amap ride-hailing service, which belongs to Qwen × Amap</p>
              */
             public Builder remarks(String remarks) {
                 this.remarks = remarks;
@@ -336,7 +332,7 @@ public class GetLabelAnalysisResultResponseBody extends TeaModel {
              * <p>The tag name.</p>
              * 
              * <strong>example:</strong>
-             * <p>千问×高德</p>
+             * <p>Qwen × Amap</p>
              */
             public Builder tagName(String tagName) {
                 this.tagName = tagName;
@@ -424,10 +420,10 @@ public class GetLabelAnalysisResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the tag analysis.</p>
+             * <p>The tag analysis description.</p>
              * 
              * <strong>example:</strong>
-             * <p>用户在千问内通过高德打车支付17元失败，转支付宝后变原价；客服围绕支付失败与余额、实名认证、授权绑定进行排查。问题发生在千问调用高德打车场景，属千问×高德。</p>
+             * <p>The user failed to pay 17 CNY for an Amap ride-hailing service within Qwen. After switching to Alipay, the price changed to the original price. Customer service investigated the payment failure, balance, real-name verification, and authorization binding. The issue occurred in the scenario where Qwen calls the Amap ride-hailing service, which belongs to Qwen × Amap</p>
              */
             public Builder remarks(String remarks) {
                 this.remarks = remarks;
@@ -438,7 +434,7 @@ public class GetLabelAnalysisResultResponseBody extends TeaModel {
              * <p>The tag name.</p>
              * 
              * <strong>example:</strong>
-             * <p>千问×高德</p>
+             * <p>Qwen × Amap</p>
              */
             public Builder tagName(String tagName) {
                 this.tagName = tagName;
@@ -526,10 +522,10 @@ public class GetLabelAnalysisResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the tag analysis.</p>
+             * <p>The tag analysis description.</p>
              * 
              * <strong>example:</strong>
-             * <p>用户在千问内通过高德打车支付17元失败，转支付宝后变原价；客服围绕支付失败与余额、实名认证、授权绑定进行排查。问题发生在千问调用高德打车场景，属千问×高德。</p>
+             * <p>The user failed to pay 17 CNY for an Amap ride-hailing service within Qwen. After switching to Alipay, the price changed to the original price. Customer service investigated the payment failure, balance, real-name verification, and authorization binding. The issue occurred in the scenario where Qwen calls the Amap ride-hailing service, which belongs to Qwen × Amap</p>
              */
             public Builder remarks(String remarks) {
                 this.remarks = remarks;
@@ -540,7 +536,7 @@ public class GetLabelAnalysisResultResponseBody extends TeaModel {
              * <p>The tag name.</p>
              * 
              * <strong>example:</strong>
-             * <p>千问×高德</p>
+             * <p>Qwen × Amap</p>
              */
             public Builder tagName(String tagName) {
                 this.tagName = tagName;
@@ -628,10 +624,10 @@ public class GetLabelAnalysisResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the tag analysis.</p>
+             * <p>The tag analysis description.</p>
              * 
              * <strong>example:</strong>
-             * <p>用户在千问内通过高德打车支付17元失败，转支付宝后变原价；客服围绕支付失败与余额、实名认证、授权绑定进行排查。问题发生在千问调用高德打车场景，属千问×高德。</p>
+             * <p>The user failed to pay 17 CNY for an Amap ride-hailing service within Qwen. After switching to Alipay, the price changed to the original price. Customer service investigated the payment failure, balance, real-name verification, and authorization binding. The issue occurred in the scenario where Qwen calls the Amap ride-hailing service, which belongs to Qwen × Amap</p>
              */
             public Builder remarks(String remarks) {
                 this.remarks = remarks;
@@ -642,7 +638,7 @@ public class GetLabelAnalysisResultResponseBody extends TeaModel {
              * <p>The tag name.</p>
              * 
              * <strong>example:</strong>
-             * <p>千问×高德</p>
+             * <p>Qwen × Amap</p>
              */
             public Builder tagName(String tagName) {
                 this.tagName = tagName;
@@ -761,7 +757,7 @@ public class GetLabelAnalysisResultResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The total number of input tokens accumulated during this task.</p>
+             * <p>The total number of input tokens for this task.</p>
              * 
              * <strong>example:</strong>
              * <p>7371</p>
@@ -772,7 +768,7 @@ public class GetLabelAnalysisResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of output tokens accumulated during this task.</p>
+             * <p>The total number of output tokens for this task.</p>
              * 
              * <strong>example:</strong>
              * <p>355</p>
@@ -791,7 +787,7 @@ public class GetLabelAnalysisResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of tokens accumulated during this task.</p>
+             * <p>The total number of tokens for this task.</p>
              * 
              * <strong>example:</strong>
              * <p>7726</p>
@@ -802,7 +798,7 @@ public class GetLabelAnalysisResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of Qwen-Plus model calls accumulated during this task.</p>
+             * <p>The total number of times the Qwen-Plus model was called for this task.</p>
              * 
              * <strong>example:</strong>
              * <p>4</p>
@@ -813,7 +809,7 @@ public class GetLabelAnalysisResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of Qwen-Turbo model calls accumulated during this task.</p>
+             * <p>The total number of times the Qwen-Turbo model was called for this task.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>

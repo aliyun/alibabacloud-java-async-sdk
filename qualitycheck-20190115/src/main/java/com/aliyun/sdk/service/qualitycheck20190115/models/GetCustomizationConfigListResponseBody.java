@@ -125,7 +125,7 @@ public class GetCustomizationConfigListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>If an error occurs, this field contains error details. If the request succeeds, the value is \<code>successful\\</code>.</p>
+         * <p>If an error occurs, this field contains error details. If the request succeeds, the value is `successful`.</p>
          * 
          * <strong>example:</strong>
          * <p>successful</p>
@@ -147,7 +147,7 @@ public class GetCustomizationConfigListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request succeeded. Use this field to check the request status. A value of \<code>true\\</code> means success. A value of \<code>false\\</code> or \<code>null\\</code> means failure.</p>
+         * <p>Indicates whether the request succeeded. Use this field to check the request status. A value of `true` means success. A value of `false` or `null` means failure.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

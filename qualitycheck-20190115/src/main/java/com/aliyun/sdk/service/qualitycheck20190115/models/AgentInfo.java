@@ -132,7 +132,10 @@ public class AgentInfo extends TeaModel {
         } 
 
         /**
-         * AgentDescription.
+         * <p>The description of the agent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Agent for customer service session quality inspection</p>
          */
         public Builder agentDescription(String agentDescription) {
             this.agentDescription = agentDescription;
@@ -140,7 +143,10 @@ public class AgentInfo extends TeaModel {
         }
 
         /**
-         * AgentName.
+         * <p>The name of the agent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Customer service quality inspection assistant</p>
          */
         public Builder agentName(String agentName) {
             this.agentName = agentName;
@@ -148,7 +154,10 @@ public class AgentInfo extends TeaModel {
         }
 
         /**
-         * Id.
+         * <p>The unique identifier of the agent configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1001</p>
          */
         public Builder id(Long id) {
             this.id = id;
@@ -156,7 +165,10 @@ public class AgentInfo extends TeaModel {
         }
 
         /**
-         * InputType.
+         * <p>The object type for analysis. Valid values: audio and text.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>text</p>
          */
         public Builder inputType(String inputType) {
             this.inputType = inputType;
@@ -164,7 +176,10 @@ public class AgentInfo extends TeaModel {
         }
 
         /**
-         * InstructionType.
+         * <p>The instruction type. Valid values: serviceInspection (service quality inspection), field (key property extraction), tagCategory (label classification), multiLevelTag (multi-level label recognition), and customPrompt (custom instruction).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>field</p>
          */
         public Builder instructionType(String instructionType) {
             this.instructionType = instructionType;
@@ -172,7 +187,7 @@ public class AgentInfo extends TeaModel {
         }
 
         /**
-         * InstructionTypeParam.
+         * <p>The parameters corresponding to the instruction type. Different InstructionType values require different sub-parameters. Specify only the sub-parameters that correspond to the current InstructionType and leave the others empty.</p>
          */
         public Builder instructionTypeParam(InstructionTypeParam instructionTypeParam) {
             this.instructionTypeParam = instructionTypeParam;
@@ -180,7 +195,10 @@ public class AgentInfo extends TeaModel {
         }
 
         /**
-         * ModelType.
+         * <p>The type of the large language model.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qwen-max</p>
          */
         public Builder modelType(String modelType) {
             this.modelType = modelType;
@@ -246,7 +264,10 @@ public class AgentInfo extends TeaModel {
             } 
 
             /**
-             * Name.
+             * <p>The name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Scenario</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -254,7 +275,10 @@ public class AgentInfo extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>After-sales inquiry</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -321,7 +345,10 @@ public class AgentInfo extends TeaModel {
             } 
 
             /**
-             * CustomPrompt.
+             * <p>The content of the user-defined prompt template. This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Analyze the service attitude of the customer service representative in the following conversation</p>
              */
             public Builder customPrompt(String customPrompt) {
                 this.customPrompt = customPrompt;
@@ -329,7 +356,7 @@ public class AgentInfo extends TeaModel {
             }
 
             /**
-             * NameDescPairList.
+             * <p>The list of name-value pairs attached to the custom instruction.</p>
              */
             public Builder nameDescPairList(java.util.List<NameDescPairList> nameDescPairList) {
                 this.nameDescPairList = nameDescPairList;
@@ -409,7 +436,10 @@ public class AgentInfo extends TeaModel {
             } 
 
             /**
-             * Desc.
+             * <p>The attribute description. This parameter is optional.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The specific request raised by the customer during the session</p>
              */
             public Builder desc(String desc) {
                 this.desc = desc;
@@ -417,7 +447,10 @@ public class AgentInfo extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The attribute name. This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Customer request</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -425,7 +458,10 @@ public class AgentInfo extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The attribute value. In the key attribute extraction scenario, this is the extracted result value corresponding to the dimension.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Refund</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -479,7 +515,7 @@ public class AgentInfo extends TeaModel {
             } 
 
             /**
-             * NameDescPairList.
+             * <p>The list of attribute dimensions to be extracted.</p>
              */
             public Builder nameDescPairList(java.util.List<FieldsParamNameDescPairList> nameDescPairList) {
                 this.nameDescPairList = nameDescPairList;
@@ -546,7 +582,10 @@ public class AgentInfo extends TeaModel {
             } 
 
             /**
-             * Desc.
+             * <p>The dimension description. This parameter is optional.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Whether the customer service representative is polite and patient</p>
              */
             public Builder desc(String desc) {
                 this.desc = desc;
@@ -554,7 +593,10 @@ public class AgentInfo extends TeaModel {
             }
 
             /**
-             * Dimension.
+             * <p>The dimension name. This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Service attitude</p>
              */
             public Builder dimension(String dimension) {
                 this.dimension = dimension;
@@ -634,7 +676,7 @@ public class AgentInfo extends TeaModel {
             } 
 
             /**
-             * Dimensions.
+             * <p>The list of quality inspection dimensions. This parameter is required.</p>
              */
             public Builder dimensions(java.util.List<Dimensions> dimensions) {
                 this.dimensions = dimensions;
@@ -642,7 +684,10 @@ public class AgentInfo extends TeaModel {
             }
 
             /**
-             * SceneDescription.
+             * <p>The description of the quality inspection scenario. This parameter is optional.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Service quality inspection for after-sales customer service sessions</p>
              */
             public Builder sceneDescription(String sceneDescription) {
                 this.sceneDescription = sceneDescription;
@@ -650,7 +695,10 @@ public class AgentInfo extends TeaModel {
             }
 
             /**
-             * SceneName.
+             * <p>The name of the quality inspection scenario. This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>After-sales service quality inspection</p>
              */
             public Builder sceneName(String sceneName) {
                 this.sceneName = sceneName;
@@ -730,7 +778,10 @@ public class AgentInfo extends TeaModel {
             } 
 
             /**
-             * Desc.
+             * <p>The dimension description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The classification of the types of issues consulted by the customer</p>
              */
             public Builder desc(String desc) {
                 this.desc = desc;
@@ -738,7 +789,10 @@ public class AgentInfo extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The dimension name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Issue type</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -746,7 +800,7 @@ public class AgentInfo extends TeaModel {
             }
 
             /**
-             * ValueList.
+             * <p>The list of candidate tag values.</p>
              */
             public Builder valueList(java.util.List<String> valueList) {
                 this.valueList = valueList;
@@ -800,7 +854,7 @@ public class AgentInfo extends TeaModel {
             } 
 
             /**
-             * NameDescPairList.
+             * <p>The list of label classification dimensions. This parameter is required.</p>
              */
             public Builder nameDescPairList(java.util.List<TagCategoryParamNameDescPairList> nameDescPairList) {
                 this.nameDescPairList = nameDescPairList;
@@ -867,7 +921,10 @@ public class AgentInfo extends TeaModel {
             } 
 
             /**
-             * Prompt.
+             * <p>The analysis prompt for this level. It is concatenated with the tag data and sent to the large language model. This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Determine which tag category this conversation belongs to</p>
              */
             public Builder prompt(String prompt) {
                 this.prompt = prompt;
@@ -875,7 +932,7 @@ public class AgentInfo extends TeaModel {
             }
 
             /**
-             * TagTreeIds.
+             * <p>The list of candidate tag IDs for this level. A value of -1 indicates that all tags at this level are selected. This parameter is required.</p>
              */
             public Builder tagTreeIds(java.util.List<Long> tagTreeIds) {
                 this.tagTreeIds = tagTreeIds;
@@ -942,7 +999,7 @@ public class AgentInfo extends TeaModel {
             } 
 
             /**
-             * TagIds.
+             * <p>The list of starting parent tag IDs at runtime. The first ID is treated as the matched parent tag, and recognition proceeds level by level from its child nodes, skipping the preceding levels. This field also takes effect when AgentId is specified.</p>
              */
             public Builder tagIds(java.util.List<Long> tagIds) {
                 this.tagIds = tagIds;
@@ -950,7 +1007,7 @@ public class AgentInfo extends TeaModel {
             }
 
             /**
-             * TagTreeLevels.
+             * <p>The recognition configuration for each level, arranged in hierarchical order. This parameter is required.</p>
              */
             public Builder tagTreeLevels(java.util.List<TagTreeLevels> tagTreeLevels) {
                 this.tagTreeLevels = tagTreeLevels;
@@ -1056,7 +1113,7 @@ public class AgentInfo extends TeaModel {
             } 
 
             /**
-             * CustomPromptParam.
+             * <p>The custom instruction parameters. Used when InstructionType is set to customPrompt.</p>
              */
             public Builder customPromptParam(CustomPromptParam customPromptParam) {
                 this.customPromptParam = customPromptParam;
@@ -1064,7 +1121,7 @@ public class AgentInfo extends TeaModel {
             }
 
             /**
-             * FieldsParam.
+             * <p>The key attribute extraction parameters. Used when InstructionType is set to field.</p>
              */
             public Builder fieldsParam(FieldsParam fieldsParam) {
                 this.fieldsParam = fieldsParam;
@@ -1072,7 +1129,7 @@ public class AgentInfo extends TeaModel {
             }
 
             /**
-             * ServiceInspectionParam.
+             * <p>The service quality inspection parameters. Used when InstructionType is set to serviceInspection.</p>
              */
             public Builder serviceInspectionParam(ServiceInspectionParam serviceInspectionParam) {
                 this.serviceInspectionParam = serviceInspectionParam;
@@ -1080,7 +1137,7 @@ public class AgentInfo extends TeaModel {
             }
 
             /**
-             * TagCategoryParam.
+             * <p>The label classification parameters. Used when InstructionType is set to tagCategory.</p>
              */
             public Builder tagCategoryParam(TagCategoryParam tagCategoryParam) {
                 this.tagCategoryParam = tagCategoryParam;
@@ -1088,7 +1145,7 @@ public class AgentInfo extends TeaModel {
             }
 
             /**
-             * TagTreeLevelParam.
+             * <p>The multi-level tag recognition parameters. Used when InstructionType is set to multiLevelTag.</p>
              */
             public Builder tagTreeLevelParam(TagTreeLevelParam tagTreeLevelParam) {
                 this.tagTreeLevelParam = tagTreeLevelParam;

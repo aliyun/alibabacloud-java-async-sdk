@@ -126,7 +126,7 @@ public class UpdateUserResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates if the request succeeded. Use this field to determine if the request succeeded: \<code>true\\</code> for success; \<code>false\\</code>/\<code>null\\</code> for failure.</p>
+         * <p>Indicates if the request succeeded. Use this field to determine if the request succeeded: `true` for success; `false`/`null` for failure.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

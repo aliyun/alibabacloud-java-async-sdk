@@ -106,7 +106,7 @@ public class GetResultToReviewResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Result code. <strong>200</strong> means success. Any other value means failure. Use this field to identify the cause.</p>
+         * <p>The result code. A value of <strong>200</strong> indicates success, and any other value indicates failure. You can use this field to determine the cause of the failure.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -117,7 +117,7 @@ public class GetResultToReviewResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Detailed response data.</p>
+         * <p>The detailed response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -125,7 +125,7 @@ public class GetResultToReviewResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Error details if the call fails. Returns <strong>successful</strong> on success.</p>
+         * <p>The error details when an error occurs, or <strong>successful</strong> when the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>successful</p>
@@ -136,7 +136,7 @@ public class GetResultToReviewResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>82C91484-B2D5-4D2A-A21F-A6D73F4***</p>
@@ -147,7 +147,7 @@ public class GetResultToReviewResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request succeeded. true means success. <strong>false</strong> or <strong>null</strong> means failure.</p>
+         * <p>Indicates whether the request is successful. <strong>true</strong> indicates success, and <strong>false</strong> or <strong>null</strong> indicates failure.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -2560,6 +2560,114 @@ public class GetResultToReviewResponseBody extends TeaModel {
      *
      * <p>GetResultToReviewResponseBody</p>
      */
+    public static class ReviewErrorRule extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Rid")
+        private Long rid;
+
+        private ReviewErrorRule(Builder builder) {
+            this.rid = builder.rid;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ReviewErrorRule create() {
+            return builder().build();
+        }
+
+        /**
+         * @return rid
+         */
+        public Long getRid() {
+            return this.rid;
+        }
+
+        public static final class Builder {
+            private Long rid; 
+
+            private Builder() {
+            } 
+
+            private Builder(ReviewErrorRule model) {
+                this.rid = model.rid;
+            } 
+
+            /**
+             * Rid.
+             */
+            public Builder rid(Long rid) {
+                this.rid = rid;
+                return this;
+            }
+
+            public ReviewErrorRule build() {
+                return new ReviewErrorRule(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetResultToReviewResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetResultToReviewResponseBody</p>
+     */
+    public static class ReviewHistoryReviewErrorRule extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("reviewErrorRule")
+        private java.util.List<ReviewErrorRule> reviewErrorRule;
+
+        private ReviewHistoryReviewErrorRule(Builder builder) {
+            this.reviewErrorRule = builder.reviewErrorRule;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ReviewHistoryReviewErrorRule create() {
+            return builder().build();
+        }
+
+        /**
+         * @return reviewErrorRule
+         */
+        public java.util.List<ReviewErrorRule> getReviewErrorRule() {
+            return this.reviewErrorRule;
+        }
+
+        public static final class Builder {
+            private java.util.List<ReviewErrorRule> reviewErrorRule; 
+
+            private Builder() {
+            } 
+
+            private Builder(ReviewHistoryReviewErrorRule model) {
+                this.reviewErrorRule = model.reviewErrorRule;
+            } 
+
+            /**
+             * reviewErrorRule.
+             */
+            public Builder reviewErrorRule(java.util.List<ReviewErrorRule> reviewErrorRule) {
+                this.reviewErrorRule = reviewErrorRule;
+                return this;
+            }
+
+            public ReviewHistoryReviewErrorRule build() {
+                return new ReviewHistoryReviewErrorRule(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetResultToReviewResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetResultToReviewResponseBody</p>
+     */
     public static class ReviewRightRule extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("rid")
         private Long rid;
@@ -2705,6 +2813,9 @@ public class GetResultToReviewResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OperatorName")
         private String operatorName;
 
+        @com.aliyun.core.annotation.NameInMap("ReviewErrorRule")
+        private ReviewHistoryReviewErrorRule reviewErrorRule;
+
         @com.aliyun.core.annotation.NameInMap("ReviewManagerType")
         private String reviewManagerType;
 
@@ -2732,6 +2843,7 @@ public class GetResultToReviewResponseBody extends TeaModel {
             this.oldScore = builder.oldScore;
             this.operator = builder.operator;
             this.operatorName = builder.operatorName;
+            this.reviewErrorRule = builder.reviewErrorRule;
             this.reviewManagerType = builder.reviewManagerType;
             this.reviewResult = builder.reviewResult;
             this.reviewRightRule = builder.reviewRightRule;
@@ -2782,6 +2894,13 @@ public class GetResultToReviewResponseBody extends TeaModel {
          */
         public String getOperatorName() {
             return this.operatorName;
+        }
+
+        /**
+         * @return reviewErrorRule
+         */
+        public ReviewHistoryReviewErrorRule getReviewErrorRule() {
+            return this.reviewErrorRule;
         }
 
         /**
@@ -2839,6 +2958,7 @@ public class GetResultToReviewResponseBody extends TeaModel {
             private Integer oldScore; 
             private Long operator; 
             private String operatorName; 
+            private ReviewHistoryReviewErrorRule reviewErrorRule; 
             private String reviewManagerType; 
             private Integer reviewResult; 
             private ReviewHistoryReviewRightRule reviewRightRule; 
@@ -2856,6 +2976,7 @@ public class GetResultToReviewResponseBody extends TeaModel {
                 this.oldScore = model.oldScore;
                 this.operator = model.operator;
                 this.operatorName = model.operatorName;
+                this.reviewErrorRule = model.reviewErrorRule;
                 this.reviewManagerType = model.reviewManagerType;
                 this.reviewResult = model.reviewResult;
                 this.reviewRightRule = model.reviewRightRule;
@@ -2902,6 +3023,14 @@ public class GetResultToReviewResponseBody extends TeaModel {
              */
             public Builder operatorName(String operatorName) {
                 this.operatorName = operatorName;
+                return this;
+            }
+
+            /**
+             * ReviewErrorRule.
+             */
+            public Builder reviewErrorRule(ReviewHistoryReviewErrorRule reviewErrorRule) {
+                this.reviewErrorRule = reviewErrorRule;
                 return this;
             }
 
@@ -3212,6 +3341,9 @@ public class GetResultToReviewResponseBody extends TeaModel {
      * <p>GetResultToReviewResponseBody</p>
      */
     public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ArtificialScore")
+        private Float artificialScore;
+
         @com.aliyun.core.annotation.NameInMap("AudioScheme")
         private String audioScheme;
 
@@ -3242,6 +3374,9 @@ public class GetResultToReviewResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ReviewTypeIdList")
         private DataReviewTypeIdList reviewTypeIdList;
 
+        @com.aliyun.core.annotation.NameInMap("SmartCheckScore")
+        private Float smartCheckScore;
+
         @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
@@ -3252,6 +3387,7 @@ public class GetResultToReviewResponseBody extends TeaModel {
         private String vid;
 
         private Data(Builder builder) {
+            this.artificialScore = builder.artificialScore;
             this.audioScheme = builder.audioScheme;
             this.audioURL = builder.audioURL;
             this.comments = builder.comments;
@@ -3262,6 +3398,7 @@ public class GetResultToReviewResponseBody extends TeaModel {
             this.manualScoreInfoList = builder.manualScoreInfoList;
             this.reviewHistoryList = builder.reviewHistoryList;
             this.reviewTypeIdList = builder.reviewTypeIdList;
+            this.smartCheckScore = builder.smartCheckScore;
             this.status = builder.status;
             this.totalScore = builder.totalScore;
             this.vid = builder.vid;
@@ -3273,6 +3410,13 @@ public class GetResultToReviewResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return artificialScore
+         */
+        public Float getArtificialScore() {
+            return this.artificialScore;
         }
 
         /**
@@ -3346,6 +3490,13 @@ public class GetResultToReviewResponseBody extends TeaModel {
         }
 
         /**
+         * @return smartCheckScore
+         */
+        public Float getSmartCheckScore() {
+            return this.smartCheckScore;
+        }
+
+        /**
          * @return status
          */
         public Integer getStatus() {
@@ -3367,6 +3518,7 @@ public class GetResultToReviewResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Float artificialScore; 
             private String audioScheme; 
             private String audioURL; 
             private String comments; 
@@ -3377,6 +3529,7 @@ public class GetResultToReviewResponseBody extends TeaModel {
             private ManualScoreInfoList manualScoreInfoList; 
             private ReviewHistoryList reviewHistoryList; 
             private DataReviewTypeIdList reviewTypeIdList; 
+            private Float smartCheckScore; 
             private Integer status; 
             private Integer totalScore; 
             private String vid; 
@@ -3385,6 +3538,7 @@ public class GetResultToReviewResponseBody extends TeaModel {
             } 
 
             private Builder(Data model) {
+                this.artificialScore = model.artificialScore;
                 this.audioScheme = model.audioScheme;
                 this.audioURL = model.audioURL;
                 this.comments = model.comments;
@@ -3395,13 +3549,25 @@ public class GetResultToReviewResponseBody extends TeaModel {
                 this.manualScoreInfoList = model.manualScoreInfoList;
                 this.reviewHistoryList = model.reviewHistoryList;
                 this.reviewTypeIdList = model.reviewTypeIdList;
+                this.smartCheckScore = model.smartCheckScore;
                 this.status = model.status;
                 this.totalScore = model.totalScore;
                 this.vid = model.vid;
             } 
 
             /**
-             * <p>Protocol used in the audio URL. Possible values: http, https.</p>
+             * <p>The manual review score.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
+             */
+            public Builder artificialScore(Float artificialScore) {
+                this.artificialScore = artificialScore;
+                return this;
+            }
+
+            /**
+             * <p>The protocol of the audio URL. Valid values: http and https.</p>
              * 
              * <strong>example:</strong>
              * <p>https</p>
@@ -3412,7 +3578,7 @@ public class GetResultToReviewResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Audio URL without the protocol prefix (http\:// or https\://). Combine with AudioScheme to form the full URL.</p>
+             * <p>The audio URL, excluding http:// and https://. This value and AudioScheme form the complete URL.</p>
              * 
              * <strong>example:</strong>
              * <p>sca-ccc-test.oss-cn-beijing.aliyuncs.com/xxxxx</p>
@@ -3423,10 +3589,10 @@ public class GetResultToReviewResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Review comments.</p>
+             * <p>The review comments.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxx</p>
+             * <p>Approved</p>
              */
             public Builder comments(String comments) {
                 this.comments = comments;
@@ -3442,7 +3608,7 @@ public class GetResultToReviewResponseBody extends TeaModel {
             }
 
             /**
-             * <p>File ID.</p>
+             * <p>The file ID.</p>
              * 
              * <strong>example:</strong>
              * <p>e790e6c919d84b82b64ee*****</p>
@@ -3453,7 +3619,7 @@ public class GetResultToReviewResponseBody extends TeaModel {
             }
 
             /**
-             * <p>File name.</p>
+             * <p>The file name.</p>
              * 
              * <strong>example:</strong>
              * <p>xxx.wav</p>
@@ -3496,7 +3662,23 @@ public class GetResultToReviewResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Current task status. 0: incomplete. 1: complete. Use this field to check completion. Any other value indicates an error.</p>
+             * <p>The automated check score.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
+             */
+            public Builder smartCheckScore(Float smartCheckScore) {
+                this.smartCheckScore = smartCheckScore;
+                return this;
+            }
+
+            /**
+             * <p>The current status of the task. Valid values:</p>
+             * <ul>
+             * <li>0: The task is not completed.</li>
+             * <li>1: The task is completed.
+             * You can use this field to determine whether the task is completed. Any other value indicates an error.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -3507,7 +3689,7 @@ public class GetResultToReviewResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Quality inspection score.</p>
+             * <p>The quality inspection score.</p>
              * 
              * <strong>example:</strong>
              * <p>99</p>
@@ -3518,7 +3700,7 @@ public class GetResultToReviewResponseBody extends TeaModel {
             }
 
             /**
-             * <p>File ID.</p>
+             * <p>The file ID.</p>
              * 
              * <strong>example:</strong>
              * <p>6fa76916-3ce6-45d8-ac64-01b7f31***</p>

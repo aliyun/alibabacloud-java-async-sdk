@@ -158,7 +158,7 @@ public class GetResultResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Result code. <code>200</code> indicates success. Any other value indicates failure. Use this field to identify the cause of failure.</p>
+         * <p>The result code. A value of <strong>200</strong> indicates success, and any other value indicates failure. You can use this field to determine the cause of the failure.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -169,7 +169,7 @@ public class GetResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Total number of records.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -188,7 +188,7 @@ public class GetResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Error details if the request failed. Returns successful if the request succeeded.</p>
+         * <p>The error message. If an error occurs, this field displays the error details. If the request is successful, the value is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>successful</p>
@@ -199,7 +199,7 @@ public class GetResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Current page number.</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -210,7 +210,7 @@ public class GetResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Number of records per page.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -221,7 +221,7 @@ public class GetResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Unique request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>3CEA0495-341B-4482-9AD9-8191EF4***</p>
@@ -232,7 +232,7 @@ public class GetResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Reserved field. Ignore this field.</p>
+         * <p>The reserved field. This field is currently unused and can be ignored.</p>
          * 
          * <strong>example:</strong>
          * <p>XXX</p>
@@ -243,7 +243,11 @@ public class GetResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request succeeded. A value of true means success. A value of false or null means failure.</p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li>true: The request is successful.</li>
+         * <li>false or null: The request failed.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>

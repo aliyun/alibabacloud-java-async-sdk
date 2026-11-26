@@ -147,10 +147,10 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request is successful. You can use this field to determine whether the request is successful:</p>
+         * <p>Indicates whether the request is successful. You can determine whether the request is successful based on this field:</p>
          * <ul>
-         * <li><strong>true</strong>: The request is successful.</li>
-         * <li><strong>false/null</strong>: The request failed.</li>
+         * <li><strong>true</strong>: Successful.</li>
+         * <li><strong>false/null</strong>: Failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -285,7 +285,7 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The offset of the start time of this sentence relative to the overall start time of the dialogue, in milliseconds. For example, if the total recording duration is 2 minutes and 10 seconds, and a sentence spoken by the customer starts at 1 minute and 12 seconds and ends at 1 minute and 20 seconds, the value of begin is 72000 and the value of end is 80000.</p>
+             * <p>The offset of the start time of this sentence relative to the overall start time of the conversation, in milliseconds. For example, if the total recording duration is 2 minutes and 10 seconds, and the customer starts speaking a sentence at 1 minute and 12 seconds and finishes at 1 minute and 20 seconds, the begin value is 72000 and the end value is 80000.</p>
              * 
              * <strong>example:</strong>
              * <p>980</p>
@@ -296,7 +296,7 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The emotion energy value, calculated as the volume in decibels divided by 10. Valid values: 1 to 10. A higher value indicates a stronger emotion.</p>
+             * <p>The emotion energy value, which is calculated as the volume in decibels divided by 10. Valid values: [1,10]. A higher value indicates a stronger emotion.</p>
              * 
              * <strong>example:</strong>
              * <p>7</p>
@@ -307,7 +307,7 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The offset of the start time of this sentence relative to the overall start time of the dialogue, in milliseconds. For example, if the total recording duration is 2 minutes and 10 seconds, and a sentence spoken by the customer starts at 1 minute and 12 seconds and ends at 1 minute and 20 seconds, the value of begin is 72000 and the value of end is 80000.</p>
+             * <p>The offset of the start time of this sentence relative to the overall start time of the conversation, in milliseconds. For example, if the total recording duration is 2 minutes and 10 seconds, and the customer starts speaking a sentence at 1 minute and 12 seconds and finishes at 1 minute and 20 seconds, the begin value is 72000 and the end value is 80000.</p>
              * 
              * <strong>example:</strong>
              * <p>80000</p>
@@ -318,7 +318,7 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time of this sentence in hours, minutes, and seconds format: hh:mm:ss.</p>
+             * <p>The start time of this sentence in the hour-minute-second format. Format: hh:mm:ss.</p>
              * 
              * <strong>example:</strong>
              * <p>00:08</p>
@@ -329,10 +329,10 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The role of the speaker for this sentence. Valid values: agent and customer.</p>
+             * <p>The role of the speaker for this sentence. Valid values: Customer service representative, Customer.</p>
              * 
              * <strong>example:</strong>
-             * <p>agent</p>
+             * <p>Customer service representative</p>
              */
             public Builder role(String role) {
                 this.role = role;
@@ -340,7 +340,7 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The average speech rate of this sentence. Unit: words per minute.</p>
+             * <p>The average speech rate of this sentence, in words per minute.</p>
              * 
              * <strong>example:</strong>
              * <p>200</p>
@@ -354,7 +354,7 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
              * <p>The dialogue content.</p>
              * 
              * <strong>example:</strong>
-             * <p>Hello, how can I help you</p>
+             * <p>Hello, how can I help you?</p>
              */
             public Builder words(String words) {
                 this.words = words;
@@ -411,7 +411,7 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
              * <p>The result returned by the large language model.</p>
              * 
              * <strong>example:</strong>
-             * <p>175/xl the fabric feels very comfortable, looks slim when worn, great clothes super good looking, quality and feel are top-notch, very satisfied with this purchase</p>
+             * <p>The 175/XL fabric feels very comfortable to the touch, and it looks quite slim-fitting when worn. It is a really nice piece of clothing and super good-looking. The quality and texture are absolutely top-notch. It was a very satisfying shopping experience</p>
              */
             public Builder text(String text) {
                 this.text = text;
@@ -515,7 +515,7 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The sentences referenced in the reasoning.</p>
+             * <p>The sentences referenced for the judgment reason.</p>
              */
             public Builder originalUtterances(java.util.List<Integer> originalUtterances) {
                 this.originalUtterances = originalUtterances;
@@ -523,10 +523,10 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The reasoning for the judgment.</p>
+             * <p>The reason for the judgment.</p>
              * 
              * <strong>example:</strong>
-             * <p>Determined from the first sentence of the customer service representative</p>
+             * <p>Determined based on the first sentence of the customer service representative</p>
              */
             public Builder remarks(String remarks) {
                 this.remarks = remarks;
@@ -591,7 +591,7 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The list of attributes.</p>
+             * <p>The attribute list.</p>
              */
             public Builder fieldVoList(java.util.List<FieldVoList> fieldVoList) {
                 this.fieldVoList = fieldVoList;
@@ -659,6 +659,9 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
 
             /**
              * <p>The tag analysis description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Based on the customer conversation, the current tag is identified as Purchase compact refrigerators</p>
              */
             public Builder remarks(String remarks) {
                 this.remarks = remarks;
@@ -667,6 +670,9 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
 
             /**
              * <p>The tag name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Purchase compact refrigerators</p>
              */
             public Builder tagName(String tagName) {
                 this.tagName = tagName;
@@ -746,7 +752,7 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The list of child nodes.</p>
+             * <p>The child node list.</p>
              */
             public Builder children(java.util.List<Children> children) {
                 this.children = children;
@@ -755,6 +761,9 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
 
             /**
              * <p>The tag analysis description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Based on the customer conversation, the current tag is identified as Purchase Tier 1 energy efficiency refrigerators</p>
              */
             public Builder remarks(String remarks) {
                 this.remarks = remarks;
@@ -763,6 +772,9 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
 
             /**
              * <p>The tag name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Purchase Tier 1 energy efficiency refrigerators</p>
              */
             public Builder tagName(String tagName) {
                 this.tagName = tagName;
@@ -851,6 +863,9 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
 
             /**
              * <p>The tag analysis description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Based on the customer conversation, the current tag is identified as Purchase refrigerators</p>
              */
             public Builder remarks(String remarks) {
                 this.remarks = remarks;
@@ -859,6 +874,9 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
 
             /**
              * <p>The tag name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Purchase refrigerators</p>
              */
             public Builder tagName(String tagName) {
                 this.tagName = tagName;
@@ -947,6 +965,9 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
 
             /**
              * <p>The tag analysis description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Based on the customer conversation, the current tag is identified as Purchase appliances</p>
              */
             public Builder remarks(String remarks) {
                 this.remarks = remarks;
@@ -955,6 +976,9 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
 
             /**
              * <p>The tag name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Purchase appliances</p>
              */
             public Builder tagName(String tagName) {
                 this.tagName = tagName;
@@ -1034,7 +1058,7 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The list of child nodes.</p>
+             * <p>The child node list.</p>
              */
             public Builder children(java.util.List<TagListChildren> children) {
                 this.children = children;
@@ -1043,6 +1067,9 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
 
             /**
              * <p>The tag analysis description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Based on the customer dialogue, the current tag is identified as shopping</p>
              */
             public Builder remarks(String remarks) {
                 this.remarks = remarks;
@@ -1051,6 +1078,9 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
 
             /**
              * <p>The tag name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Shopping</p>
              */
             public Builder tagName(String tagName) {
                 this.tagName = tagName;
@@ -1104,7 +1134,7 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The list of child nodes.</p>
+             * <p>The child node list.</p>
              */
             public Builder tagList(java.util.List<TagList> tagList) {
                 this.tagList = tagList;
@@ -1197,7 +1227,7 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The inspection dimension.</p>
+             * <p>The quality inspection dimension.</p>
              * 
              * <strong>example:</strong>
              * <p>Service attitude</p>
@@ -1219,7 +1249,7 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The sentences referenced in the reasoning.</p>
+             * <p>The sentences referenced for the judgment reason.</p>
              */
             public Builder originalUtterances(java.util.List<String> originalUtterances) {
                 this.originalUtterances = originalUtterances;
@@ -1227,10 +1257,10 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The reasoning for the judgment.</p>
+             * <p>The reason for the judgment.</p>
              * 
              * <strong>example:</strong>
-             * <p>Determined from the first sentence of the customer service representative</p>
+             * <p>Determined based on the first sentence of the customer service representative</p>
              */
             public Builder remarks(String remarks) {
                 this.remarks = remarks;
@@ -1284,7 +1314,7 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The list of inspection items.</p>
+             * <p>The quality inspection item list.</p>
              */
             public Builder serviceInspectionVoList(java.util.List<ServiceInspectionVoList> serviceInspectionVoList) {
                 this.serviceInspectionVoList = serviceInspectionVoList;
@@ -1412,7 +1442,7 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The sentences referenced in the reasoning.</p>
+             * <p>The sentences referenced for the judgment reason.</p>
              */
             public Builder originalUtterances(java.util.List<String> originalUtterances) {
                 this.originalUtterances = originalUtterances;
@@ -1420,10 +1450,10 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The reasoning for the judgment.</p>
+             * <p>The reason for the judgment.</p>
              * 
              * <strong>example:</strong>
-             * <p>Determined from the first sentence of the customer service representative</p>
+             * <p>Determined based on the first sentence of the customer service representative</p>
              */
             public Builder remarks(String remarks) {
                 this.remarks = remarks;
@@ -1431,7 +1461,7 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of matched labels.</p>
+             * <p>The list of matched tags.</p>
              */
             public Builder resultLabels(java.util.List<String> resultLabels) {
                 this.resultLabels = resultLabels;
@@ -1485,7 +1515,7 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The list of tags.</p>
+             * <p>The tag list.</p>
              */
             public Builder tagCategoryVoList(java.util.List<TagCategoryVoList> tagCategoryVoList) {
                 this.tagCategoryVoList = tagCategoryVoList;
@@ -1700,7 +1730,7 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The emotion type. Valid values:</p>
+             * <p>The emotion. Valid values:</p>
              * <ul>
              * <li>angry</li>
              * <li>disgusted</li>
@@ -1755,7 +1785,7 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the speaker is the voiceprint owner.</p>
+             * <p>Indicates whether the speaker is the target of voiceprint recognition.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -1862,7 +1892,7 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
             } 
 
             /**
-             * Additions.
+             * <p>The additional attributes of the current clause, such as speaker, voiceprint, gender, age, and emotion.</p>
              */
             public Builder additions(Additions additions) {
                 this.additions = additions;
@@ -1870,7 +1900,7 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time of this sentence, which is the offset from the starting point in milliseconds.</p>
+             * <p>The start time of the sentence. This is the offset from the starting point, in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>443</p>
@@ -1881,7 +1911,7 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The end time of this sentence, which is the offset from the starting point in milliseconds.</p>
+             * <p>The end time of the sentence. This is the offset from the starting point, in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1767492840000</p>
@@ -1895,7 +1925,7 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
              * <p>The dialogue content.</p>
              * 
              * <strong>example:</strong>
-             * <p>Unclear</p>
+             * <p>I am not sure</p>
              */
             public Builder words(String words) {
                 this.words = words;
@@ -1962,7 +1992,7 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The result code. A value of <strong>200</strong> indicates success. Any other value indicates failure. You can use this field to determine the cause of failure.</p>
+             * <p>The result code. A value of <strong>200</strong> indicates success, and any other value indicates failure. You can determine the cause of the failure based on this field.</p>
              * 
              * <strong>example:</strong>
              * <p>200</p>
@@ -1973,7 +2003,7 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The error details when an error occurs, or <strong>successful</strong> when the operation succeeds.</p>
+             * <p>The error details when an error occurs, or <strong>successful</strong> when the request is successful.</p>
              * 
              * <strong>example:</strong>
              * <p>successful</p>
@@ -2051,7 +2081,7 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The error information of each sub-publishing module. The key is the sub-publishing module and the value is the error message.</p>
+             * <p>The error information of each sub-publishing module. The key is the sub-publishing module, and the value is the error message.</p>
              */
             public Builder errors(java.util.List<Errors> errors) {
                 this.errors = errors;
@@ -2170,7 +2200,7 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The result of the custom prompt.</p>
+             * <p>The result returned for the custom instruction.</p>
              */
             public Builder customerPromptResponse(CustomerPromptResponse customerPromptResponse) {
                 this.customerPromptResponse = customerPromptResponse;
@@ -2186,7 +2216,7 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
             }
 
             /**
-             * MultiLevelTagResponse.
+             * <p>The tag tree analysis result.</p>
              */
             public Builder multiLevelTagResponse(MultiLevelTagResponse multiLevelTagResponse) {
                 this.multiLevelTagResponse = multiLevelTagResponse;
@@ -2210,7 +2240,7 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
             }
 
             /**
-             * VoiceprintResponse.
+             * <p>The voiceprint analysis result.</p>
              */
             public Builder voiceprintResponse(VoiceprintResponse voiceprintResponse) {
                 this.voiceprintResponse = voiceprintResponse;
@@ -2316,7 +2346,10 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of input tokens consumed by the LLM.</p>
+             * <p>The number of input tokens for the LLM.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder inputTokens(String inputTokens) {
                 this.inputTokens = inputTokens;
@@ -2324,7 +2357,10 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of output tokens generated by the LLM.</p>
+             * <p>The number of output tokens for the LLM.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder outputTokens(String outputTokens) {
                 this.outputTokens = outputTokens;
@@ -2332,10 +2368,10 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of tokens consumed by this task.</p>
+             * <p>The total number of tokens accumulated for this task.</p>
              * 
              * <strong>example:</strong>
-             * <p>0</p>
+             * <p>200</p>
              */
             public Builder totalTokens(String totalTokens) {
                 this.totalTokens = totalTokens;
@@ -2343,7 +2379,10 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
             }
 
             /**
-             * TymxPlusCount.
+             * <p>The cumulative number of plus model calls.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder tymxPlusCount(String tymxPlusCount) {
                 this.tymxPlusCount = tymxPlusCount;
@@ -2351,7 +2390,10 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
             }
 
             /**
-             * TymxTurboCount.
+             * <p>The cumulative number of turbo model calls.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder tymxTurboCount(String tymxTurboCount) {
                 this.tymxTurboCount = tymxTurboCount;
@@ -2496,7 +2538,7 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The dialogue data.</p>
+             * <p>The conversation data.</p>
              */
             public Builder dialogues(java.util.List<Dialogues> dialogues) {
                 this.dialogues = dialogues;
@@ -2504,7 +2546,7 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The error details when the status is not 0 or 1.</p>
+             * <p>The error details returned when the status is not 0 or 1.</p>
              * 
              * <strong>example:</strong>
              * <p>xxxx</p>
@@ -2526,7 +2568,7 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The result of the computation task.</p>
+             * <p>The result of the computing task.</p>
              */
             public Builder response(DataResponse response) {
                 this.response = response;
@@ -2536,10 +2578,10 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
             /**
              * <p>The task status. Valid values:</p>
              * <ul>
-             * <li>1: pending</li>
-             * <li>2: running</li>
-             * <li>3: succeeded</li>
-             * <li>4: failed</li>
+             * <li>1: Pending.</li>
+             * <li>2: Running.</li>
+             * <li>3: Successful.</li>
+             * <li>4: Failed.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -2562,7 +2604,7 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The token usage information.</p>
+             * <p>The token usage.</p>
              */
             public Builder usage(Usage usage) {
                 this.usage = usage;

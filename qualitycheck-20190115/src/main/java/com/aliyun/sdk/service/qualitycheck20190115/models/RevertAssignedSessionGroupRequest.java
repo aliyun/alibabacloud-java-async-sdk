@@ -73,7 +73,10 @@ public class RevertAssignedSessionGroupRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the baseMeAgent.</p>
+         * <p>The business workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder baseMeAgentId(Long baseMeAgentId) {
             this.putQueryParameter("BaseMeAgentId", baseMeAgentId);
@@ -82,7 +85,7 @@ public class RevertAssignedSessionGroupRequest extends Request {
         }
 
         /**
-         * <p>For more information, see the description of the request parameters.</p>
+         * <p>For more information, see the supplementary description of request parameters.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;isSchemeData&quot;:1,&quot;forceRevertSessionGroup&quot;:true,&quot;sessionGroupIdList&quot;:[&quot;1&quot;]}</p>

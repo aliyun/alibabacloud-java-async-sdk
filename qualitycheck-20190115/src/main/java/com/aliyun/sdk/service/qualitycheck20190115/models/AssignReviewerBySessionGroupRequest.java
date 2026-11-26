@@ -74,6 +74,9 @@ public class AssignReviewerBySessionGroupRequest extends Request {
 
         /**
          * <p>Workspace ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         public Builder baseMeAgentId(Long baseMeAgentId) {
             this.putQueryParameter("BaseMeAgentId", baseMeAgentId);

@@ -115,7 +115,7 @@ public class RuleTestDialogue extends TeaModel {
          * <p>Conversation Name</p>
          * 
          * <strong>example:</strong>
-         * <p>xx</p>
+         * <p>示例对话</p>
          */
         public Builder name(String name) {
             this.name = name;

@@ -119,7 +119,7 @@ public class DeleteRuleResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Result code. <strong>200</strong> indicates success. Any other value indicates failure. Use this field to identify the cause of failure.</p>
+         * <p>The result code. <strong>200</strong> indicates success. Other values indicate failure. You can use this field to determine the cause of the failure.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -130,7 +130,7 @@ public class DeleteRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>HTTP status code.</p>
+         * <p>The HTTP status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -141,7 +141,7 @@ public class DeleteRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Details of the error if the request failed. If the request succeeded, the value is &quot;successful&quot;.</p>
+         * <p>The error details when an error occurs, or &quot;successful&quot; when the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>successful</p>
@@ -160,7 +160,7 @@ public class DeleteRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>106C6CA0-282D-4AF7-85F0-D2D24***</p>
@@ -171,7 +171,7 @@ public class DeleteRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request succeeded. Use this field to determine request status: true means success. <strong>false</strong> or <strong>null</strong> means failure.</p>
+         * <p>Indicates whether the request is successful. <strong>true</strong> indicates success. <strong>false</strong> or <strong>null</strong> indicates failure.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -227,7 +227,7 @@ public class DeleteRuleResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Details of the error if the request failed. If the request succeeded, the value is &quot;successful&quot;.</p>
+             * <p>The error details when an error occurs, or &quot;successful&quot; when the request is successful.</p>
              * 
              * <strong>example:</strong>
              * <p>successful</p>

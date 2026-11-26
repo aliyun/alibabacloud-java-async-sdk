@@ -132,7 +132,7 @@ public class UpdateCheckTypeToSchemeResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The result code. A value of <strong>200</strong> indicates success. Other values indicate failure. This code helps identify the cause of a failed request.</p>
+         * <p>The result code. A value of <strong>200</strong> indicates success. Any other value indicates failure. You can determine the cause of the failure based on this field.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -165,7 +165,7 @@ public class UpdateCheckTypeToSchemeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error details if the request fails. If the request is successful, the value is <strong>successful</strong>.</p>
+         * <p>The error details if an error occurs, or <strong>successful</strong> if the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>successful</p>
@@ -195,7 +195,7 @@ public class UpdateCheckTypeToSchemeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. A value of true indicates success. A value of false or null indicates failure.</p>
+         * <p>Indicates whether the request is successful. A value of true indicates success, and a value of false or null indicates failure.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -251,7 +251,7 @@ public class UpdateCheckTypeToSchemeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The error details if the request fails. If the request is successful, the value is <strong>successful</strong>.</p>
+             * <p>The error details if an error occurs, or <strong>successful</strong> if the request is successful.</p>
              * 
              * <strong>example:</strong>
              * <p>successful</p>

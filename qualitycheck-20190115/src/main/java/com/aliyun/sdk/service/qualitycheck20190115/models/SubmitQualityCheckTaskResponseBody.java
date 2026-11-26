@@ -106,7 +106,7 @@ public class SubmitQualityCheckTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Result code. <strong>200</strong> indicates success. Any other value indicates failure. Use this field to determine the cause of failure.</p>
+         * <p>The result code. A value of <strong>200</strong> indicates success, and other values indicate failure. You can determine the cause of the failure based on this field.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -117,7 +117,7 @@ public class SubmitQualityCheckTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Task ID.</p>
+         * <p>The ID of the task.</p>
          * 
          * <strong>example:</strong>
          * <p>F6C2B68F-2311-4495-82AC-DAE86C9****</p>
@@ -128,7 +128,7 @@ public class SubmitQualityCheckTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Error details if the request failed. Returns &quot;successful&quot; on success.</p>
+         * <p>The error details when an error occurs, or successful when the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>successful</p>
@@ -139,7 +139,7 @@ public class SubmitQualityCheckTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>00A044A2-D59B-4104-96BA-84060AE8345F</p>
@@ -150,7 +150,7 @@ public class SubmitQualityCheckTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request succeeded. true means success. false or null means failure.</p>
+         * <p>Indicates whether the request is successful. You can determine whether the request is successful based on this field. A value of true indicates success, and a value of false or null indicates failure.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

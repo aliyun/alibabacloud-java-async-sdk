@@ -87,7 +87,7 @@ public class ExecuteAgentRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the business workspace.</p>
+         * <p>The ID of the workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>123456</p>
@@ -99,7 +99,7 @@ public class ExecuteAgentRequest extends Request {
         }
 
         /**
-         * <p>The complete JSON string. For more information, see the following detailed description.</p>
+         * <p>The complete JSON string. For more information, see the following details.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;&quot;</p>
@@ -111,7 +111,7 @@ public class ExecuteAgentRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable Server-Sent Events (SSE) responses. Set to true to enable SSE responses. Default value: false.</p>
+         * <p>Specifies whether to enable Server-Sent Events (SSE) responses. Default value: false.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>

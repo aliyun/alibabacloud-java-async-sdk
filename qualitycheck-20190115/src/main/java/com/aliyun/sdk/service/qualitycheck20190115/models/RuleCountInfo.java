@@ -759,7 +759,7 @@ public class RuleCountInfo extends TeaModel {
         }
 
         /**
-         * <p>Indicates if the rule is active. \<code>0\\</code>: No. \<code>1\\</code>: Yes.</p>
+         * <p>Indicates if the rule is active. `0`: No. `1`: Yes.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -803,7 +803,7 @@ public class RuleCountInfo extends TeaModel {
         }
 
         /**
-         * <p>Indicates if the rule is active for the entire lifecycle. \<code>0\\</code>: No. \<code>1\\</code>: Yes.</p>
+         * <p>Indicates if the rule is active for the entire lifecycle. `0`: No. `1`: Yes.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -1051,7 +1051,7 @@ public class RuleCountInfo extends TeaModel {
         }
 
         /**
-         * <p>The scoring type. \<code>8\\</code>: No score is set.</p>
+         * <p>The scoring type. `8`: No score is set.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
