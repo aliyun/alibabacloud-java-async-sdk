@@ -114,10 +114,7 @@ public class QueryIndividuationTextTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
-         * 
-         * <strong>example:</strong>
-         * <p>56AC346B-AF40-5E4F-AFFE-FD8BA5E6FB3A</p>
+         * requestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

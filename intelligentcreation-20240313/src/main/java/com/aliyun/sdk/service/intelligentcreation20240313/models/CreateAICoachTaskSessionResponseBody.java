@@ -132,10 +132,7 @@ public class CreateAICoachTaskSessionResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>rtctoken</p>
-         * 
-         * <strong>example:</strong>
-         * <p>11</p>
+         * channelToken.
          */
         public Builder channelToken(String channelToken) {
             this.channelToken = channelToken;
@@ -175,10 +172,7 @@ public class CreateAICoachTaskSessionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Token</p>
-         * 
-         * <strong>example:</strong>
-         * <p>11</p>
+         * token.
          */
         public Builder token(String token) {
             this.token = token;

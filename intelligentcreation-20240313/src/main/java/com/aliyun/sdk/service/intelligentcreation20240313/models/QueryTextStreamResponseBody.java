@@ -109,10 +109,7 @@ public class QueryTextStreamResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
-         * 
-         * <strong>example:</strong>
-         * <p>None</p>
+         * message.
          */
         public Builder message(String message) {
             this.message = message;

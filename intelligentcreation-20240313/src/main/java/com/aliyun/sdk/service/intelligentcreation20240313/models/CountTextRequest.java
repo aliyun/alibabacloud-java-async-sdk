@@ -101,10 +101,7 @@ public class CountTextRequest extends Request {
         } 
 
         /**
-         * <p>API</p>
-         * 
-         * <strong>example:</strong>
-         * <p>PLATFORM</p>
+         * generationSource.
          */
         public Builder generationSource(String generationSource) {
             this.putQueryParameter("generationSource", generationSource);

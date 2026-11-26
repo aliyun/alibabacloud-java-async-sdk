@@ -106,7 +106,7 @@ public class CreateAnchorResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>123456789</p>
+         * data.
          */
         public Builder data(String data) {
             this.data = data;
@@ -130,10 +130,7 @@ public class CreateAnchorResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
-         * 
-         * <strong>example:</strong>
-         * <p>10923AA3-F7A1-5EA0-ACCA-D704269EAA78</p>
+         * requestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

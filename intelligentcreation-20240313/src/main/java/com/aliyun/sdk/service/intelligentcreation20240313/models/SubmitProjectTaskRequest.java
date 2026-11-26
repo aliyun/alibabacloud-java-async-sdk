@@ -101,7 +101,7 @@ public class SubmitProjectTaskRequest extends Request {
         } 
 
         /**
-         * <p>frame</p>
+         * frames.
          */
         public Builder frames(java.util.List<Frames> frames) {
             this.putBodyParameter("frames", frames);

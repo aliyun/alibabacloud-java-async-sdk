@@ -80,10 +80,7 @@ public class ListAICoachTaskPageResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Id of the request</p>
-         * 
-         * <strong>example:</strong>
-         * <p>D7F2B74F-63F2-5DD6-95E4-F408EAD6617E</p>
+         * requestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -124,10 +124,7 @@ public class SendSdkStreamMessageRequest extends Request {
         }
 
         /**
-         * <p>header</p>
-         * 
-         * <strong>example:</strong>
-         * <p>{}</p>
+         * header.
          */
         public Builder header(String header) {
             this.putBodyParameter("header", header);

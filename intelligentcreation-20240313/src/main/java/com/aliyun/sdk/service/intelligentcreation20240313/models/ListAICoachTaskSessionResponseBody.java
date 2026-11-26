@@ -106,10 +106,7 @@ public class ListAICoachTaskSessionResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>error code</p>
-         * 
-         * <strong>example:</strong>
-         * <p>200</p>
+         * errorCode.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -117,10 +114,7 @@ public class ListAICoachTaskSessionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>error message</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Success</p>
+         * errorMessage.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -128,10 +122,7 @@ public class ListAICoachTaskSessionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
-         * 
-         * <strong>example:</strong>
-         * <p>56AC346B-AF40-5E4F-AFFE-FD8BA5E6FB3A</p>
+         * requestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -147,10 +138,7 @@ public class ListAICoachTaskSessionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>result</p>
-         * 
-         * <strong>example:</strong>
-         * <p>True</p>
+         * success.
          */
         public Builder success(Boolean success) {
             this.success = success;

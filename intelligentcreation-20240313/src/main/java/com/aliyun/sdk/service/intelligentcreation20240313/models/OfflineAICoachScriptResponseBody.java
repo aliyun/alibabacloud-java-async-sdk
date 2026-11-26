@@ -67,10 +67,7 @@ public class OfflineAICoachScriptResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Id of the request</p>
-         * 
-         * <strong>example:</strong>
-         * <p>EC169FD8-F8D8-5414-A4FF-B6B6751BE36D</p>
+         * requestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

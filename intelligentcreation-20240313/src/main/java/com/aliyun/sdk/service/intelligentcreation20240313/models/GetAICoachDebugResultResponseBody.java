@@ -308,10 +308,7 @@ public class GetAICoachDebugResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2226A26A-26E5-5AB9-A14A-54D612FCF96A</p>
+         * requestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -319,10 +316,7 @@ public class GetAICoachDebugResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>debugId</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
+         * scriptDebugId.
          */
         public Builder scriptDebugId(String scriptDebugId) {
             this.scriptDebugId = scriptDebugId;

@@ -75,10 +75,7 @@ public class CreateAgentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
-         * 
-         * <strong>example:</strong>
-         * <p>3239281273464326823</p>
+         * requestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

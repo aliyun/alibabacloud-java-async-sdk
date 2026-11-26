@@ -132,10 +132,7 @@ public class ListAnchorResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>code</p>
-         * 
-         * <strong>example:</strong>
-         * <p>200</p>
+         * code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -167,10 +164,7 @@ public class ListAnchorResponseBody extends TeaModel {
         }
 
         /**
-         * <p>requestId</p>
-         * 
-         * <strong>example:</strong>
-         * <p>5389BE87-571B-573C-90ED-F07C5E68760B</p>
+         * requestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -130,10 +130,7 @@ public class SendSdkMessageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
-         * 
-         * <strong>example:</strong>
-         * <p>86A90C40-D1AB-50DA-A4B1-0D545F80F2FE</p>
+         * requestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -141,10 +138,7 @@ public class SendSdkMessageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>true</p>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
+         * success.
          */
         public Builder success(Boolean success) {
             this.success = success;

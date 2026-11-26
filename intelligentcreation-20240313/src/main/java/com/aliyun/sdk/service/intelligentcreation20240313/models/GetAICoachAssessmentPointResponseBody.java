@@ -340,10 +340,7 @@ public class GetAICoachAssessmentPointResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
-         * 
-         * <strong>example:</strong>
-         * <p>4830493A-728F-5F19-BBCC-1443292E9C49</p>
+         * requestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

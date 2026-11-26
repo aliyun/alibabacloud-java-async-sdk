@@ -147,10 +147,7 @@ public class GetAICoachDebugResultRequest extends Request {
         }
 
         /**
-         * <p>debugId</p>
-         * 
-         * <strong>example:</strong>
-         * <p>970378621365452802</p>
+         * scriptDebugId.
          */
         public Builder scriptDebugId(String scriptDebugId) {
             this.putQueryParameter("scriptDebugId", scriptDebugId);

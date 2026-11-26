@@ -61,9 +61,6 @@ public class GetTextRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
          */
         public Builder textId(Long textId) {
             this.putPathParameter("textId", textId);

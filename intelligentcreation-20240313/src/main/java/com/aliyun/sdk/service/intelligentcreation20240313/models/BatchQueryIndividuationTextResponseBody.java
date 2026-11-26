@@ -67,10 +67,7 @@ public class BatchQueryIndividuationTextResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Id of the request</p>
-         * 
-         * <strong>example:</strong>
-         * <p>14878724-A835-578D-9DD5-4779ADCE9221</p>
+         * requestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

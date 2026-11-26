@@ -67,10 +67,7 @@ public class TransferPortraitStyleResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Id of the request</p>
-         * 
-         * <strong>example:</strong>
-         * <p>725E87CD-F2DE-5FC4-8A09-2EBDFBF26DAA</p>
+         * requestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
