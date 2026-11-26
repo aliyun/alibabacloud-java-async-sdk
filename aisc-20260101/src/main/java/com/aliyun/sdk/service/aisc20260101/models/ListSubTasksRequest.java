@@ -22,8 +22,16 @@ public class ListSubTasksRequest extends Request {
     private Integer currentPage;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OnlyRunning")
+    private Boolean onlyRunning;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceDirectoryAccountId")
+    private Long resourceDirectoryAccountId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RootTaskId")
@@ -36,7 +44,9 @@ public class ListSubTasksRequest extends Request {
     private ListSubTasksRequest(Builder builder) {
         super(builder);
         this.currentPage = builder.currentPage;
+        this.onlyRunning = builder.onlyRunning;
         this.pageSize = builder.pageSize;
+        this.resourceDirectoryAccountId = builder.resourceDirectoryAccountId;
         this.rootTaskId = builder.rootTaskId;
         this.taskType = builder.taskType;
     }
@@ -62,10 +72,24 @@ public class ListSubTasksRequest extends Request {
     }
 
     /**
+     * @return onlyRunning
+     */
+    public Boolean getOnlyRunning() {
+        return this.onlyRunning;
+    }
+
+    /**
      * @return pageSize
      */
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    /**
+     * @return resourceDirectoryAccountId
+     */
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
     }
 
     /**
@@ -84,7 +108,9 @@ public class ListSubTasksRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListSubTasksRequest, Builder> {
         private Integer currentPage; 
+        private Boolean onlyRunning; 
         private Integer pageSize; 
+        private Long resourceDirectoryAccountId; 
         private String rootTaskId; 
         private String taskType; 
 
@@ -95,7 +121,9 @@ public class ListSubTasksRequest extends Request {
         private Builder(ListSubTasksRequest request) {
             super(request);
             this.currentPage = request.currentPage;
+            this.onlyRunning = request.onlyRunning;
             this.pageSize = request.pageSize;
+            this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
             this.rootTaskId = request.rootTaskId;
             this.taskType = request.taskType;
         } 
@@ -113,6 +141,15 @@ public class ListSubTasksRequest extends Request {
         }
 
         /**
+         * <p>Specifies whether to query only running subtasks. If you set this parameter to true, the system queries all running subtasks of the current tenant across root tasks. In this case, you do not need to specify RootTaskId.</p>
+         */
+        public Builder onlyRunning(Boolean onlyRunning) {
+            this.putQueryParameter("OnlyRunning", onlyRunning);
+            this.onlyRunning = onlyRunning;
+            return this;
+        }
+
+        /**
          * <p>The page size.</p>
          * 
          * <strong>example:</strong>
@@ -125,7 +162,19 @@ public class ListSubTasksRequest extends Request {
         }
 
         /**
-         * <p>The main task ID returned upon task submission.</p>
+         * <p>The ID of the resource directory account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456789</p>
+         */
+        public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+            this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
+            this.resourceDirectoryAccountId = resourceDirectoryAccountId;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the root task returned upon task submission.</p>
          * 
          * <strong>example:</strong>
          * <p>110146ac282314fe4f7cd11afc7540eb</p>

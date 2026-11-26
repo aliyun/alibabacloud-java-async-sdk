@@ -174,16 +174,16 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Performs a paged query of the scan task list under a specified scan target. Only tasks belonging to targets owned by the current tenant are returned.
+     * <p>Queries the list of scan tasks under a specified scan target with paging. Only returns the tasks of targets that belong to the current tenant.
      * Query scope and sorting:</p>
      * <ul>
-     * <li>Only tasks created within the last 366 days are returned.</li>
-     * <li>Results are sorted by creation time in descending order.</li>
-     * <li>TaskStatus filters by task status. ScanType filters by scan mode. The scan mode is stored in the task execute parameters. Historical tasks without a recorded scan mode are treated as attack.
-     * Paged query rules:</li>
-     * <li>PageNumber starts from 1. Values less than 1 are normalized to 1.</li>
-     * <li>PageSize defaults to 10, with a maximum of 100 per page. Values greater than 100 are clamped to 100. Values less than 1 return HTTP status code 400.</li>
-     * <li>The PageNumber and PageSize values in the response are the normalization values that actually take effect.</li>
+     * <li>Only returns tasks created within the last 366 days.</li>
+     * <li>Sorts tasks in descending order of creation time.</li>
+     * <li>TaskStatus filters tasks by status. ScanType filters tasks by scan mode. The scan mode is stored in the task execution parameters. Tasks that do not have a recorded scan mode are processed as attack.
+     * Paging rules:</li>
+     * <li>PageNumber starts from 1. If the value is less than 1, it is normalized to 1.</li>
+     * <li>PageSize defaults to 10, with a maximum of 100 per page. If the value is greater than 100, it is clamped to 100. If the value is less than 1, a 400 error is returned.</li>
+     * <li>The PageNumber and PageSize in the response are the actual effective values after normalization.</li>
      * </ul>
      * 
      * @param request the request parameters of ListScanTasksByTarget  ListScanTasksByTargetRequest

@@ -80,7 +80,7 @@ public class ListAIAgentEventResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The list of event information returned.</p>
+         * <p>The list of returned event information.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -453,7 +453,7 @@ public class ListAIAgentEventResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The check time, in UNIX timestamp format. Unit: seconds.</p>
+             * <p>The check time. The value is a UNIX timestamp in seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1763949968</p>
@@ -464,7 +464,7 @@ public class ListAIAgentEventResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The event handling time, in UNIX timestamp format. Unit: seconds.</p>
+             * <p>The event processing time. The value is a UNIX timestamp in seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1763949968</p>
@@ -486,7 +486,7 @@ public class ListAIAgentEventResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The infrastructure instance ID.</p>
+             * <p>The ID of the infrastructure instance.</p>
              * 
              * <strong>example:</strong>
              * <p>i-test</p>
@@ -519,7 +519,7 @@ public class ListAIAgentEventResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The infrastructure name.</p>
+             * <p>The name of the infrastructure.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -530,7 +530,7 @@ public class ListAIAgentEventResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The infrastructure region.</p>
+             * <p>The region of the infrastructure.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-shanghai</p>
@@ -555,7 +555,7 @@ public class ListAIAgentEventResponseBody extends TeaModel {
              * <p>The risk description.</p>
              * 
              * <strong>example:</strong>
-             * <p>The workflow does not have AI security guardrails enabled, which may lead to compliance violations, prompt injection and bypass, sensitive data leaks, and other risks</p>
+             * <p>The workflow does not have AI security guardrails enabled, which may lead to various risks such as compliance violations, prompt injection and bypass, and sensitive data leakage</p>
              */
             public Builder riskDesc(String riskDesc) {
                 this.riskDesc = riskDesc;
@@ -563,11 +563,11 @@ public class ListAIAgentEventResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The risk level of the detected alert. Valid values:</p>
+             * <p>The risk level of the scanned alert. Valid values:</p>
              * <ul>
-             * <li><strong>high</strong>: High.</li>
-             * <li><strong>medium</strong>: Medium.</li>
-             * <li><strong>low</strong>: Low.</li>
+             * <li><strong>high</strong>: High risk.</li>
+             * <li><strong>medium</strong>: Medium risk.</li>
+             * <li><strong>low</strong>: Low risk.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -590,7 +590,7 @@ public class ListAIAgentEventResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The associated skill ID.</p>
+             * <p>The ID of the associated skill.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -622,7 +622,7 @@ public class ListAIAgentEventResponseBody extends TeaModel {
              * <p>The status. Valid values:</p>
              * <ol>
              * <li>unhandled: Pending.</li>
-             * <li>handling: Being processed.</li>
+             * <li>handling: Processing.</li>
              * <li>fixed: Fixed.</li>
              * <li>ignored: Ignored.</li>
              * <li>rescanned: Rescanned.</li>
@@ -639,12 +639,12 @@ public class ListAIAgentEventResponseBody extends TeaModel {
             /**
              * <p>The cloud asset vendor. Valid values:</p>
              * <ul>
-             * <li>** DIFY**: DIFY</li>
-             * <li>** BAILIAN**: BAILIAN</li>
-             * <li>** VOLCAI**: VOLCAI</li>
-             * <li>** AGENTRUN**: AGENTRUN</li>
-             * <li>** PAI**: PAI</li>
-             * <li>** OpenClaw**: OpenClaw</li>
+             * <li>** DIFY**: DIFY.</li>
+             * <li>** BAILIAN**: BAILIAN.</li>
+             * <li>** VOLCAI**: VOLCAI.</li>
+             * <li>** AGENTRUN**: AGENTRUN.</li>
+             * <li>** PAI**: PAI.</li>
+             * <li>** OpenClaw**: OpenClaw.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -752,7 +752,7 @@ public class ListAIAgentEventResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The NextToken value returned when the NextToken-based pagination method is used.</p>
+             * <p>The NextToken value returned when the NextToken pagination method is used.</p>
              * 
              * <strong>example:</strong>
              * <p>d6yVpGGP9cH8f9AWtqEXqOawJdolFvFeqJJSIPnYLoGc7/XPd5nbDfZcn1mJCj66Ep3Gbr55tl4NuBtNwsc0A0qvqC2Onfm9h2QmtG8HhaulnPkGmBnhntKqJmpRptTU</p>
@@ -774,7 +774,7 @@ public class ListAIAgentEventResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of records in the query result.</p>
+             * <p>The total number of entries returned.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>

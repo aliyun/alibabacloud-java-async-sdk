@@ -96,7 +96,7 @@ public class ListSubTasksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>9FDE3D6F-26BD-5937-B0E5-8F47962B****</p>
@@ -112,6 +112,1089 @@ public class ListSubTasksResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListSubTasksResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSubTasksResponseBody</p>
+     */
+    public static class AssetScan extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Message")
+        private String message;
+
+        @com.aliyun.core.annotation.NameInMap("Percent")
+        private Integer percent;
+
+        @com.aliyun.core.annotation.NameInMap("Status")
+        private String status;
+
+        @com.aliyun.core.annotation.NameInMap("StrategyId")
+        private Long strategyId;
+
+        private AssetScan(Builder builder) {
+            this.message = builder.message;
+            this.percent = builder.percent;
+            this.status = builder.status;
+            this.strategyId = builder.strategyId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AssetScan create() {
+            return builder().build();
+        }
+
+        /**
+         * @return message
+         */
+        public String getMessage() {
+            return this.message;
+        }
+
+        /**
+         * @return percent
+         */
+        public Integer getPercent() {
+            return this.percent;
+        }
+
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        /**
+         * @return strategyId
+         */
+        public Long getStrategyId() {
+            return this.strategyId;
+        }
+
+        public static final class Builder {
+            private String message; 
+            private Integer percent; 
+            private String status; 
+            private Long strategyId; 
+
+            private Builder() {
+            } 
+
+            private Builder(AssetScan model) {
+                this.message = model.message;
+                this.percent = model.percent;
+                this.status = model.status;
+                this.strategyId = model.strategyId;
+            } 
+
+            /**
+             * <p>The result description of the check item, such as the cause of failure, the cause of skipping, or the ID of the delivered policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dispatched</p>
+             */
+            public Builder message(String message) {
+                this.message = message;
+                return this;
+            }
+
+            /**
+             * <p>The progress percentage of the check item. Valid values: 0 to 100. This field is not used in the current version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
+             */
+            public Builder percent(Integer percent) {
+                this.percent = percent;
+                return this;
+            }
+
+            /**
+             * <p>The status of the check item. Valid values: init, running, success, failed, timeout, and skipped.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>success</p>
+             */
+            public Builder status(String status) {
+                this.status = status;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the policy corresponding to the check item. This field is used only by health check items.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1001</p>
+             */
+            public Builder strategyId(Long strategyId) {
+                this.strategyId = strategyId;
+                return this;
+            }
+
+            public AssetScan build() {
+                return new AssetScan(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListSubTasksResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSubTasksResponseBody</p>
+     */
+    public static class HealthCheck extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Message")
+        private String message;
+
+        @com.aliyun.core.annotation.NameInMap("Percent")
+        private Integer percent;
+
+        @com.aliyun.core.annotation.NameInMap("Status")
+        private String status;
+
+        @com.aliyun.core.annotation.NameInMap("StrategyId")
+        private Long strategyId;
+
+        private HealthCheck(Builder builder) {
+            this.message = builder.message;
+            this.percent = builder.percent;
+            this.status = builder.status;
+            this.strategyId = builder.strategyId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static HealthCheck create() {
+            return builder().build();
+        }
+
+        /**
+         * @return message
+         */
+        public String getMessage() {
+            return this.message;
+        }
+
+        /**
+         * @return percent
+         */
+        public Integer getPercent() {
+            return this.percent;
+        }
+
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        /**
+         * @return strategyId
+         */
+        public Long getStrategyId() {
+            return this.strategyId;
+        }
+
+        public static final class Builder {
+            private String message; 
+            private Integer percent; 
+            private String status; 
+            private Long strategyId; 
+
+            private Builder() {
+            } 
+
+            private Builder(HealthCheck model) {
+                this.message = model.message;
+                this.percent = model.percent;
+                this.status = model.status;
+                this.strategyId = model.strategyId;
+            } 
+
+            /**
+             * <p>The result description of the check item, such as the cause of failure, the cause of skipping, or the ID of the delivered policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>strategyId=1001</p>
+             */
+            public Builder message(String message) {
+                this.message = message;
+                return this;
+            }
+
+            /**
+             * <p>The progress percentage of the check item. Valid values: 0 to 100. This field is not used in the current version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
+             */
+            public Builder percent(Integer percent) {
+                this.percent = percent;
+                return this;
+            }
+
+            /**
+             * <p>The status of the check item. Valid values: init, running, success, failed, timeout, and skipped.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>success</p>
+             */
+            public Builder status(String status) {
+                this.status = status;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the policy corresponding to the check item. This field is used only by health check items.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1001</p>
+             */
+            public Builder strategyId(Long strategyId) {
+                this.strategyId = strategyId;
+                return this;
+            }
+
+            public HealthCheck build() {
+                return new HealthCheck(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListSubTasksResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSubTasksResponseBody</p>
+     */
+    public static class McpCheck extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Message")
+        private String message;
+
+        @com.aliyun.core.annotation.NameInMap("Percent")
+        private Integer percent;
+
+        @com.aliyun.core.annotation.NameInMap("Status")
+        private String status;
+
+        @com.aliyun.core.annotation.NameInMap("StrategyId")
+        private Long strategyId;
+
+        private McpCheck(Builder builder) {
+            this.message = builder.message;
+            this.percent = builder.percent;
+            this.status = builder.status;
+            this.strategyId = builder.strategyId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static McpCheck create() {
+            return builder().build();
+        }
+
+        /**
+         * @return message
+         */
+        public String getMessage() {
+            return this.message;
+        }
+
+        /**
+         * @return percent
+         */
+        public Integer getPercent() {
+            return this.percent;
+        }
+
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        /**
+         * @return strategyId
+         */
+        public Long getStrategyId() {
+            return this.strategyId;
+        }
+
+        public static final class Builder {
+            private String message; 
+            private Integer percent; 
+            private String status; 
+            private Long strategyId; 
+
+            private Builder() {
+            } 
+
+            private Builder(McpCheck model) {
+                this.message = model.message;
+                this.percent = model.percent;
+                this.status = model.status;
+                this.strategyId = model.strategyId;
+            } 
+
+            /**
+             * <p>The result description of the check item, such as the cause of failure, the cause of skipping, or the ID of the delivered policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mcp check task created, detector not implemented yet</p>
+             */
+            public Builder message(String message) {
+                this.message = message;
+                return this;
+            }
+
+            /**
+             * <p>The progress percentage of the check item. Valid values: 0 to 100. This field is not used in the current version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
+             */
+            public Builder percent(Integer percent) {
+                this.percent = percent;
+                return this;
+            }
+
+            /**
+             * <p>The status of the check item. Valid values: init, running, success, failed, timeout, and skipped.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>success</p>
+             */
+            public Builder status(String status) {
+                this.status = status;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the policy corresponding to the check item. This field is used only by health check items.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1001</p>
+             */
+            public Builder strategyId(Long strategyId) {
+                this.strategyId = strategyId;
+                return this;
+            }
+
+            public McpCheck build() {
+                return new McpCheck(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListSubTasksResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSubTasksResponseBody</p>
+     */
+    public static class MemoryCheck extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Message")
+        private String message;
+
+        @com.aliyun.core.annotation.NameInMap("Percent")
+        private Integer percent;
+
+        @com.aliyun.core.annotation.NameInMap("Status")
+        private String status;
+
+        @com.aliyun.core.annotation.NameInMap("StrategyId")
+        private Long strategyId;
+
+        private MemoryCheck(Builder builder) {
+            this.message = builder.message;
+            this.percent = builder.percent;
+            this.status = builder.status;
+            this.strategyId = builder.strategyId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static MemoryCheck create() {
+            return builder().build();
+        }
+
+        /**
+         * @return message
+         */
+        public String getMessage() {
+            return this.message;
+        }
+
+        /**
+         * @return percent
+         */
+        public Integer getPercent() {
+            return this.percent;
+        }
+
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        /**
+         * @return strategyId
+         */
+        public Long getStrategyId() {
+            return this.strategyId;
+        }
+
+        public static final class Builder {
+            private String message; 
+            private Integer percent; 
+            private String status; 
+            private Long strategyId; 
+
+            private Builder() {
+            } 
+
+            private Builder(MemoryCheck model) {
+                this.message = model.message;
+                this.percent = model.percent;
+                this.status = model.status;
+                this.strategyId = model.strategyId;
+            } 
+
+            /**
+             * <p>The result description of the check item, such as the cause of failure, the cause of skipping, or the ID of the delivered policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>memory check task created, detector not implemented yet</p>
+             */
+            public Builder message(String message) {
+                this.message = message;
+                return this;
+            }
+
+            /**
+             * <p>The progress percentage of the check item. Valid values: 0 to 100. This field is not used in the current version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
+             */
+            public Builder percent(Integer percent) {
+                this.percent = percent;
+                return this;
+            }
+
+            /**
+             * <p>The status of the check item. Valid values: init, running, success, failed, timeout, and skipped.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>success</p>
+             */
+            public Builder status(String status) {
+                this.status = status;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the policy corresponding to the check item. This field is used only by health check items.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1001</p>
+             */
+            public Builder strategyId(Long strategyId) {
+                this.strategyId = strategyId;
+                return this;
+            }
+
+            public MemoryCheck build() {
+                return new MemoryCheck(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListSubTasksResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSubTasksResponseBody</p>
+     */
+    public static class SessionCheck extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Message")
+        private String message;
+
+        @com.aliyun.core.annotation.NameInMap("Percent")
+        private Integer percent;
+
+        @com.aliyun.core.annotation.NameInMap("Status")
+        private String status;
+
+        @com.aliyun.core.annotation.NameInMap("StrategyId")
+        private Long strategyId;
+
+        private SessionCheck(Builder builder) {
+            this.message = builder.message;
+            this.percent = builder.percent;
+            this.status = builder.status;
+            this.strategyId = builder.strategyId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SessionCheck create() {
+            return builder().build();
+        }
+
+        /**
+         * @return message
+         */
+        public String getMessage() {
+            return this.message;
+        }
+
+        /**
+         * @return percent
+         */
+        public Integer getPercent() {
+            return this.percent;
+        }
+
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        /**
+         * @return strategyId
+         */
+        public Long getStrategyId() {
+            return this.strategyId;
+        }
+
+        public static final class Builder {
+            private String message; 
+            private Integer percent; 
+            private String status; 
+            private Long strategyId; 
+
+            private Builder() {
+            } 
+
+            private Builder(SessionCheck model) {
+                this.message = model.message;
+                this.percent = model.percent;
+                this.status = model.status;
+                this.strategyId = model.strategyId;
+            } 
+
+            /**
+             * <p>The result description of the check item, such as the cause of failure, the cause of skipping, or the ID of the delivered policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>session check task created, detector not implemented yet</p>
+             */
+            public Builder message(String message) {
+                this.message = message;
+                return this;
+            }
+
+            /**
+             * <p>The progress percentage of the check item. Valid values: 0 to 100. This field is not used in the current version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
+             */
+            public Builder percent(Integer percent) {
+                this.percent = percent;
+                return this;
+            }
+
+            /**
+             * <p>The status of the check item. Valid values: init, running, success, failed, timeout, and skipped.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>success</p>
+             */
+            public Builder status(String status) {
+                this.status = status;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the policy corresponding to the check item. This field is used only by health check items.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1001</p>
+             */
+            public Builder strategyId(Long strategyId) {
+                this.strategyId = strategyId;
+                return this;
+            }
+
+            public SessionCheck build() {
+                return new SessionCheck(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListSubTasksResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSubTasksResponseBody</p>
+     */
+    public static class SkillCheck extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Message")
+        private String message;
+
+        @com.aliyun.core.annotation.NameInMap("Percent")
+        private Integer percent;
+
+        @com.aliyun.core.annotation.NameInMap("Status")
+        private String status;
+
+        @com.aliyun.core.annotation.NameInMap("StrategyId")
+        private Long strategyId;
+
+        private SkillCheck(Builder builder) {
+            this.message = builder.message;
+            this.percent = builder.percent;
+            this.status = builder.status;
+            this.strategyId = builder.strategyId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SkillCheck create() {
+            return builder().build();
+        }
+
+        /**
+         * @return message
+         */
+        public String getMessage() {
+            return this.message;
+        }
+
+        /**
+         * @return percent
+         */
+        public Integer getPercent() {
+            return this.percent;
+        }
+
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        /**
+         * @return strategyId
+         */
+        public Long getStrategyId() {
+            return this.strategyId;
+        }
+
+        public static final class Builder {
+            private String message; 
+            private Integer percent; 
+            private String status; 
+            private Long strategyId; 
+
+            private Builder() {
+            } 
+
+            private Builder(SkillCheck model) {
+                this.message = model.message;
+                this.percent = model.percent;
+                this.status = model.status;
+                this.strategyId = model.strategyId;
+            } 
+
+            /**
+             * <p>The result description of the check item, such as the cause of failure, the cause of skipping, or the ID of the delivered policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dispatched</p>
+             */
+            public Builder message(String message) {
+                this.message = message;
+                return this;
+            }
+
+            /**
+             * <p>The progress percentage of the check item. Valid values: 0 to 100. This field is not used in the current version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
+             */
+            public Builder percent(Integer percent) {
+                this.percent = percent;
+                return this;
+            }
+
+            /**
+             * <p>The status of the check item. Valid values: init, running, success, failed, timeout, and skipped.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>success</p>
+             */
+            public Builder status(String status) {
+                this.status = status;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the policy corresponding to the check item. This field is used only by health check items.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1001</p>
+             */
+            public Builder strategyId(Long strategyId) {
+                this.strategyId = strategyId;
+                return this;
+            }
+
+            public SkillCheck build() {
+                return new SkillCheck(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListSubTasksResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSubTasksResponseBody</p>
+     */
+    public static class VulScan extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Message")
+        private String message;
+
+        @com.aliyun.core.annotation.NameInMap("Percent")
+        private Integer percent;
+
+        @com.aliyun.core.annotation.NameInMap("Status")
+        private String status;
+
+        @com.aliyun.core.annotation.NameInMap("StrategyId")
+        private Long strategyId;
+
+        private VulScan(Builder builder) {
+            this.message = builder.message;
+            this.percent = builder.percent;
+            this.status = builder.status;
+            this.strategyId = builder.strategyId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static VulScan create() {
+            return builder().build();
+        }
+
+        /**
+         * @return message
+         */
+        public String getMessage() {
+            return this.message;
+        }
+
+        /**
+         * @return percent
+         */
+        public Integer getPercent() {
+            return this.percent;
+        }
+
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        /**
+         * @return strategyId
+         */
+        public Long getStrategyId() {
+            return this.strategyId;
+        }
+
+        public static final class Builder {
+            private String message; 
+            private Integer percent; 
+            private String status; 
+            private Long strategyId; 
+
+            private Builder() {
+            } 
+
+            private Builder(VulScan model) {
+                this.message = model.message;
+                this.percent = model.percent;
+                this.status = model.status;
+                this.strategyId = model.strategyId;
+            } 
+
+            /**
+             * <p>The result description of the check item, such as the cause of failure, the cause of skipping, or the ID of the delivered policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>submitted</p>
+             */
+            public Builder message(String message) {
+                this.message = message;
+                return this;
+            }
+
+            /**
+             * <p>The progress percentage of the check item. Valid values: 0 to 100. This field is not used in the current version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
+             */
+            public Builder percent(Integer percent) {
+                this.percent = percent;
+                return this;
+            }
+
+            /**
+             * <p>The status of the check item. Valid values: init, running, success, failed, timeout, and skipped.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>success</p>
+             */
+            public Builder status(String status) {
+                this.status = status;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the policy corresponding to the check item. This field is used only by health check items.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1001</p>
+             */
+            public Builder strategyId(Long strategyId) {
+                this.strategyId = strategyId;
+                return this;
+            }
+
+            public VulScan build() {
+                return new VulScan(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListSubTasksResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSubTasksResponseBody</p>
+     */
+    public static class FullCheckResult extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AssetScan")
+        private AssetScan assetScan;
+
+        @com.aliyun.core.annotation.NameInMap("HealthCheck")
+        private HealthCheck healthCheck;
+
+        @com.aliyun.core.annotation.NameInMap("McpCheck")
+        private McpCheck mcpCheck;
+
+        @com.aliyun.core.annotation.NameInMap("MemoryCheck")
+        private MemoryCheck memoryCheck;
+
+        @com.aliyun.core.annotation.NameInMap("SessionCheck")
+        private SessionCheck sessionCheck;
+
+        @com.aliyun.core.annotation.NameInMap("SkillCheck")
+        private SkillCheck skillCheck;
+
+        @com.aliyun.core.annotation.NameInMap("VulScan")
+        private VulScan vulScan;
+
+        private FullCheckResult(Builder builder) {
+            this.assetScan = builder.assetScan;
+            this.healthCheck = builder.healthCheck;
+            this.mcpCheck = builder.mcpCheck;
+            this.memoryCheck = builder.memoryCheck;
+            this.sessionCheck = builder.sessionCheck;
+            this.skillCheck = builder.skillCheck;
+            this.vulScan = builder.vulScan;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static FullCheckResult create() {
+            return builder().build();
+        }
+
+        /**
+         * @return assetScan
+         */
+        public AssetScan getAssetScan() {
+            return this.assetScan;
+        }
+
+        /**
+         * @return healthCheck
+         */
+        public HealthCheck getHealthCheck() {
+            return this.healthCheck;
+        }
+
+        /**
+         * @return mcpCheck
+         */
+        public McpCheck getMcpCheck() {
+            return this.mcpCheck;
+        }
+
+        /**
+         * @return memoryCheck
+         */
+        public MemoryCheck getMemoryCheck() {
+            return this.memoryCheck;
+        }
+
+        /**
+         * @return sessionCheck
+         */
+        public SessionCheck getSessionCheck() {
+            return this.sessionCheck;
+        }
+
+        /**
+         * @return skillCheck
+         */
+        public SkillCheck getSkillCheck() {
+            return this.skillCheck;
+        }
+
+        /**
+         * @return vulScan
+         */
+        public VulScan getVulScan() {
+            return this.vulScan;
+        }
+
+        public static final class Builder {
+            private AssetScan assetScan; 
+            private HealthCheck healthCheck; 
+            private McpCheck mcpCheck; 
+            private MemoryCheck memoryCheck; 
+            private SessionCheck sessionCheck; 
+            private SkillCheck skillCheck; 
+            private VulScan vulScan; 
+
+            private Builder() {
+            } 
+
+            private Builder(FullCheckResult model) {
+                this.assetScan = model.assetScan;
+                this.healthCheck = model.healthCheck;
+                this.mcpCheck = model.mcpCheck;
+                this.memoryCheck = model.memoryCheck;
+                this.sessionCheck = model.sessionCheck;
+                this.skillCheck = model.skillCheck;
+                this.vulScan = model.vulScan;
+            } 
+
+            /**
+             * <p>The result of the asset scanning check item.</p>
+             */
+            public Builder assetScan(AssetScan assetScan) {
+                this.assetScan = assetScan;
+                return this;
+            }
+
+            /**
+             * <p>The result of the health check item.</p>
+             */
+            public Builder healthCheck(HealthCheck healthCheck) {
+                this.healthCheck = healthCheck;
+                return this;
+            }
+
+            /**
+             * <p>The result of the MCP check item. If the detector is not connected, the result defaults to success.</p>
+             */
+            public Builder mcpCheck(McpCheck mcpCheck) {
+                this.mcpCheck = mcpCheck;
+                return this;
+            }
+
+            /**
+             * <p>The result of the memory check item. If the detector is not connected, the result defaults to success.</p>
+             */
+            public Builder memoryCheck(MemoryCheck memoryCheck) {
+                this.memoryCheck = memoryCheck;
+                return this;
+            }
+
+            /**
+             * <p>The result of the session check item. If the detector is not connected, the result defaults to success.</p>
+             */
+            public Builder sessionCheck(SessionCheck sessionCheck) {
+                this.sessionCheck = sessionCheck;
+                return this;
+            }
+
+            /**
+             * <p>The result of the Skill file check item.</p>
+             */
+            public Builder skillCheck(SkillCheck skillCheck) {
+                this.skillCheck = skillCheck;
+                return this;
+            }
+
+            /**
+             * <p>The result of the vulnerability scanning check item.</p>
+             */
+            public Builder vulScan(VulScan vulScan) {
+                this.vulScan = vulScan;
+                return this;
+            }
+
+            public FullCheckResult build() {
+                return new FullCheckResult(this);
+            } 
+
+        } 
+
+    }
     /**
      * 
      * {@link ListSubTasksResponseBody} extends {@link TeaModel}
@@ -191,7 +1274,7 @@ public class ListSubTasksResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The detected content.</p>
+             * <p>The matched content.</p>
              * 
              * <strong>example:</strong>
              * <p>allowed-tools: Bash(agent-browser:*)</p>
@@ -213,7 +1296,7 @@ public class ListSubTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The check item name.</p>
+             * <p>The name of the check item.</p>
              * 
              * <strong>example:</strong>
              * <p>Dangerous Tools Without Confirmation</p>
@@ -224,7 +1307,7 @@ public class ListSubTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The line number of the detected content.</p>
+             * <p>The line number of the matched content.</p>
              * 
              * <strong>example:</strong>
              * <p>2555</p>
@@ -374,7 +1457,7 @@ public class ListSubTasksResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The confidence score. Valid values: 0 to 100.</p>
+             * <p>The confidence level. Valid values: 0 to 100.</p>
              * 
              * <strong>example:</strong>
              * <p>25</p>
@@ -534,7 +1617,7 @@ public class ListSubTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The processing suggestion.</p>
+             * <p>The handling suggestion.</p>
              * 
              * <strong>example:</strong>
              * <p>block</p>
@@ -623,7 +1706,7 @@ public class ListSubTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The processing suggestion.</p>
+             * <p>The handling suggestion.</p>
              * 
              * <strong>example:</strong>
              * <p>block</p>
@@ -838,7 +1921,7 @@ public class ListSubTasksResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The extended information field. This is a reserved parameter.</p>
+             * <p>The extended information field, which is a reserved parameter.</p>
              * 
              * <strong>example:</strong>
              * <p>{}</p>
@@ -849,7 +1932,7 @@ public class ListSubTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The risk score. Maximum value: 100.</p>
+             * <p>The risk score. The maximum score is 100.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -956,7 +2039,7 @@ public class ListSubTasksResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The configuration detection risks.</p>
+             * <p>The configuration check risk.</p>
              */
             public Builder config(Config config) {
                 this.config = config;
@@ -964,7 +2047,7 @@ public class ListSubTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The safety guardrail detection risks.</p>
+             * <p>The security guardrail detection risk.</p>
              */
             public Builder guardrail(Guardrail guardrail) {
                 this.guardrail = guardrail;
@@ -972,7 +2055,7 @@ public class ListSubTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The sensitive information risks.</p>
+             * <p>The sensitive information risk.</p>
              */
             public Builder sensitive(Sensitive sensitive) {
                 this.sensitive = sensitive;
@@ -980,7 +2063,7 @@ public class ListSubTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The virus detection risks.</p>
+             * <p>The virus detection risk.</p>
              */
             public Builder virus(java.util.List<Virus> virus) {
                 this.virus = virus;
@@ -1060,7 +2143,7 @@ public class ListSubTasksResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The file detection risk list.</p>
+             * <p>The list of file check risks.</p>
              */
             public Builder ext(Ext ext) {
                 this.ext = ext;
@@ -1079,10 +2162,14 @@ public class ListSubTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The result type.</p>
+             * <p>The type of the check result. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: No risk.</li>
+             * <li><strong>1</strong>: Risk detected.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
-             * <p>file</p>
+             * <p>1</p>
              */
             public Builder resultType(String resultType) {
                 this.resultType = resultType;
@@ -1136,7 +2223,7 @@ public class ListSubTasksResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The file detection risk information.</p>
+             * <p>The file check risk information.</p>
              */
             public Builder riskInfo(java.util.List<RiskInfo> riskInfo) {
                 this.riskInfo = riskInfo;
@@ -1157,10 +2244,14 @@ public class ListSubTasksResponseBody extends TeaModel {
      * <p>ListSubTasksResponseBody</p>
      */
     public static class TaskResultMessage extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("FullCheckResult")
+        private FullCheckResult fullCheckResult;
+
         @com.aliyun.core.annotation.NameInMap("SkillCheckResult")
         private SkillCheckResult skillCheckResult;
 
         private TaskResultMessage(Builder builder) {
+            this.fullCheckResult = builder.fullCheckResult;
             this.skillCheckResult = builder.skillCheckResult;
         }
 
@@ -1173,6 +2264,13 @@ public class ListSubTasksResponseBody extends TeaModel {
         }
 
         /**
+         * @return fullCheckResult
+         */
+        public FullCheckResult getFullCheckResult() {
+            return this.fullCheckResult;
+        }
+
+        /**
          * @return skillCheckResult
          */
         public SkillCheckResult getSkillCheckResult() {
@@ -1180,17 +2278,27 @@ public class ListSubTasksResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private FullCheckResult fullCheckResult; 
             private SkillCheckResult skillCheckResult; 
 
             private Builder() {
             } 
 
             private Builder(TaskResultMessage model) {
+                this.fullCheckResult = model.fullCheckResult;
                 this.skillCheckResult = model.skillCheckResult;
             } 
 
             /**
-             * <p>The skill check task result.</p>
+             * <p>The check results of the comprehensive health check task, which provides the status and description for each check item.</p>
+             */
+            public Builder fullCheckResult(FullCheckResult fullCheckResult) {
+                this.fullCheckResult = fullCheckResult;
+                return this;
+            }
+
+            /**
+             * <p>The Skill check task result.</p>
              */
             public Builder skillCheckResult(SkillCheckResult skillCheckResult) {
                 this.skillCheckResult = skillCheckResult;
@@ -1211,8 +2319,17 @@ public class ListSubTasksResponseBody extends TeaModel {
      * <p>ListSubTasksResponseBody</p>
      */
     public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AgentName")
+        private String agentName;
+
         @com.aliyun.core.annotation.NameInMap("FileHash")
         private String fileHash;
+
+        @com.aliyun.core.annotation.NameInMap("GmtTaskFinished")
+        private Long gmtTaskFinished;
+
+        @com.aliyun.core.annotation.NameInMap("GmtTaskStart")
+        private Long gmtTaskStart;
 
         @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
@@ -1227,7 +2344,10 @@ public class ListSubTasksResponseBody extends TeaModel {
         private String taskStatus;
 
         private Data(Builder builder) {
+            this.agentName = builder.agentName;
             this.fileHash = builder.fileHash;
+            this.gmtTaskFinished = builder.gmtTaskFinished;
+            this.gmtTaskStart = builder.gmtTaskStart;
             this.id = builder.id;
             this.target = builder.target;
             this.taskResultMessage = builder.taskResultMessage;
@@ -1243,10 +2363,31 @@ public class ListSubTasksResponseBody extends TeaModel {
         }
 
         /**
+         * @return agentName
+         */
+        public String getAgentName() {
+            return this.agentName;
+        }
+
+        /**
          * @return fileHash
          */
         public String getFileHash() {
             return this.fileHash;
+        }
+
+        /**
+         * @return gmtTaskFinished
+         */
+        public Long getGmtTaskFinished() {
+            return this.gmtTaskFinished;
+        }
+
+        /**
+         * @return gmtTaskStart
+         */
+        public Long getGmtTaskStart() {
+            return this.gmtTaskStart;
         }
 
         /**
@@ -1278,7 +2419,10 @@ public class ListSubTasksResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String agentName; 
             private String fileHash; 
+            private Long gmtTaskFinished; 
+            private Long gmtTaskStart; 
             private Long id; 
             private String target; 
             private TaskResultMessage taskResultMessage; 
@@ -1288,12 +2432,26 @@ public class ListSubTasksResponseBody extends TeaModel {
             } 
 
             private Builder(Data model) {
+                this.agentName = model.agentName;
                 this.fileHash = model.fileHash;
+                this.gmtTaskFinished = model.gmtTaskFinished;
+                this.gmtTaskStart = model.gmtTaskStart;
                 this.id = model.id;
                 this.target = model.target;
                 this.taskResultMessage = model.taskResultMessage;
                 this.taskStatus = model.taskStatus;
             } 
+
+            /**
+             * <p>The display name of the agent. It is parsed from the application information based on the target of the subtask. This field is empty if the application record is missing.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>agent-01</p>
+             */
+            public Builder agentName(String agentName) {
+                this.agentName = agentName;
+                return this;
+            }
 
             /**
              * <p>The hash value of the uploaded file.</p>
@@ -1303,6 +2461,28 @@ public class ListSubTasksResponseBody extends TeaModel {
              */
             public Builder fileHash(String fileHash) {
                 this.fileHash = fileHash;
+                return this;
+            }
+
+            /**
+             * <p>The millisecond-level timestamp when the subtask finishes execution. This field is empty if the subtask has not finished.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1764036120000</p>
+             */
+            public Builder gmtTaskFinished(Long gmtTaskFinished) {
+                this.gmtTaskFinished = gmtTaskFinished;
+                return this;
+            }
+
+            /**
+             * <p>The millisecond-level timestamp when the subtask starts execution. This field is empty if the subtask has not started.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1764036000000</p>
+             */
+            public Builder gmtTaskStart(Long gmtTaskStart) {
+                this.gmtTaskStart = gmtTaskStart;
                 return this;
             }
 
@@ -1329,7 +2509,7 @@ public class ListSubTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The task result information.</p>
+             * <p>The task result message.</p>
              */
             public Builder taskResultMessage(TaskResultMessage taskResultMessage) {
                 this.taskResultMessage = taskResultMessage;
@@ -1433,7 +2613,7 @@ public class ListSubTasksResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of data entries displayed on the current page.</p>
+             * <p>The number of entries returned on the current page.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
