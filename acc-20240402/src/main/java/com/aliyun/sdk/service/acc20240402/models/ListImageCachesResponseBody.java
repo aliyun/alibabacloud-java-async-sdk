@@ -106,7 +106,7 @@ public class ListImageCachesResponseBody extends TeaModel {
         } 
 
         /**
-         * ImageCaches.
+         * <p>The image cache information.</p>
          */
         public Builder imageCaches(java.util.List<ImageCaches> imageCaches) {
             this.imageCaches = imageCaches;
@@ -114,7 +114,10 @@ public class ListImageCachesResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of results to return for a single request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -122,7 +125,10 @@ public class ListImageCachesResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token returned for this call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAdDWBF*****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -130,7 +136,10 @@ public class ListImageCachesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0E234675-3465-4CC3-9D0F-9A864BC*****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class ListImageCachesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of results returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -282,7 +294,10 @@ public class ListImageCachesResponseBody extends TeaModel {
             } 
 
             /**
-             * CreateTime.
+             * <p>The time when the image cache was created. The time follows the ISO 8601 standard and is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-**-**T07:55:25Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -290,7 +305,10 @@ public class ListImageCachesResponseBody extends TeaModel {
             }
 
             /**
-             * ImageCacheId.
+             * <p>The ID of the image cache.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>imc-bp1dj*****</p>
              */
             public Builder imageCacheId(String imageCacheId) {
                 this.imageCacheId = imageCacheId;
@@ -298,7 +316,10 @@ public class ListImageCachesResponseBody extends TeaModel {
             }
 
             /**
-             * ImageCacheName.
+             * <p>The name of the image cache.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my-imc</p>
              */
             public Builder imageCacheName(String imageCacheName) {
                 this.imageCacheName = imageCacheName;
@@ -306,7 +327,7 @@ public class ListImageCachesResponseBody extends TeaModel {
             }
 
             /**
-             * Images.
+             * <p>The container images in the image cache.</p>
              */
             public Builder images(java.util.List<String> images) {
                 this.images = images;
@@ -314,7 +335,10 @@ public class ListImageCachesResponseBody extends TeaModel {
             }
 
             /**
-             * ReadyTime.
+             * <p>Available time when the image cache became available. Available time follows the ISO 8601 standard and is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-**-**T07:58:25Z</p>
              */
             public Builder readyTime(String readyTime) {
                 this.readyTime = readyTime;
@@ -322,7 +346,10 @@ public class ListImageCachesResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * <p>The ID of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-aekzh43v*****</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -330,7 +357,10 @@ public class ListImageCachesResponseBody extends TeaModel {
             }
 
             /**
-             * Size.
+             * <p>The size of the image cache. Unit: GiB. Minimum value: 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder size(Integer size) {
                 this.size = size;
@@ -338,7 +368,10 @@ public class ListImageCachesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The cache status of the image cache.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Ready</p>
              */
             public Builder status(String status) {
                 this.status = status;

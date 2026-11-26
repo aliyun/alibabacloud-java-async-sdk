@@ -67,7 +67,10 @@ public class CreateImageCacheResponseBody extends TeaModel {
         } 
 
         /**
-         * ImageCacheId.
+         * <p>The ID of the image cache.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>imc-bp1dj*****</p>
          */
         public Builder imageCacheId(String imageCacheId) {
             this.imageCacheId = imageCacheId;
@@ -75,7 +78,10 @@ public class CreateImageCacheResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0E234675-3465-4CC3-9D0F-9A864BC*****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

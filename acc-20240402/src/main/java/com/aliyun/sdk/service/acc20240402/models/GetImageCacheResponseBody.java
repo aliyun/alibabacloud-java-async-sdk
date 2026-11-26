@@ -62,6 +62,9 @@ public class GetImageCacheResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Tags")
     private java.util.List<Tags> tags;
 
+    @com.aliyun.core.annotation.NameInMap("Type")
+    private String type;
+
     private GetImageCacheResponseBody(Builder builder) {
         this.createTime = builder.createTime;
         this.events = builder.events;
@@ -78,6 +81,7 @@ public class GetImageCacheResponseBody extends TeaModel {
         this.size = builder.size;
         this.status = builder.status;
         this.tags = builder.tags;
+        this.type = builder.type;
     }
 
     public static Builder builder() {
@@ -197,6 +201,13 @@ public class GetImageCacheResponseBody extends TeaModel {
         return this.tags;
     }
 
+    /**
+     * @return type
+     */
+    public String getType() {
+        return this.type;
+    }
+
     public static final class Builder {
         private String createTime; 
         private java.util.List<Events> events; 
@@ -213,6 +224,7 @@ public class GetImageCacheResponseBody extends TeaModel {
         private Integer size; 
         private String status; 
         private java.util.List<Tags> tags; 
+        private String type; 
 
         private Builder() {
         } 
@@ -233,10 +245,14 @@ public class GetImageCacheResponseBody extends TeaModel {
             this.size = model.size;
             this.status = model.status;
             this.tags = model.tags;
+            this.type = model.type;
         } 
 
         /**
-         * CreateTime.
+         * <p>The time when the image cache was created, in ISO 8601 format and UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-**-**T07:55:25Z</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -244,7 +260,7 @@ public class GetImageCacheResponseBody extends TeaModel {
         }
 
         /**
-         * Events.
+         * <p>The events of the image cache.</p>
          */
         public Builder events(java.util.List<Events> events) {
             this.events = events;
@@ -252,7 +268,10 @@ public class GetImageCacheResponseBody extends TeaModel {
         }
 
         /**
-         * ImageCacheId.
+         * <p>The image cache ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>imc-bp1dj*****</p>
          */
         public Builder imageCacheId(String imageCacheId) {
             this.imageCacheId = imageCacheId;
@@ -260,7 +279,10 @@ public class GetImageCacheResponseBody extends TeaModel {
         }
 
         /**
-         * ImageCacheName.
+         * <p>The name of the image cache.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-imc</p>
          */
         public Builder imageCacheName(String imageCacheName) {
             this.imageCacheName = imageCacheName;
@@ -268,7 +290,7 @@ public class GetImageCacheResponseBody extends TeaModel {
         }
 
         /**
-         * Images.
+         * <p>The names of the container images in the image cache.</p>
          */
         public Builder images(java.util.List<String> images) {
             this.images = images;
@@ -276,7 +298,7 @@ public class GetImageCacheResponseBody extends TeaModel {
         }
 
         /**
-         * NetworkConfig.
+         * <p>The network configurations for pulling images when the image cache is created.</p>
          */
         public Builder networkConfig(NetworkConfig networkConfig) {
             this.networkConfig = networkConfig;
@@ -284,7 +306,10 @@ public class GetImageCacheResponseBody extends TeaModel {
         }
 
         /**
-         * PaymentType.
+         * <p>The billing method.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PayAsYouGo</p>
          */
         public Builder paymentType(String paymentType) {
             this.paymentType = paymentType;
@@ -292,7 +317,10 @@ public class GetImageCacheResponseBody extends TeaModel {
         }
 
         /**
-         * Platform.
+         * <p>The platform type of the image cache. Valid values: linux/amd64 and windows/amd64.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>windows/amd64</p>
          */
         public Builder platform(String platform) {
             this.platform = platform;
@@ -300,7 +328,10 @@ public class GetImageCacheResponseBody extends TeaModel {
         }
 
         /**
-         * ReadyTime.
+         * <p>The time when the image cache becomes active, in ISO 8601 format and UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-**-**T07:58:25Z</p>
          */
         public Builder readyTime(String readyTime) {
             this.readyTime = readyTime;
@@ -308,7 +339,10 @@ public class GetImageCacheResponseBody extends TeaModel {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -316,7 +350,10 @@ public class GetImageCacheResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0E234675-3465-4CC3-9D0F-9A864BC*****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -324,7 +361,10 @@ public class GetImageCacheResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aekzh43v*****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
@@ -332,7 +372,10 @@ public class GetImageCacheResponseBody extends TeaModel {
         }
 
         /**
-         * Size.
+         * <p>The size of the image cache. Unit: GiB. Minimum value: 1 GiB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
          */
         public Builder size(Integer size) {
             this.size = size;
@@ -340,7 +383,10 @@ public class GetImageCacheResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The status of the image cache.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ready</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -348,10 +394,21 @@ public class GetImageCacheResponseBody extends TeaModel {
         }
 
         /**
-         * Tags.
+         * <p>The tags of the image cache. Up to 20 tags are supported.</p>
          */
         public Builder tags(java.util.List<Tags> tags) {
             this.tags = tags;
+            return this;
+        }
+
+        /**
+         * <p>The image cache type. Valid values: <code>General</code>, <code>Base</code>, and <code>Derived</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>General</p>
+         */
+        public Builder type(String type) {
+            this.type = type;
             return this;
         }
 
@@ -479,7 +536,10 @@ public class GetImageCacheResponseBody extends TeaModel {
             } 
 
             /**
-             * Count.
+             * <p>The number of times the event was triggered.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -487,7 +547,10 @@ public class GetImageCacheResponseBody extends TeaModel {
             }
 
             /**
-             * FirstTimestamp.
+             * <p>The time when the event first occurred.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-**-**T02:24:48Z</p>
              */
             public Builder firstTimestamp(String firstTimestamp) {
                 this.firstTimestamp = firstTimestamp;
@@ -495,7 +558,10 @@ public class GetImageCacheResponseBody extends TeaModel {
             }
 
             /**
-             * LastTimestamp.
+             * <p>The time when the event last occurred.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-**-**T02:24:48Z</p>
              */
             public Builder lastTimestamp(String lastTimestamp) {
                 this.lastTimestamp = lastTimestamp;
@@ -503,7 +569,10 @@ public class GetImageCacheResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * <p>The event message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Image cache [my-imc] has been created successfully</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -511,7 +580,10 @@ public class GetImageCacheResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The event name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>imagetest.1661f31f851*****</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -519,7 +591,10 @@ public class GetImageCacheResponseBody extends TeaModel {
             }
 
             /**
-             * Reason.
+             * <p>The cause of the event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ImageCacheCreated</p>
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -527,7 +602,10 @@ public class GetImageCacheResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The event type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -607,7 +685,10 @@ public class GetImageCacheResponseBody extends TeaModel {
             } 
 
             /**
-             * AutoCreate.
+             * <p>Specifies whether to automatically create an EIP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder autoCreate(Boolean autoCreate) {
                 this.autoCreate = autoCreate;
@@ -615,7 +696,10 @@ public class GetImageCacheResponseBody extends TeaModel {
             }
 
             /**
-             * Bandwidth.
+             * <p>The bandwidth of the automatically created EIP. Unit: Mbit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder bandwidth(Integer bandwidth) {
                 this.bandwidth = bandwidth;
@@ -623,7 +707,10 @@ public class GetImageCacheResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The elastic IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eip-0jl0bx3fnpnjc9i4*****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -703,7 +790,7 @@ public class GetImageCacheResponseBody extends TeaModel {
             } 
 
             /**
-             * EipInstance.
+             * <p>The configurations of the elastic IP address (EIP) instance.</p>
              */
             public Builder eipInstance(EipInstance eipInstance) {
                 this.eipInstance = eipInstance;
@@ -711,7 +798,10 @@ public class GetImageCacheResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityGroupId.
+             * <p>The security group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-0jlgektkddwa42n*****</p>
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -719,7 +809,7 @@ public class GetImageCacheResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchIds.
+             * <p>The vSwitch IDs.</p>
              */
             public Builder vSwitchIds(java.util.List<String> vSwitchIds) {
                 this.vSwitchIds = vSwitchIds;
@@ -786,7 +876,10 @@ public class GetImageCacheResponseBody extends TeaModel {
             } 
 
             /**
-             * Key.
+             * <p>The tag key of the image cache.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>imc</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -794,7 +887,10 @@ public class GetImageCacheResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The tag value of the image cache.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder value(String value) {
                 this.value = value;

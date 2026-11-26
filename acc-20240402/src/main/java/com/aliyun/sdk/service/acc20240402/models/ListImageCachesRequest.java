@@ -159,7 +159,10 @@ public class ListImageCachesRequest extends Request {
         } 
 
         /**
-         * Image.
+         * <p>The container image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>egs-registry.cn-hangzhou.cr.aliyuncs.com/egs/vllm:0.9.0.1-pytorch2.7-cu128-20250612</p>
          */
         public Builder image(String image) {
             this.putQueryParameter("Image", image);
@@ -168,7 +171,10 @@ public class ListImageCachesRequest extends Request {
         }
 
         /**
-         * ImageCacheName.
+         * <p>The name of the image cache.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-imc</p>
          */
         public Builder imageCacheName(String imageCacheName) {
             this.putQueryParameter("ImageCacheName", imageCacheName);
@@ -177,7 +183,10 @@ public class ListImageCachesRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of results to return for a single request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -186,7 +195,10 @@ public class ListImageCachesRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token. Set the value to the NextToken value returned from the previous API call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAdDWBF*****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -195,6 +207,7 @@ public class ListImageCachesRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -207,7 +220,10 @@ public class ListImageCachesRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aekzh43v*****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -216,7 +232,10 @@ public class ListImageCachesRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The cache status of the image cache.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ready</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -225,7 +244,7 @@ public class ListImageCachesRequest extends Request {
         }
 
         /**
-         * Tags.
+         * <p>The tags of the image cache. You can specify up to 20 tags.</p>
          */
         public Builder tags(java.util.List<Tags> tags) {
             this.putQueryParameter("Tags", tags);
@@ -294,7 +313,10 @@ public class ListImageCachesRequest extends Request {
             } 
 
             /**
-             * Key.
+             * <p>The tag key of the image cache.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>imc</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -302,7 +324,10 @@ public class ListImageCachesRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The tag value of the image cache.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder value(String value) {
                 this.value = value;

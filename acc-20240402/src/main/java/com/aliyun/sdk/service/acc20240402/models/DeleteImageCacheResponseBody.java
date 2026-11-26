@@ -54,7 +54,10 @@ public class DeleteImageCacheResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0E234675-3465-4CC3-9D0F-9A864BC*****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

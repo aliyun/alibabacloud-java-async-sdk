@@ -27,6 +27,10 @@ public class CreateImageCacheRequest extends Request {
     private String clientToken;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableBaseImageCacheMatch")
+    private Boolean enableBaseImageCacheMatch;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ImageCacheName")
     @com.aliyun.core.annotation.Validation(required = true, maxLength = 128)
     private String imageCacheName;
@@ -62,10 +66,15 @@ public class CreateImageCacheRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Tags")
     private java.util.List<Tags> tags;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
+    private String type;
+
     private CreateImageCacheRequest(Builder builder) {
         super(builder);
         this.acrRegistryInfos = builder.acrRegistryInfos;
         this.clientToken = builder.clientToken;
+        this.enableBaseImageCacheMatch = builder.enableBaseImageCacheMatch;
         this.imageCacheName = builder.imageCacheName;
         this.imageRegistryCredentials = builder.imageRegistryCredentials;
         this.images = builder.images;
@@ -74,6 +83,7 @@ public class CreateImageCacheRequest extends Request {
         this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
         this.tags = builder.tags;
+        this.type = builder.type;
     }
 
     public static Builder builder() {
@@ -101,6 +111,13 @@ public class CreateImageCacheRequest extends Request {
      */
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    /**
+     * @return enableBaseImageCacheMatch
+     */
+    public Boolean getEnableBaseImageCacheMatch() {
+        return this.enableBaseImageCacheMatch;
     }
 
     /**
@@ -159,9 +176,17 @@ public class CreateImageCacheRequest extends Request {
         return this.tags;
     }
 
+    /**
+     * @return type
+     */
+    public String getType() {
+        return this.type;
+    }
+
     public static final class Builder extends Request.Builder<CreateImageCacheRequest, Builder> {
         private java.util.List<AcrRegistryInfos> acrRegistryInfos; 
         private String clientToken; 
+        private Boolean enableBaseImageCacheMatch; 
         private String imageCacheName; 
         private java.util.List<ImageRegistryCredentials> imageRegistryCredentials; 
         private java.util.List<String> images; 
@@ -170,6 +195,7 @@ public class CreateImageCacheRequest extends Request {
         private String regionId; 
         private String resourceGroupId; 
         private java.util.List<Tags> tags; 
+        private String type; 
 
         private Builder() {
             super();
@@ -179,6 +205,7 @@ public class CreateImageCacheRequest extends Request {
             super(request);
             this.acrRegistryInfos = request.acrRegistryInfos;
             this.clientToken = request.clientToken;
+            this.enableBaseImageCacheMatch = request.enableBaseImageCacheMatch;
             this.imageCacheName = request.imageCacheName;
             this.imageRegistryCredentials = request.imageRegistryCredentials;
             this.images = request.images;
@@ -187,10 +214,11 @@ public class CreateImageCacheRequest extends Request {
             this.regionId = request.regionId;
             this.resourceGroupId = request.resourceGroupId;
             this.tags = request.tags;
+            this.type = request.type;
         } 
 
         /**
-         * AcrRegistryInfos.
+         * <p>The ACR Enterprise instance information.</p>
          */
         public Builder acrRegistryInfos(java.util.List<AcrRegistryInfos> acrRegistryInfos) {
             this.putQueryParameter("AcrRegistryInfos", acrRegistryInfos);
@@ -199,7 +227,10 @@ public class CreateImageCacheRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>The idempotency token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7f3a2c18-6c47-4eb7-a6bb-8432a394a620</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -208,6 +239,19 @@ public class CreateImageCacheRequest extends Request {
         }
 
         /**
+         * <p>Specifies whether to enable base image cache matching. Default value: <code>false</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
+        public Builder enableBaseImageCacheMatch(Boolean enableBaseImageCacheMatch) {
+            this.putQueryParameter("EnableBaseImageCacheMatch", enableBaseImageCacheMatch);
+            this.enableBaseImageCacheMatch = enableBaseImageCacheMatch;
+            return this;
+        }
+
+        /**
+         * <p>The name of the image cache.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -220,7 +264,7 @@ public class CreateImageCacheRequest extends Request {
         }
 
         /**
-         * ImageRegistryCredentials.
+         * <p>The credentials of the image registry.</p>
          */
         public Builder imageRegistryCredentials(java.util.List<ImageRegistryCredentials> imageRegistryCredentials) {
             this.putQueryParameter("ImageRegistryCredentials", imageRegistryCredentials);
@@ -229,6 +273,7 @@ public class CreateImageCacheRequest extends Request {
         }
 
         /**
+         * <p>The container images used to create the image cache. Currently, only one image is supported.</p>
          * <p>This parameter is required.</p>
          */
         public Builder images(java.util.List<String> images) {
@@ -238,6 +283,7 @@ public class CreateImageCacheRequest extends Request {
         }
 
         /**
+         * <p>The network configurations for pulling images when creating the image cache.</p>
          * <p>This parameter is required.</p>
          */
         public Builder networkConfig(NetworkConfig networkConfig) {
@@ -248,7 +294,10 @@ public class CreateImageCacheRequest extends Request {
         }
 
         /**
-         * Platform.
+         * <p>The platform type of the image cache. Valid values: linux/amd64 and windows/amd64. Default value: linux/amd64.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>windows/amd64</p>
          */
         public Builder platform(String platform) {
             this.putQueryParameter("Platform", platform);
@@ -257,6 +306,7 @@ public class CreateImageCacheRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -269,7 +319,10 @@ public class CreateImageCacheRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aekzh43v*****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -278,11 +331,23 @@ public class CreateImageCacheRequest extends Request {
         }
 
         /**
-         * Tags.
+         * <p>The tags of the image cache. You can specify up to 20 tags.</p>
          */
         public Builder tags(java.util.List<Tags> tags) {
             this.putQueryParameter("Tags", tags);
             this.tags = tags;
+            return this;
+        }
+
+        /**
+         * <p>The type of the image cache. Valid values: <code>General</code> and <code>Base</code>. Default value: <code>General</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>General</p>
+         */
+        public Builder type(String type) {
+            this.putQueryParameter("Type", type);
+            this.type = type;
             return this;
         }
 
@@ -346,7 +411,10 @@ public class CreateImageCacheRequest extends Request {
             } 
 
             /**
-             * InstanceId.
+             * <p>The ID of the ACR Enterprise instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cri-nwj395hgf6f*****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -354,7 +422,7 @@ public class CreateImageCacheRequest extends Request {
             }
 
             /**
-             * <p>This parameter is required.</p>
+             * <p>The region to which the ACR Enterprise instance belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou</p>
@@ -463,7 +531,10 @@ public class CreateImageCacheRequest extends Request {
             } 
 
             /**
-             * Password.
+             * <p>The password of the image registry.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mypassword</p>
              */
             public Builder password(String password) {
                 this.password = password;
@@ -471,7 +542,10 @@ public class CreateImageCacheRequest extends Request {
             }
 
             /**
-             * Server.
+             * <p>The address of the image registry without the http:// or https:// prefix.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>registry-vpc.cn-hangzhou.aliyuncs.com</p>
              */
             public Builder server(String server) {
                 this.server = server;
@@ -479,7 +553,11 @@ public class CreateImageCacheRequest extends Request {
             }
 
             /**
-             * SkipCertVerification.
+             * <p>Specifies whether to skip certificate verification when you create an image cache by using images from a self-managed image registry that uses a self-signed certificate to prevent image pull failures caused by certificate verification failures.
+             * Default value: <code>false</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder skipCertVerification(Boolean skipCertVerification) {
                 this.skipCertVerification = skipCertVerification;
@@ -487,7 +565,11 @@ public class CreateImageCacheRequest extends Request {
             }
 
             /**
-             * UsePlainHttp.
+             * <p>Specifies whether the service uses the HTTP protocol to pull images to prevent image pull failures caused by protocol mismatches.
+             * Default value: <code>false</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder usePlainHttp(Boolean usePlainHttp) {
                 this.usePlainHttp = usePlainHttp;
@@ -495,7 +577,10 @@ public class CreateImageCacheRequest extends Request {
             }
 
             /**
-             * Username.
+             * <p>The username of the image registry.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>myusername</p>
              */
             public Builder username(String username) {
                 this.username = username;
@@ -575,7 +660,10 @@ public class CreateImageCacheRequest extends Request {
             } 
 
             /**
-             * AutoCreate.
+             * <p>Specifies whether automatic creation of an EIP is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder autoCreate(Boolean autoCreate) {
                 this.autoCreate = autoCreate;
@@ -583,7 +671,10 @@ public class CreateImageCacheRequest extends Request {
             }
 
             /**
-             * Bandwidth.
+             * <p>The bandwidth of the EIP for automatic creation. Unit: Mbit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder bandwidth(Integer bandwidth) {
                 this.bandwidth = bandwidth;
@@ -591,7 +682,10 @@ public class CreateImageCacheRequest extends Request {
             }
 
             /**
-             * InstanceId.
+             * <p>The elastic IP address. This parameter takes precedence. If you specify this parameter, other parameters are ignored.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eip-0jl0bx3fnpnjc9i4*****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -673,7 +767,7 @@ public class CreateImageCacheRequest extends Request {
             } 
 
             /**
-             * EipInstance.
+             * <p>The configurations of the elastic IP address (EIP) instance.</p>
              */
             public Builder eipInstance(EipInstance eipInstance) {
                 this.eipInstance = eipInstance;
@@ -681,6 +775,7 @@ public class CreateImageCacheRequest extends Request {
             }
 
             /**
+             * <p>The ID of the security group.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -692,6 +787,7 @@ public class CreateImageCacheRequest extends Request {
             }
 
             /**
+             * <p>The IDs of the vSwitches. You can specify up to 10 vSwitch IDs. One of the vSwitches is selected to pull the image.</p>
              * <p>This parameter is required.</p>
              */
             public Builder vSwitchIds(java.util.List<String> vSwitchIds) {
@@ -760,7 +856,10 @@ public class CreateImageCacheRequest extends Request {
             } 
 
             /**
-             * Key.
+             * <p>The tag key of the image cache.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>imc</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -768,7 +867,10 @@ public class CreateImageCacheRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The tag value of the image cache.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder value(String value) {
                 this.value = value;

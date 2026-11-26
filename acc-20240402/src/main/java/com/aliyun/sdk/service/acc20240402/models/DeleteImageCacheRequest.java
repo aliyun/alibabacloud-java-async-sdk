@@ -89,7 +89,10 @@ public class DeleteImageCacheRequest extends Request {
         } 
 
         /**
-         * Force.
+         * <p>Specifies whether to force delete the image cache. Default value: <code>false</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder force(Boolean force) {
             this.putQueryParameter("Force", force);
@@ -98,6 +101,7 @@ public class DeleteImageCacheRequest extends Request {
         }
 
         /**
+         * <p>The image cache ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -110,6 +114,7 @@ public class DeleteImageCacheRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
