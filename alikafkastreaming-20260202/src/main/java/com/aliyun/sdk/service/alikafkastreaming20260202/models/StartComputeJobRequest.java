@@ -176,7 +176,7 @@ public class StartComputeJobRequest extends Request {
          * <p><strong>The Flink SQL draft, which must be a self-contained and complete DDL and DML statement.</strong></p>
          * 
          * <strong>example:</strong>
-         * <p>CREATE TEMPORARY TABLE src (id BIGINT) WITH (\&quot;connector\&quot; = \&quot;datagen\&quot;); CREATE TEMPORARY TABLE sink (id BIGINT) WITH (\&quot;connector\&quot; = \&quot;print\&quot;); INSERT INTO sink SELECT id FROM src;</p>
+         * <p>CREATE TEMPORARY TABLE src (id BIGINT) WITH (&quot;connector&quot; = &quot;datagen&quot;); CREATE TEMPORARY TABLE sink (id BIGINT) WITH (&quot;connector&quot; = &quot;print&quot;); INSERT INTO sink SELECT id FROM src;</p>
          */
         public Builder draftSql(String draftSql) {
             this.putQueryParameter("DraftSql", draftSql);

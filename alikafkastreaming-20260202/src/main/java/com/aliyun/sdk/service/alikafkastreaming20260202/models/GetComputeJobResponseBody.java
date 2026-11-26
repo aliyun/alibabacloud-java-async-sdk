@@ -459,7 +459,7 @@ public class GetComputeJobResponseBody extends TeaModel {
              * <p>The error message.</p>
              * 
              * <strong>example:</strong>
-             * <p>SQL validation or compilation failed: Column \&quot;xxx\&quot; not found</p>
+             * <p>SQL validation or compilation failed: Column &quot;xxx&quot; not found</p>
              */
             public Builder errorMsg(String errorMsg) {
                 this.errorMsg = errorMsg;

@@ -32,11 +32,16 @@ public class StopComputeJobRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StopStrategy")
+    private String stopStrategy;
+
     private StopComputeJobRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
         this.jobName = builder.jobName;
         this.regionId = builder.regionId;
+        this.stopStrategy = builder.stopStrategy;
     }
 
     public static Builder builder() {
@@ -73,10 +78,18 @@ public class StopComputeJobRequest extends Request {
         return this.regionId;
     }
 
+    /**
+     * @return stopStrategy
+     */
+    public String getStopStrategy() {
+        return this.stopStrategy;
+    }
+
     public static final class Builder extends Request.Builder<StopComputeJobRequest, Builder> {
         private String instanceId; 
         private String jobName; 
         private String regionId; 
+        private String stopStrategy; 
 
         private Builder() {
             super();
@@ -87,10 +100,11 @@ public class StopComputeJobRequest extends Request {
             this.instanceId = request.instanceId;
             this.jobName = request.jobName;
             this.regionId = request.regionId;
+            this.stopStrategy = request.stopStrategy;
         } 
 
         /**
-         * <p>The ID of the compute instance, excluding the region name.</p>
+         * <p>The ID of the computing instance, excluding the region name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -103,7 +117,7 @@ public class StopComputeJobRequest extends Request {
         }
 
         /**
-         * <p>The name of the compute job.</p>
+         * <p>The name of the computing job.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -125,6 +139,24 @@ public class StopComputeJobRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * <p>The job stop strategy. Default value: <code>CANCEL</code> if omitted.</p>
+         * <ul>
+         * <li><code>CANCEL</code>: Stops the job directly and skips the current savepoint.</li>
+         * <li><code>STOP_WITH_SAVEPOINT</code>: Creates a savepoint and then stops the job.</li>
+         * <li><code>STOP_WITH_DRAIN</code>: Stops the job in drain mode and creates a savepoint, triggering the output of event time windows.</li>
+         * </ul>
+         * <p>Strategies with savepoints apply only to running production jobs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>STOP_WITH_SAVEPOINT</p>
+         */
+        public Builder stopStrategy(String stopStrategy) {
+            this.putQueryParameter("StopStrategy", stopStrategy);
+            this.stopStrategy = stopStrategy;
             return this;
         }
 

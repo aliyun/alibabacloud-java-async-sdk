@@ -219,7 +219,7 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <b>description</b> :
      * <h2>Request description</h2>
      * <ul>
-     * <li>This operation stops the production or debug runtime instance of a specified compute job.</li>
+     * <li>This operation stops the production or debug running instance of a specified computing job.</li>
      * <li>A successful response indicates that the stop request has been accepted, but it does not mean that the job stops immediately.</li>
      * </ul>
      * 
