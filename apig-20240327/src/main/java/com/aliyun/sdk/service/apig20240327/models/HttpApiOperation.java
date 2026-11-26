@@ -50,6 +50,9 @@ public class HttpApiOperation extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("response")
     private HttpApiResponseContract response;
 
+    @com.aliyun.core.annotation.NameInMap("systemParameters")
+    private HttpApiSystemParameters systemParameters;
+
     private HttpApiOperation(Builder builder) {
         this.authConfig = builder.authConfig;
         this.deployConfigs = builder.deployConfigs;
@@ -61,6 +64,7 @@ public class HttpApiOperation extends TeaModel {
         this.path = builder.path;
         this.request = builder.request;
         this.response = builder.response;
+        this.systemParameters = builder.systemParameters;
     }
 
     public static Builder builder() {
@@ -145,6 +149,13 @@ public class HttpApiOperation extends TeaModel {
         return this.response;
     }
 
+    /**
+     * @return systemParameters
+     */
+    public HttpApiSystemParameters getSystemParameters() {
+        return this.systemParameters;
+    }
+
     public static final class Builder {
         private AuthConfig authConfig; 
         private java.util.List<HttpApiDeployConfig> deployConfigs; 
@@ -156,6 +167,7 @@ public class HttpApiOperation extends TeaModel {
         private String path; 
         private HttpApiRequestContract request; 
         private HttpApiResponseContract response; 
+        private HttpApiSystemParameters systemParameters; 
 
         private Builder() {
         } 
@@ -171,6 +183,7 @@ public class HttpApiOperation extends TeaModel {
             this.path = model.path;
             this.request = model.request;
             this.response = model.response;
+            this.systemParameters = model.systemParameters;
         } 
 
         /**
@@ -182,7 +195,7 @@ public class HttpApiOperation extends TeaModel {
         }
 
         /**
-         * <p>The deployment configuration.</p>
+         * <p>The deployment configurations.</p>
          */
         public Builder deployConfigs(java.util.List<HttpApiDeployConfig> deployConfigs) {
             this.deployConfigs = deployConfigs;
@@ -190,7 +203,7 @@ public class HttpApiOperation extends TeaModel {
         }
 
         /**
-         * <p>The operation description.</p>
+         * <p>The API description.</p>
          * 
          * <strong>example:</strong>
          * <p>Retrieve user information</p>
@@ -201,7 +214,7 @@ public class HttpApiOperation extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether authentication is enabled.</p>
+         * <p>Specifies whether authentication is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -224,7 +237,7 @@ public class HttpApiOperation extends TeaModel {
         }
 
         /**
-         * <p>The mock configuration of the operation. This configuration takes effect only when the API is published in Mock mode.</p>
+         * <p>The API mock configuration. This configuration takes effect only when the API publishing scenario is Mock.</p>
          */
         public Builder mock(HttpApiMockContract mock) {
             this.mock = mock;
@@ -232,7 +245,7 @@ public class HttpApiOperation extends TeaModel {
         }
 
         /**
-         * <p>The operation name.</p>
+         * <p>The API name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -244,7 +257,7 @@ public class HttpApiOperation extends TeaModel {
         }
 
         /**
-         * <p>The operation path.</p>
+         * <p>The API path.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -256,7 +269,7 @@ public class HttpApiOperation extends TeaModel {
         }
 
         /**
-         * <p>The request parameter definition of the operation.</p>
+         * <p>The request parameter definition.</p>
          */
         public Builder request(HttpApiRequestContract request) {
             this.request = request;
@@ -264,10 +277,18 @@ public class HttpApiOperation extends TeaModel {
         }
 
         /**
-         * <p>The response parameter definition of the operation.</p>
+         * <p>The response parameter definition.</p>
          */
         public Builder response(HttpApiResponseContract response) {
             this.response = response;
+            return this;
+        }
+
+        /**
+         * <p>The system parameter configuration. This is supported only for operations of standard REST APIs. If you omit this parameter or set it to null during creation, no configuration is applied. If you omit this parameter or set it to null during an update, the original configuration is retained. To clear the configuration, explicitly pass an object without mappings, such as {}. Saving only modifies the draft, and the changes take effect after publishing.</p>
+         */
+        public Builder systemParameters(HttpApiSystemParameters systemParameters) {
+            this.systemParameters = systemParameters;
             return this;
         }
 

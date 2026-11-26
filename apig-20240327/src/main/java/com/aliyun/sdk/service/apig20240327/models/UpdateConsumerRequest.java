@@ -50,6 +50,10 @@ public class UpdateConsumerRequest extends Request {
     private Long expireAt;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("extInfo")
+    private String extInfo;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("jwtIdentityConfig")
     private JwtIdentityConfig jwtIdentityConfig;
 
@@ -67,6 +71,7 @@ public class UpdateConsumerRequest extends Request {
         this.enable = builder.enable;
         this.enableAfterRenewal = builder.enableAfterRenewal;
         this.expireAt = builder.expireAt;
+        this.extInfo = builder.extInfo;
         this.jwtIdentityConfig = builder.jwtIdentityConfig;
         this.renew = builder.renew;
     }
@@ -141,6 +146,13 @@ public class UpdateConsumerRequest extends Request {
     }
 
     /**
+     * @return extInfo
+     */
+    public String getExtInfo() {
+        return this.extInfo;
+    }
+
+    /**
      * @return jwtIdentityConfig
      */
     public JwtIdentityConfig getJwtIdentityConfig() {
@@ -163,6 +175,7 @@ public class UpdateConsumerRequest extends Request {
         private Boolean enable; 
         private Boolean enableAfterRenewal; 
         private Long expireAt; 
+        private String extInfo; 
         private JwtIdentityConfig jwtIdentityConfig; 
         private Boolean renew; 
 
@@ -180,6 +193,7 @@ public class UpdateConsumerRequest extends Request {
             this.enable = request.enable;
             this.enableAfterRenewal = request.enableAfterRenewal;
             this.expireAt = request.expireAt;
+            this.extInfo = request.extInfo;
             this.jwtIdentityConfig = request.jwtIdentityConfig;
             this.renew = request.renew;
         } 
@@ -197,7 +211,7 @@ public class UpdateConsumerRequest extends Request {
         }
 
         /**
-         * <p>The list of AK/SK identity authentication configurations.</p>
+         * <p>The list of AccessKey pair identity authentication configurations.</p>
          */
         public Builder akSkIdentityConfigs(java.util.List<AkSkIdentityConfig> akSkIdentityConfigs) {
             this.putBodyParameter("akSkIdentityConfigs", akSkIdentityConfigs);
@@ -239,7 +253,7 @@ public class UpdateConsumerRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable the consumer.</p>
+         * <p>Specifies whether the consumer is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -251,7 +265,7 @@ public class UpdateConsumerRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable the consumer after renewal. This parameter can be set to true only when renew=true. The default value is false, which retains the current enabled or disabled state and does not implicitly enable a manually disabled consumer.</p>
+         * <p>Specifies whether to enable the consumer after renewal. This parameter can be set to true only when renew=true. The default value is false, which retains the current enabled or disabled status and does not implicitly enable a manually disabled consumer.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -263,7 +277,7 @@ public class UpdateConsumerRequest extends Request {
         }
 
         /**
-         * <p>The expiration time of the consumer, in UTC UNIX seconds. It must be a positive integer and later than the current time. If this parameter is not specified, the original value is retained. This parameter cannot be set at the same time as clearExpireAt=true. If renew=true, the value must be later than the original unexpired expiration time. If the configuration is saved but fails to be delivered, a retry with the original expiration time is allowed, but shortening the expiration time is still prohibited.</p>
+         * <p>The expiration time of the consumer, in UTC UNIX seconds. The value must be a positive integer and later than the current time. If this parameter is not specified, the original value is retained. This parameter cannot be set at the same time as clearExpireAt=true. If renew=true, the value must also be later than the original expiration time that has not expired. If the configuration is saved but fails to be delivered, retries with the original expiration time are allowed, but shortening the expiration time is still prohibited.</p>
          * 
          * <strong>example:</strong>
          * <p>1893456000</p>
@@ -271,6 +285,18 @@ public class UpdateConsumerRequest extends Request {
         public Builder expireAt(Long expireAt) {
             this.putBodyParameter("expireAt", expireAt);
             this.expireAt = expireAt;
+            return this;
+        }
+
+        /**
+         * <p>The extended information of the consumer. The value is saved as a raw string and can be up to 65,535 UTF-8 bytes in length. If this parameter is omitted or set to null, the original value is retained. An empty string clears the value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>partner-a</p>
+         */
+        public Builder extInfo(String extInfo) {
+            this.putBodyParameter("extInfo", extInfo);
+            this.extInfo = extInfo;
             return this;
         }
 
@@ -284,7 +310,7 @@ public class UpdateConsumerRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to only renew the consumer. If this parameter is set to true, only the validity period is updated and the consumer is explicitly enabled at the same time. The latest credentials, description, and authorizations on the server are retained. You must set expireAt or clearExpireAt=true, and you cannot specify identity configurations or description. The default value is false, which retains the original consumer update semantics.</p>
+         * <p>Specifies whether to only renew the consumer. If this parameter is set to true, only the validity period is updated and the consumer is explicitly enabled at the same time. The latest credentials, description, and authorizations on the server are retained. You must set expireAt or clearExpireAt=true, and cannot include identity configurations or description. The default value is false, which retains the original consumer update semantics.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>

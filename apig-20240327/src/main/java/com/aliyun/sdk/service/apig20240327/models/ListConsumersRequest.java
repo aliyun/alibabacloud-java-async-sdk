@@ -143,7 +143,7 @@ public class ListConsumersRequest extends Request {
         } 
 
         /**
-         * <p>The validity status filter. Valid values: Permanent, InEffect, AboutToExpire, and Expired. You can specify multiple values separated by commas to form a union. If this parameter is not specified, all statuses are included and intersected with the name and display status filters.</p>
+         * <p>The expiration status filter. Valid values: Permanent, InEffect, AboutToExpire, and Expired. You can specify multiple values separated by commas to form a union. If this parameter is not specified, all statuses are included, and the result is intersected with the name and display status filters.</p>
          * 
          * <strong>example:</strong>
          * <p>Expired,AboutToExpire</p>
@@ -155,7 +155,7 @@ public class ListConsumersRequest extends Request {
         }
 
         /**
-         * <p>The gateway type used for filtering. Currently, <strong>AI</strong> and <strong>API</strong> gateway types are supported.</p>
+         * <p>The gateway type filter. Currently, <strong>AI</strong> and <strong>API</strong> gateway types are supported.</p>
          * 
          * <strong>example:</strong>
          * <p>AI</p>
@@ -167,7 +167,7 @@ public class ListConsumersRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to return the full expiration reminder count. Default value: false. The statistical scope is limited only by the current account and gatewayType.</p>
+         * <p>Specifies whether to return the total count of expiration reminders. Default value: false. The statistical scope is limited only by the current account and gatewayType.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -179,7 +179,7 @@ public class ListConsumersRequest extends Request {
         }
 
         /**
-         * <p>The keyword used for fuzzy search by API name.</p>
+         * <p>The keyword used to perform a fuzzy search by API name.</p>
          * 
          * <strong>example:</strong>
          * <p>UI-test</p>
@@ -215,7 +215,13 @@ public class ListConsumersRequest extends Request {
         }
 
         /**
-         * <p>The display status filter. Valid values: Enabled (enabled and not expired), Disabled (disabled regardless of expiration), and Expired (enabled and expired). If this parameter is not specified, all statuses are included and intersected with other filter conditions.</p>
+         * <p>The display status filter. Valid values:</p>
+         * <ul>
+         * <li>Enabled: Enabled and not expired.</li>
+         * <li>Disabled: Disabled, regardless of whether it has expired.</li>
+         * <li>Expired: Enabled and expired.
+         * If this parameter is not specified, all statuses are included, and the result is intersected with other filter conditions.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Enabled</p>

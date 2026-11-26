@@ -184,7 +184,7 @@ public class TransportCertificateInfo extends TeaModel {
         } 
 
         /**
-         * <p>The signature or key algorithm.</p>
+         * <p>The signature/key algorithm.</p>
          * 
          * <strong>example:</strong>
          * <p>RSA_2048</p>
@@ -195,10 +195,10 @@ public class TransportCertificateInfo extends TeaModel {
         }
 
         /**
-         * <p>The certificate identifier, which is the certificate ID under the APIG cloud account.</p>
+         * <p>The certificate identifier (certificate ID under the APIG cloud account).</p>
          * 
          * <strong>example:</strong>
-         * <p>cert-1（1716***@cn-hangzhou 形态）</p>
+         * <p>cert-1 (in the 1716***@cn-hangzhou format)</p>
          */
         public Builder certIdentifier(String certIdentifier) {
             this.certIdentifier = certIdentifier;
@@ -217,7 +217,7 @@ public class TransportCertificateInfo extends TeaModel {
         }
 
         /**
-         * <p>The matching status between the certificate and the instance domain names.</p>
+         * <p>The match status between the certificate and gateway instance domain names.</p>
          * 
          * <strong>example:</strong>
          * <p>Matched</p>
@@ -228,7 +228,7 @@ public class TransportCertificateInfo extends TeaModel {
         }
 
         /**
-         * <p>The common name (CN) of the certificate.</p>
+         * <p>The certificate Common Name (CN).</p>
          * 
          * <strong>example:</strong>
          * <p>api.example.com</p>
@@ -239,7 +239,7 @@ public class TransportCertificateInfo extends TeaModel {
         }
 
         /**
-         * <p>The set of covered domain names parsed from the CN and SAN. The domain names are in lowercase, deduplicated, and may include wildcards such as *.</p>
+         * <p>The set of covered domain names parsed from CN and SAN (deduplicated in lowercase, may contain *. wildcards).</p>
          */
         public Builder coveredDomains(java.util.List<String> coveredDomains) {
             this.coveredDomains = coveredDomains;
@@ -258,7 +258,7 @@ public class TransportCertificateInfo extends TeaModel {
         }
 
         /**
-         * <p>The gateway instance domain names matched by the covered domain names. The order follows the instance domain names, and the results are deduplicated.</p>
+         * <p>The gateway instance domain names matched by covered domains (ordered by instance domain name, deduplicated).</p>
          */
         public Builder matchedDomains(java.util.List<String> matchedDomains) {
             this.matchedDomains = matchedDomains;
@@ -266,7 +266,7 @@ public class TransportCertificateInfo extends TeaModel {
         }
 
         /**
-         * <p>The expiration timestamp in UNIX milliseconds, which is obtained from the afterDate of the certificate.</p>
+         * <p>The expiration timestamp (Unix milliseconds, from the certificate afterDate).</p>
          * 
          * <strong>example:</strong>
          * <p>1747958400000</p>
@@ -277,7 +277,7 @@ public class TransportCertificateInfo extends TeaModel {
         }
 
         /**
-         * <p>The UNIX timestamp for the effective period in milliseconds, which is obtained from the beforeDate of the certificate.</p>
+         * <p>The effective period UNIX timestamp (Unix milliseconds, from the certificate beforeDate).</p>
          * 
          * <strong>example:</strong>
          * <p>1716336000000</p>
@@ -288,7 +288,7 @@ public class TransportCertificateInfo extends TeaModel {
         }
 
         /**
-         * <p>The raw Subject Alternative Name (SAN) string separated by commas, semicolons, or spaces. Elements may include the DNS: prefix.</p>
+         * <p>The raw SAN string (separated by commas, semicolons, or whitespace. Elements may have a DNS: prefix).</p>
          * 
          * <strong>example:</strong>
          * <p>DNS:*.example.org, DNS:foo.example.net</p>

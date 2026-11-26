@@ -310,7 +310,7 @@ public class GetPluginAttachmentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The parent mounted resource information.</p>
+             * <p>The parent attached resource information.</p>
              */
             public Builder parentResourceInfo(ParentResourceInfo parentResourceInfo) {
                 this.parentResourceInfo = parentResourceInfo;
@@ -348,7 +348,7 @@ public class GetPluginAttachmentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The plugin ID.</p>
+             * <p>The ID of the plugin.</p>
              * 
              * <strong>example:</strong>
              * <p>pl-cvo8ub6m1hkvgv03r3k0</p>
@@ -359,7 +359,7 @@ public class GetPluginAttachmentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of mounted resource information.</p>
+             * <p>The list of attached resource information.</p>
              */
             public Builder resourceInfos(java.util.List<ResourceInfo> resourceInfos) {
                 this.resourceInfos = resourceInfos;

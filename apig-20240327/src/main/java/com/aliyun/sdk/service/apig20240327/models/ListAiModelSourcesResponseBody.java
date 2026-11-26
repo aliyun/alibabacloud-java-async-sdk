@@ -93,7 +93,7 @@ public class ListAiModelSourcesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The response status code. The value is Ok for successful requests, or a specific business error code for failed requests.</p>
+         * <p>The response status code. A value of Ok indicates success. A specific business error code indicates failure.</p>
          * 
          * <strong>example:</strong>
          * <p>Ok</p>
@@ -283,7 +283,10 @@ public class ListAiModelSourcesResponseBody extends TeaModel {
             } 
 
             /**
-             * callNamePrefix.
+             * <p>The valid invoke name prefix for the model source. You can specify this prefix during model creation. By default, the provider identity is used. This prefix cannot be modified after creation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qwen-prod</p>
              */
             public Builder callNamePrefix(String callNamePrefix) {
                 this.callNamePrefix = callNamePrefix;
@@ -324,7 +327,7 @@ public class ListAiModelSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the model source. Use the modelSourceId returned by CreateAiModelSource.</p>
+             * <p>The model source ID. Use the modelSourceId returned by CreateAiModelSource.</p>
              * 
              * <strong>example:</strong>
              * <p>ms-d00000000000000000000</p>
@@ -368,7 +371,7 @@ public class ListAiModelSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The current version of the object, which is used for conditional checks during updates or deletions.</p>
+             * <p>The current version of the object, which is used for conditional validation during updates or deletions.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -483,7 +486,7 @@ public class ListAiModelSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The pagination token returned from the previous page. Do not specify this parameter when you query the first page.</p>
+             * <p>The pagination token returned from the previous page. Do not pass this parameter when querying the first page.</p>
              * 
              * <strong>example:</strong>
              * <p>eyJvZmZzZXQiOjIwfQ==</p>

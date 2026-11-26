@@ -130,7 +130,7 @@ public class ListAiModelSourcesRequest extends Request {
         }
 
         /**
-         * <p>The search keyword used to match resources by name or identifier.</p>
+         * <p>The query keyword used to match resources by name or identifier.</p>
          * 
          * <strong>example:</strong>
          * <p>beta</p>
@@ -142,7 +142,7 @@ public class ListAiModelSourcesRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of results to return per page. Valid values: 1 to 100. This parameter is required. Do not use pageNumber or pageSize for token-based pagination.</p>
+         * <p>The maximum number of results per page. Valid values: 1 to 100. This parameter is required. Token-based pagination does not use pageNumber or pageSize.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -155,7 +155,7 @@ public class ListAiModelSourcesRequest extends Request {
         }
 
         /**
-         * <p>The pagination token returned from the previous page. Omit this parameter for the first page. The token is empty or omitted on the last page.</p>
+         * <p>The query position returned from the previous page. Omit this parameter for the first page. For the last page, this parameter is empty or omitted.</p>
          * 
          * <strong>example:</strong>
          * <p>eyJvZmZzZXQiOjIwfQ==</p>

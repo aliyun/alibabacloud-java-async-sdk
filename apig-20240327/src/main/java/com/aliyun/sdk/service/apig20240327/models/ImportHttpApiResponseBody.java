@@ -195,7 +195,7 @@ public class ImportHttpApiResponseBody extends TeaModel {
              * <p>The error message.</p>
              * 
              * <strong>example:</strong>
-             * <p>Invalid data structure definition</p>
+             * <p>Incorrect data structure definition</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -459,7 +459,7 @@ public class ImportHttpApiResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The action to perform after the dry run.</p>
+             * <p>The action to be performed after the dry run.</p>
              * <ul>
              * <li>Create: Create.</li>
              * <li>Update: Update.</li>
@@ -570,7 +570,7 @@ public class ImportHttpApiResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The action to perform after the dry run.</p>
+             * <p>The action to be performed after the dry run.</p>
              * <ul>
              * <li>Create: Create.</li>
              * <li>Update: Update.</li>
@@ -862,7 +862,7 @@ public class ImportHttpApiResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The error messages. If the error messages are not empty, the API cannot be imported successfully.</p>
+             * <p>The error messages. If this field is not empty, the API cannot be imported successfully.</p>
              */
             public Builder errorMessages(java.util.List<String> errorMessages) {
                 this.errorMessages = errorMessages;
@@ -937,7 +937,7 @@ public class ImportHttpApiResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The warning messages. If the warning messages are not empty, some operations or data structures may fail to import.</p>
+             * <p>The warning messages. If this field is not empty, some operations or data structures may fail to import.</p>
              */
             public Builder warningMessages(java.util.List<String> warningMessages) {
                 this.warningMessages = warningMessages;
@@ -1017,7 +1017,7 @@ public class ImportHttpApiResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The dry run result.</p>
+             * <p>The dry run results.</p>
              */
             public Builder dryRunInfo(DryRunInfo dryRunInfo) {
                 this.dryRunInfo = dryRunInfo;

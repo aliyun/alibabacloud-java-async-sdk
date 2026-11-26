@@ -218,7 +218,7 @@ public class GetConsumerResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the consumer group.</p>
+             * <p>The consumer group ID.</p>
              * 
              * <strong>example:</strong>
              * <p>csg-8c13d2b4f8a1</p>
@@ -229,10 +229,10 @@ public class GetConsumerResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the consumer group.</p>
+             * <p>The consumer group description.</p>
              * 
              * <strong>example:</strong>
-             * <p>Used to group production API call invokers</p>
+             * <p>Used to group consumers that invoke production APIs</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -240,7 +240,7 @@ public class GetConsumerResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the consumer joined the consumer group, as a Unix timestamp in milliseconds.</p>
+             * <p>The time when the consumer joined the consumer group, in Unix milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1715769600000</p>
@@ -251,7 +251,7 @@ public class GetConsumerResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the consumer group.</p>
+             * <p>The consumer group name.</p>
              * 
              * <strong>example:</strong>
              * <p>api-consumer-group</p>
@@ -305,6 +305,9 @@ public class GetConsumerResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("expireStatus")
         private String expireStatus;
 
+        @com.aliyun.core.annotation.NameInMap("extInfo")
+        private String extInfo;
+
         @com.aliyun.core.annotation.NameInMap("jwtIdentityConfig")
         private JwtIdentityConfig jwtIdentityConfig;
 
@@ -325,6 +328,7 @@ public class GetConsumerResponseBody extends TeaModel {
             this.enable = builder.enable;
             this.expireAt = builder.expireAt;
             this.expireStatus = builder.expireStatus;
+            this.extInfo = builder.extInfo;
             this.jwtIdentityConfig = builder.jwtIdentityConfig;
             this.name = builder.name;
             this.updateTimestamp = builder.updateTimestamp;
@@ -409,6 +413,13 @@ public class GetConsumerResponseBody extends TeaModel {
         }
 
         /**
+         * @return extInfo
+         */
+        public String getExtInfo() {
+            return this.extInfo;
+        }
+
+        /**
          * @return jwtIdentityConfig
          */
         public JwtIdentityConfig getJwtIdentityConfig() {
@@ -440,6 +451,7 @@ public class GetConsumerResponseBody extends TeaModel {
             private Boolean enable; 
             private Long expireAt; 
             private String expireStatus; 
+            private String extInfo; 
             private JwtIdentityConfig jwtIdentityConfig; 
             private String name; 
             private Long updateTimestamp; 
@@ -458,13 +470,14 @@ public class GetConsumerResponseBody extends TeaModel {
                 this.enable = model.enable;
                 this.expireAt = model.expireAt;
                 this.expireStatus = model.expireStatus;
+                this.extInfo = model.extInfo;
                 this.jwtIdentityConfig = model.jwtIdentityConfig;
                 this.name = model.name;
                 this.updateTimestamp = model.updateTimestamp;
             } 
 
             /**
-             * <p>The AccessKey pair identity authentication configuration.</p>
+             * <p>The AK/SK identity authentication configurations.</p>
              */
             public Builder akSkIdentityConfigs(java.util.List<AkSkIdentityConfig> akSkIdentityConfigs) {
                 this.akSkIdentityConfigs = akSkIdentityConfigs;
@@ -488,7 +501,7 @@ public class GetConsumerResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the consumer.</p>
+             * <p>The consumer ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cs-cvgbtk6m1hkji5sb8dr0</p>
@@ -524,7 +537,7 @@ public class GetConsumerResponseBody extends TeaModel {
              * <p>The description.</p>
              * 
              * <strong>example:</strong>
-             * <p>Consumer dedicated for testing</p>
+             * <p>Test consumer</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -543,7 +556,7 @@ public class GetConsumerResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The expiration time of the consumer in UTC Unix seconds. A null value indicates permanent validity and does not affect the enable or disable semantics of the enable parameter.</p>
+             * <p>The consumer expiration time in UTC Unix seconds. A null value indicates that the consumer is permanently valid and does not change the start or stop semantics of the enable parameter.</p>
              * 
              * <strong>example:</strong>
              * <p>1893456000</p>
@@ -554,13 +567,30 @@ public class GetConsumerResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The validity status calculated based on the current time. Valid values: Permanent: permanently valid. InEffect: more than seven days remaining. AboutToExpire: more than zero and up to seven days remaining. Expired: the expiration time has been reached.</p>
+             * <p>The validity status calculated based on the current time. Valid values:</p>
+             * <ul>
+             * <li>Permanent: Permanently valid.</li>
+             * <li>InEffect: More than seven days remaining.</li>
+             * <li>AboutToExpire: More than zero but no more than seven days remaining.</li>
+             * <li>Expired: The expiration time has been reached.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>InEffect</p>
              */
             public Builder expireStatus(String expireStatus) {
                 this.expireStatus = expireStatus;
+                return this;
+            }
+
+            /**
+             * <p>The saved consumer extension information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>partner-a</p>
+             */
+            public Builder extInfo(String extInfo) {
+                this.extInfo = extInfo;
                 return this;
             }
 
@@ -573,7 +603,7 @@ public class GetConsumerResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the consumer.</p>
+             * <p>The consumer name.</p>
              * 
              * <strong>example:</strong>
              * <p>consumer-1</p>

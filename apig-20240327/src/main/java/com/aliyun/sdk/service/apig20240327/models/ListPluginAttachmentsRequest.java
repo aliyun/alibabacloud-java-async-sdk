@@ -171,7 +171,7 @@ public class ListPluginAttachmentsRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the mounted resource.</p>
+         * <p>The mount resource ID.</p>
          * 
          * <strong>example:</strong>
          * <p>hr-cv2h58em1hkg7c6vt43g</p>
@@ -183,7 +183,7 @@ public class ListPluginAttachmentsRequest extends Request {
         }
 
         /**
-         * <p>The type of the plugin mount point. This parameter is not yet enabled.</p>
+         * <p>The plugin mount point type. This parameter is not currently enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>GatewayRoute</p>
@@ -195,7 +195,7 @@ public class ListPluginAttachmentsRequest extends Request {
         }
 
         /**
-         * <p>The types of mount points. Separate multiple values with commas.</p>
+         * <p>The mount point types. Separate multiple values with commas.</p>
          * 
          * <strong>example:</strong>
          * <p>GatewayRoute</p>
@@ -267,7 +267,7 @@ public class ListPluginAttachmentsRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to return the mounts of parent resources. <notice>If this parameter is set to true, it must be used together with a single value of attachResourceTypes. Valid values: GatewayRoute and Operation.</notice></p>
+         * <p>Specifies whether to return the parent resource mounts. <notice>If this parameter is set to true, it must be used together with a single value of attachResourceTypes. Valid values: GatewayRoute and Operation.</notice></p>
          * 
          * <strong>example:</strong>
          * <p>false</p>

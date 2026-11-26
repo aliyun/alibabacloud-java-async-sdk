@@ -56,6 +56,9 @@ public class HttpApiOperationInfo extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("status")
     private String status;
 
+    @com.aliyun.core.annotation.NameInMap("systemParameters")
+    private HttpApiSystemParameters systemParameters;
+
     private HttpApiOperationInfo(Builder builder) {
         this.authConfig = builder.authConfig;
         this.createTimestamp = builder.createTimestamp;
@@ -70,6 +73,7 @@ public class HttpApiOperationInfo extends TeaModel {
         this.request = builder.request;
         this.response = builder.response;
         this.status = builder.status;
+        this.systemParameters = builder.systemParameters;
     }
 
     public static Builder builder() {
@@ -175,6 +179,13 @@ public class HttpApiOperationInfo extends TeaModel {
         return this.status;
     }
 
+    /**
+     * @return systemParameters
+     */
+    public HttpApiSystemParameters getSystemParameters() {
+        return this.systemParameters;
+    }
+
     public static final class Builder {
         private AuthConfig authConfig; 
         private Long createTimestamp; 
@@ -189,6 +200,7 @@ public class HttpApiOperationInfo extends TeaModel {
         private HttpApiRequestContract request; 
         private HttpApiResponseContract response; 
         private String status; 
+        private HttpApiSystemParameters systemParameters; 
 
         private Builder() {
         } 
@@ -207,10 +219,11 @@ public class HttpApiOperationInfo extends TeaModel {
             this.request = model.request;
             this.response = model.response;
             this.status = model.status;
+            this.systemParameters = model.systemParameters;
         } 
 
         /**
-         * <p>The authentication configuration.</p>
+         * <p>The permission authentication configuration.</p>
          */
         public Builder authConfig(AuthConfig authConfig) {
             this.authConfig = authConfig;
@@ -229,7 +242,7 @@ public class HttpApiOperationInfo extends TeaModel {
         }
 
         /**
-         * <p>The backend service deployment information for the operation.</p>
+         * <p>The API operation backend service deployment information.</p>
          */
         public Builder deployConfigs(java.util.List<HttpApiDeployConfig> deployConfigs) {
             this.deployConfigs = deployConfigs;
@@ -259,7 +272,7 @@ public class HttpApiOperationInfo extends TeaModel {
         }
 
         /**
-         * <p>The operation method.</p>
+         * <p>The API operation method.</p>
          * 
          * <strong>example:</strong>
          * <p>GET</p>
@@ -270,7 +283,7 @@ public class HttpApiOperationInfo extends TeaModel {
         }
 
         /**
-         * <p>The operation mock parameter settings.</p>
+         * <p>The API operation mock parameter settings.</p>
          */
         public Builder mock(HttpApiMockContract mock) {
             this.mock = mock;
@@ -278,7 +291,7 @@ public class HttpApiOperationInfo extends TeaModel {
         }
 
         /**
-         * <p>The operation name.</p>
+         * <p>The API operation name.</p>
          * 
          * <strong>example:</strong>
          * <p>GetUserInfo</p>
@@ -289,7 +302,7 @@ public class HttpApiOperationInfo extends TeaModel {
         }
 
         /**
-         * <p>The operation ID.</p>
+         * <p>The API operation ID.</p>
          * 
          * <strong>example:</strong>
          * <p>op-xxx</p>
@@ -300,7 +313,7 @@ public class HttpApiOperationInfo extends TeaModel {
         }
 
         /**
-         * <p>The operation path.</p>
+         * <p>The API operation path.</p>
          * 
          * <strong>example:</strong>
          * <p>/user/123</p>
@@ -311,7 +324,7 @@ public class HttpApiOperationInfo extends TeaModel {
         }
 
         /**
-         * <p>The operation request parameter definition.</p>
+         * <p>The API operation request parameter definition.</p>
          */
         public Builder request(HttpApiRequestContract request) {
             this.request = request;
@@ -319,7 +332,7 @@ public class HttpApiOperationInfo extends TeaModel {
         }
 
         /**
-         * <p>The operation response parameter definition.</p>
+         * <p>The API operation response parameter definition.</p>
          */
         public Builder response(HttpApiResponseContract response) {
             this.response = response;
@@ -327,13 +340,21 @@ public class HttpApiOperationInfo extends TeaModel {
         }
 
         /**
-         * <p>The publish status of the operation on the gateway.</p>
+         * <p>The publish status of the API operation on the gateway.</p>
          * 
          * <strong>example:</strong>
          * <p>Deployed</p>
          */
         public Builder status(String status) {
             this.status = status;
+            return this;
+        }
+
+        /**
+         * <p>Maps the system parameters of the current API operation to backend request headers or query parameters. Each source can be configured only once across the two locations.</p>
+         */
+        public Builder systemParameters(HttpApiSystemParameters systemParameters) {
+            this.systemParameters = systemParameters;
             return this;
         }
 

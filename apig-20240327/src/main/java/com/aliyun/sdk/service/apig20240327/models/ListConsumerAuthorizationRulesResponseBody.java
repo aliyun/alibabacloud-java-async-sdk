@@ -354,7 +354,7 @@ public class ListConsumerAuthorizationRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the consumer.</p>
+             * <p>The consumer ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cs-csheiftlhtgmp0j0hp4g</p>
@@ -436,7 +436,7 @@ public class ListConsumerAuthorizationRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the resource.</p>
+             * <p>The resource ID.</p>
              * 
              * <strong>example:</strong>
              * <p>2351944</p>
@@ -447,7 +447,7 @@ public class ListConsumerAuthorizationRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the resource.</p>
+             * <p>The resource type.</p>
              * 
              * <strong>example:</strong>
              * <p>HttpApiRoute</p>
@@ -573,7 +573,7 @@ public class ListConsumerAuthorizationRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of entries per page.</p>
+             * <p>The page size.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>

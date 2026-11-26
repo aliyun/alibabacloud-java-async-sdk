@@ -161,7 +161,7 @@ public class CreateAndAttachPolicyRequest extends Request {
         } 
 
         /**
-         * <p>The list of target resource IDs to attach.</p>
+         * <p>The list of target resource IDs to mount.</p>
          * <p>This parameter is required.</p>
          */
         public Builder attachResourceIds(java.util.List<String> attachResourceIds) {
@@ -171,7 +171,7 @@ public class CreateAndAttachPolicyRequest extends Request {
         }
 
         /**
-         * <p>The type of the target resource to attach.</p>
+         * <p>The type of the target resource to mount.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -246,7 +246,7 @@ public class CreateAndAttachPolicyRequest extends Request {
         }
 
         /**
-         * <p>The policy name. This parameter is required when className is set to IpAccessControl, JWTAuth, OIDCAuth, or ExternalZAuth, and must be unique within the same gateway instance specified by gatewayId under the current account. If the name duplicates an existing policy, a PolicyExisted error is returned. When you retry after receiving this error, you must use a new name. Resubmitting the same name will always fail. For other className values such as RateLimit, Timeout, Retry, ServiceTls, and AiProxy, this parameter is optional, used only for display purposes, and can be omitted.</p>
+         * <p>The policy name. This parameter is required when className is set to IpAccessControl, JWTAuth, OIDCAuth, or ExternalZAuth, and must be unique within the same gateway instance (gatewayId) under the current account. If the name duplicates an existing policy, a PolicyExisted error is returned. When you retry after receiving this error, you must specify a new name. Resubmitting the same name will always fail. For other className values (such as RateLimit, Timeout, Retry, ServiceTls, and AiProxy), this parameter is optional and used only for display purposes.</p>
          * 
          * <strong>example:</strong>
          * <p>my-fallback-policy</p>

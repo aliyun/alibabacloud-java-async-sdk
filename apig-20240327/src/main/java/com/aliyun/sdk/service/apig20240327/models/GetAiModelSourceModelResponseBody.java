@@ -93,7 +93,7 @@ public class GetAiModelSourceModelResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The response status code. Returns Ok for success and a specific business error code for failure.</p>
+         * <p>The response status code. Ok indicates success, and a specific business error code indicates failure.</p>
          * 
          * <strong>example:</strong>
          * <p>Ok</p>
@@ -104,7 +104,7 @@ public class GetAiModelSourceModelResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The business result returned by operations on models in a source.</p>
+         * <p>The business result returned for the AI model in the model source.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -192,7 +192,7 @@ public class GetAiModelSourceModelResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The invocation path of the model.</p>
+             * <p>The call path of the model.</p>
              * 
              * <strong>example:</strong>
              * <p>/v1/chat/completions</p>
@@ -203,7 +203,7 @@ public class GetAiModelSourceModelResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The protocol type used by the invocation path.</p>
+             * <p>The protocol type used for the call path.</p>
              * 
              * <strong>example:</strong>
              * <p>OpenAI/v1</p>
@@ -299,7 +299,7 @@ public class GetAiModelSourceModelResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of credits per million cached input tokens. This is a non-negative number. A value of 0 indicates free of charge.</p>
+             * <p>The number of credits per million cache-hit input tokens. The value must be a non-negative number. A value of 0 indicates that the cached input is free of charge.</p>
              * 
              * <strong>example:</strong>
              * <p>0.1</p>
@@ -310,7 +310,7 @@ public class GetAiModelSourceModelResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of credits per million input tokens. This is a non-negative number. A value of 0 indicates free of charge.</p>
+             * <p>The number of credits per million input tokens. The value must be a non-negative number. A value of 0 indicates that the input is free of charge.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -321,7 +321,7 @@ public class GetAiModelSourceModelResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of credits per million output tokens. This is a non-negative number. A value of 0 indicates free of charge.</p>
+             * <p>The number of credits per million output tokens. The value must be a non-negative number. A value of 0 indicates that the output is free of charge.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -332,7 +332,7 @@ public class GetAiModelSourceModelResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The pricing method. Valid values: fixed: fixed credit pricing.</p>
+             * <p>The pricing method. Valid values: fixed: Fixed credit pricing.</p>
              * 
              * <strong>example:</strong>
              * <p>fixed</p>
@@ -744,7 +744,7 @@ public class GetAiModelSourceModelResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The protocols and invocation paths supported by the model.</p>
+             * <p>The protocols and call paths supported by the model.</p>
              */
             public Builder availablePaths(java.util.List<AvailablePaths> availablePaths) {
                 this.availablePaths = availablePaths;
@@ -752,7 +752,10 @@ public class GetAiModelSourceModelResponseBody extends TeaModel {
             }
 
             /**
-             * callName.
+             * <p>The full name used to call the model, in the format of valid call name prefix of the model source/model name. If the model source uses the default prefix, the prefix is the provider identifier.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qwen-prod/qwen-plus</p>
              */
             public Builder callName(String callName) {
                 this.callName = callName;
@@ -760,7 +763,7 @@ public class GetAiModelSourceModelResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The credit pricing configuration of the model.</p>
+             * <p>The credit pricing configuration for the model.</p>
              */
             public Builder credit(Credit credit) {
                 this.credit = credit;
@@ -768,7 +771,7 @@ public class GetAiModelSourceModelResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The set of capabilities declared for the model. The key is the capability name and the value indicates whether the capability is supported.</p>
+             * <p>The set of capabilities declared by the model. The key is the capability name, and the value indicates whether the capability is supported.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;nativeStreaming&quot;:true}</p>
@@ -798,7 +801,7 @@ public class GetAiModelSourceModelResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The model identifier. For standard models, use the source model card ID. For logical model entries, use the vm- prefix.</p>
+             * <p>The model identifier. For standard models, use the source model card ID. For logical model entries, use the vm- identifier.</p>
              * 
              * <strong>example:</strong>
              * <p>msc-d00000000000000000000</p>
@@ -831,7 +834,7 @@ public class GetAiModelSourceModelResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The model source ID. Use the modelSourceId returned by the CreateAiModelSource operation.</p>
+             * <p>The model source ID, which is the modelSourceId returned by CreateAiModelSource.</p>
              * 
              * <strong>example:</strong>
              * <p>ms-d00000000000000000000</p>
@@ -853,7 +856,7 @@ public class GetAiModelSourceModelResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The current version of the associated model source.</p>
+             * <p>The current version of the model source to which the model belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -875,7 +878,7 @@ public class GetAiModelSourceModelResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the actual AI service that is bound to the model source.</p>
+             * <p>The ID of the actual AI service bound to the model source.</p>
              * 
              * <strong>example:</strong>
              * <p>svc-d00000000000000000000</p>
@@ -897,7 +900,7 @@ public class GetAiModelSourceModelResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time of the last business update, in RFC 3339 format and the UTC time zone.</p>
+             * <p>The time of the last business update, in RFC 3339 format and UTC time zone.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-11-12T00:00:00Z</p>

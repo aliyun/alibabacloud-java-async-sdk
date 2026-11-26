@@ -93,7 +93,7 @@ public class CreateAiModelSourceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The response status code. Ok is returned for success, and a specific business error code is returned for failure.</p>
+         * <p>The response status code. Ok is returned for a successful request, and a specific business error code is returned for a failed request.</p>
          * 
          * <strong>example:</strong>
          * <p>Ok</p>
@@ -104,7 +104,7 @@ public class CreateAiModelSourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The business result returned for the model source operation.</p>
+         * <p>The business result returned by the model source operation.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -283,7 +283,10 @@ public class CreateAiModelSourceResponseBody extends TeaModel {
             } 
 
             /**
-             * callNamePrefix.
+             * <p>The valid invoke name prefix of the model source. You can specify this prefix during model creation. By default, the provider identity is used. The prefix cannot be modified after creation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qwen-prod</p>
              */
             public Builder callNamePrefix(String callNamePrefix) {
                 this.callNamePrefix = callNamePrefix;
@@ -346,7 +349,7 @@ public class CreateAiModelSourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the AI service bound to the model source.</p>
+             * <p>The ID of the actual AI service bound to the model source.</p>
              * 
              * <strong>example:</strong>
              * <p>svc-d00000000000000000000</p>
@@ -368,7 +371,7 @@ public class CreateAiModelSourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The current version of the object, used for conditional checks during update or delete operations.</p>
+             * <p>The current version of the object, which is used for conditional checks during updates or deletions.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>

@@ -351,7 +351,7 @@ public class CreateHttpApiRequest extends Request {
         }
 
         /**
-         * <p>The list of protocols supported by the agent. This parameter is required when type is set to Agent. For other types, you do not need to specify this parameter.</p>
+         * <p>The list of protocols supported by the agent. This parameter is required when type is set to Agent. This parameter is not required for other types.</p>
          */
         public Builder agentProtocols(java.util.List<String> agentProtocols) {
             this.putBodyParameter("agentProtocols", agentProtocols);
@@ -360,7 +360,7 @@ public class CreateHttpApiRequest extends Request {
         }
 
         /**
-         * <p>The list of AI API protocols. This parameter is required and only one protocol can be specified when type is set to LLM. This parameter is required and multiple protocols can be specified when type is set to Ai. For other types, this parameter is not required. Example: OpenAI/v1.</p>
+         * <p>The list of AI API protocols. This parameter is required and only one protocol can be passed when type is set to LLM. This parameter is required and multiple protocols can be passed when type is set to Ai. This parameter is not required for other types. Example: OpenAI/v1.</p>
          */
         public Builder aiProtocols(java.util.List<String> aiProtocols) {
             this.putBodyParameter("aiProtocols", aiProtocols);
@@ -378,7 +378,7 @@ public class CreateHttpApiRequest extends Request {
         }
 
         /**
-         * <p>The base path of the API. It must start with a forward slash (/), be up to 256 bytes in length, and contain no spaces. This parameter is required when type is set to Rest. When type is set to LLM, Ai, or Agent, this parameter is optional and defaults to /.</p>
+         * <p>The base path of the API. It must start with a forward slash (/), be up to 256 bytes in length, and contain no spaces. This parameter is required when type is set to Rest. When type is set to LLM, Ai, or Agent, this parameter is optional and the default value is /.</p>
          * 
          * <strong>example:</strong>
          * <p>/v1</p>
@@ -402,7 +402,7 @@ public class CreateHttpApiRequest extends Request {
         }
 
         /**
-         * <p>The list of deployment configurations for the HTTP API. This parameter is required and only one deployment configuration can be specified when type is set to LLM or Ai. For other types, this parameter is not validated at the request layer.</p>
+         * <p>The list of deployment configurations for the HTTP API. This parameter is required and only one deployment configuration can be passed when type is set to LLM or Ai. Request-layer validation is not required for other types.</p>
          */
         public Builder deployConfigs(java.util.List<HttpApiDeployConfig> deployConfigs) {
             this.putBodyParameter("deployConfigs", deployConfigs);
@@ -435,7 +435,7 @@ public class CreateHttpApiRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable permission authentication. This parameter is validated when type is set to LLM, Ai, or Agent. When type is set to Rest, this parameter is not validated at the request layer.</p>
+         * <p>Specifies whether to enable permission authentication. This parameter is validated when type is set to LLM, Ai, or Agent. This parameter is not validated at the request layer when type is set to Rest.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -459,7 +459,7 @@ public class CreateHttpApiRequest extends Request {
         }
 
         /**
-         * <p>The configuration information of the HTTP Ingress API. This parameter is required and cannot be null when type is set to HttpIngress. For other types, you do not need to specify this parameter.</p>
+         * <p>The configuration information of the HTTP Ingress API. This parameter is required and cannot be nil when type is set to HttpIngress. This parameter is not required for other types.</p>
          */
         public Builder ingressConfig(IngressConfig ingressConfig) {
             this.putBodyParameter("ingressConfig", ingressConfig);
@@ -468,7 +468,7 @@ public class CreateHttpApiRequest extends Request {
         }
 
         /**
-         * <p>The AI model category. This parameter is optional when type is set to LLM or Ai. For other types, you do not need to specify this parameter. Valid values: Text (text generation), Image (image generation), Audio (audio processing), Video (video generation), MultiModal (multimodal), Embedding (vector embedding), Rerank (reranking), and Others (others).</p>
+         * <p>The AI model category. This parameter is optional when type is set to LLM or Ai, and is not required for other types. Valid values: Text (text generation), Image (image generation), Audio (audio processing), Video (video generation), MultiModal (multimodal), Embedding (vector embedding), Rerank (reranking), and Others (others).</p>
          * 
          * <strong>example:</strong>
          * <p>Text</p>
@@ -538,7 +538,7 @@ public class CreateHttpApiRequest extends Request {
         }
 
         /**
-         * <p>The type of the HTTP API. Valid values: Http (common HTTP API), Rest (RESTful API), WebSocket (WebSocket API), HttpIngress (HTTP API accessed through Ingress), LLM (large language model API), and Agent (agent API).</p>
+         * <p>The type of the HTTP API. Valid values: Http (common HTTP API), Rest (RESTful API), WebSocket (WebSocket API), HttpIngress (HTTP API accessed through Ingress), LLM (large language model API), and Agent (agent proxy API).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -560,7 +560,7 @@ public class CreateHttpApiRequest extends Request {
         }
 
         /**
-         * <p>The idempotency token. A globally unique value generated by the caller (a UUID is recommended). The value can be up to 64 characters in length. If you make a repeated request with the same ClientToken and identical request parameters within approximately 24 hours after the initial request succeeds, the system directly returns the httpApiId created by the initial request and does not create a duplicate HTTP API. If a repeated request has the same ClientToken but different request parameters, the system returns the IdempotentParameterMismatch error. If the initial request is still being processed, the system returns the IdempotentProcessing error. If this parameter is not specified, idempotency control is disabled, and the behavior remains the same as in previous versions.</p>
+         * <p>The idempotency token. It is a globally unique value generated by the caller (UUID is recommended) and can be up to 64 characters in length. Within about 24 hours after the first request succeeds, a repeated request with the same ClientToken and identical request parameters directly returns the httpApiId created by the first request without creating the HTTP API again. If the same ClientToken is used but the request parameters are different, IdempotentParameterMismatch is returned. If the first request is still being processed, IdempotentProcessing is returned. If this parameter is not specified, idempotency control is not enabled, and the behavior is consistent with the existing version.</p>
          * 
          * <strong>example:</strong>
          * <p>5f7a2c1e-9b3d-4e8f-a1c6-0d2b8e4f7a13</p>
@@ -706,7 +706,7 @@ public class CreateHttpApiRequest extends Request {
             }
 
             /**
-             * <p>The Ingress class to listen on.</p>
+             * <p>The Ingress class to listen to.</p>
              * 
              * <strong>example:</strong>
              * <p>mse</p>

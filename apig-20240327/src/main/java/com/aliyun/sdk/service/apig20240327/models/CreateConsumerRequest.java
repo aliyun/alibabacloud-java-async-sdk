@@ -38,6 +38,10 @@ public class CreateConsumerRequest extends Request {
     private Long expireAt;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("extInfo")
+    private String extInfo;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("gatewayType")
     private String gatewayType;
 
@@ -64,6 +68,7 @@ public class CreateConsumerRequest extends Request {
         this.description = builder.description;
         this.enable = builder.enable;
         this.expireAt = builder.expireAt;
+        this.extInfo = builder.extInfo;
         this.gatewayType = builder.gatewayType;
         this.jwtIdentityConfig = builder.jwtIdentityConfig;
         this.name = builder.name;
@@ -120,6 +125,13 @@ public class CreateConsumerRequest extends Request {
     }
 
     /**
+     * @return extInfo
+     */
+    public String getExtInfo() {
+        return this.extInfo;
+    }
+
+    /**
      * @return gatewayType
      */
     public String getGatewayType() {
@@ -160,6 +172,7 @@ public class CreateConsumerRequest extends Request {
         private String description; 
         private Boolean enable; 
         private Long expireAt; 
+        private String extInfo; 
         private String gatewayType; 
         private JwtIdentityConfig jwtIdentityConfig; 
         private String name; 
@@ -177,6 +190,7 @@ public class CreateConsumerRequest extends Request {
             this.description = request.description;
             this.enable = request.enable;
             this.expireAt = request.expireAt;
+            this.extInfo = request.extInfo;
             this.gatewayType = request.gatewayType;
             this.jwtIdentityConfig = request.jwtIdentityConfig;
             this.name = request.name;
@@ -194,7 +208,7 @@ public class CreateConsumerRequest extends Request {
         }
 
         /**
-         * <p>The identity configuration for API key authentication.</p>
+         * <p>The API key authentication identity configuration.</p>
          */
         public Builder apikeyIdentityConfig(ApiKeyIdentityConfig apikeyIdentityConfig) {
             this.putBodyParameter("apikeyIdentityConfig", apikeyIdentityConfig);
@@ -227,7 +241,7 @@ public class CreateConsumerRequest extends Request {
         }
 
         /**
-         * <p>The expiration time of the consumer. The value must be a positive integer that represents a UNIX timestamp in seconds and is later than the current time. If this parameter is left empty, the consumer never expires. The API key, JWT, and HMAC of the same consumer share this expiration time. Milliseconds are not automatically converted to seconds.</p>
+         * <p>The expiration time of the consumer, in UTC UNIX seconds. The value must be a positive integer and later than the current time. If this parameter is not specified, the consumer is permanently valid. The API key, JWT, and HMAC of the same consumer share this expiration time. Milliseconds are not automatically converted.</p>
          * 
          * <strong>example:</strong>
          * <p>1893456000</p>
@@ -239,10 +253,22 @@ public class CreateConsumerRequest extends Request {
         }
 
         /**
+         * <p>The extended information of the consumer. The value is saved as a raw string and can be up to 65,535 UTF-8 bytes in length. If this parameter is omitted, no extended information is configured.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>partner-a</p>
+         */
+        public Builder extInfo(String extInfo) {
+            this.putBodyParameter("extInfo", extInfo);
+            this.extInfo = extInfo;
+            return this;
+        }
+
+        /**
          * <p>The gateway type. Valid values:</p>
          * <ul>
-         * <li>API: the consumer of a cloud-native API gateway.</li>
-         * <li>AI: the consumer of an AI gateway.</li>
+         * <li>API: consumer of a cloud-native API gateway</li>
+         * <li>AI: consumer of an AI gateway</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -276,7 +302,7 @@ public class CreateConsumerRequest extends Request {
         }
 
         /**
-         * <p>The idempotence identity. You can invoke the API with a globally unique value (a UUID is recommended) that does not exceed 64 characters in length. If you invoke a duplicate request with the same ClientToken and identical request parameters within 24 hours after the first request succeeds, the system directly returns the consumer ID created by the first request without creating a new consumer. If you invoke a request with the same ClientToken but different request parameters, the system returns IdempotentParameterMismatch. If the first request is still being processed, the system returns IdempotentProcessing. If this parameter is left empty, idempotence control is disabled, and the behavior is the same as that of the existing version.</p>
+         * <p>The idempotency token. The caller generates a globally unique value, such as a UUID, with a maximum length of 64 characters. Within approximately 24 hours after the first request succeeds, a repeated request with the same ClientToken and identical request parameters directly returns the consumer ID created in the first request without creating a new consumer. If the request parameters are different, an IdempotentParameterMismatch error is returned. If the first request is still being processed, an IdempotentProcessing error is returned. If this parameter is not specified, idempotency control is disabled, and the behavior is the same as that of the existing version.</p>
          * 
          * <strong>example:</strong>
          * <p>5f7a2c1e-9b3d-4e8f-a1c6-0d2b8e4f7a13</p>
@@ -288,7 +314,7 @@ public class CreateConsumerRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to perform only a dry run. If you set this parameter to true, the system performs the same parameter, permission, IAM, resource policy, resource existence, and business rule checks as a real creation request, but does not create the consumer, write data to the database, create or delete a SecretRef, or generate audit logs. If this parameter is left empty or set to false, the behavior is the same as that of the previous version.</p>
+         * <p>Specifies whether to perform a dry run. If you set this parameter to true, the system performs the same parameter, permission, IAM, resource policy, resource existence, and business rule checks as a real creation request. However, the system does not create the consumer, write data to the database, create or delete a SecretRef, or cause side effects such as generating audit logs. If this parameter is not specified or is set to false, the behavior is the same as that of the existing version.</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("dryRun", dryRun);

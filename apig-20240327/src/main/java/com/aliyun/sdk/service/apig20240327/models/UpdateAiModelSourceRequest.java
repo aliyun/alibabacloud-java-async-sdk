@@ -141,7 +141,7 @@ public class UpdateAiModelSourceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the actual AI service bound to the model source.</p>
+         * <p>The ID of the actual AI service that is bound to the model source.</p>
          * 
          * <strong>example:</strong>
          * <p>svc-d00000000000000000000</p>

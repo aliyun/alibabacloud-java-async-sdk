@@ -145,7 +145,7 @@ public class UpdateAiModelSourceModelRequest extends Request {
         } 
 
         /**
-         * <p>The model identifier. For standard models, use the source model card ID. For logical model entries, use the vm- identifier.</p>
+         * <p>The model identifier. Use the source model card ID for standard models and the vm- identifier for logical model entries.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -399,7 +399,7 @@ public class UpdateAiModelSourceModelRequest extends Request {
             }
 
             /**
-             * <p>The number of credits per million input tokens. The value must be a non-negative number. A value of 0 indicates that input is free of charge.</p>
+             * <p>The number of credits per million input tokens. The value must be a non-negative number. A value of 0 indicates that the input is free of charge.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -410,7 +410,7 @@ public class UpdateAiModelSourceModelRequest extends Request {
             }
 
             /**
-             * <p>The number of credits per million output tokens. The value must be a non-negative number. A value of 0 indicates that output is free of charge.</p>
+             * <p>The number of credits per million output tokens. The value must be a non-negative number. A value of 0 indicates that the output is free of charge.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>

@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>HttpApiPolicyConfigs</p>
  */
 public class HttpApiPolicyConfigs extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("aiBasicGuardrailConfig")
+    private AiBasicGuardrailConfig aiBasicGuardrailConfig;
+
     @com.aliyun.core.annotation.NameInMap("aiCacheConfig")
     private AiCacheConfig aiCacheConfig;
 
@@ -52,6 +55,7 @@ public class HttpApiPolicyConfigs extends TeaModel {
     private String type;
 
     private HttpApiPolicyConfigs(Builder builder) {
+        this.aiBasicGuardrailConfig = builder.aiBasicGuardrailConfig;
         this.aiCacheConfig = builder.aiCacheConfig;
         this.aiFallbackConfig = builder.aiFallbackConfig;
         this.aiNetworkSearchConfig = builder.aiNetworkSearchConfig;
@@ -75,6 +79,13 @@ public class HttpApiPolicyConfigs extends TeaModel {
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return aiBasicGuardrailConfig
+     */
+    public AiBasicGuardrailConfig getAiBasicGuardrailConfig() {
+        return this.aiBasicGuardrailConfig;
     }
 
     /**
@@ -155,6 +166,7 @@ public class HttpApiPolicyConfigs extends TeaModel {
     }
 
     public static final class Builder {
+        private AiBasicGuardrailConfig aiBasicGuardrailConfig; 
         private AiCacheConfig aiCacheConfig; 
         private AiFallbackConfig aiFallbackConfig; 
         private AiNetworkSearchConfig aiNetworkSearchConfig; 
@@ -171,6 +183,7 @@ public class HttpApiPolicyConfigs extends TeaModel {
         } 
 
         private Builder(HttpApiPolicyConfigs model) {
+            this.aiBasicGuardrailConfig = model.aiBasicGuardrailConfig;
             this.aiCacheConfig = model.aiCacheConfig;
             this.aiFallbackConfig = model.aiFallbackConfig;
             this.aiNetworkSearchConfig = model.aiNetworkSearchConfig;
@@ -183,6 +196,17 @@ public class HttpApiPolicyConfigs extends TeaModel {
             this.semanticRouterConfig = model.semanticRouterConfig;
             this.type = model.type;
         } 
+
+        /**
+         * <p>The optional configuration object used exclusively for the AiBasicGuardrail policy, at the same level as the enable field of the policy item. The display field indicates read-only display eligibility. The responseEnabled field controls Detection and Response, and the responseMode field only processes asynchronous requests. If an update omits response fields or the configuration object, the previously saved values are retained. If no saved values exist, Detection and Response is enabled by default without declaring a response pattern. To simply enable or disable protection, modify the outer enable field while retaining other required API parameters. You do not need to resubmit this object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;responseEnabled&quot;:true}</p>
+         */
+        public Builder aiBasicGuardrailConfig(AiBasicGuardrailConfig aiBasicGuardrailConfig) {
+            this.aiBasicGuardrailConfig = aiBasicGuardrailConfig;
+            return this;
+        }
 
         /**
          * <p>The AI cache configuration.</p>
@@ -209,7 +233,7 @@ public class HttpApiPolicyConfigs extends TeaModel {
         }
 
         /**
-         * <p>The AI security protection configuration.</p>
+         * <p>The AI security Protection Settings.</p>
          */
         public Builder aiSecurityGuardConfig(AiSecurityGuardConfig aiSecurityGuardConfig) {
             this.aiSecurityGuardConfig = aiSecurityGuardConfig;
@@ -225,7 +249,7 @@ public class HttpApiPolicyConfigs extends TeaModel {
         }
 
         /**
-         * <p>The AI token rate limiting configuration.</p>
+         * <p>The AI token rate limit configuration.</p>
          */
         public Builder aiTokenRateLimitConfig(AiTokenRateLimitConfig aiTokenRateLimitConfig) {
             this.aiTokenRateLimitConfig = aiTokenRateLimitConfig;
@@ -241,7 +265,7 @@ public class HttpApiPolicyConfigs extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the feature is enabled.</p>
+         * <p>Specifies whether it is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -252,7 +276,7 @@ public class HttpApiPolicyConfigs extends TeaModel {
         }
 
         /**
-         * <p>The read-only compatible reference. GetHttpApi returns the policyId and policyAttachmentId for ModelAPI AiTokenRateLimit. This field must be stripped before write-path persistence and is not used as a bind or unbind instruction.</p>
+         * <p>The read-only compatibility reference. GetHttpApi returns the policyId or policyAttachmentId for the ModelAPI AiTokenRateLimit. This reference must be removed before persistence in the write path and must not be used as a bind or unbind instruction.</p>
          */
         public Builder policyReference(HttpApiPolicyReference policyReference) {
             this.policyReference = policyReference;
@@ -268,7 +292,7 @@ public class HttpApiPolicyConfigs extends TeaModel {
         }
 
         /**
-         * <p>The policy template type.</p>
+         * <p>The policy templatetype.</p>
          * 
          * <strong>example:</strong>
          * <p>K8S</p>
@@ -324,7 +348,7 @@ public class HttpApiPolicyConfigs extends TeaModel {
             } 
 
             /**
-             * <p>The timeout period, in milliseconds.</p>
+             * <p>The timeout period in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>2000</p>

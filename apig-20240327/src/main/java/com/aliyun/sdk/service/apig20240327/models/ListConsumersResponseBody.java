@@ -192,7 +192,7 @@ public class ListConsumersResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of unexpired consumers with a remaining validity period of no more than seven days, including those that are manually disabled.</p>
+             * <p>The number of unexpired consumers with a remaining validity period of seven days or less, including those that are manually disabled.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -248,6 +248,9 @@ public class ListConsumersResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("expireStatus")
         private String expireStatus;
 
+        @com.aliyun.core.annotation.NameInMap("extInfo")
+        private String extInfo;
+
         @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
@@ -262,6 +265,7 @@ public class ListConsumersResponseBody extends TeaModel {
             this.enable = builder.enable;
             this.expireAt = builder.expireAt;
             this.expireStatus = builder.expireStatus;
+            this.extInfo = builder.extInfo;
             this.name = builder.name;
             this.updateTimestamp = builder.updateTimestamp;
         }
@@ -324,6 +328,13 @@ public class ListConsumersResponseBody extends TeaModel {
         }
 
         /**
+         * @return extInfo
+         */
+        public String getExtInfo() {
+            return this.extInfo;
+        }
+
+        /**
          * @return name
          */
         public String getName() {
@@ -345,6 +356,7 @@ public class ListConsumersResponseBody extends TeaModel {
             private Boolean enable; 
             private Long expireAt; 
             private String expireStatus; 
+            private String extInfo; 
             private String name; 
             private Long updateTimestamp; 
 
@@ -359,6 +371,7 @@ public class ListConsumersResponseBody extends TeaModel {
                 this.enable = model.enable;
                 this.expireAt = model.expireAt;
                 this.expireStatus = model.expireStatus;
+                this.extInfo = model.extInfo;
                 this.name = model.name;
                 this.updateTimestamp = model.updateTimestamp;
             } 
@@ -430,13 +443,24 @@ public class ListConsumersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The validity status. Valid values: Permanent, InEffect, AboutToExpire, and Expired. The status is accurate to the second. A remaining time of exactly seven days is classified as AboutToExpire, and an exact expiration time is classified as Expired.</p>
+             * <p>The expiration status. Valid values: Permanent, InEffect, AboutToExpire, and Expired. The status is accurate to the second. A remaining validity period of exactly seven days is classified as AboutToExpire, and an expired status is classified as Expired.</p>
              * 
              * <strong>example:</strong>
              * <p>InEffect</p>
              */
             public Builder expireStatus(String expireStatus) {
                 this.expireStatus = expireStatus;
+                return this;
+            }
+
+            /**
+             * <p>The saved extended information of the consumer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>partner-a</p>
+             */
+            public Builder extInfo(String extInfo) {
+                this.extInfo = extInfo;
                 return this;
             }
 
@@ -561,7 +585,7 @@ public class ListConsumersResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The expiration reminder count for all consumers under the same account and gateway type. This count is not affected by name filters, status filters, or pagination. This field is returned only when includeExpirationSummary is set to true.</p>
+             * <p>The count of expiration reminders for all consumers under the same account and gateway type. This count is not affected by name, status filters, or pagination. This field is returned only when includeExpirationSummary is set to true.</p>
              */
             public Builder expirationSummary(ExpirationSummary expirationSummary) {
                 this.expirationSummary = expirationSummary;

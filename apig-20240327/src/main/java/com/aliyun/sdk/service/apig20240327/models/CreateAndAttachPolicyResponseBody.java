@@ -192,7 +192,7 @@ public class CreateAndAttachPolicyResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The attachment relationship information.</p>
+             * <p>The mount relationship information.</p>
              */
             public Builder attachment(Attachment attachment) {
                 this.attachment = attachment;
