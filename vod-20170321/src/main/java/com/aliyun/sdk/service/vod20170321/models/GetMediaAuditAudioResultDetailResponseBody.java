@@ -218,7 +218,7 @@ public class GetMediaAuditAudioResultDetailResponseBody extends TeaModel {
              * <p>The text content corresponding to the audio.</p>
              * 
              * <strong>example:</strong>
-             * <p>Tian\&quot;anmen</p>
+             * <p>Tian&quot;anmen</p>
              */
             public Builder text(String text) {
                 this.text = text;

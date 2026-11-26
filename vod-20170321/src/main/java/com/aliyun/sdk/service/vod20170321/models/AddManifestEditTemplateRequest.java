@@ -74,7 +74,7 @@ public class AddManifestEditTemplateRequest extends Request {
         } 
 
         /**
-         * <p>The name of the template. Spaces are allowed.</p>
+         * <p>The name of the template. Spaces are supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -85,7 +85,7 @@ public class ListManifestEditTemplateRequest extends Request {
         }
 
         /**
-         * <p>The pagination cursor. You do not need to specify this parameter for the first call. The value is a string in the format of page_N, where N is the page number. Pass the NextToken value returned in the previous response to retrieve the next page. If no NextToken is returned in the response, all data has been retrieved.</p>
+         * <p>The pagination cursor. You do not need to specify this parameter for the first call. The value is a string in the format of page_N, where N is the page number. You can pass the NextToken value returned in the previous response to retrieve the next page. If the response does not return a NextToken value, all data has been retrieved.</p>
          * 
          * <strong>example:</strong>
          * <p>page_2</p>

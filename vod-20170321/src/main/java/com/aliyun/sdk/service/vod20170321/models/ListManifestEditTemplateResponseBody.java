@@ -118,7 +118,7 @@ public class ListManifestEditTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The position returned by the current call. An empty value indicates that all data has been retrieved.</p>
+         * <p>The position to which the current call returns. An empty value indicates that all data has been retrieved.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -130,7 +130,7 @@ public class ListManifestEditTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>25818875-5F78-4AF6-D7393642CA58****</p>
@@ -149,7 +149,7 @@ public class ListManifestEditTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries that meet the current request conditions. This parameter is optional and is not returned by default.</p>
+         * <p>The total number of entries that meet the query conditions. This parameter is optional and is not returned by default.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -281,7 +281,7 @@ public class ListManifestEditTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time. The time follows the yyyy-MM-ddTHH:mm:ssZ format (UTC).</p>
+             * <p>The creation time. The time is displayed in the yyyy-MM-ddTHH:mm:ssZ format in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-04-10T08:00:00Z</p>
@@ -292,7 +292,7 @@ public class ListManifestEditTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The modification time. The time follows the yyyy-MM-ddTHH:mm:ssZ format (UTC).</p>
+             * <p>The modification time. The time is displayed in the yyyy-MM-ddTHH:mm:ssZ format in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-04-10T08:00:00Z</p>
@@ -314,7 +314,7 @@ public class ListManifestEditTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The template status. A value of <strong>1</strong> indicates enabled, and a value of <strong>0</strong> indicates disabled.</p>
+             * <p>The status of the template. Valid values: <strong>1</strong>: enabled. <strong>0</strong>: disabled.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -325,7 +325,7 @@ public class ListManifestEditTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ManifestEdit template ID.</p>
+             * <p>The ID of the ManifestEdit template.</p>
              * 
              * <strong>example:</strong>
              * <p>9c6581d59240de5e258ffa4c71a3e01b</p>

@@ -67,7 +67,7 @@ public class SubmitEditMediaManifestJobResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The manifest editing task ID, which is the MediaConvert pipeline task ID.</p>
+         * <p>The ID of the manifest editing task, which is the MediaConvert pipeline task ID.</p>
          * 
          * <strong>example:</strong>
          * <p>93e154cb83e54b7a0f1236f847f4****</p>

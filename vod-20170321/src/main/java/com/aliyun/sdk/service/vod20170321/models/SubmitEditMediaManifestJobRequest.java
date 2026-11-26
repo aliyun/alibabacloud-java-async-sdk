@@ -174,11 +174,11 @@ public class SubmitEditMediaManifestJobRequest extends Request {
         } 
 
         /**
-         * <p>The list of audio tracks to be added. The value is a JSON string array. Each element contains the following fields:</p>
+         * <p>The list of audio tracks to be added, specified as a JSON string array. Each element contains:</p>
          * <ul>
-         * <li><strong>Language</strong>: the language identifier of the audio track.</li>
-         * <li><strong>Name</strong>: the display name of the track. If this field is not specified, the default value is audio-{Language}.</li>
-         * <li><strong>AudioUrl</strong>: the URL of the audio file, which is an OSS object URL.</li>
+         * <li><strong>Language</strong>: the audio language identifier.</li>
+         * <li><strong>Name</strong>: the display name of the track. If not specified, the default value is audio-{Language}.</li>
+         * <li><strong>AudioUrl</strong>: the URL of the audio file (OSS file URL).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -204,10 +204,10 @@ public class SubmitEditMediaManifestJobRequest extends Request {
         }
 
         /**
-         * <p>The output configuration. The value is a JSON string. It contains the following fields:</p>
+         * <p>The output configuration, specified as a JSON string. It contains:</p>
          * <ul>
-         * <li><strong>OutputDir</strong>: the output directory. By default, this field is set to the same directory as the source manifest.</li>
-         * <li><strong>ManifestName</strong>: the file name of the output master playlist. Default value: master. The .m3u8 extension is not allowed.</li>
+         * <li><strong>OutputDir</strong>: the output directory. By default, it is the same directory as the source manifest.</li>
+         * <li><strong>ManifestName</strong>: the file name of the output master playlist. Default value: master. The .m3u8 suffix is not allowed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -220,10 +220,10 @@ public class SubmitEditMediaManifestJobRequest extends Request {
         }
 
         /**
-         * <p>The configuration of tracks to be removed. The value is a JSON string. It contains the following fields:</p>
+         * <p>The configuration of tracks to be removed, specified as a JSON string. It contains:</p>
          * <ul>
-         * <li><strong>AudioLanguages</strong>: the list of audio language identifiers for which the entire audio tracks are to be removed.</li>
-         * <li><strong>SubtitleLanguages</strong>: the list of subtitle language identifiers for which the entire subtitle tracks are to be removed.</li>
+         * <li><strong>AudioLanguages</strong>: the list of audio language identifiers for which the entire tracks are to be removed.</li>
+         * <li><strong>SubtitleLanguages</strong>: the list of subtitle language identifiers for which the entire tracks are to be removed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -236,10 +236,10 @@ public class SubmitEditMediaManifestJobRequest extends Request {
         }
 
         /**
-         * <p>The list of subtitle tracks to be added. The value is a JSON string array. Each element contains the following fields:</p>
+         * <p>The list of subtitle tracks to be added, specified as a JSON string array. Each element contains:</p>
          * <ul>
-         * <li><strong>Language</strong>: the language identifier of the subtitle track. If this field is not specified, the subtitle track is ignored.</li>
-         * <li><strong>SubtitleUrl</strong>: the URL of the subtitle file in WebVTT format, which is an OSS object URL.</li>
+         * <li><strong>Language</strong>: the subtitle language identifier. If not specified, the subtitle track is ignored.</li>
+         * <li><strong>SubtitleUrl</strong>: the URL of the subtitle file (WebVTT) (OSS file URL).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -252,7 +252,7 @@ public class SubmitEditMediaManifestJobRequest extends Request {
         }
 
         /**
-         * <p>The manifest editing template ID, which is returned after the AddManifestEditTemplate operation is called. If this parameter is specified, the output tracks are orchestrated based on the fixed video, audio, and subtitle item configurations in the template.</p>
+         * <p>The ID of the manifest edit template, which is returned after calling AddManifestEditTemplate. If specified, the output tracks are orchestrated based on the fixed Video, Audio, and Subtitle item configurations in the template.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -277,7 +277,7 @@ public class SubmitEditMediaManifestJobRequest extends Request {
         }
 
         /**
-         * <p><strong>The target video ID</strong>, used for authentication isolation and consistency verification.</p>
+         * <p>The ID of the target video, used for authentication isolation and consistency verification.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -290,10 +290,10 @@ public class SubmitEditMediaManifestJobRequest extends Request {
         }
 
         /**
-         * <p>The list of video tracks to be added. The value is a JSON string array. Each element contains the following fields:</p>
+         * <p>The list of video tracks to be added, specified as a JSON string array. Each element contains:</p>
          * <ul>
-         * <li><strong>Name</strong>: the display name of the track. If this field is not specified, the video track is ignored.</li>
-         * <li><strong>VideoUrl</strong>: the URL of the video stream manifest file, which is an OSS object URL.</li>
+         * <li><strong>Name</strong>: the display name of the track. If not specified, the video track is ignored.</li>
+         * <li><strong>VideoUrl</strong>: the URL of the video stream manifest file (OSS file URL).</li>
          * </ul>
          * 
          * <strong>example:</strong>

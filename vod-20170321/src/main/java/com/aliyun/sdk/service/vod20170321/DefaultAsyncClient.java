@@ -180,7 +180,7 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <ul>
      * <li>The <code>Name</code> parameter is required and must pass the <code>COMPLEX_STRING_SPACE_ALLOWED</code> format validation.</li>
      * <li>Other parameters are optional, but if provided, they must meet the corresponding format requirements.</li>
-     * <li>The encryption type <code>EncryptType</code> supports a combination of multiple encryption methods. For more information, see the valid values.</li>
+     * <li>The <code>EncryptType</code> parameter supports a combination of multiple encryption methods. For more information, refer to the valid values.</li>
      * <li>When HLS encryption is used, <code>EncryptConfig</code> must include information such as <code>DecryptKeyUri</code>, <code>KeyServiceType</code>, <code>CipherText</code>, and <code>MasterKeyId</code>.</li>
      * </ul>
      * 
@@ -196,6 +196,32 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<AddManifestEditTemplateResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>传入<strong>Name</strong>时创建新的转码模板组；传入<strong>TranscodeTemplateGroupId</strong>时向指定的转码模板组追加转码模板配置，已有模板与新增模板总数不能超过20个。</li>
+     * <li>追加模式下不支持传入<strong>GroupConfig</strong>，组级配置变更请调用UpdateMediaConvertTemplateGroup接口。</li>
+     * <li>创建转码模板组需要正常可用的存储地址；若没有可用的存储地址，模板创建会失败（您可以在<strong>视频点播控制台 &gt; 配置管理 &gt; 媒资管理配置 &gt; 存储管理</strong>中，激活<strong>点播系统bucket</strong>获取可用的存储地址）。</li>
+     * <li>本接口的单用户QPS限制为5次/秒。超过限制，API调用会被限流，这可能会影响您的业务，请合理调用。</li>
+     * </ul>
+     * 
+     * @param request the request parameters of AddMediaConvertTemplateGroup  AddMediaConvertTemplateGroupRequest
+     * @return AddMediaConvertTemplateGroupResponse
+     */
+    @Override
+    public CompletableFuture<AddMediaConvertTemplateGroupResponse> addMediaConvertTemplateGroup(AddMediaConvertTemplateGroupRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("AddMediaConvertTemplateGroup").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(AddMediaConvertTemplateGroupResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<AddMediaConvertTemplateGroupResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -860,8 +886,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>After deletion, the template and its track configurations cannot be recovered. Submitted jobs are not affected, but resubmitting a SubmitEditMediaManifestJob job with the deleted template ID will fail.</li>
-     * <li>The custom transcoding template configurations associated with the template in the MediaConvert pipeline will also be cleared (preset templates are not affected).</li>
+     * <li>After the template is deleted, the template and its track configurations cannot be recovered. Submitted tasks are not affected. However, submitting a SubmitEditMediaManifestJob task by using the deleted template ID will fail.</li>
+     * <li>The custom transcoding template configurations associated with the template in the MediaConvert pipeline are also cleared (preset templates are not affected).</li>
      * </ul>
      * 
      * @param request the request parameters of DeleteManifestEditTemplate  DeleteManifestEditTemplateRequest
@@ -876,6 +902,32 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DeleteManifestEditTemplateResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li><strong>ForceDelGroup</strong>取值为<strong>true</strong>（默认值）时删除整个转码模板组；取值为<strong>false</strong>时，需通过<strong>TranscodeTemplateIdList</strong>指定要删除的转码模板。</li>
+     * <li>逐模板删除时不允许删除组内最后一个转码模板；如需删除整个模板组，请使用默认的ForceDelGroup。</li>
+     * <li>删除请求同步返回，MediaConvert链路侧的模板清理异步执行。</li>
+     * <li>本接口的单用户QPS限制为5次/秒。超过限制，API调用会被限流，这可能会影响您的业务，请合理调用。</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DeleteMediaConvertTemplateGroup  DeleteMediaConvertTemplateGroupRequest
+     * @return DeleteMediaConvertTemplateGroupResponse
+     */
+    @Override
+    public CompletableFuture<DeleteMediaConvertTemplateGroupResponse> deleteMediaConvertTemplateGroup(DeleteMediaConvertTemplateGroupRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteMediaConvertTemplateGroup").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteMediaConvertTemplateGroupResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteMediaConvertTemplateGroupResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -3236,6 +3288,30 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
+     * <ul>
+     * <li>You can only query custom transcoding template groups created by calling AddMediaConvertTemplateGroup for the MC link. If you query a template group that does not exist or is not part of the MC link, the InvalidTranscodeTemplateGroup.NotFound error is returned.</li>
+     * <li>The queries per second (QPS) limit per user for this API operation is 15. If the limit is exceeded, API calls are throttled, which may affect your services. Make API calls at a reasonable rate.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of GetMediaConvertTemplateGroup  GetMediaConvertTemplateGroupRequest
+     * @return GetMediaConvertTemplateGroupResponse
+     */
+    @Override
+    public CompletableFuture<GetMediaConvertTemplateGroupResponse> getMediaConvertTemplateGroup(GetMediaConvertTemplateGroupRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetMediaConvertTemplateGroup").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetMediaConvertTemplateGroupResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetMediaConvertTemplateGroupResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
      * <p>This operation is supported in the following regions: <strong>China (Beijing)</strong>, <strong>China (Shanghai)</strong>, and <strong>Singapore</strong>.</p>
      * 
      * @param request the request parameters of GetMediaDNAResult  GetMediaDNAResultRequest
@@ -3861,6 +3937,31 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListManifestEditTemplateResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Only custom transcoding template groups for the MC pipeline created by calling AddMediaConvertTemplateGroup under the current account (with an optional application specified) are returned. Preset template groups are not included.</li>
+     * <li>Results are sorted in ascending order by creation time. Pagination is implemented by using MaxResults and NextToken.</li>
+     * <li>The queries per second (QPS) limit per user for this operation is 15. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable frequency.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of ListMediaConvertTemplateGroup  ListMediaConvertTemplateGroupRequest
+     * @return ListMediaConvertTemplateGroupResponse
+     */
+    @Override
+    public CompletableFuture<ListMediaConvertTemplateGroupResponse> listMediaConvertTemplateGroup(ListMediaConvertTemplateGroupRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListMediaConvertTemplateGroup").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListMediaConvertTemplateGroupResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListMediaConvertTemplateGroupResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -4614,11 +4715,11 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <b>description</b> :
      * <h2>Request description</h2>
      * <ul>
-     * <li>This API operation incrementally edits the manifest of an existing HLS/DASH AUTO stream (definition=7) without re-transcoding.</li>
-     * <li><code>VideoId</code> and <code>JobId</code> are required parameters used for authentication isolation and consistency verification.</li>
+     * <li>This API operation is used to incrementally edit the manifest of an existing HLS/DASH AUTO stream (definition=7) without re-transcoding.</li>
+     * <li><code>VideoId</code> and <code>JobId</code> are required parameters for authentication isolation and consistency verification.</li>
      * <li>You can specify <code>TemplateId</code> to apply a predefined manifest editing template.</li>
-     * <li>This operation supports appending, removing, and replacing audio, subtitle, and video tracks.</li>
-     * <li>The <code>OutputConfig</code> parameter specifies the storage location of the edited manifest.</li>
+     * <li>It supports appending, removing, and replacing audio, subtitle, and video tracks.</li>
+     * <li>The output configuration <code>OutputConfig</code> specifies the storage location of the edited manifest.</li>
      * <li>You can pass custom data in <code>UserData</code> as pass-through information.</li>
      * </ul>
      * 
