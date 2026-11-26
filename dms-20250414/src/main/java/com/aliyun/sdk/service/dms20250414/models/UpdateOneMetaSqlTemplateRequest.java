@@ -220,7 +220,7 @@ public class UpdateOneMetaSqlTemplateRequest extends Request {
          * <p>The content of the SQL template.</p>
          * 
          * <strong>example:</strong>
-         * <p>select count(1) from sales where dt = \&quot;2026-08-01\&quot;</p>
+         * <p>select count(1) from sales where dt = &quot;2026-08-01&quot;</p>
          */
         public Builder expr(String expr) {
             this.putQueryParameter("Expr", expr);

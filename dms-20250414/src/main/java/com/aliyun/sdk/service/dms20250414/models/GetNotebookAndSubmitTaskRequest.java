@@ -145,7 +145,7 @@ public class GetNotebookAndSubmitTaskRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>{\&quot;dt\&quot;: \&quot;2022-10-14\&quot;}</p>
+         * <p>{&quot;dt&quot;: &quot;2022-10-14&quot;}</p>
          */
         public Builder params(String params) {
             this.putBodyParameter("Params", params);
@@ -170,7 +170,7 @@ public class GetNotebookAndSubmitTaskRequest extends Request {
          * <p>The number of retries if scheduling fails.</p>
          * 
          * <strong>example:</strong>
-         * <p>true</p>
+         * <p>10</p>
          */
         public Builder retry(Long retry) {
             this.putBodyParameter("Retry", retry);

@@ -114,7 +114,7 @@ public class GetDataAgentTaskModelUsageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error code returned when a request exception occurs.</p>
+         * <p>The error code, which is returned when a request exception occurs.</p>
          * 
          * <strong>example:</strong>
          * <p>DMS-DA-40411</p>
@@ -125,7 +125,7 @@ public class GetDataAgentTaskModelUsageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message returned when the call fails.</p>
+         * <p>The error message, which is returned when the call fails.</p>
          * 
          * <strong>example:</strong>
          * <p>UnknownError</p>
@@ -136,7 +136,7 @@ public class GetDataAgentTaskModelUsageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID. You can use this ID to locate logs and troubleshoot issues.</p>
+         * <p>The request ID, which is used to locate logs and troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>67E910F2-***695C</p>
@@ -147,7 +147,7 @@ public class GetDataAgentTaskModelUsageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <p>Specifies whether the request is successful. Valid values:</p>
          * <ul>
          * <li><strong>true</strong>: The request is successful.</li>
          * <li><strong>false</strong>: The request fails.</li>
@@ -177,8 +177,14 @@ public class GetDataAgentTaskModelUsageResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccelerationRatio")
         private Double accelerationRatio;
 
+        @com.aliyun.core.annotation.NameInMap("PeakConcurrency")
+        private Double peakConcurrency;
+
         @com.aliyun.core.annotation.NameInMap("RateLimitedSessionCount")
         private Long rateLimitedSessionCount;
+
+        @com.aliyun.core.annotation.NameInMap("TotalLlmQueueDuration")
+        private Double totalLlmQueueDuration;
 
         @com.aliyun.core.annotation.NameInMap("TotalLlmWaitDuration")
         private Double totalLlmWaitDuration;
@@ -200,7 +206,9 @@ public class GetDataAgentTaskModelUsageResponseBody extends TeaModel {
 
         private Data(Builder builder) {
             this.accelerationRatio = builder.accelerationRatio;
+            this.peakConcurrency = builder.peakConcurrency;
             this.rateLimitedSessionCount = builder.rateLimitedSessionCount;
+            this.totalLlmQueueDuration = builder.totalLlmQueueDuration;
             this.totalLlmWaitDuration = builder.totalLlmWaitDuration;
             this.totalSessionCount = builder.totalSessionCount;
             this.peakTpm = builder.peakTpm;
@@ -225,10 +233,24 @@ public class GetDataAgentTaskModelUsageResponseBody extends TeaModel {
         }
 
         /**
+         * @return peakConcurrency
+         */
+        public Double getPeakConcurrency() {
+            return this.peakConcurrency;
+        }
+
+        /**
          * @return rateLimitedSessionCount
          */
         public Long getRateLimitedSessionCount() {
             return this.rateLimitedSessionCount;
+        }
+
+        /**
+         * @return totalLlmQueueDuration
+         */
+        public Double getTotalLlmQueueDuration() {
+            return this.totalLlmQueueDuration;
         }
 
         /**
@@ -275,7 +297,9 @@ public class GetDataAgentTaskModelUsageResponseBody extends TeaModel {
 
         public static final class Builder {
             private Double accelerationRatio; 
+            private Double peakConcurrency; 
             private Long rateLimitedSessionCount; 
+            private Double totalLlmQueueDuration; 
             private Double totalLlmWaitDuration; 
             private Long totalSessionCount; 
             private Long peakTpm; 
@@ -288,7 +312,9 @@ public class GetDataAgentTaskModelUsageResponseBody extends TeaModel {
 
             private Builder(Data model) {
                 this.accelerationRatio = model.accelerationRatio;
+                this.peakConcurrency = model.peakConcurrency;
                 this.rateLimitedSessionCount = model.rateLimitedSessionCount;
+                this.totalLlmQueueDuration = model.totalLlmQueueDuration;
                 this.totalLlmWaitDuration = model.totalLlmWaitDuration;
                 this.totalSessionCount = model.totalSessionCount;
                 this.peakTpm = model.peakTpm;
@@ -298,13 +324,24 @@ public class GetDataAgentTaskModelUsageResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The acceleration ratio, which indicates the speed improvement brought by subtask parallelism.</p>
+             * <p>The acceleration ratio, which is the speedup brought by the parallel execution of subtasks.</p>
              * 
              * <strong>example:</strong>
              * <p>3.8</p>
              */
             public Builder accelerationRatio(Double accelerationRatio) {
                 this.accelerationRatio = accelerationRatio;
+                return this;
+            }
+
+            /**
+             * <p>The peak concurrency.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
+             */
+            public Builder peakConcurrency(Double peakConcurrency) {
+                this.peakConcurrency = peakConcurrency;
                 return this;
             }
 
@@ -316,6 +353,17 @@ public class GetDataAgentTaskModelUsageResponseBody extends TeaModel {
              */
             public Builder rateLimitedSessionCount(Long rateLimitedSessionCount) {
                 this.rateLimitedSessionCount = rateLimitedSessionCount;
+                return this;
+            }
+
+            /**
+             * <p>The total queueing time for the large language model.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11220</p>
+             */
+            public Builder totalLlmQueueDuration(Double totalLlmQueueDuration) {
+                this.totalLlmQueueDuration = totalLlmQueueDuration;
                 return this;
             }
 

@@ -132,7 +132,7 @@ public class SetWorkspaceQuotaResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Details of the access denial.</p>
+         * <p>The access denied details.</p>
          * 
          * <strong>example:</strong>
          * <p>NOT_FOUND</p>
@@ -143,7 +143,7 @@ public class SetWorkspaceQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned data.</p>
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -173,7 +173,7 @@ public class SetWorkspaceQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>A human-readable message about the request\&quot;s outcome.</p>
+         * <p>The log information.</p>
          * 
          * <strong>example:</strong>
          * <p>This record is being collected, please wait for a moment.</p>
@@ -329,7 +329,7 @@ public class SetWorkspaceQuotaResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The compute unit (CU) quota.</p>
+             * <p>The CU quota.</p>
              * 
              * <strong>example:</strong>
              * <p>200</p>
@@ -340,7 +340,7 @@ public class SetWorkspaceQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The amount of compute unit (CU) quota used.</p>
+             * <p>The CU quota usage.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>
@@ -351,7 +351,7 @@ public class SetWorkspaceQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the billing instance.</p>
+             * <p>The billing instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>i-2zehld3y1tphzctyyq7o</p>
@@ -373,7 +373,7 @@ public class SetWorkspaceQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the order.</p>
+             * <p>The order status.</p>
              * 
              * <strong>example:</strong>
              * <p>Catched</p>
@@ -384,7 +384,7 @@ public class SetWorkspaceQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the instance.</p>
+             * <p>The instance status.</p>
              * 
              * <strong>example:</strong>
              * <p>Success</p>
@@ -395,7 +395,7 @@ public class SetWorkspaceQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the workspace.</p>
+             * <p>The workspace ID.</p>
              * 
              * <strong>example:</strong>
              * <p>20923*****7291</p>

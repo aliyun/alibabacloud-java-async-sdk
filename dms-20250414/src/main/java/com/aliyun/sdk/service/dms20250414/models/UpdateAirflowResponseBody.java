@@ -249,6 +249,9 @@ public class UpdateAirflowResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
+        @com.aliyun.core.annotation.NameInMap("EnableLineage")
+        private Boolean enableLineage;
+
         @com.aliyun.core.annotation.NameInMap("EnableServerless")
         private Boolean enableServerless;
 
@@ -260,6 +263,12 @@ public class UpdateAirflowResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("GracefulShutdownTimeout")
         private Integer gracefulShutdownTimeout;
+
+        @com.aliyun.core.annotation.NameInMap("LineageReplicas")
+        private Integer lineageReplicas;
+
+        @com.aliyun.core.annotation.NameInMap("LineageSpec")
+        private String lineageSpec;
 
         @com.aliyun.core.annotation.NameInMap("OssBucketName")
         private String ossBucketName;
@@ -313,10 +322,13 @@ public class UpdateAirflowResponseBody extends TeaModel {
             this.dataMountInfoList = builder.dataMountInfoList;
             this.deployErrorMsg = builder.deployErrorMsg;
             this.description = builder.description;
+            this.enableLineage = builder.enableLineage;
             this.enableServerless = builder.enableServerless;
             this.environments = builder.environments;
             this.gmtCreated = builder.gmtCreated;
             this.gracefulShutdownTimeout = builder.gracefulShutdownTimeout;
+            this.lineageReplicas = builder.lineageReplicas;
+            this.lineageSpec = builder.lineageSpec;
             this.ossBucketName = builder.ossBucketName;
             this.ossPath = builder.ossPath;
             this.pluginsDir = builder.pluginsDir;
@@ -405,6 +417,13 @@ public class UpdateAirflowResponseBody extends TeaModel {
         }
 
         /**
+         * @return enableLineage
+         */
+        public Boolean getEnableLineage() {
+            return this.enableLineage;
+        }
+
+        /**
          * @return enableServerless
          */
         public Boolean getEnableServerless() {
@@ -430,6 +449,20 @@ public class UpdateAirflowResponseBody extends TeaModel {
          */
         public Integer getGracefulShutdownTimeout() {
             return this.gracefulShutdownTimeout;
+        }
+
+        /**
+         * @return lineageReplicas
+         */
+        public Integer getLineageReplicas() {
+            return this.lineageReplicas;
+        }
+
+        /**
+         * @return lineageSpec
+         */
+        public String getLineageSpec() {
+            return this.lineageSpec;
         }
 
         /**
@@ -540,10 +573,13 @@ public class UpdateAirflowResponseBody extends TeaModel {
             private java.util.List<DataMountInfo> dataMountInfoList; 
             private String deployErrorMsg; 
             private String description; 
+            private Boolean enableLineage; 
             private Boolean enableServerless; 
             private String environments; 
             private String gmtCreated; 
             private Integer gracefulShutdownTimeout; 
+            private Integer lineageReplicas; 
+            private String lineageSpec; 
             private String ossBucketName; 
             private String ossPath; 
             private String pluginsDir; 
@@ -572,10 +608,13 @@ public class UpdateAirflowResponseBody extends TeaModel {
                 this.dataMountInfoList = model.dataMountInfoList;
                 this.deployErrorMsg = model.deployErrorMsg;
                 this.description = model.description;
+                this.enableLineage = model.enableLineage;
                 this.enableServerless = model.enableServerless;
                 this.environments = model.environments;
                 this.gmtCreated = model.gmtCreated;
                 this.gracefulShutdownTimeout = model.gracefulShutdownTimeout;
+                this.lineageReplicas = model.lineageReplicas;
+                this.lineageSpec = model.lineageSpec;
                 this.ossBucketName = model.ossBucketName;
                 this.ossPath = model.ossPath;
                 this.pluginsDir = model.pluginsDir;
@@ -645,7 +684,7 @@ public class UpdateAirflowResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The directory scanned for DAGs.</p>
+             * <p>The directory for scanning DAGs.</p>
              * 
              * <strong>example:</strong>
              * <p>default/dags</p>
@@ -675,13 +714,21 @@ public class UpdateAirflowResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the Airflow instance.</p>
+             * <p>The Airflow description.</p>
              * 
              * <strong>example:</strong>
              * <p>order schedule</p>
              */
             public Builder description(String description) {
                 this.description = description;
+                return this;
+            }
+
+            /**
+             * <p>Indicates whether data lineage is enabled.</p>
+             */
+            public Builder enableLineage(Boolean enableLineage) {
+                this.enableLineage = enableLineage;
                 return this;
             }
 
@@ -716,7 +763,7 @@ public class UpdateAirflowResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timeout period for a worker to exit.</p>
+             * <p>The timeout period for worker exit.</p>
              * 
              * <strong>example:</strong>
              * <p>60</p>
@@ -727,7 +774,29 @@ public class UpdateAirflowResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the Object Storage Service (OSS) bucket.</p>
+             * <p>The number of replicas for the lineage service. The default value is 1 when enabled. If omitted during an update, the original value is retained.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
+             */
+            public Builder lineageReplicas(Integer lineageReplicas) {
+                this.lineageReplicas = lineageReplicas;
+                return this;
+            }
+
+            /**
+             * <p>The merged lineage service specification, which uses the same tier as AppSpec.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SMALL</p>
+             */
+            public Builder lineageSpec(String lineageSpec) {
+                this.lineageSpec = lineageSpec;
+                return this;
+            }
+
+            /**
+             * <p>The name of the OSS bucket.</p>
              * 
              * <strong>example:</strong>
              * <p>osstest</p>
@@ -749,7 +818,7 @@ public class UpdateAirflowResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The directory scanned for Airflow plugins.</p>
+             * <p>The directory for scanning Airflow plugins.</p>
              * 
              * <strong>example:</strong>
              * <p>default/plugins</p>
@@ -771,7 +840,7 @@ public class UpdateAirflowResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The configurations of the installation package.</p>
+             * <p>The configuration of the installation package.</p>
              * 
              * <strong>example:</strong>
              * <p>jieba==0.42</p>
@@ -870,7 +939,7 @@ public class UpdateAirflowResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The zone ID.</p>
+             * <p>The zone.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou-j</p>

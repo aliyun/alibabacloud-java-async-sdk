@@ -114,7 +114,7 @@ public class UpdateDataAgentAccuracyTestResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error code returned when an exception occurs.</p>
+         * <p>The error code returned when an error occurs.</p>
          * 
          * <strong>example:</strong>
          * <p>UnknownError</p>
@@ -125,7 +125,7 @@ public class UpdateDataAgentAccuracyTestResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message returned when the call fails.</p>
+         * <p>The error message returned when the request fails.</p>
          * 
          * <strong>example:</strong>
          * <p>Specified parameter Tid is not valid.</p>
@@ -147,7 +147,7 @@ public class UpdateDataAgentAccuracyTestResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <p>Specifies whether the request is successful. Valid values:</p>
          * <ul>
          * <li><strong>true</strong>: The request is successful.                                 </li>
          * <li><strong>false</strong>: The request fails.</li>
@@ -397,7 +397,7 @@ public class UpdateDataAgentAccuracyTestResponseBody extends TeaModel {
              * <p>The description of the evaluation item.</p>
              * 
              * <strong>example:</strong>
-             * <p>Customer Agent\&quot;s Evaluation</p>
+             * <p>Customer Agent&quot;s Evaluation</p>
              */
             public Builder desc(String desc) {
                 this.desc = desc;

@@ -259,7 +259,7 @@ public class CreateCustomAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The parameters to invoke the callback tool.</p>
+             * <p>The parameters used to invoke the callback tool.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;ID&quot;:&quot;test&quot;}</p>
@@ -270,7 +270,7 @@ public class CreateCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The prompt for generating parameters to invoke the callback tool.</p>
+             * <p>The prompt used to generate parameters to invoke the callback tool.</p>
              * 
              * <strong>example:</strong>
              * <p>send web report to <a href="mailto:123456@163.com">123456@163.com</a></p>
@@ -412,7 +412,7 @@ public class CreateCustomAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Specifies whether to prohibit appending data sources in a session.</p>
+             * <p>Specifies whether to prohibit appending data sources in the session.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -423,7 +423,7 @@ public class CreateCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether to prohibit user inquiries during the process.</p>
+             * <p>Specifies whether to disable user inquiries during the process.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -456,7 +456,7 @@ public class CreateCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether to skip the confirmation for generating a web report.</p>
+             * <p>Specifies whether to skip the web report drawing confirmation.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -781,7 +781,7 @@ public class CreateCustomAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The cron expression for time-based scheduling.</p>
+             * <p>The cron expression for periodic scheduling.</p>
              * 
              * <strong>example:</strong>
              * <p>0 0 0 ? * 1-7</p>
@@ -792,7 +792,7 @@ public class CreateCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The question for the scheduled task.</p>
+             * <p>The query for the periodic task.</p>
              * 
              * <strong>example:</strong>
              * <p>Analyze this data and provide a brief report</p>
@@ -1289,7 +1289,7 @@ public class CreateCustomAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The custom agent type. Valid values:</p>
+             * <p>The type of the custom agent. Valid values:</p>
              * <ul>
              * <li>Default: The system-built-in custom agent.</li>
              * <li>Common: The common custom agent.</li>
@@ -1304,7 +1304,7 @@ public class CreateCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the Alibaba Cloud main account.</p>
+             * <p>The parent Alibaba Cloud account ID.</p>
              * 
              * <strong>example:</strong>
              * <p>16738266********</p>
@@ -1446,9 +1446,9 @@ public class CreateCustomAgentResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>Analysis framework:</p>
              * <ol>
-             * <li>Monitor core metrics (GMV, order volume, UV, and conversion rate) on a daily, weekly, and monthly basis, and analyze trend changes and year-over-year or month-over-month fluctuations.</li>
-             * <li>Segment data by new and returning customers, channels, and regions to identify growth sources and shortcomings.</li>
-             * <li>Conduct funnel analysis based on user behavior paths (browse -&gt; add to cart -&gt; pay) to identify drop-off stages</li>
+             * <li>Monitor core metrics (GMV, order volume, UV, and conversion rate) on a daily, weekly, and monthly basis to analyze trend changes and year-over-year or month-over-month fluctuations.</li>
+             * <li>Segment data by new and existing customers, channels, and regions to identify growth sources and shortcomings.</li>
+             * <li>Conduct funnel analysis based on the user behavior path (browse -&gt; add to cart -&gt; pay) to locate churn points</li>
              * </ol>
              */
             public Builder instruction(String instruction) {
@@ -1457,7 +1457,7 @@ public class CreateCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether a periodic task is configured.</p>
+             * <p>Indicates whether a scheduled task is configured.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -1474,9 +1474,9 @@ public class CreateCustomAgentResponseBody extends TeaModel {
              * <p>Core metric definitions:</p>
              * <ol>
              * <li>GMV (Gross Merchandise Volume) refers to the total order amount, including both paid and unpaid orders.</li>
-             * <li>Order volume refers to the number of valid orders placed per day.</li>
+             * <li>Order volume is the number of valid orders placed per day.</li>
              * <li>UV (Unique Visitors) refers to the number of deduplicated users who visit the website or app.</li>
-             * <li>Conversion rate = Number of paid orders / UV, reflecting the traffic conversion efficiency</li>
+             * <li>Conversion rate = Number of paid orders / UV, which reflects the traffic conversion efficiency</li>
              * </ol>
              */
             public Builder knowledge(String knowledge) {
@@ -1534,7 +1534,7 @@ public class CreateCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The next execution time of the periodic task.</p>
+             * <p>The next run time of the scheduled task.</p>
              * <ul>
              * <li>Timestamp format.</li>
              * </ul>
@@ -1603,7 +1603,7 @@ public class CreateCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The periodic task configuration.</p>
+             * <p>The scheduled task configuration.</p>
              */
             public Builder scheduleTaskConfig(ScheduleTaskConfig scheduleTaskConfig) {
                 this.scheduleTaskConfig = scheduleTaskConfig;
@@ -1611,7 +1611,7 @@ public class CreateCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The custom agent status.</p>
+             * <p>The status of the custom agent.</p>
              * 
              * <strong>example:</strong>
              * <p>NEW</p>

@@ -106,7 +106,7 @@ public class GetDataAgentTaskModelUsageMetricsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The list of time-series TPM metrics for model usage. The usage at each time point is returned in chronological order.</p>
+         * <p>The list of time-series metrics of TPM for model usage, which returns the usage at each time point in chronological order.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -177,6 +177,9 @@ public class GetDataAgentTaskModelUsageMetricsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BeginTime")
         private Long beginTime;
 
+        @com.aliyun.core.annotation.NameInMap("Concurrency")
+        private Double concurrency;
+
         @com.aliyun.core.annotation.NameInMap("EndTime")
         private Long endTime;
 
@@ -185,6 +188,7 @@ public class GetDataAgentTaskModelUsageMetricsResponseBody extends TeaModel {
 
         private Data(Builder builder) {
             this.beginTime = builder.beginTime;
+            this.concurrency = builder.concurrency;
             this.endTime = builder.endTime;
             this.tpm = builder.tpm;
         }
@@ -205,6 +209,13 @@ public class GetDataAgentTaskModelUsageMetricsResponseBody extends TeaModel {
         }
 
         /**
+         * @return concurrency
+         */
+        public Double getConcurrency() {
+            return this.concurrency;
+        }
+
+        /**
          * @return endTime
          */
         public Long getEndTime() {
@@ -220,6 +231,7 @@ public class GetDataAgentTaskModelUsageMetricsResponseBody extends TeaModel {
 
         public static final class Builder {
             private Long beginTime; 
+            private Double concurrency; 
             private Long endTime; 
             private Long tpm; 
 
@@ -228,6 +240,7 @@ public class GetDataAgentTaskModelUsageMetricsResponseBody extends TeaModel {
 
             private Builder(Data model) {
                 this.beginTime = model.beginTime;
+                this.concurrency = model.concurrency;
                 this.endTime = model.endTime;
                 this.tpm = model.tpm;
             } 
@@ -244,6 +257,17 @@ public class GetDataAgentTaskModelUsageMetricsResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The concurrency value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
+             */
+            public Builder concurrency(Double concurrency) {
+                this.concurrency = concurrency;
+                return this;
+            }
+
+            /**
              * <p>The end time of the statistical interval for the time-series point. The value is a UNIX timestamp in seconds.</p>
              * 
              * <strong>example:</strong>
@@ -255,7 +279,7 @@ public class GetDataAgentTaskModelUsageMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The TPM at the time-series point, which represents the number of tokens consumed in the statistical interval.</p>
+             * <p>The TPM of the time-series point, which is the number of tokens consumed in the statistical interval.</p>
              * 
              * <strong>example:</strong>
              * <p>1200</p>

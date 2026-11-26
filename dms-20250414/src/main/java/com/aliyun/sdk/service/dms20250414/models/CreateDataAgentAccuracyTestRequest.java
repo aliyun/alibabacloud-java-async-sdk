@@ -241,7 +241,7 @@ public class CreateDataAgentAccuracyTestRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the custom agent to be tested for accuracy.</p>
+         * <p>The ID of the custom agent that requires accuracy testing.</p>
          * 
          * <strong>example:</strong>
          * <p>ca-xxxxxxxxxxxxxxxxxxxx</p>
@@ -253,7 +253,7 @@ public class CreateDataAgentAccuracyTestRequest extends Request {
         }
 
         /**
-         * <p>Deprecated.</p>
+         * <p><strong>[Deprecated]</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -265,7 +265,7 @@ public class CreateDataAgentAccuracyTestRequest extends Request {
         }
 
         /**
-         * <p>The data source. We recommend that you configure this in the custom agent.</p>
+         * <p>The data source. Configure it in the custom agent.</p>
          * 
          * <strong>example:</strong>
          * <p>[{&quot;isInternal&quot;:&quot;N&quot;,&quot;TableIds&quot;:[&quot;51<em><strong>70&quot;,&quot;51</strong></em>71&quot;],&quot;DataSourceType&quot;:&quot;database&quot;,&quot;Database&quot;:&quot;internal_data_employees&quot;,&quot;DmsInstanceId&quot;:&quot;27<em><strong>5&quot;,&quot;DmsDatabaseId&quot;:&quot;71</strong></em>04&quot;,&quot;Tables&quot;:[&quot;employees&quot;,&quot;salaries&quot;],&quot;FileId&quot;:&quot;rm-
@@ -374,10 +374,10 @@ public class CreateDataAgentAccuracyTestRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether sessions are displayed after analysis. This parameter is not supported.</p>
+         * <p>Specifies whether to display sessions after analysis. This feature is not supported.</p>
          * 
          * <strong>example:</strong>
-         * <p>null</p>
+         * <p>false</p>
          */
         public Builder needDelete(Boolean needDelete) {
             this.putQueryParameter("NeedDelete", needDelete);
@@ -401,7 +401,7 @@ public class CreateDataAgentAccuracyTestRequest extends Request {
          * <p>The workspace ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxxxxxxxxxxxxxxxxxxx</p>
+         * <p>1abc2de34fg56hijk7l8mnopq</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putQueryParameter("WorkspaceId", workspaceId);

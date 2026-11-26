@@ -98,7 +98,7 @@ public class GetAirflowRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Airflow instance.</p>
+         * <p>The Airflow instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -111,7 +111,7 @@ public class GetAirflowRequest extends Request {
         }
 
         /**
-         * <p>The ID of the workspace.</p>
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

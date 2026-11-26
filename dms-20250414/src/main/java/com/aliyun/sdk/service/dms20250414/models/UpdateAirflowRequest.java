@@ -51,12 +51,24 @@ public class UpdateAirflowRequest extends Request {
     private String description;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableLineage")
+    private Boolean enableLineage;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EnableServerless")
     private Boolean enableServerless;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("GracefulShutdownTimeout")
     private Integer gracefulShutdownTimeout;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LineageReplicas")
+    private Integer lineageReplicas;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LineageSpec")
+    private String lineageSpec;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PluginsDir")
@@ -89,8 +101,11 @@ public class UpdateAirflowRequest extends Request {
         this.dagsDir = builder.dagsDir;
         this.dataMountInfoList = builder.dataMountInfoList;
         this.description = builder.description;
+        this.enableLineage = builder.enableLineage;
         this.enableServerless = builder.enableServerless;
         this.gracefulShutdownTimeout = builder.gracefulShutdownTimeout;
+        this.lineageReplicas = builder.lineageReplicas;
+        this.lineageSpec = builder.lineageSpec;
         this.pluginsDir = builder.pluginsDir;
         this.requirementFile = builder.requirementFile;
         this.startupFile = builder.startupFile;
@@ -168,6 +183,13 @@ public class UpdateAirflowRequest extends Request {
     }
 
     /**
+     * @return enableLineage
+     */
+    public Boolean getEnableLineage() {
+        return this.enableLineage;
+    }
+
+    /**
      * @return enableServerless
      */
     public Boolean getEnableServerless() {
@@ -179,6 +201,20 @@ public class UpdateAirflowRequest extends Request {
      */
     public Integer getGracefulShutdownTimeout() {
         return this.gracefulShutdownTimeout;
+    }
+
+    /**
+     * @return lineageReplicas
+     */
+    public Integer getLineageReplicas() {
+        return this.lineageReplicas;
+    }
+
+    /**
+     * @return lineageSpec
+     */
+    public String getLineageSpec() {
+        return this.lineageSpec;
     }
 
     /**
@@ -225,8 +261,11 @@ public class UpdateAirflowRequest extends Request {
         private String dagsDir; 
         private java.util.List<DataMountInfo> dataMountInfoList; 
         private String description; 
+        private Boolean enableLineage; 
         private Boolean enableServerless; 
         private Integer gracefulShutdownTimeout; 
+        private Integer lineageReplicas; 
+        private String lineageSpec; 
         private String pluginsDir; 
         private String requirementFile; 
         private String startupFile; 
@@ -247,8 +286,11 @@ public class UpdateAirflowRequest extends Request {
             this.dagsDir = request.dagsDir;
             this.dataMountInfoList = request.dataMountInfoList;
             this.description = request.description;
+            this.enableLineage = request.enableLineage;
             this.enableServerless = request.enableServerless;
             this.gracefulShutdownTimeout = request.gracefulShutdownTimeout;
+            this.lineageReplicas = request.lineageReplicas;
+            this.lineageSpec = request.lineageSpec;
             this.pluginsDir = request.pluginsDir;
             this.requirementFile = request.requirementFile;
             this.startupFile = request.startupFile;
@@ -266,7 +308,7 @@ public class UpdateAirflowRequest extends Request {
         }
 
         /**
-         * <p>The unique key ID of the Airflow instance.</p>
+         * <p>The unique key ID of Airflow.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -291,7 +333,7 @@ public class UpdateAirflowRequest extends Request {
         }
 
         /**
-         * <p>The specification description of the Airflow instance.</p>
+         * <p>The specification description of Airflow.</p>
          * 
          * <strong>example:</strong>
          * <p>SMALL</p>
@@ -337,7 +379,7 @@ public class UpdateAirflowRequest extends Request {
         }
 
         /**
-         * <p>The description of the Airflow instance.</p>
+         * <p>The description of Airflow.</p>
          * 
          * <strong>example:</strong>
          * <p>test airflow</p>
@@ -345,6 +387,15 @@ public class UpdateAirflowRequest extends Request {
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
             this.description = description;
+            return this;
+        }
+
+        /**
+         * <p>Specifies whether to enable data lineage. For Airflow 2.x, this feature is always disabled, and the lineage specifications and number of replicas are ignored.</p>
+         */
+        public Builder enableLineage(Boolean enableLineage) {
+            this.putQueryParameter("EnableLineage", enableLineage);
+            this.enableLineage = enableLineage;
             return this;
         }
 
@@ -358,7 +409,7 @@ public class UpdateAirflowRequest extends Request {
         }
 
         /**
-         * <p>The timeout period for a worker to exit.</p>
+         * <p>The timeout period for worker exit.</p>
          * 
          * <strong>example:</strong>
          * <p>60</p>
@@ -366,6 +417,30 @@ public class UpdateAirflowRequest extends Request {
         public Builder gracefulShutdownTimeout(Integer gracefulShutdownTimeout) {
             this.putQueryParameter("GracefulShutdownTimeout", gracefulShutdownTimeout);
             this.gracefulShutdownTimeout = gracefulShutdownTimeout;
+            return this;
+        }
+
+        /**
+         * <p>The number of replicas for the lineage service. The default value is 1 when enabled. If omitted during an update, the original value is retained.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        public Builder lineageReplicas(Integer lineageReplicas) {
+            this.putQueryParameter("LineageReplicas", lineageReplicas);
+            this.lineageReplicas = lineageReplicas;
+            return this;
+        }
+
+        /**
+         * <p>The merged lineage service specification, which uses the same tier as AppSpec.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SMALL</p>
+         */
+        public Builder lineageSpec(String lineageSpec) {
+            this.putQueryParameter("LineageSpec", lineageSpec);
+            this.lineageSpec = lineageSpec;
             return this;
         }
 
@@ -394,7 +469,7 @@ public class UpdateAirflowRequest extends Request {
         }
 
         /**
-         * <p>The script loaded at startup of the Airflow instance.</p>
+         * <p>The script loaded when the Airflow instance starts.</p>
          * 
          * <strong>example:</strong>
          * <p>default/startup.sh</p>

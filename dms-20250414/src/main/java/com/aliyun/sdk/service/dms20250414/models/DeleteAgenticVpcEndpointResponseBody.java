@@ -106,7 +106,7 @@ public class DeleteAgenticVpcEndpointResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The deletion acceptance result. For duplicate requests, downstream errors are retained and idempotence is not guaranteed.</p>
+         * <p>The deletion acceptance result. For duplicate requests, downstream errors are retained, and idempotence is not guaranteed.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -231,7 +231,7 @@ public class DeleteAgenticVpcEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The deletion status. A value of DELETING only indicates that the asynchronous deletion request is accepted, not that the deletion in the cloud is complete.</p>
+             * <p>The deletion status. A value of DELETING only indicates that the asynchronous deletion request is accepted, and does not indicate that the deletion in the cloud is complete.</p>
              * 
              * <strong>example:</strong>
              * <p>RELEASED</p>

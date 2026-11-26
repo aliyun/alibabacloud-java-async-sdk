@@ -52,12 +52,24 @@ public class CreateAirflowRequest extends Request {
     private String description;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableLineage")
+    private Boolean enableLineage;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EnableServerless")
     private Boolean enableServerless;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("GracefulShutdownTimeout")
     private Integer gracefulShutdownTimeout;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LineageReplicas")
+    private Integer lineageReplicas;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LineageSpec")
+    private String lineageSpec;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OssBucketName")
@@ -120,8 +132,11 @@ public class CreateAirflowRequest extends Request {
         this.dagsDir = builder.dagsDir;
         this.dataMountInfoList = builder.dataMountInfoList;
         this.description = builder.description;
+        this.enableLineage = builder.enableLineage;
         this.enableServerless = builder.enableServerless;
         this.gracefulShutdownTimeout = builder.gracefulShutdownTimeout;
+        this.lineageReplicas = builder.lineageReplicas;
+        this.lineageSpec = builder.lineageSpec;
         this.ossBucketName = builder.ossBucketName;
         this.ossPath = builder.ossPath;
         this.pluginsDir = builder.pluginsDir;
@@ -205,6 +220,13 @@ public class CreateAirflowRequest extends Request {
     }
 
     /**
+     * @return enableLineage
+     */
+    public Boolean getEnableLineage() {
+        return this.enableLineage;
+    }
+
+    /**
      * @return enableServerless
      */
     public Boolean getEnableServerless() {
@@ -216,6 +238,20 @@ public class CreateAirflowRequest extends Request {
      */
     public Integer getGracefulShutdownTimeout() {
         return this.gracefulShutdownTimeout;
+    }
+
+    /**
+     * @return lineageReplicas
+     */
+    public Integer getLineageReplicas() {
+        return this.lineageReplicas;
+    }
+
+    /**
+     * @return lineageSpec
+     */
+    public String getLineageSpec() {
+        return this.lineageSpec;
     }
 
     /**
@@ -304,8 +340,11 @@ public class CreateAirflowRequest extends Request {
         private String dagsDir; 
         private java.util.List<DataMountInfo> dataMountInfoList; 
         private String description; 
+        private Boolean enableLineage; 
         private Boolean enableServerless; 
         private Integer gracefulShutdownTimeout; 
+        private Integer lineageReplicas; 
+        private String lineageSpec; 
         private String ossBucketName; 
         private String ossPath; 
         private String pluginsDir; 
@@ -332,8 +371,11 @@ public class CreateAirflowRequest extends Request {
             this.dagsDir = request.dagsDir;
             this.dataMountInfoList = request.dataMountInfoList;
             this.description = request.description;
+            this.enableLineage = request.enableLineage;
             this.enableServerless = request.enableServerless;
             this.gracefulShutdownTimeout = request.gracefulShutdownTimeout;
+            this.lineageReplicas = request.lineageReplicas;
+            this.lineageSpec = request.lineageSpec;
             this.ossBucketName = request.ossBucketName;
             this.ossPath = request.ossPath;
             this.pluginsDir = request.pluginsDir;
@@ -407,7 +449,7 @@ public class CreateAirflowRequest extends Request {
         }
 
         /**
-         * <p>The DAG directory scanned by Airflow.</p>
+         * <p>The directory scanned by Airflow for DAGs.</p>
          * 
          * <strong>example:</strong>
          * <p>default/dags</p>
@@ -441,7 +483,16 @@ public class CreateAirflowRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable Worker elasticity.</p>
+         * <p>Specifies whether to enable data lineage. For Airflow 2.x, this feature is always disabled, and the lineage specification and number of replicas are ignored.</p>
+         */
+        public Builder enableLineage(Boolean enableLineage) {
+            this.putQueryParameter("EnableLineage", enableLineage);
+            this.enableLineage = enableLineage;
+            return this;
+        }
+
+        /**
+         * <p>Specifies whether to enable elasticity for workers.</p>
          */
         public Builder enableServerless(Boolean enableServerless) {
             this.putQueryParameter("EnableServerless", enableServerless);
@@ -450,7 +501,7 @@ public class CreateAirflowRequest extends Request {
         }
 
         /**
-         * <p>The timeout period for the Worker to gracefully shut down.</p>
+         * <p>The timeout period for a worker to gracefully shut down.</p>
          * 
          * <strong>example:</strong>
          * <p>60</p>
@@ -458,6 +509,30 @@ public class CreateAirflowRequest extends Request {
         public Builder gracefulShutdownTimeout(Integer gracefulShutdownTimeout) {
             this.putQueryParameter("GracefulShutdownTimeout", gracefulShutdownTimeout);
             this.gracefulShutdownTimeout = gracefulShutdownTimeout;
+            return this;
+        }
+
+        /**
+         * <p>The number of replicas for the lineage service. The default value is 1 when enabled. If omitted during an update, the original value is retained.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        public Builder lineageReplicas(Integer lineageReplicas) {
+            this.putQueryParameter("LineageReplicas", lineageReplicas);
+            this.lineageReplicas = lineageReplicas;
+            return this;
+        }
+
+        /**
+         * <p>The specification of the lineage service. It uses the same tier as the Airflow instance specification.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SMALL</p>
+         */
+        public Builder lineageSpec(String lineageSpec) {
+            this.putQueryParameter("LineageSpec", lineageSpec);
+            this.lineageSpec = lineageSpec;
             return this;
         }
 
@@ -488,7 +563,7 @@ public class CreateAirflowRequest extends Request {
         }
 
         /**
-         * <p>The plugin directory scanned by the Airflow instance.</p>
+         * <p>The directory scanned by the Airflow instance for plugins.</p>
          * 
          * <strong>example:</strong>
          * <p>default/plugins</p>
@@ -500,7 +575,7 @@ public class CreateAirflowRequest extends Request {
         }
 
         /**
-         * <p>The path of the package installation file.</p>
+         * <p>The path to the installation package.</p>
          * 
          * <strong>example:</strong>
          * <p>default/requirements.txt</p>
@@ -525,7 +600,7 @@ public class CreateAirflowRequest extends Request {
         }
 
         /**
-         * <p>The startup script of the Airflow container.</p>
+         * <p>The startup script for the Airflow container.</p>
          * 
          * <strong>example:</strong>
          * <p>default/startup.sh</p>
@@ -550,7 +625,7 @@ public class CreateAirflowRequest extends Request {
         }
 
         /**
-         * <p>VPC ID。</p>
+         * <p>The VPC ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -563,7 +638,7 @@ public class CreateAirflowRequest extends Request {
         }
 
         /**
-         * <p>The number of extended Worker node replicas.</p>
+         * <p>The number of worker node extensions.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -576,7 +651,7 @@ public class CreateAirflowRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Data Management workspace.</p>
+         * <p>The DMS workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -589,7 +664,7 @@ public class CreateAirflowRequest extends Request {
         }
 
         /**
-         * <p>The zone ID within the region.</p>
+         * <p>The zone ID in the region.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-h</p>

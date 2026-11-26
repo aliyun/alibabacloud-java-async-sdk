@@ -241,7 +241,7 @@ public class UpdateDataAgentAccuracyTestRequest extends Request {
         } 
 
         /**
-         * <p>The accuracy test instance ID.</p>
+         * <p>The instance ID of the accuracy test.</p>
          * 
          * <strong>example:</strong>
          * <p>at-106n4rg17gv9fxxxxxxxxxx</p>
@@ -268,7 +268,7 @@ public class UpdateDataAgentAccuracyTestRequest extends Request {
          * <p>The data source.</p>
          * 
          * <strong>example:</strong>
-         * <p>[{\&quot;DataSourceType\&quot;:\&quot;database\&quot;,\&quot;RegionId\&quot;:\&quot;cn-hangzhou\&quot;,\&quot;DmsInstanceId\&quot;:\&quot;27xxxxx\&quot;,\&quot;DmsDatabaseId\&quot;:\&quot;752xxxxx\&quot;,\&quot;Database\&quot;:\&quot;employees\&quot;,\&quot;Tables\&quot;:[\&quot;employees\&quot;,\&quot;salaries\&quot;,\&quot;departments\&quot;]}]</p>
+         * <p>[{&quot;DataSourceType&quot;:&quot;database&quot;,&quot;RegionId&quot;:&quot;cn-hangzhou&quot;,&quot;DmsInstanceId&quot;:&quot;27xxxxx&quot;,&quot;DmsDatabaseId&quot;:&quot;752xxxxx&quot;,&quot;Database&quot;:&quot;employees&quot;,&quot;Tables&quot;:[&quot;employees&quot;,&quot;salaries&quot;,&quot;departments&quot;]}]</p>
          */
         public Builder dataset(String dataset) {
             this.putQueryParameter("Dataset", dataset);
@@ -376,7 +376,7 @@ public class UpdateDataAgentAccuracyTestRequest extends Request {
          * <p>Specifies whether to display sessions after analysis. This parameter is currently not supported.</p>
          * 
          * <strong>example:</strong>
-         * <p>no use</p>
+         * <p>false</p>
          */
         public Builder needDelete(Boolean needDelete) {
             this.putQueryParameter("NeedDelete", needDelete);
@@ -397,7 +397,7 @@ public class UpdateDataAgentAccuracyTestRequest extends Request {
         }
 
         /**
-         * <p>The workspace ID.</p>
+         * <p>The ID of the workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>8wfig6l33n4f4xxxxxxxxxx</p>

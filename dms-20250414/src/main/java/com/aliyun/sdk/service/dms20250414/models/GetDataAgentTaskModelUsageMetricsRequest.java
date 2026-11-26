@@ -129,7 +129,7 @@ public class GetDataAgentTaskModelUsageMetricsRequest extends Request {
         } 
 
         /**
-         * <p>The start time of the query time range. The value is a UNIX timestamp in seconds. The recommended time range is up to one month.</p>
+         * <p>The start time of the query time range. The value is a UNIX timestamp in seconds. The recommended interval length is up to one month.</p>
          * 
          * <strong>example:</strong>
          * <p>1735660800</p>
@@ -153,7 +153,7 @@ public class GetDataAgentTaskModelUsageMetricsRequest extends Request {
         }
 
         /**
-         * <p>The end time of the query time range. The value is a UNIX timestamp in seconds. The recommended time range is up to one month.</p>
+         * <p>The end time of the query time range. The value is a UNIX timestamp in seconds. The recommended interval length is up to one month.</p>
          * 
          * <strong>example:</strong>
          * <p>1735747200</p>
@@ -165,7 +165,7 @@ public class GetDataAgentTaskModelUsageMetricsRequest extends Request {
         }
 
         /**
-         * <p>The list of billing instance IDs to query.</p>
+         * <p>The list of billing instance IDs to be queried.</p>
          */
         public Builder instanceIds(java.util.List<String> instanceIds) {
             String instanceIdsShrink = shrink(instanceIds, "InstanceIds", "json");

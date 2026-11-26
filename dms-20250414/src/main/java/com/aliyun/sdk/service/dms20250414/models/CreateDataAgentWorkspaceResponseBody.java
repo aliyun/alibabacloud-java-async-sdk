@@ -401,7 +401,7 @@ public class CreateDataAgentWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the user\&quot;s role in the workspace.</p>
+             * <p>The name of the user&quot;s role in the workspace.</p>
              * 
              * <strong>example:</strong>
              * <p>owner</p>

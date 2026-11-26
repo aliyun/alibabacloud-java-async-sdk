@@ -255,7 +255,7 @@ public class RetrieveKnowledgeBaseRequest extends Request {
          * <p>A filter for the data, specified as a SQL <code>WHERE</code> clause.</p>
          * 
          * <strong>example:</strong>
-         * <p>title = \&quot;test\&quot; AND name like \&quot;test%\&quot;</p>
+         * <p>title = &quot;test&quot; AND name like &quot;test%&quot;</p>
          */
         public Builder filter(String filter) {
             this.putBodyParameter("Filter", filter);
@@ -335,7 +335,7 @@ public class RetrieveKnowledgeBaseRequest extends Request {
          * </code></pre>
          * 
          * <strong>example:</strong>
-         * <p>{ \&quot;Weight\&quot;: { \&quot;alpha\&quot;: 0.5 } }</p>
+         * <p>{ &quot;Weight&quot;: { &quot;alpha&quot;: 0.5 } }</p>
          */
         public Builder hybridSearchArgs(String hybridSearchArgs) {
             this.putBodyParameter("HybridSearchArgs", hybridSearchArgs);

@@ -422,7 +422,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>After the reverse endpoint is deleted, the data source can no longer establish connections and cannot be restored by calling the enable API.</p>
+     * <p>After deletion, no new connections can be established for this data source, and it cannot be recovered by calling the enable operation.</p>
      * 
      * @param request the request parameters of DeleteAgenticVpcEndpoint  DeleteAgenticVpcEndpointRequest
      * @return DeleteAgenticVpcEndpointResponse
@@ -1138,7 +1138,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Queries the model usage summary of DataAgent analysis tasks within a specified time range, including the number of models used, total number of model calls, total tokens consumed, and peak TPM. This data is used to analyze and monitor the model resource consumption of DataAgent analysis tasks.</p>
+     * <p>Queries the model usage summary data of DataAgent analysis tasks within a specified time range, including the number of models used, total number of model calls, total tokens consumed, and peak TPM. This data is used to analyze and monitor the model resource consumption of DataAgent analysis tasks.</p>
      * 
      * @param request the request parameters of GetDataAgentTaskModelUsage  GetDataAgentTaskModelUsageRequest
      * @return GetDataAgentTaskModelUsageResponse
@@ -1159,7 +1159,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Queries the time-series metrics of tokens per minute (TPM) for DataAgent analysis task model usage within a specified time range. It returns the number of tokens consumed in each statistical interval at a minute-level granularity to help you analyze the trend of model usage over time.</p>
+     * <p>Queries the time-series metrics of tokens per minute (TPM) for DataAgent analytical task model usage within a specified time range, and returns the number of tokens consumed in each statistical interval at a minute-level granularity to analyze the trend of model usage over time.</p>
      * 
      * @param request the request parameters of GetDataAgentTaskModelUsageMetrics  GetDataAgentTaskModelUsageMetricsRequest
      * @return GetDataAgentTaskModelUsageMetricsResponse
@@ -1227,6 +1227,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetListMcpServerToolsResultResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetMyAgenticNotificationChannelAuthorizeUrl  GetMyAgenticNotificationChannelAuthorizeUrlRequest
+     * @return GetMyAgenticNotificationChannelAuthorizeUrlResponse
+     */
+    @Override
+    public CompletableFuture<GetMyAgenticNotificationChannelAuthorizeUrlResponse> getMyAgenticNotificationChannelAuthorizeUrl(GetMyAgenticNotificationChannelAuthorizeUrlRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetMyAgenticNotificationChannelAuthorizeUrl").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetMyAgenticNotificationChannelAuthorizeUrlResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetMyAgenticNotificationChannelAuthorizeUrlResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1938,6 +1956,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ListMyAgenticNotificationChannelConfigs  ListMyAgenticNotificationChannelConfigsRequest
+     * @return ListMyAgenticNotificationChannelConfigsResponse
+     */
+    @Override
+    public CompletableFuture<ListMyAgenticNotificationChannelConfigsResponse> listMyAgenticNotificationChannelConfigs(ListMyAgenticNotificationChannelConfigsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListMyAgenticNotificationChannelConfigs").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListMyAgenticNotificationChannelConfigsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListMyAgenticNotificationChannelConfigsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListOneMetaOssieModels  ListOneMetaOssieModelsRequest
      * @return ListOneMetaOssieModelsResponse
      */
@@ -2205,10 +2241,10 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <b>description</b> :
      * <h2>Request description</h2>
      * <ul>
-     * <li>The default value of <code>message_type</code> is <code>primary</code>. Set it to <code>additional</code> or <code>cancel</code> when you need to append information or cancel the session.</li>
-     * <li>The <code>reply_to</code> field specifies the agent message to which this message responds. The default value is <code>0</code>.</li>
-     * <li>The <code>question</code> field is required when <code>message_type</code> is set to <code>additional</code>.</li>
-     * <li>You can use <code>quoted_message</code> to quote previous user messages.</li>
+     * <li>The default value of message_type is primary. Set this parameter to additional or cancel when you need to append information or cancel the session.</li>
+     * <li>The reply_to field specifies the agent message to which this message responds. The default value is 0.</li>
+     * <li>The question field is required when message_type is set to additional.</li>
+     * <li>You can use quoted_message to quote previous messages from the user.</li>
      * </ul>
      * 
      * @param request the request parameters of SendChatMessage  SendChatMessageRequest
@@ -2251,7 +2287,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Sets the quota for a specific workspace.</p>
+     * <p>Sets the workspace quota.</p>
      * 
      * @param request the request parameters of SetWorkspaceQuota  SetWorkspaceQuotaRequest
      * @return SetWorkspaceQuotaResponse
@@ -2395,7 +2431,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Updates the accuracy test item.</p>
+     * <p>Updates an accuracy test item.</p>
      * 
      * @param request the request parameters of UpdateDataAgentAccuracyTest  UpdateDataAgentAccuracyTestRequest
      * @return UpdateDataAgentAccuracyTestResponse
@@ -2499,6 +2535,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateKnowledgeBaseResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateMyAgenticNotificationChannelConfig  UpdateMyAgenticNotificationChannelConfigRequest
+     * @return UpdateMyAgenticNotificationChannelConfigResponse
+     */
+    @Override
+    public CompletableFuture<UpdateMyAgenticNotificationChannelConfigResponse> updateMyAgenticNotificationChannelConfig(UpdateMyAgenticNotificationChannelConfigRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateMyAgenticNotificationChannelConfig").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateMyAgenticNotificationChannelConfigResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateMyAgenticNotificationChannelConfigResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

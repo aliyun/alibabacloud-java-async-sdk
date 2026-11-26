@@ -132,7 +132,7 @@ public class CreateAirflowResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details of the access denial.</p>
+         * <p>The access denial details.</p>
          * 
          * <strong>example:</strong>
          * <p>NOT_FOUND</p>
@@ -165,7 +165,7 @@ public class CreateAirflowResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The log information.</p>
+         * <p>The log message.</p>
          * 
          * <strong>example:</strong>
          * <p>Successful</p>
@@ -195,10 +195,10 @@ public class CreateAirflowResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: The request was successful.</li>
-         * <li><strong>false</strong>: The request failed.</li>
+         * <li><strong>true</strong>: The request is successful.</li>
+         * <li><strong>false</strong>: The request fails.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -252,6 +252,9 @@ public class CreateAirflowResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
+        @com.aliyun.core.annotation.NameInMap("EnableLineage")
+        private Boolean enableLineage;
+
         @com.aliyun.core.annotation.NameInMap("EnableServerless")
         private Boolean enableServerless;
 
@@ -260,6 +263,12 @@ public class CreateAirflowResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("GracefulShutdownTimeout")
         private Integer gracefulShutdownTimeout;
+
+        @com.aliyun.core.annotation.NameInMap("LineageReplicas")
+        private Integer lineageReplicas;
+
+        @com.aliyun.core.annotation.NameInMap("LineageSpec")
+        private String lineageSpec;
 
         @com.aliyun.core.annotation.NameInMap("OssBucketName")
         private String ossBucketName;
@@ -308,9 +317,12 @@ public class CreateAirflowResponseBody extends TeaModel {
             this.dataMountInfoList = builder.dataMountInfoList;
             this.deployErrorMsg = builder.deployErrorMsg;
             this.description = builder.description;
+            this.enableLineage = builder.enableLineage;
             this.enableServerless = builder.enableServerless;
             this.gmtCreated = builder.gmtCreated;
             this.gracefulShutdownTimeout = builder.gracefulShutdownTimeout;
+            this.lineageReplicas = builder.lineageReplicas;
+            this.lineageSpec = builder.lineageSpec;
             this.ossBucketName = builder.ossBucketName;
             this.ossPath = builder.ossPath;
             this.pluginsDir = builder.pluginsDir;
@@ -404,6 +416,13 @@ public class CreateAirflowResponseBody extends TeaModel {
         }
 
         /**
+         * @return enableLineage
+         */
+        public Boolean getEnableLineage() {
+            return this.enableLineage;
+        }
+
+        /**
          * @return enableServerless
          */
         public Boolean getEnableServerless() {
@@ -422,6 +441,20 @@ public class CreateAirflowResponseBody extends TeaModel {
          */
         public Integer getGracefulShutdownTimeout() {
             return this.gracefulShutdownTimeout;
+        }
+
+        /**
+         * @return lineageReplicas
+         */
+        public Integer getLineageReplicas() {
+            return this.lineageReplicas;
+        }
+
+        /**
+         * @return lineageSpec
+         */
+        public String getLineageSpec() {
+            return this.lineageSpec;
         }
 
         /**
@@ -519,9 +552,12 @@ public class CreateAirflowResponseBody extends TeaModel {
             private java.util.List<DataMountInfo> dataMountInfoList; 
             private String deployErrorMsg; 
             private String description; 
+            private Boolean enableLineage; 
             private Boolean enableServerless; 
             private String gmtCreated; 
             private Integer gracefulShutdownTimeout; 
+            private Integer lineageReplicas; 
+            private String lineageSpec; 
             private String ossBucketName; 
             private String ossPath; 
             private String pluginsDir; 
@@ -549,9 +585,12 @@ public class CreateAirflowResponseBody extends TeaModel {
                 this.dataMountInfoList = model.dataMountInfoList;
                 this.deployErrorMsg = model.deployErrorMsg;
                 this.description = model.description;
+                this.enableLineage = model.enableLineage;
                 this.enableServerless = model.enableServerless;
                 this.gmtCreated = model.gmtCreated;
                 this.gracefulShutdownTimeout = model.gracefulShutdownTimeout;
+                this.lineageReplicas = model.lineageReplicas;
+                this.lineageSpec = model.lineageSpec;
                 this.ossBucketName = model.ossBucketName;
                 this.ossPath = model.ossPath;
                 this.pluginsDir = model.pluginsDir;
@@ -567,7 +606,7 @@ public class CreateAirflowResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The instance ID of the Airflow instance.</p>
+             * <p>The instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>af-****</p>
@@ -622,7 +661,7 @@ public class CreateAirflowResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The custom Airflow configuration.</p>
+             * <p>The custom Airflow configurations.</p>
              */
             public Builder customAirflowCfg(java.util.List<String> customAirflowCfg) {
                 this.customAirflowCfg = customAirflowCfg;
@@ -649,7 +688,7 @@ public class CreateAirflowResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The error log information.</p>
+             * <p>The error log message.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc not found</p>
@@ -660,7 +699,7 @@ public class CreateAirflowResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the Airflow instance.</p>
+             * <p>The description of Airflow.</p>
              * 
              * <strong>example:</strong>
              * <p>order scheduler</p>
@@ -671,7 +710,15 @@ public class CreateAirflowResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether to enable Worker elasticity.</p>
+             * <p>Specifies whether data lineage is enabled.</p>
+             */
+            public Builder enableLineage(Boolean enableLineage) {
+                this.enableLineage = enableLineage;
+                return this;
+            }
+
+            /**
+             * <p>Specifies whether to enable elasticity for workers.</p>
              */
             public Builder enableServerless(Boolean enableServerless) {
                 this.enableServerless = enableServerless;
@@ -690,13 +737,35 @@ public class CreateAirflowResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timeout period for the Worker to gracefully shut down.</p>
+             * <p>The timeout period for a worker to gracefully shut down.</p>
              * 
              * <strong>example:</strong>
              * <p>60</p>
              */
             public Builder gracefulShutdownTimeout(Integer gracefulShutdownTimeout) {
                 this.gracefulShutdownTimeout = gracefulShutdownTimeout;
+                return this;
+            }
+
+            /**
+             * <p>The number of replicas for the lineage service. The default value is 1 when enabled. If omitted during an update, the original value is retained.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
+             */
+            public Builder lineageReplicas(Integer lineageReplicas) {
+                this.lineageReplicas = lineageReplicas;
+                return this;
+            }
+
+            /**
+             * <p>The specification of the lineage service. It uses the same tier as the Airflow instance specification.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SMALL</p>
+             */
+            public Builder lineageSpec(String lineageSpec) {
+                this.lineageSpec = lineageSpec;
                 return this;
             }
 
@@ -734,7 +803,7 @@ public class CreateAirflowResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The path of the installable package.</p>
+             * <p>The path of the installable packages.</p>
              * 
              * <strong>example:</strong>
              * <p>default/requirements.txt</p>
@@ -756,7 +825,7 @@ public class CreateAirflowResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The file loaded when the Airflow instance starts. You can use this file to set environment variables and other configurations.</p>
+             * <p>The file loaded when the Airflow instance starts, which can be used to set environment variables.</p>
              * 
              * <strong>example:</strong>
              * <p>default/startup.sh</p>
@@ -767,7 +836,7 @@ public class CreateAirflowResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance status of the Airflow instance.</p>
+             * <p>The instance status.</p>
              * 
              * <strong>example:</strong>
              * <p>DEPLOYING</p>
@@ -789,7 +858,7 @@ public class CreateAirflowResponseBody extends TeaModel {
             }
 
             /**
-             * <p>VPC ID。</p>
+             * <p>The VPC ID.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-uf63r6coyiw9o5gf****</p>

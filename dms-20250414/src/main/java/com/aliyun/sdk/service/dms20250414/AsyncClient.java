@@ -161,7 +161,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>After the reverse endpoint is deleted, the data source can no longer establish connections and cannot be restored by calling the enable API.</p>
+     * <p>After deletion, no new connections can be established for this data source, and it cannot be recovered by calling the enable operation.</p>
      * 
      * @param request the request parameters of DeleteAgenticVpcEndpoint  DeleteAgenticVpcEndpointRequest
      * @return DeleteAgenticVpcEndpointResponse
@@ -413,7 +413,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Queries the model usage summary of DataAgent analysis tasks within a specified time range, including the number of models used, total number of model calls, total tokens consumed, and peak TPM. This data is used to analyze and monitor the model resource consumption of DataAgent analysis tasks.</p>
+     * <p>Queries the model usage summary data of DataAgent analysis tasks within a specified time range, including the number of models used, total number of model calls, total tokens consumed, and peak TPM. This data is used to analyze and monitor the model resource consumption of DataAgent analysis tasks.</p>
      * 
      * @param request the request parameters of GetDataAgentTaskModelUsage  GetDataAgentTaskModelUsageRequest
      * @return GetDataAgentTaskModelUsageResponse
@@ -422,7 +422,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Queries the time-series metrics of tokens per minute (TPM) for DataAgent analysis task model usage within a specified time range. It returns the number of tokens consumed in each statistical interval at a minute-level granularity to help you analyze the trend of model usage over time.</p>
+     * <p>Queries the time-series metrics of tokens per minute (TPM) for DataAgent analytical task model usage within a specified time range, and returns the number of tokens consumed in each statistical interval at a minute-level granularity to analyze the trend of model usage over time.</p>
      * 
      * @param request the request parameters of GetDataAgentTaskModelUsageMetrics  GetDataAgentTaskModelUsageMetricsRequest
      * @return GetDataAgentTaskModelUsageMetricsResponse
@@ -446,6 +446,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetListMcpServerToolsResultResponse
      */
     CompletableFuture<GetListMcpServerToolsResultResponse> getListMcpServerToolsResult(GetListMcpServerToolsResultRequest request);
+
+    /**
+     * @param request the request parameters of GetMyAgenticNotificationChannelAuthorizeUrl  GetMyAgenticNotificationChannelAuthorizeUrlRequest
+     * @return GetMyAgenticNotificationChannelAuthorizeUrlResponse
+     */
+    CompletableFuture<GetMyAgenticNotificationChannelAuthorizeUrlResponse> getMyAgenticNotificationChannelAuthorizeUrl(GetMyAgenticNotificationChannelAuthorizeUrlRequest request);
 
     /**
      * @param request the request parameters of GetNotebookAndSubmitTask  GetNotebookAndSubmitTaskRequest
@@ -709,6 +715,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListKnowledgeBasesResponse> listKnowledgeBases(ListKnowledgeBasesRequest request);
 
     /**
+     * @param request the request parameters of ListMyAgenticNotificationChannelConfigs  ListMyAgenticNotificationChannelConfigsRequest
+     * @return ListMyAgenticNotificationChannelConfigsResponse
+     */
+    CompletableFuture<ListMyAgenticNotificationChannelConfigsResponse> listMyAgenticNotificationChannelConfigs(ListMyAgenticNotificationChannelConfigsRequest request);
+
+    /**
      * @param request the request parameters of ListOneMetaOssieModels  ListOneMetaOssieModelsRequest
      * @return ListOneMetaOssieModelsResponse
      */
@@ -808,10 +820,10 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <b>description</b> :
      * <h2>Request description</h2>
      * <ul>
-     * <li>The default value of <code>message_type</code> is <code>primary</code>. Set it to <code>additional</code> or <code>cancel</code> when you need to append information or cancel the session.</li>
-     * <li>The <code>reply_to</code> field specifies the agent message to which this message responds. The default value is <code>0</code>.</li>
-     * <li>The <code>question</code> field is required when <code>message_type</code> is set to <code>additional</code>.</li>
-     * <li>You can use <code>quoted_message</code> to quote previous user messages.</li>
+     * <li>The default value of message_type is primary. Set this parameter to additional or cancel when you need to append information or cancel the session.</li>
+     * <li>The reply_to field specifies the agent message to which this message responds. The default value is 0.</li>
+     * <li>The question field is required when message_type is set to additional.</li>
+     * <li>You can use quoted_message to quote previous messages from the user.</li>
      * </ul>
      * 
      * @param request the request parameters of SendChatMessage  SendChatMessageRequest
@@ -830,7 +842,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Sets the quota for a specific workspace.</p>
+     * <p>Sets the workspace quota.</p>
      * 
      * @param request the request parameters of SetWorkspaceQuota  SetWorkspaceQuotaRequest
      * @return SetWorkspaceQuotaResponse
@@ -890,7 +902,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Updates the accuracy test item.</p>
+     * <p>Updates an accuracy test item.</p>
      * 
      * @param request the request parameters of UpdateDataAgentAccuracyTest  UpdateDataAgentAccuracyTestRequest
      * @return UpdateDataAgentAccuracyTestResponse
@@ -926,6 +938,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateKnowledgeBaseResponse
      */
     CompletableFuture<UpdateKnowledgeBaseResponse> updateKnowledgeBase(UpdateKnowledgeBaseRequest request);
+
+    /**
+     * @param request the request parameters of UpdateMyAgenticNotificationChannelConfig  UpdateMyAgenticNotificationChannelConfigRequest
+     * @return UpdateMyAgenticNotificationChannelConfigResponse
+     */
+    CompletableFuture<UpdateMyAgenticNotificationChannelConfigResponse> updateMyAgenticNotificationChannelConfig(UpdateMyAgenticNotificationChannelConfigRequest request);
 
     /**
      * @param request the request parameters of UpdateOneMetaOssieModel  UpdateOneMetaOssieModelRequest

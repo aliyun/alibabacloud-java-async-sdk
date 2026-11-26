@@ -53,6 +53,9 @@ public class DmsGatewayOrder extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("State")
     private String state;
 
+    @com.aliyun.core.annotation.NameInMap("Tags")
+    private String tags;
+
     private DmsGatewayOrder(Builder builder) {
         this.bizType = builder.bizType;
         this.chargeType = builder.chargeType;
@@ -66,6 +69,7 @@ public class DmsGatewayOrder extends TeaModel {
         this.payNum = builder.payNum;
         this.region = builder.region;
         this.state = builder.state;
+        this.tags = builder.tags;
     }
 
     public static Builder builder() {
@@ -164,6 +168,13 @@ public class DmsGatewayOrder extends TeaModel {
         return this.state;
     }
 
+    /**
+     * @return tags
+     */
+    public String getTags() {
+        return this.tags;
+    }
+
     public static final class Builder {
         private String bizType; 
         private String chargeType; 
@@ -177,6 +188,7 @@ public class DmsGatewayOrder extends TeaModel {
         private Integer payNum; 
         private String region; 
         private String state; 
+        private String tags; 
 
         private Builder() {
         } 
@@ -194,6 +206,7 @@ public class DmsGatewayOrder extends TeaModel {
             this.payNum = model.payNum;
             this.region = model.region;
             this.state = model.state;
+            this.tags = model.tags;
         } 
 
         /**
@@ -289,6 +302,14 @@ public class DmsGatewayOrder extends TeaModel {
          */
         public Builder state(String state) {
             this.state = state;
+            return this;
+        }
+
+        /**
+         * Tags.
+         */
+        public Builder tags(String tags) {
+            this.tags = tags;
             return this;
         }
 
