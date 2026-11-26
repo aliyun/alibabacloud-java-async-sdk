@@ -265,7 +265,7 @@ public class GetEvaluatorSkillResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The version creation time, in seconds-level UNIX timestamp.</p>
+             * <p>The creation time of the version. UNIX timestamp in seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1782816000</p>
@@ -290,7 +290,7 @@ public class GetEvaluatorSkillResponseBody extends TeaModel {
              * <p>The version description.</p>
              * 
              * <strong>example:</strong>
-             * <p>Initial release version</p>
+             * <p>Initial release</p>
              */
             public Builder versionDescription(String versionDescription) {
                 this.versionDescription = versionDescription;
@@ -461,7 +461,7 @@ public class GetEvaluatorSkillResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The creation time, in seconds-level UNIX timestamp.</p>
+             * <p>The creation time. UNIX timestamp in seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1782816000</p>
@@ -497,7 +497,7 @@ public class GetEvaluatorSkillResponseBody extends TeaModel {
              * <p>The display name.</p>
              * 
              * <strong>example:</strong>
-             * <p>Trace Context Loader</p>
+             * <p>Read trace context</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -505,7 +505,7 @@ public class GetEvaluatorSkillResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the skill is enabled.</p>
+             * <p>Specifies whether the skill is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -538,7 +538,7 @@ public class GetEvaluatorSkillResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The skill name.</p>
+             * <p>The name of the skill.</p>
              * 
              * <strong>example:</strong>
              * <p>trace_context_loader</p>
@@ -549,7 +549,7 @@ public class GetEvaluatorSkillResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The update time, in seconds-level UNIX timestamp.</p>
+             * <p>The update time. UNIX timestamp in seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1782816600</p>
@@ -563,7 +563,7 @@ public class GetEvaluatorSkillResponseBody extends TeaModel {
              * <p>The list of skill versions.</p>
              * 
              * <strong>example:</strong>
-             * <p>[{&quot;version&quot;:&quot;1782816000000&quot;,&quot;versionDescription&quot;:&quot;Initial release version&quot;}]</p>
+             * <p>[{&quot;version&quot;:&quot;1782816000000&quot;,&quot;versionDescription&quot;:&quot;Initial release&quot;}]</p>
              */
             public Builder versions(java.util.List<Versions> versions) {
                 this.versions = versions;

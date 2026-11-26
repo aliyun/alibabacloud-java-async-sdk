@@ -246,7 +246,7 @@ public class CreateEvaluatorRequest extends Request {
         } 
 
         /**
-         * <p>The AgentSpace name.</p>
+         * <p>The name of the AgentSpace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -271,10 +271,10 @@ public class CreateEvaluatorRequest extends Request {
         }
 
         /**
-         * <p>The evaluator configuration. LLM/AGENT types typically include prompt, variables, and outputSchema. CODE types typically include codeType, faasConfig, variables, and parameters.</p>
+         * <p>The evaluator configuration. For LLM or AGENT evaluators, the configuration typically includes prompt, variables, and outputSchema. For CODE evaluators, it typically includes codeType, faasConfig, variables, and parameters.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;prompt&quot;:&quot;Please evaluate task completion&quot;,&quot;variables&quot;:[{&quot;name&quot;:&quot;input&quot;}]}</p>
+         * <p>{&quot;prompt&quot;:&quot;Please evaluate the task completion&quot;,&quot;variables&quot;:[{&quot;name&quot;:&quot;input&quot;}]}</p>
          */
         public Builder config(java.util.Map<String, ?> config) {
             this.putBodyParameter("config", config);
@@ -283,10 +283,10 @@ public class CreateEvaluatorRequest extends Request {
         }
 
         /**
-         * <p>The description of the evaluator. Maximum length: 256 characters.</p>
+         * <p>The description of the evaluator. The description can be up to 256 characters in length.</p>
          * 
          * <strong>example:</strong>
-         * <p>Determines whether the Agent completed the user task</p>
+         * <p>Determines whether the agent completes the user task</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -295,7 +295,7 @@ public class CreateEvaluatorRequest extends Request {
         }
 
         /**
-         * <p>The display name. Maximum length: 128 characters.</p>
+         * <p>The display name. The name can be up to 128 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>Trace task completion</p>
@@ -307,7 +307,7 @@ public class CreateEvaluatorRequest extends Request {
         }
 
         /**
-         * <p>The evaluation metric name.</p>
+         * <p>The name of the evaluation metric.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -320,7 +320,7 @@ public class CreateEvaluatorRequest extends Request {
         }
 
         /**
-         * <p>The evaluator name. The name cannot start with a system-reserved prefix. Maximum length: 128 characters.</p>
+         * <p>The name of the evaluator. The name cannot start with a system-reserved prefix and can be up to 128 characters in length.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -345,7 +345,10 @@ public class CreateEvaluatorRequest extends Request {
         }
 
         /**
-         * skills.
+         * <p>The list of business skills for the initial version of a standard agent evaluator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;skillName&quot;:&quot;fact-check&quot;,&quot;files&quot;:[{&quot;name&quot;:&quot;SKILL.md&quot;,&quot;content&quot;:&quot;---\nname: fact-check\ndescription: Verify the factual basis in the response\n---\nVerify the facts in the response item by item and list the evidence.&quot;}]}]</p>
          */
         public Builder skills(java.util.List<Skills> skills) {
             this.putBodyParameter("skills", skills);
@@ -354,7 +357,10 @@ public class CreateEvaluatorRequest extends Request {
         }
 
         /**
-         * status.
+         * <p>The initial version status. Set this parameter to DRAFT to save the evaluator as a draft. If you omit this parameter, the initial version is directly published.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DRAFT</p>
          */
         public Builder status(String status) {
             this.putBodyParameter("status", status);
@@ -363,12 +369,7 @@ public class CreateEvaluatorRequest extends Request {
         }
 
         /**
-         * <p>The evaluator type. Valid values:</p>
-         * <ul>
-         * <li>LLM: an inner join large language model evaluation evaluator.</li>
-         * <li>AGENT: a StarOps digital worker evaluator.</li>
-         * <li>CODE: a code evaluator.</li>
-         * </ul>
+         * <p>The type of the evaluator. <code>LLM</code> indicates an inner join model evaluation tool for large language models, <code>AGENT</code> indicates a StarOps digital employee evaluator, and <code>CODE</code> indicates a code evaluator.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -406,7 +407,7 @@ public class CreateEvaluatorRequest extends Request {
         }
 
         /**
-         * <p>The idempotency token. This is a unique string generated by the client to ensure idempotence of the create operation. CloudSpec declares this query parameter, but the backend does not currently perform idempotency checks.</p>
+         * <p>The idempotency token. CloudSpec declares this query parameter, but the backend does not currently perform idempotency checks.</p>
          * 
          * <strong>example:</strong>
          * <p>a1b2c3d4-1234-5678-90ab-cdef12345678</p>
@@ -477,7 +478,13 @@ public class CreateEvaluatorRequest extends Request {
             } 
 
             /**
-             * content.
+             * <p>The text content of the file.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
+             * <h2>name: fact-check
+             * description: Verify the factual basis in the response</h2>
+             * <p>Verify the facts in the response item by item and list the evidence</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -485,11 +492,10 @@ public class CreateEvaluatorRequest extends Request {
             }
 
             /**
-             * <p>The evaluator name. The name cannot start with a system-reserved prefix. Maximum length: 128 characters.</p>
-             * <p>This parameter is required.</p>
+             * <p>The path of the file relative to the root directory of the skill.</p>
              * 
              * <strong>example:</strong>
-             * <p>trace_task_completion</p>
+             * <p>SKILL.md</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -595,10 +601,10 @@ public class CreateEvaluatorRequest extends Request {
             } 
 
             /**
-             * <p>The description of the evaluator. Maximum length: 256 characters.</p>
+             * <p>The description of the skill purpose.</p>
              * 
              * <strong>example:</strong>
-             * <p>Determines whether the Agent completed the user task</p>
+             * <p>Verify the factual basis in the response</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -606,10 +612,10 @@ public class CreateEvaluatorRequest extends Request {
             }
 
             /**
-             * <p>The display name. Maximum length: 128 characters.</p>
+             * <p>The display name of the skill.</p>
              * 
              * <strong>example:</strong>
-             * <p>Trace task completion</p>
+             * <p>Fact check</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -617,7 +623,10 @@ public class CreateEvaluatorRequest extends Request {
             }
 
             /**
-             * enable.
+             * <p>Specifies whether to enable the skill. Default value: true.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -625,7 +634,10 @@ public class CreateEvaluatorRequest extends Request {
             }
 
             /**
-             * files.
+             * <p>The complete list of files for the skill. The list must include SKILL.md in the root directory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;name&quot;:&quot;SKILL.md&quot;,&quot;content&quot;:&quot;---\nname: fact-check\ndescription: Verify the factual basis in the response\n---\nVerify the facts in the response item by item and list the evidence.&quot;}]</p>
              */
             public Builder files(java.util.List<Files> files) {
                 this.files = files;
@@ -633,7 +645,10 @@ public class CreateEvaluatorRequest extends Request {
             }
 
             /**
-             * skillName.
+             * <p>The name of the skill. The name must be unique in the list of skills submitted in this request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fact-check</p>
              */
             public Builder skillName(String skillName) {
                 this.skillName = skillName;

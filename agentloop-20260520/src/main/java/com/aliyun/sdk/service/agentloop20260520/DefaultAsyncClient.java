@@ -859,7 +859,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Invokes GetPipelineRun to retrieve the details of a single pipeline run, including the data window, execute status, retry information, run statistics, and fault message.</p>
+     * <p>Invokes GetPipelineRun to retrieve the details of a single pipeline run, including the data window, execute status, retry information, run statistics, and the error message for the fault.</p>
      * 
      * @param request the request parameters of GetPipelineRun  GetPipelineRunRequest
      * @return GetPipelineRunResponse
@@ -1141,7 +1141,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Calls the ListPipelineRuns operation to query the pipeline run history. You can filter the results by status, trigger type, and time range, and use cursor-based pagination.</p>
+     * <p>Calls ListPipelineRuns to query the pipeline run history. Supports filtering by status, trigger type, and time range, and uses cursor-based pagination.</p>
      * 
      * @param request the request parameters of ListPipelineRuns  ListPipelineRunsRequest
      * @return ListPipelineRunsResponse

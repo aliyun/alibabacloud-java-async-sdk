@@ -143,7 +143,7 @@ public class ListEvaluatorsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries returned per page. Default value: 20. Maximum value: 100.</p>
+         * <p>The number of entries to return per page. Default value: 20. Maximum value: 100.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>

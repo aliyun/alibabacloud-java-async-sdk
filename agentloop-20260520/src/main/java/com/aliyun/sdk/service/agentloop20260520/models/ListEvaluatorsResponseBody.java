@@ -117,7 +117,7 @@ public class ListEvaluatorsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page used for this request.</p>
+         * <p>The number of entries per page used in this request.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -360,7 +360,7 @@ public class ListEvaluatorsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time. The value is a UNIX timestamp in seconds.</p>
+             * <p>The creation time, as a UNIX timestamp in seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1782816000</p>
@@ -374,7 +374,7 @@ public class ListEvaluatorsResponseBody extends TeaModel {
              * <p>The evaluator description.</p>
              * 
              * <strong>example:</strong>
-             * <p>Determines whether the agent has completed the user task</p>
+             * <p>Determines whether the agent completes the user task</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -437,7 +437,10 @@ public class ListEvaluatorsResponseBody extends TeaModel {
             }
 
             /**
-             * selectable.
+             * <p>Specifies whether the evaluator has a default version available for selection in new evaluation tasks or experiment plans.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder selectable(Boolean selectable) {
                 this.selectable = selectable;
@@ -445,7 +448,10 @@ public class ListEvaluatorsResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * <p>The status of the latest evaluator version. DRAFT indicates a draft, PUBLISHED indicates published, and OFFLINE indicates offline.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PUBLISHED</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -464,7 +470,7 @@ public class ListEvaluatorsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The update time. The value is a UNIX timestamp in seconds.</p>
+             * <p>The update time, as a UNIX timestamp in seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1782816600</p>

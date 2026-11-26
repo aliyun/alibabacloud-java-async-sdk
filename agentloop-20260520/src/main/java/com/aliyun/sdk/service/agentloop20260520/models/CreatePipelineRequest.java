@@ -34,6 +34,10 @@ public class CreatePipelineRequest extends Request {
     private Pipeline pipeline;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("pipelineKind")
+    private String pipelineKind;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("pipelineName")
     private String pipelineName;
 
@@ -55,6 +59,7 @@ public class CreatePipelineRequest extends Request {
         this.description = builder.description;
         this.executePolicy = builder.executePolicy;
         this.pipeline = builder.pipeline;
+        this.pipelineKind = builder.pipelineKind;
         this.pipelineName = builder.pipelineName;
         this.sink = builder.sink;
         this.source = builder.source;
@@ -103,6 +108,13 @@ public class CreatePipelineRequest extends Request {
     }
 
     /**
+     * @return pipelineKind
+     */
+    public String getPipelineKind() {
+        return this.pipelineKind;
+    }
+
+    /**
      * @return pipelineName
      */
     public String getPipelineName() {
@@ -135,6 +147,7 @@ public class CreatePipelineRequest extends Request {
         private String description; 
         private ExecutePolicy executePolicy; 
         private Pipeline pipeline; 
+        private String pipelineKind; 
         private String pipelineName; 
         private Sink sink; 
         private Source source; 
@@ -150,6 +163,7 @@ public class CreatePipelineRequest extends Request {
             this.description = request.description;
             this.executePolicy = request.executePolicy;
             this.pipeline = request.pipeline;
+            this.pipelineKind = request.pipelineKind;
             this.pipelineName = request.pipelineName;
             this.sink = request.sink;
             this.source = request.source;
@@ -157,7 +171,7 @@ public class CreatePipelineRequest extends Request {
         } 
 
         /**
-         * <p>The name of the AgentSpace under which the pipeline will be created.</p>
+         * <p>The name of the AgentSpace under which the pipeline is created.</p>
          * 
          * <strong>example:</strong>
          * <p>my-agent-space</p>
@@ -169,10 +183,10 @@ public class CreatePipelineRequest extends Request {
         }
 
         /**
-         * <p>The description of the pipeline. Maximum length: 256 characters.</p>
+         * <p>The description of the pipeline. The description can be up to 256 characters in length.</p>
          * 
          * <strong>example:</strong>
-         * <p>Collect trace data from SLS and perform data cleaning into a Dataset</p>
+         * <p>Collect trace data from SLS and perform data cleaning into a dataset</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -181,7 +195,7 @@ public class CreatePipelineRequest extends Request {
         }
 
         /**
-         * <p>The scheduling method.</p>
+         * <p>The scheduling policy.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;mode&quot;:&quot;RunOnce&quot;,&quot;runOnce&quot;:{&quot;fromTime&quot;:1735660800,&quot;toTime&quot;:1735664400}}</p>
@@ -193,7 +207,7 @@ public class CreatePipelineRequest extends Request {
         }
 
         /**
-         * <p>The pipeline configuration for node orchestration.</p>
+         * <p>The pipeline configuration, including node orchestration.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;nodes&quot;:[{&quot;id&quot;:&quot;select-fields&quot;,&quot;type&quot;:&quot;project&quot;,&quot;parameters&quot;:{&quot;question&quot;:&quot;user_query&quot;}}]}</p>
@@ -201,6 +215,18 @@ public class CreatePipelineRequest extends Request {
         public Builder pipeline(Pipeline pipeline) {
             this.putBodyParameter("pipeline", pipeline);
             this.pipeline = pipeline;
+            return this;
+        }
+
+        /**
+         * <p>The pipeline type. Valid values: PROCESSING (data processing) and ORCHESTRATION (orchestration task).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ORCHESTRATION</p>
+         */
+        public Builder pipelineKind(String pipelineKind) {
+            this.putBodyParameter("pipelineKind", pipelineKind);
+            this.pipelineKind = pipelineKind;
             return this;
         }
 
@@ -217,7 +243,7 @@ public class CreatePipelineRequest extends Request {
         }
 
         /**
-         * <p>The pipeline sink, which is the data write destination.</p>
+         * <p>The pipeline destination for writing data.</p>
          */
         public Builder sink(Sink sink) {
             this.putBodyParameter("sink", sink);
@@ -226,7 +252,7 @@ public class CreatePipelineRequest extends Request {
         }
 
         /**
-         * <p>The pipeline data source.</p>
+         * <p>The data source of the pipeline.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;type&quot;:&quot;logstore&quot;,&quot;logstore&quot;:{&quot;project&quot;:&quot;my-sls-project&quot;,&quot;logstore&quot;:&quot;agent-logs&quot;},&quot;inputFields&quot;:[{&quot;name&quot;:&quot;question&quot;,&quot;type&quot;:&quot;text&quot;}]}</p>
@@ -238,7 +264,7 @@ public class CreatePipelineRequest extends Request {
         }
 
         /**
-         * <p>The idempotency token. It is a unique string generated by the client to ensure the idempotence of the create operation.</p>
+         * <p>The client token that is used to ensure the idempotency of the request. The token is a unique string generated by the client.</p>
          * 
          * <strong>example:</strong>
          * <p>a1b2c3d4-1234-5678-90ab-cdef12345678</p>
@@ -296,7 +322,7 @@ public class CreatePipelineRequest extends Request {
             } 
 
             /**
-             * <p>The bootstrap historical start point as a UNIX timestamp in seconds. It shares the same precision as runOnce or scheduled fromTime. Millisecond values greater than or equal to 1e12 are automatically converted. The cursor starts from this time aligned to the grid and catches up window by window. After catching up, it switches to minute intervals. By default, it starts from the current time and processes only incremental data.</p>
+             * <p>The historical starting point for bootstrap, specified as a Unix timestamp in seconds. It shares the same precision as runOnce/scheduled.fromTime, and millisecond values greater than or equal to 1e12 are automatically converted for compatibility. The cursor starts from this time, aligns to the time grid, and catches up window by window. After catching up, it switches to minute intervals. By default, it starts from the current time and processes only incremental data.</p>
              * 
              * <strong>example:</strong>
              * <p>1735660800</p>
@@ -366,7 +392,7 @@ public class CreatePipelineRequest extends Request {
             } 
 
             /**
-             * <p>The start time of the data processing window as a UNIX timestamp in seconds. The value must be less than the toTime value.</p>
+             * <p>The start time of the data processing window. The value is a UNIX timestamp in seconds and must be less than the value of toTime.</p>
              * 
              * <strong>example:</strong>
              * <p>1735660800</p>
@@ -377,7 +403,7 @@ public class CreatePipelineRequest extends Request {
             }
 
             /**
-             * <p>The end time of the data processing window as a UNIX timestamp in seconds. The value must be greater than the fromTime value.</p>
+             * <p>The end time of the data processing window. The value is a UNIX timestamp in seconds and must be greater than the value of fromTime.</p>
              * 
              * <strong>example:</strong>
              * <p>1735747200</p>
@@ -447,7 +473,7 @@ public class CreatePipelineRequest extends Request {
             } 
 
             /**
-             * <p>The scheduling start time as a UNIX timestamp in milliseconds.</p>
+             * <p>The scheduling start time. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1735660800000</p>
@@ -554,7 +580,7 @@ public class CreatePipelineRequest extends Request {
             } 
 
             /**
-             * <p>The continuous execution configuration. This is used when the type is trace. The processing frequency is a fixed value managed by the server.</p>
+             * <p>The continuous execution configuration. This parameter is used when type is set to trace. The processing frequency is a fixed value managed by the server.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;fromTime&quot;:1735660800}</p>
@@ -576,7 +602,7 @@ public class CreatePipelineRequest extends Request {
             }
 
             /**
-             * <p>The single execution configuration. This parameter is required only when the mode is RunOnce.</p>
+             * <p>The single execution configuration. This parameter is required only when mode is set to RunOnce.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;fromTime&quot;:1735660800,&quot;toTime&quot;:1735664400}</p>
@@ -587,7 +613,7 @@ public class CreatePipelineRequest extends Request {
             }
 
             /**
-             * <p>The periodic scheduling configuration. This parameter is required only when the mode is Scheduled.</p>
+             * <p>The periodic scheduling configuration. This parameter is required only when mode is set to Scheduled.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;interval&quot;:&quot;1h&quot;,&quot;fromTime&quot;:1735660800}</p>
@@ -681,7 +707,7 @@ public class CreatePipelineRequest extends Request {
             }
 
             /**
-             * <p>The parameters of the node. This is a key-value structure that varies based on the node type.</p>
+             * <p>The parameters of the node. The parameters are in key-value pairs and vary based on the node type.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;ID&quot;: &quot;ID&quot;}</p>
@@ -908,7 +934,7 @@ public class CreatePipelineRequest extends Request {
             }
 
             /**
-             * <p>The default destination type. Currently, only dataset is supported.</p>
+             * <p>The default destination type. Valid values: dataset.</p>
              * 
              * <strong>example:</strong>
              * <p>dataset</p>
@@ -1059,7 +1085,7 @@ public class CreatePipelineRequest extends Request {
             } 
 
             /**
-             * <p>The destination dataset for the route.</p>
+             * <p>The route destination dataset.</p>
              */
             public Builder dataset(SinkDataset dataset) {
                 this.dataset = dataset;
@@ -1067,7 +1093,7 @@ public class CreatePipelineRequest extends Request {
             }
 
             /**
-             * <p>The route destination type. Currently, only dataset is supported.</p>
+             * <p>The route destination type. Valid values: dataset.</p>
              * 
              * <strong>example:</strong>
              * <p>dataset</p>
@@ -1174,7 +1200,7 @@ public class CreatePipelineRequest extends Request {
             }
 
             /**
-             * <p>The sink for the route.</p>
+             * <p>The destination for the route.</p>
              */
             public Builder sink(RoutesSink sink) {
                 this.sink = sink;
@@ -1254,7 +1280,7 @@ public class CreatePipelineRequest extends Request {
             } 
 
             /**
-             * <p>The default sink used when no conditional route is matched.</p>
+             * <p>The default destination used when no conditional route is matched.</p>
              */
             public Builder defaultSink(DefaultSink defaultSink) {
                 this.defaultSink = defaultSink;
@@ -1262,7 +1288,7 @@ public class CreatePipelineRequest extends Request {
             }
 
             /**
-             * <p>The route matching mode. Currently, only all is supported.</p>
+             * <p>The route matching mode. Valid values: all.</p>
              * 
              * <strong>example:</strong>
              * <p>all</p>
@@ -1434,7 +1460,7 @@ public class CreatePipelineRequest extends Request {
             } 
 
             /**
-             * <p>The conditional routing configuration, which is used only when sink.type is set to condition.</p>
+             * <p>The conditional routing configuration. This parameter is used only when sink.type is set to condition.</p>
              */
             public Builder condition(Condition condition) {
                 this.condition = condition;
@@ -1450,7 +1476,7 @@ public class CreatePipelineRequest extends Request {
             }
 
             /**
-             * <p>The destination type. Currently, dataset is supported.</p>
+             * <p>The destination type. Valid values: dataset.</p>
              * 
              * <strong>example:</strong>
              * <p>Dataset</p>
@@ -1531,7 +1557,7 @@ public class CreatePipelineRequest extends Request {
             }
 
             /**
-             * <p>The data filter condition for the dataset.</p>
+             * <p>The filter condition for the dataset data.</p>
              * 
              * <strong>example:</strong>
              * <p>status = &quot;pending&quot;</p>
@@ -1612,7 +1638,7 @@ public class CreatePipelineRequest extends Request {
             }
 
             /**
-             * <p>The type of the field. Valid values: text, long, double, and json.</p>
+             * <p>The data type of the field. Valid values: text, long, double, and json.</p>
              * 
              * <strong>example:</strong>
              * <p>text</p>
@@ -1717,7 +1743,7 @@ public class CreatePipelineRequest extends Request {
             }
 
             /**
-             * <p>The filtered query statement for data in SLS query and analysis syntax.</p>
+             * <p>The filtered query statement (SLS query and analysis syntax).</p>
              * 
              * <strong>example:</strong>
              * <ul>
@@ -1789,7 +1815,7 @@ public class CreatePipelineRequest extends Request {
             } 
 
             /**
-             * <p>The list of enrichment columns. This parameter is retained for compatibility. The current implementation outputs only the fixed column agent_trajectory, so this parameter no longer affects the output.</p>
+             * <p>The list of enrichment columns. This parameter is retained for compatibility. The current implementation outputs a single fixed column named agent_trajectory, and this parameter no longer affects the output.</p>
              * 
              * <strong>example:</strong>
              * <p>[&quot;input&quot;,&quot;output&quot;,&quot;session_id&quot;]</p>
@@ -1857,7 +1883,7 @@ public class CreatePipelineRequest extends Request {
             } 
 
             /**
-             * <p>The trajectory enrichment configuration. It mounts trajectory data into the scrubbing result based on trace_id. When writing to the dataset, the data is stored in the fixed column agent_trajectory, where the column value is the trajectory JSON content.</p>
+             * <p>The trajectory enrichment configuration. It mounts trajectory data into the cleansing result based on the trace_id. When writing to the dataset, the data is stored in the fixed column agent_trajectory, where the column value is the JSON content of the trajectory.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;enabled&quot;:true,&quot;columns&quot;:[&quot;input&quot;,&quot;output&quot;]}</p>
@@ -1966,7 +1992,7 @@ public class CreatePipelineRequest extends Request {
             } 
 
             /**
-             * <p>The Dataset datasource config under the current AgentSpace.</p>
+             * <p>The Dataset datasource config in the current AgentSpace.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;dataset&quot;:&quot;my-dataset&quot;,&quot;filter&quot;:&quot;status = &quot;pending&quot;&quot;}</p>
@@ -1977,7 +2003,7 @@ public class CreatePipelineRequest extends Request {
             }
 
             /**
-             * <p>The input fields and their types. This applies to all data source types.</p>
+             * <p>The input fields and their data types. This applies to all data source types.</p>
              * 
              * <strong>example:</strong>
              * <p>[{&quot;name&quot;:&quot;question&quot;,&quot;type&quot;:&quot;text&quot;}]</p>
@@ -1988,7 +2014,7 @@ public class CreatePipelineRequest extends Request {
             }
 
             /**
-             * <p>The Simple Log Service (SLS) Logstore datasource config.</p>
+             * <p>The SLS Logstore datasource config.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;project&quot;:&quot;my-sls-project&quot;,&quot;logstore&quot;:&quot;agent-logs&quot;}</p>
@@ -1999,7 +2025,7 @@ public class CreatePipelineRequest extends Request {
             }
 
             /**
-             * <p>The trajectory data configuration. This is optional and takes effect only when the type is trace. It retrieves ATIF standard trajectory data from the trajectory scrubbing service and extends it by feature.</p>
+             * <p>The configuration of the trajectory data. This parameter is optional and takes effect only when the type is set to trace. It obtains ATIF standard trajectory data from the trajectory cleansing service and extends it based on features.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;enrich&quot;:{&quot;enabled&quot;:true,&quot;columns&quot;:[&quot;input&quot;,&quot;output&quot;]}}</p>
@@ -2010,7 +2036,7 @@ public class CreatePipelineRequest extends Request {
             }
 
             /**
-             * <p>The data source type. Currently, SLS is supported.</p>
+             * <p>The type of the data source. Currently, only SLS is supported.</p>
              * 
              * <strong>example:</strong>
              * <p>SLS</p>

@@ -229,7 +229,7 @@ public class UpdateEvaluatorRequest extends Request {
         } 
 
         /**
-         * <p>The AgentSpace name.</p>
+         * <p>The name of the AgentSpace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -242,7 +242,7 @@ public class UpdateEvaluatorRequest extends Request {
         }
 
         /**
-         * <p>The evaluator name.</p>
+         * <p>The name of the evaluator.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -267,7 +267,7 @@ public class UpdateEvaluatorRequest extends Request {
         }
 
         /**
-         * <p>The configuration of the new version. This parameter is typically required when <code>version</code> is specified.</p>
+         * <p>The configuration for the new version. This parameter is typically required when version is specified.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;prompt&quot;:&quot;Evaluate task completion more strictly&quot;}</p>
@@ -279,7 +279,10 @@ public class UpdateEvaluatorRequest extends Request {
         }
 
         /**
-         * createVersion.
+         * <p>Specifies whether to create a new draft. Set to true to create a new draft, or false to update a specified existing draft. When this parameter is specified, the version status defaults to DRAFT.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder createVersion(Boolean createVersion) {
             this.putBodyParameter("createVersion", createVersion);
@@ -288,7 +291,7 @@ public class UpdateEvaluatorRequest extends Request {
         }
 
         /**
-         * <p>The evaluator description.</p>
+         * <p>The description of the evaluator.</p>
          * 
          * <strong>example:</strong>
          * <p>Determines whether the agent completes the user task</p>
@@ -303,7 +306,7 @@ public class UpdateEvaluatorRequest extends Request {
          * <p>The display name.</p>
          * 
          * <strong>example:</strong>
-         * <p>Task completion of the chain</p>
+         * <p>Pipeline task completion</p>
          */
         public Builder displayName(String displayName) {
             this.putBodyParameter("displayName", displayName);
@@ -324,7 +327,10 @@ public class UpdateEvaluatorRequest extends Request {
         }
 
         /**
-         * skills.
+         * <p>The complete list of business skills saved for the standard agent evaluator in this request. Pass an empty array to clear the business skills for this version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;skillName&quot;:&quot;fact-check&quot;,&quot;files&quot;:[{&quot;name&quot;:&quot;SKILL.md&quot;,&quot;content&quot;:&quot;---\nname: fact-check\ndescription: Verify factual basis in responses\n---\nVerify the facts in the response item by item and list the basis.&quot;}]}]</p>
          */
         public Builder skills(java.util.List<Skills> skills) {
             this.putBodyParameter("skills", skills);
@@ -333,7 +339,10 @@ public class UpdateEvaluatorRequest extends Request {
         }
 
         /**
-         * status.
+         * <p>The status of the evaluator version to be written. Only DRAFT is supported when explicitly specified. To publish a draft, call UpdateEvaluatorVersionStatus.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DRAFT</p>
          */
         public Builder status(String status) {
             this.putBodyParameter("status", status);
@@ -366,7 +375,7 @@ public class UpdateEvaluatorRequest extends Request {
         }
 
         /**
-         * <p>The idempotency token. CloudSpec declares this query parameter, but the backend does not currently perform idempotency comparison.</p>
+         * <p>The idempotency token. CloudSpec declares this query parameter, but the backend does not currently perform idempotency checks.</p>
          * 
          * <strong>example:</strong>
          * <p>a1b2c3d4-1234-5678-90ab-cdef12345678</p>
@@ -437,7 +446,13 @@ public class UpdateEvaluatorRequest extends Request {
             } 
 
             /**
-             * content.
+             * <p>The text content of the file.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
+             * <h2>name: fact-check
+             * description: Verify factual basis in responses</h2>
+             * <p>Verify the facts in the response item by item and list the basis</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -445,11 +460,10 @@ public class UpdateEvaluatorRequest extends Request {
             }
 
             /**
-             * <p>The evaluator name.</p>
-             * <p>This parameter is required.</p>
+             * <p>The path of the file relative to the root directory of the skill.</p>
              * 
              * <strong>example:</strong>
-             * <p>trace_task_completion</p>
+             * <p>SKILL.md</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -555,10 +569,10 @@ public class UpdateEvaluatorRequest extends Request {
             } 
 
             /**
-             * <p>The evaluator description.</p>
+             * <p>The description of the skill purpose.</p>
              * 
              * <strong>example:</strong>
-             * <p>Determines whether the agent completes the user task</p>
+             * <p>Verify factual basis in responses</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -566,10 +580,10 @@ public class UpdateEvaluatorRequest extends Request {
             }
 
             /**
-             * <p>The display name.</p>
+             * <p>The display name of the skill.</p>
              * 
              * <strong>example:</strong>
-             * <p>Task completion of the chain</p>
+             * <p>Fact-checking</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -577,7 +591,10 @@ public class UpdateEvaluatorRequest extends Request {
             }
 
             /**
-             * enable.
+             * <p>Specifies whether to enable the skill. Default value: true.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -585,7 +602,10 @@ public class UpdateEvaluatorRequest extends Request {
             }
 
             /**
-             * files.
+             * <p>The complete list of files for the skill, which must include SKILL.md in the root directory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;name&quot;:&quot;SKILL.md&quot;,&quot;content&quot;:&quot;---\nname: fact-check\ndescription: Verify factual basis in responses\n---\nVerify the facts in the response item by item and list the basis.&quot;}]</p>
              */
             public Builder files(java.util.List<Files> files) {
                 this.files = files;
@@ -593,7 +613,10 @@ public class UpdateEvaluatorRequest extends Request {
             }
 
             /**
-             * skillName.
+             * <p>The name of the skill, which must be unique in the list of skills submitted in this request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fact-check</p>
              */
             public Builder skillName(String skillName) {
                 this.skillName = skillName;

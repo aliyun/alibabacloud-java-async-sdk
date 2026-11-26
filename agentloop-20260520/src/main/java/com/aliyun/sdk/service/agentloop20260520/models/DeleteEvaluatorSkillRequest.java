@@ -104,7 +104,7 @@ public class DeleteEvaluatorSkillRequest extends Request {
         } 
 
         /**
-         * <p>The evaluator name.</p>
+         * <p>The name of the evaluator.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -117,7 +117,7 @@ public class DeleteEvaluatorSkillRequest extends Request {
         }
 
         /**
-         * <p>The skill name.</p>
+         * <p>The name of the skill.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -130,7 +130,7 @@ public class DeleteEvaluatorSkillRequest extends Request {
         }
 
         /**
-         * <p>The AgentSpace name.</p>
+         * <p>The name of the AgentSpace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -143,7 +143,10 @@ public class DeleteEvaluatorSkillRequest extends Request {
         }
 
         /**
-         * evaluatorVersion.
+         * <p>The target evaluator version for deleting the skill. If omitted, the latestVersion of the evaluator is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v2</p>
          */
         public Builder evaluatorVersion(String evaluatorVersion) {
             this.putQueryParameter("evaluatorVersion", evaluatorVersion);

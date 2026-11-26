@@ -30,6 +30,10 @@ public class ListPipelinesRequest extends Request {
     private String nextToken;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("pipelineKind")
+    private String pipelineKind;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("pipelineName")
     private String pipelineName;
 
@@ -50,6 +54,7 @@ public class ListPipelinesRequest extends Request {
         this.agentSpace = builder.agentSpace;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
+        this.pipelineKind = builder.pipelineKind;
         this.pipelineName = builder.pipelineName;
         this.scheduleStatus = builder.scheduleStatus;
         this.scheduleType = builder.scheduleType;
@@ -91,6 +96,13 @@ public class ListPipelinesRequest extends Request {
     }
 
     /**
+     * @return pipelineKind
+     */
+    public String getPipelineKind() {
+        return this.pipelineKind;
+    }
+
+    /**
      * @return pipelineName
      */
     public String getPipelineName() {
@@ -122,6 +134,7 @@ public class ListPipelinesRequest extends Request {
         private String agentSpace; 
         private Integer maxResults; 
         private String nextToken; 
+        private String pipelineKind; 
         private String pipelineName; 
         private String scheduleStatus; 
         private String scheduleType; 
@@ -136,6 +149,7 @@ public class ListPipelinesRequest extends Request {
             this.agentSpace = request.agentSpace;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
+            this.pipelineKind = request.pipelineKind;
             this.pipelineName = request.pipelineName;
             this.scheduleStatus = request.scheduleStatus;
             this.scheduleType = request.scheduleType;
@@ -143,7 +157,7 @@ public class ListPipelinesRequest extends Request {
         } 
 
         /**
-         * <p>The name of the AgentSpace whose pipelines you want to list.</p>
+         * <p>The name of the AgentSpace. Specify this parameter to list the pipelines under the AgentSpace.</p>
          * 
          * <strong>example:</strong>
          * <p>my-agent-space</p>
@@ -167,7 +181,7 @@ public class ListPipelinesRequest extends Request {
         }
 
         /**
-         * <p>The pagination token. Pass the nextToken value from the previous response to retrieve the next page of results. Do not specify this parameter for the first request.</p>
+         * <p>The pagination token. Pass the nextToken value from the previous response to retrieve the next page. Do not specify this parameter for the first request.</p>
          * 
          * <strong>example:</strong>
          * <p>MTIzNDU2Nzg5MA==</p>
@@ -179,7 +193,24 @@ public class ListPipelinesRequest extends Request {
         }
 
         /**
-         * <p>The name of the pipeline. Supports exact matching. If not specified, the results are not filtered by pipeline name.</p>
+         * <p>The type of the pipeline. Valid values:</p>
+         * <ul>
+         * <li>PROCESSING: Data processing.</li>
+         * <li>ORCHESTRATION: Orchestration task.
+         * Default value: PROCESSING.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ORCHESTRATION</p>
+         */
+        public Builder pipelineKind(String pipelineKind) {
+            this.putQueryParameter("pipelineKind", pipelineKind);
+            this.pipelineKind = pipelineKind;
+            return this;
+        }
+
+        /**
+         * <p>The name of the pipeline for exact match filtering. If you do not specify this parameter, no filtering is applied.</p>
          * 
          * <strong>example:</strong>
          * <p>my-pipeline</p>
@@ -191,7 +222,14 @@ public class ListPipelinesRequest extends Request {
         }
 
         /**
-         * <p>The schedule status. Valid values: None (no schedule), Active (active), Paused (paused), and Terminated (terminated). If not specified, the results are not filtered by schedule status.</p>
+         * <p>The schedule status of the pipeline. Valid values:</p>
+         * <ul>
+         * <li>None: No schedule.</li>
+         * <li>Active: Active.</li>
+         * <li>Paused: Paused.</li>
+         * <li>Terminated: Terminated.
+         * If you do not specify this parameter, no filtering is applied.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Active</p>
@@ -203,7 +241,13 @@ public class ListPipelinesRequest extends Request {
         }
 
         /**
-         * <p>The schedule type. Valid values: RunOnce (single execution), Scheduled (periodic scheduling), and Continuous (continuous execution driven by trace source signals). If not specified, the results are not filtered by schedule type.</p>
+         * <p>The schedule type of the pipeline. Valid values:</p>
+         * <ul>
+         * <li>RunOnce: Single execution.</li>
+         * <li>Scheduled: Periodic scheduling.</li>
+         * <li>Continuous: Continuous execution driven by trace source signals.
+         * If you do not specify this parameter, no filtering is applied.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>RunOnce</p>
@@ -215,7 +259,7 @@ public class ListPipelinesRequest extends Request {
         }
 
         /**
-         * <p>The name of the output dataset. Supports exact matching and applies to standard sinks, conditional branch sinks, and default sinks. If not specified, the results are not filtered by sink name.</p>
+         * <p>The name of the output dataset for exact match filtering. This matches standard sinks, conditional branch sinks, and default sinks. If you do not specify this parameter, no filtering is applied.</p>
          * 
          * <strong>example:</strong>
          * <p>my-dataset</p>

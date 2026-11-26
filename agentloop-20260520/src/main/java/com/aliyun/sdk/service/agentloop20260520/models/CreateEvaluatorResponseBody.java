@@ -80,7 +80,7 @@ public class CreateEvaluatorResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The evaluator name.</p>
+         * <p>The name of the evaluator.</p>
          * 
          * <strong>example:</strong>
          * <p>trace_task_completion</p>
@@ -102,7 +102,7 @@ public class CreateEvaluatorResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The version number that is created.</p>
+         * <p>The created version number.</p>
          * 
          * <strong>example:</strong>
          * <p>1.0.0</p>

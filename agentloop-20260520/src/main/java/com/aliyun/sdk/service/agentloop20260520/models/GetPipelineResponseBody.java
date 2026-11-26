@@ -29,11 +29,20 @@ public class GetPipelineResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("executePolicy")
     private ExecutePolicy executePolicy;
 
+    @com.aliyun.core.annotation.NameInMap("lastRunId")
+    private String lastRunId;
+
+    @com.aliyun.core.annotation.NameInMap("lastRunStatus")
+    private String lastRunStatus;
+
     @com.aliyun.core.annotation.NameInMap("nextTriggerTime")
     private Long nextTriggerTime;
 
     @com.aliyun.core.annotation.NameInMap("pipeline")
     private Pipeline pipeline;
+
+    @com.aliyun.core.annotation.NameInMap("pipelineKind")
+    private String pipelineKind;
 
     @com.aliyun.core.annotation.NameInMap("pipelineName")
     private String pipelineName;
@@ -59,6 +68,9 @@ public class GetPipelineResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("updateTime")
     private String updateTime;
 
+    @com.aliyun.core.annotation.NameInMap("version")
+    private Integer version;
+
     @com.aliyun.core.annotation.NameInMap("workspace")
     private String workspace;
 
@@ -67,8 +79,11 @@ public class GetPipelineResponseBody extends TeaModel {
         this.createTime = builder.createTime;
         this.description = builder.description;
         this.executePolicy = builder.executePolicy;
+        this.lastRunId = builder.lastRunId;
+        this.lastRunStatus = builder.lastRunStatus;
         this.nextTriggerTime = builder.nextTriggerTime;
         this.pipeline = builder.pipeline;
+        this.pipelineKind = builder.pipelineKind;
         this.pipelineName = builder.pipelineName;
         this.regionId = builder.regionId;
         this.requestId = builder.requestId;
@@ -77,6 +92,7 @@ public class GetPipelineResponseBody extends TeaModel {
         this.sink = builder.sink;
         this.source = builder.source;
         this.updateTime = builder.updateTime;
+        this.version = builder.version;
         this.workspace = builder.workspace;
     }
 
@@ -121,6 +137,20 @@ public class GetPipelineResponseBody extends TeaModel {
     }
 
     /**
+     * @return lastRunId
+     */
+    public String getLastRunId() {
+        return this.lastRunId;
+    }
+
+    /**
+     * @return lastRunStatus
+     */
+    public String getLastRunStatus() {
+        return this.lastRunStatus;
+    }
+
+    /**
      * @return nextTriggerTime
      */
     public Long getNextTriggerTime() {
@@ -132,6 +162,13 @@ public class GetPipelineResponseBody extends TeaModel {
      */
     public Pipeline getPipeline() {
         return this.pipeline;
+    }
+
+    /**
+     * @return pipelineKind
+     */
+    public String getPipelineKind() {
+        return this.pipelineKind;
     }
 
     /**
@@ -191,6 +228,13 @@ public class GetPipelineResponseBody extends TeaModel {
     }
 
     /**
+     * @return version
+     */
+    public Integer getVersion() {
+        return this.version;
+    }
+
+    /**
      * @return workspace
      */
     public String getWorkspace() {
@@ -202,8 +246,11 @@ public class GetPipelineResponseBody extends TeaModel {
         private String createTime; 
         private String description; 
         private ExecutePolicy executePolicy; 
+        private String lastRunId; 
+        private String lastRunStatus; 
         private Long nextTriggerTime; 
         private Pipeline pipeline; 
+        private String pipelineKind; 
         private String pipelineName; 
         private String regionId; 
         private String requestId; 
@@ -212,6 +259,7 @@ public class GetPipelineResponseBody extends TeaModel {
         private Sink sink; 
         private Source source; 
         private String updateTime; 
+        private Integer version; 
         private String workspace; 
 
         private Builder() {
@@ -222,8 +270,11 @@ public class GetPipelineResponseBody extends TeaModel {
             this.createTime = model.createTime;
             this.description = model.description;
             this.executePolicy = model.executePolicy;
+            this.lastRunId = model.lastRunId;
+            this.lastRunStatus = model.lastRunStatus;
             this.nextTriggerTime = model.nextTriggerTime;
             this.pipeline = model.pipeline;
+            this.pipelineKind = model.pipelineKind;
             this.pipelineName = model.pipelineName;
             this.regionId = model.regionId;
             this.requestId = model.requestId;
@@ -232,6 +283,7 @@ public class GetPipelineResponseBody extends TeaModel {
             this.sink = model.sink;
             this.source = model.source;
             this.updateTime = model.updateTime;
+            this.version = model.version;
             this.workspace = model.workspace;
         } 
 
@@ -247,7 +299,7 @@ public class GetPipelineResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The pipeline creation time in ISO 8601 UTC format.</p>
+         * <p>The time when the pipeline was created, in ISO 8601 UTC format.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
          * 
          * <strong>example:</strong>
@@ -270,7 +322,7 @@ public class GetPipelineResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The execution policy.</p>
+         * <p>The scheduling method.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;mode&quot;:&quot;RunOnce&quot;,&quot;runOnce&quot;:{&quot;fromTime&quot;:1735660800,&quot;toTime&quot;:1735664400}}</p>
@@ -281,7 +333,29 @@ public class GetPipelineResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The next scheduling trigger time in UNIX seconds.</p>
+         * <p>The ID of the last run.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>run-20260101-0001</p>
+         */
+        public Builder lastRunId(String lastRunId) {
+            this.lastRunId = lastRunId;
+            return this;
+        }
+
+        /**
+         * <p>The status of the last run.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
+         */
+        public Builder lastRunStatus(String lastRunStatus) {
+            this.lastRunStatus = lastRunStatus;
+            return this;
+        }
+
+        /**
+         * <p>The next schedule trigger time in UNIX seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1735661100</p>
@@ -292,13 +366,24 @@ public class GetPipelineResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The pipeline configuration for node orchestration.</p>
+         * <p>The pipeline configuration, which defines the node orchestration.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;nodes&quot;:[{&quot;id&quot;:&quot;select-fields&quot;,&quot;type&quot;:&quot;project&quot;,&quot;parameters&quot;:{&quot;question&quot;:&quot;user_query&quot;}}]}</p>
          */
         public Builder pipeline(Pipeline pipeline) {
             this.pipeline = pipeline;
+            return this;
+        }
+
+        /**
+         * <p>The pipeline type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ORCHESTRATION</p>
+         */
+        public Builder pipelineKind(String pipelineKind) {
+            this.pipelineKind = pipelineKind;
             return this;
         }
 
@@ -325,7 +410,7 @@ public class GetPipelineResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID used to locate the request during troubleshooting.</p>
+         * <p>The request ID, which is used to locate the request when troubleshooting issues.</p>
          * 
          * <strong>example:</strong>
          * <p>9ACFB10A-1B2C-3D4E-5F6G-7H8I9J0K1L2M</p>
@@ -336,7 +421,7 @@ public class GetPipelineResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The scheduling status. Valid values: None (no scheduling), Active (active), Paused (paused), and Terminated (terminated).</p>
+         * <p>The schedule status. Valid values: None (no schedule), Active (active), Paused (paused), and Terminated (terminated).</p>
          * 
          * <strong>example:</strong>
          * <p>Active</p>
@@ -347,7 +432,7 @@ public class GetPipelineResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The scheduling type. Valid values: RunOnce (single execution), Scheduled (periodic scheduling), and Continuous (continuous execution driven by trace source signals).</p>
+         * <p>The schedule type. Valid values: RunOnce (single execution), Scheduled (periodic scheduling), and Continuous (continuous execution, driven by trace source signals).</p>
          * 
          * <strong>example:</strong>
          * <p>RunOnce</p>
@@ -358,7 +443,7 @@ public class GetPipelineResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The pipeline sink, which is the destination for data writing.</p>
+         * <p>The pipeline sink, which specifies the data write destination.</p>
          */
         public Builder sink(Sink sink) {
             this.sink = sink;
@@ -377,7 +462,7 @@ public class GetPipelineResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The last update time of the pipeline, in ISO 8601 UTC format.</p>
+         * <p>The time when the pipeline was last updated, in ISO 8601 UTC format.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
          * 
          * <strong>example:</strong>
@@ -385,6 +470,17 @@ public class GetPipelineResponseBody extends TeaModel {
          */
         public Builder updateTime(String updateTime) {
             this.updateTime = updateTime;
+            return this;
+        }
+
+        /**
+         * <p>The pipeline configuration version number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        public Builder version(Integer version) {
+            this.version = version;
             return this;
         }
 
@@ -445,7 +541,7 @@ public class GetPipelineResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The bootstrap start time in UNIX seconds. It has the same precision as runOnce.fromTime or scheduled.fromTime. Millisecond values greater than or equal to 1e12 are automatically converted. The cursor starts from this time aligned to the grid and catches up window by window. After catching up, it switches to minute intervals. By default, it starts from the current time and processes only incremental data.</p>
+             * <p>The bootstrap history start time as a UNIX timestamp in seconds. It shares the same precision as runOnce/scheduled.fromTime. Millisecond values greater than or equal to 1e12 are automatically converted. The cursor starts from this time aligned to the grid and catches up window by window. After catching up, it switches to minute intervals. By default, it starts from the current time and processes only incremental data.</p>
              * 
              * <strong>example:</strong>
              * <p>1735660800</p>
@@ -515,7 +611,7 @@ public class GetPipelineResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The start time of the data processing window in UNIX seconds. The value must be less than the toTime value.</p>
+             * <p>The start time of the data processing window in UNIX seconds. The value must be less than toTime.</p>
              * 
              * <strong>example:</strong>
              * <p>1735660800</p>
@@ -526,7 +622,7 @@ public class GetPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The end time of the data processing window in UNIX seconds. The value must be greater than the fromTime value.</p>
+             * <p>The end time of the data processing window in UNIX seconds. The value must be greater than fromTime.</p>
              * 
              * <strong>example:</strong>
              * <p>1735747200</p>
@@ -596,7 +692,7 @@ public class GetPipelineResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The scheduling start time in UNIX seconds. It has the same precision as runOnce.fromTime. Millisecond values greater than or equal to 1e12 are automatically converted.</p>
+             * <p>The scheduling start time as a UNIX timestamp in seconds. It shares the same precision as runOnce.fromTime. Millisecond values greater than or equal to 1e12 are automatically converted.</p>
              * 
              * <strong>example:</strong>
              * <p>1735660800</p>
@@ -703,7 +799,7 @@ public class GetPipelineResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The continuous execution configuration. It is used when the type is trace, and the processing frequency is a fixed value managed by the server.</p>
+             * <p>The continuous execution configuration. This is used when type is set to trace. The processing frequency is a fixed value managed by the server.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;fromTime&quot;:1735660800}</p>
@@ -714,7 +810,7 @@ public class GetPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The scheduling mode. Valid values: RunOnce (single execution), Scheduled (periodic execution), and Continuous (continuous execution, only for trace data sources; the processing frequency is a fixed value managed by the server, and automatic processing occurs at minute intervals after trace completion).</p>
+             * <p>The scheduling mode. Valid values: RunOnce (single execution), Scheduled (periodic execution), and Continuous (continuous execution, applicable only to trace data sources; the processing frequency is a fixed value managed by the server, and processing automatically occurs at minute intervals after trace completion).</p>
              * 
              * <strong>example:</strong>
              * <p>scheduled</p>
@@ -725,7 +821,7 @@ public class GetPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The single execution configuration. This parameter is required only when the mode is RunOnce.</p>
+             * <p>The single execution configuration. This parameter is required only when mode is set to RunOnce.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;fromTime&quot;:1735660800,&quot;toTime&quot;:1735664400}</p>
@@ -736,7 +832,7 @@ public class GetPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The periodic scheduling configuration. This parameter is required only when the mode is Scheduled.</p>
+             * <p>The periodic scheduling configuration. This parameter is required only when mode is set to Scheduled.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;interval&quot;:&quot;1h&quot;,&quot;fromTime&quot;:1735660800}</p>
@@ -830,7 +926,7 @@ public class GetPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The node parameters in a key-value structure. The parameters vary based on the node type.</p>
+             * <p>The node parameters. It uses a key-value structure and varies depending on the node type.</p>
              */
             public Builder parameters(java.util.Map<String, ?> parameters) {
                 this.parameters = parameters;
@@ -1205,7 +1301,7 @@ public class GetPipelineResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The routing destination dataset.</p>
+             * <p>The route destination dataset.</p>
              */
             public Builder dataset(SinkDataset dataset) {
                 this.dataset = dataset;
@@ -1213,7 +1309,7 @@ public class GetPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The routing destination type. Currently, only dataset is supported.</p>
+             * <p>The route destination type. Currently, only dataset is supported.</p>
              * 
              * <strong>example:</strong>
              * <p>dataset</p>
@@ -1320,7 +1416,7 @@ public class GetPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The routing write destination.</p>
+             * <p>The route write destination.</p>
              */
             public Builder sink(RoutesSink sink) {
                 this.sink = sink;
@@ -1419,7 +1515,7 @@ public class GetPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of conditional routes.</p>
+             * <p>The conditional route list.</p>
              */
             public Builder routes(java.util.List<Routes> routes) {
                 this.routes = routes;
@@ -1580,7 +1676,7 @@ public class GetPipelineResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The conditional routing configuration. This configuration is used only when the sink.type is condition.</p>
+             * <p>The conditional routing configuration. This parameter is used only when the sink type is condition.</p>
              */
             public Builder condition(Condition condition) {
                 this.condition = condition;
@@ -1588,7 +1684,7 @@ public class GetPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The destination dataset configuration for the dataset sink. This is used only when sink.type is set to dataset.</p>
+             * <p>The destination dataset configuration for the dataset sink. This parameter is used only when the sink type is dataset.</p>
              */
             public Builder dataset(GetPipelineResponseBodySinkDataset dataset) {
                 this.dataset = dataset;
@@ -1596,7 +1692,7 @@ public class GetPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The destination type. Valid values: dataset and condition.</p>
+             * <p>The sink type. Valid values: dataset and condition.</p>
              * 
              * <strong>example:</strong>
              * <p>condition</p>
@@ -1747,7 +1843,7 @@ public class GetPipelineResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of the field.</p>
+             * <p>The field name.</p>
              * 
              * <strong>example:</strong>
              * <p>question</p>
@@ -1863,7 +1959,7 @@ public class GetPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The data filtered query statement (SLS query and analysis syntax).</p>
+             * <p>The filtered query statement, which uses the SLS query and analysis syntax.</p>
              * 
              * <strong>example:</strong>
              * <ul>
@@ -1935,7 +2031,7 @@ public class GetPipelineResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The enrichment column list. This is retained for compatibility. The current implementation outputs a single fixed column agent_trajectory, and this parameter no longer affects the output.</p>
+             * <p>The list of enrichment columns. This parameter is retained for compatibility. The current implementation outputs a single fixed column named agent_trajectory, and this parameter no longer affects the output.</p>
              * 
              * <strong>example:</strong>
              * <p>[&quot;input&quot;,&quot;output&quot;,&quot;session_id&quot;]</p>
@@ -1946,7 +2042,7 @@ public class GetPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether trajectory enrichment is enabled.</p>
+             * <p>Specifies whether to enable trace enrichment.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -2003,7 +2099,7 @@ public class GetPipelineResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The trajectory enrichment. It mounts trajectory data into the scrubbing results by trace_id. When writing to a dataset, the data is stored in the fixed column agent_trajectory, where the column value is the trajectory JSON content.</p>
+             * <p>The trace enrichment configuration. It mounts trace data into the cleaning result by trace_id. When writing to a dataset, it uses the fixed column agent_trajectory to store the data, where the column value is the trace JSON content.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;enabled&quot;:true,&quot;columns&quot;:[&quot;input&quot;,&quot;output&quot;]}</p>
@@ -2112,7 +2208,7 @@ public class GetPipelineResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The dataset datasource config in the current AgentSpace.</p>
+             * <p>The dataset datasource config under the current AgentSpace.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;dataset&quot;:&quot;my-dataset&quot;,&quot;filter&quot;:&quot;status = &quot;pending&quot;&quot;}</p>
@@ -2123,7 +2219,7 @@ public class GetPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The input fields and field types. This applies to all data source types.</p>
+             * <p>The input fields and their data types, applicable to all data source types.</p>
              * 
              * <strong>example:</strong>
              * <p>[{&quot;name&quot;:&quot;question&quot;,&quot;type&quot;:&quot;text&quot;}]</p>
@@ -2145,7 +2241,7 @@ public class GetPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The trajectory data configuration. This is optional and takes effect only when the type is set to trace. It retrieves ATIF standard trajectory data from the trajectory scrubbing service and extends it by feature.</p>
+             * <p>The trace data configuration. This parameter is optional and takes effect only when the type is trace. It retrieves ATIF standard trace data from the trace cleaning service and extends it by feature.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;enrich&quot;:{&quot;enabled&quot;:true,&quot;columns&quot;:[&quot;input&quot;,&quot;output&quot;]}}</p>
@@ -2156,7 +2252,7 @@ public class GetPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The data source type. Valid values: logstore, dataset, and trace. The trace value indicates a trajectory signal-driven processing mode. The validity of the enum is verified by the server.</p>
+             * <p>The data source type. Valid values: logstore, dataset, and trace. The trace value indicates the trace signal-driven processing mode. The server validates the enum values.</p>
              * 
              * <strong>example:</strong>
              * <p>dataset</p>

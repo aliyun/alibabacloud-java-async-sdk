@@ -186,7 +186,10 @@ public class GetEvaluatorResponseBody extends TeaModel {
             } 
 
             /**
-             * currentVersion.
+             * <p>The skill revision number used by this evaluator version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1770386951147366810</p>
              */
             public Builder currentVersion(String currentVersion) {
                 this.currentVersion = currentVersion;
@@ -194,7 +197,10 @@ public class GetEvaluatorResponseBody extends TeaModel {
             }
 
             /**
-             * description.
+             * <p>The description of the skill purpose.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Verify the factual basis in the response</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -202,7 +208,10 @@ public class GetEvaluatorResponseBody extends TeaModel {
             }
 
             /**
-             * displayName.
+             * <p>The display name of the skill.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Fact-checking</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -210,7 +219,10 @@ public class GetEvaluatorResponseBody extends TeaModel {
             }
 
             /**
-             * enable.
+             * <p>Indicates whether the skill is enabled in the queried evaluator version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -218,7 +230,10 @@ public class GetEvaluatorResponseBody extends TeaModel {
             }
 
             /**
-             * skillName.
+             * <p>The skill name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fact-check</p>
              */
             public Builder skillName(String skillName) {
                 this.skillName = skillName;
@@ -337,7 +352,7 @@ public class GetEvaluatorResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The version creation time, in seconds-level UNIX timestamp.</p>
+             * <p>The time when the version was created. The value is a UNIX timestamp in seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1782816000</p>
@@ -348,7 +363,10 @@ public class GetEvaluatorResponseBody extends TeaModel {
             }
 
             /**
-             * selectable.
+             * <p>Indicates whether this version can be selected when creating an evaluation task or an experiment plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder selectable(Boolean selectable) {
                 this.selectable = selectable;
@@ -356,7 +374,10 @@ public class GetEvaluatorResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * <p>The version status. DRAFT indicates a draft. PUBLISHED indicates that the version is published. OFFLINE indicates that the version is offline.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PUBLISHED</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -364,7 +385,10 @@ public class GetEvaluatorResponseBody extends TeaModel {
             }
 
             /**
-             * updatedAt.
+             * <p>The time when the version was last updated. The value is a UNIX timestamp in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1795478400</p>
              */
             public Builder updatedAt(Long updatedAt) {
                 this.updatedAt = updatedAt;
@@ -659,7 +683,7 @@ public class GetEvaluatorResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of annotations.</p>
+             * <p>The list of annotation tags.</p>
              * 
              * <strong>example:</strong>
              * <p>[&quot;__en&quot;]</p>
@@ -670,10 +694,10 @@ public class GetEvaluatorResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The configuration of the current version.</p>
+             * <p>The current version configuration.</p>
              * 
              * <strong>example:</strong>
-             * <p>{&quot;prompt&quot;:&quot;Please evaluate the task completion&quot;}</p>
+             * <p>{&quot;prompt&quot;:&quot;Evaluate the task completion&quot;}</p>
              */
             public Builder config(java.util.Map<String, ?> config) {
                 this.config = config;
@@ -681,7 +705,7 @@ public class GetEvaluatorResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time, in seconds-level UNIX timestamp.</p>
+             * <p>The creation time. The value is a UNIX timestamp in seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1782816000</p>
@@ -692,7 +716,7 @@ public class GetEvaluatorResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version number returned in the current response.</p>
+             * <p>The current version number.</p>
              * 
              * <strong>example:</strong>
              * <p>1.0.0</p>
@@ -706,7 +730,7 @@ public class GetEvaluatorResponseBody extends TeaModel {
              * <p>The evaluator description.</p>
              * 
              * <strong>example:</strong>
-             * <p>Determines whether the Agent has completed the user task</p>
+             * <p>Determines whether the agent completed the user task</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -717,7 +741,7 @@ public class GetEvaluatorResponseBody extends TeaModel {
              * <p>The display name.</p>
              * 
              * <strong>example:</strong>
-             * <p>Trace task completion</p>
+             * <p>Workflow task completion</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -769,7 +793,10 @@ public class GetEvaluatorResponseBody extends TeaModel {
             }
 
             /**
-             * selectable.
+             * <p>Indicates whether this version can be selected when creating an evaluation task or an experiment plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder selectable(Boolean selectable) {
                 this.selectable = selectable;
@@ -777,7 +804,10 @@ public class GetEvaluatorResponseBody extends TeaModel {
             }
 
             /**
-             * skills.
+             * <p>The list of business skill summaries for the queried evaluator version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;skillName&quot;:&quot;fact-check&quot;,&quot;displayName&quot;:&quot;Fact-checking&quot;,&quot;description&quot;:&quot;Verify the factual basis in the response&quot;,&quot;enable&quot;:true,&quot;currentVersion&quot;:&quot;1770386951147366810&quot;}]</p>
              */
             public Builder skills(java.util.List<Skills> skills) {
                 this.skills = skills;
@@ -785,7 +815,10 @@ public class GetEvaluatorResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * <p>The version status. DRAFT indicates a draft. PUBLISHED indicates that the version is published. OFFLINE indicates that the version is offline.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PUBLISHED</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -804,7 +837,7 @@ public class GetEvaluatorResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The update time, in seconds-level UNIX timestamp.</p>
+             * <p>The update time. The value is a UNIX timestamp in seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1782816600</p>
