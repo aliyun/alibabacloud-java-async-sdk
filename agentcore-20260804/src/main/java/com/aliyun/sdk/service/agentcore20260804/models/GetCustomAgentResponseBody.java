@@ -3670,7 +3670,7 @@ public class GetCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the agent\&quot;s purpose.</p>
+             * <p>The description of the agent&quot;s purpose.</p>
              * 
              * <strong>example:</strong>
              * <p>Custom agent for providing conversation services</p>

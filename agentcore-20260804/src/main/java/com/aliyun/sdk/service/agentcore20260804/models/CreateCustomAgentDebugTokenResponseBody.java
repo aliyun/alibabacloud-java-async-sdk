@@ -119,7 +119,7 @@ public class CreateCustomAgentDebugTokenResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The business status code. SUCCESS is returned if the call is successful.</p>
+         * <p>The business status code. SUCCESS is returned if the call succeeds.</p>
          * 
          * <strong>example:</strong>
          * <p>SUCCESS</p>
@@ -130,7 +130,7 @@ public class CreateCustomAgentDebugTokenResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The debug token issued in this request, the token fingerprint, and the corresponding resource and network information.</p>
+         * <p>The debugging token, token fingerprint, and the corresponding resource and network information issued in this request.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -149,7 +149,7 @@ public class CreateCustomAgentDebugTokenResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The description of the request processing result.</p>
+         * <p>The description of the request result.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -160,7 +160,7 @@ public class CreateCustomAgentDebugTokenResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The unique identifier of the request, which can be used for troubleshooting.</p>
+         * <p>The unique identifier of the request. You can use the ID to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>F2B17684-703A-4F29-9D14-30C334A85162</p>
@@ -171,7 +171,7 @@ public class CreateCustomAgentDebugTokenResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request is successful. A value of true indicates success. A value of false indicates failure.</p>
+         * <p>Indicates whether the request was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -301,7 +301,7 @@ public class CreateCustomAgentDebugTokenResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The network type used for the token, which is the same as the networkType parameter in the request.</p>
+             * <p>The network type used by the token, which is the same as the networkType parameter in the request.</p>
              * 
              * <strong>example:</strong>
              * <p>INTERNET</p>
@@ -312,7 +312,7 @@ public class CreateCustomAgentDebugTokenResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The fingerprint used to identify the issued token, which can be used to troubleshoot issuance records.</p>
+             * <p>The fingerprint used to identify the issued token. You can use the fingerprint to troubleshoot issuance records.</p>
              * 
              * <strong>example:</strong>
              * <p>c4f5b8813a0d</p>

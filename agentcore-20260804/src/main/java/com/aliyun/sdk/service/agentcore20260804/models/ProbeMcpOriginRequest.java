@@ -89,7 +89,7 @@ public class ProbeMcpOriginRequest extends Request {
         } 
 
         /**
-         * <p>The workspace to which the probe permissions, region, and network context belong.</p>
+         * <p>The workspace that owns the probe permissions, region, and network context.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -111,7 +111,7 @@ public class ProbeMcpOriginRequest extends Request {
         }
 
         /**
-         * <p>The scope of the origin server configuration must not exceed that of the creation interface. The control fields for this validation only restrict the validation scope and do not extend the origin server access configuration.</p>
+         * <p>The scope of the origin server configuration does not exceed that of the creation API. The control fields for this validation only restrict the validation scope and do not extend the origin server onboarding configuration.</p>
          * <p>This parameter is required.</p>
          */
         public Builder body(ProbeMcpOriginRequestBody body) {
@@ -436,7 +436,7 @@ public class ProbeMcpOriginRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to enable the configuration.</p>
+             * <p>Specifies whether to enable this configuration.</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -444,7 +444,7 @@ public class ProbeMcpOriginRequest extends Request {
             }
 
             /**
-             * <p>The list of backend authentication configurations for HTTP-to-MCP.</p>
+             * <p>The list of backend authentication configurations for HTTP to MCP.</p>
              */
             public Builder httpToMcp(java.util.List<HttpToMcp> httpToMcp) {
                 this.httpToMcp = httpToMcp;
@@ -539,7 +539,7 @@ public class ProbeMcpOriginRequest extends Request {
             } 
 
             /**
-             * <p>A single HTTP(S) URL that reuses the addresses of the origin server used during creation. Embedded credentials, batch addresses, or protected targets are not accepted.</p>
+             * <p>A single HTTP(S) URL that reuses the addresses of the origin server from the creation API. Embedded credentials, multiple addresses, or protected targets are not accepted.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -551,7 +551,7 @@ public class ProbeMcpOriginRequest extends Request {
             }
 
             /**
-             * <p>Reuses the enabled, directProxy, and httpToMcp origin server authentication fields and validations from the creation interface. When enabled is set to true, you must provide a configuration that matches the access type. codePackage or additional headers are not accepted.</p>
+             * <p>Reuses the enabled, directProxy, and httpToMcp origin server authentication fields and validations from the creation API. If enabled is set to true, you must provide a configuration that matches the access type. codePackage or additional headers are not accepted.</p>
              */
             public Builder auth(Auth auth) {
                 this.auth = auth;
@@ -559,7 +559,7 @@ public class ProbeMcpOriginRequest extends Request {
             }
 
             /**
-             * <p>Applicable only to HTTP. Reuses the JSON or YAML string semantics from the creation interface. This field is required when validating the definition. Remote documents or references are not automatically fetched.</p>
+             * <p>Used only for HTTP. Reuses the JSON or YAML string semantics from the creation API. This field is required when validating the definition. Remote documents or references are not automatically fetched.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;openapi&quot;:&quot;3.0.3&quot;,&quot;info&quot;:{&quot;title&quot;:&quot;Inventory API&quot;,&quot;version&quot;:&quot;1.0.0&quot;},&quot;paths&quot;:{&quot;/inventory&quot;:{&quot;get&quot;:{&quot;operationId&quot;:&quot;listInventory&quot;,&quot;responses&quot;:{&quot;200&quot;:{&quot;description&quot;:&quot;OK&quot;}}}}}}</p>
@@ -570,7 +570,7 @@ public class ProbeMcpOriginRequest extends Request {
             }
 
             /**
-             * <p>Valid values: DIRECT_PROXY or HTTP_TO_MCP. CODE_PACKAGE is not accepted.</p>
+             * <p>The access type. Valid values: DIRECT_PROXY and HTTP_TO_MCP. CODE_PACKAGE is not supported.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

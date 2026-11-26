@@ -103,7 +103,7 @@ public class CreateCustomAgentDebugTokenRequest extends Request {
         }
 
         /**
-         * <p>The ID of the high-code agent to debug locally.</p>
+         * <p>The ID of the high-code agent to be debugged locally.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,7 +116,7 @@ public class CreateCustomAgentDebugTokenRequest extends Request {
         }
 
         /**
-         * <p>The network type used for local debugging. INTERNET indicates public network access. INTRANET indicates access over a virtual private cloud (VPC).</p>
+         * <p>The network type used for local debugging. INTERNET indicates public network access, and INTRANET indicates access over a virtual private cloud (VPC).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

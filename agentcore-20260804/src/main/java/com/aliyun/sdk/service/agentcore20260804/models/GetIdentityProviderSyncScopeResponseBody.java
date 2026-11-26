@@ -359,7 +359,7 @@ public class GetIdentityProviderSyncScopeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>AllAuthorized: the full authorized scope, which is restricted by the application\&quot;s address book authorization. SelectedDepartments: the selected departments and all their sub-departments. When explicitly submitting syncScope, you must provide a valid mode, which is verified by the backend.</p>
+             * <p>AllAuthorized: the full authorized scope, which is restricted by the application&quot;s address book authorization. SelectedDepartments: the selected departments and all their sub-departments. When explicitly submitting syncScope, you must provide a valid mode, which is verified by the backend.</p>
              * 
              * <strong>example:</strong>
              * <p>SelectedDepartments</p>

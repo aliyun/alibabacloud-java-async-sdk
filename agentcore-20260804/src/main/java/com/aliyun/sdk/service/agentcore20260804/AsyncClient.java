@@ -53,6 +53,24 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
+     * <p>登记资产上传会话，返回 assetId、uploadId 和实际状态；仅有效的 UPLOADING 会话返回限定其 original 对象的限时 PUT 地址。使用 PUT 上传文件二进制，不使用 JSON 或 multipart 包装，本期文件大小为 1 字节至 50 MiB。clientToken 可选；提供时，省略 assetId 将依据租户、工作空间、知识库和 clientToken 稳定派生资产 ID，便于首次响应丢失后的定位。同时省略 assetId 和 clientToken 时，每次请求创建新资产。未提供 clientToken 时按新的上传意图处理，不保证跨请求重试幂等。覆盖已有资产必须设置 overwrite=true；该参数仅授权覆盖，不强制重新导入。提供 clientToken 时，仅对该资产最近一次 Begin 保存的 token 幂等；后续 Begin（包括省略 clientToken 的请求）会替换最近请求标识。命中且规范化请求相同则复用上传会话，参数不同返回 409，包括 sourceETag 不同；token 不命中则按新的上传意图校验和受理，即使该 token 曾用于更早的上传。来源版本去重独立于 clientToken：指定稳定 assetId、overwrite=true 且提供 sourceETag 时，若来源身份及版本、导入参数和有效处理配置均未变化，即使未提供 clientToken，也可复用当前 uploadId 和加工代次；显式提供且命中最近 token 时仍要求完整规范化请求相同。复用有效 UPLOADING 会话时刷新同一对象路径的签名；复用 PENDING、PROCESSING 或 COMPLETED 会话时返回实际状态且不返回上传地址，PENDING 按相同 taskKey 补交调度，来源版本相同不表示处理完成。客户端 token 幂等命中后的失败状态只返回当前状态；新的上传意图遇到 FAILED、上传意图过期或来源、导入参数、有效处理配置变化时创建新的 uploadId、内部对象路径及加工代次。未提供 sourceETag 时不启用来源版本去重，可使用不同 clientToken 或不提供 clientToken，按新的上传意图重新导入；覆盖已有资产仍须 overwrite=true。新结果发布前仍使用旧发布版本。每个会话的原件对象仍必须禁止覆盖，签名头通过 headers 返回。完成 PUT 上传后，使用返回的 assetId 和 uploadId 调用 CompleteAssetUpload。携带 sourceETag 的 Begin 命中当前上传目标时，PENDING 会按相同 taskKey 补交调度，返回 PENDING、PROCESSING 或 COMPLETED 后无需再次上传或确认；显式提供相同 clientToken 且未传 sourceETag 的 PENDING 重放仍须重试 CompleteAssetUpload，以恢复受理结果未知的调度。</p>
+     * 
+     * @param request the request parameters of BeginAssetUpload  BeginAssetUploadRequest
+     * @return BeginAssetUploadResponse
+     */
+    CompletableFuture<BeginAssetUploadResponse> beginAssetUpload(BeginAssetUploadRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Confirms a specified upload session by using the workspaceId, knowledgeBaseId, and assetId in the path and the uploadId in the request body. The server verifies tenant and resource ownership, requires the uploadId to match the current upload session and the upload_epoch to equal the current next_epoch, and then performs a HEAD operation on the bound original object to verify its existence, actual size of 1 byte to 50 MiB, and content type. Using the metadata and chunking configuration saved during acceptance, the server enters the pending state through a CAS operation that includes the upload identity, target generation, UPLOADING status, and deletion marker. Repeatedly confirming the same accepted upload that is still the current target returns the existing status without incrementing the generation or creating a new task. If the scheduling acceptance result is unknown, the server resubmits the task by using the same taskKey. When a subsequent overwrite upload, edit, or rebuild replaces the target, a delayed Complete request returns a status conflict and does not overwrite the new task or resurrect deleted assets. Non-retryable processing failures remain in the FAILED state and are not requeued by the Complete request.</p>
+     * 
+     * @param request the request parameters of CompleteAssetUpload  CompleteAssetUploadRequest
+     * @return CompleteAssetUploadResponse
+     */
+    CompletableFuture<CompleteAssetUploadResponse> completeAssetUpload(CompleteAssetUploadRequest request);
+
+    /**
+     * <b>description</b> :
      * <p>Converts an MCP service installed from a marketplace template to free-edit mode, allowing you to directly modify the service configuration. After the conversion, the original source and tag information are retained, and the editing restrictions of the template are removed. The service will no longer appear on the use case page corresponding to the template.</p>
      * 
      * @param request the request parameters of ConvertMcpToFreeEdit  ConvertMcpToFreeEditRequest
@@ -462,6 +480,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
+     * <p>Creates a knowledge base in a specified workspace of the current tenant, and persistently binds the trusted tenantId and workspaceId. The creation process is asynchronous, and the response returns the resource status. You can query the status and lastError by calling GetKnowledgeBase or ListKnowledgeBases.</p>
+     * 
+     * @param request the request parameters of CreateKnowledgeBase  CreateKnowledgeBaseRequest
+     * @return CreateKnowledgeBaseResponse
+     */
+    CompletableFuture<CreateKnowledgeBaseResponse> createKnowledgeBase(CreateKnowledgeBaseRequest request);
+
+    /**
+     * <b>description</b> :
      * <p>Creates an agent by using a platform-managed runtime framework. This corresponds to the &quot;Managed Harness&quot; creation method in the console, where you can configure the model, instructions, and skills.</p>
      * <h3>Required configurations</h3>
      * <p>Submit <code>name</code>, <code>model</code>, and <code>runtime</code>. The <code>runtime</code> parameter must include both <code>compute</code> and <code>sessionPolicy</code>. The agent is deployed and run by the platform, so you do not need to provide a code package or container image.</p>
@@ -729,6 +756,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
+     * <p>Writes a deletion tombstone for an asset and initiates asynchronous cleanup. The server authenticates the request, verifies tenant and resource ownership, and checks for existing DELETING or DELETED tombstones. Duplicate requests for assets already in the deletion process return the current status without retriggering the deletion. For undeleted assets that are eligible for deletion, the control plane conditionally writes a tombstone. The operation returns the registered processing status, which does not indicate that the physical data cleanup is complete.</p>
+     * 
+     * @param request the request parameters of DeleteAsset  DeleteAssetRequest
+     * @return DeleteAssetResponse
+     */
+    CompletableFuture<DeleteAssetResponse> deleteAsset(DeleteAssetRequest request);
+
+    /**
+     * <b>description</b> :
      * <p>Deletes access credentials that are no longer used in a workspace.
      * If a credential is still bound to an MCP service, dissociate it before deletion.</p>
      * 
@@ -822,6 +858,15 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteImageCacheResponse
      */
     CompletableFuture<DeleteImageCacheResponse> deleteImageCache(DeleteImageCacheRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Asynchronously deletes a knowledge base. Verifies the trusted tenant identity, workspace ownership, and access permissions for the knowledge base. If the resource is already in the DELETING or DELETED state, repeated deletion requests return the current state without re-initiating cleanup. After the deletion is accepted, GetKnowledgeBase indicates that the resource does not exist, and ListKnowledgeBases no longer displays the resource. The system continues to clean up physical data in the background.</p>
+     * 
+     * @param request the request parameters of DeleteKnowledgeBase  DeleteKnowledgeBaseRequest
+     * @return DeleteKnowledgeBaseResponse
+     */
+    CompletableFuture<DeleteKnowledgeBaseResponse> deleteKnowledgeBase(DeleteKnowledgeBaseRequest request);
 
     /**
      * <b>description</b> :
@@ -1186,6 +1231,33 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetAgentVersionResponse
      */
     CompletableFuture<GetAgentVersionResponse> getAgentVersion(GetAgentVersionRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the asset management properties and current processing status. For upload, rebuild, and chunk content editing operations, poll the status of this API until it returns COMPLETED or FAILED. For failure causes, refer to lastError. The publishedResultAvailable field indicates whether the published result is still available. This API does not accept clientToken and does not return receipts for chunkUpdate or historical modifications. If a deletion request is accepted, the API returns a resource not found error.</p>
+     * 
+     * @param request the request parameters of GetAsset  GetAssetRequest
+     * @return GetAssetResponse
+     */
+    CompletableFuture<GetAssetResponse> getAsset(GetAssetRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Returns a time-limited download URL for the published original file of an asset, using a unified OSS public endpoint. Returns a status conflict if the asset is not published during initial processing. The published original file remains downloadable during re-chunking or editing, subject to validation of current permissions, enabled status, and deletion status.</p>
+     * 
+     * @param request the request parameters of GetAssetDownloadUrl  GetAssetDownloadUrlRequest
+     * @return GetAssetDownloadUrlResponse
+     */
+    CompletableFuture<GetAssetDownloadUrlResponse> getAssetDownloadUrl(GetAssetDownloadUrlRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Queries a chunk in the currently published generation based on its 1-based logical sequence number within the asset, and verifies the ownership relationship between the chunk and the asset.</p>
+     * 
+     * @param request the request parameters of GetChunk  GetChunkRequest
+     * @return GetChunkResponse
+     */
+    CompletableFuture<GetChunkResponse> getChunk(GetChunkRequest request);
 
     /**
      * <b>description</b> :
@@ -1634,6 +1706,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
+     * <p>Queries the public information, configuration, and current lifecycle status of a knowledge base in a specified workspace of the current tenant. The status and lastError fields indicate the creation and deletion progress and failure causes.</p>
+     * 
+     * @param request the request parameters of GetKnowledgeBase  GetKnowledgeBaseRequest
+     * @return GetKnowledgeBaseResponse
+     */
+    CompletableFuture<GetKnowledgeBaseResponse> getKnowledgeBase(GetKnowledgeBaseRequest request);
+
+    /**
+     * <b>description</b> :
      * <p>Queries the configuration, skill versions, and running status of a managed Harness agent to view the current configuration and its processing results.</p>
      * <h3>Configuration and running status</h3>
      * <p>This operation returns the latest submitted configuration, which may still be processing. Use the following fields to determine the update progress and running status:</p>
@@ -1962,6 +2043,24 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
+     * <p>Performs a paged query for undeleted assets in a knowledge base based on the file name prefix and processing status. The results are sorted in descending order by the most recent upload time, and then by assetId in descending order for identical upload times. The upload time refers to the acceptance time of the most recent BeginAssetUpload request. It is updated upon overwrite uploads but remains unchanged for replays with the same token or when you deduplicate the source. It does not represent the processing time. The list index is updated asynchronously and may experience brief delays. The totalCount is cached for 60 seconds based on the resource scope and filter conditions, which may result in brief staleness. Stop paging only when nextToken is empty. If the legacy table lacks the upload time column or sorting index, a ServiceUnavailable error is returned. In this case, use a newly created knowledge base.</p>
+     * 
+     * @param request the request parameters of ListAssets  ListAssetsRequest
+     * @return ListAssetsResponse
+     */
+    CompletableFuture<ListAssetsResponse> listAssets(ListAssetsRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Performs a paged query for currently published chunks in a knowledge base. Results can be filtered by asset, keyword, and enabled status. If an assetId is specified, results are sorted by chunkSeq, and the nextToken is attached to the current publish result of the asset. A VersionConflict (409) error is returned if the publish result changes. If no assetId is specified, results are sorted by assetId and chunkSeq, and a full-base snapshot is not guaranteed. The token is always attached to the tenant, workspace, knowledge base, filter conditions, and sorting.</p>
+     * 
+     * @param request the request parameters of ListChunks  ListChunksRequest
+     * @return ListChunksResponse
+     */
+    CompletableFuture<ListChunksResponse> listChunks(ListChunksRequest request);
+
+    /**
+     * <b>description</b> :
      * <p>Queries the official and enterprise models available for the enabled QoderCLI connector.
      * Queries the list of models available for a specified connector. Pagination is supported.</p>
      * 
@@ -2119,6 +2218,15 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListImageCachesResponse
      */
     CompletableFuture<ListImageCachesResponse> listImageCaches(ListImageCachesRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Queries knowledge bases in a specified workspace of the current tenant by using paging. Each returned item includes the status and lastError fields, which can be used to query the creation and deletion progress of knowledge bases and the causes of failures.</p>
+     * 
+     * @param request the request parameters of ListKnowledgeBases  ListKnowledgeBasesRequest
+     * @return ListKnowledgeBasesResponse
+     */
+    CompletableFuture<ListKnowledgeBasesResponse> listKnowledgeBases(ListKnowledgeBasesRequest request);
 
     /**
      * <b>description</b> :
@@ -2426,7 +2534,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Validates a single direct MCP or HTTP origin server before creating an MCP. This operation does not require an MCP resource ID, create resources, or persist probe results. For direct connections, the protocol, transport method, and version are not passed. The server discovers them automatically, prioritizing the validation of the modern protocol and falling back to the legacy protocol only if the modern one is confirmed to be unsupported. The returned backend protocol and transport method can be used for creation configurations and do not limit the external protocol conversion compatibility of the gateway. A direct connection protocol check is still considered SUCCESS even if no capabilities are declared. For HTTP, the operation validates the complete OpenAPI definition and origin server authentication configuration, and sends a HEAD request without business parameters or origin server credentials to the configured address to check connectivity. It does not select or execute business interfaces defined in the specification, nor does it verify whether the credentials are accepted by the origin server. It only accepts origin server configurations supported by the creation interface, does not accept detection-specific headers, and does not execute tools/call. A success response from the interface only indicates that the validation request has been processed. The origin server result is indicated by data.status.</p>
+     * <p>Validates a single direct-connect MCP or HTTP origin server before creating an MCP. This operation does not require an MCP resource ID, create resources, or persist probe results. For direct connections, the protocol, transport method, and version are not provided. The server discovers them automatically, prioritizing the modern protocol and falling back to the legacy protocol only if the modern one is unsupported. The returned backend protocol and transport method can be used for creation configurations and do not limit the protocol conversion compatibility of the gateway. If the direct connection protocol check passes but no capabilities are declared, the status is still SUCCESS. For HTTP, the operation validates the complete OpenAPI definition and origin server authentication configuration. It also sends a HEAD request without business parameters or origin server credentials to the configured address to check connectivity. It does not select or execute business APIs defined in the specification, nor does it verify whether the credentials are accepted by the origin server. It only accepts origin server configurations supported by the creation API, does not accept validation-specific headers, and does not execute tools/call. A success response from the API only indicates that the validation request has been processed. The actual origin server result is indicated by data.status.</p>
      * 
      * @param request the request parameters of ProbeMcpOrigin  ProbeMcpOriginRequest
      * @return ProbeMcpOriginResponse
@@ -2503,6 +2611,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
+     * <p>Executes keyword, vector, or hybrid search on published and authorized results in a specified knowledge base. Search parameters take effect in the order of the current request, knowledge base search configuration, and system default values. Metadata filtering uses a JSON expression tree and does not accept OTS DSL or tenant fields. The actual number of results after filtering and permission verification may be less than topK. The search feature provides eventual consistency, and newly published results become searchable after index synchronization. Reading candidates still verifies the current publish pointer and permissions.</p>
+     * 
+     * @param request the request parameters of SearchKnowledgeBase  SearchKnowledgeBaseRequest
+     * @return SearchKnowledgeBaseResponse
+     */
+    CompletableFuture<SearchKnowledgeBaseResponse> searchKnowledgeBase(SearchKnowledgeBaseRequest request);
+
+    /**
+     * <b>description</b> :
      * <p>Retrieves relevant memories semantically from a long-term memory store (MemoryStore) for an agent to obtain information required for subsequent tasks.</p>
      * 
      * @param request the request parameters of SearchMemories  SearchMemoriesRequest
@@ -2565,6 +2682,33 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateAgentSpecResponse
      */
     CompletableFuture<UpdateAgentSpecResponse> updateAgentSpec(UpdateAgentSpecRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Updates the asset name, enabled status, metadata patch, or asset-level chunking configuration. At least one of these items must be provided in the request. Metadata is incrementally merged, and chunkConfiguration triggers asynchronous rechunking. Changes that affect retrieval projections cause the backend to create a new generation and conditionally publish it. Before publication, previously published results remain readable as long as the asset is not disabled, deleted, or unauthorized, and published results are not modified in place. Processing failures in the current phase are not retried. For assets in the FAILED state, only the name or enabled status can be modified. Submitting metadata or chunkConfiguration returns InvalidAssetState.</p>
+     * 
+     * @param request the request parameters of UpdateAsset  UpdateAssetRequest
+     * @return UpdateAssetResponse
+     */
+    CompletableFuture<UpdateAssetResponse> updateAsset(UpdateAssetRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Updates the content or enabled status of a chunk by its logical sequence number. You must pass back the opaque chunkToken returned by the query operation. When only the enabled status is modified, the system synchronously writes to OTS after reading the currently published result, validating the token, and fixing the target at the beginning of the request. Enabling or disabling is allowed when a published result exists and is not deleted, including the PENDING, PROCESSING, and FAILED states, without waiting for FC. New results published during this process are not followed, rolled back, or appended with post-write version conflicts. New results are not guaranteed to inherit concurrent enable or disable operations. Indexes are synchronized asynchronously, which may cause a brief delay in retrieval. Modifying the content is only allowed when the status is COMPLETED. The system asynchronously computes the target vectors and publishes the complete result. You can call GetAsset to query the current status, lastError, and publishedResultAvailable of the document. Content edits with the same clientToken are idempotently replayed with the original result. An expired token at the beginning of the request returns Chunk.VersionConflict. Execution generations are managed only on the backend.</p>
+     * 
+     * @param request the request parameters of UpdateChunk  UpdateChunkRequest
+     * @return UpdateChunkResponse
+     */
+    CompletableFuture<UpdateChunkResponse> updateChunk(UpdateChunkRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>同步启停同一资产中 1 至 100 个 Chunk。每项必填 chunkSeq、chunkToken、enabled，序号不得重复，不支持正文。请求开始读取当前已发布结果，校验全部令牌后固定目标；已过期令牌整次返回 Chunk.VersionConflict。已有发布结果且未删除即可启停，包括 PENDING、PROCESSING、FAILED，不等待 FC。期间新结果发布不追随、不回滚，也不追加写后版本冲突；新结果不保证继承并发启停。写入允许部分成功，检查 results 和 failedCount。索引异步同步，检索可能短暂延迟。不调用 FC，不需要 clientToken 或轮询。</p>
+     * 
+     * @param request the request parameters of UpdateChunks  UpdateChunksRequest
+     * @return UpdateChunksResponse
+     */
+    CompletableFuture<UpdateChunksResponse> updateChunks(UpdateChunksRequest request);
 
     /**
      * <b>description</b> :
@@ -2945,6 +3089,15 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateIdentityProviderSCIMResponse
      */
     CompletableFuture<UpdateIdentityProviderSCIMResponse> updateIdentityProviderSCIM(UpdateIdentityProviderSCIMRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Updates the name, description, chunking, or search configuration of a knowledge base. The metadataSchema, embeddingModel, and embeddingDimension cannot be modified after creation. The chunking configuration applies only to subsequently uploaded assets and does not implicitly rebuild existing assets.</p>
+     * 
+     * @param request the request parameters of UpdateKnowledgeBase  UpdateKnowledgeBaseRequest
+     * @return UpdateKnowledgeBaseResponse
+     */
+    CompletableFuture<UpdateKnowledgeBaseResponse> updateKnowledgeBase(UpdateKnowledgeBaseRequest request);
 
     /**
      * <b>description</b> :
