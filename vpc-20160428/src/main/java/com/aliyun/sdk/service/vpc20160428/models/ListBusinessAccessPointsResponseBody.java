@@ -336,7 +336,7 @@ public class ListBusinessAccessPointsResponseBody extends TeaModel {
              * <p>The name of the Express Connect circuit access point.</p>
              * 
              * <strong>example:</strong>
-             * <p>杭州-萧山-B</p>
+             * <p>Hangzhou-Xiaoshan-B</p>
              */
             public Builder accessPointName(String accessPointName) {
                 this.accessPointName = accessPointName;

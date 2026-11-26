@@ -330,9 +330,6 @@ public class DescribeExpressConnectTrafficQosQueueResponseBody extends TeaModel 
              * <blockquote>
              * <p>You cannot specify this parameter together with <strong>SrcIPv6Cidr</strong> or <strong>DstIPv6Cidr</strong>.</p>
              * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p><code>1.1.**.**</code>/24</p>
              */
             public Builder dstCidr(String dstCidr) {
                 this.dstCidr = dstCidr;
@@ -538,9 +535,6 @@ public class DescribeExpressConnectTrafficQosQueueResponseBody extends TeaModel 
              * <blockquote>
              * <p>You cannot specify this parameter together with <strong>SrcIPv6Cidr</strong> or <strong>DstIPv6Cidr</strong>.</p>
              * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p><code>1.1.**.**</code>/24</p>
              */
             public Builder srcCidr(String srcCidr) {
                 this.srcCidr = srcCidr;

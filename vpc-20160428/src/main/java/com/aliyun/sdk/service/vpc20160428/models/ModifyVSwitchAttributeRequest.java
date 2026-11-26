@@ -22,6 +22,10 @@ public class ModifyVSwitchAttributeRequest extends Request {
     private String description;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableDns64")
+    private Boolean enableDns64;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EnableIPv6")
     private Boolean enableIPv6;
 
@@ -69,6 +73,7 @@ public class ModifyVSwitchAttributeRequest extends Request {
     private ModifyVSwitchAttributeRequest(Builder builder) {
         super(builder);
         this.description = builder.description;
+        this.enableDns64 = builder.enableDns64;
         this.enableIPv6 = builder.enableIPv6;
         this.ipv6CidrBlock = builder.ipv6CidrBlock;
         this.ipv6CidrMask = builder.ipv6CidrMask;
@@ -100,6 +105,13 @@ public class ModifyVSwitchAttributeRequest extends Request {
      */
     public String getDescription() {
         return this.description;
+    }
+
+    /**
+     * @return enableDns64
+     */
+    public Boolean getEnableDns64() {
+        return this.enableDns64;
     }
 
     /**
@@ -181,6 +193,7 @@ public class ModifyVSwitchAttributeRequest extends Request {
 
     public static final class Builder extends Request.Builder<ModifyVSwitchAttributeRequest, Builder> {
         private String description; 
+        private Boolean enableDns64; 
         private Boolean enableIPv6; 
         private Integer ipv6CidrBlock; 
         private Integer ipv6CidrMask; 
@@ -200,6 +213,7 @@ public class ModifyVSwitchAttributeRequest extends Request {
         private Builder(ModifyVSwitchAttributeRequest request) {
             super(request);
             this.description = request.description;
+            this.enableDns64 = request.enableDns64;
             this.enableIPv6 = request.enableIPv6;
             this.ipv6CidrBlock = request.ipv6CidrBlock;
             this.ipv6CidrMask = request.ipv6CidrMask;
@@ -223,6 +237,15 @@ public class ModifyVSwitchAttributeRequest extends Request {
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
             this.description = description;
+            return this;
+        }
+
+        /**
+         * EnableDns64.
+         */
+        public Builder enableDns64(Boolean enableDns64) {
+            this.putQueryParameter("EnableDns64", enableDns64);
+            this.enableDns64 = enableDns64;
             return this;
         }
 

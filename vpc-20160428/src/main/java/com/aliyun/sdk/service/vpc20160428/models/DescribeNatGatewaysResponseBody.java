@@ -147,7 +147,7 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of NAT gateways queried.</p>
+         * <p>The total number of NAT gateways returned.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -652,6 +652,60 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
      *
      * <p>DescribeNatGatewaysResponseBody</p>
      */
+    public static class Ipv6Config extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Ipv6Enabled")
+        private Boolean ipv6Enabled;
+
+        private Ipv6Config(Builder builder) {
+            this.ipv6Enabled = builder.ipv6Enabled;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Ipv6Config create() {
+            return builder().build();
+        }
+
+        /**
+         * @return ipv6Enabled
+         */
+        public Boolean getIpv6Enabled() {
+            return this.ipv6Enabled;
+        }
+
+        public static final class Builder {
+            private Boolean ipv6Enabled; 
+
+            private Builder() {
+            } 
+
+            private Builder(Ipv6Config model) {
+                this.ipv6Enabled = model.ipv6Enabled;
+            } 
+
+            /**
+             * Ipv6Enabled.
+             */
+            public Builder ipv6Enabled(Boolean ipv6Enabled) {
+                this.ipv6Enabled = ipv6Enabled;
+                return this;
+            }
+
+            public Ipv6Config build() {
+                return new Ipv6Config(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeNatGatewaysResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeNatGatewaysResponseBody</p>
+     */
     public static class NatGatewayPrivateInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EniInstanceId")
         private String eniInstanceId;
@@ -674,6 +728,9 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PrivateIpAddress")
         private String privateIpAddress;
 
+        @com.aliyun.core.annotation.NameInMap("PrivateIpv6Address")
+        private String privateIpv6Address;
+
         @com.aliyun.core.annotation.NameInMap("VswitchId")
         private String vswitchId;
 
@@ -685,6 +742,7 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
             this.maxSessionEstablishRate = builder.maxSessionEstablishRate;
             this.maxSessionQuota = builder.maxSessionQuota;
             this.privateIpAddress = builder.privateIpAddress;
+            this.privateIpv6Address = builder.privateIpv6Address;
             this.vswitchId = builder.vswitchId;
         }
 
@@ -746,6 +804,13 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
         }
 
         /**
+         * @return privateIpv6Address
+         */
+        public String getPrivateIpv6Address() {
+            return this.privateIpv6Address;
+        }
+
+        /**
          * @return vswitchId
          */
         public String getVswitchId() {
@@ -760,6 +825,7 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
             private Integer maxSessionEstablishRate; 
             private Integer maxSessionQuota; 
             private String privateIpAddress; 
+            private String privateIpv6Address; 
             private String vswitchId; 
 
             private Builder() {
@@ -773,6 +839,7 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
                 this.maxSessionEstablishRate = model.maxSessionEstablishRate;
                 this.maxSessionQuota = model.maxSessionQuota;
                 this.privateIpAddress = model.privateIpAddress;
+                this.privateIpv6Address = model.privateIpv6Address;
                 this.vswitchId = model.vswitchId;
             } 
 
@@ -829,6 +896,14 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
              */
             public Builder privateIpAddress(String privateIpAddress) {
                 this.privateIpAddress = privateIpAddress;
+                return this;
+            }
+
+            /**
+             * PrivateIpv6Address.
+             */
+            public Builder privateIpv6Address(String privateIpv6Address) {
+                this.privateIpv6Address = privateIpv6Address;
                 return this;
             }
 
@@ -1091,6 +1166,9 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IpPrefixList")
         private NatGatewayIpPrefixList ipPrefixList;
 
+        @com.aliyun.core.annotation.NameInMap("Ipv6Config")
+        private Ipv6Config ipv6Config;
+
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
@@ -1155,6 +1233,7 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
             this.internetChargeType = builder.internetChargeType;
             this.ipLists = builder.ipLists;
             this.ipPrefixList = builder.ipPrefixList;
+            this.ipv6Config = builder.ipv6Config;
             this.name = builder.name;
             this.natGatewayId = builder.natGatewayId;
             this.natGatewayPrivateInfo = builder.natGatewayPrivateInfo;
@@ -1307,6 +1386,13 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
         }
 
         /**
+         * @return ipv6Config
+         */
+        public Ipv6Config getIpv6Config() {
+            return this.ipv6Config;
+        }
+
+        /**
          * @return name
          */
         public String getName() {
@@ -1430,6 +1516,7 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
             private String internetChargeType; 
             private IpLists ipLists; 
             private NatGatewayIpPrefixList ipPrefixList; 
+            private Ipv6Config ipv6Config; 
             private String name; 
             private String natGatewayId; 
             private NatGatewayPrivateInfo natGatewayPrivateInfo; 
@@ -1468,6 +1555,7 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
                 this.internetChargeType = model.internetChargeType;
                 this.ipLists = model.ipLists;
                 this.ipPrefixList = model.ipPrefixList;
+                this.ipv6Config = model.ipv6Config;
                 this.name = model.name;
                 this.natGatewayId = model.natGatewayId;
                 this.natGatewayPrivateInfo = model.natGatewayPrivateInfo;
@@ -1626,6 +1714,14 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
              */
             public Builder ipPrefixList(NatGatewayIpPrefixList ipPrefixList) {
                 this.ipPrefixList = ipPrefixList;
+                return this;
+            }
+
+            /**
+             * Ipv6Config.
+             */
+            public Builder ipv6Config(Ipv6Config ipv6Config) {
+                this.ipv6Config = ipv6Config;
                 return this;
             }
 

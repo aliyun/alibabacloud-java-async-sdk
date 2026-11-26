@@ -22,6 +22,10 @@ public class ListRouteTargetGroupsRequest extends Request {
     private String clientToken;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IpVersion")
+    private String ipVersion;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MaxResults")
     @com.aliyun.core.annotation.Validation(maximum = 100)
     private Integer maxResults;
@@ -58,6 +62,7 @@ public class ListRouteTargetGroupsRequest extends Request {
     private ListRouteTargetGroupsRequest(Builder builder) {
         super(builder);
         this.clientToken = builder.clientToken;
+        this.ipVersion = builder.ipVersion;
         this.maxResults = builder.maxResults;
         this.memberId = builder.memberId;
         this.nextToken = builder.nextToken;
@@ -86,6 +91,13 @@ public class ListRouteTargetGroupsRequest extends Request {
      */
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    /**
+     * @return ipVersion
+     */
+    public String getIpVersion() {
+        return this.ipVersion;
     }
 
     /**
@@ -146,6 +158,7 @@ public class ListRouteTargetGroupsRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListRouteTargetGroupsRequest, Builder> {
         private String clientToken; 
+        private String ipVersion; 
         private Integer maxResults; 
         private String memberId; 
         private String nextToken; 
@@ -162,6 +175,7 @@ public class ListRouteTargetGroupsRequest extends Request {
         private Builder(ListRouteTargetGroupsRequest request) {
             super(request);
             this.clientToken = request.clientToken;
+            this.ipVersion = request.ipVersion;
             this.maxResults = request.maxResults;
             this.memberId = request.memberId;
             this.nextToken = request.nextToken;
@@ -181,6 +195,15 @@ public class ListRouteTargetGroupsRequest extends Request {
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
             this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * IpVersion.
+         */
+        public Builder ipVersion(String ipVersion) {
+            this.putQueryParameter("IpVersion", ipVersion);
+            this.ipVersion = ipVersion;
             return this;
         }
 

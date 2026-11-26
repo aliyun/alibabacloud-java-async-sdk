@@ -428,6 +428,10 @@ public class ListRouteTargetGroupsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
+        @com.aliyun.core.annotation.NameInMap("IpVersion")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private String ipVersion;
+
         @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
@@ -458,6 +462,7 @@ public class ListRouteTargetGroupsResponseBody extends TeaModel {
         private RouteTargetGroups(Builder builder) {
             this.configMode = builder.configMode;
             this.createTime = builder.createTime;
+            this.ipVersion = builder.ipVersion;
             this.regionId = builder.regionId;
             this.resourceGroupId = builder.resourceGroupId;
             this.routeTargetGroupDescription = builder.routeTargetGroupDescription;
@@ -489,6 +494,13 @@ public class ListRouteTargetGroupsResponseBody extends TeaModel {
          */
         public String getCreateTime() {
             return this.createTime;
+        }
+
+        /**
+         * @return ipVersion
+         */
+        public String getIpVersion() {
+            return this.ipVersion;
         }
 
         /**
@@ -557,6 +569,7 @@ public class ListRouteTargetGroupsResponseBody extends TeaModel {
         public static final class Builder {
             private String configMode; 
             private String createTime; 
+            private String ipVersion; 
             private String regionId; 
             private String resourceGroupId; 
             private String routeTargetGroupDescription; 
@@ -573,6 +586,7 @@ public class ListRouteTargetGroupsResponseBody extends TeaModel {
             private Builder(RouteTargetGroups model) {
                 this.configMode = model.configMode;
                 this.createTime = model.createTime;
+                this.ipVersion = model.ipVersion;
                 this.regionId = model.regionId;
                 this.resourceGroupId = model.resourceGroupId;
                 this.routeTargetGroupDescription = model.routeTargetGroupDescription;
@@ -606,6 +620,17 @@ public class ListRouteTargetGroupsResponseBody extends TeaModel {
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
+                return this;
+            }
+
+            /**
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>IPv4</p>
+             */
+            public Builder ipVersion(String ipVersion) {
+                this.ipVersion = ipVersion;
                 return this;
             }
 

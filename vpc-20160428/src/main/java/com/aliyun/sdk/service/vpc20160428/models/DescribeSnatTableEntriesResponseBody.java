@@ -173,6 +173,9 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EipAffinity")
         private String eipAffinity;
 
+        @com.aliyun.core.annotation.NameInMap("MatchType")
+        private String matchType;
+
         @com.aliyun.core.annotation.NameInMap("NatGatewayId")
         private String natGatewayId;
 
@@ -200,8 +203,12 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
+        @com.aliyun.core.annotation.NameInMap("TunnelIndex")
+        private String tunnelIndex;
+
         private SnatTableEntry(Builder builder) {
             this.eipAffinity = builder.eipAffinity;
+            this.matchType = builder.matchType;
             this.natGatewayId = builder.natGatewayId;
             this.networkInterfaceId = builder.networkInterfaceId;
             this.snatEntryId = builder.snatEntryId;
@@ -211,6 +218,7 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
             this.sourceCIDR = builder.sourceCIDR;
             this.sourceVSwitchId = builder.sourceVSwitchId;
             this.status = builder.status;
+            this.tunnelIndex = builder.tunnelIndex;
         }
 
         public static Builder builder() {
@@ -226,6 +234,13 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
          */
         public String getEipAffinity() {
             return this.eipAffinity;
+        }
+
+        /**
+         * @return matchType
+         */
+        public String getMatchType() {
+            return this.matchType;
         }
 
         /**
@@ -291,8 +306,16 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
             return this.status;
         }
 
+        /**
+         * @return tunnelIndex
+         */
+        public String getTunnelIndex() {
+            return this.tunnelIndex;
+        }
+
         public static final class Builder {
             private String eipAffinity; 
+            private String matchType; 
             private String natGatewayId; 
             private String networkInterfaceId; 
             private String snatEntryId; 
@@ -302,12 +325,14 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
             private String sourceCIDR; 
             private String sourceVSwitchId; 
             private String status; 
+            private String tunnelIndex; 
 
             private Builder() {
             } 
 
             private Builder(SnatTableEntry model) {
                 this.eipAffinity = model.eipAffinity;
+                this.matchType = model.matchType;
                 this.natGatewayId = model.natGatewayId;
                 this.networkInterfaceId = model.networkInterfaceId;
                 this.snatEntryId = model.snatEntryId;
@@ -317,6 +342,7 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
                 this.sourceCIDR = model.sourceCIDR;
                 this.sourceVSwitchId = model.sourceVSwitchId;
                 this.status = model.status;
+                this.tunnelIndex = model.tunnelIndex;
             } 
 
             /**
@@ -324,6 +350,14 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
              */
             public Builder eipAffinity(String eipAffinity) {
                 this.eipAffinity = eipAffinity;
+                return this;
+            }
+
+            /**
+             * MatchType.
+             */
+            public Builder matchType(String matchType) {
+                this.matchType = matchType;
                 return this;
             }
 
@@ -396,6 +430,14 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
              */
             public Builder status(String status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * TunnelIndex.
+             */
+            public Builder tunnelIndex(String tunnelIndex) {
+                this.tunnelIndex = tunnelIndex;
                 return this;
             }
 

@@ -22,6 +22,14 @@ public class UpdateRouteTargetGroupRequest extends Request {
     private String clientToken;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
+    private Boolean dryRun;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IpVersion")
+    private String ipVersion;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
@@ -46,6 +54,8 @@ public class UpdateRouteTargetGroupRequest extends Request {
     private UpdateRouteTargetGroupRequest(Builder builder) {
         super(builder);
         this.clientToken = builder.clientToken;
+        this.dryRun = builder.dryRun;
+        this.ipVersion = builder.ipVersion;
         this.regionId = builder.regionId;
         this.routeTargetGroupDescription = builder.routeTargetGroupDescription;
         this.routeTargetGroupId = builder.routeTargetGroupId;
@@ -71,6 +81,20 @@ public class UpdateRouteTargetGroupRequest extends Request {
      */
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
+    }
+
+    /**
+     * @return ipVersion
+     */
+    public String getIpVersion() {
+        return this.ipVersion;
     }
 
     /**
@@ -110,6 +134,8 @@ public class UpdateRouteTargetGroupRequest extends Request {
 
     public static final class Builder extends Request.Builder<UpdateRouteTargetGroupRequest, Builder> {
         private String clientToken; 
+        private Boolean dryRun; 
+        private String ipVersion; 
         private String regionId; 
         private String routeTargetGroupDescription; 
         private String routeTargetGroupId; 
@@ -123,6 +149,8 @@ public class UpdateRouteTargetGroupRequest extends Request {
         private Builder(UpdateRouteTargetGroupRequest request) {
             super(request);
             this.clientToken = request.clientToken;
+            this.dryRun = request.dryRun;
+            this.ipVersion = request.ipVersion;
             this.regionId = request.regionId;
             this.routeTargetGroupDescription = request.routeTargetGroupDescription;
             this.routeTargetGroupId = request.routeTargetGroupId;
@@ -139,6 +167,24 @@ public class UpdateRouteTargetGroupRequest extends Request {
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
             this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * DryRun.
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
+            return this;
+        }
+
+        /**
+         * IpVersion.
+         */
+        public Builder ipVersion(String ipVersion) {
+            this.putQueryParameter("IpVersion", ipVersion);
+            this.ipVersion = ipVersion;
             return this;
         }
 

@@ -386,6 +386,9 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
+        @com.aliyun.core.annotation.NameInMap("EnableDns64")
+        private Boolean enableDns64;
+
         @com.aliyun.core.annotation.NameInMap("EnabledIpv6")
         private Boolean enabledIpv6;
 
@@ -433,6 +436,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
             this.cidrBlock = builder.cidrBlock;
             this.creationTime = builder.creationTime;
             this.description = builder.description;
+            this.enableDns64 = builder.enableDns64;
             this.enabledIpv6 = builder.enabledIpv6;
             this.ipv6CidrBlock = builder.ipv6CidrBlock;
             this.isDefault = builder.isDefault;
@@ -483,6 +487,13 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
          */
         public String getDescription() {
             return this.description;
+        }
+
+        /**
+         * @return enableDns64
+         */
+        public Boolean getEnableDns64() {
+            return this.enableDns64;
         }
 
         /**
@@ -588,6 +599,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
             private String cidrBlock; 
             private String creationTime; 
             private String description; 
+            private Boolean enableDns64; 
             private Boolean enabledIpv6; 
             private String ipv6CidrBlock; 
             private Boolean isDefault; 
@@ -611,6 +623,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
                 this.cidrBlock = model.cidrBlock;
                 this.creationTime = model.creationTime;
                 this.description = model.description;
+                this.enableDns64 = model.enableDns64;
                 this.enabledIpv6 = model.enabledIpv6;
                 this.ipv6CidrBlock = model.ipv6CidrBlock;
                 this.isDefault = model.isDefault;
@@ -656,6 +669,14 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
              */
             public Builder description(String description) {
                 this.description = description;
+                return this;
+            }
+
+            /**
+             * EnableDns64.
+             */
+            public Builder enableDns64(Boolean enableDns64) {
+                this.enableDns64 = enableDns64;
                 return this;
             }
 

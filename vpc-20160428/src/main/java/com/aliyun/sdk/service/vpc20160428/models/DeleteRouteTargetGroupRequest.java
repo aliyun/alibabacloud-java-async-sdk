@@ -22,6 +22,10 @@ public class DeleteRouteTargetGroupRequest extends Request {
     private String clientToken;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
+    private Boolean dryRun;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ForceDelete")
     private Boolean forceDelete;
 
@@ -42,6 +46,7 @@ public class DeleteRouteTargetGroupRequest extends Request {
     private DeleteRouteTargetGroupRequest(Builder builder) {
         super(builder);
         this.clientToken = builder.clientToken;
+        this.dryRun = builder.dryRun;
         this.forceDelete = builder.forceDelete;
         this.regionId = builder.regionId;
         this.routeTargetGroupId = builder.routeTargetGroupId;
@@ -66,6 +71,13 @@ public class DeleteRouteTargetGroupRequest extends Request {
      */
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     /**
@@ -98,6 +110,7 @@ public class DeleteRouteTargetGroupRequest extends Request {
 
     public static final class Builder extends Request.Builder<DeleteRouteTargetGroupRequest, Builder> {
         private String clientToken; 
+        private Boolean dryRun; 
         private Boolean forceDelete; 
         private String regionId; 
         private String routeTargetGroupId; 
@@ -110,6 +123,7 @@ public class DeleteRouteTargetGroupRequest extends Request {
         private Builder(DeleteRouteTargetGroupRequest request) {
             super(request);
             this.clientToken = request.clientToken;
+            this.dryRun = request.dryRun;
             this.forceDelete = request.forceDelete;
             this.regionId = request.regionId;
             this.routeTargetGroupId = request.routeTargetGroupId;
@@ -129,6 +143,15 @@ public class DeleteRouteTargetGroupRequest extends Request {
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
             this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * DryRun.
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
             return this;
         }
 

@@ -27,6 +27,14 @@ public class CreateRouteTargetGroupRequest extends Request {
     private String configMode;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
+    private Boolean dryRun;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IpVersion")
+    private String ipVersion;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
@@ -61,6 +69,8 @@ public class CreateRouteTargetGroupRequest extends Request {
         super(builder);
         this.clientToken = builder.clientToken;
         this.configMode = builder.configMode;
+        this.dryRun = builder.dryRun;
+        this.ipVersion = builder.ipVersion;
         this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
         this.routeTargetGroupDescription = builder.routeTargetGroupDescription;
@@ -95,6 +105,20 @@ public class CreateRouteTargetGroupRequest extends Request {
      */
     public String getConfigMode() {
         return this.configMode;
+    }
+
+    /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
+    }
+
+    /**
+     * @return ipVersion
+     */
+    public String getIpVersion() {
+        return this.ipVersion;
     }
 
     /**
@@ -149,6 +173,8 @@ public class CreateRouteTargetGroupRequest extends Request {
     public static final class Builder extends Request.Builder<CreateRouteTargetGroupRequest, Builder> {
         private String clientToken; 
         private String configMode; 
+        private Boolean dryRun; 
+        private String ipVersion; 
         private String regionId; 
         private String resourceGroupId; 
         private String routeTargetGroupDescription; 
@@ -165,6 +191,8 @@ public class CreateRouteTargetGroupRequest extends Request {
             super(request);
             this.clientToken = request.clientToken;
             this.configMode = request.configMode;
+            this.dryRun = request.dryRun;
+            this.ipVersion = request.ipVersion;
             this.regionId = request.regionId;
             this.resourceGroupId = request.resourceGroupId;
             this.routeTargetGroupDescription = request.routeTargetGroupDescription;
@@ -199,6 +227,24 @@ public class CreateRouteTargetGroupRequest extends Request {
         public Builder configMode(String configMode) {
             this.putQueryParameter("ConfigMode", configMode);
             this.configMode = configMode;
+            return this;
+        }
+
+        /**
+         * DryRun.
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
+            return this;
+        }
+
+        /**
+         * IpVersion.
+         */
+        public Builder ipVersion(String ipVersion) {
+            this.putQueryParameter("IpVersion", ipVersion);
+            this.ipVersion = ipVersion;
             return this;
         }
 

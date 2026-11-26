@@ -62,6 +62,10 @@ public class CreateNatGatewayRequest extends Request {
     private String ipv4Prefix;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Ipv6Config")
+    private Ipv6Config ipv6Config;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
@@ -141,6 +145,7 @@ public class CreateNatGatewayRequest extends Request {
         this.instanceChargeType = builder.instanceChargeType;
         this.internetChargeType = builder.internetChargeType;
         this.ipv4Prefix = builder.ipv4Prefix;
+        this.ipv6Config = builder.ipv6Config;
         this.name = builder.name;
         this.natIp = builder.natIp;
         this.natType = builder.natType;
@@ -247,6 +252,13 @@ public class CreateNatGatewayRequest extends Request {
      */
     public String getIpv4Prefix() {
         return this.ipv4Prefix;
+    }
+
+    /**
+     * @return ipv6Config
+     */
+    public Ipv6Config getIpv6Config() {
+        return this.ipv6Config;
     }
 
     /**
@@ -373,6 +385,7 @@ public class CreateNatGatewayRequest extends Request {
         private String instanceChargeType; 
         private String internetChargeType; 
         private String ipv4Prefix; 
+        private Ipv6Config ipv6Config; 
         private String name; 
         private String natIp; 
         private String natType; 
@@ -407,6 +420,7 @@ public class CreateNatGatewayRequest extends Request {
             this.instanceChargeType = request.instanceChargeType;
             this.internetChargeType = request.internetChargeType;
             this.ipv4Prefix = request.ipv4Prefix;
+            this.ipv6Config = request.ipv6Config;
             this.name = request.name;
             this.natIp = request.natIp;
             this.natType = request.natType;
@@ -511,11 +525,11 @@ public class CreateNatGatewayRequest extends Request {
         }
 
         /**
-         * <p>The EIP binding mode of the NAT gateway. Valid values:</p>
+         * <p>The EIP attach mode of the NAT gateway. Valid values:</p>
          * <ul>
-         * <li><strong>MULTI_BINDED</strong> (default): multi-EIP NIC-visible mode.</li>
-         * <li><strong>NAT</strong>: NAT mode, which is compatible with IPv4 gateways.<blockquote>
-         * <p>When the EIP binding mode of the NAT gateway is set to NAT mode, the EIP occupies a private IP address of the vSwitch to which the NAT gateway belongs. Make sure that the vSwitch has sufficient private IP addresses. If the vSwitch to which the NAT gateway belongs does not have available idle private IP addresses, you cannot bind new EIPs. When the EIP binding mode of the NAT gateway is set to NAT mode, the NAT gateway supports a maximum of 50 EIPs.</p>
+         * <li><strong>MULTI_BINDED</strong> (default): multi-EIP to network interface controller (NIC) mode.</li>
+         * <li><strong>NAT</strong>: standard mode, which is compatible with IPv4 gateways.<blockquote>
+         * <p>If the EIP attach mode of the NAT gateway is set to the standard mode, the EIP occupies a private IP address of the vSwitch to which the NAT gateway belongs. Make sure that the vSwitch has sufficient private IP addresses. If the vSwitch does not have available idle private IP addresses, you cannot attach new EIPs. In the standard mode, a NAT gateway supports up to 50 EIPs.</p>
          * </blockquote>
          * </li>
          * </ul>
@@ -548,7 +562,7 @@ public class CreateNatGatewayRequest extends Request {
         /**
          * <p>The billing method of the NAT gateway. Valid values:</p>
          * <p><strong>PostPaid</strong> (default): pay-as-you-go.</p>
-         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/48126.html">Internet NAT gateway billing</a> and <a href="https://help.aliyun.com/document_detail/270913.html">VPC NAT gateway billing</a>.</p>
+         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/48126.html">Billing of Internet NAT gateways</a> and <a href="https://help.aliyun.com/document_detail/270913.html">Billing of VPC NAT gateways</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>PostPaid</p>
@@ -572,7 +586,7 @@ public class CreateNatGatewayRequest extends Request {
         }
 
         /**
-         * <p>The IP prefix CIDR block that is used to create NAT IP addresses in batches. Use an unallocated reserved CIDR block in the vSwitch to which the NAT gateway belongs.</p>
+         * <p>The IP prefix CIDR block that is used to create NAT IP addresses in batches. Specify an unallocated reserved CIDR block in the vSwitch to which the NAT gateway belongs.</p>
          * <blockquote>
          * <p>This parameter takes effect only for VPC NAT gateways.</p>
          * </blockquote>
@@ -587,8 +601,18 @@ public class CreateNatGatewayRequest extends Request {
         }
 
         /**
+         * <p>The IPv6 configuration.</p>
+         */
+        public Builder ipv6Config(Ipv6Config ipv6Config) {
+            String ipv6ConfigShrink = shrink(ipv6Config, "Ipv6Config", "json");
+            this.putQueryParameter("Ipv6Config", ipv6ConfigShrink);
+            this.ipv6Config = ipv6Config;
+            return this;
+        }
+
+        /**
          * <p>The name of the NAT gateway.</p>
-         * <p>The name must be 2 to 128 characters in length. It must start with a letter or a Chinese character, and can contain digits, underscores (_), and hyphens (-).</p>
+         * <p>The name must be 2 to 128 characters in length. It must start with a letter or a Chinese character and can contain digits, underscores (_), and hyphens (-).</p>
          * <p>If you do not specify this parameter, the system generates a default name for the NAT gateway.</p>
          * 
          * <strong>example:</strong>
@@ -601,7 +625,7 @@ public class CreateNatGatewayRequest extends Request {
         }
 
         /**
-         * <p>The private IP address that is allocated to the NAT gateway. Use an unallocated IP address in the vSwitch CIDR block of the NAT gateway. If this parameter is left empty, an IP address is randomly allocated.</p>
+         * <p>The private IP address that is occupied by the NAT gateway. Specify an unallocated IP address from the vSwitch CIDR block to which the NAT gateway belongs. If this parameter is left empty, the system randomly allocates an IP address.</p>
          * <blockquote>
          * <p>This parameter takes effect only for VPC NAT gateways.</p>
          * </blockquote>
@@ -911,6 +935,69 @@ public class CreateNatGatewayRequest extends Request {
      *
      * <p>CreateNatGatewayRequest</p>
      */
+    public static class Ipv6Config extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Ipv6Enabled")
+        private Boolean ipv6Enabled;
+
+        private Ipv6Config(Builder builder) {
+            this.ipv6Enabled = builder.ipv6Enabled;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Ipv6Config create() {
+            return builder().build();
+        }
+
+        /**
+         * @return ipv6Enabled
+         */
+        public Boolean getIpv6Enabled() {
+            return this.ipv6Enabled;
+        }
+
+        public static final class Builder {
+            private Boolean ipv6Enabled; 
+
+            private Builder() {
+            } 
+
+            private Builder(Ipv6Config model) {
+                this.ipv6Enabled = model.ipv6Enabled;
+            } 
+
+            /**
+             * <p>Specifies whether to enable IPv6. Valid values:</p>
+             * <ul>
+             * <li><p><strong>true</strong>: enables IPv6.</p>
+             * </li>
+             * <li><p><strong>false</strong> (default): disables IPv6.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
+             */
+            public Builder ipv6Enabled(Boolean ipv6Enabled) {
+                this.ipv6Enabled = ipv6Enabled;
+                return this;
+            }
+
+            public Ipv6Config build() {
+                return new Ipv6Config(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateNatGatewayRequest} extends {@link TeaModel}
+     *
+     * <p>CreateNatGatewayRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -958,7 +1045,7 @@ public class CreateNatGatewayRequest extends Request {
             } 
 
             /**
-             * <p>The tag key. You can use the Tag.N.Key format when you call API operations. Valid values of N: 1 to 20. If you specify this parameter, it cannot be an empty string. The tag key can be up to 128 characters in length. It cannot start with aliyun or acs:, and cannot contain http:// or https://.</p>
+             * <p>The tag key. To specify a tag key in an API request, use the Tag.N.Key format, where N ranges from 1 to 20. The tag key cannot be an empty string. It can be up to 128 characters in length, and cannot start with aliyun or acs:. It cannot contain http:// or https://.</p>
              * 
              * <strong>example:</strong>
              * <p>TestKey</p>
@@ -969,7 +1056,7 @@ public class CreateNatGatewayRequest extends Request {
             }
 
             /**
-             * <p>The tag value. You can use the Tag.N.Value format when you call API operations. Valid values of N: 1 to 20. If you specify this parameter, it cannot be an empty string. The tag value can be up to 128 characters in length. It cannot start with aliyun or acs:, and cannot contain http:// or https://.</p>
+             * <p>The tag value. To specify a tag value in an API request, use the Tag.N.Value format, where N ranges from 1 to 20. The tag value cannot be an empty string. It can be up to 128 characters in length, and cannot start with aliyun or acs:. It cannot contain http:// or https://.</p>
              * 
              * <strong>example:</strong>
              * <p>TestValue</p>
