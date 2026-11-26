@@ -32,7 +32,6 @@ public class CreateKVCacheStoreRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("HpnZone")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String hpnZone;
 
     @com.aliyun.core.annotation.Query
@@ -189,7 +188,7 @@ public class CreateKVCacheStoreRequest extends Request {
         } 
 
         /**
-         * <p>The storage capacity, in GiB. The minimum capacity is 300 TiB (307,200 GiB), and the capacity scales in increments of 300 TiB.</p>
+         * <p>The storage capacity. Unit: GiB. The minimum capacity is 300 TiB (307,200 GiB), and the capacity scales in increments of 300 TiB.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -226,8 +225,7 @@ public class CreateKVCacheStoreRequest extends Request {
         }
 
         /**
-         * <p>The HPN cluster ID, which is used to create an affinity scheduling relationship between the KVCacheStore and the specified HPN cluster. After the KVCacheStore is created, it may have affinity relationships with multiple HPN clusters based on network topology. You can call the GetKVCacheStore operation to query the available HPN clusters.</p>
-         * <p>This parameter is required.</p>
+         * <p>The HPN cluster ID, which is used to create an affinity scheduling relationship between the KVCacheStore and the specified HPN cluster. After creation, the KVCacheStore may have affinity relationships with multiple HPN clusters based on network connections. You can call the GetKVCacheStore operation to query the available HPN clusters.</p>
          * 
          * <strong>example:</strong>
          * <p>B6</p>
@@ -251,7 +249,7 @@ public class CreateKVCacheStoreRequest extends Request {
         }
 
         /**
-         * <p>The billing method. Valid value: POSTPAY (pay-as-you-go). Default value: POSTPAY.</p>
+         * <p>The billing method. Valid values: POSTPAY (pay-as-you-go). Default value: POSTPAY.</p>
          * 
          * <strong>example:</strong>
          * <p>POSTPAY</p>
@@ -263,7 +261,7 @@ public class CreateKVCacheStoreRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region where the KVCacheStore is created. You can call the DescribeRegions operation to query the list of activated regions.</p>
+         * <p>The region ID where the KVCacheStore is created. You can call the DescribeRegions operation to query the list of available regions.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -276,7 +274,7 @@ public class CreateKVCacheStoreRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group.</p>
+         * <p>The resource group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-aekzafsjd7i4qaq</p>
@@ -288,7 +286,7 @@ public class CreateKVCacheStoreRequest extends Request {
         }
 
         /**
-         * <p>The list of tag key-value pairs for the resource. A maximum of 20 tags are supported. This parameter overrides the parent TagDTO type and uses the Tag type that is consistent with the Get and List responses.</p>
+         * <p>The list of resource tag key-value pairs. A maximum of 20 tags are supported. This overrides the parent TagDTO type and uses the Tag type that is consistent with the responses of the Get and List operations.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
