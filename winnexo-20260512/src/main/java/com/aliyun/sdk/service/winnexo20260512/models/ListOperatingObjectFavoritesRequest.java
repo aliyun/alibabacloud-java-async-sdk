@@ -17,6 +17,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListOperatingObjectFavoritesRequest</p>
  */
 public class ListOperatingObjectFavoritesRequest extends Request {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("appToken")
+    private String appToken;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("graphName")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -36,6 +40,14 @@ public class ListOperatingObjectFavoritesRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String operatingObjectName;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("opsUserCode")
+    private String opsUserCode;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("opsUserId")
+    private String opsUserId;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("pageSize")
     @com.aliyun.core.annotation.Validation(maximum = 200, minimum = 1)
@@ -47,10 +59,13 @@ public class ListOperatingObjectFavoritesRequest extends Request {
 
     private ListOperatingObjectFavoritesRequest(Builder builder) {
         super(builder);
+        this.appToken = builder.appToken;
         this.graphName = builder.graphName;
         this.nextToken = builder.nextToken;
         this.objectType = builder.objectType;
         this.operatingObjectName = builder.operatingObjectName;
+        this.opsUserCode = builder.opsUserCode;
+        this.opsUserId = builder.opsUserId;
         this.pageSize = builder.pageSize;
         this.tenantId = builder.tenantId;
     }
@@ -66,6 +81,13 @@ public class ListOperatingObjectFavoritesRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return appToken
+     */
+    public String getAppToken() {
+        return this.appToken;
     }
 
     /**
@@ -97,6 +119,20 @@ public class ListOperatingObjectFavoritesRequest extends Request {
     }
 
     /**
+     * @return opsUserCode
+     */
+    public String getOpsUserCode() {
+        return this.opsUserCode;
+    }
+
+    /**
+     * @return opsUserId
+     */
+    public String getOpsUserId() {
+        return this.opsUserId;
+    }
+
+    /**
      * @return pageSize
      */
     public Long getPageSize() {
@@ -111,10 +147,13 @@ public class ListOperatingObjectFavoritesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListOperatingObjectFavoritesRequest, Builder> {
+        private String appToken; 
         private String graphName; 
         private String nextToken; 
         private String objectType; 
         private String operatingObjectName; 
+        private String opsUserCode; 
+        private String opsUserId; 
         private Long pageSize; 
         private String tenantId; 
 
@@ -124,16 +163,31 @@ public class ListOperatingObjectFavoritesRequest extends Request {
 
         private Builder(ListOperatingObjectFavoritesRequest request) {
             super(request);
+            this.appToken = request.appToken;
             this.graphName = request.graphName;
             this.nextToken = request.nextToken;
             this.objectType = request.objectType;
             this.operatingObjectName = request.operatingObjectName;
+            this.opsUserCode = request.opsUserCode;
+            this.opsUserId = request.opsUserId;
             this.pageSize = request.pageSize;
             this.tenantId = request.tenantId;
         } 
 
         /**
-         * <p>The graph name. Call listGraphs to retrieve available graphs.</p>
+         * <p>The platform application token issued by the console. If specified, the operation is executed as the user identified by opsUserId or opsUserCode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>wn_app_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+         */
+        public Builder appToken(String appToken) {
+            this.putQueryParameter("appToken", appToken);
+            this.appToken = appToken;
+            return this;
+        }
+
+        /**
+         * <p>The name of the graph. You can call the listGraphs operation to obtain the graph name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -171,7 +225,7 @@ public class ListOperatingObjectFavoritesRequest extends Request {
         }
 
         /**
-         * <p>The digital employee name (operating object name). Optional.</p>
+         * <p>The name of the digital worker, which is the name of the operating object. This parameter is optional.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -184,7 +238,31 @@ public class ListOperatingObjectFavoritesRequest extends Request {
         }
 
         /**
-         * <p>The page size.</p>
+         * <p>The proxy user code, which is unique within the tenant. This parameter is used only when the application credential is configured as source_uid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alice</p>
+         */
+        public Builder opsUserCode(String opsUserCode) {
+            this.putQueryParameter("opsUserCode", opsUserCode);
+            this.opsUserCode = opsUserCode;
+            return this;
+        }
+
+        /**
+         * <p>The proxy user ID, which is the WINNEXO platform user ID. This parameter is used only when the application credential is configured as winnexo_uid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10001</p>
+         */
+        public Builder opsUserId(String opsUserId) {
+            this.putQueryParameter("opsUserId", opsUserId);
+            this.opsUserId = opsUserId;
+            return this;
+        }
+
+        /**
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -196,7 +274,7 @@ public class ListOperatingObjectFavoritesRequest extends Request {
         }
 
         /**
-         * <p>The tenant ID to take effect.</p>
+         * <p>The ID of the effective tenant.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>

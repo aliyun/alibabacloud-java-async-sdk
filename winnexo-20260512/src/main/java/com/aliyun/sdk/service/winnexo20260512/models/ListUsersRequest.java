@@ -21,6 +21,10 @@ public class ListUsersRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("accountIds")
     private java.util.List<String> accountIds;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("appToken")
+    private String appToken;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("isActive")
     private Boolean isActive;
@@ -28,6 +32,14 @@ public class ListUsersRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("keyword")
     private String keyword;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("opsUserCode")
+    private String opsUserCode;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("opsUserId")
+    private String opsUserId;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("page")
@@ -48,8 +60,11 @@ public class ListUsersRequest extends Request {
     private ListUsersRequest(Builder builder) {
         super(builder);
         this.accountIds = builder.accountIds;
+        this.appToken = builder.appToken;
         this.isActive = builder.isActive;
         this.keyword = builder.keyword;
+        this.opsUserCode = builder.opsUserCode;
+        this.opsUserId = builder.opsUserId;
         this.page = builder.page;
         this.pageSize = builder.pageSize;
         this.roleCodes = builder.roleCodes;
@@ -77,6 +92,13 @@ public class ListUsersRequest extends Request {
     }
 
     /**
+     * @return appToken
+     */
+    public String getAppToken() {
+        return this.appToken;
+    }
+
+    /**
      * @return isActive
      */
     public Boolean getIsActive() {
@@ -88,6 +110,20 @@ public class ListUsersRequest extends Request {
      */
     public String getKeyword() {
         return this.keyword;
+    }
+
+    /**
+     * @return opsUserCode
+     */
+    public String getOpsUserCode() {
+        return this.opsUserCode;
+    }
+
+    /**
+     * @return opsUserId
+     */
+    public String getOpsUserId() {
+        return this.opsUserId;
     }
 
     /**
@@ -120,8 +156,11 @@ public class ListUsersRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListUsersRequest, Builder> {
         private java.util.List<String> accountIds; 
+        private String appToken; 
         private Boolean isActive; 
         private String keyword; 
+        private String opsUserCode; 
+        private String opsUserId; 
         private Long page; 
         private Long pageSize; 
         private java.util.List<String> roleCodes; 
@@ -134,8 +173,11 @@ public class ListUsersRequest extends Request {
         private Builder(ListUsersRequest request) {
             super(request);
             this.accountIds = request.accountIds;
+            this.appToken = request.appToken;
             this.isActive = request.isActive;
             this.keyword = request.keyword;
+            this.opsUserCode = request.opsUserCode;
+            this.opsUserId = request.opsUserId;
             this.page = request.page;
             this.pageSize = request.pageSize;
             this.roleCodes = request.roleCodes;
@@ -156,6 +198,18 @@ public class ListUsersRequest extends Request {
         }
 
         /**
+         * <p>The platform application token issued by the console. If specified, the operation is executed as the user specified by opsUserId or opsUserCode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>wn_app_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+         */
+        public Builder appToken(String appToken) {
+            this.putQueryParameter("appToken", appToken);
+            this.appToken = appToken;
+            return this;
+        }
+
+        /**
          * <p>Specifies whether the account is activated. Valid values:</p>
          * <ul>
          * <li><strong>true</strong>: Activated.</li>
@@ -172,7 +226,7 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * <p>The keyword for product search. Fuzzy match is supported.</p>
+         * <p>The keyword for searching products. Fuzzy match is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>Sample keyword</p>
@@ -180,6 +234,30 @@ public class ListUsersRequest extends Request {
         public Builder keyword(String keyword) {
             this.putBodyParameter("keyword", keyword);
             this.keyword = keyword;
+            return this;
+        }
+
+        /**
+         * <p>The proxy user code, which is unique within the tenant. This parameter is used only when the application credential is configured as source_uid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alice</p>
+         */
+        public Builder opsUserCode(String opsUserCode) {
+            this.putQueryParameter("opsUserCode", opsUserCode);
+            this.opsUserCode = opsUserCode;
+            return this;
+        }
+
+        /**
+         * <p>The proxy user ID, which is the WINNEXO platform user ID. This parameter is used only when the application credential is configured as winnexo_uid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10001</p>
+         */
+        public Builder opsUserId(String opsUserId) {
+            this.putQueryParameter("opsUserId", opsUserId);
+            this.opsUserId = opsUserId;
             return this;
         }
 
@@ -211,7 +289,7 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * <p>The list of new system role codes. This is a full replacement and must contain at least one role. Valid values: SUPER_ADMIN, SYSTEM_ADMIN, SEMANTIC_ADMIN, SKILL_ADMIN, KB_ADMIN, AGENT_ADMIN, and APPLICATION_USER.</p>
+         * <p>The list of new system role codes. This list fully replaces the existing roles and must contain at least one role. Valid values: SUPER_ADMIN, SYSTEM_ADMIN, SEMANTIC_ADMIN, SKILL_ADMIN, KB_ADMIN, AGENT_ADMIN, and APPLICATION_USER.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;string_value&quot;]</p>
@@ -224,7 +302,7 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * <p>The tenant ID. This is a common parameter. winnexo-cli explicitly passes this parameter by using --tenant-id.</p>
+         * <p>The tenant ID. This is a common parameter and is explicitly passed by using the --tenant-id option in winnexo-cli.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>

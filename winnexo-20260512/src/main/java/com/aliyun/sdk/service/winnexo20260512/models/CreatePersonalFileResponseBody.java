@@ -169,7 +169,7 @@ public class CreatePersonalFileResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The folder ID.</p>
+         * <p>The directory ID.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleDirectoryId</p>
@@ -202,7 +202,7 @@ public class CreatePersonalFileResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The updated filter view name.</p>
+         * <p>The updated name of the filtered view.</p>
          * 
          * <strong>example:</strong>
          * <p>ha-cn-36z45q4xg06_qrs</p>
@@ -224,11 +224,7 @@ public class CreatePersonalFileResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The export scope. Valid values:</p>
-         * <ul>
-         * <li>ALL: all.</li>
-         * <li>SELECT: selected rows.</li>
-         * </ul>
+         * <p>The export scope. Valid values: ALL: all data. SELECT: selected rows.</p>
          * 
          * <strong>example:</strong>
          * <p>read:user,read:repo,write:repo,read:org,read:group</p>

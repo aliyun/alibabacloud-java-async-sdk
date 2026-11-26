@@ -184,7 +184,7 @@ public class CreateGroupDingtalkChatResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The session ID, typically used for JSSDK.</p>
+         * <p>The chat ID, which is generally used for JSSDK.</p>
          * 
          * <strong>example:</strong>
          * <p>cidxxxxxxxx</p>
@@ -253,7 +253,7 @@ public class CreateGroupDingtalkChatResponseBody extends TeaModel {
          * <p>The image name.</p>
          * 
          * <strong>example:</strong>
-         * <p>CustomerProjectGroup</p>
+         * <p>Customer project group</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -283,7 +283,7 @@ public class CreateGroupDingtalkChatResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The data source ID (unique within the tenant).</p>
+         * <p>The data source ID, which is unique within the tenant.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleSourceId</p>

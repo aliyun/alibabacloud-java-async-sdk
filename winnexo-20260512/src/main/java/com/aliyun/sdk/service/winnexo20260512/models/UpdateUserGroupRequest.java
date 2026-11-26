@@ -17,6 +17,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateUserGroupRequest</p>
  */
 public class UpdateUserGroupRequest extends Request {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("appToken")
+    private String appToken;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("description")
     private String description;
@@ -24,6 +28,14 @@ public class UpdateUserGroupRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("moveToRoot")
     private Boolean moveToRoot;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("opsUserCode")
+    private String opsUserCode;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("opsUserId")
+    private String opsUserId;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("parentId")
@@ -44,8 +56,11 @@ public class UpdateUserGroupRequest extends Request {
 
     private UpdateUserGroupRequest(Builder builder) {
         super(builder);
+        this.appToken = builder.appToken;
         this.description = builder.description;
         this.moveToRoot = builder.moveToRoot;
+        this.opsUserCode = builder.opsUserCode;
+        this.opsUserId = builder.opsUserId;
         this.parentId = builder.parentId;
         this.tenantId = builder.tenantId;
         this.userGroupId = builder.userGroupId;
@@ -66,6 +81,13 @@ public class UpdateUserGroupRequest extends Request {
     }
 
     /**
+     * @return appToken
+     */
+    public String getAppToken() {
+        return this.appToken;
+    }
+
+    /**
      * @return description
      */
     public String getDescription() {
@@ -77,6 +99,20 @@ public class UpdateUserGroupRequest extends Request {
      */
     public Boolean getMoveToRoot() {
         return this.moveToRoot;
+    }
+
+    /**
+     * @return opsUserCode
+     */
+    public String getOpsUserCode() {
+        return this.opsUserCode;
+    }
+
+    /**
+     * @return opsUserId
+     */
+    public String getOpsUserId() {
+        return this.opsUserId;
     }
 
     /**
@@ -108,8 +144,11 @@ public class UpdateUserGroupRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UpdateUserGroupRequest, Builder> {
+        private String appToken; 
         private String description; 
         private Boolean moveToRoot; 
+        private String opsUserCode; 
+        private String opsUserId; 
         private String parentId; 
         private String tenantId; 
         private String userGroupId; 
@@ -121,13 +160,28 @@ public class UpdateUserGroupRequest extends Request {
 
         private Builder(UpdateUserGroupRequest request) {
             super(request);
+            this.appToken = request.appToken;
             this.description = request.description;
             this.moveToRoot = request.moveToRoot;
+            this.opsUserCode = request.opsUserCode;
+            this.opsUserId = request.opsUserId;
             this.parentId = request.parentId;
             this.tenantId = request.tenantId;
             this.userGroupId = request.userGroupId;
             this.userGroupName = request.userGroupName;
         } 
+
+        /**
+         * <p>The platform application token issued by the console. If specified, the operation is executed as the user identified by opsUserId or opsUserCode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>wn_app_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+         */
+        public Builder appToken(String appToken) {
+            this.putQueryParameter("appToken", appToken);
+            this.appToken = appToken;
+            return this;
+        }
 
         /**
          * <p>The new description of the user group. If this parameter is not specified, the description is not modified.</p>
@@ -154,7 +208,31 @@ public class UpdateUserGroupRequest extends Request {
         }
 
         /**
-         * <p>The ID of the new parent user group. If this parameter is not specified, the user group is not moved. If it is explicitly set to null, the user group is moved to the root node.</p>
+         * <p>The proxy user code, which is unique within the tenant. This parameter is used only when the application credential is configured as source_uid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alice</p>
+         */
+        public Builder opsUserCode(String opsUserCode) {
+            this.putQueryParameter("opsUserCode", opsUserCode);
+            this.opsUserCode = opsUserCode;
+            return this;
+        }
+
+        /**
+         * <p>The proxy user ID, which is the WINNEXO platform user ID. This parameter is used only when the application credential is configured as winnexo_uid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10001</p>
+         */
+        public Builder opsUserId(String opsUserId) {
+            this.putQueryParameter("opsUserId", opsUserId);
+            this.opsUserId = opsUserId;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the new parent user group. If this parameter is not specified, the user group is not moved. If this parameter is explicitly set to null, the user group is moved to the root node.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -166,7 +244,7 @@ public class UpdateUserGroupRequest extends Request {
         }
 
         /**
-         * <p>The tenant ID. This is a common parameter. In winnexo-cli, it is explicitly passed by using --tenant-id.</p>
+         * <p>The tenant ID. This is a common parameter. For winnexo-cli, explicitly pass this parameter by using <code>--tenant-id</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>

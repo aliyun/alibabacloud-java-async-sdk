@@ -17,6 +17,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreatePersonalPublicUrlRequest</p>
  */
 public class CreatePersonalPublicUrlRequest extends Request {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("appToken")
+    private String appToken;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("description")
     private String description;
@@ -37,6 +41,14 @@ public class CreatePersonalPublicUrlRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("operatingObjectName")
     private String operatingObjectName;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("opsUserCode")
+    private String opsUserCode;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("opsUserId")
+    private String opsUserId;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("originalUrl")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -52,11 +64,14 @@ public class CreatePersonalPublicUrlRequest extends Request {
 
     private CreatePersonalPublicUrlRequest(Builder builder) {
         super(builder);
+        this.appToken = builder.appToken;
         this.description = builder.description;
         this.directoryId = builder.directoryId;
         this.name = builder.name;
         this.notes = builder.notes;
         this.operatingObjectName = builder.operatingObjectName;
+        this.opsUserCode = builder.opsUserCode;
+        this.opsUserId = builder.opsUserId;
         this.originalUrl = builder.originalUrl;
         this.sourceTags = builder.sourceTags;
         this.tenantId = builder.tenantId;
@@ -73,6 +88,13 @@ public class CreatePersonalPublicUrlRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return appToken
+     */
+    public String getAppToken() {
+        return this.appToken;
     }
 
     /**
@@ -111,6 +133,20 @@ public class CreatePersonalPublicUrlRequest extends Request {
     }
 
     /**
+     * @return opsUserCode
+     */
+    public String getOpsUserCode() {
+        return this.opsUserCode;
+    }
+
+    /**
+     * @return opsUserId
+     */
+    public String getOpsUserId() {
+        return this.opsUserId;
+    }
+
+    /**
      * @return originalUrl
      */
     public String getOriginalUrl() {
@@ -132,11 +168,14 @@ public class CreatePersonalPublicUrlRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreatePersonalPublicUrlRequest, Builder> {
+        private String appToken; 
         private String description; 
         private String directoryId; 
         private String name; 
         private String notes; 
         private String operatingObjectName; 
+        private String opsUserCode; 
+        private String opsUserId; 
         private String originalUrl; 
         private String sourceTags; 
         private String tenantId; 
@@ -147,15 +186,30 @@ public class CreatePersonalPublicUrlRequest extends Request {
 
         private Builder(CreatePersonalPublicUrlRequest request) {
             super(request);
+            this.appToken = request.appToken;
             this.description = request.description;
             this.directoryId = request.directoryId;
             this.name = request.name;
             this.notes = request.notes;
             this.operatingObjectName = request.operatingObjectName;
+            this.opsUserCode = request.opsUserCode;
+            this.opsUserId = request.opsUserId;
             this.originalUrl = request.originalUrl;
             this.sourceTags = request.sourceTags;
             this.tenantId = request.tenantId;
         } 
+
+        /**
+         * <p>平台应用 Token（控制台签发）。传入后将以 opsUserId 或 opsUserCode 指定的用户身份执行</p>
+         * 
+         * <strong>example:</strong>
+         * <p>wn_app_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+         */
+        public Builder appToken(String appToken) {
+            this.putQueryParameter("appToken", appToken);
+            this.appToken = appToken;
+            return this;
+        }
 
         /**
          * <p>The resource description.</p>
@@ -170,7 +224,7 @@ public class CreatePersonalPublicUrlRequest extends Request {
         }
 
         /**
-         * <p>The ID of the target personal directory. If not specified, the current user\&quot;s default personal root directory is used.</p>
+         * <p>The ID of the target personal directory. If not specified, the current user&quot;s default personal root directory is used.</p>
          * 
          * <strong>example:</strong>
          * <p>dir_personal_child</p>
@@ -214,6 +268,30 @@ public class CreatePersonalPublicUrlRequest extends Request {
         public Builder operatingObjectName(String operatingObjectName) {
             this.putBodyParameter("operatingObjectName", operatingObjectName);
             this.operatingObjectName = operatingObjectName;
+            return this;
+        }
+
+        /**
+         * <p>代理用户编码（租户内唯一），仅当应用凭证配置为 source_uid 时使用</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alice</p>
+         */
+        public Builder opsUserCode(String opsUserCode) {
+            this.putQueryParameter("opsUserCode", opsUserCode);
+            this.opsUserCode = opsUserCode;
+            return this;
+        }
+
+        /**
+         * <p>代理用户ID（WINNEXO 平台用户ID），仅当应用凭证配置为 winnexo_uid 时使用</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10001</p>
+         */
+        public Builder opsUserId(String opsUserId) {
+            this.putQueryParameter("opsUserId", opsUserId);
+            this.opsUserId = opsUserId;
             return this;
         }
 

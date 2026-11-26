@@ -195,7 +195,7 @@ public class CreateGroupPublicUrlResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The folder ID.</p>
+         * <p>The ID of the folder.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleDirectoryId</p>
@@ -217,7 +217,7 @@ public class CreateGroupPublicUrlResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The project group ID.</p>
+         * <p>The ID of the project group.</p>
          * 
          * <strong>example:</strong>
          * <p>group_delivery</p>
@@ -239,7 +239,7 @@ public class CreateGroupPublicUrlResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The knowledge base name.</p>
+         * <p>The name of the knowledge base.</p>
          * 
          * <strong>example:</strong>
          * <p>p-toolset-80a4520e-b35c-4e8b-acf7-3a01c7307522</p>
@@ -261,7 +261,7 @@ public class CreateGroupPublicUrlResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -272,7 +272,7 @@ public class CreateGroupPublicUrlResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The permission scope.</p>
+         * <p>The scope of permissions.</p>
          * 
          * <strong>example:</strong>
          * <p>PERSONAL</p>
@@ -283,7 +283,7 @@ public class CreateGroupPublicUrlResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The source ID.</p>
+         * <p>The ID of the source.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleSourceId</p>
@@ -294,13 +294,13 @@ public class CreateGroupPublicUrlResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The refund status. If a refund is in progress, query to confirm the refund status. Valid values:</p>
+         * <p>The refund status. If a refund is in progress, you must query and confirm the refund status. Valid values:</p>
          * <ul>
-         * <li>SUCCESS: All succeeded.</li>
+         * <li>SUCCESS: All operations succeeded.</li>
          * <li>FAIL: Failed.</li>
          * <li>WAIT_PAY: Waiting for refund.</li>
          * <li>EXPIRE: Expired.</li>
-         * <li>PAYING: Refund in progress.</li>
+         * <li>PAYING: Refunding.</li>
          * <li>TERMINATE: Refund terminated.</li>
          * </ul>
          * 

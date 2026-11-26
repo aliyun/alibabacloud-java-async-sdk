@@ -17,6 +17,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListAdminKnowledgeBasesRequest</p>
  */
 public class ListAdminKnowledgeBasesRequest extends Request {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("appToken")
+    private String appToken;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("directoryId")
     private String directoryId;
@@ -24,6 +28,14 @@ public class ListAdminKnowledgeBasesRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("keyword")
     private String keyword;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("opsUserCode")
+    private String opsUserCode;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("opsUserId")
+    private String opsUserId;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("page")
@@ -51,8 +63,11 @@ public class ListAdminKnowledgeBasesRequest extends Request {
 
     private ListAdminKnowledgeBasesRequest(Builder builder) {
         super(builder);
+        this.appToken = builder.appToken;
         this.directoryId = builder.directoryId;
         this.keyword = builder.keyword;
+        this.opsUserCode = builder.opsUserCode;
+        this.opsUserId = builder.opsUserId;
         this.page = builder.page;
         this.pageSize = builder.pageSize;
         this.sortField = builder.sortField;
@@ -75,6 +90,13 @@ public class ListAdminKnowledgeBasesRequest extends Request {
     }
 
     /**
+     * @return appToken
+     */
+    public String getAppToken() {
+        return this.appToken;
+    }
+
+    /**
      * @return directoryId
      */
     public String getDirectoryId() {
@@ -86,6 +108,20 @@ public class ListAdminKnowledgeBasesRequest extends Request {
      */
     public String getKeyword() {
         return this.keyword;
+    }
+
+    /**
+     * @return opsUserCode
+     */
+    public String getOpsUserCode() {
+        return this.opsUserCode;
+    }
+
+    /**
+     * @return opsUserId
+     */
+    public String getOpsUserId() {
+        return this.opsUserId;
     }
 
     /**
@@ -131,8 +167,11 @@ public class ListAdminKnowledgeBasesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListAdminKnowledgeBasesRequest, Builder> {
+        private String appToken; 
         private String directoryId; 
         private String keyword; 
+        private String opsUserCode; 
+        private String opsUserId; 
         private Long page; 
         private Long pageSize; 
         private String sortField; 
@@ -146,8 +185,11 @@ public class ListAdminKnowledgeBasesRequest extends Request {
 
         private Builder(ListAdminKnowledgeBasesRequest request) {
             super(request);
+            this.appToken = request.appToken;
             this.directoryId = request.directoryId;
             this.keyword = request.keyword;
+            this.opsUserCode = request.opsUserCode;
+            this.opsUserId = request.opsUserId;
             this.page = request.page;
             this.pageSize = request.pageSize;
             this.sortField = request.sortField;
@@ -155,6 +197,18 @@ public class ListAdminKnowledgeBasesRequest extends Request {
             this.sourceTypes = request.sourceTypes;
             this.tenantId = request.tenantId;
         } 
+
+        /**
+         * <p>The platform application token issued by the console. If this parameter is passed, the operation is performed as the user specified by opsUserId or opsUserCode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>wn_app_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+         */
+        public Builder appToken(String appToken) {
+            this.putQueryParameter("appToken", appToken);
+            this.appToken = appToken;
+            return this;
+        }
 
         /**
          * <p>The directory ID.</p>
@@ -169,10 +223,10 @@ public class ListAdminKnowledgeBasesRequest extends Request {
         }
 
         /**
-         * <p>The keyword for fuzzy search on form component data.</p>
+         * <p>The keyword for fuzzy search of component data in the form.</p>
          * 
          * <strong>example:</strong>
-         * <p>SampleKeyword</p>
+         * <p>Sample keyword</p>
          */
         public Builder keyword(String keyword) {
             this.putBodyParameter("keyword", keyword);
@@ -181,7 +235,31 @@ public class ListAdminKnowledgeBasesRequest extends Request {
         }
 
         /**
-         * <p>The page number. Default value: 1. Pages start from page 1.</p>
+         * <p>The proxy user code, which is unique within the tenant. This parameter is used only when the application credential is configured as source_uid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alice</p>
+         */
+        public Builder opsUserCode(String opsUserCode) {
+            this.putQueryParameter("opsUserCode", opsUserCode);
+            this.opsUserCode = opsUserCode;
+            return this;
+        }
+
+        /**
+         * <p>The proxy user ID, which is the WINNEXO platform user ID. This parameter is used only when the application credential is configured as winnexo_uid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10001</p>
+         */
+        public Builder opsUserId(String opsUserId) {
+            this.putQueryParameter("opsUserId", opsUserId);
+            this.opsUserId = opsUserId;
+            return this;
+        }
+
+        /**
+         * <p>The page number. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -205,11 +283,11 @@ public class ListAdminKnowledgeBasesRequest extends Request {
         }
 
         /**
-         * <p>The field by which the results are sorted. Valid values:</p>
+         * <p>The field by which to sort the returned results. Valid values:</p>
          * <ul>
-         * <li>event_time: the event creation time.</li>
-         * <li>event_execute_start_time: the event execution time.</li>
-         * <li>event_execute_finish_time: the event completion time.</li>
+         * <li>event_time: the event creation time</li>
+         * <li>event_execute_start_time: the event execution start time</li>
+         * <li>event_execute_finish_time: the event execution finish time</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -222,7 +300,7 @@ public class ListAdminKnowledgeBasesRequest extends Request {
         }
 
         /**
-         * <p>The sort order. This parameter takes effect only when sortBy is specified. Valid values: ASC, DESC (case-insensitive).</p>
+         * <p>The sort order. This parameter takes effect only when the sort field is specified. Valid values: ASC and DESC. The values are case-insensitive.</p>
          * 
          * <strong>example:</strong>
          * <p>asc</p>
@@ -234,10 +312,10 @@ public class ListAdminKnowledgeBasesRequest extends Request {
         }
 
         /**
-         * <p>The list of source types.</p>
+         * <p>The list of service source types.</p>
          * 
          * <strong>example:</strong>
-         * <p>string_value</p>
+         * <p>[&quot;K8S,SAE_K8S_SERVICE,FC3,VIP,DNS,AI,AGENT,CloudFlow,MSE_NACOS&quot;]</p>
          */
         public Builder sourceTypes(java.util.List<String> sourceTypes) {
             String sourceTypesShrink = shrink(sourceTypes, "sourceTypes", "json");
@@ -247,7 +325,7 @@ public class ListAdminKnowledgeBasesRequest extends Request {
         }
 
         /**
-         * <p>The tenant ID to which the task belongs.</p>
+         * <p>The ID of the tenant to which the task belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>

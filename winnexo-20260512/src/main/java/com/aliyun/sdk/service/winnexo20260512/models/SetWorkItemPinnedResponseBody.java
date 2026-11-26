@@ -690,7 +690,7 @@ public class SetWorkItemPinnedResponseBody extends TeaModel {
          * <p>The list of attachments.</p>
          * 
          * <strong>example:</strong>
-         * <p>example</p>
+         * <p>[{&quot;attachmentId&quot;:&quot;example&quot;,&quot;contentType&quot;:&quot;example&quot;,&quot;refUrl&quot;:&quot;example&quot;,&quot;resourceId&quot;:&quot;example&quot;,&quot;resourceKind&quot;:&quot;example&quot;,&quot;sizeBytes&quot;:1,&quot;title&quot;:&quot;example&quot;}]</p>
          */
         public Builder attachments(java.util.List<Attachments> attachments) {
             this.attachments = attachments;
@@ -709,7 +709,7 @@ public class SetWorkItemPinnedResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Specifies whether the caller can delete the work item.</p>
+         * <p>Indicates whether the caller can delete the work item.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -720,7 +720,7 @@ public class SetWorkItemPinnedResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Specifies whether the caller can manage the work item.</p>
+         * <p>Indicates whether the caller can manage the work item.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -731,7 +731,7 @@ public class SetWorkItemPinnedResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Specifies whether the visibility scope can be adjusted independently.</p>
+         * <p>Indicates whether the visibility scope can be adjusted independently.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -742,7 +742,7 @@ public class SetWorkItemPinnedResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Specifies whether the caller can rename the work item.</p>
+         * <p>Indicates whether the caller can rename the work item.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -778,7 +778,7 @@ public class SetWorkItemPinnedResponseBody extends TeaModel {
          * <p>The list of user IDs of the collaborators.</p>
          * 
          * <strong>example:</strong>
-         * <p>example</p>
+         * <p>[10001]</p>
          */
         public Builder collaboratorUserIds(java.util.List<Long> collaboratorUserIds) {
             this.collaboratorUserIds = collaboratorUserIds;
@@ -797,7 +797,7 @@ public class SetWorkItemPinnedResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The creation time (ISO 8601 format).</p>
+         * <p>The creation time, in ISO 8601 format.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -918,7 +918,7 @@ public class SetWorkItemPinnedResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The time when the work item last entered the processing state (ISO 8601 format).</p>
+         * <p>The time when the work item last entered the processing state, in ISO 8601 format.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -929,7 +929,7 @@ public class SetWorkItemPinnedResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Specifies whether the topic is a free exploration topic during the compatibility period.</p>
+         * <p>Indicates whether the topic is a free exploration topic during the compatibility period.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -943,7 +943,7 @@ public class SetWorkItemPinnedResponseBody extends TeaModel {
          * <p>The list of user IDs of the visible members.</p>
          * 
          * <strong>example:</strong>
-         * <p>example</p>
+         * <p>[10001]</p>
          */
         public Builder memberUserIds(java.util.List<Long> memberUserIds) {
             this.memberUserIds = memberUserIds;
@@ -962,7 +962,7 @@ public class SetWorkItemPinnedResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The modification time (ISO 8601 format).</p>
+         * <p>The modification time, in ISO 8601 format.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -1105,7 +1105,7 @@ public class SetWorkItemPinnedResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The time zone when the task is triggered.</p>
+         * <p>The time zone when the task was triggered.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -1116,7 +1116,7 @@ public class SetWorkItemPinnedResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The trigger time of the task (ISO 8601 format).</p>
+         * <p>The time when the task was triggered, in ISO 8601 format.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -1171,7 +1171,7 @@ public class SetWorkItemPinnedResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The four-state projection of the workflow status.</p>
+         * <p>The workflow status projection (four states).</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -1185,7 +1185,7 @@ public class SetWorkItemPinnedResponseBody extends TeaModel {
          * <p>The list of IDs of the bound workflow templates.</p>
          * 
          * <strong>example:</strong>
-         * <p>example</p>
+         * <p>[&quot;tpl_example&quot;]</p>
          */
         public Builder workflowTemplateIds(java.util.List<String> workflowTemplateIds) {
             this.workflowTemplateIds = workflowTemplateIds;

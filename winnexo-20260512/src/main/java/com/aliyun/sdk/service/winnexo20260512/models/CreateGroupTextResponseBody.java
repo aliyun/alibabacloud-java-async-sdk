@@ -182,7 +182,7 @@ public class CreateGroupTextResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The folder ID.</p>
+         * <p>The directory ID.</p>
          * 
          * <strong>example:</strong>
          * <p>dir_example</p>
@@ -215,7 +215,7 @@ public class CreateGroupTextResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The prompt message.</p>
+         * <p>The message.</p>
          * 
          * <strong>example:</strong>
          * <p>The current zone list is illegal.</p>
@@ -226,10 +226,10 @@ public class CreateGroupTextResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The image name.</p>
+         * <p>The mirror name.</p>
          * 
          * <strong>example:</strong>
-         * <p>ProjectResources</p>
+         * <p>Project materials</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -259,7 +259,7 @@ public class CreateGroupTextResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The unique identifier on the business system side, that is, the business ID.</p>
+         * <p>The unique identifier on the business system side, which is the business ID.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>

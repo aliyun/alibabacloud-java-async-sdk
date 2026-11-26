@@ -17,6 +17,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ResolveWorkItemAttachmentAccessRequest</p>
  */
 public class ResolveWorkItemAttachmentAccessRequest extends Request {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("appToken")
+    private String appToken;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("attachmentId")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -26,6 +30,14 @@ public class ResolveWorkItemAttachmentAccessRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("collaborationGroupId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String collaborationGroupId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("opsUserCode")
+    private String opsUserCode;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("opsUserId")
+    private String opsUserId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("tenantId")
@@ -38,8 +50,11 @@ public class ResolveWorkItemAttachmentAccessRequest extends Request {
 
     private ResolveWorkItemAttachmentAccessRequest(Builder builder) {
         super(builder);
+        this.appToken = builder.appToken;
         this.attachmentId = builder.attachmentId;
         this.collaborationGroupId = builder.collaborationGroupId;
+        this.opsUserCode = builder.opsUserCode;
+        this.opsUserId = builder.opsUserId;
         this.tenantId = builder.tenantId;
         this.workItemId = builder.workItemId;
     }
@@ -58,6 +73,13 @@ public class ResolveWorkItemAttachmentAccessRequest extends Request {
     }
 
     /**
+     * @return appToken
+     */
+    public String getAppToken() {
+        return this.appToken;
+    }
+
+    /**
      * @return attachmentId
      */
     public String getAttachmentId() {
@@ -69,6 +91,20 @@ public class ResolveWorkItemAttachmentAccessRequest extends Request {
      */
     public String getCollaborationGroupId() {
         return this.collaborationGroupId;
+    }
+
+    /**
+     * @return opsUserCode
+     */
+    public String getOpsUserCode() {
+        return this.opsUserCode;
+    }
+
+    /**
+     * @return opsUserId
+     */
+    public String getOpsUserId() {
+        return this.opsUserId;
     }
 
     /**
@@ -86,8 +122,11 @@ public class ResolveWorkItemAttachmentAccessRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ResolveWorkItemAttachmentAccessRequest, Builder> {
+        private String appToken; 
         private String attachmentId; 
         private String collaborationGroupId; 
+        private String opsUserCode; 
+        private String opsUserId; 
         private String tenantId; 
         private String workItemId; 
 
@@ -97,11 +136,26 @@ public class ResolveWorkItemAttachmentAccessRequest extends Request {
 
         private Builder(ResolveWorkItemAttachmentAccessRequest request) {
             super(request);
+            this.appToken = request.appToken;
             this.attachmentId = request.attachmentId;
             this.collaborationGroupId = request.collaborationGroupId;
+            this.opsUserCode = request.opsUserCode;
+            this.opsUserId = request.opsUserId;
             this.tenantId = request.tenantId;
             this.workItemId = request.workItemId;
         } 
+
+        /**
+         * <p>平台应用 Token（控制台签发）。传入后将以 opsUserId 或 opsUserCode 指定的用户身份执行</p>
+         * 
+         * <strong>example:</strong>
+         * <p>wn_app_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+         */
+        public Builder appToken(String appToken) {
+            this.putQueryParameter("appToken", appToken);
+            this.appToken = appToken;
+            return this;
+        }
 
         /**
          * <p>The ID of the attachment.</p>
@@ -126,6 +180,30 @@ public class ResolveWorkItemAttachmentAccessRequest extends Request {
         public Builder collaborationGroupId(String collaborationGroupId) {
             this.putBodyParameter("collaborationGroupId", collaborationGroupId);
             this.collaborationGroupId = collaborationGroupId;
+            return this;
+        }
+
+        /**
+         * <p>代理用户编码（租户内唯一），仅当应用凭证配置为 source_uid 时使用</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alice</p>
+         */
+        public Builder opsUserCode(String opsUserCode) {
+            this.putQueryParameter("opsUserCode", opsUserCode);
+            this.opsUserCode = opsUserCode;
+            return this;
+        }
+
+        /**
+         * <p>代理用户ID（WINNEXO 平台用户ID），仅当应用凭证配置为 winnexo_uid 时使用</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10001</p>
+         */
+        public Builder opsUserId(String opsUserId) {
+            this.putQueryParameter("opsUserId", opsUserId);
+            this.opsUserId = opsUserId;
             return this;
         }
 

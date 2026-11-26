@@ -17,6 +17,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateScheduledTaskRequest</p>
  */
 public class CreateScheduledTaskRequest extends Request {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("appToken")
+    private String appToken;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("autoPreference")
+    private String autoPreference;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("collaborationGroupId")
     private String collaborationGroupId;
@@ -41,6 +49,14 @@ public class CreateScheduledTaskRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("name")
     @com.aliyun.core.annotation.Validation(required = true)
     private String name;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("opsUserCode")
+    private String opsUserCode;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("opsUserId")
+    private String opsUserId;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("outputMode")
@@ -72,12 +88,16 @@ public class CreateScheduledTaskRequest extends Request {
 
     private CreateScheduledTaskRequest(Builder builder) {
         super(builder);
+        this.appToken = builder.appToken;
+        this.autoPreference = builder.autoPreference;
         this.collaborationGroupId = builder.collaborationGroupId;
         this.description = builder.description;
         this.digitalEmployeeName = builder.digitalEmployeeName;
         this.isOpen = builder.isOpen;
         this.model = builder.model;
         this.name = builder.name;
+        this.opsUserCode = builder.opsUserCode;
+        this.opsUserId = builder.opsUserId;
         this.outputMode = builder.outputMode;
         this.segments = builder.segments;
         this.taskDetail = builder.taskDetail;
@@ -98,6 +118,20 @@ public class CreateScheduledTaskRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return appToken
+     */
+    public String getAppToken() {
+        return this.appToken;
+    }
+
+    /**
+     * @return autoPreference
+     */
+    public String getAutoPreference() {
+        return this.autoPreference;
     }
 
     /**
@@ -140,6 +174,20 @@ public class CreateScheduledTaskRequest extends Request {
      */
     public String getName() {
         return this.name;
+    }
+
+    /**
+     * @return opsUserCode
+     */
+    public String getOpsUserCode() {
+        return this.opsUserCode;
+    }
+
+    /**
+     * @return opsUserId
+     */
+    public String getOpsUserId() {
+        return this.opsUserId;
     }
 
     /**
@@ -192,12 +240,16 @@ public class CreateScheduledTaskRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateScheduledTaskRequest, Builder> {
+        private String appToken; 
+        private String autoPreference; 
         private String collaborationGroupId; 
         private java.util.List<Description> description; 
         private java.util.List<String> digitalEmployeeName; 
         private Boolean isOpen; 
         private String model; 
         private String name; 
+        private String opsUserCode; 
+        private String opsUserId; 
         private String outputMode; 
         private java.util.List<Segments> segments; 
         private TaskDetail taskDetail; 
@@ -212,12 +264,16 @@ public class CreateScheduledTaskRequest extends Request {
 
         private Builder(CreateScheduledTaskRequest request) {
             super(request);
+            this.appToken = request.appToken;
+            this.autoPreference = request.autoPreference;
             this.collaborationGroupId = request.collaborationGroupId;
             this.description = request.description;
             this.digitalEmployeeName = request.digitalEmployeeName;
             this.isOpen = request.isOpen;
             this.model = request.model;
             this.name = request.name;
+            this.opsUserCode = request.opsUserCode;
+            this.opsUserId = request.opsUserId;
             this.outputMode = request.outputMode;
             this.segments = request.segments;
             this.taskDetail = request.taskDetail;
@@ -226,6 +282,30 @@ public class CreateScheduledTaskRequest extends Request {
             this.visibility = request.visibility;
             this.visibleMemberUserIds = request.visibleMemberUserIds;
         } 
+
+        /**
+         * <p>平台应用 Token（控制台签发）。传入后将以 opsUserId 或 opsUserCode 指定的用户身份执行</p>
+         * 
+         * <strong>example:</strong>
+         * <p>wn_app_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+         */
+        public Builder appToken(String appToken) {
+            this.putQueryParameter("appToken", appToken);
+            this.appToken = appToken;
+            return this;
+        }
+
+        /**
+         * <p>AUTO 偏好：none=默认、performance=效果优先、credit=成本优先；创建缺省为 none，固定模型可保存但不生效</p>
+         * 
+         * <strong>example:</strong>
+         * <p>performance</p>
+         */
+        public Builder autoPreference(String autoPreference) {
+            this.putBodyParameter("autoPreference", autoPreference);
+            this.autoPreference = autoPreference;
+            return this;
+        }
 
         /**
          * <p>The ID of the associated collaboration group (such as cg_101). If this parameter is passed, a group space task is created, and the caller must be a valid group member. If this parameter is empty, a personal task is created.</p>
@@ -296,6 +376,30 @@ public class CreateScheduledTaskRequest extends Request {
         public Builder name(String name) {
             this.putBodyParameter("name", name);
             this.name = name;
+            return this;
+        }
+
+        /**
+         * <p>代理用户编码（租户内唯一），仅当应用凭证配置为 source_uid 时使用</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alice</p>
+         */
+        public Builder opsUserCode(String opsUserCode) {
+            this.putQueryParameter("opsUserCode", opsUserCode);
+            this.opsUserCode = opsUserCode;
+            return this;
+        }
+
+        /**
+         * <p>代理用户ID（WINNEXO 平台用户ID），仅当应用凭证配置为 winnexo_uid 时使用</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10001</p>
+         */
+        public Builder opsUserId(String opsUserId) {
+            this.putQueryParameter("opsUserId", opsUserId);
+            this.opsUserId = opsUserId;
             return this;
         }
 

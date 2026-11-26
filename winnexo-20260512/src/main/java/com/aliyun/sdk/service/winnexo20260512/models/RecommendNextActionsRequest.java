@@ -17,9 +17,21 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>RecommendNextActionsRequest</p>
  */
 public class RecommendNextActionsRequest extends Request {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("appToken")
+    private String appToken;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("customPrompt")
     private String customPrompt;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("opsUserCode")
+    private String opsUserCode;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("opsUserId")
+    private String opsUserId;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("outputType")
@@ -41,7 +53,10 @@ public class RecommendNextActionsRequest extends Request {
 
     private RecommendNextActionsRequest(Builder builder) {
         super(builder);
+        this.appToken = builder.appToken;
         this.customPrompt = builder.customPrompt;
+        this.opsUserCode = builder.opsUserCode;
+        this.opsUserId = builder.opsUserId;
         this.outputType = builder.outputType;
         this.recentMessageCount = builder.recentMessageCount;
         this.sessionId = builder.sessionId;
@@ -62,10 +77,31 @@ public class RecommendNextActionsRequest extends Request {
     }
 
     /**
+     * @return appToken
+     */
+    public String getAppToken() {
+        return this.appToken;
+    }
+
+    /**
      * @return customPrompt
      */
     public String getCustomPrompt() {
         return this.customPrompt;
+    }
+
+    /**
+     * @return opsUserCode
+     */
+    public String getOpsUserCode() {
+        return this.opsUserCode;
+    }
+
+    /**
+     * @return opsUserId
+     */
+    public String getOpsUserId() {
+        return this.opsUserId;
     }
 
     /**
@@ -97,7 +133,10 @@ public class RecommendNextActionsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<RecommendNextActionsRequest, Builder> {
+        private String appToken; 
         private String customPrompt; 
+        private String opsUserCode; 
+        private String opsUserId; 
         private String outputType; 
         private Long recentMessageCount; 
         private String sessionId; 
@@ -109,12 +148,27 @@ public class RecommendNextActionsRequest extends Request {
 
         private Builder(RecommendNextActionsRequest request) {
             super(request);
+            this.appToken = request.appToken;
             this.customPrompt = request.customPrompt;
+            this.opsUserCode = request.opsUserCode;
+            this.opsUserId = request.opsUserId;
             this.outputType = request.outputType;
             this.recentMessageCount = request.recentMessageCount;
             this.sessionId = request.sessionId;
             this.tenantId = request.tenantId;
         } 
+
+        /**
+         * <p>平台应用 Token（控制台签发）。传入后将以 opsUserId 或 opsUserCode 指定的用户身份执行</p>
+         * 
+         * <strong>example:</strong>
+         * <p>wn_app_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+         */
+        public Builder appToken(String appToken) {
+            this.putQueryParameter("appToken", appToken);
+            this.appToken = appToken;
+            return this;
+        }
 
         /**
          * <p>The extraction instruction.</p>
@@ -125,6 +179,30 @@ public class RecommendNextActionsRequest extends Request {
         public Builder customPrompt(String customPrompt) {
             this.putBodyParameter("customPrompt", customPrompt);
             this.customPrompt = customPrompt;
+            return this;
+        }
+
+        /**
+         * <p>代理用户编码（租户内唯一），仅当应用凭证配置为 source_uid 时使用</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alice</p>
+         */
+        public Builder opsUserCode(String opsUserCode) {
+            this.putQueryParameter("opsUserCode", opsUserCode);
+            this.opsUserCode = opsUserCode;
+            return this;
+        }
+
+        /**
+         * <p>代理用户ID（WINNEXO 平台用户ID），仅当应用凭证配置为 winnexo_uid 时使用</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10001</p>
+         */
+        public Builder opsUserId(String opsUserId) {
+            this.putQueryParameter("opsUserId", opsUserId);
+            this.opsUserId = opsUserId;
             return this;
         }
 

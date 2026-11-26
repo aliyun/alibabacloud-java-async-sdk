@@ -17,6 +17,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QuerySourceUsageSummaryRequest</p>
  */
 public class QuerySourceUsageSummaryRequest extends Request {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("appToken")
+    private String appToken;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("collaborationGroupId")
     private String collaborationGroupId;
@@ -33,6 +37,14 @@ public class QuerySourceUsageSummaryRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("knowledgeBaseIds")
     private java.util.List<String> knowledgeBaseIds;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("opsUserCode")
+    private String opsUserCode;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("opsUserId")
+    private String opsUserId;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("scopeType")
@@ -58,10 +70,13 @@ public class QuerySourceUsageSummaryRequest extends Request {
 
     private QuerySourceUsageSummaryRequest(Builder builder) {
         super(builder);
+        this.appToken = builder.appToken;
         this.collaborationGroupId = builder.collaborationGroupId;
         this.endTime = builder.endTime;
         this.eventType = builder.eventType;
         this.knowledgeBaseIds = builder.knowledgeBaseIds;
+        this.opsUserCode = builder.opsUserCode;
+        this.opsUserId = builder.opsUserId;
         this.scopeType = builder.scopeType;
         this.sourceIds = builder.sourceIds;
         this.sourceName = builder.sourceName;
@@ -80,6 +95,13 @@ public class QuerySourceUsageSummaryRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return appToken
+     */
+    public String getAppToken() {
+        return this.appToken;
     }
 
     /**
@@ -108,6 +130,20 @@ public class QuerySourceUsageSummaryRequest extends Request {
      */
     public java.util.List<String> getKnowledgeBaseIds() {
         return this.knowledgeBaseIds;
+    }
+
+    /**
+     * @return opsUserCode
+     */
+    public String getOpsUserCode() {
+        return this.opsUserCode;
+    }
+
+    /**
+     * @return opsUserId
+     */
+    public String getOpsUserId() {
+        return this.opsUserId;
     }
 
     /**
@@ -146,10 +182,13 @@ public class QuerySourceUsageSummaryRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<QuerySourceUsageSummaryRequest, Builder> {
+        private String appToken; 
         private String collaborationGroupId; 
         private String endTime; 
         private String eventType; 
         private java.util.List<String> knowledgeBaseIds; 
+        private String opsUserCode; 
+        private String opsUserId; 
         private String scopeType; 
         private java.util.List<String> sourceIds; 
         private String sourceName; 
@@ -162,10 +201,13 @@ public class QuerySourceUsageSummaryRequest extends Request {
 
         private Builder(QuerySourceUsageSummaryRequest request) {
             super(request);
+            this.appToken = request.appToken;
             this.collaborationGroupId = request.collaborationGroupId;
             this.endTime = request.endTime;
             this.eventType = request.eventType;
             this.knowledgeBaseIds = request.knowledgeBaseIds;
+            this.opsUserCode = request.opsUserCode;
+            this.opsUserId = request.opsUserId;
             this.scopeType = request.scopeType;
             this.sourceIds = request.sourceIds;
             this.sourceName = request.sourceName;
@@ -174,7 +216,19 @@ public class QuerySourceUsageSummaryRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the collaboration group to which the resource belongs, such as cg_101. If you specify this parameter, a group workspace task is created, and the caller must be a valid group member. If you leave this parameter empty, a personal task is created.</p>
+         * <p>The platform application token issued by the console. If specified, the request is executed as the user identified by opsUserId or opsUserCode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>wn_app_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+         */
+        public Builder appToken(String appToken) {
+            this.putQueryParameter("appToken", appToken);
+            this.appToken = appToken;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the collaboration group to which the resource belongs, such as cg_101. If specified, a group workspace task is created, and the caller must be a valid group member. If left empty, a personal task is created.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleCollaborationGroupId</p>
@@ -202,7 +256,7 @@ public class QuerySourceUsageSummaryRequest extends Request {
          * <p>The event type.</p>
          * 
          * <strong>example:</strong>
-         * <p>UserOperator</p>
+         * <p>ALL</p>
          */
         public Builder eventType(String eventType) {
             this.putBodyParameter("eventType", eventType);
@@ -211,12 +265,36 @@ public class QuerySourceUsageSummaryRequest extends Request {
         }
 
         /**
-         * <p>The ID of the knowledge base folder.</p>
+         * <p>The IDs of the knowledge base folders.</p>
          */
         public Builder knowledgeBaseIds(java.util.List<String> knowledgeBaseIds) {
             String knowledgeBaseIdsShrink = shrink(knowledgeBaseIds, "knowledgeBaseIds", "json");
             this.putBodyParameter("knowledgeBaseIds", knowledgeBaseIdsShrink);
             this.knowledgeBaseIds = knowledgeBaseIds;
+            return this;
+        }
+
+        /**
+         * <p>The proxy user code, which is unique within the tenant. This parameter is used only when the application credential is configured as source_uid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alice</p>
+         */
+        public Builder opsUserCode(String opsUserCode) {
+            this.putQueryParameter("opsUserCode", opsUserCode);
+            this.opsUserCode = opsUserCode;
+            return this;
+        }
+
+        /**
+         * <p>The proxy user ID, which is the WINNEXO platform user ID. This parameter is used only when the application credential is configured as winnexo_uid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10001</p>
+         */
+        public Builder opsUserId(String opsUserId) {
+            this.putQueryParameter("opsUserId", opsUserId);
+            this.opsUserId = opsUserId;
             return this;
         }
 
@@ -229,7 +307,7 @@ public class QuerySourceUsageSummaryRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>Report perspective: TENANT for enterprise knowledge, GROUP for a single workspace, and ALL_GROUPS for all workspaces of the current tenant (platform super administrator only). Valid values: TENANT, GROUP, and ALL_GROUPS</p>
+         * <p>TENANT</p>
          */
         public Builder scopeType(String scopeType) {
             this.putBodyParameter("scopeType", scopeType);
@@ -238,7 +316,7 @@ public class QuerySourceUsageSummaryRequest extends Request {
         }
 
         /**
-         * <p>The source ID.</p>
+         * <p>The source IDs.</p>
          */
         public Builder sourceIds(java.util.List<String> sourceIds) {
             String sourceIdsShrink = shrink(sourceIds, "sourceIds", "json");
@@ -251,7 +329,7 @@ public class QuerySourceUsageSummaryRequest extends Request {
          * <p>The resume channel source.</p>
          * 
          * <strong>example:</strong>
-         * <p>The name of the source</p>
+         * <p>Source name content</p>
          */
         public Builder sourceName(String sourceName) {
             this.putBodyParameter("sourceName", sourceName);
@@ -273,7 +351,7 @@ public class QuerySourceUsageSummaryRequest extends Request {
         }
 
         /**
-         * <p>The tenant ID, which is a common parameter. If you use winnexo-cli, pass this parameter explicitly by using --tenant-id.</p>
+         * <p>The tenant ID. This is a common parameter. For winnexo-cli, this parameter is explicitly passed by using --tenant-id.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>

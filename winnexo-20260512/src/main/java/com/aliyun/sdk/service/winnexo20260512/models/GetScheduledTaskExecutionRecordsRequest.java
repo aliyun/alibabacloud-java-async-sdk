@@ -18,12 +18,24 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetScheduledTaskExecutionRecordsRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("appToken")
+    private String appToken;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("collaborationGroupId")
     private String collaborationGroupId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("initiatorUserId")
     private String initiatorUserId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("opsUserCode")
+    private String opsUserCode;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("opsUserId")
+    private String opsUserId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("page")
@@ -47,8 +59,11 @@ public class GetScheduledTaskExecutionRecordsRequest extends Request {
 
     private GetScheduledTaskExecutionRecordsRequest(Builder builder) {
         super(builder);
+        this.appToken = builder.appToken;
         this.collaborationGroupId = builder.collaborationGroupId;
         this.initiatorUserId = builder.initiatorUserId;
+        this.opsUserCode = builder.opsUserCode;
+        this.opsUserId = builder.opsUserId;
         this.page = builder.page;
         this.pageSize = builder.pageSize;
         this.status = builder.status;
@@ -70,6 +85,13 @@ public class GetScheduledTaskExecutionRecordsRequest extends Request {
     }
 
     /**
+     * @return appToken
+     */
+    public String getAppToken() {
+        return this.appToken;
+    }
+
+    /**
      * @return collaborationGroupId
      */
     public String getCollaborationGroupId() {
@@ -81,6 +103,20 @@ public class GetScheduledTaskExecutionRecordsRequest extends Request {
      */
     public String getInitiatorUserId() {
         return this.initiatorUserId;
+    }
+
+    /**
+     * @return opsUserCode
+     */
+    public String getOpsUserCode() {
+        return this.opsUserCode;
+    }
+
+    /**
+     * @return opsUserId
+     */
+    public String getOpsUserId() {
+        return this.opsUserId;
     }
 
     /**
@@ -119,8 +155,11 @@ public class GetScheduledTaskExecutionRecordsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetScheduledTaskExecutionRecordsRequest, Builder> {
+        private String appToken; 
         private String collaborationGroupId; 
         private String initiatorUserId; 
+        private String opsUserCode; 
+        private String opsUserId; 
         private Integer page; 
         private Integer pageSize; 
         private String status; 
@@ -133,8 +172,11 @@ public class GetScheduledTaskExecutionRecordsRequest extends Request {
 
         private Builder(GetScheduledTaskExecutionRecordsRequest request) {
             super(request);
+            this.appToken = request.appToken;
             this.collaborationGroupId = request.collaborationGroupId;
             this.initiatorUserId = request.initiatorUserId;
+            this.opsUserCode = request.opsUserCode;
+            this.opsUserId = request.opsUserId;
             this.page = request.page;
             this.pageSize = request.pageSize;
             this.status = request.status;
@@ -143,7 +185,19 @@ public class GetScheduledTaskExecutionRecordsRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the collaboration group to which the task belongs, such as cg_101. If you specify this parameter, a group workspace task is created, and the caller must be a valid group member. If you leave this parameter empty, a personal task is created.</p>
+         * <p>The platform application token issued by the console. If this parameter is passed, the operation is executed as the user specified by opsUserId or opsUserCode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>wn_app_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+         */
+        public Builder appToken(String appToken) {
+            this.putQueryParameter("appToken", appToken);
+            this.appToken = appToken;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the collaboration group to which the task belongs, such as cg_101. If this parameter is passed, a group space task is created, and the caller must be a valid group member. If this parameter is left empty, a personal task is created.</p>
          * 
          * <strong>example:</strong>
          * <p>1112</p>
@@ -155,7 +209,7 @@ public class GetScheduledTaskExecutionRecordsRequest extends Request {
         }
 
         /**
-         * <p>The business status code. A value of 200 indicates success. A failure returns a backend error code, such as ERR.* or InvalidParameter.*.</p>
+         * <p>The business status code. A value of 200 indicates success. A failure is indicated by a backend error code such as ERR.* or InvalidParameter.*.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -163,6 +217,30 @@ public class GetScheduledTaskExecutionRecordsRequest extends Request {
         public Builder initiatorUserId(String initiatorUserId) {
             this.putQueryParameter("initiatorUserId", initiatorUserId);
             this.initiatorUserId = initiatorUserId;
+            return this;
+        }
+
+        /**
+         * <p>The proxy user code, which is unique within the tenant. This parameter is used only when the application credential is configured as source_uid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alice</p>
+         */
+        public Builder opsUserCode(String opsUserCode) {
+            this.putQueryParameter("opsUserCode", opsUserCode);
+            this.opsUserCode = opsUserCode;
+            return this;
+        }
+
+        /**
+         * <p>The proxy user ID, which is the WINNEXO platform user ID. This parameter is used only when the application credential is configured as winnexo_uid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10001</p>
+         */
+        public Builder opsUserId(String opsUserId) {
+            this.putQueryParameter("opsUserId", opsUserId);
+            this.opsUserId = opsUserId;
             return this;
         }
 
@@ -191,7 +269,7 @@ public class GetScheduledTaskExecutionRecordsRequest extends Request {
         }
 
         /**
-         * <p>The initiator filter based on the platform user ID. The caliber is the executor of the record. For manual execution, it is the trigger user. For automatic execution, it is the task creator. To view only the tasks initiated by yourself, pass the current user ID.</p>
+         * <p>Filters records by the initiator platform user ID. The scope is the executor of the record. For manual execution, the executor is the trigger user. For automatic execution, the executor is the task creator. To view only the tasks that you initiated, pass the current user ID.</p>
          * 
          * <strong>example:</strong>
          * <p>failed</p>
@@ -203,7 +281,7 @@ public class GetScheduledTaskExecutionRecordsRequest extends Request {
         }
 
         /**
-         * <p>The execution status filter in lowercase. Valid values: pending (queued), running (running), success (successful), failed (failed), timeout (timed out), and cancelled (cancelled). If you do not specify this parameter, no filtering is applied. If you specify this parameter, future planned items are no longer generated.</p>
+         * <p>The execution status filter in lowercase. Valid values: pending (queued), running (executing), success (succeeded), failed (failed), timeout (timed out), and cancelled (cancelled). If this parameter is not passed, no filtering is applied. If this parameter is passed, future plan items are not generated.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleTaskId</p>
@@ -215,7 +293,7 @@ public class GetScheduledTaskExecutionRecordsRequest extends Request {
         }
 
         /**
-         * <p>The effective tenant ID.</p>
+         * <p>The ID of the effective tenant.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>

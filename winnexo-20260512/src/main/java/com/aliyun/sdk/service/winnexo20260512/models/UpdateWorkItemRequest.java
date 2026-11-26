@@ -21,6 +21,10 @@ public class UpdateWorkItemRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("acceptanceCriteria")
     private String acceptanceCriteria;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("appToken")
+    private String appToken;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("attachments")
     private java.util.List<Attachments> attachments;
@@ -46,6 +50,14 @@ public class UpdateWorkItemRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("expectedVersion")
     @com.aliyun.core.annotation.Validation(required = true)
     private Long expectedVersion;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("opsUserCode")
+    private String opsUserCode;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("opsUserId")
+    private String opsUserId;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ownerUserId")
@@ -76,12 +88,15 @@ public class UpdateWorkItemRequest extends Request {
     private UpdateWorkItemRequest(Builder builder) {
         super(builder);
         this.acceptanceCriteria = builder.acceptanceCriteria;
+        this.appToken = builder.appToken;
         this.attachments = builder.attachments;
         this.collaborationGroupId = builder.collaborationGroupId;
         this.collaboratorUserIds = builder.collaboratorUserIds;
         this.conversationId = builder.conversationId;
         this.description = builder.description;
         this.expectedVersion = builder.expectedVersion;
+        this.opsUserCode = builder.opsUserCode;
+        this.opsUserId = builder.opsUserId;
         this.ownerUserId = builder.ownerUserId;
         this.priority = builder.priority;
         this.tenantId = builder.tenantId;
@@ -108,6 +123,13 @@ public class UpdateWorkItemRequest extends Request {
      */
     public String getAcceptanceCriteria() {
         return this.acceptanceCriteria;
+    }
+
+    /**
+     * @return appToken
+     */
+    public String getAppToken() {
+        return this.appToken;
     }
 
     /**
@@ -150,6 +172,20 @@ public class UpdateWorkItemRequest extends Request {
      */
     public Long getExpectedVersion() {
         return this.expectedVersion;
+    }
+
+    /**
+     * @return opsUserCode
+     */
+    public String getOpsUserCode() {
+        return this.opsUserCode;
+    }
+
+    /**
+     * @return opsUserId
+     */
+    public String getOpsUserId() {
+        return this.opsUserId;
     }
 
     /**
@@ -196,12 +232,15 @@ public class UpdateWorkItemRequest extends Request {
 
     public static final class Builder extends Request.Builder<UpdateWorkItemRequest, Builder> {
         private String acceptanceCriteria; 
+        private String appToken; 
         private java.util.List<Attachments> attachments; 
         private String collaborationGroupId; 
         private java.util.List<Long> collaboratorUserIds; 
         private String conversationId; 
         private String description; 
         private Long expectedVersion; 
+        private String opsUserCode; 
+        private String opsUserId; 
         private Long ownerUserId; 
         private String priority; 
         private String tenantId; 
@@ -216,12 +255,15 @@ public class UpdateWorkItemRequest extends Request {
         private Builder(UpdateWorkItemRequest request) {
             super(request);
             this.acceptanceCriteria = request.acceptanceCriteria;
+            this.appToken = request.appToken;
             this.attachments = request.attachments;
             this.collaborationGroupId = request.collaborationGroupId;
             this.collaboratorUserIds = request.collaboratorUserIds;
             this.conversationId = request.conversationId;
             this.description = request.description;
             this.expectedVersion = request.expectedVersion;
+            this.opsUserCode = request.opsUserCode;
+            this.opsUserId = request.opsUserId;
             this.ownerUserId = request.ownerUserId;
             this.priority = request.priority;
             this.tenantId = request.tenantId;
@@ -239,6 +281,18 @@ public class UpdateWorkItemRequest extends Request {
         public Builder acceptanceCriteria(String acceptanceCriteria) {
             this.putBodyParameter("acceptanceCriteria", acceptanceCriteria);
             this.acceptanceCriteria = acceptanceCriteria;
+            return this;
+        }
+
+        /**
+         * <p>平台应用 Token（控制台签发）。传入后将以 opsUserId 或 opsUserCode 指定的用户身份执行</p>
+         * 
+         * <strong>example:</strong>
+         * <p>wn_app_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+         */
+        public Builder appToken(String appToken) {
+            this.putQueryParameter("appToken", appToken);
+            this.appToken = appToken;
             return this;
         }
 
@@ -315,6 +369,30 @@ public class UpdateWorkItemRequest extends Request {
         public Builder expectedVersion(Long expectedVersion) {
             this.putBodyParameter("expectedVersion", expectedVersion);
             this.expectedVersion = expectedVersion;
+            return this;
+        }
+
+        /**
+         * <p>代理用户编码（租户内唯一），仅当应用凭证配置为 source_uid 时使用</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alice</p>
+         */
+        public Builder opsUserCode(String opsUserCode) {
+            this.putQueryParameter("opsUserCode", opsUserCode);
+            this.opsUserCode = opsUserCode;
+            return this;
+        }
+
+        /**
+         * <p>代理用户ID（WINNEXO 平台用户ID），仅当应用凭证配置为 winnexo_uid 时使用</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10001</p>
+         */
+        public Builder opsUserId(String opsUserId) {
+            this.putQueryParameter("opsUserId", opsUserId);
+            this.opsUserId = opsUserId;
             return this;
         }
 

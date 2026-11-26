@@ -106,7 +106,7 @@ public class UpdateScheduledTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The business status code. A value of 200 indicates success. A value of a backend error code such as ERR.* or InvalidParameter.* indicates failure.</p>
+         * <p>The business status code. A value of 200 indicates success. A backend error code such as ERR.* or InvalidParameter.* indicates failure.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -117,7 +117,7 @@ public class UpdateScheduledTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message. This parameter is empty when the request is successful.</p>
+         * <p>The error description. This parameter is empty if the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>ok</p>
@@ -139,7 +139,7 @@ public class UpdateScheduledTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The task ID.</p>
+         * <p>The task ID returned in the response.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleTaskId</p>
@@ -150,7 +150,7 @@ public class UpdateScheduledTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Specifies whether an actual update is performed.</p>
+         * <p>Specifies whether an update is actually performed.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

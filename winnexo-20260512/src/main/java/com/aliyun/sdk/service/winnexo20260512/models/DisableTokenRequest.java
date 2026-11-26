@@ -85,7 +85,7 @@ public class DisableTokenRequest extends Request {
         }
 
         /**
-         * <p>The ID of the target user (WINNEXO platform user ID). If left empty, the operation is performed on the caller. Administrators can specify another user\&quot;s ID to perform the operation on their behalf.</p>
+         * <p>The ID of the target user (WINNEXO platform user ID). If left empty, the operation is performed on the caller. Administrators can specify another user&quot;s ID to perform the operation on their behalf.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

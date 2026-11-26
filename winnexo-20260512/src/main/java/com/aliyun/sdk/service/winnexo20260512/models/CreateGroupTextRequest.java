@@ -17,6 +17,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateGroupTextRequest</p>
  */
 public class CreateGroupTextRequest extends Request {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("appToken")
+    private String appToken;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("description")
     private String description;
@@ -35,6 +39,14 @@ public class CreateGroupTextRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("opsUserCode")
+    private String opsUserCode;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("opsUserId")
+    private String opsUserId;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("sourceTags")
     private String sourceTags;
@@ -50,10 +62,13 @@ public class CreateGroupTextRequest extends Request {
 
     private CreateGroupTextRequest(Builder builder) {
         super(builder);
+        this.appToken = builder.appToken;
         this.description = builder.description;
         this.directoryId = builder.directoryId;
         this.groupId = builder.groupId;
         this.name = builder.name;
+        this.opsUserCode = builder.opsUserCode;
+        this.opsUserId = builder.opsUserId;
         this.sourceTags = builder.sourceTags;
         this.tenantId = builder.tenantId;
         this.textContent = builder.textContent;
@@ -70,6 +85,13 @@ public class CreateGroupTextRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return appToken
+     */
+    public String getAppToken() {
+        return this.appToken;
     }
 
     /**
@@ -101,6 +123,20 @@ public class CreateGroupTextRequest extends Request {
     }
 
     /**
+     * @return opsUserCode
+     */
+    public String getOpsUserCode() {
+        return this.opsUserCode;
+    }
+
+    /**
+     * @return opsUserId
+     */
+    public String getOpsUserId() {
+        return this.opsUserId;
+    }
+
+    /**
      * @return sourceTags
      */
     public String getSourceTags() {
@@ -122,10 +158,13 @@ public class CreateGroupTextRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateGroupTextRequest, Builder> {
+        private String appToken; 
         private String description; 
         private String directoryId; 
         private String groupId; 
         private String name; 
+        private String opsUserCode; 
+        private String opsUserId; 
         private String sourceTags; 
         private String tenantId; 
         private String textContent; 
@@ -136,14 +175,29 @@ public class CreateGroupTextRequest extends Request {
 
         private Builder(CreateGroupTextRequest request) {
             super(request);
+            this.appToken = request.appToken;
             this.description = request.description;
             this.directoryId = request.directoryId;
             this.groupId = request.groupId;
             this.name = request.name;
+            this.opsUserCode = request.opsUserCode;
+            this.opsUserId = request.opsUserId;
             this.sourceTags = request.sourceTags;
             this.tenantId = request.tenantId;
             this.textContent = request.textContent;
         } 
+
+        /**
+         * <p>The platform application token issued by the console. If this parameter is specified, the operation is performed as the user specified by opsUserId or opsUserCode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>wn_app_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+         */
+        public Builder appToken(String appToken) {
+            this.putQueryParameter("appToken", appToken);
+            this.appToken = appToken;
+            return this;
+        }
 
         /**
          * <p>The description of the AI assistant.</p>
@@ -158,7 +212,7 @@ public class CreateGroupTextRequest extends Request {
         }
 
         /**
-         * <p>The folder ID.</p>
+         * <p>The directory ID.</p>
          * 
          * <strong>example:</strong>
          * <p>dir_example</p>
@@ -183,15 +237,39 @@ public class CreateGroupTextRequest extends Request {
         }
 
         /**
-         * <p>The image name.</p>
+         * <p>The mirror name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>ProjectResources</p>
+         * <p>Project materials</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("name", name);
             this.name = name;
+            return this;
+        }
+
+        /**
+         * <p>The proxy user code, which is unique within the tenant. This parameter is used only when the application credential is configured as source_uid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alice</p>
+         */
+        public Builder opsUserCode(String opsUserCode) {
+            this.putQueryParameter("opsUserCode", opsUserCode);
+            this.opsUserCode = opsUserCode;
+            return this;
+        }
+
+        /**
+         * <p>The proxy user ID, which is the WINNEXO platform user ID. This parameter is used only when the application credential is configured as winnexo_uid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10001</p>
+         */
+        public Builder opsUserId(String opsUserId) {
+            this.putQueryParameter("opsUserId", opsUserId);
+            this.opsUserId = opsUserId;
             return this;
         }
 
@@ -208,7 +286,7 @@ public class CreateGroupTextRequest extends Request {
         }
 
         /**
-         * <p>The tenant ID. This is a common parameter. If not specified, the default tenant of the caller is used.</p>
+         * <p>The tenant ID. This is a common parameter. If this parameter is not specified, the default tenant of the caller is used.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>

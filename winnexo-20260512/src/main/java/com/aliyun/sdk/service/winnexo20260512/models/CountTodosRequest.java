@@ -17,9 +17,21 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CountTodosRequest</p>
  */
 public class CountTodosRequest extends Request {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("appToken")
+    private String appToken;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("collaborationGroupId")
     private String collaborationGroupId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("opsUserCode")
+    private String opsUserCode;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("opsUserId")
+    private String opsUserId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("tenantId")
@@ -27,7 +39,10 @@ public class CountTodosRequest extends Request {
 
     private CountTodosRequest(Builder builder) {
         super(builder);
+        this.appToken = builder.appToken;
         this.collaborationGroupId = builder.collaborationGroupId;
+        this.opsUserCode = builder.opsUserCode;
+        this.opsUserId = builder.opsUserId;
         this.tenantId = builder.tenantId;
     }
 
@@ -45,10 +60,31 @@ public class CountTodosRequest extends Request {
     }
 
     /**
+     * @return appToken
+     */
+    public String getAppToken() {
+        return this.appToken;
+    }
+
+    /**
      * @return collaborationGroupId
      */
     public String getCollaborationGroupId() {
         return this.collaborationGroupId;
+    }
+
+    /**
+     * @return opsUserCode
+     */
+    public String getOpsUserCode() {
+        return this.opsUserCode;
+    }
+
+    /**
+     * @return opsUserId
+     */
+    public String getOpsUserId() {
+        return this.opsUserId;
     }
 
     /**
@@ -59,7 +95,10 @@ public class CountTodosRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CountTodosRequest, Builder> {
+        private String appToken; 
         private String collaborationGroupId; 
+        private String opsUserCode; 
+        private String opsUserId; 
         private String tenantId; 
 
         private Builder() {
@@ -68,12 +107,27 @@ public class CountTodosRequest extends Request {
 
         private Builder(CountTodosRequest request) {
             super(request);
+            this.appToken = request.appToken;
             this.collaborationGroupId = request.collaborationGroupId;
+            this.opsUserCode = request.opsUserCode;
+            this.opsUserId = request.opsUserId;
             this.tenantId = request.tenantId;
         } 
 
         /**
-         * <p>The collaboration workspace ID. This parameter is optional and used for filtering. If this parameter is not specified, all workspaces are included.</p>
+         * <p>The platform application token issued by the console. If specified, the request is executed as the user identified by opsUserId or opsUserCode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>wn_app_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+         */
+        public Builder appToken(String appToken) {
+            this.putQueryParameter("appToken", appToken);
+            this.appToken = appToken;
+            return this;
+        }
+
+        /**
+         * <p>The collaboration workspace ID used for filtering. If not specified, all workspaces are included.</p>
          * 
          * <strong>example:</strong>
          * <p>cg_123</p>
@@ -85,7 +139,31 @@ public class CountTodosRequest extends Request {
         }
 
         /**
-         * <p>The tenant ID. This is a common parameter. If this parameter is not specified, the default tenant of the caller is used.</p>
+         * <p>The proxy user code, which is unique within the tenant. This parameter is used only when the application credential is configured as source_uid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alice</p>
+         */
+        public Builder opsUserCode(String opsUserCode) {
+            this.putQueryParameter("opsUserCode", opsUserCode);
+            this.opsUserCode = opsUserCode;
+            return this;
+        }
+
+        /**
+         * <p>The proxy user ID, which is the WINNEXO platform user ID. This parameter is used only when the application credential is configured as winnexo_uid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10001</p>
+         */
+        public Builder opsUserId(String opsUserId) {
+            this.putQueryParameter("opsUserId", opsUserId);
+            this.opsUserId = opsUserId;
+            return this;
+        }
+
+        /**
+         * <p>The tenant ID. This is a common parameter. If not specified, the default tenant of the caller is used.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>

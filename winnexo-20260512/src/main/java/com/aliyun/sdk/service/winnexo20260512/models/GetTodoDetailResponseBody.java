@@ -398,10 +398,10 @@ public class GetTodoDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The attachment policy. Attachments are not stored in the database in the current version.</p>
+         * <p>The attachment policy. In the current version, attachments are not stored in the database.</p>
          * 
          * <strong>example:</strong>
-         * <p>allowUpload=true</p>
+         * <p>{&quot;allowAttachments&quot;:&quot;true&quot;,&quot;maxFilesPerQuestion&quot;:&quot;20&quot;,&quot;maxFilesTotal&quot;:&quot;50&quot;,&quot;maxFileSizeBytes&quot;:&quot;52428800&quot;,&quot;acceptTypes&quot;:[]}</p>
          */
         public Builder attachmentPolicy(java.util.Map<String, ?> attachmentPolicy) {
             this.attachmentPolicy = attachmentPolicy;
@@ -420,7 +420,7 @@ public class GetTodoDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The completion time in UTC+8 (YYYY-MM-DD HH:mm:ss).</p>
+         * <p>The completion time in the YYYY-MM-DD HH:mm:ss format (UTC+8).</p>
          * 
          * <strong>example:</strong>
          * <p>2026-10-12 10:00:00</p>
@@ -453,7 +453,7 @@ public class GetTodoDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The creation time in UTC+8 (YYYY-MM-DD HH:mm:ss).</p>
+         * <p>The creation time in the YYYY-MM-DD HH:mm:ss format (UTC+8).</p>
          * 
          * <strong>example:</strong>
          * <p>2026-10-12 10:00:00</p>
@@ -464,7 +464,7 @@ public class GetTodoDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The last modification time in UTC+8 (YYYY-MM-DD HH:mm:ss).</p>
+         * <p>The last modification time in the YYYY-MM-DD HH:mm:ss format (UTC+8).</p>
          * 
          * <strong>example:</strong>
          * <p>2026-10-12 10:00:00</p>
@@ -508,7 +508,7 @@ public class GetTodoDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The action status of the caller as the assignee.</p>
+         * <p>The action status of the caller as an assignee.</p>
          * 
          * <strong>example:</strong>
          * <p>PENDING</p>
@@ -522,7 +522,7 @@ public class GetTodoDetailResponseBody extends TeaModel {
          * <p>The list display status for the caller.</p>
          * 
          * <strong>example:</strong>
-         * <p>TODO</p>
+         * <p>DONE</p>
          */
         public Builder myDisplayState(String myDisplayState) {
             this.myDisplayState = myDisplayState;
@@ -530,10 +530,10 @@ public class GetTodoDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The permissions of the caller, such as canSubmit and canTransfer.</p>
+         * <p>The permissions of the caller. Valid values: canSubmit and canTransfer.</p>
          * 
          * <strong>example:</strong>
-         * <p>APP/VIEW=true</p>
+         * <p>{&quot;canSubmit&quot;:&quot;true&quot;,&quot;canTransfer&quot;:&quot;false&quot;}</p>
          */
         public Builder myPermissions(java.util.Map<String, ?> myPermissions) {
             this.myPermissions = myPermissions;
@@ -552,7 +552,7 @@ public class GetTodoDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of questions (structured projection).</p>
+         * <p>The structured list of questions.</p>
          */
         public Builder questions(java.util.List<Questions> questions) {
             this.questions = questions;
@@ -571,10 +571,10 @@ public class GetTodoDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response content in JSONB format as-is. Defaults to an empty object if not submitted.</p>
+         * <p>The response content in JSONB format, passed through as-is. Defaults to an empty object if not submitted.</p>
          * 
          * <strong>example:</strong>
-         * <p>result=Approved</p>
+         * <p>{&quot;answers&quot;:[{&quot;question&quot;:&quot;Whether to approve&quot;,&quot;answer&quot;:[&quot;Approve&quot;]}]}</p>
          */
         public Builder resultPayload(java.util.Map<String, ?> resultPayload) {
             this.resultPayload = resultPayload;
@@ -582,10 +582,10 @@ public class GetTodoDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The source context. This context is passed through as-is during creation.</p>
+         * <p>The source context, which is passed through as-is during creation.</p>
          * 
          * <strong>example:</strong>
-         * <p>source=openapi</p>
+         * <p>{&quot;source&quot;:&quot;openapi&quot;}</p>
          */
         public Builder sourceContext(java.util.Map<String, ?> sourceContext) {
             this.sourceContext = sourceContext;
@@ -769,7 +769,7 @@ public class GetTodoDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The action time in UTC+8. This field is empty if the item is not processed.</p>
+             * <p>The time when the item was processed (UTC+8). This field is empty if the item is unprocessed.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-10-16T10:30:00+08:00</p>
@@ -802,7 +802,7 @@ public class GetTodoDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The read time in UTC+8. This field is empty if the item is unread.</p>
+             * <p>The time when the item was read (UTC+8). This field is empty if the item is unread.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-10-12 10:01:00</p>
@@ -907,10 +907,10 @@ public class GetTodoDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The supplementary description of the option.</p>
+             * <p>The additional description for the option.</p>
              * 
              * <strong>example:</strong>
-             * <p>Supplementary description of the option</p>
+             * <p>Additional description for the option</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -918,7 +918,7 @@ public class GetTodoDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The option text (reference key).</p>
+             * <p>The option text, which serves as a reference key.</p>
              * 
              * <strong>example:</strong>
              * <p>Approve</p>
@@ -1114,7 +1114,7 @@ public class GetTodoDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The text for the custom input field.</p>
+             * <p>The text for the custom input item.</p>
              * 
              * <strong>example:</strong>
              * <p>Other</p>
@@ -1169,7 +1169,7 @@ public class GetTodoDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The options. This field is required for choice questions.</p>
+             * <p>The options, which are required for choice questions.</p>
              */
             public Builder options(java.util.List<Options> options) {
                 this.options = options;
@@ -1188,7 +1188,7 @@ public class GetTodoDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The question text (reference key).</p>
+             * <p>The question text, which serves as a reference key.</p>
              * 
              * <strong>example:</strong>
              * <p>Whether to approve</p>

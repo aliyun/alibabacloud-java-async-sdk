@@ -17,6 +17,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateGroupDingtalkChatRequest</p>
  */
 public class CreateGroupDingtalkChatRequest extends Request {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("appToken")
+    private String appToken;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("chatId")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -52,6 +56,14 @@ public class CreateGroupDingtalkChatRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("operatingObjectName")
     private String operatingObjectName;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("opsUserCode")
+    private String opsUserCode;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("opsUserId")
+    private String opsUserId;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("sourceTags")
     private String sourceTags;
@@ -66,6 +78,7 @@ public class CreateGroupDingtalkChatRequest extends Request {
 
     private CreateGroupDingtalkChatRequest(Builder builder) {
         super(builder);
+        this.appToken = builder.appToken;
         this.chatId = builder.chatId;
         this.chatName = builder.chatName;
         this.description = builder.description;
@@ -74,6 +87,8 @@ public class CreateGroupDingtalkChatRequest extends Request {
         this.historyStartTime = builder.historyStartTime;
         this.notes = builder.notes;
         this.operatingObjectName = builder.operatingObjectName;
+        this.opsUserCode = builder.opsUserCode;
+        this.opsUserId = builder.opsUserId;
         this.sourceTags = builder.sourceTags;
         this.tenantId = builder.tenantId;
         this.updateFrequency = builder.updateFrequency;
@@ -90,6 +105,13 @@ public class CreateGroupDingtalkChatRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return appToken
+     */
+    public String getAppToken() {
+        return this.appToken;
     }
 
     /**
@@ -149,6 +171,20 @@ public class CreateGroupDingtalkChatRequest extends Request {
     }
 
     /**
+     * @return opsUserCode
+     */
+    public String getOpsUserCode() {
+        return this.opsUserCode;
+    }
+
+    /**
+     * @return opsUserId
+     */
+    public String getOpsUserId() {
+        return this.opsUserId;
+    }
+
+    /**
      * @return sourceTags
      */
     public String getSourceTags() {
@@ -170,6 +206,7 @@ public class CreateGroupDingtalkChatRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateGroupDingtalkChatRequest, Builder> {
+        private String appToken; 
         private String chatId; 
         private String chatName; 
         private String description; 
@@ -178,6 +215,8 @@ public class CreateGroupDingtalkChatRequest extends Request {
         private String historyStartTime; 
         private String notes; 
         private String operatingObjectName; 
+        private String opsUserCode; 
+        private String opsUserId; 
         private String sourceTags; 
         private String tenantId; 
         private UpdateFrequency updateFrequency; 
@@ -188,6 +227,7 @@ public class CreateGroupDingtalkChatRequest extends Request {
 
         private Builder(CreateGroupDingtalkChatRequest request) {
             super(request);
+            this.appToken = request.appToken;
             this.chatId = request.chatId;
             this.chatName = request.chatName;
             this.description = request.description;
@@ -196,13 +236,27 @@ public class CreateGroupDingtalkChatRequest extends Request {
             this.historyStartTime = request.historyStartTime;
             this.notes = request.notes;
             this.operatingObjectName = request.operatingObjectName;
+            this.opsUserCode = request.opsUserCode;
+            this.opsUserId = request.opsUserId;
             this.sourceTags = request.sourceTags;
             this.tenantId = request.tenantId;
             this.updateFrequency = request.updateFrequency;
         } 
 
         /**
-         * <p>The session ID, typically used for JSSDK.</p>
+         * <p>The platform application token issued by the console. If specified, the operation is performed as the user specified by opsUserId or opsUserCode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>wn_app_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+         */
+        public Builder appToken(String appToken) {
+            this.putQueryParameter("appToken", appToken);
+            this.appToken = appToken;
+            return this;
+        }
+
+        /**
+         * <p>The chat ID, which is generally used for JSSDK.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -215,10 +269,10 @@ public class CreateGroupDingtalkChatRequest extends Request {
         }
 
         /**
-         * <p>The group chat name.</p>
+         * <p>The name of the group chat.</p>
          * 
          * <strong>example:</strong>
-         * <p>CustomerProjectGroup</p>
+         * <p>Customer project group</p>
          */
         public Builder chatName(String chatName) {
             this.putBodyParameter("chatName", chatName);
@@ -230,7 +284,7 @@ public class CreateGroupDingtalkChatRequest extends Request {
          * <p>The description of the AI assistant.</p>
          * 
          * <strong>example:</strong>
-         * <p>Customer chat history</p>
+         * <p>Customer group chat history</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -264,7 +318,7 @@ public class CreateGroupDingtalkChatRequest extends Request {
         }
 
         /**
-         * <p>The start time for collecting chat history.</p>
+         * <p>The start time for collecting chat records.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -277,7 +331,7 @@ public class CreateGroupDingtalkChatRequest extends Request {
         }
 
         /**
-         * <p>The meeting notes content (optional). This participates in auxiliary analysis.</p>
+         * <p>The content of the meeting notes. This parameter is optional and is used for auxiliary analysis.</p>
          * 
          * <strong>example:</strong>
          * <p>Focus on identifying customer demands and to-do items</p>
@@ -289,7 +343,7 @@ public class CreateGroupDingtalkChatRequest extends Request {
         }
 
         /**
-         * <p>The name of the digital employee (operating object name, optional).</p>
+         * <p>The name of the digital employee, which is the name of the operating object. This parameter is optional.</p>
          * 
          * <strong>example:</strong>
          * <p>my-agent</p>
@@ -301,10 +355,34 @@ public class CreateGroupDingtalkChatRequest extends Request {
         }
 
         /**
+         * <p>The proxy user code, which is unique within the tenant. This parameter is used only when the application credential is configured as source_uid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alice</p>
+         */
+        public Builder opsUserCode(String opsUserCode) {
+            this.putQueryParameter("opsUserCode", opsUserCode);
+            this.opsUserCode = opsUserCode;
+            return this;
+        }
+
+        /**
+         * <p>The proxy user ID, which is the WINNEXO platform user ID. This parameter is used only when the application credential is configured as winnexo_uid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10001</p>
+         */
+        public Builder opsUserId(String opsUserId) {
+            this.putQueryParameter("opsUserId", opsUserId);
+            this.opsUserId = opsUserId;
+            return this;
+        }
+
+        /**
          * <p>The source tags.</p>
          * 
          * <strong>example:</strong>
-         * <p>[&quot;Customer&quot;,&quot;GroupChat&quot;]</p>
+         * <p>[&quot;Customer&quot;,&quot;Group chat&quot;]</p>
          */
         public Builder sourceTags(String sourceTags) {
             this.putBodyParameter("sourceTags", sourceTags);
@@ -313,7 +391,7 @@ public class CreateGroupDingtalkChatRequest extends Request {
         }
 
         /**
-         * <p>The tenant ID. This is a common parameter. In winnexo-cli, pass this explicitly with --tenant-id.</p>
+         * <p>The tenant ID. This is a common parameter. For winnexo-cli, explicitly pass this parameter by using --tenant-id.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>
@@ -407,7 +485,7 @@ public class CreateGroupDingtalkChatRequest extends Request {
             } 
 
             /**
-             * <p>The cron expression for timed scheduling.</p>
+             * <p>The cron expression for the timed scheduling node.</p>
              * 
              * <strong>example:</strong>
              * <p>0 2 * * *</p>

@@ -17,6 +17,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateKnowledgeBaseDirectoryRequest</p>
  */
 public class CreateKnowledgeBaseDirectoryRequest extends Request {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("appToken")
+    private String appToken;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("description")
     private String description;
@@ -25,6 +29,14 @@ public class CreateKnowledgeBaseDirectoryRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("name")
     @com.aliyun.core.annotation.Validation(required = true)
     private String name;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("opsUserCode")
+    private String opsUserCode;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("opsUserId")
+    private String opsUserId;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("parentDirectoryId")
@@ -36,8 +48,11 @@ public class CreateKnowledgeBaseDirectoryRequest extends Request {
 
     private CreateKnowledgeBaseDirectoryRequest(Builder builder) {
         super(builder);
+        this.appToken = builder.appToken;
         this.description = builder.description;
         this.name = builder.name;
+        this.opsUserCode = builder.opsUserCode;
+        this.opsUserId = builder.opsUserId;
         this.parentDirectoryId = builder.parentDirectoryId;
         this.tenantId = builder.tenantId;
     }
@@ -56,6 +71,13 @@ public class CreateKnowledgeBaseDirectoryRequest extends Request {
     }
 
     /**
+     * @return appToken
+     */
+    public String getAppToken() {
+        return this.appToken;
+    }
+
+    /**
      * @return description
      */
     public String getDescription() {
@@ -67,6 +89,20 @@ public class CreateKnowledgeBaseDirectoryRequest extends Request {
      */
     public String getName() {
         return this.name;
+    }
+
+    /**
+     * @return opsUserCode
+     */
+    public String getOpsUserCode() {
+        return this.opsUserCode;
+    }
+
+    /**
+     * @return opsUserId
+     */
+    public String getOpsUserId() {
+        return this.opsUserId;
     }
 
     /**
@@ -84,8 +120,11 @@ public class CreateKnowledgeBaseDirectoryRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateKnowledgeBaseDirectoryRequest, Builder> {
+        private String appToken; 
         private String description; 
         private String name; 
+        private String opsUserCode; 
+        private String opsUserId; 
         private String parentDirectoryId; 
         private String tenantId; 
 
@@ -95,11 +134,26 @@ public class CreateKnowledgeBaseDirectoryRequest extends Request {
 
         private Builder(CreateKnowledgeBaseDirectoryRequest request) {
             super(request);
+            this.appToken = request.appToken;
             this.description = request.description;
             this.name = request.name;
+            this.opsUserCode = request.opsUserCode;
+            this.opsUserId = request.opsUserId;
             this.parentDirectoryId = request.parentDirectoryId;
             this.tenantId = request.tenantId;
         } 
+
+        /**
+         * <p>The platform application token issued by the console. If specified, the operation is executed as the user specified by opsUserId or opsUserCode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>wn_app_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+         */
+        public Builder appToken(String appToken) {
+            this.putQueryParameter("appToken", appToken);
+            this.appToken = appToken;
+            return this;
+        }
 
         /**
          * <p>The description of the AI assistant.</p>
@@ -123,6 +177,30 @@ public class CreateKnowledgeBaseDirectoryRequest extends Request {
         public Builder name(String name) {
             this.putBodyParameter("name", name);
             this.name = name;
+            return this;
+        }
+
+        /**
+         * <p>The proxy user code, which is unique within the tenant. This parameter is used only when the application credential is configured as source_uid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alice</p>
+         */
+        public Builder opsUserCode(String opsUserCode) {
+            this.putQueryParameter("opsUserCode", opsUserCode);
+            this.opsUserCode = opsUserCode;
+            return this;
+        }
+
+        /**
+         * <p>The proxy user ID, which is the WINNEXO platform user ID. This parameter is used only when the application credential is configured as winnexo_uid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10001</p>
+         */
+        public Builder opsUserId(String opsUserId) {
+            this.putQueryParameter("opsUserId", opsUserId);
+            this.opsUserId = opsUserId;
             return this;
         }
 

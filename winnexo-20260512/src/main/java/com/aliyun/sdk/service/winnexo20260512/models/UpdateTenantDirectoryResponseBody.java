@@ -93,7 +93,7 @@ public class UpdateTenantDirectoryResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The status code.</p>
+         * <p>The business status code. A value of 200 indicates success. If the request fails, a specific business error code is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -104,10 +104,10 @@ public class UpdateTenantDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The folder ID.</p>
+         * <p>The business ID of the updated directory. You can refresh the configuration content by calling the corresponding configuration read API operation.</p>
          * 
          * <strong>example:</strong>
-         * <p>exampleDirectoryId</p>
+         * <p>kb-example</p>
          */
         public Builder directoryId(String directoryId) {
             this.directoryId = directoryId;
@@ -115,10 +115,10 @@ public class UpdateTenantDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The description of the status code.</p>
+         * <p>The response message. The value is success if the request is successful. If the request fails, the message describes the cause of the error.</p>
          * 
          * <strong>example:</strong>
-         * <p>ok</p>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -126,7 +126,7 @@ public class UpdateTenantDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The request tracking ID. You can use this ID to troubleshoot issues related to this call.</p>
          * 
          * <strong>example:</strong>
          * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>

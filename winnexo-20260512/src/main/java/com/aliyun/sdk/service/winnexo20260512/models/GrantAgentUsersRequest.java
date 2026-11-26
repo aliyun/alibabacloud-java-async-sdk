@@ -17,6 +17,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GrantAgentUsersRequest</p>
  */
 public class GrantAgentUsersRequest extends Request {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("appToken")
+    private String appToken;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("expireDate")
     private Long expireDate;
@@ -25,6 +29,14 @@ public class GrantAgentUsersRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("operatingObjectName")
     @com.aliyun.core.annotation.Validation(required = true)
     private String operatingObjectName;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("opsUserCode")
+    private String opsUserCode;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("opsUserId")
+    private String opsUserId;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("permissions")
@@ -44,8 +56,11 @@ public class GrantAgentUsersRequest extends Request {
 
     private GrantAgentUsersRequest(Builder builder) {
         super(builder);
+        this.appToken = builder.appToken;
         this.expireDate = builder.expireDate;
         this.operatingObjectName = builder.operatingObjectName;
+        this.opsUserCode = builder.opsUserCode;
+        this.opsUserId = builder.opsUserId;
         this.permissions = builder.permissions;
         this.tenantId = builder.tenantId;
         this.userGroupIds = builder.userGroupIds;
@@ -66,6 +81,13 @@ public class GrantAgentUsersRequest extends Request {
     }
 
     /**
+     * @return appToken
+     */
+    public String getAppToken() {
+        return this.appToken;
+    }
+
+    /**
      * @return expireDate
      */
     public Long getExpireDate() {
@@ -77,6 +99,20 @@ public class GrantAgentUsersRequest extends Request {
      */
     public String getOperatingObjectName() {
         return this.operatingObjectName;
+    }
+
+    /**
+     * @return opsUserCode
+     */
+    public String getOpsUserCode() {
+        return this.opsUserCode;
+    }
+
+    /**
+     * @return opsUserId
+     */
+    public String getOpsUserId() {
+        return this.opsUserId;
     }
 
     /**
@@ -108,8 +144,11 @@ public class GrantAgentUsersRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GrantAgentUsersRequest, Builder> {
+        private String appToken; 
         private Long expireDate; 
         private String operatingObjectName; 
+        private String opsUserCode; 
+        private String opsUserId; 
         private java.util.List<String> permissions; 
         private String tenantId; 
         private java.util.List<String> userGroupIds; 
@@ -121,13 +160,28 @@ public class GrantAgentUsersRequest extends Request {
 
         private Builder(GrantAgentUsersRequest request) {
             super(request);
+            this.appToken = request.appToken;
             this.expireDate = request.expireDate;
             this.operatingObjectName = request.operatingObjectName;
+            this.opsUserCode = request.opsUserCode;
+            this.opsUserId = request.opsUserId;
             this.permissions = request.permissions;
             this.tenantId = request.tenantId;
             this.userGroupIds = request.userGroupIds;
             this.userIds = request.userIds;
         } 
+
+        /**
+         * <p>平台应用 Token（控制台签发）。传入后将以 opsUserId 或 opsUserCode 指定的用户身份执行</p>
+         * 
+         * <strong>example:</strong>
+         * <p>wn_app_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+         */
+        public Builder appToken(String appToken) {
+            this.putQueryParameter("appToken", appToken);
+            this.appToken = appToken;
+            return this;
+        }
 
         /**
          * <p>The authorization expiration timestamp in milliseconds. If this parameter is not specified, the authorization never expires.</p>
@@ -151,6 +205,30 @@ public class GrantAgentUsersRequest extends Request {
         public Builder operatingObjectName(String operatingObjectName) {
             this.putBodyParameter("operatingObjectName", operatingObjectName);
             this.operatingObjectName = operatingObjectName;
+            return this;
+        }
+
+        /**
+         * <p>代理用户编码（租户内唯一），仅当应用凭证配置为 source_uid 时使用</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alice</p>
+         */
+        public Builder opsUserCode(String opsUserCode) {
+            this.putQueryParameter("opsUserCode", opsUserCode);
+            this.opsUserCode = opsUserCode;
+            return this;
+        }
+
+        /**
+         * <p>代理用户ID（WINNEXO 平台用户ID），仅当应用凭证配置为 winnexo_uid 时使用</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10001</p>
+         */
+        public Builder opsUserId(String opsUserId) {
+            this.putQueryParameter("opsUserId", opsUserId);
+            this.opsUserId = opsUserId;
             return this;
         }
 

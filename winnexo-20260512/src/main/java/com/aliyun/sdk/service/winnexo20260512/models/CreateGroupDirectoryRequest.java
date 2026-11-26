@@ -17,6 +17,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateGroupDirectoryRequest</p>
  */
 public class CreateGroupDirectoryRequest extends Request {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("appToken")
+    private String appToken;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("description")
     private String description;
@@ -31,6 +35,14 @@ public class CreateGroupDirectoryRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("opsUserCode")
+    private String opsUserCode;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("opsUserId")
+    private String opsUserId;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("parentDirectoryId")
     private String parentDirectoryId;
@@ -41,9 +53,12 @@ public class CreateGroupDirectoryRequest extends Request {
 
     private CreateGroupDirectoryRequest(Builder builder) {
         super(builder);
+        this.appToken = builder.appToken;
         this.description = builder.description;
         this.groupId = builder.groupId;
         this.name = builder.name;
+        this.opsUserCode = builder.opsUserCode;
+        this.opsUserId = builder.opsUserId;
         this.parentDirectoryId = builder.parentDirectoryId;
         this.tenantId = builder.tenantId;
     }
@@ -59,6 +74,13 @@ public class CreateGroupDirectoryRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return appToken
+     */
+    public String getAppToken() {
+        return this.appToken;
     }
 
     /**
@@ -83,6 +105,20 @@ public class CreateGroupDirectoryRequest extends Request {
     }
 
     /**
+     * @return opsUserCode
+     */
+    public String getOpsUserCode() {
+        return this.opsUserCode;
+    }
+
+    /**
+     * @return opsUserId
+     */
+    public String getOpsUserId() {
+        return this.opsUserId;
+    }
+
+    /**
      * @return parentDirectoryId
      */
     public String getParentDirectoryId() {
@@ -97,9 +133,12 @@ public class CreateGroupDirectoryRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateGroupDirectoryRequest, Builder> {
+        private String appToken; 
         private String description; 
         private String groupId; 
         private String name; 
+        private String opsUserCode; 
+        private String opsUserId; 
         private String parentDirectoryId; 
         private String tenantId; 
 
@@ -109,18 +148,33 @@ public class CreateGroupDirectoryRequest extends Request {
 
         private Builder(CreateGroupDirectoryRequest request) {
             super(request);
+            this.appToken = request.appToken;
             this.description = request.description;
             this.groupId = request.groupId;
             this.name = request.name;
+            this.opsUserCode = request.opsUserCode;
+            this.opsUserId = request.opsUserId;
             this.parentDirectoryId = request.parentDirectoryId;
             this.tenantId = request.tenantId;
         } 
 
         /**
+         * <p>The platform application token issued by the console. If specified, the operation is performed as the user identified by opsUserId or opsUserCode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>wn_app_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+         */
+        public Builder appToken(String appToken) {
+            this.putQueryParameter("appToken", appToken);
+            this.appToken = appToken;
+            return this;
+        }
+
+        /**
          * <p>The workspace description.</p>
          * 
          * <strong>example:</strong>
-         * <p>ProjectDescription</p>
+         * <p>Project Description</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -142,11 +196,11 @@ public class CreateGroupDirectoryRequest extends Request {
         }
 
         /**
-         * <p>The updated name of the filter view.</p>
+         * <p>The updated name of the filtered view.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>ProjectFiles</p>
+         * <p>Project Materials</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("name", name);
@@ -155,7 +209,31 @@ public class CreateGroupDirectoryRequest extends Request {
         }
 
         /**
-         * <p>The folder ID.</p>
+         * <p>The proxy user code, which is unique within the tenant. This parameter is used only when the application credential is configured as source_uid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alice</p>
+         */
+        public Builder opsUserCode(String opsUserCode) {
+            this.putQueryParameter("opsUserCode", opsUserCode);
+            this.opsUserCode = opsUserCode;
+            return this;
+        }
+
+        /**
+         * <p>The proxy user ID, which is the WINNEXO platform user ID. This parameter is used only when the application credential is configured as winnexo_uid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10001</p>
+         */
+        public Builder opsUserId(String opsUserId) {
+            this.putQueryParameter("opsUserId", opsUserId);
+            this.opsUserId = opsUserId;
+            return this;
+        }
+
+        /**
+         * <p>The directory ID.</p>
          * 
          * <strong>example:</strong>
          * <p>dir_parent</p>
@@ -167,7 +245,7 @@ public class CreateGroupDirectoryRequest extends Request {
         }
 
         /**
-         * <p>The tenant ID. This is a common parameter. If this parameter is not specified, the default tenant of the caller is used.</p>
+         * <p>The tenant ID. This is a common parameter. If not specified, the default tenant of the caller is used.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>

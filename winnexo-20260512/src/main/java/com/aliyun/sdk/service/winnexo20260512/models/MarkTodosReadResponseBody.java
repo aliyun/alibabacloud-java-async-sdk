@@ -139,7 +139,7 @@ public class MarkTodosReadResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of unread to-do items remaining after the operation.</p>
+         * <p>The number of remaining unread to-do items after the operation.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>

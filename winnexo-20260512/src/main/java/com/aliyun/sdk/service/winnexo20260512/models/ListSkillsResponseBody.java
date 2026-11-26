@@ -173,7 +173,7 @@ public class ListSkillsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page. Default value: 20. Minimum value: 1. Maximum value: 50.</p>
+         * <p>The number of entries per page in the returned results. Default value: 20. Minimum value: 1. Maximum value: 50.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -195,7 +195,7 @@ public class ListSkillsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries.</p>
+         * <p>The total count.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -440,7 +440,7 @@ public class ListSkillsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the skill is globally accessible.</p>
+             * <p>Specifies whether global access is allowed.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -451,7 +451,7 @@ public class ListSkillsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether unpublished draft modifications exist.</p>
+             * <p>Specifies whether unpublished draft modifications exist.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -465,7 +465,7 @@ public class ListSkillsResponseBody extends TeaModel {
              * <p>The file name.</p>
              * 
              * <strong>example:</strong>
-             * <p>SampleName.pdf</p>
+             * <p>Sample name.pdf</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -473,7 +473,7 @@ public class ListSkillsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The skill code that is actually executed.</p>
+             * <p>The code of the skill that is actually executed.</p>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>
@@ -506,7 +506,7 @@ public class ListSkillsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The task status. Running is returned upon submission.</p>
+             * <p>The task status. Running is returned immediately after submission.</p>
              * 
              * <strong>example:</strong>
              * <p>READY</p>
@@ -517,10 +517,10 @@ public class ListSkillsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The keys.</p>
+             * <p>The key.</p>
              * 
              * <strong>example:</strong>
-             * <p>string_value</p>
+             * <p>[&quot;None&quot;]</p>
              */
             public Builder tags(java.util.List<String> tags) {
                 this.tags = tags;

@@ -17,6 +17,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateKnowledgeBaseAliDingDocRequest</p>
  */
 public class CreateKnowledgeBaseAliDingDocRequest extends Request {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("appToken")
+    private String appToken;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("description")
     private String description;
@@ -43,6 +47,14 @@ public class CreateKnowledgeBaseAliDingDocRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("operatingObjectName")
     private String operatingObjectName;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("opsUserCode")
+    private String opsUserCode;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("opsUserId")
+    private String opsUserId;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("sourceTags")
     private String sourceTags;
@@ -53,12 +65,15 @@ public class CreateKnowledgeBaseAliDingDocRequest extends Request {
 
     private CreateKnowledgeBaseAliDingDocRequest(Builder builder) {
         super(builder);
+        this.appToken = builder.appToken;
         this.description = builder.description;
         this.directoryId = builder.directoryId;
         this.filePublicUrl = builder.filePublicUrl;
         this.knowledgeId = builder.knowledgeId;
         this.name = builder.name;
         this.operatingObjectName = builder.operatingObjectName;
+        this.opsUserCode = builder.opsUserCode;
+        this.opsUserId = builder.opsUserId;
         this.sourceTags = builder.sourceTags;
         this.tenantId = builder.tenantId;
     }
@@ -74,6 +89,13 @@ public class CreateKnowledgeBaseAliDingDocRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return appToken
+     */
+    public String getAppToken() {
+        return this.appToken;
     }
 
     /**
@@ -119,6 +141,20 @@ public class CreateKnowledgeBaseAliDingDocRequest extends Request {
     }
 
     /**
+     * @return opsUserCode
+     */
+    public String getOpsUserCode() {
+        return this.opsUserCode;
+    }
+
+    /**
+     * @return opsUserId
+     */
+    public String getOpsUserId() {
+        return this.opsUserId;
+    }
+
+    /**
      * @return sourceTags
      */
     public String getSourceTags() {
@@ -133,12 +169,15 @@ public class CreateKnowledgeBaseAliDingDocRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateKnowledgeBaseAliDingDocRequest, Builder> {
+        private String appToken; 
         private String description; 
         private String directoryId; 
         private String filePublicUrl; 
         private String knowledgeId; 
         private String name; 
         private String operatingObjectName; 
+        private String opsUserCode; 
+        private String opsUserId; 
         private String sourceTags; 
         private String tenantId; 
 
@@ -148,15 +187,30 @@ public class CreateKnowledgeBaseAliDingDocRequest extends Request {
 
         private Builder(CreateKnowledgeBaseAliDingDocRequest request) {
             super(request);
+            this.appToken = request.appToken;
             this.description = request.description;
             this.directoryId = request.directoryId;
             this.filePublicUrl = request.filePublicUrl;
             this.knowledgeId = request.knowledgeId;
             this.name = request.name;
             this.operatingObjectName = request.operatingObjectName;
+            this.opsUserCode = request.opsUserCode;
+            this.opsUserId = request.opsUserId;
             this.sourceTags = request.sourceTags;
             this.tenantId = request.tenantId;
         } 
+
+        /**
+         * <p>The platform application token issued by the console. If specified, the operation is performed as the user specified by <code>opsUserId</code> or <code>opsUserCode</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>wn_app_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+         */
+        public Builder appToken(String appToken) {
+            this.putQueryParameter("appToken", appToken);
+            this.appToken = appToken;
+            return this;
+        }
 
         /**
          * <p>The description of the alias.</p>
@@ -183,7 +237,7 @@ public class CreateKnowledgeBaseAliDingDocRequest extends Request {
         }
 
         /**
-         * <p>The publicly accessible URL of the AliDing online document.</p>
+         * <p>The public access URL of the AliDing online document.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -196,7 +250,7 @@ public class CreateKnowledgeBaseAliDingDocRequest extends Request {
         }
 
         /**
-         * <p>Not supported. This parameter is ignored.</p>
+         * <p>This parameter is not supported and is ignored.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleKnowledgeId</p>
@@ -221,7 +275,7 @@ public class CreateKnowledgeBaseAliDingDocRequest extends Request {
         }
 
         /**
-         * <p>The digital employee name (operating object name, optional).</p>
+         * <p>The name of the digital employee, which is the name of the operating object. This parameter is optional.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -233,7 +287,31 @@ public class CreateKnowledgeBaseAliDingDocRequest extends Request {
         }
 
         /**
-         * <p>The resource tags (optional, a JSON string list, such as [&quot;tagA&quot;,&quot;tagB&quot;]).</p>
+         * <p>The proxy user code, which is unique within the tenant. This parameter is used only when the application credential is configured as <code>source_uid</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alice</p>
+         */
+        public Builder opsUserCode(String opsUserCode) {
+            this.putQueryParameter("opsUserCode", opsUserCode);
+            this.opsUserCode = opsUserCode;
+            return this;
+        }
+
+        /**
+         * <p>The proxy user ID, which is the WINNEXO platform user ID. This parameter is used only when the application credential is configured as <code>winnexo_uid</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10001</p>
+         */
+        public Builder opsUserId(String opsUserId) {
+            this.putQueryParameter("opsUserId", opsUserId);
+            this.opsUserId = opsUserId;
+            return this;
+        }
+
+        /**
+         * <p>The resource tags. This parameter is optional and accepts a JSON string array, such as <code>[&quot;tagA&quot;,&quot;tagB&quot;]</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>

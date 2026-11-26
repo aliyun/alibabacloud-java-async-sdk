@@ -114,7 +114,7 @@ public class ListGraphsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The prompt message.</p>
+         * <p>The message.</p>
          * 
          * <strong>example:</strong>
          * <p>successful</p>
@@ -224,7 +224,7 @@ public class ListGraphsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The business description of the knowledge graph. An empty string is returned if not configured.</p>
+             * <p>The business description of the graph. This is an empty string if not configured.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -248,7 +248,7 @@ public class ListGraphsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The knowledge graph name.</p>
+             * <p>The graph name.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -260,7 +260,7 @@ public class ListGraphsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether this is the default group.</p>
+             * <p>Specifies whether it is the default group.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

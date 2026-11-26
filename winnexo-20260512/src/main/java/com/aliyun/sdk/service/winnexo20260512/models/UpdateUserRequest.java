@@ -17,6 +17,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateUserRequest</p>
  */
 public class UpdateUserRequest extends Request {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("appToken")
+    private String appToken;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("displayName")
     private String displayName;
@@ -24,6 +28,14 @@ public class UpdateUserRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("isActive")
     private Boolean isActive;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("opsUserCode")
+    private String opsUserCode;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("opsUserId")
+    private String opsUserId;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("roleCodes")
@@ -44,8 +56,11 @@ public class UpdateUserRequest extends Request {
 
     private UpdateUserRequest(Builder builder) {
         super(builder);
+        this.appToken = builder.appToken;
         this.displayName = builder.displayName;
         this.isActive = builder.isActive;
+        this.opsUserCode = builder.opsUserCode;
+        this.opsUserId = builder.opsUserId;
         this.roleCodes = builder.roleCodes;
         this.tenantId = builder.tenantId;
         this.userGroupIds = builder.userGroupIds;
@@ -66,6 +81,13 @@ public class UpdateUserRequest extends Request {
     }
 
     /**
+     * @return appToken
+     */
+    public String getAppToken() {
+        return this.appToken;
+    }
+
+    /**
      * @return displayName
      */
     public String getDisplayName() {
@@ -77,6 +99,20 @@ public class UpdateUserRequest extends Request {
      */
     public Boolean getIsActive() {
         return this.isActive;
+    }
+
+    /**
+     * @return opsUserCode
+     */
+    public String getOpsUserCode() {
+        return this.opsUserCode;
+    }
+
+    /**
+     * @return opsUserId
+     */
+    public String getOpsUserId() {
+        return this.opsUserId;
     }
 
     /**
@@ -108,8 +144,11 @@ public class UpdateUserRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UpdateUserRequest, Builder> {
+        private String appToken; 
         private String displayName; 
         private Boolean isActive; 
+        private String opsUserCode; 
+        private String opsUserId; 
         private java.util.List<String> roleCodes; 
         private String tenantId; 
         private java.util.List<String> userGroupIds; 
@@ -121,13 +160,28 @@ public class UpdateUserRequest extends Request {
 
         private Builder(UpdateUserRequest request) {
             super(request);
+            this.appToken = request.appToken;
             this.displayName = request.displayName;
             this.isActive = request.isActive;
+            this.opsUserCode = request.opsUserCode;
+            this.opsUserId = request.opsUserId;
             this.roleCodes = request.roleCodes;
             this.tenantId = request.tenantId;
             this.userGroupIds = request.userGroupIds;
             this.wnUserId = request.wnUserId;
         } 
+
+        /**
+         * <p>The platform application token issued by the console. If specified, the operation is executed as the user identified by opsUserId or opsUserCode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>wn_app_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+         */
+        public Builder appToken(String appToken) {
+            this.putQueryParameter("appToken", appToken);
+            this.appToken = appToken;
+            return this;
+        }
 
         /**
          * <p>The display name of the user.</p>
@@ -158,10 +212,34 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * <p>The new list of system role codes (full replacement, must contain at least one role). Valid values: SUPER_ADMIN / SYSTEM_ADMIN / SEMANTIC_ADMIN / SKILL_ADMIN / KB_ADMIN / AGENT_ADMIN / APPLICATION_USER.</p>
+         * <p>The proxy user code, which is unique within the tenant. This parameter is used only when the application credential is configured as source_uid.</p>
          * 
          * <strong>example:</strong>
-         * <p>string_value</p>
+         * <p>alice</p>
+         */
+        public Builder opsUserCode(String opsUserCode) {
+            this.putQueryParameter("opsUserCode", opsUserCode);
+            this.opsUserCode = opsUserCode;
+            return this;
+        }
+
+        /**
+         * <p>The proxy user ID, which is the WINNEXO platform user ID. This parameter is used only when the application credential is configured as winnexo_uid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10001</p>
+         */
+        public Builder opsUserId(String opsUserId) {
+            this.putQueryParameter("opsUserId", opsUserId);
+            this.opsUserId = opsUserId;
+            return this;
+        }
+
+        /**
+         * <p>The new list of system role codes. This list fully replaces the existing roles and must contain at least one role. Valid values: SUPER_ADMIN, SYSTEM_ADMIN, SEMANTIC_ADMIN, SKILL_ADMIN, KB_ADMIN, AGENT_ADMIN, and APPLICATION_USER.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;APPLICATION_USER&quot;]</p>
          */
         public Builder roleCodes(java.util.List<String> roleCodes) {
             String roleCodesShrink = shrink(roleCodes, "roleCodes", "json");
@@ -183,10 +261,10 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * <p>The new list of user group IDs (full replacement. If not specified, the value is not modified).</p>
+         * <p>The new list of user group IDs. This list fully replaces the existing user groups. If this parameter is not specified, the user groups are not modified.</p>
          * 
          * <strong>example:</strong>
-         * <p>string_value</p>
+         * <p>[&quot;string_value&quot;]</p>
          */
         public Builder userGroupIds(java.util.List<String> userGroupIds) {
             String userGroupIdsShrink = shrink(userGroupIds, "userGroupIds", "json");
@@ -196,7 +274,7 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * <p>The ID of the target user (WINNEXO platform user ID).</p>
+         * <p>The ID of the target user, which is the WINNEXO platform user ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

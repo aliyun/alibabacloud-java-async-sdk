@@ -279,7 +279,7 @@ public class CreatePersonalAlidingDocResponseBody extends TeaModel {
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>{\&quot;servicesInstances\&quot;: {}, \&quot;servicesWithPendingChanges\&quot;: []}</p>
+         * <p>{&quot;servicesInstances&quot;: {}, &quot;servicesWithPendingChanges&quot;: []}</p>
          */
         public Builder status(String status) {
             this.status = status;

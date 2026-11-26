@@ -165,7 +165,7 @@ public class CreateConversationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The description of the status code.</p>
+         * <p>The status code description.</p>
          * 
          * <strong>example:</strong>
          * <p>The current zone list is illegal.</p>
@@ -176,7 +176,7 @@ public class CreateConversationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>A reserved field for extension purposes.</p>
+         * <p>The reserved field for extension purposes.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;source&quot;:&quot;openapi&quot;}</p>
@@ -198,7 +198,7 @@ public class CreateConversationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The appointment title.</p>
+         * <p>The title of the scheduled meeting.</p>
          * 
          * <strong>example:</strong>
          * <p>Incident RCA: alert-0885feb7-3d4b-4da5-90f0-0119dfbbf555:up0shc25tp0kueo0afeobvhk81</p>

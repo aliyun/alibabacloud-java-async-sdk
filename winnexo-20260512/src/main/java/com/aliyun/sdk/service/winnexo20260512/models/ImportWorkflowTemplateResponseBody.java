@@ -282,7 +282,7 @@ public class ImportWorkflowTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The node dependency edges. Each item contains from and to fields that reference stable step IDs. An explicit empty array indicates no dependencies.</p>
+         * <p>A node dependency edge, where from is the stepId of the predecessor node and to is the stepId of the successor node.</p>
          * 
          * <strong>example:</strong>
          * <p>[{&quot;from&quot;:&quot;collect&quot;,&quot;to&quot;:&quot;deliver&quot;}]</p>
@@ -293,7 +293,7 @@ public class ImportWorkflowTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The current effective version number of the template. An empty value indicates that only a draft exists and the template cannot be used for work items. This field is empty because an import always creates a v1 draft.</p>
+         * <p>The current effective version number of the template. An empty value indicates that only a draft exists and it cannot be used for work items. The value is empty for imported templates because a v1 draft is created by default.</p>
          * 
          * <strong>example:</strong>
          * <p>v1</p>
@@ -326,7 +326,7 @@ public class ImportWorkflowTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The optional canvas layout, indexed by step ID. This field only affects the display and does not determine dependencies.</p>
+         * <p>The optional canvas layout, indexed by stepId. This parameter only affects the display and does not determine dependencies.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;collect&quot;:{&quot;x&quot;:0,&quot;y&quot;:0},&quot;review&quot;:{&quot;x&quot;:240,&quot;y&quot;:0}}</p>
@@ -351,7 +351,7 @@ public class ImportWorkflowTemplateResponseBody extends TeaModel {
          * <p>The template name.</p>
          * 
          * <strong>example:</strong>
-         * <p>Customer Complaint Handling Process</p>
+         * <p>Customer complaint handling process</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -359,7 +359,7 @@ public class ImportWorkflowTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The request tracking ID.</p>
          * 
          * <strong>example:</strong>
          * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -370,7 +370,7 @@ public class ImportWorkflowTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The schema version of the template. The current value is 2, which is independent of the business version vN.</p>
+         * <p>The template structure version. The current value is 2, which is independent of the business version vN.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -384,7 +384,7 @@ public class ImportWorkflowTemplateResponseBody extends TeaModel {
          * <p>The ordered steps.</p>
          * 
          * <strong>example:</strong>
-         * <p>[{\&quot;stepId\&quot;:\&quot;collect\&quot;,\&quot;sortOrder\&quot;:1,\&quot;name\&quot;:\&quot;Collect customer information\&quot;}]</p>
+         * <p>[{&quot;stepId&quot;:&quot;collect&quot;,&quot;sortOrder&quot;:1,&quot;name&quot;:&quot;Collect customer information&quot;}]</p>
          */
         public Builder steps(java.util.List<Steps> steps) {
             this.steps = steps;
@@ -614,7 +614,7 @@ public class ImportWorkflowTemplateResponseBody extends TeaModel {
              * <p>The step name.</p>
              * 
              * <strong>example:</strong>
-             * <p>Customer Complaint Handling Process</p>
+             * <p>Customer complaint handling process</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -635,9 +635,9 @@ public class ImportWorkflowTemplateResponseBody extends TeaModel {
             /**
              * <p>The owner type. Valid values:</p>
              * <ul>
-             * <li><p><strong>USER</strong>: User. This is the default value.</p>
+             * <li><p><strong>USER</strong>: User type. This is the default value.</p>
              * </li>
-             * <li><p><strong>APP</strong>: App.</p>
+             * <li><p><strong>APP</strong>: Application type.</p>
              * </li>
              * </ul>
              * 
@@ -661,7 +661,7 @@ public class ImportWorkflowTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether to manually review the output. By default, this feature is disabled. It can be enabled only for digital employees. Review to-do items are automatically sent to the person in charge.</p>
+             * <p>Specifies whether to manually review the deliverables. By default, this feature is disabled. It can be enabled only for digital employees. Review tasks are automatically sent to the person in charge.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -672,10 +672,10 @@ public class ImportWorkflowTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of user IDs for the reviewers. This field is valid only for digital employee executor steps and is always empty for member executor steps.</p>
+             * <p>The list of user IDs of the persons in charge. This parameter is valid only for digital employee executor steps and is always empty for member executor steps.</p>
              * 
              * <strong>example:</strong>
-             * <p>example</p>
+             * <p>[10001]</p>
              */
             public Builder reviewerUserIds(java.util.List<Long> reviewerUserIds) {
                 this.reviewerUserIds = reviewerUserIds;
@@ -694,7 +694,7 @@ public class ImportWorkflowTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The processing instructions for the step.</p>
+             * <p>The step processing instructions.</p>
              * 
              * <strong>example:</strong>
              * <p>Collect customer information and submit it to the person in charge for review</p>
@@ -705,10 +705,10 @@ public class ImportWorkflowTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ordered array of segments. Supported types include text, mention, skill, app, files, and web_search. The reference identities and order are preserved.</p>
+             * <p>The ordered array of fragments, which supports text, mention, skill, app, files, and web_search. The referenced identities and order are preserved.</p>
              * 
              * <strong>example:</strong>
-             * <p>[{\&quot;type\&quot;:\&quot;text\&quot;,\&quot;text\&quot;:\&quot;Collect customer information\&quot;}]</p>
+             * <p>[{&quot;type&quot;:&quot;text&quot;,&quot;content&quot;:&quot;Collect customer information&quot;}]</p>
              */
             public Builder specificationJson(java.util.List<java.util.Map<String, ?>> specificationJson) {
                 this.specificationJson = specificationJson;

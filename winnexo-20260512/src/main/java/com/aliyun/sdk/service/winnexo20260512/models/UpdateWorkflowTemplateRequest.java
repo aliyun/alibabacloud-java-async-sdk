@@ -21,6 +21,10 @@ public class UpdateWorkflowTemplateRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("action")
     private String action;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("appToken")
+    private String appToken;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("collaborationGroupId")
     @com.aliyun.core.annotation.Validation(required = true, maxLength = 64, minLength = 1)
@@ -30,6 +34,14 @@ public class UpdateWorkflowTemplateRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("definition")
     @com.aliyun.core.annotation.Validation(required = true)
     private java.util.Map<String, ?> definition;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("opsUserCode")
+    private String opsUserCode;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("opsUserId")
+    private String opsUserId;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("sourceVersion")
@@ -56,8 +68,11 @@ public class UpdateWorkflowTemplateRequest extends Request {
     private UpdateWorkflowTemplateRequest(Builder builder) {
         super(builder);
         this.action = builder.action;
+        this.appToken = builder.appToken;
         this.collaborationGroupId = builder.collaborationGroupId;
         this.definition = builder.definition;
+        this.opsUserCode = builder.opsUserCode;
+        this.opsUserId = builder.opsUserId;
         this.sourceVersion = builder.sourceVersion;
         this.templateId = builder.templateId;
         this.tenantId = builder.tenantId;
@@ -86,6 +101,13 @@ public class UpdateWorkflowTemplateRequest extends Request {
     }
 
     /**
+     * @return appToken
+     */
+    public String getAppToken() {
+        return this.appToken;
+    }
+
+    /**
      * @return collaborationGroupId
      */
     public String getCollaborationGroupId() {
@@ -97,6 +119,20 @@ public class UpdateWorkflowTemplateRequest extends Request {
      */
     public java.util.Map<String, ?> getDefinition() {
         return this.definition;
+    }
+
+    /**
+     * @return opsUserCode
+     */
+    public String getOpsUserCode() {
+        return this.opsUserCode;
+    }
+
+    /**
+     * @return opsUserId
+     */
+    public String getOpsUserId() {
+        return this.opsUserId;
     }
 
     /**
@@ -136,8 +172,11 @@ public class UpdateWorkflowTemplateRequest extends Request {
 
     public static final class Builder extends Request.Builder<UpdateWorkflowTemplateRequest, Builder> {
         private String action; 
+        private String appToken; 
         private String collaborationGroupId; 
         private java.util.Map<String, ?> definition; 
+        private String opsUserCode; 
+        private String opsUserId; 
         private String sourceVersion; 
         private String templateId; 
         private String tenantId; 
@@ -151,8 +190,11 @@ public class UpdateWorkflowTemplateRequest extends Request {
         private Builder(UpdateWorkflowTemplateRequest request) {
             super(request);
             this.action = request.action;
+            this.appToken = request.appToken;
             this.collaborationGroupId = request.collaborationGroupId;
             this.definition = request.definition;
+            this.opsUserCode = request.opsUserCode;
+            this.opsUserId = request.opsUserId;
             this.sourceVersion = request.sourceVersion;
             this.templateId = request.templateId;
             this.tenantId = request.tenantId;
@@ -161,12 +203,7 @@ public class UpdateWorkflowTemplateRequest extends Request {
         } 
 
         /**
-         * <p>The write action. Valid values:</p>
-         * <ul>
-         * <li>SAVE: Saves the template as a draft without taking effect, allowing node names and executors to be left empty.</li>
-         * <li>SUBMIT: Requires complete nodes, and saves and submits the template as the only effective version.
-         * Default value: SUBMIT.</li>
-         * </ul>
+         * <p>The write action. Valid values: SAVE (saves the template as a draft without taking effect, and allows node names and executors to be left empty) and SUBMIT (requires complete nodes, and saves and submits the template as the only effective version). Default value: SUBMIT.</p>
          * 
          * <strong>example:</strong>
          * <p>SUBMIT</p>
@@ -174,6 +211,18 @@ public class UpdateWorkflowTemplateRequest extends Request {
         public Builder action(String action) {
             this.putBodyParameter("action", action);
             this.action = action;
+            return this;
+        }
+
+        /**
+         * <p>The platform application token issued by the console. If specified, the operation is executed as the user specified by opsUserId or opsUserCode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>wn_app_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+         */
+        public Builder appToken(String appToken) {
+            this.putQueryParameter("appToken", appToken);
+            this.appToken = appToken;
             return this;
         }
 
@@ -195,7 +244,7 @@ public class UpdateWorkflowTemplateRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;name&quot;:&quot;Customer Complaint Handling Process&quot;,&quot;schemaVersion&quot;:2,&quot;steps&quot;:[{&quot;stepId&quot;:&quot;collect&quot;,&quot;sortOrder&quot;:1,&quot;name&quot;:&quot;Collect Customer Information&quot;}]}</p>
+         * <p>{&quot;name&quot;:&quot;Customer Complaint Handling Process&quot;,&quot;schemaVersion&quot;:2,&quot;steps&quot;:[{&quot;stepId&quot;:&quot;collect&quot;,&quot;sortOrder&quot;:1,&quot;name&quot;:&quot;Collect Customer Information&quot;,&quot;specification&quot;:[{&quot;type&quot;:&quot;text&quot;,&quot;content&quot;:&quot;Collect Customer Information&quot;}],&quot;executorType&quot;:&quot;MEMBER&quot;,&quot;executorUserId&quot;:10086}],&quot;edges&quot;:[]}</p>
          */
         public Builder definition(java.util.Map<String, ?> definition) {
             String definitionShrink = shrink(definition, "definition", "json");
@@ -205,7 +254,31 @@ public class UpdateWorkflowTemplateRequest extends Request {
         }
 
         /**
-         * <p>The submitted version number on which the new version is based. This parameter is mutually exclusive with version. If not specified, the system falls back to the current effective version.</p>
+         * <p>The proxy user code, which is unique within the tenant. This parameter is used only when the application credential is configured as source_uid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alice</p>
+         */
+        public Builder opsUserCode(String opsUserCode) {
+            this.putQueryParameter("opsUserCode", opsUserCode);
+            this.opsUserCode = opsUserCode;
+            return this;
+        }
+
+        /**
+         * <p>The proxy user ID, which is the WINNEXO platform user ID. This parameter is used only when the application credential is configured as winnexo_uid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10001</p>
+         */
+        public Builder opsUserId(String opsUserId) {
+            this.putQueryParameter("opsUserId", opsUserId);
+            this.opsUserId = opsUserId;
+            return this;
+        }
+
+        /**
+         * <p>The submitted version number on which the new version is based. This parameter is mutually exclusive with version. If not specified, the current effective version is used as the fallback.</p>
          * 
          * <strong>example:</strong>
          * <p>v1</p>

@@ -17,6 +17,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreatePersonalVoiceMeetingRequest</p>
  */
 public class CreatePersonalVoiceMeetingRequest extends Request {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("appToken")
+    private String appToken;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("description")
     private String description;
@@ -39,6 +43,14 @@ public class CreatePersonalVoiceMeetingRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("operatingObjectName")
     private String operatingObjectName;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("opsUserCode")
+    private String opsUserCode;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("opsUserId")
+    private String opsUserId;
+
     @com.aliyun.core.annotation.Header
     @com.aliyun.core.annotation.NameInMap("requestId")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -54,11 +66,14 @@ public class CreatePersonalVoiceMeetingRequest extends Request {
 
     private CreatePersonalVoiceMeetingRequest(Builder builder) {
         super(builder);
+        this.appToken = builder.appToken;
         this.description = builder.description;
         this.directoryId = builder.directoryId;
         this.fileUrl = builder.fileUrl;
         this.name = builder.name;
         this.operatingObjectName = builder.operatingObjectName;
+        this.opsUserCode = builder.opsUserCode;
+        this.opsUserId = builder.opsUserId;
         this.requestId = builder.requestId;
         this.sourceTags = builder.sourceTags;
         this.tenantId = builder.tenantId;
@@ -75,6 +90,13 @@ public class CreatePersonalVoiceMeetingRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return appToken
+     */
+    public String getAppToken() {
+        return this.appToken;
     }
 
     /**
@@ -113,6 +135,20 @@ public class CreatePersonalVoiceMeetingRequest extends Request {
     }
 
     /**
+     * @return opsUserCode
+     */
+    public String getOpsUserCode() {
+        return this.opsUserCode;
+    }
+
+    /**
+     * @return opsUserId
+     */
+    public String getOpsUserId() {
+        return this.opsUserId;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -134,11 +170,14 @@ public class CreatePersonalVoiceMeetingRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreatePersonalVoiceMeetingRequest, Builder> {
+        private String appToken; 
         private String description; 
         private String directoryId; 
         private String fileUrl; 
         private String name; 
         private String operatingObjectName; 
+        private String opsUserCode; 
+        private String opsUserId; 
         private String requestId; 
         private String sourceTags; 
         private String tenantId; 
@@ -149,15 +188,30 @@ public class CreatePersonalVoiceMeetingRequest extends Request {
 
         private Builder(CreatePersonalVoiceMeetingRequest request) {
             super(request);
+            this.appToken = request.appToken;
             this.description = request.description;
             this.directoryId = request.directoryId;
             this.fileUrl = request.fileUrl;
             this.name = request.name;
             this.operatingObjectName = request.operatingObjectName;
+            this.opsUserCode = request.opsUserCode;
+            this.opsUserId = request.opsUserId;
             this.requestId = request.requestId;
             this.sourceTags = request.sourceTags;
             this.tenantId = request.tenantId;
         } 
+
+        /**
+         * <p>The platform application token issued by the console. If this parameter is passed, the operation is performed as the user specified by opsUserId or opsUserCode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>wn_app_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+         */
+        public Builder appToken(String appToken) {
+            this.putQueryParameter("appToken", appToken);
+            this.appToken = appToken;
+            return this;
+        }
 
         /**
          * <p>The pipeline description.</p>
@@ -210,7 +264,7 @@ public class CreatePersonalVoiceMeetingRequest extends Request {
         }
 
         /**
-         * <p>The name of the digital employee (operating object name, optional).</p>
+         * <p>The name of the digital employee, which is the name of the operating object. This parameter is optional.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -218,6 +272,30 @@ public class CreatePersonalVoiceMeetingRequest extends Request {
         public Builder operatingObjectName(String operatingObjectName) {
             this.putBodyParameter("operatingObjectName", operatingObjectName);
             this.operatingObjectName = operatingObjectName;
+            return this;
+        }
+
+        /**
+         * <p>The proxy user code, which is unique within the tenant. This parameter is used only when the application credential is configured as source_uid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alice</p>
+         */
+        public Builder opsUserCode(String opsUserCode) {
+            this.putQueryParameter("opsUserCode", opsUserCode);
+            this.opsUserCode = opsUserCode;
+            return this;
+        }
+
+        /**
+         * <p>The proxy user ID, which is the WINNEXO platform user ID. This parameter is used only when the application credential is configured as winnexo_uid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10001</p>
+         */
+        public Builder opsUserId(String opsUserId) {
+            this.putQueryParameter("opsUserId", opsUserId);
+            this.opsUserId = opsUserId;
             return this;
         }
 
@@ -235,10 +313,10 @@ public class CreatePersonalVoiceMeetingRequest extends Request {
         }
 
         /**
-         * <p>The list of resource tag JSON strings.</p>
+         * <p>The list of resource tags in JSON string format.</p>
          * 
          * <strong>example:</strong>
-         * <p>[&quot;Key&quot;,&quot;Meeting&quot;]</p>
+         * <p>[&quot;Important&quot;, &quot;Meeting&quot;]</p>
          */
         public Builder sourceTags(String sourceTags) {
             this.putBodyParameter("sourceTags", sourceTags);

@@ -17,6 +17,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreatePersonalFileRequest</p>
  */
 public class CreatePersonalFileRequest extends Request {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("appToken")
+    private String appToken;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("description")
     private String description;
@@ -55,6 +59,14 @@ public class CreatePersonalFileRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("operatingObjectName")
     private String operatingObjectName;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("opsUserCode")
+    private String opsUserCode;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("opsUserId")
+    private String opsUserId;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("sourceTags")
     private String sourceTags;
@@ -65,6 +77,7 @@ public class CreatePersonalFileRequest extends Request {
 
     private CreatePersonalFileRequest(Builder builder) {
         super(builder);
+        this.appToken = builder.appToken;
         this.description = builder.description;
         this.directoryId = builder.directoryId;
         this.fileExt = builder.fileExt;
@@ -74,6 +87,8 @@ public class CreatePersonalFileRequest extends Request {
         this.fileRecordId = builder.fileRecordId;
         this.name = builder.name;
         this.operatingObjectName = builder.operatingObjectName;
+        this.opsUserCode = builder.opsUserCode;
+        this.opsUserId = builder.opsUserId;
         this.sourceTags = builder.sourceTags;
         this.tenantId = builder.tenantId;
     }
@@ -89,6 +104,13 @@ public class CreatePersonalFileRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return appToken
+     */
+    public String getAppToken() {
+        return this.appToken;
     }
 
     /**
@@ -155,6 +177,20 @@ public class CreatePersonalFileRequest extends Request {
     }
 
     /**
+     * @return opsUserCode
+     */
+    public String getOpsUserCode() {
+        return this.opsUserCode;
+    }
+
+    /**
+     * @return opsUserId
+     */
+    public String getOpsUserId() {
+        return this.opsUserId;
+    }
+
+    /**
      * @return sourceTags
      */
     public String getSourceTags() {
@@ -169,6 +205,7 @@ public class CreatePersonalFileRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreatePersonalFileRequest, Builder> {
+        private String appToken; 
         private String description; 
         private String directoryId; 
         private String fileExt; 
@@ -178,6 +215,8 @@ public class CreatePersonalFileRequest extends Request {
         private String fileRecordId; 
         private String name; 
         private String operatingObjectName; 
+        private String opsUserCode; 
+        private String opsUserId; 
         private String sourceTags; 
         private String tenantId; 
 
@@ -187,6 +226,7 @@ public class CreatePersonalFileRequest extends Request {
 
         private Builder(CreatePersonalFileRequest request) {
             super(request);
+            this.appToken = request.appToken;
             this.description = request.description;
             this.directoryId = request.directoryId;
             this.fileExt = request.fileExt;
@@ -196,9 +236,23 @@ public class CreatePersonalFileRequest extends Request {
             this.fileRecordId = request.fileRecordId;
             this.name = request.name;
             this.operatingObjectName = request.operatingObjectName;
+            this.opsUserCode = request.opsUserCode;
+            this.opsUserId = request.opsUserId;
             this.sourceTags = request.sourceTags;
             this.tenantId = request.tenantId;
         } 
+
+        /**
+         * <p>The platform application token issued by the console. If this parameter is passed, the operation is executed as the user specified by opsUserId or opsUserCode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>wn_app_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+         */
+        public Builder appToken(String appToken) {
+            this.putQueryParameter("appToken", appToken);
+            this.appToken = appToken;
+            return this;
+        }
 
         /**
          * <p>The pipeline description.</p>
@@ -213,7 +267,7 @@ public class CreatePersonalFileRequest extends Request {
         }
 
         /**
-         * <p>The folder ID.</p>
+         * <p>The directory ID.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleDirectoryId</p>
@@ -225,7 +279,7 @@ public class CreatePersonalFileRequest extends Request {
         }
 
         /**
-         * <p>The file name extension (optional, such as pdf or docx).</p>
+         * <p>The file name extension, such as pdf or docx. This parameter is optional.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -274,7 +328,7 @@ public class CreatePersonalFileRequest extends Request {
         }
 
         /**
-         * <p>The file record ID (optional, corresponding to settings.file_record_id).</p>
+         * <p>The file record ID, which corresponds to settings.file_record_id. This parameter is optional.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleFileRecordId</p>
@@ -299,7 +353,7 @@ public class CreatePersonalFileRequest extends Request {
         }
 
         /**
-         * <p>The name of the digital employee (operating object name, optional).</p>
+         * <p>The name of the digital employee, which is the name of the operating object. This parameter is optional.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -311,10 +365,34 @@ public class CreatePersonalFileRequest extends Request {
         }
 
         /**
+         * <p>The proxy user code, which is unique within the tenant. This parameter is used only when the application credential is configured as source_uid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alice</p>
+         */
+        public Builder opsUserCode(String opsUserCode) {
+            this.putQueryParameter("opsUserCode", opsUserCode);
+            this.opsUserCode = opsUserCode;
+            return this;
+        }
+
+        /**
+         * <p>The proxy user ID, which is the WINNEXO platform user ID. This parameter is used only when the application credential is configured as winnexo_uid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10001</p>
+         */
+        public Builder opsUserId(String opsUserId) {
+            this.putQueryParameter("opsUserId", opsUserId);
+            this.opsUserId = opsUserId;
+            return this;
+        }
+
+        /**
          * <p>The list of resource tag JSON strings.</p>
          * 
          * <strong>example:</strong>
-         * <p>[&quot;Important&quot;,&quot;File&quot;]</p>
+         * <p>[&quot;Important&quot;, &quot;File&quot;]</p>
          */
         public Builder sourceTags(String sourceTags) {
             this.putBodyParameter("sourceTags", sourceTags);

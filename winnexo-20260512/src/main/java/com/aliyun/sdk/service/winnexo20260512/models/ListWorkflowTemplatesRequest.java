@@ -17,6 +17,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListWorkflowTemplatesRequest</p>
  */
 public class ListWorkflowTemplatesRequest extends Request {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("appToken")
+    private String appToken;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("collaborationGroupId")
     @com.aliyun.core.annotation.Validation(required = true, maxLength = 64, minLength = 1)
@@ -36,6 +40,14 @@ public class ListWorkflowTemplatesRequest extends Request {
     @com.aliyun.core.annotation.Validation(maxLength = 256)
     private String nextToken;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("opsUserCode")
+    private String opsUserCode;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("opsUserId")
+    private String opsUserId;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("page")
     private Long page;
@@ -50,10 +62,13 @@ public class ListWorkflowTemplatesRequest extends Request {
 
     private ListWorkflowTemplatesRequest(Builder builder) {
         super(builder);
+        this.appToken = builder.appToken;
         this.collaborationGroupId = builder.collaborationGroupId;
         this.keyword = builder.keyword;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
+        this.opsUserCode = builder.opsUserCode;
+        this.opsUserId = builder.opsUserId;
         this.page = builder.page;
         this.pageSize = builder.pageSize;
         this.tenantId = builder.tenantId;
@@ -70,6 +85,13 @@ public class ListWorkflowTemplatesRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return appToken
+     */
+    public String getAppToken() {
+        return this.appToken;
     }
 
     /**
@@ -101,6 +123,20 @@ public class ListWorkflowTemplatesRequest extends Request {
     }
 
     /**
+     * @return opsUserCode
+     */
+    public String getOpsUserCode() {
+        return this.opsUserCode;
+    }
+
+    /**
+     * @return opsUserId
+     */
+    public String getOpsUserId() {
+        return this.opsUserId;
+    }
+
+    /**
      * @return page
      */
     public Long getPage() {
@@ -122,10 +158,13 @@ public class ListWorkflowTemplatesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListWorkflowTemplatesRequest, Builder> {
+        private String appToken; 
         private String collaborationGroupId; 
         private String keyword; 
         private Long maxResults; 
         private String nextToken; 
+        private String opsUserCode; 
+        private String opsUserId; 
         private Long page; 
         private Long pageSize; 
         private String tenantId; 
@@ -136,14 +175,29 @@ public class ListWorkflowTemplatesRequest extends Request {
 
         private Builder(ListWorkflowTemplatesRequest request) {
             super(request);
+            this.appToken = request.appToken;
             this.collaborationGroupId = request.collaborationGroupId;
             this.keyword = request.keyword;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
+            this.opsUserCode = request.opsUserCode;
+            this.opsUserId = request.opsUserId;
             this.page = request.page;
             this.pageSize = request.pageSize;
             this.tenantId = request.tenantId;
         } 
+
+        /**
+         * <p>The platform application token issued by the console. If specified, the operation is performed as the user identified by opsUserId or opsUserCode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>wn_app_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+         */
+        public Builder appToken(String appToken) {
+            this.putQueryParameter("appToken", appToken);
+            this.appToken = appToken;
+            return this;
+        }
 
         /**
          * <p>The ID of the collaboration space.</p>
@@ -183,7 +237,7 @@ public class ListWorkflowTemplatesRequest extends Request {
         }
 
         /**
-         * <p>The pagination token. Obtain the token from the nextToken value in the previous response. This parameter takes precedence over page if both are specified.</p>
+         * <p>The pagination token. Use the nextToken value returned in the previous response. This parameter takes precedence over page if both are specified.</p>
          * 
          * <strong>example:</strong>
          * <p>tok_9401</p>
@@ -191,6 +245,30 @@ public class ListWorkflowTemplatesRequest extends Request {
         public Builder nextToken(String nextToken) {
             this.putBodyParameter("nextToken", nextToken);
             this.nextToken = nextToken;
+            return this;
+        }
+
+        /**
+         * <p>The proxy user code, which is unique within the tenant. This parameter is used only when the application credential is configured as source_uid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alice</p>
+         */
+        public Builder opsUserCode(String opsUserCode) {
+            this.putQueryParameter("opsUserCode", opsUserCode);
+            this.opsUserCode = opsUserCode;
+            return this;
+        }
+
+        /**
+         * <p>The proxy user ID, which is the WINNEXO platform user ID. This parameter is used only when the application credential is configured as winnexo_uid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10001</p>
+         */
+        public Builder opsUserId(String opsUserId) {
+            this.putQueryParameter("opsUserId", opsUserId);
+            this.opsUserId = opsUserId;
             return this;
         }
 

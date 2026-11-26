@@ -17,6 +17,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SearchAliDingGroupChatsRequest</p>
  */
 public class SearchAliDingGroupChatsRequest extends Request {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("appToken")
+    private String appToken;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("cursor")
     private String cursor;
@@ -30,6 +34,14 @@ public class SearchAliDingGroupChatsRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String keyword;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("opsUserCode")
+    private String opsUserCode;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("opsUserId")
+    private String opsUserId;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("pageSize")
     private Integer pageSize;
@@ -40,9 +52,12 @@ public class SearchAliDingGroupChatsRequest extends Request {
 
     private SearchAliDingGroupChatsRequest(Builder builder) {
         super(builder);
+        this.appToken = builder.appToken;
         this.cursor = builder.cursor;
         this.excludeMuted = builder.excludeMuted;
         this.keyword = builder.keyword;
+        this.opsUserCode = builder.opsUserCode;
+        this.opsUserId = builder.opsUserId;
         this.pageSize = builder.pageSize;
         this.tenantId = builder.tenantId;
     }
@@ -58,6 +73,13 @@ public class SearchAliDingGroupChatsRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return appToken
+     */
+    public String getAppToken() {
+        return this.appToken;
     }
 
     /**
@@ -82,6 +104,20 @@ public class SearchAliDingGroupChatsRequest extends Request {
     }
 
     /**
+     * @return opsUserCode
+     */
+    public String getOpsUserCode() {
+        return this.opsUserCode;
+    }
+
+    /**
+     * @return opsUserId
+     */
+    public String getOpsUserId() {
+        return this.opsUserId;
+    }
+
+    /**
      * @return pageSize
      */
     public Integer getPageSize() {
@@ -96,9 +132,12 @@ public class SearchAliDingGroupChatsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<SearchAliDingGroupChatsRequest, Builder> {
+        private String appToken; 
         private String cursor; 
         private Boolean excludeMuted; 
         private String keyword; 
+        private String opsUserCode; 
+        private String opsUserId; 
         private Integer pageSize; 
         private String tenantId; 
 
@@ -108,12 +147,27 @@ public class SearchAliDingGroupChatsRequest extends Request {
 
         private Builder(SearchAliDingGroupChatsRequest request) {
             super(request);
+            this.appToken = request.appToken;
             this.cursor = request.cursor;
             this.excludeMuted = request.excludeMuted;
             this.keyword = request.keyword;
+            this.opsUserCode = request.opsUserCode;
+            this.opsUserId = request.opsUserId;
             this.pageSize = request.pageSize;
             this.tenantId = request.tenantId;
         } 
+
+        /**
+         * <p>平台应用 Token（控制台签发）。传入后将以 opsUserId 或 opsUserCode 指定的用户身份执行</p>
+         * 
+         * <strong>example:</strong>
+         * <p>wn_app_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+         */
+        public Builder appToken(String appToken) {
+            this.putQueryParameter("appToken", appToken);
+            this.appToken = appToken;
+            return this;
+        }
 
         /**
          * <p>The cursor for the paged query. Set this parameter to 0 for the first request. For subsequent paging requests, set this parameter to the value of <strong>nextCursor</strong> returned in the previous response.</p>
@@ -149,6 +203,30 @@ public class SearchAliDingGroupChatsRequest extends Request {
         public Builder keyword(String keyword) {
             this.putBodyParameter("keyword", keyword);
             this.keyword = keyword;
+            return this;
+        }
+
+        /**
+         * <p>代理用户编码（租户内唯一），仅当应用凭证配置为 source_uid 时使用</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alice</p>
+         */
+        public Builder opsUserCode(String opsUserCode) {
+            this.putQueryParameter("opsUserCode", opsUserCode);
+            this.opsUserCode = opsUserCode;
+            return this;
+        }
+
+        /**
+         * <p>代理用户ID（WINNEXO 平台用户ID），仅当应用凭证配置为 winnexo_uid 时使用</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10001</p>
+         */
+        public Builder opsUserId(String opsUserId) {
+            this.putQueryParameter("opsUserId", opsUserId);
+            this.opsUserId = opsUserId;
             return this;
         }
 

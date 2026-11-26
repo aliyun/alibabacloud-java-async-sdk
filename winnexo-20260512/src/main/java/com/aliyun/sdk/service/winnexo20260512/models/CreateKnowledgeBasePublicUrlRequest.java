@@ -17,6 +17,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateKnowledgeBasePublicUrlRequest</p>
  */
 public class CreateKnowledgeBasePublicUrlRequest extends Request {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("appToken")
+    private String appToken;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("description")
     private String description;
@@ -38,6 +42,14 @@ public class CreateKnowledgeBasePublicUrlRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("operatingObjectName")
     private String operatingObjectName;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("opsUserCode")
+    private String opsUserCode;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("opsUserId")
+    private String opsUserId;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("originalUrl")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -53,11 +65,14 @@ public class CreateKnowledgeBasePublicUrlRequest extends Request {
 
     private CreateKnowledgeBasePublicUrlRequest(Builder builder) {
         super(builder);
+        this.appToken = builder.appToken;
         this.description = builder.description;
         this.directoryId = builder.directoryId;
         this.name = builder.name;
         this.notes = builder.notes;
         this.operatingObjectName = builder.operatingObjectName;
+        this.opsUserCode = builder.opsUserCode;
+        this.opsUserId = builder.opsUserId;
         this.originalUrl = builder.originalUrl;
         this.sourceTags = builder.sourceTags;
         this.tenantId = builder.tenantId;
@@ -74,6 +89,13 @@ public class CreateKnowledgeBasePublicUrlRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return appToken
+     */
+    public String getAppToken() {
+        return this.appToken;
     }
 
     /**
@@ -112,6 +134,20 @@ public class CreateKnowledgeBasePublicUrlRequest extends Request {
     }
 
     /**
+     * @return opsUserCode
+     */
+    public String getOpsUserCode() {
+        return this.opsUserCode;
+    }
+
+    /**
+     * @return opsUserId
+     */
+    public String getOpsUserId() {
+        return this.opsUserId;
+    }
+
+    /**
      * @return originalUrl
      */
     public String getOriginalUrl() {
@@ -133,11 +169,14 @@ public class CreateKnowledgeBasePublicUrlRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateKnowledgeBasePublicUrlRequest, Builder> {
+        private String appToken; 
         private String description; 
         private String directoryId; 
         private String name; 
         private String notes; 
         private String operatingObjectName; 
+        private String opsUserCode; 
+        private String opsUserId; 
         private String originalUrl; 
         private String sourceTags; 
         private String tenantId; 
@@ -148,18 +187,33 @@ public class CreateKnowledgeBasePublicUrlRequest extends Request {
 
         private Builder(CreateKnowledgeBasePublicUrlRequest request) {
             super(request);
+            this.appToken = request.appToken;
             this.description = request.description;
             this.directoryId = request.directoryId;
             this.name = request.name;
             this.notes = request.notes;
             this.operatingObjectName = request.operatingObjectName;
+            this.opsUserCode = request.opsUserCode;
+            this.opsUserId = request.opsUserId;
             this.originalUrl = request.originalUrl;
             this.sourceTags = request.sourceTags;
             this.tenantId = request.tenantId;
         } 
 
         /**
-         * <p>The resource description.</p>
+         * <p>The platform application token issued by the console. If specified, the operation is performed as the user specified by opsUserId or opsUserCode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>wn_app_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+         */
+        public Builder appToken(String appToken) {
+            this.putQueryParameter("appToken", appToken);
+            this.appToken = appToken;
+            return this;
+        }
+
+        /**
+         * <p>The description of the resource.</p>
          * 
          * <strong>example:</strong>
          * <p>Project design document</p>
@@ -171,7 +225,7 @@ public class CreateKnowledgeBasePublicUrlRequest extends Request {
         }
 
         /**
-         * <p>The ID of the destination folder in the enterprise knowledge base. This parameter is required. You must have knowledge base management permissions on the knowledge base.</p>
+         * <p>The ID of the target folder in the enterprise knowledge base. This parameter is required, and you must have knowledge base management permissions on the knowledge base.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -184,10 +238,10 @@ public class CreateKnowledgeBasePublicUrlRequest extends Request {
         }
 
         /**
-         * <p>The resource name. If not specified, the URL is used.</p>
+         * <p>The name of the resource. If not specified, the URL is used.</p>
          * 
          * <strong>example:</strong>
-         * <p>Project Plan</p>
+         * <p>Project plan</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("name", name);
@@ -196,10 +250,10 @@ public class CreateKnowledgeBasePublicUrlRequest extends Request {
         }
 
         /**
-         * <p>The analysis instruction.</p>
+         * <p>The analysis instructions.</p>
          * 
          * <strong>example:</strong>
-         * <p>Extract decisions and to-do items</p>
+         * <p>Extract decisions and action items</p>
          */
         public Builder notes(String notes) {
             this.putBodyParameter("notes", notes);
@@ -211,7 +265,7 @@ public class CreateKnowledgeBasePublicUrlRequest extends Request {
          * <p>The name of the operating object.</p>
          * 
          * <strong>example:</strong>
-         * <p>R&amp;D Assistant</p>
+         * <p>R&amp;D assistant</p>
          */
         public Builder operatingObjectName(String operatingObjectName) {
             this.putBodyParameter("operatingObjectName", operatingObjectName);
@@ -220,7 +274,31 @@ public class CreateKnowledgeBasePublicUrlRequest extends Request {
         }
 
         /**
-         * <p>The URL of the public HTTP/HTTPS web page.</p>
+         * <p>The proxy user code, which is unique within the tenant. This parameter is used only when the application credential is configured as source_uid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alice</p>
+         */
+        public Builder opsUserCode(String opsUserCode) {
+            this.putQueryParameter("opsUserCode", opsUserCode);
+            this.opsUserCode = opsUserCode;
+            return this;
+        }
+
+        /**
+         * <p>The proxy user ID, which is the WINNEXO platform user ID. This parameter is used only when the application credential is configured as winnexo_uid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10001</p>
+         */
+        public Builder opsUserId(String opsUserId) {
+            this.putQueryParameter("opsUserId", opsUserId);
+            this.opsUserId = opsUserId;
+            return this;
+        }
+
+        /**
+         * <p>The URL of the public HTTP or HTTPS web page.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -233,7 +311,7 @@ public class CreateKnowledgeBasePublicUrlRequest extends Request {
         }
 
         /**
-         * <p>The list of resource tags as JSON strings.</p>
+         * <p>The list of resource tags in JSON string format.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;R&amp;D&quot;]</p>

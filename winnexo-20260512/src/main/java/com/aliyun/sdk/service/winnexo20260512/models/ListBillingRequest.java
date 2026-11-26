@@ -17,6 +17,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListBillingRequest</p>
  */
 public class ListBillingRequest extends Request {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("appToken")
+    private String appToken;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("bizId")
     private String bizId;
@@ -36,6 +40,14 @@ public class ListBillingRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("operation")
     private String operation;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("opsUserCode")
+    private String opsUserCode;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("opsUserId")
+    private String opsUserId;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("page")
@@ -63,11 +75,14 @@ public class ListBillingRequest extends Request {
 
     private ListBillingRequest(Builder builder) {
         super(builder);
+        this.appToken = builder.appToken;
         this.bizId = builder.bizId;
         this.bizType = builder.bizType;
         this.endTime = builder.endTime;
         this.ignoreZero = builder.ignoreZero;
         this.operation = builder.operation;
+        this.opsUserCode = builder.opsUserCode;
+        this.opsUserId = builder.opsUserId;
         this.page = builder.page;
         this.pageSize = builder.pageSize;
         this.startTime = builder.startTime;
@@ -87,6 +102,13 @@ public class ListBillingRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return appToken
+     */
+    public String getAppToken() {
+        return this.appToken;
     }
 
     /**
@@ -122,6 +144,20 @@ public class ListBillingRequest extends Request {
      */
     public String getOperation() {
         return this.operation;
+    }
+
+    /**
+     * @return opsUserCode
+     */
+    public String getOpsUserCode() {
+        return this.opsUserCode;
+    }
+
+    /**
+     * @return opsUserId
+     */
+    public String getOpsUserId() {
+        return this.opsUserId;
     }
 
     /**
@@ -167,11 +203,14 @@ public class ListBillingRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListBillingRequest, Builder> {
+        private String appToken; 
         private String bizId; 
         private String bizType; 
         private String endTime; 
         private Boolean ignoreZero; 
         private String operation; 
+        private String opsUserCode; 
+        private String opsUserId; 
         private Long page; 
         private Long pageSize; 
         private String startTime; 
@@ -185,11 +224,14 @@ public class ListBillingRequest extends Request {
 
         private Builder(ListBillingRequest request) {
             super(request);
+            this.appToken = request.appToken;
             this.bizId = request.bizId;
             this.bizType = request.bizType;
             this.endTime = request.endTime;
             this.ignoreZero = request.ignoreZero;
             this.operation = request.operation;
+            this.opsUserCode = request.opsUserCode;
+            this.opsUserId = request.opsUserId;
             this.page = request.page;
             this.pageSize = request.pageSize;
             this.startTime = request.startTime;
@@ -199,7 +241,19 @@ public class ListBillingRequest extends Request {
         } 
 
         /**
-         * <p>The unique business identifier. When bizType is set to LibraryChat, bizId specifies the document library ID.</p>
+         * <p>The platform application token issued by the console. If you specify this parameter, the request is executed as the user specified by opsUserId or opsUserCode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>wn_app_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+         */
+        public Builder appToken(String appToken) {
+            this.putQueryParameter("appToken", appToken);
+            this.appToken = appToken;
+            return this;
+        }
+
+        /**
+         * <p>The unique identifier of the business. When bizType is set to LibraryChat, bizId refers to the ID of the document library.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleBizId</p>
@@ -211,7 +265,7 @@ public class ListBillingRequest extends Request {
         }
 
         /**
-         * <p>The business type. Currently supported values: model Q&amp;A (LlmChat) and document library Q&amp;A (LibraryChat).</p>
+         * <p>The business type. Valid values: LlmChat (model Q&amp;A) and LibraryChat (document library Q&amp;A).</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -223,7 +277,7 @@ public class ListBillingRequest extends Request {
         }
 
         /**
-         * <p>The actual end timestamp of the live stream, in milliseconds.</p>
+         * <p>The actual end timestamp of the live stream. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-10-01T12:00:00Z</p>
@@ -235,7 +289,7 @@ public class ListBillingRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to filter out bills with zero credit consumption. Default value: true (filter out).</p>
+         * <p>Specifies whether to filter out bills with zero credit consumption. Default value: true.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -247,14 +301,12 @@ public class ListBillingRequest extends Request {
         }
 
         /**
-         * <p>The operation type. Valid values:</p>
+         * <p>The operation item. Valid values:</p>
          * <ul>
-         * <li>start: indicates node creation. This is the default value. In most cases, you do not need to explicitly set this value.</li>
-         * <li>stop: stops a real-time meeting node. This value corresponds to the creation of a real-time meeting. After the meeting ends, set this value to stop and trigger the call. This value is used in real-time meeting scenarios.</li>
+         * <li>start: indicates the creation of a task. This is the default value and usually does not need to be explicitly specified.</li>
+         * <li>stop: stops a real-time meeting task. This corresponds to the creation of a real-time meeting and is set to stop to trigger a call after the meeting ends. This value is used in real-time meeting scenarios.
+         * Note: When you end a real-time recording, you must set this parameter to stop.</li>
          * </ul>
-         * <blockquote>
-         * <p>Note: When ending a real-time recording, make sure to set this parameter to stop.</p>
-         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -262,6 +314,30 @@ public class ListBillingRequest extends Request {
         public Builder operation(String operation) {
             this.putBodyParameter("operation", operation);
             this.operation = operation;
+            return this;
+        }
+
+        /**
+         * <p>The code of the proxy user, which is unique within the tenant. This parameter is used only when the application credential is configured as source_uid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alice</p>
+         */
+        public Builder opsUserCode(String opsUserCode) {
+            this.putQueryParameter("opsUserCode", opsUserCode);
+            this.opsUserCode = opsUserCode;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the proxy user, which is the WINNEXO platform user ID. This parameter is used only when the application credential is configured as winnexo_uid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10001</p>
+         */
+        public Builder opsUserId(String opsUserId) {
+            this.putQueryParameter("opsUserId", opsUserId);
+            this.opsUserId = opsUserId;
             return this;
         }
 
@@ -290,7 +366,7 @@ public class ListBillingRequest extends Request {
         }
 
         /**
-         * <p>The query start time. The value is a UNIX timestamp in seconds.</p>
+         * <p>The start time of the query. The value is a UNIX timestamp in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-10-01T12:00:00Z</p>
@@ -302,7 +378,7 @@ public class ListBillingRequest extends Request {
         }
 
         /**
-         * <p>The node status. Running is returned upon submission.</p>
+         * <p>The task status. A status of Running is returned immediately after the task is submitted.</p>
          * 
          * <strong>example:</strong>
          * <p>READY</p>
@@ -314,7 +390,7 @@ public class ListBillingRequest extends Request {
         }
 
         /**
-         * <p>The tenant ID. This is a common parameter. In winnexo-cli, pass this parameter explicitly by using --tenant-id.</p>
+         * <p>The tenant ID. This is a common parameter. For winnexo-cli, this parameter is explicitly passed by using --tenant-id.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>
@@ -326,7 +402,7 @@ public class ListBillingRequest extends Request {
         }
 
         /**
-         * <p>The user ID (WINNEXO platform user ID, optional filter).</p>
+         * <p>The user ID, which is the WINNEXO platform user ID. This parameter is optional for filtering.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

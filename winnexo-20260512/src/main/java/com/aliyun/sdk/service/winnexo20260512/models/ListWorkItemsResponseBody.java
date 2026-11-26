@@ -196,7 +196,7 @@ public class ListWorkItemsResponseBody extends TeaModel {
          * <p>The list of work items on the current page.</p>
          * 
          * <strong>example:</strong>
-         * <p>example</p>
+         * <p>[{&quot;acceptanceCriteria&quot;:&quot;example&quot;,&quot;appliedStatusVersion&quot;:1,&quot;attachments&quot;:[{&quot;attachmentId&quot;:&quot;example&quot;,&quot;contentType&quot;:&quot;example&quot;,&quot;refUrl&quot;:&quot;example&quot;,&quot;resourceId&quot;:&quot;example&quot;,&quot;resourceKind&quot;:&quot;example&quot;,&quot;sizeBytes&quot;:1,&quot;title&quot;:&quot;example&quot;}],&quot;businessStatus&quot;:&quot;PROCESSING&quot;,&quot;canDelete&quot;:false,&quot;canManage&quot;:false,&quot;canManageVisibility&quot;:false,&quot;canRename&quot;:false,&quot;collaborationGroupId&quot;:&quot;example&quot;,&quot;collaboratorUserIds&quot;:[10001],&quot;conversationId&quot;:&quot;example&quot;,&quot;createdAt&quot;:&quot;example&quot;,&quot;createdByUserId&quot;:1,&quot;creationType&quot;:&quot;DEFAULT&quot;,&quot;currentPlanId&quot;:&quot;example&quot;,&quot;currentRevision&quot;:1,&quot;currentRunId&quot;:&quot;example&quot;,&quot;currentRunSeq&quot;:1,&quot;currentStepName&quot;:&quot;example&quot;,&quot;description&quot;:&quot;example&quot;,&quot;inputVersion&quot;:1,&quot;itemType&quot;:&quot;WORKFLOW&quot;,&quot;lastProcessingAt&quot;:&quot;example&quot;,&quot;legacyTopic&quot;:false,&quot;memberUserIds&quot;:[10001],&quot;modifiedAt&quot;:&quot;example&quot;,&quot;ownerUserId&quot;:1,&quot;pinned&quot;:false,&quot;priority&quot;:&quot;HIGH&quot;,&quot;progressCompleted&quot;:1,&quot;progressTotal&quot;:1,&quot;sourceExecutionId&quot;:&quot;example&quot;,&quot;sourceTaskId&quot;:&quot;example&quot;,&quot;sourceTaskName&quot;:&quot;example&quot;,&quot;sourceTriggerKey&quot;:&quot;example&quot;,&quot;sourceType&quot;:&quot;example&quot;,&quot;title&quot;:&quot;example&quot;,&quot;triggerTimezone&quot;:&quot;example&quot;,&quot;triggeredAt&quot;:&quot;example&quot;,&quot;version&quot;:1,&quot;visibility&quot;:&quot;example&quot;,&quot;visibilitySource&quot;:&quot;SELF&quot;,&quot;workItemId&quot;:&quot;example&quot;,&quot;workflowStatus&quot;:&quot;example&quot;,&quot;workflowTemplateIds&quot;:[&quot;tpl_example&quot;]}]</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -204,7 +204,7 @@ public class ListWorkItemsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The maximum number of items returned per page in the current request.</p>
+         * <p>The maximum number of items returned per page for this request.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -215,7 +215,7 @@ public class ListWorkItemsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message.</p>
+         * <p>The error description.</p>
          * 
          * <strong>example:</strong>
          * <p>The requested resource does not exist</p>
@@ -259,7 +259,7 @@ public class ListWorkItemsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The request tracking ID.</p>
          * 
          * <strong>example:</strong>
          * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -404,7 +404,7 @@ public class ListWorkItemsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the attachment.</p>
+             * <p>The attachment ID.</p>
              * 
              * <strong>example:</strong>
              * <p>example</p>
@@ -426,7 +426,7 @@ public class ListWorkItemsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The access URL of the attachment.</p>
+             * <p>The access endpoint of the attachment (prefixed with an OpenAPI 302 redirect).</p>
              * 
              * <strong>example:</strong>
              * <p>example</p>
@@ -470,7 +470,7 @@ public class ListWorkItemsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The title of the attachment.</p>
+             * <p>The attachment title.</p>
              * 
              * <strong>example:</strong>
              * <p>example</p>
@@ -1124,7 +1124,7 @@ public class ListWorkItemsResponseBody extends TeaModel {
              * <p>The list of input attachments.</p>
              * 
              * <strong>example:</strong>
-             * <p>example</p>
+             * <p>[{&quot;attachmentId&quot;:&quot;example&quot;,&quot;contentType&quot;:&quot;example&quot;,&quot;refUrl&quot;:&quot;example&quot;,&quot;resourceId&quot;:&quot;example&quot;,&quot;resourceKind&quot;:&quot;example&quot;,&quot;sizeBytes&quot;:1,&quot;title&quot;:&quot;example&quot;}]</p>
              */
             public Builder attachments(java.util.List<Attachments> attachments) {
                 this.attachments = attachments;
@@ -1132,7 +1132,7 @@ public class ListWorkItemsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The business status.</p>
+             * <p>The business status (seven states).</p>
              * 
              * <strong>example:</strong>
              * <p>PROCESSING</p>
@@ -1187,7 +1187,7 @@ public class ListWorkItemsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the collaboration workspace.</p>
+             * <p>The collaboration space ID.</p>
              * 
              * <strong>example:</strong>
              * <p>example</p>
@@ -1201,7 +1201,7 @@ public class ListWorkItemsResponseBody extends TeaModel {
              * <p>The list of user IDs of the collaborators.</p>
              * 
              * <strong>example:</strong>
-             * <p>example</p>
+             * <p>[10001]</p>
              */
             public Builder collaboratorUserIds(java.util.List<Long> collaboratorUserIds) {
                 this.collaboratorUserIds = collaboratorUserIds;
@@ -1220,7 +1220,7 @@ public class ListWorkItemsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time in ISO 8601 format.</p>
+             * <p>The creation time (ISO 8601).</p>
              * 
              * <strong>example:</strong>
              * <p>example</p>
@@ -1253,7 +1253,7 @@ public class ListWorkItemsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the current physical plan.</p>
+             * <p>The current physical plan ID.</p>
              * 
              * <strong>example:</strong>
              * <p>example</p>
@@ -1275,7 +1275,7 @@ public class ListWorkItemsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the current run.</p>
+             * <p>The current run ID.</p>
              * 
              * <strong>example:</strong>
              * <p>example</p>
@@ -1286,7 +1286,7 @@ public class ListWorkItemsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The sequence number of the current run.</p>
+             * <p>The current run sequence number.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1297,7 +1297,7 @@ public class ListWorkItemsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the current step.</p>
+             * <p>The current step name.</p>
              * 
              * <strong>example:</strong>
              * <p>example</p>
@@ -1319,7 +1319,7 @@ public class ListWorkItemsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version of the input snapshot.</p>
+             * <p>The input snapshot version.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1330,7 +1330,7 @@ public class ListWorkItemsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the work item.</p>
+             * <p>The work item type.</p>
              * 
              * <strong>example:</strong>
              * <p>WORKFLOW</p>
@@ -1341,7 +1341,7 @@ public class ListWorkItemsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the item last entered the processing state in ISO 8601 format.</p>
+             * <p>The time when the item last entered the processing state (ISO 8601).</p>
              * 
              * <strong>example:</strong>
              * <p>example</p>
@@ -1366,7 +1366,7 @@ public class ListWorkItemsResponseBody extends TeaModel {
              * <p>The list of user IDs of visible members.</p>
              * 
              * <strong>example:</strong>
-             * <p>example</p>
+             * <p>[10001]</p>
              */
             public Builder memberUserIds(java.util.List<Long> memberUserIds) {
                 this.memberUserIds = memberUserIds;
@@ -1374,7 +1374,7 @@ public class ListWorkItemsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The modification time in ISO 8601 format.</p>
+             * <p>The modification time (ISO 8601).</p>
              * 
              * <strong>example:</strong>
              * <p>example</p>
@@ -1396,7 +1396,7 @@ public class ListWorkItemsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the item is pinned by the caller.</p>
+             * <p>The personal pin status for the caller.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -1506,7 +1506,7 @@ public class ListWorkItemsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time zone when the task is triggered.</p>
+             * <p>The trigger time zone of the task.</p>
              * 
              * <strong>example:</strong>
              * <p>example</p>
@@ -1517,7 +1517,7 @@ public class ListWorkItemsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The trigger time of the task in ISO 8601 format.</p>
+             * <p>The trigger time of the task (ISO 8601).</p>
              * 
              * <strong>example:</strong>
              * <p>example</p>
@@ -1561,7 +1561,7 @@ public class ListWorkItemsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the work item.</p>
+             * <p>The work item ID.</p>
              * 
              * <strong>example:</strong>
              * <p>example</p>
@@ -1572,7 +1572,7 @@ public class ListWorkItemsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The workflow status projection.</p>
+             * <p>The workflow status projection (four states).</p>
              * 
              * <strong>example:</strong>
              * <p>example</p>
@@ -1586,7 +1586,7 @@ public class ListWorkItemsResponseBody extends TeaModel {
              * <p>The list of IDs of the bound workflow templates.</p>
              * 
              * <strong>example:</strong>
-             * <p>example</p>
+             * <p>[&quot;tpl_example&quot;]</p>
              */
             public Builder workflowTemplateIds(java.util.List<String> workflowTemplateIds) {
                 this.workflowTemplateIds = workflowTemplateIds;

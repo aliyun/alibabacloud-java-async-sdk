@@ -189,7 +189,7 @@ public class QuerySourceUsageSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The deduplicated count of sources that have retrieval events.</p>
+         * <p>The deduplicated number of sources with retrieval events.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -222,7 +222,7 @@ public class QuerySourceUsageSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The deduplicated count of sources that have usage events.</p>
+         * <p>The deduplicated number of sources with usage events.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>

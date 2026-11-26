@@ -128,7 +128,7 @@ public class CountTodosResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of pending items with the primary status of PENDING.</p>
+         * <p>The number of pending items with the PENDING primary status.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>

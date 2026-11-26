@@ -117,7 +117,7 @@ public class ReplaceObjectBindingsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The description of the status code.</p>
+         * <p>The status code description.</p>
          * 
          * <strong>example:</strong>
          * <p>successful</p>
@@ -147,7 +147,7 @@ public class ReplaceObjectBindingsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the personal FILE data source to be replaced (unique within the tenant).</p>
+         * <p>The ID of the personal FILE data source to be replaced, which is unique within the tenant.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleSourceId</p>
@@ -229,7 +229,7 @@ public class ReplaceObjectBindingsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The semantic graph name to which the binding object belongs (object_id is unique within this graph. Required).</p>
+             * <p>The name of the semantic graph to which the bound object belongs. The object_id is unique within this graph. This field is required.</p>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>
@@ -240,7 +240,7 @@ public class ReplaceObjectBindingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The binding object ID.</p>
+             * <p>The ID of the bound object.</p>
              * 
              * <strong>example:</strong>
              * <p>exampleObjectId</p>
@@ -251,7 +251,7 @@ public class ReplaceObjectBindingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The binding object type (such as customer or project).</p>
+             * <p>The object type to attach, such as customer or project.</p>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>

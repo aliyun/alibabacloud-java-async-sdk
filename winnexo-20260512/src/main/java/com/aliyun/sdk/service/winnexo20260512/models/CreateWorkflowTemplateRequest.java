@@ -21,6 +21,10 @@ public class CreateWorkflowTemplateRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("action")
     private String action;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("appToken")
+    private String appToken;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("collaborationGroupId")
     @com.aliyun.core.annotation.Validation(required = true, maxLength = 64, minLength = 1)
@@ -32,14 +36,25 @@ public class CreateWorkflowTemplateRequest extends Request {
     private java.util.Map<String, ?> definition;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("opsUserCode")
+    private String opsUserCode;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("opsUserId")
+    private String opsUserId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("tenantId")
     private String tenantId;
 
     private CreateWorkflowTemplateRequest(Builder builder) {
         super(builder);
         this.action = builder.action;
+        this.appToken = builder.appToken;
         this.collaborationGroupId = builder.collaborationGroupId;
         this.definition = builder.definition;
+        this.opsUserCode = builder.opsUserCode;
+        this.opsUserId = builder.opsUserId;
         this.tenantId = builder.tenantId;
     }
 
@@ -64,6 +79,13 @@ public class CreateWorkflowTemplateRequest extends Request {
     }
 
     /**
+     * @return appToken
+     */
+    public String getAppToken() {
+        return this.appToken;
+    }
+
+    /**
      * @return collaborationGroupId
      */
     public String getCollaborationGroupId() {
@@ -78,6 +100,20 @@ public class CreateWorkflowTemplateRequest extends Request {
     }
 
     /**
+     * @return opsUserCode
+     */
+    public String getOpsUserCode() {
+        return this.opsUserCode;
+    }
+
+    /**
+     * @return opsUserId
+     */
+    public String getOpsUserId() {
+        return this.opsUserId;
+    }
+
+    /**
      * @return tenantId
      */
     public String getTenantId() {
@@ -86,8 +122,11 @@ public class CreateWorkflowTemplateRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateWorkflowTemplateRequest, Builder> {
         private String action; 
+        private String appToken; 
         private String collaborationGroupId; 
         private java.util.Map<String, ?> definition; 
+        private String opsUserCode; 
+        private String opsUserId; 
         private String tenantId; 
 
         private Builder() {
@@ -97,8 +136,11 @@ public class CreateWorkflowTemplateRequest extends Request {
         private Builder(CreateWorkflowTemplateRequest request) {
             super(request);
             this.action = request.action;
+            this.appToken = request.appToken;
             this.collaborationGroupId = request.collaborationGroupId;
             this.definition = request.definition;
+            this.opsUserCode = request.opsUserCode;
+            this.opsUserId = request.opsUserId;
             this.tenantId = request.tenantId;
         } 
 
@@ -116,6 +158,18 @@ public class CreateWorkflowTemplateRequest extends Request {
         public Builder action(String action) {
             this.putBodyParameter("action", action);
             this.action = action;
+            return this;
+        }
+
+        /**
+         * <p>平台应用 Token（控制台签发）。传入后将以 opsUserId 或 opsUserCode 指定的用户身份执行</p>
+         * 
+         * <strong>example:</strong>
+         * <p>wn_app_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+         */
+        public Builder appToken(String appToken) {
+            this.putQueryParameter("appToken", appToken);
+            this.appToken = appToken;
             return this;
         }
 
@@ -143,6 +197,30 @@ public class CreateWorkflowTemplateRequest extends Request {
             String definitionShrink = shrink(definition, "definition", "json");
             this.putBodyParameter("definition", definitionShrink);
             this.definition = definition;
+            return this;
+        }
+
+        /**
+         * <p>代理用户编码（租户内唯一），仅当应用凭证配置为 source_uid 时使用</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alice</p>
+         */
+        public Builder opsUserCode(String opsUserCode) {
+            this.putQueryParameter("opsUserCode", opsUserCode);
+            this.opsUserCode = opsUserCode;
+            return this;
+        }
+
+        /**
+         * <p>代理用户ID（WINNEXO 平台用户ID），仅当应用凭证配置为 winnexo_uid 时使用</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10001</p>
+         */
+        public Builder opsUserId(String opsUserId) {
+            this.putQueryParameter("opsUserId", opsUserId);
+            this.opsUserId = opsUserId;
             return this;
         }
 

@@ -17,10 +17,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ReplaceObjectBindingsRequest</p>
  */
 public class ReplaceObjectBindingsRequest extends Request {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("appToken")
+    private String appToken;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("objectBindings")
     @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List<ObjectBindings> objectBindings;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("opsUserCode")
+    private String opsUserCode;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("opsUserId")
+    private String opsUserId;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("sourceId")
@@ -33,7 +45,10 @@ public class ReplaceObjectBindingsRequest extends Request {
 
     private ReplaceObjectBindingsRequest(Builder builder) {
         super(builder);
+        this.appToken = builder.appToken;
         this.objectBindings = builder.objectBindings;
+        this.opsUserCode = builder.opsUserCode;
+        this.opsUserId = builder.opsUserId;
         this.sourceId = builder.sourceId;
         this.tenantId = builder.tenantId;
     }
@@ -52,10 +67,31 @@ public class ReplaceObjectBindingsRequest extends Request {
     }
 
     /**
+     * @return appToken
+     */
+    public String getAppToken() {
+        return this.appToken;
+    }
+
+    /**
      * @return objectBindings
      */
     public java.util.List<ObjectBindings> getObjectBindings() {
         return this.objectBindings;
+    }
+
+    /**
+     * @return opsUserCode
+     */
+    public String getOpsUserCode() {
+        return this.opsUserCode;
+    }
+
+    /**
+     * @return opsUserId
+     */
+    public String getOpsUserId() {
+        return this.opsUserId;
     }
 
     /**
@@ -73,7 +109,10 @@ public class ReplaceObjectBindingsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ReplaceObjectBindingsRequest, Builder> {
+        private String appToken; 
         private java.util.List<ObjectBindings> objectBindings; 
+        private String opsUserCode; 
+        private String opsUserId; 
         private String sourceId; 
         private String tenantId; 
 
@@ -83,13 +122,28 @@ public class ReplaceObjectBindingsRequest extends Request {
 
         private Builder(ReplaceObjectBindingsRequest request) {
             super(request);
+            this.appToken = request.appToken;
             this.objectBindings = request.objectBindings;
+            this.opsUserCode = request.opsUserCode;
+            this.opsUserId = request.opsUserId;
             this.sourceId = request.sourceId;
             this.tenantId = request.tenantId;
         } 
 
         /**
-         * <p>The new list of object bindings (full replacement. Pass an empty list to clear all bindings).</p>
+         * <p>The platform application token issued by the console. If specified, the operation is executed as the user identified by opsUserId or opsUserCode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>wn_app_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+         */
+        public Builder appToken(String appToken) {
+            this.putQueryParameter("appToken", appToken);
+            this.appToken = appToken;
+            return this;
+        }
+
+        /**
+         * <p>The new list of object bindings for full replacement. Passing an empty list clears all bindings.</p>
          * <p>This parameter is required.</p>
          */
         public Builder objectBindings(java.util.List<ObjectBindings> objectBindings) {
@@ -100,7 +154,31 @@ public class ReplaceObjectBindingsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the personal FILE data source to be replaced (unique within the tenant).</p>
+         * <p>The proxy user code, which is unique within the tenant. This parameter is used only when the application credential is configured as source_uid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alice</p>
+         */
+        public Builder opsUserCode(String opsUserCode) {
+            this.putQueryParameter("opsUserCode", opsUserCode);
+            this.opsUserCode = opsUserCode;
+            return this;
+        }
+
+        /**
+         * <p>The proxy user ID, which is the WINNEXO platform user ID. This parameter is used only when the application credential is configured as winnexo_uid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10001</p>
+         */
+        public Builder opsUserId(String opsUserId) {
+            this.putQueryParameter("opsUserId", opsUserId);
+            this.opsUserId = opsUserId;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the personal FILE data source to be replaced, which is unique within the tenant.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -113,7 +191,7 @@ public class ReplaceObjectBindingsRequest extends Request {
         }
 
         /**
-         * <p>The tenant ID. This is a common parameter. Pass it explicitly through winnexo-cli using --tenant-id.</p>
+         * <p>The tenant ID. This is a common parameter and is explicitly passed by winnexo-cli through the --tenant-id option.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>
@@ -197,7 +275,7 @@ public class ReplaceObjectBindingsRequest extends Request {
             } 
 
             /**
-             * <p>The semantic graph name to which the binding object belongs (object_id is unique within this graph. Required).</p>
+             * <p>The name of the semantic graph to which the bound object belongs. The object_id must be unique within this graph. This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>
@@ -208,7 +286,7 @@ public class ReplaceObjectBindingsRequest extends Request {
             }
 
             /**
-             * <p>The binding object ID.</p>
+             * <p>The ID of the bound object.</p>
              * 
              * <strong>example:</strong>
              * <p>exampleObjectId</p>
@@ -219,7 +297,7 @@ public class ReplaceObjectBindingsRequest extends Request {
             }
 
             /**
-             * <p>The binding object type (such as customer or project).</p>
+             * <p>The object type to attach, such as customer or project.</p>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>

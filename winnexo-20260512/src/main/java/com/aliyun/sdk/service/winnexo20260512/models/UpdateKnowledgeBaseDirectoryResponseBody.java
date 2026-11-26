@@ -104,7 +104,7 @@ public class UpdateKnowledgeBaseDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The category ID (echoed from the input parameter).</p>
+         * <p>The category ID, which is echoed from the request parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleDirectoryId</p>

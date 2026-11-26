@@ -17,9 +17,21 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListCollaborationGroupsRequest</p>
  */
 public class ListCollaborationGroupsRequest extends Request {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("appToken")
+    private String appToken;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("keyword")
     private String keyword;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("opsUserCode")
+    private String opsUserCode;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("opsUserId")
+    private String opsUserId;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("page")
@@ -35,7 +47,10 @@ public class ListCollaborationGroupsRequest extends Request {
 
     private ListCollaborationGroupsRequest(Builder builder) {
         super(builder);
+        this.appToken = builder.appToken;
         this.keyword = builder.keyword;
+        this.opsUserCode = builder.opsUserCode;
+        this.opsUserId = builder.opsUserId;
         this.page = builder.page;
         this.pageSize = builder.pageSize;
         this.tenantId = builder.tenantId;
@@ -55,10 +70,31 @@ public class ListCollaborationGroupsRequest extends Request {
     }
 
     /**
+     * @return appToken
+     */
+    public String getAppToken() {
+        return this.appToken;
+    }
+
+    /**
      * @return keyword
      */
     public String getKeyword() {
         return this.keyword;
+    }
+
+    /**
+     * @return opsUserCode
+     */
+    public String getOpsUserCode() {
+        return this.opsUserCode;
+    }
+
+    /**
+     * @return opsUserId
+     */
+    public String getOpsUserId() {
+        return this.opsUserId;
     }
 
     /**
@@ -83,7 +119,10 @@ public class ListCollaborationGroupsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListCollaborationGroupsRequest, Builder> {
+        private String appToken; 
         private String keyword; 
+        private String opsUserCode; 
+        private String opsUserId; 
         private Long page; 
         private Long pageSize; 
         private String tenantId; 
@@ -94,14 +133,29 @@ public class ListCollaborationGroupsRequest extends Request {
 
         private Builder(ListCollaborationGroupsRequest request) {
             super(request);
+            this.appToken = request.appToken;
             this.keyword = request.keyword;
+            this.opsUserCode = request.opsUserCode;
+            this.opsUserId = request.opsUserId;
             this.page = request.page;
             this.pageSize = request.pageSize;
             this.tenantId = request.tenantId;
         } 
 
         /**
-         * <p>The search keyword. This parameter is optional and can contain up to 256 characters.</p>
+         * <p>The platform application token issued by the console. If specified, the operation is executed with the user identity specified by opsUserId or opsUserCode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>wn_app_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+         */
+        public Builder appToken(String appToken) {
+            this.putQueryParameter("appToken", appToken);
+            this.appToken = appToken;
+            return this;
+        }
+
+        /**
+         * <p>The search keyword. This parameter is optional and can be up to 256 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>Workflow</p>
@@ -113,7 +167,31 @@ public class ListCollaborationGroupsRequest extends Request {
         }
 
         /**
-         * <p>The page number. Pages start from 1.</p>
+         * <p>The proxy user code, which is unique within the tenant. This parameter is used only when the application credential is configured as source_uid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alice</p>
+         */
+        public Builder opsUserCode(String opsUserCode) {
+            this.putQueryParameter("opsUserCode", opsUserCode);
+            this.opsUserCode = opsUserCode;
+            return this;
+        }
+
+        /**
+         * <p>The proxy user ID, which is the WINNEXO platform user ID. This parameter is used only when the application credential is configured as winnexo_uid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10001</p>
+         */
+        public Builder opsUserId(String opsUserId) {
+            this.putQueryParameter("opsUserId", opsUserId);
+            this.opsUserId = opsUserId;
+            return this;
+        }
+
+        /**
+         * <p>The page number, starting from 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -137,7 +215,7 @@ public class ListCollaborationGroupsRequest extends Request {
         }
 
         /**
-         * <p>The tenant ID. If you do not specify this parameter, the default tenant of the caller is used.</p>
+         * <p>The tenant ID. If not specified, the default tenant of the caller is used.</p>
          * 
          * <strong>example:</strong>
          * <p>10001</p>

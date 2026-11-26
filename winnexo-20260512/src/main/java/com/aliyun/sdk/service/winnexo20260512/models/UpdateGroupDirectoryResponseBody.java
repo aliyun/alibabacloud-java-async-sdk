@@ -182,10 +182,10 @@ public class UpdateGroupDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The folder description.</p>
+         * <p>The directory description.</p>
          * 
          * <strong>example:</strong>
-         * <p>Project description</p>
+         * <p>Project Description</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -193,7 +193,7 @@ public class UpdateGroupDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The folder ID.</p>
+         * <p>The directory ID.</p>
          * 
          * <strong>example:</strong>
          * <p>dir_example</p>
@@ -204,7 +204,7 @@ public class UpdateGroupDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The folder type. The value is fixed as GROUP.</p>
+         * <p>The directory type. The value is fixed as GROUP.</p>
          * 
          * <strong>example:</strong>
          * <p>GROUP</p>
@@ -215,7 +215,7 @@ public class UpdateGroupDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the collaborative share.</p>
+         * <p>The ID of the collaboration workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>group_example</p>
@@ -226,7 +226,7 @@ public class UpdateGroupDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the internal root folder in the collaborative share. This folder cannot be modified.</p>
+         * <p>The ID of the internal root directory in the collaboration workspace. This directory cannot be modified.</p>
          * 
          * <strong>example:</strong>
          * <p>dir_root</p>
@@ -248,7 +248,7 @@ public class UpdateGroupDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The folder name.</p>
+         * <p>The directory name.</p>
          * 
          * <strong>example:</strong>
          * <p>Project Materials</p>
@@ -259,7 +259,7 @@ public class UpdateGroupDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The parent folder ID.</p>
+         * <p>The ID of the parent directory.</p>
          * 
          * <strong>example:</strong>
          * <p>dir_parent</p>
@@ -270,7 +270,7 @@ public class UpdateGroupDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request trace ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>

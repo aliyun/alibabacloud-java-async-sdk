@@ -85,7 +85,7 @@ public class EnableTokenRequest extends Request {
         }
 
         /**
-         * <p>The ID of the target user (WINNEXO platform user ID). If this parameter is left empty, the operation is performed on the caller. Administrators can specify another user\&quot;s ID to perform the operation on behalf of that user.</p>
+         * <p>The ID of the target user (WINNEXO platform user ID). If this parameter is left empty, the operation is performed on the caller. Administrators can specify another user&quot;s ID to perform the operation on behalf of that user.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

@@ -229,7 +229,7 @@ public class CreateTenantDirectoryResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The status code.</p>
+         * <p>The business status code. A value of 200 indicates success. If the request fails, a specific business error code is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -240,10 +240,10 @@ public class CreateTenantDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The description of the to-do card type.</p>
+         * <p>The description of the created directory. If no description is set, the value is empty.</p>
          * 
          * <strong>example:</strong>
-         * <p>Sample description</p>
+         * <p>Team product materials and operation guides</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -251,11 +251,11 @@ public class CreateTenantDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The folder ID.</p>
+         * <p>The business ID of the newly created directory. You can use this ID to read or update the knowledge base configuration for standard enterprise root directories.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>exampleDirectoryId</p>
+         * <p>kb-example</p>
          */
         public Builder directoryId(String directoryId) {
             this.directoryId = directoryId;
@@ -263,10 +263,10 @@ public class CreateTenantDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The creation time.</p>
+         * <p>The time when the directory was created. The value is a UNIX timestamp in seconds.</p>
          * 
          * <strong>example:</strong>
-         * <p>1</p>
+         * <p>1699000000</p>
          */
         public Builder gmtCreate(Long gmtCreate) {
             this.gmtCreate = gmtCreate;
@@ -274,10 +274,10 @@ public class CreateTenantDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The last modification time.</p>
+         * <p>The time when the directory was last modified. The value is a UNIX timestamp in seconds.</p>
          * 
          * <strong>example:</strong>
-         * <p>1</p>
+         * <p>1699000010</p>
          */
         public Builder gmtModified(Long gmtModified) {
             this.gmtModified = gmtModified;
@@ -285,11 +285,11 @@ public class CreateTenantDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The tenant folder ID.</p>
+         * <p>The internal primary key of the directory. You can use this key as the parentId when you create a subdirectory. This key is different from the business ID directoryId.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>1</p>
+         * <p>1001</p>
          */
         public Builder id(Long id) {
             this.id = id;
@@ -297,10 +297,10 @@ public class CreateTenantDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The description of the status code.</p>
+         * <p>The response message. The value is success if the request is successful. If the request fails, this parameter describes the cause of the error.</p>
          * 
          * <strong>example:</strong>
-         * <p>successful</p>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -308,11 +308,11 @@ public class CreateTenantDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The name.</p>
+         * <p>The name of the created directory.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>SampleName.pdf</p>
+         * <p>Product knowledge base</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -320,10 +320,10 @@ public class CreateTenantDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The name of the digital employee (the operating object name, optional).</p>
+         * <p>The legacy single digital employee association field. You cannot use this field to replace the mode and association list returned by GetKnowledgeBaseConfiguration.</p>
          * 
          * <strong>example:</strong>
-         * <p>string_value</p>
+         * <p>opt_1</p>
          */
         public Builder operatingObjectName(String operatingObjectName) {
             this.operatingObjectName = operatingObjectName;
@@ -331,10 +331,10 @@ public class CreateTenantDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the parent node.</p>
+         * <p>The internal primary key of the parent directory. This value is empty for enterprise root directories.</p>
          * 
          * <strong>example:</strong>
-         * <p>1</p>
+         * <p>1001</p>
          */
         public Builder parentId(Long parentId) {
             this.parentId = parentId;
@@ -342,11 +342,11 @@ public class CreateTenantDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The path of the node.</p>
+         * <p>The path of the created directory.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p><a href="https://example.com/oss/file.pdf">https://example.com/oss/file.pdf</a></p>
+         * <p>/Product knowledge base</p>
          */
         public Builder path(String path) {
             this.path = path;
@@ -354,7 +354,7 @@ public class CreateTenantDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The request tracking ID. You can use this ID to troubleshoot issues related to this call.</p>
          * 
          * <strong>example:</strong>
          * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -365,7 +365,7 @@ public class CreateTenantDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the tenant for which the operation takes effect.</p>
+         * <p>The ID of the tenant to which the directory belongs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -377,11 +377,11 @@ public class CreateTenantDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The user ID of the creator.</p>
+         * <p>The ID of the platform user who created the directory.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>1</p>
+         * <p>10001</p>
          */
         public Builder userId(Long userId) {
             this.userId = userId;

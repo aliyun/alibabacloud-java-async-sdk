@@ -17,6 +17,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateKnowledgeBaseDirectoryRequest</p>
  */
 public class UpdateKnowledgeBaseDirectoryRequest extends Request {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("appToken")
+    private String appToken;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("description")
     private String description;
@@ -30,6 +34,14 @@ public class UpdateKnowledgeBaseDirectoryRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("name")
     private String name;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("opsUserCode")
+    private String opsUserCode;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("opsUserId")
+    private String opsUserId;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("parentDirectoryId")
     private String parentDirectoryId;
@@ -40,9 +52,12 @@ public class UpdateKnowledgeBaseDirectoryRequest extends Request {
 
     private UpdateKnowledgeBaseDirectoryRequest(Builder builder) {
         super(builder);
+        this.appToken = builder.appToken;
         this.description = builder.description;
         this.directoryId = builder.directoryId;
         this.name = builder.name;
+        this.opsUserCode = builder.opsUserCode;
+        this.opsUserId = builder.opsUserId;
         this.parentDirectoryId = builder.parentDirectoryId;
         this.tenantId = builder.tenantId;
     }
@@ -58,6 +73,13 @@ public class UpdateKnowledgeBaseDirectoryRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return appToken
+     */
+    public String getAppToken() {
+        return this.appToken;
     }
 
     /**
@@ -82,6 +104,20 @@ public class UpdateKnowledgeBaseDirectoryRequest extends Request {
     }
 
     /**
+     * @return opsUserCode
+     */
+    public String getOpsUserCode() {
+        return this.opsUserCode;
+    }
+
+    /**
+     * @return opsUserId
+     */
+    public String getOpsUserId() {
+        return this.opsUserId;
+    }
+
+    /**
      * @return parentDirectoryId
      */
     public String getParentDirectoryId() {
@@ -96,9 +132,12 @@ public class UpdateKnowledgeBaseDirectoryRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UpdateKnowledgeBaseDirectoryRequest, Builder> {
+        private String appToken; 
         private String description; 
         private String directoryId; 
         private String name; 
+        private String opsUserCode; 
+        private String opsUserId; 
         private String parentDirectoryId; 
         private String tenantId; 
 
@@ -108,12 +147,27 @@ public class UpdateKnowledgeBaseDirectoryRequest extends Request {
 
         private Builder(UpdateKnowledgeBaseDirectoryRequest request) {
             super(request);
+            this.appToken = request.appToken;
             this.description = request.description;
             this.directoryId = request.directoryId;
             this.name = request.name;
+            this.opsUserCode = request.opsUserCode;
+            this.opsUserId = request.opsUserId;
             this.parentDirectoryId = request.parentDirectoryId;
             this.tenantId = request.tenantId;
         } 
+
+        /**
+         * <p>The platform application token issued by the console. If you specify this parameter, the operation is performed as the user specified by opsUserId or opsUserCode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>wn_app_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+         */
+        public Builder appToken(String appToken) {
+            this.putQueryParameter("appToken", appToken);
+            this.appToken = appToken;
+            return this;
+        }
 
         /**
          * <p>The description of the to-do card type.</p>
@@ -128,7 +182,7 @@ public class UpdateKnowledgeBaseDirectoryRequest extends Request {
         }
 
         /**
-         * <p>The directory ID.</p>
+         * <p>The ID of the directory.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -153,7 +207,31 @@ public class UpdateKnowledgeBaseDirectoryRequest extends Request {
         }
 
         /**
-         * <p>The directory ID.</p>
+         * <p>The code of the proxy user, which is unique within the tenant. This parameter is used only when the application credential is configured as <code>source_uid</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alice</p>
+         */
+        public Builder opsUserCode(String opsUserCode) {
+            this.putQueryParameter("opsUserCode", opsUserCode);
+            this.opsUserCode = opsUserCode;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the proxy user, which is the WINNEXO platform user ID. This parameter is used only when the application credential is configured as <code>winnexo_uid</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10001</p>
+         */
+        public Builder opsUserId(String opsUserId) {
+            this.putQueryParameter("opsUserId", opsUserId);
+            this.opsUserId = opsUserId;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the parent directory.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleParentDirectoryId</p>
@@ -165,7 +243,7 @@ public class UpdateKnowledgeBaseDirectoryRequest extends Request {
         }
 
         /**
-         * <p>The tenant ID to take effect.</p>
+         * <p>The ID of the tenant.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>

@@ -21,6 +21,10 @@ public class CreateWorkItemRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("acceptanceCriteria")
     private String acceptanceCriteria;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("appToken")
+    private String appToken;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("attachments")
     private java.util.List<Attachments> attachments;
@@ -47,6 +51,14 @@ public class CreateWorkItemRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String itemType;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("opsUserCode")
+    private String opsUserCode;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("opsUserId")
+    private String opsUserId;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ownerUserId")
     private Long ownerUserId;
@@ -71,12 +83,15 @@ public class CreateWorkItemRequest extends Request {
     private CreateWorkItemRequest(Builder builder) {
         super(builder);
         this.acceptanceCriteria = builder.acceptanceCriteria;
+        this.appToken = builder.appToken;
         this.attachments = builder.attachments;
         this.collaborationGroupId = builder.collaborationGroupId;
         this.collaboratorUserIds = builder.collaboratorUserIds;
         this.conversationId = builder.conversationId;
         this.description = builder.description;
         this.itemType = builder.itemType;
+        this.opsUserCode = builder.opsUserCode;
+        this.opsUserId = builder.opsUserId;
         this.ownerUserId = builder.ownerUserId;
         this.priority = builder.priority;
         this.tenantId = builder.tenantId;
@@ -102,6 +117,13 @@ public class CreateWorkItemRequest extends Request {
      */
     public String getAcceptanceCriteria() {
         return this.acceptanceCriteria;
+    }
+
+    /**
+     * @return appToken
+     */
+    public String getAppToken() {
+        return this.appToken;
     }
 
     /**
@@ -147,6 +169,20 @@ public class CreateWorkItemRequest extends Request {
     }
 
     /**
+     * @return opsUserCode
+     */
+    public String getOpsUserCode() {
+        return this.opsUserCode;
+    }
+
+    /**
+     * @return opsUserId
+     */
+    public String getOpsUserId() {
+        return this.opsUserId;
+    }
+
+    /**
      * @return ownerUserId
      */
     public Long getOwnerUserId() {
@@ -183,12 +219,15 @@ public class CreateWorkItemRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateWorkItemRequest, Builder> {
         private String acceptanceCriteria; 
+        private String appToken; 
         private java.util.List<Attachments> attachments; 
         private String collaborationGroupId; 
         private java.util.List<Long> collaboratorUserIds; 
         private String conversationId; 
         private String description; 
         private String itemType; 
+        private String opsUserCode; 
+        private String opsUserId; 
         private Long ownerUserId; 
         private String priority; 
         private String tenantId; 
@@ -202,12 +241,15 @@ public class CreateWorkItemRequest extends Request {
         private Builder(CreateWorkItemRequest request) {
             super(request);
             this.acceptanceCriteria = request.acceptanceCriteria;
+            this.appToken = request.appToken;
             this.attachments = request.attachments;
             this.collaborationGroupId = request.collaborationGroupId;
             this.collaboratorUserIds = request.collaboratorUserIds;
             this.conversationId = request.conversationId;
             this.description = request.description;
             this.itemType = request.itemType;
+            this.opsUserCode = request.opsUserCode;
+            this.opsUserId = request.opsUserId;
             this.ownerUserId = request.ownerUserId;
             this.priority = request.priority;
             this.tenantId = request.tenantId;
@@ -228,10 +270,22 @@ public class CreateWorkItemRequest extends Request {
         }
 
         /**
+         * <p>The platform application token issued by the console. If specified, the operation is performed as the user specified by opsUserId or opsUserCode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>wn_app_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+         */
+        public Builder appToken(String appToken) {
+            this.putQueryParameter("appToken", appToken);
+            this.appToken = appToken;
+            return this;
+        }
+
+        /**
          * <p>The stable references of the input attachments.</p>
          * 
          * <strong>example:</strong>
-         * <p>example</p>
+         * <p>[{&quot;resourceKind&quot;:&quot;FILE&quot;,&quot;resourceId&quot;:&quot;file_9401&quot;,&quot;refUrl&quot;:&quot;<a href="https://files.winnexo.aliyun.com/report.md%22,%22title%22:%22Sales">https://files.winnexo.aliyun.com/report.md&quot;,&quot;title&quot;:&quot;Sales</a> Report&quot;,&quot;contentType&quot;:&quot;text/markdown&quot;,&quot;sizeBytes&quot;:2048}]</p>
          */
         public Builder attachments(java.util.List<Attachments> attachments) {
             String attachmentsShrink = shrink(attachments, "attachments", "json");
@@ -241,7 +295,7 @@ public class CreateWorkItemRequest extends Request {
         }
 
         /**
-         * <p>The ID of the collaboration workspace.</p>
+         * <p>The ID of the collaboration space.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -257,7 +311,7 @@ public class CreateWorkItemRequest extends Request {
          * <p>The list of user IDs of the collaborators.</p>
          * 
          * <strong>example:</strong>
-         * <p>example</p>
+         * <p>[10001,10002]</p>
          */
         public Builder collaboratorUserIds(java.util.List<Long> collaboratorUserIds) {
             String collaboratorUserIdsShrink = shrink(collaboratorUserIds, "collaboratorUserIds", "json");
@@ -291,7 +345,7 @@ public class CreateWorkItemRequest extends Request {
         }
 
         /**
-         * <p>The type of the work item. Only WORKFLOW is supported.</p>
+         * <p>The type of the work item. Only WORKFLOW is accepted.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -304,7 +358,31 @@ public class CreateWorkItemRequest extends Request {
         }
 
         /**
-         * <p>The user ID of the owner. If this parameter is not specified, the ID of the caller is used.</p>
+         * <p>The proxy user code, which is unique within the tenant. This parameter is used only when the application credential is configured as source_uid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alice</p>
+         */
+        public Builder opsUserCode(String opsUserCode) {
+            this.putQueryParameter("opsUserCode", opsUserCode);
+            this.opsUserCode = opsUserCode;
+            return this;
+        }
+
+        /**
+         * <p>The proxy user ID, which is the WINNEXO platform user ID. This parameter is used only when the application credential is configured as winnexo_uid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10001</p>
+         */
+        public Builder opsUserId(String opsUserId) {
+            this.putQueryParameter("opsUserId", opsUserId);
+            this.opsUserId = opsUserId;
+            return this;
+        }
+
+        /**
+         * <p>The user ID of the owner. If not specified, the caller is used as the owner.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -328,7 +406,7 @@ public class CreateWorkItemRequest extends Request {
         }
 
         /**
-         * <p>The tenant ID. This is a common parameter. If this parameter is not specified, the default tenant of the caller is used.</p>
+         * <p>The tenant ID. This is a common parameter. If not specified, the default tenant of the caller is used.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>
@@ -356,7 +434,7 @@ public class CreateWorkItemRequest extends Request {
          * <p>The list of IDs of the bound workflow templates.</p>
          * 
          * <strong>example:</strong>
-         * <p>example</p>
+         * <p>[&quot;tpl_9401&quot;,&quot;tpl_9402&quot;]</p>
          */
         public Builder workflowTemplateIds(java.util.List<String> workflowTemplateIds) {
             String workflowTemplateIdsShrink = shrink(workflowTemplateIds, "workflowTemplateIds", "json");

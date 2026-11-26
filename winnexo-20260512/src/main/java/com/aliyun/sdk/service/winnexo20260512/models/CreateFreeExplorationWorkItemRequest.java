@@ -22,6 +22,10 @@ public class CreateFreeExplorationWorkItemRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List<String> agentNames;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("appToken")
+    private String appToken;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("collaborationGroupId")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -30,6 +34,14 @@ public class CreateFreeExplorationWorkItemRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("memberUserIds")
     private java.util.List<Long> memberUserIds;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("opsUserCode")
+    private String opsUserCode;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("opsUserId")
+    private String opsUserId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("tenantId")
@@ -47,8 +59,11 @@ public class CreateFreeExplorationWorkItemRequest extends Request {
     private CreateFreeExplorationWorkItemRequest(Builder builder) {
         super(builder);
         this.agentNames = builder.agentNames;
+        this.appToken = builder.appToken;
         this.collaborationGroupId = builder.collaborationGroupId;
         this.memberUserIds = builder.memberUserIds;
+        this.opsUserCode = builder.opsUserCode;
+        this.opsUserId = builder.opsUserId;
         this.tenantId = builder.tenantId;
         this.title = builder.title;
         this.visibility = builder.visibility;
@@ -75,6 +90,13 @@ public class CreateFreeExplorationWorkItemRequest extends Request {
     }
 
     /**
+     * @return appToken
+     */
+    public String getAppToken() {
+        return this.appToken;
+    }
+
+    /**
      * @return collaborationGroupId
      */
     public String getCollaborationGroupId() {
@@ -86,6 +108,20 @@ public class CreateFreeExplorationWorkItemRequest extends Request {
      */
     public java.util.List<Long> getMemberUserIds() {
         return this.memberUserIds;
+    }
+
+    /**
+     * @return opsUserCode
+     */
+    public String getOpsUserCode() {
+        return this.opsUserCode;
+    }
+
+    /**
+     * @return opsUserId
+     */
+    public String getOpsUserId() {
+        return this.opsUserId;
     }
 
     /**
@@ -111,8 +147,11 @@ public class CreateFreeExplorationWorkItemRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateFreeExplorationWorkItemRequest, Builder> {
         private java.util.List<String> agentNames; 
+        private String appToken; 
         private String collaborationGroupId; 
         private java.util.List<Long> memberUserIds; 
+        private String opsUserCode; 
+        private String opsUserId; 
         private String tenantId; 
         private String title; 
         private String visibility; 
@@ -124,8 +163,11 @@ public class CreateFreeExplorationWorkItemRequest extends Request {
         private Builder(CreateFreeExplorationWorkItemRequest request) {
             super(request);
             this.agentNames = request.agentNames;
+            this.appToken = request.appToken;
             this.collaborationGroupId = request.collaborationGroupId;
             this.memberUserIds = request.memberUserIds;
+            this.opsUserCode = request.opsUserCode;
+            this.opsUserId = request.opsUserId;
             this.tenantId = request.tenantId;
             this.title = request.title;
             this.visibility = request.visibility;
@@ -142,6 +184,18 @@ public class CreateFreeExplorationWorkItemRequest extends Request {
             String agentNamesShrink = shrink(agentNames, "agentNames", "json");
             this.putBodyParameter("agentNames", agentNamesShrink);
             this.agentNames = agentNames;
+            return this;
+        }
+
+        /**
+         * <p>平台应用 Token（控制台签发）。传入后将以 opsUserId 或 opsUserCode 指定的用户身份执行</p>
+         * 
+         * <strong>example:</strong>
+         * <p>wn_app_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+         */
+        public Builder appToken(String appToken) {
+            this.putQueryParameter("appToken", appToken);
+            this.appToken = appToken;
             return this;
         }
 
@@ -168,6 +222,30 @@ public class CreateFreeExplorationWorkItemRequest extends Request {
             String memberUserIdsShrink = shrink(memberUserIds, "memberUserIds", "json");
             this.putBodyParameter("memberUserIds", memberUserIdsShrink);
             this.memberUserIds = memberUserIds;
+            return this;
+        }
+
+        /**
+         * <p>代理用户编码（租户内唯一），仅当应用凭证配置为 source_uid 时使用</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alice</p>
+         */
+        public Builder opsUserCode(String opsUserCode) {
+            this.putQueryParameter("opsUserCode", opsUserCode);
+            this.opsUserCode = opsUserCode;
+            return this;
+        }
+
+        /**
+         * <p>代理用户ID（WINNEXO 平台用户ID），仅当应用凭证配置为 winnexo_uid 时使用</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10001</p>
+         */
+        public Builder opsUserId(String opsUserId) {
+            this.putQueryParameter("opsUserId", opsUserId);
+            this.opsUserId = opsUserId;
             return this;
         }
 

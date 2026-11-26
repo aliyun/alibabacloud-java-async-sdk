@@ -17,10 +17,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CheckAppResourcePermissionsBatchRequest</p>
  */
 public class CheckAppResourcePermissionsBatchRequest extends Request {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("appToken")
+    private String appToken;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("checks")
     @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List<Checks> checks;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("opsUserCode")
+    private String opsUserCode;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("opsUserId")
+    private String opsUserId;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("resourceTenantId")
@@ -40,7 +52,10 @@ public class CheckAppResourcePermissionsBatchRequest extends Request {
 
     private CheckAppResourcePermissionsBatchRequest(Builder builder) {
         super(builder);
+        this.appToken = builder.appToken;
         this.checks = builder.checks;
+        this.opsUserCode = builder.opsUserCode;
+        this.opsUserId = builder.opsUserId;
         this.resourceTenantId = builder.resourceTenantId;
         this.targetUserId = builder.targetUserId;
         this.targetUserTenantId = builder.targetUserTenantId;
@@ -61,10 +76,31 @@ public class CheckAppResourcePermissionsBatchRequest extends Request {
     }
 
     /**
+     * @return appToken
+     */
+    public String getAppToken() {
+        return this.appToken;
+    }
+
+    /**
      * @return checks
      */
     public java.util.List<Checks> getChecks() {
         return this.checks;
+    }
+
+    /**
+     * @return opsUserCode
+     */
+    public String getOpsUserCode() {
+        return this.opsUserCode;
+    }
+
+    /**
+     * @return opsUserId
+     */
+    public String getOpsUserId() {
+        return this.opsUserId;
     }
 
     /**
@@ -96,7 +132,10 @@ public class CheckAppResourcePermissionsBatchRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CheckAppResourcePermissionsBatchRequest, Builder> {
+        private String appToken; 
         private java.util.List<Checks> checks; 
+        private String opsUserCode; 
+        private String opsUserId; 
         private String resourceTenantId; 
         private Long targetUserId; 
         private String targetUserTenantId; 
@@ -108,12 +147,27 @@ public class CheckAppResourcePermissionsBatchRequest extends Request {
 
         private Builder(CheckAppResourcePermissionsBatchRequest request) {
             super(request);
+            this.appToken = request.appToken;
             this.checks = request.checks;
+            this.opsUserCode = request.opsUserCode;
+            this.opsUserId = request.opsUserId;
             this.resourceTenantId = request.resourceTenantId;
             this.targetUserId = request.targetUserId;
             this.targetUserTenantId = request.targetUserTenantId;
             this.tenantId = request.tenantId;
         } 
+
+        /**
+         * <p>The platform application token issued by the console. If specified, the operation is performed as the user specified by opsUserId or opsUserCode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>wn_app_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+         */
+        public Builder appToken(String appToken) {
+            this.putQueryParameter("appToken", appToken);
+            this.appToken = appToken;
+            return this;
+        }
 
         /**
          * <p>The check item.</p>
@@ -123,6 +177,30 @@ public class CheckAppResourcePermissionsBatchRequest extends Request {
             String checksShrink = shrink(checks, "checks", "json");
             this.putBodyParameter("checks", checksShrink);
             this.checks = checks;
+            return this;
+        }
+
+        /**
+         * <p>The proxy user code, which is unique within the tenant. This parameter is used only when the application credential is configured as source_uid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alice</p>
+         */
+        public Builder opsUserCode(String opsUserCode) {
+            this.putQueryParameter("opsUserCode", opsUserCode);
+            this.opsUserCode = opsUserCode;
+            return this;
+        }
+
+        /**
+         * <p>The proxy user ID, which is the WINNEXO platform user ID. This parameter is used only when the application credential is configured as winnexo_uid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10001</p>
+         */
+        public Builder opsUserId(String opsUserId) {
+            this.putQueryParameter("opsUserId", opsUserId);
+            this.opsUserId = opsUserId;
             return this;
         }
 
@@ -163,7 +241,7 @@ public class CheckAppResourcePermissionsBatchRequest extends Request {
         }
 
         /**
-         * <p>The ID of the tenant to which the resource belongs. If this parameter is not specified, the current tenant of the caller is used.</p>
+         * <p>The ID of the tenant to which the resource belongs. If not specified, the current tenant of the caller is used.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>
@@ -254,7 +332,7 @@ public class CheckAppResourcePermissionsBatchRequest extends Request {
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
-             * <p>APP/VIEW</p>
+             * <p>VIEW</p>
              */
             public Builder permission(String permission) {
                 this.permission = permission;
@@ -262,7 +340,7 @@ public class CheckAppResourcePermissionsBatchRequest extends Request {
             }
 
             /**
-             * <p>The dot-separated resource key whose first segment is the application key.</p>
+             * <p>The dot-separated resource key. The first segment is the APP application key.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

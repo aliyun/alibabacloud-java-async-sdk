@@ -93,7 +93,7 @@ public class BatchCancelTodosResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The actual number of canceled items. The value is 0 for idempotent repeated calls.</p>
+         * <p>The actual number of invalidated items. For idempotent repeated calls, the value is 0.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -115,7 +115,7 @@ public class BatchCancelTodosResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message.</p>
+         * <p>The error description.</p>
          * 
          * <strong>example:</strong>
          * <p>The requested resource does not exist</p>

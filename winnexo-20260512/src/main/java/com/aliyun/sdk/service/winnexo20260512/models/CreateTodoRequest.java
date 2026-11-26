@@ -17,6 +17,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateTodoRequest</p>
  */
 public class CreateTodoRequest extends Request {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("appToken")
+    private String appToken;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("assigneeUserIds")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -25,6 +29,14 @@ public class CreateTodoRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("collaborationGroupId")
     private String collaborationGroupId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("opsUserCode")
+    private String opsUserCode;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("opsUserId")
+    private String opsUserId;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("priority")
@@ -56,8 +68,11 @@ public class CreateTodoRequest extends Request {
 
     private CreateTodoRequest(Builder builder) {
         super(builder);
+        this.appToken = builder.appToken;
         this.assigneeUserIds = builder.assigneeUserIds;
         this.collaborationGroupId = builder.collaborationGroupId;
+        this.opsUserCode = builder.opsUserCode;
+        this.opsUserId = builder.opsUserId;
         this.priority = builder.priority;
         this.questions = builder.questions;
         this.sourceContext = builder.sourceContext;
@@ -80,6 +95,13 @@ public class CreateTodoRequest extends Request {
     }
 
     /**
+     * @return appToken
+     */
+    public String getAppToken() {
+        return this.appToken;
+    }
+
+    /**
      * @return assigneeUserIds
      */
     public java.util.List<String> getAssigneeUserIds() {
@@ -91,6 +113,20 @@ public class CreateTodoRequest extends Request {
      */
     public String getCollaborationGroupId() {
         return this.collaborationGroupId;
+    }
+
+    /**
+     * @return opsUserCode
+     */
+    public String getOpsUserCode() {
+        return this.opsUserCode;
+    }
+
+    /**
+     * @return opsUserId
+     */
+    public String getOpsUserId() {
+        return this.opsUserId;
     }
 
     /**
@@ -136,8 +172,11 @@ public class CreateTodoRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateTodoRequest, Builder> {
+        private String appToken; 
         private java.util.List<String> assigneeUserIds; 
         private String collaborationGroupId; 
+        private String opsUserCode; 
+        private String opsUserId; 
         private String priority; 
         private java.util.List<Questions> questions; 
         private java.util.Map<String, ?> sourceContext; 
@@ -151,8 +190,11 @@ public class CreateTodoRequest extends Request {
 
         private Builder(CreateTodoRequest request) {
             super(request);
+            this.appToken = request.appToken;
             this.assigneeUserIds = request.assigneeUserIds;
             this.collaborationGroupId = request.collaborationGroupId;
+            this.opsUserCode = request.opsUserCode;
+            this.opsUserId = request.opsUserId;
             this.priority = request.priority;
             this.questions = request.questions;
             this.sourceContext = request.sourceContext;
@@ -160,6 +202,18 @@ public class CreateTodoRequest extends Request {
             this.tenantId = request.tenantId;
             this.title = request.title;
         } 
+
+        /**
+         * <p>平台应用 Token（控制台签发）。传入后将以 opsUserId 或 opsUserCode 指定的用户身份执行</p>
+         * 
+         * <strong>example:</strong>
+         * <p>wn_app_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+         */
+        public Builder appToken(String appToken) {
+            this.putQueryParameter("appToken", appToken);
+            this.appToken = appToken;
+            return this;
+        }
 
         /**
          * <p>The list of platform user IDs of the assignees. You can specify 1 to 100 IDs. Duplicate IDs are automatically removed.</p>
@@ -184,6 +238,30 @@ public class CreateTodoRequest extends Request {
         public Builder collaborationGroupId(String collaborationGroupId) {
             this.putBodyParameter("collaborationGroupId", collaborationGroupId);
             this.collaborationGroupId = collaborationGroupId;
+            return this;
+        }
+
+        /**
+         * <p>代理用户编码（租户内唯一），仅当应用凭证配置为 source_uid 时使用</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alice</p>
+         */
+        public Builder opsUserCode(String opsUserCode) {
+            this.putQueryParameter("opsUserCode", opsUserCode);
+            this.opsUserCode = opsUserCode;
+            return this;
+        }
+
+        /**
+         * <p>代理用户ID（WINNEXO 平台用户ID），仅当应用凭证配置为 winnexo_uid 时使用</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10001</p>
+         */
+        public Builder opsUserId(String opsUserId) {
+            this.putQueryParameter("opsUserId", opsUserId);
+            this.opsUserId = opsUserId;
             return this;
         }
 

@@ -17,6 +17,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateGroupFeishuDocRequest</p>
  */
 public class CreateGroupFeishuDocRequest extends Request {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("appToken")
+    private String appToken;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("description")
     private String description;
@@ -51,6 +55,14 @@ public class CreateGroupFeishuDocRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("operatingObjectName")
     private String operatingObjectName;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("opsUserCode")
+    private String opsUserCode;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("opsUserId")
+    private String opsUserId;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("sourceTags")
     private String sourceTags;
@@ -65,6 +77,7 @@ public class CreateGroupFeishuDocRequest extends Request {
 
     private CreateGroupFeishuDocRequest(Builder builder) {
         super(builder);
+        this.appToken = builder.appToken;
         this.description = builder.description;
         this.directoryId = builder.directoryId;
         this.docUrl = builder.docUrl;
@@ -73,6 +86,8 @@ public class CreateGroupFeishuDocRequest extends Request {
         this.notes = builder.notes;
         this.objectBindings = builder.objectBindings;
         this.operatingObjectName = builder.operatingObjectName;
+        this.opsUserCode = builder.opsUserCode;
+        this.opsUserId = builder.opsUserId;
         this.sourceTags = builder.sourceTags;
         this.syncConfig = builder.syncConfig;
         this.tenantId = builder.tenantId;
@@ -89,6 +104,13 @@ public class CreateGroupFeishuDocRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return appToken
+     */
+    public String getAppToken() {
+        return this.appToken;
     }
 
     /**
@@ -148,6 +170,20 @@ public class CreateGroupFeishuDocRequest extends Request {
     }
 
     /**
+     * @return opsUserCode
+     */
+    public String getOpsUserCode() {
+        return this.opsUserCode;
+    }
+
+    /**
+     * @return opsUserId
+     */
+    public String getOpsUserId() {
+        return this.opsUserId;
+    }
+
+    /**
      * @return sourceTags
      */
     public String getSourceTags() {
@@ -169,6 +205,7 @@ public class CreateGroupFeishuDocRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateGroupFeishuDocRequest, Builder> {
+        private String appToken; 
         private String description; 
         private String directoryId; 
         private String docUrl; 
@@ -177,6 +214,8 @@ public class CreateGroupFeishuDocRequest extends Request {
         private String notes; 
         private java.util.List<ObjectBindings> objectBindings; 
         private String operatingObjectName; 
+        private String opsUserCode; 
+        private String opsUserId; 
         private String sourceTags; 
         private SyncConfig syncConfig; 
         private String tenantId; 
@@ -187,6 +226,7 @@ public class CreateGroupFeishuDocRequest extends Request {
 
         private Builder(CreateGroupFeishuDocRequest request) {
             super(request);
+            this.appToken = request.appToken;
             this.description = request.description;
             this.directoryId = request.directoryId;
             this.docUrl = request.docUrl;
@@ -195,10 +235,24 @@ public class CreateGroupFeishuDocRequest extends Request {
             this.notes = request.notes;
             this.objectBindings = request.objectBindings;
             this.operatingObjectName = request.operatingObjectName;
+            this.opsUserCode = request.opsUserCode;
+            this.opsUserId = request.opsUserId;
             this.sourceTags = request.sourceTags;
             this.syncConfig = request.syncConfig;
             this.tenantId = request.tenantId;
         } 
+
+        /**
+         * <p>The platform application token issued by the console. If specified, the operation is performed as the user identified by opsUserId or opsUserCode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>wn_app_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+         */
+        public Builder appToken(String appToken) {
+            this.putQueryParameter("appToken", appToken);
+            this.appToken = appToken;
+            return this;
+        }
 
         /**
          * <p>The description of the AI assistant.</p>
@@ -251,10 +305,10 @@ public class CreateGroupFeishuDocRequest extends Request {
         }
 
         /**
-         * <p>The image name.</p>
+         * <p>The mirror name.</p>
          * 
          * <strong>example:</strong>
-         * <p>ProjectPlan</p>
+         * <p>Project plan</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("name", name);
@@ -263,10 +317,10 @@ public class CreateGroupFeishuDocRequest extends Request {
         }
 
         /**
-         * <p>The meeting notes content (optional). The notes are used for auxiliary analysis.</p>
+         * <p>The meeting notes content. This parameter is optional and is used for auxiliary analysis.</p>
          * 
          * <strong>example:</strong>
-         * <p>Extract decisions and to-do items</p>
+         * <p>Extract decisions and to-dos</p>
          */
         public Builder notes(String notes) {
             this.putBodyParameter("notes", notes);
@@ -285,10 +339,10 @@ public class CreateGroupFeishuDocRequest extends Request {
         }
 
         /**
-         * <p>The name of the operating object.</p>
+         * <p>The name of the operation object.</p>
          * 
          * <strong>example:</strong>
-         * <p>R&amp;D Assistant</p>
+         * <p>R&amp;D assistant</p>
          */
         public Builder operatingObjectName(String operatingObjectName) {
             this.putBodyParameter("operatingObjectName", operatingObjectName);
@@ -297,7 +351,31 @@ public class CreateGroupFeishuDocRequest extends Request {
         }
 
         /**
-         * <p>The resource tags (optional, a JSON string list, such as [&quot;tagA&quot;,&quot;tagB&quot;]).</p>
+         * <p>The proxy user code, which is unique within the tenant. This parameter is used only when the application credential is configured as source_uid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alice</p>
+         */
+        public Builder opsUserCode(String opsUserCode) {
+            this.putQueryParameter("opsUserCode", opsUserCode);
+            this.opsUserCode = opsUserCode;
+            return this;
+        }
+
+        /**
+         * <p>The proxy user ID, which is the WINNEXO platform user ID. This parameter is used only when the application credential is configured as winnexo_uid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10001</p>
+         */
+        public Builder opsUserId(String opsUserId) {
+            this.putQueryParameter("opsUserId", opsUserId);
+            this.opsUserId = opsUserId;
+            return this;
+        }
+
+        /**
+         * <p>The resource tags. This parameter is optional and accepts a JSON string list, such as [&quot;tagA&quot;,&quot;tagB&quot;].</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;R&amp;D&quot;]</p>
@@ -319,7 +397,7 @@ public class CreateGroupFeishuDocRequest extends Request {
         }
 
         /**
-         * <p>The tenant ID. This is a common parameter. In winnexo-cli, pass it explicitly with --tenant-id.</p>
+         * <p>The tenant ID. This is a common parameter. For winnexo-cli, this parameter is explicitly passed by using the --tenant-id option.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>
@@ -513,7 +591,7 @@ public class CreateGroupFeishuDocRequest extends Request {
             } 
 
             /**
-             * <p>The cron expression for the timed scheduling task.</p>
+             * <p>The cron expression for the timed scheduling node.</p>
              * 
              * <strong>example:</strong>
              * <p>0 * * * *</p>
@@ -524,7 +602,7 @@ public class CreateGroupFeishuDocRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to enable or disable synchronization.</p>
+             * <p><strong>Enable/Disable</strong></p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -536,7 +614,7 @@ public class CreateGroupFeishuDocRequest extends Request {
             }
 
             /**
-             * <p>The preset mode (can be ignored).</p>
+             * <p>The preset mode. You can ignore this parameter.</p>
              * 
              * <strong>example:</strong>
              * <p>custom</p>

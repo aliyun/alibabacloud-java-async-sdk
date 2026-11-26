@@ -146,6 +146,12 @@ public class UpdateChatSessionResponseBody extends TeaModel {
      * <p>UpdateChatSessionResponseBody</p>
      */
     public static class Session extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("conversationArchiveStatus")
+        private String conversationArchiveStatus;
+
+        @com.aliyun.core.annotation.NameInMap("conversationArchivedTime")
+        private Long conversationArchivedTime;
+
         @com.aliyun.core.annotation.NameInMap("createdAt")
         private Long createdAt;
 
@@ -177,6 +183,8 @@ public class UpdateChatSessionResponseBody extends TeaModel {
         private Long updatedAt;
 
         private Session(Builder builder) {
+            this.conversationArchiveStatus = builder.conversationArchiveStatus;
+            this.conversationArchivedTime = builder.conversationArchivedTime;
             this.createdAt = builder.createdAt;
             this.id = builder.id;
             this.isExpired = builder.isExpired;
@@ -195,6 +203,20 @@ public class UpdateChatSessionResponseBody extends TeaModel {
 
         public static Session create() {
             return builder().build();
+        }
+
+        /**
+         * @return conversationArchiveStatus
+         */
+        public String getConversationArchiveStatus() {
+            return this.conversationArchiveStatus;
+        }
+
+        /**
+         * @return conversationArchivedTime
+         */
+        public Long getConversationArchivedTime() {
+            return this.conversationArchivedTime;
         }
 
         /**
@@ -268,6 +290,8 @@ public class UpdateChatSessionResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String conversationArchiveStatus; 
+            private Long conversationArchivedTime; 
             private Long createdAt; 
             private String id; 
             private Boolean isExpired; 
@@ -283,6 +307,8 @@ public class UpdateChatSessionResponseBody extends TeaModel {
             } 
 
             private Builder(Session model) {
+                this.conversationArchiveStatus = model.conversationArchiveStatus;
+                this.conversationArchivedTime = model.conversationArchivedTime;
                 this.createdAt = model.createdAt;
                 this.id = model.id;
                 this.isExpired = model.isExpired;
@@ -294,6 +320,28 @@ public class UpdateChatSessionResponseBody extends TeaModel {
                 this.title = model.title;
                 this.updatedAt = model.updatedAt;
             } 
+
+            /**
+             * <p>会话归档状态 ACTIVE/ARCHIVING/ARCHIVED</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ACTIVE</p>
+             */
+            public Builder conversationArchiveStatus(String conversationArchiveStatus) {
+                this.conversationArchiveStatus = conversationArchiveStatus;
+                return this;
+            }
+
+            /**
+             * <p>会话归档完成时间戳（秒）</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1735689600</p>
+             */
+            public Builder conversationArchivedTime(Long conversationArchivedTime) {
+                this.conversationArchivedTime = conversationArchivedTime;
+                return this;
+            }
 
             /**
              * <p>The creation time.</p>

@@ -17,6 +17,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SendChatMessageRequest</p>
  */
 public class SendChatMessageRequest extends Request {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("appToken")
+    private String appToken;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("autoPreference")
+    private String autoPreference;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("content")
     @com.aliyun.core.annotation.Validation(required = true, minLength = 1)
@@ -58,6 +66,14 @@ public class SendChatMessageRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("model")
     private String model;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("opsUserCode")
+    private String opsUserCode;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("opsUserId")
+    private String opsUserId;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("reuseLastSession")
     private Boolean reuseLastSession;
@@ -83,11 +99,21 @@ public class SendChatMessageRequest extends Request {
     private String tenantId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("thinkingEnabled")
+    private Boolean thinkingEnabled;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("thinkingLevel")
+    private String thinkingLevel;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("workMode")
     private String workMode;
 
     private SendChatMessageRequest(Builder builder) {
         super(builder);
+        this.appToken = builder.appToken;
+        this.autoPreference = builder.autoPreference;
         this.content = builder.content;
         this.contentType = builder.contentType;
         this.contextItems = builder.contextItems;
@@ -98,12 +124,16 @@ public class SendChatMessageRequest extends Request {
         this.files = builder.files;
         this.locale = builder.locale;
         this.model = builder.model;
+        this.opsUserCode = builder.opsUserCode;
+        this.opsUserId = builder.opsUserId;
         this.reuseLastSession = builder.reuseLastSession;
         this.segments = builder.segments;
         this.sessionId = builder.sessionId;
         this.stream = builder.stream;
         this.taskExecution = builder.taskExecution;
         this.tenantId = builder.tenantId;
+        this.thinkingEnabled = builder.thinkingEnabled;
+        this.thinkingLevel = builder.thinkingLevel;
         this.workMode = builder.workMode;
     }
 
@@ -118,6 +148,20 @@ public class SendChatMessageRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return appToken
+     */
+    public String getAppToken() {
+        return this.appToken;
+    }
+
+    /**
+     * @return autoPreference
+     */
+    public String getAutoPreference() {
+        return this.autoPreference;
     }
 
     /**
@@ -191,6 +235,20 @@ public class SendChatMessageRequest extends Request {
     }
 
     /**
+     * @return opsUserCode
+     */
+    public String getOpsUserCode() {
+        return this.opsUserCode;
+    }
+
+    /**
+     * @return opsUserId
+     */
+    public String getOpsUserId() {
+        return this.opsUserId;
+    }
+
+    /**
      * @return reuseLastSession
      */
     public Boolean getReuseLastSession() {
@@ -233,6 +291,20 @@ public class SendChatMessageRequest extends Request {
     }
 
     /**
+     * @return thinkingEnabled
+     */
+    public Boolean getThinkingEnabled() {
+        return this.thinkingEnabled;
+    }
+
+    /**
+     * @return thinkingLevel
+     */
+    public String getThinkingLevel() {
+        return this.thinkingLevel;
+    }
+
+    /**
      * @return workMode
      */
     public String getWorkMode() {
@@ -240,6 +312,8 @@ public class SendChatMessageRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<SendChatMessageRequest, Builder> {
+        private String appToken; 
+        private String autoPreference; 
         private String content; 
         private String contentType; 
         private java.util.List<ContextItems> contextItems; 
@@ -250,12 +324,16 @@ public class SendChatMessageRequest extends Request {
         private java.util.List<Files> files; 
         private String locale; 
         private String model; 
+        private String opsUserCode; 
+        private String opsUserId; 
         private Boolean reuseLastSession; 
         private java.util.List<Segments> segments; 
         private String sessionId; 
         private Boolean stream; 
         private TaskExecution taskExecution; 
         private String tenantId; 
+        private Boolean thinkingEnabled; 
+        private String thinkingLevel; 
         private String workMode; 
 
         private Builder() {
@@ -264,6 +342,8 @@ public class SendChatMessageRequest extends Request {
 
         private Builder(SendChatMessageRequest request) {
             super(request);
+            this.appToken = request.appToken;
+            this.autoPreference = request.autoPreference;
             this.content = request.content;
             this.contentType = request.contentType;
             this.contextItems = request.contextItems;
@@ -274,14 +354,42 @@ public class SendChatMessageRequest extends Request {
             this.files = request.files;
             this.locale = request.locale;
             this.model = request.model;
+            this.opsUserCode = request.opsUserCode;
+            this.opsUserId = request.opsUserId;
             this.reuseLastSession = request.reuseLastSession;
             this.segments = request.segments;
             this.sessionId = request.sessionId;
             this.stream = request.stream;
             this.taskExecution = request.taskExecution;
             this.tenantId = request.tenantId;
+            this.thinkingEnabled = request.thinkingEnabled;
+            this.thinkingLevel = request.thinkingLevel;
             this.workMode = request.workMode;
         } 
+
+        /**
+         * <p>The platform application token issued by the console. If this parameter is passed, the operation is executed as the user specified by opsUserId or opsUserCode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>wn_app_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+         */
+        public Builder appToken(String appToken) {
+            this.putQueryParameter("appToken", appToken);
+            this.appToken = appToken;
+            return this;
+        }
+
+        /**
+         * <p>The AUTO preference. Valid values: none (default), performance (effect first), and credit (cost first). If this parameter is omitted or set to null, the session preference is inherited. If it is left blank, it is reset to none.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>performance</p>
+         */
+        public Builder autoPreference(String autoPreference) {
+            this.putBodyParameter("autoPreference", autoPreference);
+            this.autoPreference = autoPreference;
+            return this;
+        }
 
         /**
          * <p>The body of the user message.</p>
@@ -322,7 +430,7 @@ public class SendChatMessageRequest extends Request {
         }
 
         /**
-         * <p>The list of digital employee names. For compatibility with the legacy format, a single string can be passed.</p>
+         * <p>The list of digital employee names. For compatibility with the old format, a single string can also be passed.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -335,7 +443,7 @@ public class SendChatMessageRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable direct connection mode. If set to true, regular scenario routing is skipped and the direct conversation scenario is entered directly.</p>
+         * <p>Specifies whether to enable direct connection mode. If this parameter is set to true, regular scenario routing is skipped and the direct conversation scenario is entered directly.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -347,7 +455,7 @@ public class SendChatMessageRequest extends Request {
         }
 
         /**
-         * <p>The number of recent complete direct Q&amp;A rounds carried in the current turn, excluding the input of the current turn. This parameter takes effect only when workMode is set to direct or directChat is set to true. Valid values: JSON integers from 0 to 100. If omitted, the backend processes it as 0, carrying no history but still saving the current turn. Null, Boolean, string, decimal, and out-of-bounds values are processed through the original direct path, and the gateway retains the original values for backend determination. This field is ignored in work and ask modes. This parameter does not limit the history range when converted to the work mode.</p>
+         * <p>The number of recent complete direct Q&amp;A rounds carried in the current turn, excluding the input of the current turn. This parameter takes effect only when workMode is set to direct or directChat is set to true. Valid values: JSON integers from 0 to 100. If this parameter is omitted, the backend processes it as 0, carrying no history but still saving the current turn. Null, Boolean values, strings, decimals, and out-of-bounds values are processed through the original direct path, and the gateway retains the original values for backend determination. This field is ignored in work and ask modes. This parameter does not limit the history range when switching to the work mode.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -371,7 +479,7 @@ public class SendChatMessageRequest extends Request {
         }
 
         /**
-         * <p>The list of file references. Each item is an object, and the fileId parameter is required, which is returned by uploadChatFile.</p>
+         * <p>The list of file references. Each item is an object, and fileId is required, which is returned by uploadChatFile.</p>
          */
         public Builder files(java.util.List<Files> files) {
             String filesShrink = shrink(files, "files", "json");
@@ -381,7 +489,7 @@ public class SendChatMessageRequest extends Request {
         }
 
         /**
-         * <p>The language for the current turn. Valid values: zh-CN and en-US. This parameter is used for API error messages and passed through to CodeAgent. If omitted, the current language behavior is retained and user settings are not modified.</p>
+         * <p>The language for the current turn. Valid values: zh-CN and en-US. This parameter is used for API error messages and passed through to CodeAgent. If this parameter is omitted, the current language behavior is retained and the user settings are not modified.</p>
          * 
          * <strong>example:</strong>
          * <p>en-US</p>
@@ -393,7 +501,7 @@ public class SendChatMessageRequest extends Request {
         }
 
         /**
-         * <p>The abstract model tier. Valid values: quick, standard, and flagship. If omitted, standard is used for new sessions, and the current tier is retained for existing sessions.</p>
+         * <p>The abstract model tier. Valid values: quick, standard, and flagship. If this parameter is omitted, standard is used for new sessions, and the current tier is retained for existing sessions.</p>
          * 
          * <strong>example:</strong>
          * <p>quick</p>
@@ -405,7 +513,31 @@ public class SendChatMessageRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to reuse the most recent session under the digital employee when sessionId is not passed, which applies to CLI scenarios. Default value: false, which indicates that a new session is created.</p>
+         * <p>The proxy user code, which is unique within the tenant. This parameter is used only when the application credential is configured as source_uid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alice</p>
+         */
+        public Builder opsUserCode(String opsUserCode) {
+            this.putQueryParameter("opsUserCode", opsUserCode);
+            this.opsUserCode = opsUserCode;
+            return this;
+        }
+
+        /**
+         * <p>The proxy user ID, which is the WINNEXO platform user ID. This parameter is used only when the application credential is configured as winnexo_uid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10001</p>
+         */
+        public Builder opsUserId(String opsUserId) {
+            this.putQueryParameter("opsUserId", opsUserId);
+            this.opsUserId = opsUserId;
+            return this;
+        }
+
+        /**
+         * <p>Specifies whether to reuse the most recent session under the digital employee when sessionId is not passed, which applies to CLI scenarios. Default value: false, which means a new session is created.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -442,7 +574,7 @@ public class SendChatMessageRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether streaming output is enabled.</p>
+         * <p>Specifies whether to use streaming output.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -454,7 +586,7 @@ public class SendChatMessageRequest extends Request {
         }
 
         /**
-         * <p>The task execution metadata returned by executeScheduledTask. If passed, the request is processed through the task execution pipeline.</p>
+         * <p>The task execution metadata returned by executeScheduledTask. If this parameter is passed, the request is processed through the task execution pipeline.</p>
          */
         public Builder taskExecution(TaskExecution taskExecution) {
             String taskExecutionShrink = shrink(taskExecution, "taskExecution", "json");
@@ -476,7 +608,31 @@ public class SendChatMessageRequest extends Request {
         }
 
         /**
-         * <p>The session work mode. Valid values: ask (quick Q&amp;A, which trims tools, skills, and connectors for single-turn direct answers), work (deep work, which is the default), and direct (direct connection mode at the request level, which does not start a sandbox and prevents context pollution, equivalent to directChat=true). The ask and work modes are session-level. The mode is fixed when a new session is created. Subsequent chats inherit the session mode by default. If the explicitly passed value is inconsistent with the session mode, a parameter error is returned. To switch modes, create a new session or fork the session. If ask is passed in multi-digital employee or task execution scenarios, it takes effect as work. This parameter is ignored when directChat is set to true.</p>
+         * <p>Specifies whether to explicitly override the thinking mode for the current turn. If this parameter is not passed in AUTO mode, the decision model determines the behavior. If it is not passed in fixed tier mode, the personal settings are retained. The final behavior complies with the model capabilities and tenant switches.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        public Builder thinkingEnabled(Boolean thinkingEnabled) {
+            this.putBodyParameter("thinkingEnabled", thinkingEnabled);
+            this.thinkingEnabled = thinkingEnabled;
+            return this;
+        }
+
+        /**
+         * <p>The explicit override for the thinking intensity in the current turn. If this parameter is not passed in AUTO mode, the decision model determines the behavior. If it is not passed in fixed tier mode, the personal settings are retained. The final behavior complies with the model capabilities and tenant switches.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>medium</p>
+         */
+        public Builder thinkingLevel(String thinkingLevel) {
+            this.putBodyParameter("thinkingLevel", thinkingLevel);
+            this.thinkingLevel = thinkingLevel;
+            return this;
+        }
+
+        /**
+         * <p>The session work mode. Valid values: ask (quick Q&amp;A, which trims tools, skills, and connectors for single-turn direct answers), work (deep work, which is the default), and direct (direct connection mode at the request level, which does not start the sandbox and prevents context pollution, equivalent to directChat=true). The ask and work modes are session-level. The mode is fixed when a new session is created. Subsequent chats inherit the session mode by default. If the explicitly passed value is inconsistent with the session mode, a parameter error is returned. To switch modes, create a new session or fork the current one. If ask is passed in multi-digital employee or task execution scenarios, it takes effect as work. If directChat is set to true, this parameter is ignored.</p>
          * 
          * <strong>example:</strong>
          * <p>work</p>
@@ -767,7 +923,7 @@ public class SendChatMessageRequest extends Request {
             } 
 
             /**
-             * <p>The user annotation for the referenced content.</p>
+             * <p>The user&quot;s annotation on the referenced content.</p>
              * 
              * <strong>example:</strong>
              * <p>Please verify the data for the East China region</p>

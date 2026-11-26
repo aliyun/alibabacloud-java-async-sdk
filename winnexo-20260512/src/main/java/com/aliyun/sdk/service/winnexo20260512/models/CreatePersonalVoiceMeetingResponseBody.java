@@ -169,7 +169,7 @@ public class CreatePersonalVoiceMeetingResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The bound directory ID. This value is echoed back if provided in the request body. The value is null if the default root directory is used.</p>
+         * <p>The bound directory ID. If this parameter is passed in the request body, the value is echoed back. If the default root directory is used, the value is null.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleDirectoryId</p>
@@ -191,7 +191,7 @@ public class CreatePersonalVoiceMeetingResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The description of the status code.</p>
+         * <p>The status code description.</p>
          * 
          * <strong>example:</strong>
          * <p>successful</p>
@@ -224,7 +224,7 @@ public class CreatePersonalVoiceMeetingResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The resource scope. The value is fixed to PERSONAL.</p>
+         * <p>The resource scope. This value is fixed to PERSONAL.</p>
          * 
          * <strong>example:</strong>
          * <p>user_info projects pull_requests hook gists emails</p>
@@ -235,7 +235,7 @@ public class CreatePersonalVoiceMeetingResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The unique ID on the business system side, which is the business ID.</p>
+         * <p>The unique identifier on the business system side, which is the business ID.</p>
          * 
          * <strong>example:</strong>
          * <p>8</p>
@@ -246,10 +246,10 @@ public class CreatePersonalVoiceMeetingResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The resource status. The initial status during the creation process is typically PENDING. If the on_create process fails, the status is FAILED.</p>
+         * <p>The resource status. The initial status in the creation pipeline is mostly PENDING. If the on_create operation fails, the status is FAILED.</p>
          * 
          * <strong>example:</strong>
-         * <p>{\&quot;observedGeneration\&quot;: 4, \&quot;servicesInstances\&quot;: {}, \&quot;observedTime\&quot;: \&quot;2025-10-31T03:48:27Z\&quot;, \&quot;servicesWithPendingChanges\&quot;: [], \&quot;latestEnvironmentDeploymentName\&quot;: \&quot;manual-1761882507097-Eu1vIP\&quot;}</p>
+         * <p>{&quot;observedGeneration&quot;: 4, &quot;servicesInstances&quot;: {}, &quot;observedTime&quot;: &quot;2025-10-31T03:48:27Z&quot;, &quot;servicesWithPendingChanges&quot;: [], &quot;latestEnvironmentDeploymentName&quot;: &quot;manual-1761882507097-Eu1vIP&quot;}</p>
          */
         public Builder status(String status) {
             this.status = status;

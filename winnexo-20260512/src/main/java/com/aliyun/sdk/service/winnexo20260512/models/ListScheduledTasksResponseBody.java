@@ -293,6 +293,9 @@ public class ListScheduledTasksResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("abnormalReason")
         private String abnormalReason;
 
+        @com.aliyun.core.annotation.NameInMap("autoPreference")
+        private String autoPreference;
+
         @com.aliyun.core.annotation.NameInMap("canDelete")
         private Boolean canDelete;
 
@@ -361,6 +364,7 @@ public class ListScheduledTasksResponseBody extends TeaModel {
 
         private Items(Builder builder) {
             this.abnormalReason = builder.abnormalReason;
+            this.autoPreference = builder.autoPreference;
             this.canDelete = builder.canDelete;
             this.canEdit = builder.canEdit;
             this.canExecute = builder.canExecute;
@@ -398,6 +402,13 @@ public class ListScheduledTasksResponseBody extends TeaModel {
          */
         public String getAbnormalReason() {
             return this.abnormalReason;
+        }
+
+        /**
+         * @return autoPreference
+         */
+        public String getAutoPreference() {
+            return this.autoPreference;
         }
 
         /**
@@ -556,6 +567,7 @@ public class ListScheduledTasksResponseBody extends TeaModel {
 
         public static final class Builder {
             private String abnormalReason; 
+            private String autoPreference; 
             private Boolean canDelete; 
             private Boolean canEdit; 
             private Boolean canExecute; 
@@ -584,6 +596,7 @@ public class ListScheduledTasksResponseBody extends TeaModel {
 
             private Builder(Items model) {
                 this.abnormalReason = model.abnormalReason;
+                this.autoPreference = model.autoPreference;
                 this.canDelete = model.canDelete;
                 this.canEdit = model.canEdit;
                 this.canExecute = model.canExecute;
@@ -616,6 +629,17 @@ public class ListScheduledTasksResponseBody extends TeaModel {
              */
             public Builder abnormalReason(String abnormalReason) {
                 this.abnormalReason = abnormalReason;
+                return this;
+            }
+
+            /**
+             * <p>任务 AUTO 偏好：none=默认、performance=效果优先、credit=成本优先</p>
+             * 
+             * <strong>example:</strong>
+             * <p>none</p>
+             */
+            public Builder autoPreference(String autoPreference) {
+                this.autoPreference = autoPreference;
                 return this;
             }
 

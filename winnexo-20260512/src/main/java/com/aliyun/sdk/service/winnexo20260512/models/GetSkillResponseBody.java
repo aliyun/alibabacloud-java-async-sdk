@@ -567,7 +567,7 @@ public class GetSkillResponseBody extends TeaModel {
          * <p>The list of tags, resolved by i18n.</p>
          * 
          * <strong>example:</strong>
-         * <p>[&quot;[{\\\&quot;value\\\&quot;:\\\&quot;dataworks#0#1#33935#176145#T3_26059405665#94046932754\\\&quot;,\\\&quot;key\\\&quot;:\\\&quot;dataworksTag\\\&quot;}]&quot;]</p>
+         * <p>[&quot;[{\&quot;value\&quot;:\&quot;dataworks#0#1#33935#176145#T3_26059405665#94046932754\&quot;,\&quot;key\&quot;:\&quot;dataworksTag\&quot;}]&quot;]</p>
          */
         public Builder tags(java.util.List<String> tags) {
             this.tags = tags;

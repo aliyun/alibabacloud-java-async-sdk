@@ -17,6 +17,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateGroupPublicUrlRequest</p>
  */
 public class CreateGroupPublicUrlRequest extends Request {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("appToken")
+    private String appToken;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("description")
     private String description;
@@ -42,6 +46,14 @@ public class CreateGroupPublicUrlRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("operatingObjectName")
     private String operatingObjectName;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("opsUserCode")
+    private String opsUserCode;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("opsUserId")
+    private String opsUserId;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("originalUrl")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -57,12 +69,15 @@ public class CreateGroupPublicUrlRequest extends Request {
 
     private CreateGroupPublicUrlRequest(Builder builder) {
         super(builder);
+        this.appToken = builder.appToken;
         this.description = builder.description;
         this.directoryId = builder.directoryId;
         this.groupId = builder.groupId;
         this.name = builder.name;
         this.notes = builder.notes;
         this.operatingObjectName = builder.operatingObjectName;
+        this.opsUserCode = builder.opsUserCode;
+        this.opsUserId = builder.opsUserId;
         this.originalUrl = builder.originalUrl;
         this.sourceTags = builder.sourceTags;
         this.tenantId = builder.tenantId;
@@ -79,6 +94,13 @@ public class CreateGroupPublicUrlRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return appToken
+     */
+    public String getAppToken() {
+        return this.appToken;
     }
 
     /**
@@ -124,6 +146,20 @@ public class CreateGroupPublicUrlRequest extends Request {
     }
 
     /**
+     * @return opsUserCode
+     */
+    public String getOpsUserCode() {
+        return this.opsUserCode;
+    }
+
+    /**
+     * @return opsUserId
+     */
+    public String getOpsUserId() {
+        return this.opsUserId;
+    }
+
+    /**
      * @return originalUrl
      */
     public String getOriginalUrl() {
@@ -145,12 +181,15 @@ public class CreateGroupPublicUrlRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateGroupPublicUrlRequest, Builder> {
+        private String appToken; 
         private String description; 
         private String directoryId; 
         private String groupId; 
         private String name; 
         private String notes; 
         private String operatingObjectName; 
+        private String opsUserCode; 
+        private String opsUserId; 
         private String originalUrl; 
         private String sourceTags; 
         private String tenantId; 
@@ -161,16 +200,31 @@ public class CreateGroupPublicUrlRequest extends Request {
 
         private Builder(CreateGroupPublicUrlRequest request) {
             super(request);
+            this.appToken = request.appToken;
             this.description = request.description;
             this.directoryId = request.directoryId;
             this.groupId = request.groupId;
             this.name = request.name;
             this.notes = request.notes;
             this.operatingObjectName = request.operatingObjectName;
+            this.opsUserCode = request.opsUserCode;
+            this.opsUserId = request.opsUserId;
             this.originalUrl = request.originalUrl;
             this.sourceTags = request.sourceTags;
             this.tenantId = request.tenantId;
         } 
+
+        /**
+         * <p>The platform application token issued by the console. If specified, the operation is performed as the user identified by opsUserId or opsUserCode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>wn_app_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+         */
+        public Builder appToken(String appToken) {
+            this.putQueryParameter("appToken", appToken);
+            this.appToken = appToken;
+            return this;
+        }
 
         /**
          * <p>The description of the AI assistant.</p>
@@ -185,7 +239,7 @@ public class CreateGroupPublicUrlRequest extends Request {
         }
 
         /**
-         * <p>The folder ID.</p>
+         * <p>The ID of the folder.</p>
          * 
          * <strong>example:</strong>
          * <p>dir_tenant_kb_child</p>
@@ -197,7 +251,7 @@ public class CreateGroupPublicUrlRequest extends Request {
         }
 
         /**
-         * <p>The project group ID.</p>
+         * <p>The ID of the project group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -210,10 +264,10 @@ public class CreateGroupPublicUrlRequest extends Request {
         }
 
         /**
-         * <p>The name.</p>
+         * <p>The name of the resource.</p>
          * 
          * <strong>example:</strong>
-         * <p>Enterprise Policy</p>
+         * <p>Corporate Policy</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("name", name);
@@ -222,10 +276,10 @@ public class CreateGroupPublicUrlRequest extends Request {
         }
 
         /**
-         * <p>The meeting notes content. This parameter is optional. The notes participate in auxiliary analysis.</p>
+         * <p>The content of the meeting notes. This parameter is optional and is used for auxiliary analysis.</p>
          * 
          * <strong>example:</strong>
-         * <p>Extract applicable scope and key clauses</p>
+         * <p>Extract the applicable scope and key terms</p>
          */
         public Builder notes(String notes) {
             this.putBodyParameter("notes", notes);
@@ -234,7 +288,7 @@ public class CreateGroupPublicUrlRequest extends Request {
         }
 
         /**
-         * <p>The name of the digital employee (monitored object name). This parameter is optional.</p>
+         * <p>The name of the digital employee. This parameter is optional.</p>
          * 
          * <strong>example:</strong>
          * <p>customer_assistant</p>
@@ -242,6 +296,30 @@ public class CreateGroupPublicUrlRequest extends Request {
         public Builder operatingObjectName(String operatingObjectName) {
             this.putBodyParameter("operatingObjectName", operatingObjectName);
             this.operatingObjectName = operatingObjectName;
+            return this;
+        }
+
+        /**
+         * <p>The proxy user code, which is unique within the tenant. This parameter is used only when the application credential is configured as source_uid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alice</p>
+         */
+        public Builder opsUserCode(String opsUserCode) {
+            this.putQueryParameter("opsUserCode", opsUserCode);
+            this.opsUserCode = opsUserCode;
+            return this;
+        }
+
+        /**
+         * <p>The proxy user ID, which is the WINNEXO platform user ID. This parameter is used only when the application credential is configured as winnexo_uid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10001</p>
+         */
+        public Builder opsUserId(String opsUserId) {
+            this.putQueryParameter("opsUserId", opsUserId);
+            this.opsUserId = opsUserId;
             return this;
         }
 
@@ -259,10 +337,10 @@ public class CreateGroupPublicUrlRequest extends Request {
         }
 
         /**
-         * <p>The resource labels. This parameter is optional. Specify a JSON string list, such as [&quot;tagA&quot;,&quot;tagB&quot;].</p>
+         * <p>The resource tags. This parameter is optional. Specify a JSON array of strings, such as [&quot;tagA&quot;,&quot;tagB&quot;].</p>
          * 
          * <strong>example:</strong>
-         * <p>[&quot;Important&quot;,&quot;Meeting&quot;]</p>
+         * <p>[&quot;Important&quot;, &quot;Meeting&quot;]</p>
          */
         public Builder sourceTags(String sourceTags) {
             this.putBodyParameter("sourceTags", sourceTags);
@@ -271,7 +349,7 @@ public class CreateGroupPublicUrlRequest extends Request {
         }
 
         /**
-         * <p>The tenant ID that takes effect.</p>
+         * <p>The ID of the tenant where the operation takes effect.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>

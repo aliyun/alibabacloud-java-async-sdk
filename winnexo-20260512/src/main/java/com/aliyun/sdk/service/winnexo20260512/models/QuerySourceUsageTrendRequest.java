@@ -17,6 +17,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QuerySourceUsageTrendRequest</p>
  */
 public class QuerySourceUsageTrendRequest extends Request {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("appToken")
+    private String appToken;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("collaborationGroupId")
     private String collaborationGroupId;
@@ -37,6 +41,14 @@ public class QuerySourceUsageTrendRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("knowledgeBaseIds")
     private java.util.List<String> knowledgeBaseIds;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("opsUserCode")
+    private String opsUserCode;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("opsUserId")
+    private String opsUserId;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("scopeType")
@@ -66,11 +78,14 @@ public class QuerySourceUsageTrendRequest extends Request {
 
     private QuerySourceUsageTrendRequest(Builder builder) {
         super(builder);
+        this.appToken = builder.appToken;
         this.collaborationGroupId = builder.collaborationGroupId;
         this.endTime = builder.endTime;
         this.eventType = builder.eventType;
         this.granularity = builder.granularity;
         this.knowledgeBaseIds = builder.knowledgeBaseIds;
+        this.opsUserCode = builder.opsUserCode;
+        this.opsUserId = builder.opsUserId;
         this.scopeType = builder.scopeType;
         this.sourceIds = builder.sourceIds;
         this.sourceName = builder.sourceName;
@@ -90,6 +105,13 @@ public class QuerySourceUsageTrendRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return appToken
+     */
+    public String getAppToken() {
+        return this.appToken;
     }
 
     /**
@@ -125,6 +147,20 @@ public class QuerySourceUsageTrendRequest extends Request {
      */
     public java.util.List<String> getKnowledgeBaseIds() {
         return this.knowledgeBaseIds;
+    }
+
+    /**
+     * @return opsUserCode
+     */
+    public String getOpsUserCode() {
+        return this.opsUserCode;
+    }
+
+    /**
+     * @return opsUserId
+     */
+    public String getOpsUserId() {
+        return this.opsUserId;
     }
 
     /**
@@ -170,11 +206,14 @@ public class QuerySourceUsageTrendRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<QuerySourceUsageTrendRequest, Builder> {
+        private String appToken; 
         private String collaborationGroupId; 
         private String endTime; 
         private String eventType; 
         private String granularity; 
         private java.util.List<String> knowledgeBaseIds; 
+        private String opsUserCode; 
+        private String opsUserId; 
         private String scopeType; 
         private java.util.List<String> sourceIds; 
         private String sourceName; 
@@ -188,11 +227,14 @@ public class QuerySourceUsageTrendRequest extends Request {
 
         private Builder(QuerySourceUsageTrendRequest request) {
             super(request);
+            this.appToken = request.appToken;
             this.collaborationGroupId = request.collaborationGroupId;
             this.endTime = request.endTime;
             this.eventType = request.eventType;
             this.granularity = request.granularity;
             this.knowledgeBaseIds = request.knowledgeBaseIds;
+            this.opsUserCode = request.opsUserCode;
+            this.opsUserId = request.opsUserId;
             this.scopeType = request.scopeType;
             this.sourceIds = request.sourceIds;
             this.sourceName = request.sourceName;
@@ -202,7 +244,19 @@ public class QuerySourceUsageTrendRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the collaboration group to which the resource belongs, such as cg_101. If this parameter is specified, a group workspace task is created, and the caller must be a valid group member. If this parameter is left empty, a personal task is created.</p>
+         * <p>平台应用 Token（控制台签发）。传入后将以 opsUserId 或 opsUserCode 指定的用户身份执行</p>
+         * 
+         * <strong>example:</strong>
+         * <p>wn_app_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+         */
+        public Builder appToken(String appToken) {
+            this.putQueryParameter("appToken", appToken);
+            this.appToken = appToken;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the associated collaboration group, such as cg_101. If you specify this parameter, a group workspace task is created, and the caller must be a valid group member. If you leave this parameter empty, a personal task is created.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -230,7 +284,7 @@ public class QuerySourceUsageTrendRequest extends Request {
          * <p>The event type.</p>
          * 
          * <strong>example:</strong>
-         * <p>MAIN</p>
+         * <p>ALL</p>
          */
         public Builder eventType(String eventType) {
             this.putBodyParameter("eventType", eventType);
@@ -239,10 +293,10 @@ public class QuerySourceUsageTrendRequest extends Request {
         }
 
         /**
-         * <p>The aggregation granularity. Valid values: hourly and daily.</p>
+         * <p>The trend aggregation granularity. Valid values: DAY (daily), WEEK (weekly), and MONTH (monthly).</p>
          * 
          * <strong>example:</strong>
-         * <p>daily</p>
+         * <p>DAY</p>
          */
         public Builder granularity(String granularity) {
             this.putBodyParameter("granularity", granularity);
@@ -264,6 +318,30 @@ public class QuerySourceUsageTrendRequest extends Request {
         }
 
         /**
+         * <p>代理用户编码（租户内唯一），仅当应用凭证配置为 source_uid 时使用</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alice</p>
+         */
+        public Builder opsUserCode(String opsUserCode) {
+            this.putQueryParameter("opsUserCode", opsUserCode);
+            this.opsUserCode = opsUserCode;
+            return this;
+        }
+
+        /**
+         * <p>代理用户ID（WINNEXO 平台用户ID），仅当应用凭证配置为 winnexo_uid 时使用</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10001</p>
+         */
+        public Builder opsUserId(String opsUserId) {
+            this.putQueryParameter("opsUserId", opsUserId);
+            this.opsUserId = opsUserId;
+            return this;
+        }
+
+        /**
          * <p>The role scope type. Valid values:</p>
          * <ul>
          * <li><strong>ALL_VISIBLE</strong>: All members.</li>
@@ -272,7 +350,7 @@ public class QuerySourceUsageTrendRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>Report perspective: TENANT for enterprise knowledge, GROUP for a single workspace, ALL_GROUPS for all workspaces of the current tenant (platform super administrator only). Valid values: TENANT, GROUP, and ALL_GROUPS</p>
+         * <p>TENANT</p>
          */
         public Builder scopeType(String scopeType) {
             this.putBodyParameter("scopeType", scopeType);
@@ -297,7 +375,7 @@ public class QuerySourceUsageTrendRequest extends Request {
          * <p>The resume channel source.</p>
          * 
          * <strong>example:</strong>
-         * <p>The naming content of the source</p>
+         * <p>Naming content of the source</p>
          */
         public Builder sourceName(String sourceName) {
             this.putBodyParameter("sourceName", sourceName);

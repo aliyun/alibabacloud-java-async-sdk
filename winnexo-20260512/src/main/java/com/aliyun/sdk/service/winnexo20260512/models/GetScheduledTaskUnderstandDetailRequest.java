@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetScheduledTaskUnderstandDetailRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("appToken")
+    private String appToken;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("collaborationGroupId")
     private String collaborationGroupId;
 
@@ -25,6 +29,14 @@ public class GetScheduledTaskUnderstandDetailRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("digitalEmployeeName")
     @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List<String> digitalEmployeeName;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("opsUserCode")
+    private String opsUserCode;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("opsUserId")
+    private String opsUserId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("segments")
@@ -40,8 +52,11 @@ public class GetScheduledTaskUnderstandDetailRequest extends Request {
 
     private GetScheduledTaskUnderstandDetailRequest(Builder builder) {
         super(builder);
+        this.appToken = builder.appToken;
         this.collaborationGroupId = builder.collaborationGroupId;
         this.digitalEmployeeName = builder.digitalEmployeeName;
+        this.opsUserCode = builder.opsUserCode;
+        this.opsUserId = builder.opsUserId;
         this.segments = builder.segments;
         this.tenantId = builder.tenantId;
         this.userInput = builder.userInput;
@@ -61,6 +76,13 @@ public class GetScheduledTaskUnderstandDetailRequest extends Request {
     }
 
     /**
+     * @return appToken
+     */
+    public String getAppToken() {
+        return this.appToken;
+    }
+
+    /**
      * @return collaborationGroupId
      */
     public String getCollaborationGroupId() {
@@ -72,6 +94,20 @@ public class GetScheduledTaskUnderstandDetailRequest extends Request {
      */
     public java.util.List<String> getDigitalEmployeeName() {
         return this.digitalEmployeeName;
+    }
+
+    /**
+     * @return opsUserCode
+     */
+    public String getOpsUserCode() {
+        return this.opsUserCode;
+    }
+
+    /**
+     * @return opsUserId
+     */
+    public String getOpsUserId() {
+        return this.opsUserId;
     }
 
     /**
@@ -96,8 +132,11 @@ public class GetScheduledTaskUnderstandDetailRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetScheduledTaskUnderstandDetailRequest, Builder> {
+        private String appToken; 
         private String collaborationGroupId; 
         private java.util.List<String> digitalEmployeeName; 
+        private String opsUserCode; 
+        private String opsUserId; 
         private java.util.List<Segments> segments; 
         private String tenantId; 
         private String userInput; 
@@ -108,12 +147,27 @@ public class GetScheduledTaskUnderstandDetailRequest extends Request {
 
         private Builder(GetScheduledTaskUnderstandDetailRequest request) {
             super(request);
+            this.appToken = request.appToken;
             this.collaborationGroupId = request.collaborationGroupId;
             this.digitalEmployeeName = request.digitalEmployeeName;
+            this.opsUserCode = request.opsUserCode;
+            this.opsUserId = request.opsUserId;
             this.segments = request.segments;
             this.tenantId = request.tenantId;
             this.userInput = request.userInput;
         } 
+
+        /**
+         * <p>平台应用 Token（控制台签发）。传入后将以 opsUserId 或 opsUserCode 指定的用户身份执行</p>
+         * 
+         * <strong>example:</strong>
+         * <p>wn_app_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+         */
+        public Builder appToken(String appToken) {
+            this.putQueryParameter("appToken", appToken);
+            this.appToken = appToken;
+            return this;
+        }
 
         /**
          * <p>The ID of the collaboration group to which the task belongs, such as cg_101. If this parameter is specified, a group space task is created and the caller must be a valid group member. If this parameter is left empty, a personal task is created.</p>
@@ -138,6 +192,30 @@ public class GetScheduledTaskUnderstandDetailRequest extends Request {
             String digitalEmployeeNameShrink = shrink(digitalEmployeeName, "digitalEmployeeName", "json");
             this.putQueryParameter("digitalEmployeeName", digitalEmployeeNameShrink);
             this.digitalEmployeeName = digitalEmployeeName;
+            return this;
+        }
+
+        /**
+         * <p>代理用户编码（租户内唯一），仅当应用凭证配置为 source_uid 时使用</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alice</p>
+         */
+        public Builder opsUserCode(String opsUserCode) {
+            this.putQueryParameter("opsUserCode", opsUserCode);
+            this.opsUserCode = opsUserCode;
+            return this;
+        }
+
+        /**
+         * <p>代理用户ID（WINNEXO 平台用户ID），仅当应用凭证配置为 winnexo_uid 时使用</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10001</p>
+         */
+        public Builder opsUserId(String opsUserId) {
+            this.putQueryParameter("opsUserId", opsUserId);
+            this.opsUserId = opsUserId;
             return this;
         }
 

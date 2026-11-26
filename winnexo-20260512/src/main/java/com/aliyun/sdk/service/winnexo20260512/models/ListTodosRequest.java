@@ -17,6 +17,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListTodosRequest</p>
  */
 public class ListTodosRequest extends Request {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("appToken")
+    private String appToken;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("collaborationGroupId")
     private String collaborationGroupId;
@@ -32,6 +36,14 @@ public class ListTodosRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("nextToken")
     private String nextToken;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("opsUserCode")
+    private String opsUserCode;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("opsUserId")
+    private String opsUserId;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("page")
@@ -67,10 +79,13 @@ public class ListTodosRequest extends Request {
 
     private ListTodosRequest(Builder builder) {
         super(builder);
+        this.appToken = builder.appToken;
         this.collaborationGroupId = builder.collaborationGroupId;
         this.keyword = builder.keyword;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
+        this.opsUserCode = builder.opsUserCode;
+        this.opsUserId = builder.opsUserId;
         this.page = builder.page;
         this.pageSize = builder.pageSize;
         this.priorities = builder.priorities;
@@ -92,6 +107,13 @@ public class ListTodosRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return appToken
+     */
+    public String getAppToken() {
+        return this.appToken;
     }
 
     /**
@@ -120,6 +142,20 @@ public class ListTodosRequest extends Request {
      */
     public String getNextToken() {
         return this.nextToken;
+    }
+
+    /**
+     * @return opsUserCode
+     */
+    public String getOpsUserCode() {
+        return this.opsUserCode;
+    }
+
+    /**
+     * @return opsUserId
+     */
+    public String getOpsUserId() {
+        return this.opsUserId;
     }
 
     /**
@@ -179,10 +215,13 @@ public class ListTodosRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListTodosRequest, Builder> {
+        private String appToken; 
         private String collaborationGroupId; 
         private String keyword; 
         private Long maxResults; 
         private String nextToken; 
+        private String opsUserCode; 
+        private String opsUserId; 
         private Long page; 
         private Long pageSize; 
         private java.util.List<String> priorities; 
@@ -198,10 +237,13 @@ public class ListTodosRequest extends Request {
 
         private Builder(ListTodosRequest request) {
             super(request);
+            this.appToken = request.appToken;
             this.collaborationGroupId = request.collaborationGroupId;
             this.keyword = request.keyword;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
+            this.opsUserCode = request.opsUserCode;
+            this.opsUserId = request.opsUserId;
             this.page = request.page;
             this.pageSize = request.pageSize;
             this.priorities = request.priorities;
@@ -213,7 +255,19 @@ public class ListTodosRequest extends Request {
         } 
 
         /**
-         * <p>The collaboration workspace ID. This is an optional filter. If not specified, items from all workspaces are returned.</p>
+         * <p>The platform application token issued by the console. If specified, the operation is performed as the user identified by opsUserId or opsUserCode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>wn_app_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+         */
+        public Builder appToken(String appToken) {
+            this.putQueryParameter("appToken", appToken);
+            this.appToken = appToken;
+            return this;
+        }
+
+        /**
+         * <p>The collaboration workspace ID. This is an optional filter. If not specified, all workspaces are included.</p>
          * 
          * <strong>example:</strong>
          * <p>cg_123</p>
@@ -261,6 +315,30 @@ public class ListTodosRequest extends Request {
         }
 
         /**
+         * <p>The proxy user code, which is unique within the tenant. This parameter is used only when the application credential is configured as source_uid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alice</p>
+         */
+        public Builder opsUserCode(String opsUserCode) {
+            this.putQueryParameter("opsUserCode", opsUserCode);
+            this.opsUserCode = opsUserCode;
+            return this;
+        }
+
+        /**
+         * <p>The proxy user ID, which is the WINNEXO platform user ID. This parameter is used only when the application credential is configured as winnexo_uid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10001</p>
+         */
+        public Builder opsUserId(String opsUserId) {
+            this.putQueryParameter("opsUserId", opsUserId);
+            this.opsUserId = opsUserId;
+            return this;
+        }
+
+        /**
          * <p>The page number. This parameter is ignored if nextToken is specified.</p>
          * 
          * <strong>example:</strong>
@@ -285,10 +363,10 @@ public class ListTodosRequest extends Request {
         }
 
         /**
-         * <p>The priority filter. Valid values: HIGH, MEDIUM, and LOW.</p>
+         * <p>The priority filter. Valid values: HIGH, MEDIUM, LOW.</p>
          * 
          * <strong>example:</strong>
-         * <p>HIGH</p>
+         * <p>[&quot;HIGH&quot;,&quot;MEDIUM&quot;]</p>
          */
         public Builder priorities(java.util.List<String> priorities) {
             String prioritiesShrink = shrink(priorities, "priorities", "json");
@@ -298,10 +376,10 @@ public class ListTodosRequest extends Request {
         }
 
         /**
-         * <p>The read status filter. Valid values: UNREAD and READ. The status is determined by the readAt field of the assignee.</p>
+         * <p>The read status filter. Valid values: UNREAD, READ. The status is determined by the readAt time of the assignee.</p>
          * 
          * <strong>example:</strong>
-         * <p>UNREAD</p>
+         * <p>[&quot;UNREAD&quot;,&quot;READ&quot;]</p>
          */
         public Builder readStatus(java.util.List<String> readStatus) {
             String readStatusShrink = shrink(readStatus, "readStatus", "json");
@@ -323,10 +401,10 @@ public class ListTodosRequest extends Request {
         }
 
         /**
-         * <p>The to-do type filter. Valid values: WORKFLOW and OPEN_API.</p>
+         * <p>The to-do type filter. Valid values: WORKFLOW, OPEN_API.</p>
          * 
          * <strong>example:</strong>
-         * <p>WORKFLOW</p>
+         * <p>[&quot;WORKFLOW&quot;,&quot;OPEN_API&quot;]</p>
          */
         public Builder sourceTypes(java.util.List<String> sourceTypes) {
             String sourceTypesShrink = shrink(sourceTypes, "sourceTypes", "json");
@@ -336,10 +414,10 @@ public class ListTodosRequest extends Request {
         }
 
         /**
-         * <p>The to-do status filter. Valid values: PENDING, COMPLETED, and CANCELLED.</p>
+         * <p>The to-do status filter. Valid values: PENDING, COMPLETED, CANCELLED.</p>
          * 
          * <strong>example:</strong>
-         * <p>PENDING</p>
+         * <p>[&quot;PENDING&quot;,&quot;COMPLETED&quot;]</p>
          */
         public Builder statuses(java.util.List<String> statuses) {
             String statusesShrink = shrink(statuses, "statuses", "json");

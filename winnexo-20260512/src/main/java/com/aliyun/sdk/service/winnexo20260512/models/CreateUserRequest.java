@@ -17,10 +17,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateUserRequest</p>
  */
 public class CreateUserRequest extends Request {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("appToken")
+    private String appToken;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("displayName")
     @com.aliyun.core.annotation.Validation(required = true)
     private String displayName;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("opsUserCode")
+    private String opsUserCode;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("opsUserId")
+    private String opsUserId;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("passwordEncrypted")
@@ -46,7 +58,10 @@ public class CreateUserRequest extends Request {
 
     private CreateUserRequest(Builder builder) {
         super(builder);
+        this.appToken = builder.appToken;
         this.displayName = builder.displayName;
+        this.opsUserCode = builder.opsUserCode;
+        this.opsUserId = builder.opsUserId;
         this.passwordEncrypted = builder.passwordEncrypted;
         this.roleCodes = builder.roleCodes;
         this.ssoProvider = builder.ssoProvider;
@@ -68,10 +83,31 @@ public class CreateUserRequest extends Request {
     }
 
     /**
+     * @return appToken
+     */
+    public String getAppToken() {
+        return this.appToken;
+    }
+
+    /**
      * @return displayName
      */
     public String getDisplayName() {
         return this.displayName;
+    }
+
+    /**
+     * @return opsUserCode
+     */
+    public String getOpsUserCode() {
+        return this.opsUserCode;
+    }
+
+    /**
+     * @return opsUserId
+     */
+    public String getOpsUserId() {
+        return this.opsUserId;
     }
 
     /**
@@ -110,7 +146,10 @@ public class CreateUserRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateUserRequest, Builder> {
+        private String appToken; 
         private String displayName; 
+        private String opsUserCode; 
+        private String opsUserId; 
         private String passwordEncrypted; 
         private java.util.List<String> roleCodes; 
         private String ssoProvider; 
@@ -123,13 +162,28 @@ public class CreateUserRequest extends Request {
 
         private Builder(CreateUserRequest request) {
             super(request);
+            this.appToken = request.appToken;
             this.displayName = request.displayName;
+            this.opsUserCode = request.opsUserCode;
+            this.opsUserId = request.opsUserId;
             this.passwordEncrypted = request.passwordEncrypted;
             this.roleCodes = request.roleCodes;
             this.ssoProvider = request.ssoProvider;
             this.tenantId = request.tenantId;
             this.wnAccountId = request.wnAccountId;
         } 
+
+        /**
+         * <p>平台应用 Token（控制台签发）。传入后将以 opsUserId 或 opsUserCode 指定的用户身份执行</p>
+         * 
+         * <strong>example:</strong>
+         * <p>wn_app_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+         */
+        public Builder appToken(String appToken) {
+            this.putQueryParameter("appToken", appToken);
+            this.appToken = appToken;
+            return this;
+        }
 
         /**
          * <p>The display name.</p>
@@ -141,6 +195,30 @@ public class CreateUserRequest extends Request {
         public Builder displayName(String displayName) {
             this.putBodyParameter("displayName", displayName);
             this.displayName = displayName;
+            return this;
+        }
+
+        /**
+         * <p>代理用户编码（租户内唯一），仅当应用凭证配置为 source_uid 时使用</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alice</p>
+         */
+        public Builder opsUserCode(String opsUserCode) {
+            this.putQueryParameter("opsUserCode", opsUserCode);
+            this.opsUserCode = opsUserCode;
+            return this;
+        }
+
+        /**
+         * <p>代理用户ID（WINNEXO 平台用户ID），仅当应用凭证配置为 winnexo_uid 时使用</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10001</p>
+         */
+        public Builder opsUserId(String opsUserId) {
+            this.putQueryParameter("opsUserId", opsUserId);
+            this.opsUserId = opsUserId;
             return this;
         }
 

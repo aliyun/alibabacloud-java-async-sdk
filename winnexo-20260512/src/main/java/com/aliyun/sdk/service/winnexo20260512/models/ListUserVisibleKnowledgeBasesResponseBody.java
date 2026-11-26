@@ -117,7 +117,7 @@ public class ListUserVisibleKnowledgeBasesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The result list.
+         * <p>The list of results.
          * Maximum size:
          *     50</p>
          */
@@ -138,7 +138,7 @@ public class ListUserVisibleKnowledgeBasesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request trace ID.</p>
+         * <p>The request tracking ID.</p>
          * 
          * <strong>example:</strong>
          * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -320,10 +320,10 @@ public class ListUserVisibleKnowledgeBasesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creator name.</p>
+             * <p>The creator.</p>
              * 
              * <strong>example:</strong>
-             * <p>John Doe</p>
+             * <p>Zhang San</p>
              */
             public Builder creatorName(String creatorName) {
                 this.creatorName = creatorName;
@@ -334,7 +334,7 @@ public class ListUserVisibleKnowledgeBasesResponseBody extends TeaModel {
              * <p>The description of the to-do card type.</p>
              * 
              * <strong>example:</strong>
-             * <p>Product materials and user guides</p>
+             * <p>Product materials and instructions</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -386,7 +386,7 @@ public class ListUserVisibleKnowledgeBasesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The last modification time.</p>
+             * <p>The last update time.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -400,7 +400,7 @@ public class ListUserVisibleKnowledgeBasesResponseBody extends TeaModel {
              * <p>The file name.</p>
              * 
              * <strong>example:</strong>
-             * <p>ProductKnowledgeBase</p>
+             * <p>Product knowledge base</p>
              */
             public Builder name(String name) {
                 this.name = name;

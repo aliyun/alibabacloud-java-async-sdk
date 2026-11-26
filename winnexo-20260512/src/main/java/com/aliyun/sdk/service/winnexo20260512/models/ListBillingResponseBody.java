@@ -143,7 +143,7 @@ public class ListBillingResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The details of the bills.</p>
+         * <p>The details of the link enhancement rule.</p>
          */
         public Builder list(java.util.List<List> list) {
             this.list = list;
@@ -151,7 +151,7 @@ public class ListBillingResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The prompt message.</p>
+         * <p>The message.</p>
          * 
          * <strong>example:</strong>
          * <p>successful</p>
@@ -195,7 +195,7 @@ public class ListBillingResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries.</p>
+         * <p>The total number of Logtail pipeline configurations in the current project.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -492,10 +492,10 @@ public class ListBillingResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The cost source type.</p>
+             * <p>The type of the cost source.</p>
              * 
              * <strong>example:</strong>
-             * <p>string_value</p>
+             * <p>[&quot;STANDARD&quot;]</p>
              */
             public Builder costSource(java.util.List<String> costSource) {
                 this.costSource = costSource;
@@ -506,7 +506,7 @@ public class ListBillingResponseBody extends TeaModel {
              * <p>The display name of the cost source.</p>
              * 
              * <strong>example:</strong>
-             * <p>string_value</p>
+             * <p>[&quot;Standard Edition&quot;]</p>
              */
             public Builder costSourceDisplayName(java.util.List<String> costSourceDisplayName) {
                 this.costSourceDisplayName = costSourceDisplayName;
@@ -514,7 +514,7 @@ public class ListBillingResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The end timestamp, in milliseconds.</p>
+             * <p>The end timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-10-01T12:00:00Z</p>
@@ -525,7 +525,7 @@ public class ListBillingResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The entry object ID.</p>
+             * <p>The ID of the entry object.</p>
              * 
              * <strong>example:</strong>
              * <p>exampleEntryObjectId</p>
@@ -547,7 +547,7 @@ public class ListBillingResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the bill is a shadow bill.</p>
+             * <p>Specifies whether the bill is a shadow bill.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -558,7 +558,7 @@ public class ListBillingResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The operation type.</p>
+             * <p>The search term rewrite configuration.</p>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>
@@ -569,7 +569,7 @@ public class ListBillingResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The display name of the operation.</p>
+             * <p>The display name of the action.</p>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>
@@ -580,7 +580,7 @@ public class ListBillingResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start timestamp, in milliseconds.</p>
+             * <p>The start timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-10-01T12:00:00Z</p>
@@ -591,7 +591,7 @@ public class ListBillingResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The node status. Running is returned upon submission.</p>
+             * <p>The task status. A status of Running is returned immediately after the task is submitted.</p>
              * 
              * <strong>example:</strong>
              * <p>READY</p>
@@ -613,7 +613,7 @@ public class ListBillingResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tenant ID. This is a common parameter. If not specified, the default tenant of the caller is used.</p>
+             * <p>The tenant ID. This is a common parameter. If this parameter is not specified, the default tenant of the caller is used.</p>
              * 
              * <strong>example:</strong>
              * <p>10000</p>

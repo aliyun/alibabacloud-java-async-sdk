@@ -17,6 +17,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateConversationRequest</p>
  */
 public class CreateConversationRequest extends Request {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("appToken")
+    private String appToken;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("metadata")
     private String metadata;
@@ -30,14 +34,25 @@ public class CreateConversationRequest extends Request {
     private java.util.List<?> operatingObjectName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("opsUserCode")
+    private String opsUserCode;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("opsUserId")
+    private String opsUserId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("tenantId")
     private String tenantId;
 
     private CreateConversationRequest(Builder builder) {
         super(builder);
+        this.appToken = builder.appToken;
         this.metadata = builder.metadata;
         this.objectId = builder.objectId;
         this.operatingObjectName = builder.operatingObjectName;
+        this.opsUserCode = builder.opsUserCode;
+        this.opsUserId = builder.opsUserId;
         this.tenantId = builder.tenantId;
     }
 
@@ -52,6 +67,13 @@ public class CreateConversationRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return appToken
+     */
+    public String getAppToken() {
+        return this.appToken;
     }
 
     /**
@@ -76,6 +98,20 @@ public class CreateConversationRequest extends Request {
     }
 
     /**
+     * @return opsUserCode
+     */
+    public String getOpsUserCode() {
+        return this.opsUserCode;
+    }
+
+    /**
+     * @return opsUserId
+     */
+    public String getOpsUserId() {
+        return this.opsUserId;
+    }
+
+    /**
      * @return tenantId
      */
     public String getTenantId() {
@@ -83,9 +119,12 @@ public class CreateConversationRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateConversationRequest, Builder> {
+        private String appToken; 
         private String metadata; 
         private String objectId; 
         private java.util.List<?> operatingObjectName; 
+        private String opsUserCode; 
+        private String opsUserId; 
         private String tenantId; 
 
         private Builder() {
@@ -94,14 +133,29 @@ public class CreateConversationRequest extends Request {
 
         private Builder(CreateConversationRequest request) {
             super(request);
+            this.appToken = request.appToken;
             this.metadata = request.metadata;
             this.objectId = request.objectId;
             this.operatingObjectName = request.operatingObjectName;
+            this.opsUserCode = request.opsUserCode;
+            this.opsUserId = request.opsUserId;
             this.tenantId = request.tenantId;
         } 
 
         /**
-         * <p>A reserved field.</p>
+         * <p>The platform application token issued by the console. If specified, the operation is executed as the user specified by opsUserId or opsUserCode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>wn_app_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+         */
+        public Builder appToken(String appToken) {
+            this.putQueryParameter("appToken", appToken);
+            this.appToken = appToken;
+            return this;
+        }
+
+        /**
+         * <p>The reserved field.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -125,15 +179,39 @@ public class CreateConversationRequest extends Request {
         }
 
         /**
-         * <p>The operating object name.</p>
+         * <p>The name of the operation object.</p>
          * 
          * <strong>example:</strong>
-         * <p>string_value</p>
+         * <p>[&quot;item name&quot;]</p>
          */
         public Builder operatingObjectName(java.util.List<?> operatingObjectName) {
             String operatingObjectNameShrink = shrink(operatingObjectName, "operatingObjectName", "json");
             this.putBodyParameter("operatingObjectName", operatingObjectNameShrink);
             this.operatingObjectName = operatingObjectName;
+            return this;
+        }
+
+        /**
+         * <p>The proxy user code, which is unique within the tenant. This parameter is used only when the application credential is configured as source_uid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alice</p>
+         */
+        public Builder opsUserCode(String opsUserCode) {
+            this.putQueryParameter("opsUserCode", opsUserCode);
+            this.opsUserCode = opsUserCode;
+            return this;
+        }
+
+        /**
+         * <p>The proxy user ID, which is the WINNEXO platform user ID. This parameter is used only when the application credential is configured as winnexo_uid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10001</p>
+         */
+        public Builder opsUserId(String opsUserId) {
+            this.putQueryParameter("opsUserId", opsUserId);
+            this.opsUserId = opsUserId;
             return this;
         }
 

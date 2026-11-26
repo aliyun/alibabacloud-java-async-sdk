@@ -17,6 +17,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListSourceUsageStatisticsRequest</p>
  */
 public class ListSourceUsageStatisticsRequest extends Request {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("appToken")
+    private String appToken;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("collaborationGroupId")
     private String collaborationGroupId;
@@ -33,6 +37,14 @@ public class ListSourceUsageStatisticsRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("knowledgeBaseIds")
     private java.util.List<String> knowledgeBaseIds;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("opsUserCode")
+    private String opsUserCode;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("opsUserId")
+    private String opsUserId;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("page")
@@ -74,10 +86,13 @@ public class ListSourceUsageStatisticsRequest extends Request {
 
     private ListSourceUsageStatisticsRequest(Builder builder) {
         super(builder);
+        this.appToken = builder.appToken;
         this.collaborationGroupId = builder.collaborationGroupId;
         this.endTime = builder.endTime;
         this.eventType = builder.eventType;
         this.knowledgeBaseIds = builder.knowledgeBaseIds;
+        this.opsUserCode = builder.opsUserCode;
+        this.opsUserId = builder.opsUserId;
         this.page = builder.page;
         this.pageSize = builder.pageSize;
         this.scopeType = builder.scopeType;
@@ -100,6 +115,13 @@ public class ListSourceUsageStatisticsRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return appToken
+     */
+    public String getAppToken() {
+        return this.appToken;
     }
 
     /**
@@ -128,6 +150,20 @@ public class ListSourceUsageStatisticsRequest extends Request {
      */
     public java.util.List<String> getKnowledgeBaseIds() {
         return this.knowledgeBaseIds;
+    }
+
+    /**
+     * @return opsUserCode
+     */
+    public String getOpsUserCode() {
+        return this.opsUserCode;
+    }
+
+    /**
+     * @return opsUserId
+     */
+    public String getOpsUserId() {
+        return this.opsUserId;
     }
 
     /**
@@ -194,10 +230,13 @@ public class ListSourceUsageStatisticsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListSourceUsageStatisticsRequest, Builder> {
+        private String appToken; 
         private String collaborationGroupId; 
         private String endTime; 
         private String eventType; 
         private java.util.List<String> knowledgeBaseIds; 
+        private String opsUserCode; 
+        private String opsUserId; 
         private Long page; 
         private Long pageSize; 
         private String scopeType; 
@@ -214,10 +253,13 @@ public class ListSourceUsageStatisticsRequest extends Request {
 
         private Builder(ListSourceUsageStatisticsRequest request) {
             super(request);
+            this.appToken = request.appToken;
             this.collaborationGroupId = request.collaborationGroupId;
             this.endTime = request.endTime;
             this.eventType = request.eventType;
             this.knowledgeBaseIds = request.knowledgeBaseIds;
+            this.opsUserCode = request.opsUserCode;
+            this.opsUserId = request.opsUserId;
             this.page = request.page;
             this.pageSize = request.pageSize;
             this.scopeType = request.scopeType;
@@ -230,7 +272,19 @@ public class ListSourceUsageStatisticsRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the collaboration group to which the resource belongs, such as cg_101. If you specify this parameter, a group workspace task is created, and the caller must be a valid group member. If you leave this parameter empty, a personal task is created.</p>
+         * <p>The platform application token issued by the console. If specified, the operation is executed as the user specified by opsUserId or opsUserCode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>wn_app_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+         */
+        public Builder appToken(String appToken) {
+            this.putQueryParameter("appToken", appToken);
+            this.appToken = appToken;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the collaboration group to which the resource belongs, such as cg_101. If specified, a group workspace task is created, and the caller must be a valid group member. If left empty, a personal task is created.</p>
          * 
          * <strong>example:</strong>
          * <p>1112</p>
@@ -258,7 +312,7 @@ public class ListSourceUsageStatisticsRequest extends Request {
          * <p>The event type.</p>
          * 
          * <strong>example:</strong>
-         * <p>HealthCheck</p>
+         * <p>ALL</p>
          */
         public Builder eventType(String eventType) {
             this.putBodyParameter("eventType", eventType);
@@ -267,7 +321,7 @@ public class ListSourceUsageStatisticsRequest extends Request {
         }
 
         /**
-         * <p>The root IDs of the enterprise knowledge bases, which are available only for TENANT. The knowledge bases are filtered based on current directory bindings, not historical ownership. Maximum number of items: 100.</p>
+         * <p>The root IDs of enterprise knowledge bases, available only for TENANT. The IDs are filtered based on current directory bindings rather than historical ownership. A maximum of 100 items are supported.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;kb_9401&quot;]</p>
@@ -276,6 +330,30 @@ public class ListSourceUsageStatisticsRequest extends Request {
             String knowledgeBaseIdsShrink = shrink(knowledgeBaseIds, "knowledgeBaseIds", "json");
             this.putBodyParameter("knowledgeBaseIds", knowledgeBaseIdsShrink);
             this.knowledgeBaseIds = knowledgeBaseIds;
+            return this;
+        }
+
+        /**
+         * <p>The proxy user code, which is unique within the tenant. This parameter is used only when the application credential is configured as source_uid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alice</p>
+         */
+        public Builder opsUserCode(String opsUserCode) {
+            this.putQueryParameter("opsUserCode", opsUserCode);
+            this.opsUserCode = opsUserCode;
+            return this;
+        }
+
+        /**
+         * <p>The proxy user ID, which is the WINNEXO platform user ID. This parameter is used only when the application credential is configured as winnexo_uid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10001</p>
+         */
+        public Builder opsUserId(String opsUserId) {
+            this.putQueryParameter("opsUserId", opsUserId);
+            this.opsUserId = opsUserId;
             return this;
         }
 
@@ -304,11 +382,11 @@ public class ListSourceUsageStatisticsRequest extends Request {
         }
 
         /**
-         * <p>The report perspective. Valid values: TENANT (enterprise knowledge), GROUP (a single workspace), and ALL_GROUPS (all workspaces of the current tenant, only for platform super administrators).</p>
+         * <p>The report perspective. Valid values: TENANT for enterprise knowledge, GROUP for a single workspace, and ALL_GROUPS for all workspaces of the current tenant (available only to platform super administrators).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>Report perspective: TENANT for enterprise knowledge, GROUP for a single workspace, ALL_GROUPS for all workspaces of the current tenant (platform super administrator only). Valid values: TENANT, GROUP, ALL_GROUPS</p>
+         * <p>TENANT</p>
          */
         public Builder scopeType(String scopeType) {
             this.putBodyParameter("scopeType", scopeType);
@@ -320,7 +398,7 @@ public class ListSourceUsageStatisticsRequest extends Request {
          * <p>The content of the sort clause.</p>
          * 
          * <strong>example:</strong>
-         * <p>1</p>
+         * <p>retrievalCount</p>
          */
         public Builder sortBy(String sortBy) {
             this.putBodyParameter("sortBy", sortBy);
@@ -329,10 +407,10 @@ public class ListSourceUsageStatisticsRequest extends Request {
         }
 
         /**
-         * <p>The sort order. This parameter takes effect only when sortBy is specified. Valid values: ASC and DESC. The values are case-insensitive.</p>
+         * <p>Specifies the sort order. This parameter takes effect only when sortBy is specified. Valid values: ASC and DESC. The values are case-insensitive.</p>
          * 
          * <strong>example:</strong>
-         * <p>asc</p>
+         * <p>ASC</p>
          */
         public Builder sortOrder(String sortOrder) {
             this.putBodyParameter("sortOrder", sortOrder);
@@ -341,7 +419,7 @@ public class ListSourceUsageStatisticsRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the associated sources.</p>
+         * <p>The associated source IDs.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;src_9401&quot;]</p>

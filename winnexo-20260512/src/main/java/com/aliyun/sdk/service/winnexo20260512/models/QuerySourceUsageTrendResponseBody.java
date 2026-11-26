@@ -115,7 +115,7 @@ public class QuerySourceUsageTrendResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The request tracking ID.</p>
          * 
          * <strong>example:</strong>
          * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -250,7 +250,7 @@ public class QuerySourceUsageTrendResponseBody extends TeaModel {
              * <p>The start time of the natural bucket with the selected time zone. The first bucket may start earlier than the startTime.</p>
              * 
              * <strong>example:</strong>
-             * <p>The start time of the natural bucket with the selected time zone. The first bucket may start earlier than the startTime</p>
+             * <p>Start time of the natural bucket with the selected time zone. The first bucket may start earlier than the startTime</p>
              */
             public Builder bucketStart(String bucketStart) {
                 this.bucketStart = bucketStart;
@@ -291,7 +291,7 @@ public class QuerySourceUsageTrendResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of times used in agents.</p>
+             * <p>The number of times used by the agent.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>

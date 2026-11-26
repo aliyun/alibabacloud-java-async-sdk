@@ -167,7 +167,7 @@ public class GetScheduledTaskExecutionRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The status code description.</p>
+         * <p>The description of the status code.</p>
          * 
          * <strong>example:</strong>
          * <p>The current zone list is illegal.</p>
@@ -189,7 +189,7 @@ public class GetScheduledTaskExecutionRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The collaboration group ID, such as cg_101. If you specify this parameter, the results are returned by group dimension, and the caller must be a valid group member. If you do not specify this parameter, the results are returned by personal dimension, excluding group tasks.</p>
+         * <p>The ID of the collaboration group, such as cg_101. If this parameter is passed, the results are returned by group dimension, and the caller must be a valid group member. If this parameter is not passed, the results are returned by personal dimension, excluding group tasks.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -245,6 +245,12 @@ public class GetScheduledTaskExecutionRecordsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("actualTime")
         private String actualTime;
 
+        @com.aliyun.core.annotation.NameInMap("conversationArchiveStatus")
+        private String conversationArchiveStatus;
+
+        @com.aliyun.core.annotation.NameInMap("conversationArchivedTime")
+        private Long conversationArchivedTime;
+
         @com.aliyun.core.annotation.NameInMap("conversationId")
         private String conversationId;
 
@@ -274,6 +280,8 @@ public class GetScheduledTaskExecutionRecordsResponseBody extends TeaModel {
 
         private Timeline(Builder builder) {
             this.actualTime = builder.actualTime;
+            this.conversationArchiveStatus = builder.conversationArchiveStatus;
+            this.conversationArchivedTime = builder.conversationArchivedTime;
             this.conversationId = builder.conversationId;
             this.displayName = builder.displayName;
             this.errorMessage = builder.errorMessage;
@@ -298,6 +306,20 @@ public class GetScheduledTaskExecutionRecordsResponseBody extends TeaModel {
          */
         public String getActualTime() {
             return this.actualTime;
+        }
+
+        /**
+         * @return conversationArchiveStatus
+         */
+        public String getConversationArchiveStatus() {
+            return this.conversationArchiveStatus;
+        }
+
+        /**
+         * @return conversationArchivedTime
+         */
+        public Long getConversationArchivedTime() {
+            return this.conversationArchivedTime;
         }
 
         /**
@@ -365,6 +387,8 @@ public class GetScheduledTaskExecutionRecordsResponseBody extends TeaModel {
 
         public static final class Builder {
             private String actualTime; 
+            private String conversationArchiveStatus; 
+            private Long conversationArchivedTime; 
             private String conversationId; 
             private String displayName; 
             private String errorMessage; 
@@ -380,6 +404,8 @@ public class GetScheduledTaskExecutionRecordsResponseBody extends TeaModel {
 
             private Builder(Timeline model) {
                 this.actualTime = model.actualTime;
+                this.conversationArchiveStatus = model.conversationArchiveStatus;
+                this.conversationArchivedTime = model.conversationArchivedTime;
                 this.conversationId = model.conversationId;
                 this.displayName = model.displayName;
                 this.errorMessage = model.errorMessage;
@@ -403,7 +429,29 @@ public class GetScheduledTaskExecutionRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The actual conversation ID used for this task execution.</p>
+             * <p>The conversation archive status. Valid values: ACTIVE, ARCHIVING, and ARCHIVED.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ACTIVE</p>
+             */
+            public Builder conversationArchiveStatus(String conversationArchiveStatus) {
+                this.conversationArchiveStatus = conversationArchiveStatus;
+                return this;
+            }
+
+            /**
+             * <p>The timestamp when the conversation archiving is completed, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1735689600</p>
+             */
+            public Builder conversationArchivedTime(Long conversationArchivedTime) {
+                this.conversationArchivedTime = conversationArchivedTime;
+                return this;
+            }
+
+            /**
+             * <p>The associated conversation ID.</p>
              * 
              * <strong>example:</strong>
              * <p>exampleConversationId</p>
@@ -458,7 +506,7 @@ public class GetScheduledTaskExecutionRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The result message ID generated by this task execution.</p>
+             * <p>The message ID.</p>
              * 
              * <strong>example:</strong>
              * <p>exampleMessageId</p>
@@ -469,7 +517,7 @@ public class GetScheduledTaskExecutionRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The execution output content (historical records only).</p>
+             * <p>The execution output content, which is available only for history records.</p>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>
@@ -480,7 +528,7 @@ public class GetScheduledTaskExecutionRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The scheduled time.</p>
+             * <p>The timed scheduling time.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-10-01T12:00:00Z</p>
@@ -665,7 +713,7 @@ public class GetScheduledTaskExecutionRecordsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The pre-filter for a single task. If you do not specify this parameter, the execution records of all visible tasks are returned.</p>
+             * <p>Pre-filters by a single task. If this parameter is not passed, the execution records of all visible tasks are returned.</p>
              * 
              * <strong>example:</strong>
              * <p>exampleCollaborationGroupId</p>

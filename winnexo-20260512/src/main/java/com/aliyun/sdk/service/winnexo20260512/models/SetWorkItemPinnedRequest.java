@@ -17,10 +17,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SetWorkItemPinnedRequest</p>
  */
 public class SetWorkItemPinnedRequest extends Request {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("appToken")
+    private String appToken;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("collaborationGroupId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String collaborationGroupId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("opsUserCode")
+    private String opsUserCode;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("opsUserId")
+    private String opsUserId;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("pinned")
@@ -38,7 +50,10 @@ public class SetWorkItemPinnedRequest extends Request {
 
     private SetWorkItemPinnedRequest(Builder builder) {
         super(builder);
+        this.appToken = builder.appToken;
         this.collaborationGroupId = builder.collaborationGroupId;
+        this.opsUserCode = builder.opsUserCode;
+        this.opsUserId = builder.opsUserId;
         this.pinned = builder.pinned;
         this.tenantId = builder.tenantId;
         this.workItemId = builder.workItemId;
@@ -58,10 +73,31 @@ public class SetWorkItemPinnedRequest extends Request {
     }
 
     /**
+     * @return appToken
+     */
+    public String getAppToken() {
+        return this.appToken;
+    }
+
+    /**
      * @return collaborationGroupId
      */
     public String getCollaborationGroupId() {
         return this.collaborationGroupId;
+    }
+
+    /**
+     * @return opsUserCode
+     */
+    public String getOpsUserCode() {
+        return this.opsUserCode;
+    }
+
+    /**
+     * @return opsUserId
+     */
+    public String getOpsUserId() {
+        return this.opsUserId;
     }
 
     /**
@@ -86,7 +122,10 @@ public class SetWorkItemPinnedRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<SetWorkItemPinnedRequest, Builder> {
+        private String appToken; 
         private String collaborationGroupId; 
+        private String opsUserCode; 
+        private String opsUserId; 
         private Boolean pinned; 
         private String tenantId; 
         private String workItemId; 
@@ -97,11 +136,26 @@ public class SetWorkItemPinnedRequest extends Request {
 
         private Builder(SetWorkItemPinnedRequest request) {
             super(request);
+            this.appToken = request.appToken;
             this.collaborationGroupId = request.collaborationGroupId;
+            this.opsUserCode = request.opsUserCode;
+            this.opsUserId = request.opsUserId;
             this.pinned = request.pinned;
             this.tenantId = request.tenantId;
             this.workItemId = request.workItemId;
         } 
+
+        /**
+         * <p>The platform application token issued by the console. If specified, the operation is performed as the user identified by opsUserId or opsUserCode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>wn_app_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+         */
+        public Builder appToken(String appToken) {
+            this.putQueryParameter("appToken", appToken);
+            this.appToken = appToken;
+            return this;
+        }
 
         /**
          * <p>The ID of the collaboration workspace.</p>
@@ -113,6 +167,30 @@ public class SetWorkItemPinnedRequest extends Request {
         public Builder collaborationGroupId(String collaborationGroupId) {
             this.putBodyParameter("collaborationGroupId", collaborationGroupId);
             this.collaborationGroupId = collaborationGroupId;
+            return this;
+        }
+
+        /**
+         * <p>The proxy user code, which is unique within the tenant. This parameter is used only when the application credential is configured as source_uid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alice</p>
+         */
+        public Builder opsUserCode(String opsUserCode) {
+            this.putQueryParameter("opsUserCode", opsUserCode);
+            this.opsUserCode = opsUserCode;
+            return this;
+        }
+
+        /**
+         * <p>The proxy user ID, which is the WINNEXO platform user ID. This parameter is used only when the application credential is configured as winnexo_uid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10001</p>
+         */
+        public Builder opsUserId(String opsUserId) {
+            this.putQueryParameter("opsUserId", opsUserId);
+            this.opsUserId = opsUserId;
             return this;
         }
 

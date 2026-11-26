@@ -17,6 +17,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListWorkflowInstancesRequest</p>
  */
 public class ListWorkflowInstancesRequest extends Request {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("appToken")
+    private String appToken;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("businessId")
     @com.aliyun.core.annotation.Validation(maxLength = 128, minLength = 1)
@@ -36,6 +40,14 @@ public class ListWorkflowInstancesRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("keyword")
     @com.aliyun.core.annotation.Validation(maxLength = 128)
     private String keyword;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("opsUserCode")
+    private String opsUserCode;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("opsUserId")
+    private String opsUserId;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("page")
@@ -63,10 +75,13 @@ public class ListWorkflowInstancesRequest extends Request {
 
     private ListWorkflowInstancesRequest(Builder builder) {
         super(builder);
+        this.appToken = builder.appToken;
         this.businessId = builder.businessId;
         this.collaborationGroupId = builder.collaborationGroupId;
         this.initiator = builder.initiator;
         this.keyword = builder.keyword;
+        this.opsUserCode = builder.opsUserCode;
+        this.opsUserId = builder.opsUserId;
         this.page = builder.page;
         this.pageSize = builder.pageSize;
         this.sortBy = builder.sortBy;
@@ -86,6 +101,13 @@ public class ListWorkflowInstancesRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return appToken
+     */
+    public String getAppToken() {
+        return this.appToken;
     }
 
     /**
@@ -114,6 +136,20 @@ public class ListWorkflowInstancesRequest extends Request {
      */
     public String getKeyword() {
         return this.keyword;
+    }
+
+    /**
+     * @return opsUserCode
+     */
+    public String getOpsUserCode() {
+        return this.opsUserCode;
+    }
+
+    /**
+     * @return opsUserId
+     */
+    public String getOpsUserId() {
+        return this.opsUserId;
     }
 
     /**
@@ -159,10 +195,13 @@ public class ListWorkflowInstancesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListWorkflowInstancesRequest, Builder> {
+        private String appToken; 
         private String businessId; 
         private String collaborationGroupId; 
         private String initiator; 
         private String keyword; 
+        private String opsUserCode; 
+        private String opsUserId; 
         private Long page; 
         private Long pageSize; 
         private String sortBy; 
@@ -176,10 +215,13 @@ public class ListWorkflowInstancesRequest extends Request {
 
         private Builder(ListWorkflowInstancesRequest request) {
             super(request);
+            this.appToken = request.appToken;
             this.businessId = request.businessId;
             this.collaborationGroupId = request.collaborationGroupId;
             this.initiator = request.initiator;
             this.keyword = request.keyword;
+            this.opsUserCode = request.opsUserCode;
+            this.opsUserId = request.opsUserId;
             this.page = request.page;
             this.pageSize = request.pageSize;
             this.sortBy = request.sortBy;
@@ -187,6 +229,18 @@ public class ListWorkflowInstancesRequest extends Request {
             this.status = request.status;
             this.tenantId = request.tenantId;
         } 
+
+        /**
+         * <p>平台应用 Token（控制台签发）。传入后将以 opsUserId 或 opsUserCode 指定的用户身份执行</p>
+         * 
+         * <strong>example:</strong>
+         * <p>wn_app_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+         */
+        public Builder appToken(String appToken) {
+            this.putQueryParameter("appToken", appToken);
+            this.appToken = appToken;
+            return this;
+        }
 
         /**
          * <p>The exact requirement ID.</p>
@@ -234,6 +288,30 @@ public class ListWorkflowInstancesRequest extends Request {
         public Builder keyword(String keyword) {
             this.putBodyParameter("keyword", keyword);
             this.keyword = keyword;
+            return this;
+        }
+
+        /**
+         * <p>代理用户编码（租户内唯一），仅当应用凭证配置为 source_uid 时使用</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alice</p>
+         */
+        public Builder opsUserCode(String opsUserCode) {
+            this.putQueryParameter("opsUserCode", opsUserCode);
+            this.opsUserCode = opsUserCode;
+            return this;
+        }
+
+        /**
+         * <p>代理用户ID（WINNEXO 平台用户ID），仅当应用凭证配置为 winnexo_uid 时使用</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10001</p>
+         */
+        public Builder opsUserId(String opsUserId) {
+            this.putQueryParameter("opsUserId", opsUserId);
+            this.opsUserId = opsUserId;
             return this;
         }
 
