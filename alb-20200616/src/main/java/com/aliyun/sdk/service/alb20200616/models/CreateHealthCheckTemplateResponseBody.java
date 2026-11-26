@@ -70,7 +70,7 @@ public class CreateHealthCheckTemplateResponseBody extends TeaModel {
          * <p>The ID of the health check template.</p>
          * 
          * <strong>example:</strong>
-         * <p>hct-1224334</p>
+         * <p>hct-pno8sisi******</p>
          */
         public Builder healthCheckTemplateId(String healthCheckTemplateId) {
             this.healthCheckTemplateId = healthCheckTemplateId;
@@ -78,10 +78,10 @@ public class CreateHealthCheckTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
-         * <p>365F4154-92F6-4AE4-92F8-7FF34B540710</p>
+         * <p>365F4154-92F6-4AE4-92F8-7FF34******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

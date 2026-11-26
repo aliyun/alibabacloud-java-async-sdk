@@ -260,17 +260,19 @@ public class CreateLoadBalancerRequest extends Request {
         } 
 
         /**
-         * <p>The mode in which IP addresses are allocated to the ALB instance. Valid values:</p>
+         * <p>The IP address allocation mode. Valid values:</p>
          * <ul>
-         * <li><strong>Fixed</strong> (default): a fixed IP address is assigned to the ALB instance in each zone.</li>
-         * <li><strong>Dynamic</strong>: IP addresses are dynamically allocated to the ALB instance in each zone.</li>
+         * <li><p><strong>Fixed</strong> (default): fixed IP mode. A fixed IP address is allocated to each zone.</p>
+         * </li>
+         * <li><p><strong>Dynamic</strong>: dynamic IP mode. IP addresses are dynamically allocated to each zone.</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p> Starting from 00:00:00 on February 25, 2025 (UTC+8), when you call this operation to create an ALB instance, the instance is automatically the <a href="https://help.aliyun.com/document_detail/2864070.html">upgraded version</a> regardless of the mode you specify. Upgraded ALB instances no longer differentiate between IP modes. Instead, they globally auto-scale IP addresses for providing load balancing services. The ALB instances you created before this date and time are not affected.</p>
+         * <p>Starting from &lt;props=&quot;china&quot;&gt;00:00:00 on February 25, 2025 (UTC+8)&lt;props=&quot;intl&quot;&gt;00:00:00 on February 25, 2025 (UTC+8), when you create an instance by calling this operation, an <a href="https://help.aliyun.com/document_detail/2864070.html">upgraded ALB instance</a> is created regardless of the mode you specify. The IP address allocation mode is no longer distinguished, and the allocated IP addresses are automatically scalable. Existing ALB instances created before the upgrade are not affected.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>Dynamic</p>
+         * <p>Fixed</p>
          */
         public Builder addressAllocatedMode(String addressAllocatedMode) {
             this.putQueryParameter("AddressAllocatedMode", addressAllocatedMode);
@@ -279,10 +281,10 @@ public class CreateLoadBalancerRequest extends Request {
         }
 
         /**
-         * <p>The protocol version. Valid values:</p>
+         * <p>The IP version. Valid values:</p>
          * <ul>
-         * <li><strong>IPv4:</strong> IPv4.</li>
-         * <li><strong>DualStack:</strong> dual stack.</li>
+         * <li><strong>IPv4</strong>: IPv4.</li>
+         * <li><strong>DualStack</strong>: dual-stack.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -295,10 +297,12 @@ public class CreateLoadBalancerRequest extends Request {
         }
 
         /**
-         * <p>The type of the address of the ALB instance. Valid values:</p>
+         * <p>The network type of the Application Load Balancing (ALB) instance. Valid values:</p>
          * <ul>
-         * <li><strong>Internet:</strong> The ALB instance uses a public IP address. The domain name of the ALB instance is resolved to the public IP address. In this case, the ALB instance can be accessed over the Internet.</li>
-         * <li><strong>Intranet:</strong> The ALB instance uses a private IP address. The domain name of the ALB instance is resolved to the private IP address. In this case, the ALB instance can be accessed over the VPC in which the ALB instance is deployed.</li>
+         * <li><p><strong>Internet</strong>: The Application Load Balancing (ALB) instance uses a public IP address. The DNS domain name is parsed to the public IP address. Therefore, the instance can be accessed in the Internet environment.</p>
+         * </li>
+         * <li><p><strong>Intranet</strong>: The Application Load Balancing (ALB) instance uses only a private IP address. The DNS domain name is parsed to the private IP address. Therefore, the instance can be accessed only in the internal network environment of the VPC where the Application Load Balancing (ALB) instance is deployed.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -313,9 +317,9 @@ public class CreateLoadBalancerRequest extends Request {
 
         /**
          * <p>The client token that is used to ensure the idempotence of the request.</p>
-         * <p>You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can only contain ASCII characters.</p>
+         * <p>You can generate a parameter value from your client to ensure that the value is unique among different requests. The ClientToken parameter supports only ASCII characters.</p>
          * <blockquote>
-         * <p> If you do not specify this parameter, the system uses the value of <strong>RequestId</strong> as the value of <strong>ClientToken</strong>. The value of the <strong>RequestId</strong> parameter may be different for each API request.</p>
+         * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request is different.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -328,10 +332,10 @@ public class CreateLoadBalancerRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable deletion protection. Default value: false. Valid values:</p>
+         * <p>Specifies whether to enable deletion protection. Valid values:</p>
          * <ul>
-         * <li><strong>true:</strong> enables deletion protection.</li>
-         * <li><strong>false:</strong> disables deletion protection.</li>
+         * <li><strong>true</strong>: enables deletion protection.</li>
+         * <li><strong>false</strong> (default): disables deletion protection.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -344,10 +348,12 @@ public class CreateLoadBalancerRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to perform a dry run. Default value: false. Valid values:</p>
+         * <p>Specifies whether to perform only a dry run on the request. Valid values:</p>
          * <ul>
-         * <li><strong>true:</strong> performs a dry run. The system checks the required parameters, request format, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
-         * <li><strong>false:</strong> performs a dry run and sends the request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
+         * <li><p><strong>true</strong>: performs a dry run without creating the Application Load Balancing (ALB) instance. The system checks whether required parameters are specified, the request format, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</p>
+         * </li>
+         * <li><p><strong>false</strong> (default): performs a dry run and sends a normal request. If the request passes the dry run, an HTTP 2xx status code is returned and the operation is performed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -360,7 +366,7 @@ public class CreateLoadBalancerRequest extends Request {
         }
 
         /**
-         * <p>The billing method of the ALB instance.</p>
+         * <p>The billing configuration of the Application Load Balancing (ALB) instance.</p>
          * <p>This parameter is required.</p>
          */
         public Builder loadBalancerBillingConfig(LoadBalancerBillingConfig loadBalancerBillingConfig) {
@@ -370,11 +376,14 @@ public class CreateLoadBalancerRequest extends Request {
         }
 
         /**
-         * <p>The edition of the ALB instance. The features and billing rules vary based on the edition of the ALB instance. Valid values:</p>
+         * <p>The edition of the Application Load Balancing (ALB) instance. Different editions have different feature limits and billing policy. Valid values:</p>
          * <ul>
-         * <li><strong>Basic:</strong> basic.</li>
-         * <li><strong>Standard:</strong> standard.</li>
-         * <li><strong>StandardWithWaf:</strong> WAF-enabled.</li>
+         * <li><p><strong>Basic</strong>: Basic Edition.</p>
+         * </li>
+         * <li><p><strong>Standard</strong>: Standard Edition.</p>
+         * </li>
+         * <li><p><strong>StandardWithWaf</strong>: WAF-enhanced Edition.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -388,8 +397,8 @@ public class CreateLoadBalancerRequest extends Request {
         }
 
         /**
-         * <p>The name of the ALB instance.</p>
-         * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter.</p>
+         * <p>The name of the Application Load Balancing (ALB) instance.</p>
+         * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), hyphens (-), and spaces. It must start with a letter or digit.</p>
          * 
          * <strong>example:</strong>
          * <p>alb1</p>
@@ -401,7 +410,7 @@ public class CreateLoadBalancerRequest extends Request {
         }
 
         /**
-         * <p>The configuration read-only mode settings.</p>
+         * <p>The modification protection configuration.</p>
          */
         public Builder modificationProtectionConfig(ModificationProtectionConfig modificationProtectionConfig) {
             this.putQueryParameter("ModificationProtectionConfig", modificationProtectionConfig);
@@ -422,7 +431,7 @@ public class CreateLoadBalancerRequest extends Request {
         }
 
         /**
-         * SecurityGroupIds.
+         * <p>The IDs of the security groups.</p>
          */
         public Builder securityGroupIds(java.util.List<SecurityGroupIds> securityGroupIds) {
             this.putQueryParameter("SecurityGroupIds", securityGroupIds);
@@ -440,7 +449,7 @@ public class CreateLoadBalancerRequest extends Request {
         }
 
         /**
-         * <p>The ID of the virtual private cloud (VPC) in which you want to create the ALB instance.</p>
+         * <p>The ID of the virtual private cloud (VPC) where the Application Load Balancing (ALB) instance is deployed.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -453,7 +462,7 @@ public class CreateLoadBalancerRequest extends Request {
         }
 
         /**
-         * <p>The mappings between zones an vSwitches. You can specify at most 10 zones. If the selected region supports two or more zones, select at least two zones to ensure the high availability of your service.</p>
+         * <p>The list of zone and vSwitch mappings. You can specify up to 10 zones. If the current region supports two or more zones, you must specify at least two zones.</p>
          * <p>This parameter is required.</p>
          */
         public Builder zoneMappings(java.util.List<ZoneMappings> zoneMappings) {
@@ -606,14 +615,14 @@ public class CreateLoadBalancerRequest extends Request {
             } 
 
             /**
-             * <p>The reason for enabling the configuration read-only mode.</p>
-             * <p>The reason must be 2 to 128 characters in length, can contain letters, digits, periods (.), underscores (_), and hyphens (-), and must start with a letter.</p>
+             * <p>The reason for enabling modification protection.</p>
+             * <p>The value must be 2 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). It must start with a letter or a Chinese character.</p>
              * <blockquote>
-             * <p> This parameter takes effect only when <strong>Status</strong> is set to <strong>ConsoleProtection</strong>.</p>
+             * <p>This parameter is valid only when <strong>Status</strong> is set to <strong>ConsoleProtection</strong>.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
-             * <p>test</p>
+             * <p>Managed Instance</p>
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -621,13 +630,15 @@ public class CreateLoadBalancerRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to enable the configuration read-only mode. Valid values:</p>
+             * <p>The modification protection status of the Application Load Balancing (ALB) instance. Valid values:</p>
              * <ul>
-             * <li><strong>NonProtection</strong>: Disables the configuration read-only mode. In this case, the value of the <strong>Reason</strong> parameter that you specify does not take effect. If you specify <strong>Reason</strong>, the value of the parameter is cleared.</li>
-             * <li><strong>ConsoleProtection</strong>: Enables the configuration read-only mode. In this case, the value of the <strong>Reason</strong> parameter that you specify takes effect.****</li>
+             * <li><p><strong>NonProtection</strong>: disables modification protection. If <strong>Reason</strong> is specified, it is forcibly cleared.</p>
+             * </li>
+             * <li><p><strong>ConsoleProtection</strong>: enables modification protection in the console. If <strong>Reason</strong> is specified, it takes effect.</p>
+             * </li>
              * </ul>
              * <blockquote>
-             * <p> If the parameter is set to <strong>ConsoleProtection</strong>, the configuration read-only mode is enabled. You cannot modify the configurations of the ALB instance in the ALB console. However, you can call API operations to modify the configurations of the ALB instance.</p>
+             * <p>When this parameter is set to <strong>ConsoleProtection</strong>, users cannot modify the instance configurations in the load balancing console, but can invoke API operations to modify the instance configurations.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -685,7 +696,10 @@ public class CreateLoadBalancerRequest extends Request {
             } 
 
             /**
-             * SecurityGroupId.
+             * <p>The ID of the security group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-gw82chzr7ru23iwbn9mu</p>
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -752,7 +766,7 @@ public class CreateLoadBalancerRequest extends Request {
             } 
 
             /**
-             * <p>The tag key can be up to 128 characters in length, and cannot start with acs: or aliyun. It cannot contain http:// or https://.</p>
+             * <p>The tag key. It can be up to 128 characters in length, and cannot start with aliyun or acs:, or contain http:// or https://.</p>
              * 
              * <strong>example:</strong>
              * <p>env</p>
@@ -763,7 +777,7 @@ public class CreateLoadBalancerRequest extends Request {
             }
 
             /**
-             * <p>The tag value can be up to 128 characters in length, and cannot start with acs: or aliyun. It cannot contain http:// or https://.</p>
+             * <p>The tag key. It can be up to 128 characters in length, and cannot start with aliyun or acs:, or contain http:// or https://.</p>
              * 
              * <strong>example:</strong>
              * <p>product</p>
@@ -874,7 +888,7 @@ public class CreateLoadBalancerRequest extends Request {
             } 
 
             /**
-             * <p>The ID of the EIP to be associated with the Internet-facing ALB instance.</p>
+             * <p>The instance ID of the elastic IP address (EIP) that is attached to the Internet-facing instance.</p>
              * 
              * <strong>example:</strong>
              * <p>eip-bp1aedxso6u80u0qf****</p>
@@ -885,13 +899,15 @@ public class CreateLoadBalancerRequest extends Request {
             }
 
             /**
-             * <p>The type of EIP. Valid values:</p>
+             * <p>The type of the EIP. Valid values:</p>
              * <ul>
-             * <li><strong>Common</strong>: an EIP.</li>
-             * <li><strong>Anycast</strong>: an Anycast EIP.</li>
+             * <li><p>Common (default): EIP.</p>
+             * </li>
+             * <li><p>Anycast: Anycast EIP.</p>
+             * </li>
              * </ul>
              * <blockquote>
-             * <p> For more information about the regions in which ALB supports Anycast EIPs, see <a href="https://help.aliyun.com/document_detail/460727.html">Limits</a>.</p>
+             * <p>For more information about the regions where ALB supports Anycast EIPs, see <a href="https://help.aliyun.com/document_detail/460727.html">Limits</a>.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -903,7 +919,7 @@ public class CreateLoadBalancerRequest extends Request {
             }
 
             /**
-             * <p>The private IPv4 address.</p>
+             * <p>The IPv4 private IP address.</p>
              * 
              * <strong>example:</strong>
              * <p>192.168.10.1</p>
@@ -914,7 +930,7 @@ public class CreateLoadBalancerRequest extends Request {
             }
 
             /**
-             * <p>The vSwitch in the zone. You can specify only one vSwitch (subnet) in each zone. You can specify at most 10 zones. If the region supports two or more zones, specify at least two zones.</p>
+             * <p>The ID of the vSwitch in the zone. You can use only one vSwitch and one subnet in each zone. You can add up to 10 zones. If the current region supports two or more zones, you must add at least two zones.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -926,7 +942,8 @@ public class CreateLoadBalancerRequest extends Request {
             }
 
             /**
-             * <p>The zone ID of the cluster. You can specify at most 10 zones. If the region supports two or more zones, specify at least two zones. You can call the <a href="https://help.aliyun.com/document_detail/36064.html">DescribeZones</a> operation to query the most recent zone list.</p>
+             * <p>The zone ID. You can add up to 10 zones. If the current region supports two or more zones, you must add at least two zones.
+             * You can call the <a href="https://help.aliyun.com/document_detail/36064.html">DescribeZones</a> operation to query the information about the zones.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

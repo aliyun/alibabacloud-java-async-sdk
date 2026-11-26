@@ -103,7 +103,7 @@ public class AssociateAdditionalCertificatesWithListenerRequest extends Request 
         } 
 
         /**
-         * <p>The extended validation certificates that you want to add to the listener.</p>
+         * <p>The list of additional certificates.</p>
          * <p>This parameter is required.</p>
          */
         public Builder certificates(java.util.List<Certificates> certificates) {
@@ -114,13 +114,13 @@ public class AssociateAdditionalCertificatesWithListenerRequest extends Request 
 
         /**
          * <p>The client token that is used to ensure the idempotence of the request.</p>
-         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+         * <p>You can use the client to generate the value, but you must make sure that the value is unique among different requests. The client token can contain only ASCII characters.</p>
          * <blockquote>
-         * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+         * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request is unique.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>5A2CFF0E-5718-45B5-9D4D-70B3FF3898</p>
+         * <p>5A2CFF0E-5718-45B5-9D4D-70B3F******</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -129,10 +129,12 @@ public class AssociateAdditionalCertificatesWithListenerRequest extends Request 
         }
 
         /**
-         * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+         * <p>Specifies whether to only precheck the request. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
-         * <li><strong>false</strong> (default): performs a dry run and performs the actual request. If the request passes the dry run, a <code>2xx HTTP</code> status code is returned and the operation is performed.</li>
+         * <li><p><strong>true</strong>: prechecks the request without associating the additional certificates with the HTTPS or QUIC listener. The system checks whether the required parameters are specified, the request format is valid, and the service limits are met. If the request fails the precheck, the system returns an error. If the request passes the precheck, the system returns the <code>DryRunOperation</code> error code.</p>
+         * </li>
+         * <li><p><strong>false</strong> (default): sends the request. If the request passes the precheck, the system returns an HTTP <code>2xx</code> status code and performs the operation.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -145,11 +147,12 @@ public class AssociateAdditionalCertificatesWithListenerRequest extends Request 
         }
 
         /**
-         * <p>The listener ID. This parameter is supported only by HTTPS and QUIC listeners.</p>
+         * <p>The ID of the listener.</p>
+         * <p>This parameter is valid only for HTTPS and QUIC listeners.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>lsr-bp1bpn0kn908w4nbw****</p>
+         * <p>lsn-5qnirjhpt******</p>
          */
         public Builder listenerId(String listenerId) {
             this.putQueryParameter("ListenerId", listenerId);
@@ -206,10 +209,13 @@ public class AssociateAdditionalCertificatesWithListenerRequest extends Request 
 
             /**
              * <p>The ID of the certificate. Only server certificates are supported.</p>
+             * <blockquote>
+             * <p>The certificate ID is a globally unique ID that ends with a region ID, such as 1011****-cn-hangzhou.</p>
+             * </blockquote>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
-             * <p>cert-123</p>
+             * <p>1011****-cn-hangzhou</p>
              */
             public Builder certificateId(String certificateId) {
                 this.certificateId = certificateId;

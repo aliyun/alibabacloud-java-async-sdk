@@ -158,7 +158,7 @@ public class ListServerGroupsRequest extends Request {
         } 
 
         /**
-         * <p>The number of entries per page. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
+         * <p>The maximum number of entries to return for a single request. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -170,10 +170,10 @@ public class ListServerGroupsRequest extends Request {
         }
 
         /**
-         * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
+         * <p>The token used to retrieve the next page of results. Valid values:</p>
          * <ul>
-         * <li>You do not need to specify this parameter for the first request.</li>
-         * <li>You must specify the token that is obtained from the previous query as the value of <strong>NextToken</strong>.</li>
+         * <li>For the first request or when no subsequent request is required, leave this parameter empty.</li>
+         * <li>For a subsequent request, set this parameter to the <strong>NextToken</strong> value returned from the previous API call.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -186,7 +186,7 @@ public class ListServerGroupsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group to which the server group belongs.</p>
+         * <p>The ID of the resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-atstuj3rtop****</p>
@@ -198,7 +198,7 @@ public class ListServerGroupsRequest extends Request {
         }
 
         /**
-         * <p>The server group IDs.</p>
+         * <p>The list of server group IDs.</p>
          */
         public Builder serverGroupIds(java.util.List<String> serverGroupIds) {
             this.putQueryParameter("ServerGroupIds", serverGroupIds);
@@ -207,7 +207,7 @@ public class ListServerGroupsRequest extends Request {
         }
 
         /**
-         * <p>The names of the server groups to be queried. You can specify at most 10 server group names.</p>
+         * <p>The list of server group names. You can specify up to 10 server group names.</p>
          */
         public Builder serverGroupNames(java.util.List<String> serverGroupNames) {
             this.putQueryParameter("ServerGroupNames", serverGroupNames);
@@ -218,9 +218,14 @@ public class ListServerGroupsRequest extends Request {
         /**
          * <p>The server group type. Valid values:</p>
          * <ul>
-         * <li><strong>Instance</strong>: instances, including ECS instances, ENIs, and elastic container instances.</li>
-         * <li><strong>Ip</strong>: IP addresses.</li>
-         * <li><strong>Fc</strong>: Function Compute</li>
+         * <li><p><strong>Instance</strong>: the server type, which includes ECS, ENI, and ECI instances.</p>
+         * </li>
+         * <li><p><strong>Ip</strong>: the IP address type.</p>
+         * </li>
+         * <li><p><strong>Fc</strong>: the Function Compute type.</p>
+         * </li>
+         * <li><p>If you leave this parameter empty, all types are queried.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -233,7 +238,7 @@ public class ListServerGroupsRequest extends Request {
         }
 
         /**
-         * <p>The tags that are added to the server group. You can specify up to 10 tags in each call.</p>
+         * <p>The list of tags that are added to the server group. You can specify up to 10 tags in a single request.</p>
          * 
          * <strong>example:</strong>
          * <p>Instance</p>
@@ -245,7 +250,7 @@ public class ListServerGroupsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the virtual private cloud (VPC).</p>
+         * <p>The VPC-connected instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-bp15zckdt37pq72zv****</p>
@@ -317,7 +322,7 @@ public class ListServerGroupsRequest extends Request {
 
             /**
              * <p>The tag key. You can specify up to 10 tag keys.</p>
-             * <p>The tag key can be up to 64 characters in length and cannot contain <code>http://</code> or <code>https://</code>. It cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
+             * <p>The key can be up to 64 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>Test</p>
@@ -329,7 +334,7 @@ public class ListServerGroupsRequest extends Request {
 
             /**
              * <p>The tag value. You can specify up to 10 tag values.</p>
-             * <p>The tag value can be up to 128 characters in length, and cannot contain <code>http://</code> or <code>https://</code>. It cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
+             * <p>The value can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>Test</p>

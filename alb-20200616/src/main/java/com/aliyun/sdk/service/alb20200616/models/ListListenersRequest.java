@@ -129,7 +129,7 @@ public class ListListenersRequest extends Request {
         } 
 
         /**
-         * <p>The listener IDs. You can specify at most 20 listener IDs.</p>
+         * <p>The listener instance IDs. You can specify up to 20 listener instance IDs.</p>
          */
         public Builder listenerIds(java.util.List<String> listenerIds) {
             this.putQueryParameter("ListenerIds", listenerIds);
@@ -138,11 +138,11 @@ public class ListListenersRequest extends Request {
         }
 
         /**
-         * <p>The listener protocol. Valid values:</p>
+         * <p>The listener protocol used for filtering. Valid values:</p>
          * <ul>
-         * <li><strong>HTTP</strong></li>
-         * <li><strong>HTTPS</strong></li>
-         * <li><strong>QUIC</strong></li>
+         * <li><strong>HTTP</strong>: The protocol type is HTTP.</li>
+         * <li><strong>HTTPS</strong>: The protocol type is HTTPS.</li>
+         * <li><strong>QUIC</strong>: The protocol type is QUIC.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -155,7 +155,7 @@ public class ListListenersRequest extends Request {
         }
 
         /**
-         * <p>The ALB instance ID. You can specify at most 20 instance IDs.</p>
+         * <p>The Application Load Balancing instance IDs. You can specify up to 20 instance IDs.</p>
          */
         public Builder loadBalancerIds(java.util.List<String> loadBalancerIds) {
             this.putQueryParameter("LoadBalancerIds", loadBalancerIds);
@@ -164,7 +164,7 @@ public class ListListenersRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries to return. This parameter is optional. Valid values: <strong>1 to 100</strong>. If you do not specify this parameter, the default value <strong>20</strong> is used.</p>
+         * <p>The maximum number of entries to return in a single call. This parameter is optional. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -176,14 +176,14 @@ public class ListListenersRequest extends Request {
         }
 
         /**
-         * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
+         * <p>The token that indicates whether a subsequent query is available. Valid values:</p>
          * <ul>
-         * <li>You do not need to specify this parameter for the first request.</li>
-         * <li>If a value is returned for NextToken, you must specify the token that is obtained from the previous query as the value of <strong>NextToken</strong>.</li>
+         * <li>Leave this parameter empty for the first query or when no subsequent query is required.</li>
+         * <li>For a subsequent query, set this parameter to the <strong>NextToken</strong> value returned by the previous API call.</li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
+         * <p>FFmyTO70tTpLG6I4FmYAXGKPd****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -260,7 +260,7 @@ public class ListListenersRequest extends Request {
             } 
 
             /**
-             * <p>The tag key. The tag key can be up to 128 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>The tag key. The key can be up to 128 characters in length. It cannot start with aliyun or acs:, and cannot contain http:// or https://.</p>
              * 
              * <strong>example:</strong>
              * <p>env</p>
@@ -271,7 +271,7 @@ public class ListListenersRequest extends Request {
             }
 
             /**
-             * <p>The tag value. The tag value can be up to 128 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>The tag value. The value can be up to 128 characters in length. It cannot start with aliyun or acs:, and cannot contain http:// or https://.</p>
              * 
              * <strong>example:</strong>
              * <p>product</p>

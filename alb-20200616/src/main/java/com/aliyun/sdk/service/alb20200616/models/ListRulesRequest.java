@@ -143,13 +143,15 @@ public class ListRulesRequest extends Request {
         } 
 
         /**
-         * <p>The direction to which the forwarding rule is applied. Valid values:</p>
+         * <p>The direction of the forwarding rule. Valid values:</p>
          * <ul>
-         * <li><strong>Request</strong> (default): The forwarding rule is applied to the client requests received by ALB.</li>
-         * <li><strong>Response</strong>: The forwarding rule is applied to the responses returned by backend servers.</li>
+         * <li><p><strong>Request</strong> (default): request type. Performs condition matching and corresponding processing on packets sent from the client to ALB.</p>
+         * </li>
+         * <li><p><strong>Response</strong>: response type. Performs condition matching and corresponding processing on packets returned from backend server groups to ALB.</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p>You cannot set this parameter to Response if you use basic ALB instances.</p>
+         * <p>ALB Basic Edition instances do not support the Response type.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -162,7 +164,7 @@ public class ListRulesRequest extends Request {
         }
 
         /**
-         * <p>The listener IDs.</p>
+         * <p>The list of listener IDs. You can query up to 20 listeners at a time.</p>
          */
         public Builder listenerIds(java.util.List<String> listenerIds) {
             this.putQueryParameter("ListenerIds", listenerIds);
@@ -171,7 +173,7 @@ public class ListRulesRequest extends Request {
         }
 
         /**
-         * <p>The Application Load Balancer (ALB) instance IDs.</p>
+         * <p>The list of load balancing instance IDs. You can query up to 20 instances at a time.</p>
          */
         public Builder loadBalancerIds(java.util.List<String> loadBalancerIds) {
             this.putQueryParameter("LoadBalancerIds", loadBalancerIds);
@@ -180,9 +182,9 @@ public class ListRulesRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries to return.</p>
+         * <p>The maximum number of data records to read in this request.</p>
          * <p>Valid values: <strong>1 to 100</strong>.</p>
-         * <p>Default value: <strong>20</strong>. If you do not specify this parameter, the default value is used.</p>
+         * <p>Default value: <strong>20</strong>, which indicates that no value is specified.</p>
          * <blockquote>
          * <p>This parameter is optional.</p>
          * </blockquote>
@@ -197,7 +199,13 @@ public class ListRulesRequest extends Request {
         }
 
         /**
-         * <p>The starting point of the current query. If you do not specify this parameter, the query starts from the beginning.</p>
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
+         * <ul>
+         * <li><p>You do not need to specify this parameter for the first request or if no next query exists.</p>
+         * </li>
+         * <li><p>If a next query exists, set the value to the <strong>NextToken</strong> value returned in the previous API call.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
@@ -209,7 +217,7 @@ public class ListRulesRequest extends Request {
         }
 
         /**
-         * <p>The forwarding rules.</p>
+         * <p>The list of forwarding rules. You can query up to 20 forwarding rules at a time.</p>
          */
         public Builder ruleIds(java.util.List<String> ruleIds) {
             this.putQueryParameter("RuleIds", ruleIds);
@@ -218,7 +226,7 @@ public class ListRulesRequest extends Request {
         }
 
         /**
-         * <p>The tag.</p>
+         * <p>The tags.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -286,7 +294,7 @@ public class ListRulesRequest extends Request {
             } 
 
             /**
-             * <p>The tag key. The tag key can be up to 128 characters in length. It cannot start with aliyun or acs: and cannot contain http:// or https://.</p>
+             * <p>The tag key. The tag key can be up to 128 characters in length and cannot start with aliyun or acs:. It cannot contain http:// or https://.</p>
              * 
              * <strong>example:</strong>
              * <p>env</p>
@@ -297,7 +305,7 @@ public class ListRulesRequest extends Request {
             }
 
             /**
-             * <p>The tag value. The tag value can be up to 128 characters in length. It cannot start with aliyun or acs: and cannot contain http:// or https://.</p>
+             * <p>The tag value. The tag value can be up to 128 characters in length and cannot start with aliyun or acs:. It cannot contain http:// or https://.</p>
              * 
              * <strong>example:</strong>
              * <p>product</p>

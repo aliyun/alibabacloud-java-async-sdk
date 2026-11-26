@@ -177,13 +177,13 @@ public class CreateRuleRequest extends Request {
 
         /**
          * <p>The client token that is used to ensure the idempotence of the request.</p>
-         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+         * <p>You can use the client to generate the value, but you must make sure that the value is unique among different requests. The client token can contain only ASCII characters.</p>
          * <blockquote>
-         * <p>If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+         * <p>If you do not set this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request is different.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>5A2CFF0E-5718-45B5-9D4D-70B3FF3898</p>
+         * <p>5A2CFF0E-5718-45B5-9D4D-70B******</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -192,13 +192,15 @@ public class CreateRuleRequest extends Request {
         }
 
         /**
-         * <p>The direction to which the forwarding rule is applied. Valid values:</p>
+         * <p>The direction of the forwarding rule. Valid values:</p>
          * <ul>
-         * <li><strong>Request</strong> (default): The forwarding rule is applied to the requests received by ALB.</li>
-         * <li><strong>Response</strong>: The forwarding rule is applied to the responses returned by backend servers.</li>
+         * <li><p><strong>Request</strong> (default): matches and processes packets sent from clients to ALB.</p>
+         * </li>
+         * <li><p><strong>Response</strong>: matches and processes packets returned from backend server groups to ALB.</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p>Basic ALB instances do not support the <strong>Response</strong> value.</p>
+         * <p>ALB instances of Basic Edition do not support the <strong>Response</strong> type.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -211,10 +213,12 @@ public class CreateRuleRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+         * <p>Specifies whether to perform only a dry run. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: performs a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
-         * <li><strong>false</strong> (default): performs a dry run and performs the actual request. If the request passes the dry run, a <code>2xx HTTP</code> status code is returned and the operation is performed.</li>
+         * <li><p><strong>true</strong>: performs only a dry run and does not create the forwarding rule. The system checks whether the required parameters are set, and validates the request format and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</p>
+         * </li>
+         * <li><p><strong>false</strong> (default): performs a dry run and sends the request. If the request passes the dry run, an <code>HTTP 2xx</code> status code is returned and the operation is performed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -227,11 +231,11 @@ public class CreateRuleRequest extends Request {
         }
 
         /**
-         * <p>The listener ID of the ALB instance.</p>
+         * <p>The ID of the listener on the Application Load Balancing (ALB) instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>lsr-bp1bpn0kn908w4nbw****</p>
+         * <p>lsn-l16uo9y******</p>
          */
         public Builder listenerId(String listenerId) {
             this.putQueryParameter("ListenerId", listenerId);
@@ -240,9 +244,9 @@ public class CreateRuleRequest extends Request {
         }
 
         /**
-         * <p>The priority of the forwarding rule. Valid values: <strong>1 to 10000</strong>. A smaller value indicates a higher priority.</p>
+         * <p>The priority of the rule. Valid values: <strong>1</strong> to <strong>10000</strong>. A smaller value indicates a higher priority.</p>
          * <blockquote>
-         * <p>The priorities of the forwarding rules created for the same listener must be unique.</p>
+         * <p>The priority of each rule within the same listener must be unique.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -256,7 +260,7 @@ public class CreateRuleRequest extends Request {
         }
 
         /**
-         * <p>The actions of the forwarding rule.</p>
+         * <p>The list of forwarding rule actions.</p>
          * <p>This parameter is required.</p>
          */
         public Builder ruleActions(java.util.List<RuleActions> ruleActions) {
@@ -266,7 +270,7 @@ public class CreateRuleRequest extends Request {
         }
 
         /**
-         * <p>The match conditions of the forwarding rule.</p>
+         * <p>The list of forwarding rule conditions.</p>
          * <p>This parameter is required.</p>
          */
         public Builder ruleConditions(java.util.List<RuleConditions> ruleConditions) {
@@ -276,10 +280,10 @@ public class CreateRuleRequest extends Request {
         }
 
         /**
-         * <p>The name of the forwarding rule.</p>
+         * <p>The forwarding rule name. </p>
          * <ul>
-         * <li>The name must be 2 to 128 characters in length.</li>
-         * <li>It can contain letters, digits, periods (.), underscores (_), and hyphens (-). It must start with a letter.</li>
+         * <li>Must be 2 to 128 characters in length.</li>
+         * <li>Must start with a letter, Chinese character, or digit. Can contain digits, periods (.), underscores (_), hyphens (-), and spaces.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -293,7 +297,7 @@ public class CreateRuleRequest extends Request {
         }
 
         /**
-         * <p>The tags.</p>
+         * <p>The list of tags.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -413,10 +417,10 @@ public class CreateRuleRequest extends Request {
             } 
 
             /**
-             * <p>Specifies whether credentials can be carried in CORS requests. Valid values:</p>
+             * <p>Specifies whether to allow credentials. Valid values:</p>
              * <ul>
-             * <li><strong>on</strong></li>
-             * <li><strong>off</strong></li>
+             * <li><strong>on</strong>: yes.</li>
+             * <li><strong>off</strong>: no.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -428,7 +432,7 @@ public class CreateRuleRequest extends Request {
             }
 
             /**
-             * <p>The trusted headers of CORS requests.</p>
+             * <p>The list of allowed cross-origin headers.</p>
              */
             public Builder allowHeaders(java.util.List<String> allowHeaders) {
                 this.allowHeaders = allowHeaders;
@@ -436,7 +440,7 @@ public class CreateRuleRequest extends Request {
             }
 
             /**
-             * <p>The allowed HTTP methods of CORS requests.</p>
+             * <p>The allowed HTTP methods for cross-origin requests.</p>
              */
             public Builder allowMethods(java.util.List<String> allowMethods) {
                 this.allowMethods = allowMethods;
@@ -444,10 +448,10 @@ public class CreateRuleRequest extends Request {
             }
 
             /**
-             * <p>The trusted origins of CORS requests. You can specify one or more values, or only the wildcard character (<code>*</code>).</p>
+             * <p>The list of allowed origins. You can specify a single asterisk (<code>*</code>) or one or more values.</p>
              * <ul>
-             * <li>Each value must start with <code>http://</code> or <code>https://</code>, which must be followed by a valid domain name, including top-level domain names. Example: <code>http://*.test.abc.example.com</code>.</li>
-             * <li>You can specify a port in each value or leave the port empty. Valid values: <strong>1</strong> to <strong>65535</strong>.</li>
+             * <li>Each value must start with <code>http://</code> or <code>https://</code>, followed by a valid domain name or a first-level wildcard domain name (example: <code>http://*.test.abc.example.com</code>).</li>
+             * <li>You can omit the port or specify a port in the range of <strong>1</strong> to <strong>65535</strong>.</li>
              * </ul>
              */
             public Builder allowOrigin(java.util.List<String> allowOrigin) {
@@ -456,7 +460,7 @@ public class CreateRuleRequest extends Request {
             }
 
             /**
-             * <p>The headers that can be exposed.</p>
+             * <p>The list of exposed headers.</p>
              */
             public Builder exposeHeaders(java.util.List<String> exposeHeaders) {
                 this.exposeHeaders = exposeHeaders;
@@ -464,7 +468,7 @@ public class CreateRuleRequest extends Request {
             }
 
             /**
-             * <p>The maximum cache time of dry run requests in the browser. Unit: seconds.</p>
+             * <p>The maximum cache time for preflight requests in the browser. Unit: seconds.</p>
              * <p>Valid values: <strong>-1</strong> to <strong>172800</strong>.</p>
              * 
              * <strong>example:</strong>
@@ -548,7 +552,7 @@ public class CreateRuleRequest extends Request {
             } 
 
             /**
-             * <p>The content of the custom response. The content cannot exceed 1 KB in size, and can contain only ASCII characters.</p>
+             * <p>The fixed content to return. The maximum size is 1 KB. Only ASCII characters are supported.</p>
              * 
              * <strong>example:</strong>
              * <p>dssacav</p>
@@ -559,8 +563,7 @@ public class CreateRuleRequest extends Request {
             }
 
             /**
-             * <p>The format of the response.</p>
-             * <p>Valid values: <strong>text/plain</strong>, <strong>text/css</strong>, <strong>text/html</strong>, <strong>application/javascript</strong>, and <strong>application/json</strong>.</p>
+             * <p>The format of the fixed content to return. Valid values: <strong>text/plain</strong>, <strong>text/css</strong>, <strong>text/html</strong>, <strong>application/javascript</strong>, and <strong>application/json</strong>.</p>
              * 
              * <strong>example:</strong>
              * <p>text/plain</p>
@@ -571,10 +574,10 @@ public class CreateRuleRequest extends Request {
             }
 
             /**
-             * <p>The HTTP status code in responses. Valid values: <strong>2xx</strong>, <strong>4xx</strong>, <strong>5xx</strong>. The value must be a numeric string. <strong>x</strong> must be a digit.</p>
+             * <p>The HTTP status code to return. Only numeric strings in the format of <strong>2xx</strong>, <strong>4xx</strong>, or <strong>5xx</strong> are supported, where <strong>x</strong> represents any digit.</p>
              * 
              * <strong>example:</strong>
-             * <p>HTTP_200</p>
+             * <p>200</p>
              */
             public Builder httpCode(String httpCode) {
                 this.httpCode = httpCode;
@@ -643,8 +646,8 @@ public class CreateRuleRequest extends Request {
             /**
              * <p>Specifies whether to enable session persistence. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong> (default)</li>
+             * <li><strong>true</strong>: enables session persistence.</li>
+             * <li><strong>false</strong> (default): disables session persistence.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -656,7 +659,7 @@ public class CreateRuleRequest extends Request {
             }
 
             /**
-             * <p>The timeout period of sessions. Unit: seconds. Valid values: <strong>1</strong> to <strong>86400</strong>. Default value: <strong>1000</strong>.</p>
+             * <p>The timeout period. Unit: seconds. Valid values: <strong>1</strong> to <strong>86400</strong>. Default value: <strong>1000</strong>.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -726,7 +729,7 @@ public class CreateRuleRequest extends Request {
             } 
 
             /**
-             * <p>The server group to which requests are forwarded.</p>
+             * <p>The destination server group to which requests are forwarded.</p>
              * 
              * <strong>example:</strong>
              * <p>sgp-k86c1ov501id6p****</p>
@@ -737,10 +740,10 @@ public class CreateRuleRequest extends Request {
             }
 
             /**
-             * <p>The weight of the server group. A larger value specifies a higher weight. A server group with a higher weight receives more requests. Valid values: <strong>0</strong> to <strong>100</strong>.</p>
+             * <p>The weight. A greater value indicates a higher weight, which means that more requests are forwarded to the server group. Valid values: <strong>0</strong> to <strong>100</strong>.</p>
              * <ul>
-             * <li>If the number of destination server groups is 1, the default weight of the server group is <strong>100</strong>, unless you specify a weight.</li>
-             * <li>If the number of destination server groups is larger than 1, you must specify a weight.</li>
+             * <li>If only one destination server group is specified and the weight is not specified, the default value is <strong>100</strong>.</li>
+             * <li>If more than one destination server group is specified, you must specify the weight for each server group.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -811,7 +814,7 @@ public class CreateRuleRequest extends Request {
             } 
 
             /**
-             * <p>The configuration of session persistence for the server groups.</p>
+             * <p>The session persistence configuration across server groups.</p>
              */
             public Builder serverGroupStickySession(ServerGroupStickySession serverGroupStickySession) {
                 this.serverGroupStickySession = serverGroupStickySession;
@@ -819,7 +822,7 @@ public class CreateRuleRequest extends Request {
             }
 
             /**
-             * <p>The server groups to which requests are forwarded. You can specify at most five server groups for each forwarding rule.</p>
+             * <p>The list of destination server groups to which requests are forwarded. You can add up to five destination server groups in a forwarding rule.</p>
              */
             public Builder serverGroupTuples(java.util.List<ServerGroupTuples> serverGroupTuples) {
                 this.serverGroupTuples = serverGroupTuples;
@@ -899,9 +902,9 @@ public class CreateRuleRequest extends Request {
             } 
 
             /**
-             * <p>The key of the header. The header key must be 1 to 40 characters in length, and can contain letters, digits, underscores (_), and hyphens (-). The header keys specified by <strong>InsertHeaderConfig</strong> must be unique.</p>
+             * <p>The name of the header to insert. The name must be 1 to 40 characters in length and can contain letters, digits, underscores (_), and hyphens (-). Header names in <strong>InsertHeaderConfig</strong> must be unique.</p>
              * <blockquote>
-             * <p> You cannot specify the following header keys: <code>slb-id</code>, <code>slb-ip</code>, <code>x-forwarded-for</code>, <code>x-forwarded-proto</code>, <code>x-forwarded-eip</code>, <code>x-forwarded-port</code>, <code>x-forwarded-client-srcport</code>, <code>connection</code>, <code>upgrade</code>, <code>content-length</code>, <code>transfer-encoding</code>, <code>keep-alive</code>, <code>te</code>, <code>host</code>, <code>cookie</code>, <code>remoteip</code>, <code>authority</code>, and <code>x-forwarded-host</code>. The header keys are case-insensitive.</p>
+             * <p>You cannot set the header name to any of the following fields (case-insensitive): <code>slb-id</code>, <code>slb-ip</code>, <code>x-forwarded-for</code>, <code>x-forwarded-proto</code>, <code>x-forwarded-eip</code>, <code>x-forwarded-port</code>, <code>x-forwarded-client-srcport</code>, <code>connection</code>, <code>upgrade</code>, <code>content-length</code>, <code>transfer-encoding</code>, <code>keep-alive</code>, <code>te</code>, <code>host</code>, <code>cookie</code>, <code>remoteip</code>, <code>authority</code>, and <code>x-forwarded-host</code>.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -913,21 +916,18 @@ public class CreateRuleRequest extends Request {
             }
 
             /**
-             * <p>The value of the header to be inserted.</p>
+             * <p>The value of the header to insert.</p>
              * <ul>
-             * <li><p>If <strong>ValueType</strong> is set to <strong>SystemDefined</strong>, you can set the Value parameter to one of the following values:</p>
-             * <ul>
+             * <li>If <strong>ValueType</strong> is set to <strong>SystemDefined</strong>, valid values are:<ul>
              * <li><strong>ClientSrcPort</strong>: the client port.</li>
-             * <li><strong>ClientSrcIp</strong>: the IP address of the client.</li>
-             * <li><strong>Protocol</strong>: the request protocol (HTTP or HTTPS).</li>
-             * <li><strong>SLBId</strong>: the ID of the ALB instance.</li>
-             * <li><strong>SLBPort</strong>: the listener port.</li>
+             * <li><strong>ClientSrcIp</strong>: the client IP address.</li>
+             * <li><strong>Protocol</strong>: the protocol used by the client request (HTTP or HTTPS).</li>
+             * <li><strong>SLBId</strong>: the instance ID of the application load balancing instance.</li>
+             * <li><strong>SLBPort</strong>: the listener port of the application load balancing instance.</li>
              * </ul>
              * </li>
-             * <li><p>If <strong>ValueType</strong> is set to <strong>UserDefined</strong>, a custom header value is supported. The header value must be 1 to 128 characters in length, and can contain printable characters whose ASCII values are <code>greater than or equal to 32 and lower than 127</code>. You can use asterisks (*) and question marks (?) as wildcard characters. <code>Quotation marks (&quot;)</code> are not supported. The header value cannot start or end with a space character, or end with a backslash (<code>\</code>).</p>
-             * </li>
-             * <li><p>If <strong>ValueType</strong> is set to <strong>ReferenceHeader</strong>, you can reference a value from request headers. The value must be 1 to 128 characters in length, and can contain lowercase letters, digits, hyphens (-), and underscores (_).</p>
-             * </li>
+             * <li>If <strong>ValueType</strong> is set to <strong>UserDefined</strong>, you can customize the header value. The value must be 1 to 128 characters in length and can contain asterisks (*), question marks (?), and printable ASCII characters whose ASCII values are <code>ch &gt;= 32 &amp;&amp; ch &lt; 127</code>. Double quotation marks (&quot;) are not supported. The value cannot start or end with a space, and cannot end with a backslash ().</li>
+             * <li>If <strong>ValueType</strong> is set to <strong>ReferenceHeader</strong>, you can reference a field in the request header. The value must be 1 to 128 characters in length and can contain lowercase letters, digits, hyphens (-), and underscores (_).</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -939,11 +939,11 @@ public class CreateRuleRequest extends Request {
             }
 
             /**
-             * <p>The type of the header. Valid values:</p>
+             * <p>The content type of the header field. Valid values:</p>
              * <ul>
              * <li><strong>UserDefined</strong>: a custom header value.</li>
-             * <li><strong>ReferenceHeader</strong>: a header value that is referenced from one of the request headers.</li>
-             * <li><strong>SystemDefined</strong>: a header predefined by the system.</li>
+             * <li><strong>ReferenceHeader</strong>: a referenced value from a field in the request header.</li>
+             * <li><strong>SystemDefined</strong>: a system-defined header value.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1066,17 +1066,15 @@ public class CreateRuleRequest extends Request {
             } 
 
             /**
-             * <p>The hostname to which requests are forwarded. Valid values:</p>
+             * <p>The host to which requests are redirected. Valid values:</p>
              * <ul>
-             * <li><p><strong>${host}</strong> (default): If you set the value to ${host}, you cannot append other characters.</p>
-             * </li>
-             * <li><p>If you want to specify a custom value, make sure that the following requirements are met:</p>
-             * <ul>
-             * <li>The hostname must be 3 to 128 characters in length, and can contain lowercase letters, digits, and the following characters: - . * = ~ _ + \ ^ ! $ &amp; | ( ) [ ] ?.</li>
-             * <li>The hostname must contain at least one period (.) but cannot start or end with a period (.).</li>
-             * <li>The rightmost domain label can contain only letters and wildcard characters, and cannot contain digits or hyphens (-). The leftmost <code>domain label</code> can be an asterisk (*).</li>
-             * <li>The domain labels cannot start or end with hyphens (-).</li>
-             * <li>You can use asterisks (*) and question marks (?) anywhere in a domain label as wildcard characters.</li>
+             * <li><strong>${host}</strong> (default): If this value is used, it cannot be concatenated with other characters.</li>
+             * <li>Other values: The character set and format requirements are as follows:<ul>
+             * <li>The hostname must be 3 to 256 characters in length and can contain lowercase letters, digits, hyphens (-), periods (.), asterisks (*), equal signs (=), tildes (~), underscores (_), plus signs (+), backslashes (), carets (^), exclamation marks (!), dollar signs ($), ampersands (&amp;), vertical bars (|), parentheses (()), square brackets ([]), and question marks (?).</li>
+             * <li>The hostname must contain at least one period (.), and the period (.) cannot be at the beginning or end.</li>
+             * <li>The rightmost domain label can contain only letters and wildcards, and cannot contain digits or hyphens (-). The leftmost <code>domainlabel</code> can be an asterisk (*).</li>
+             * <li>A hyphen (-) cannot be at the beginning or end of other domain labels.</li>
+             * <li>Asterisks (*) and question marks (?) can appear anywhere in a domain label.</li>
              * </ul>
              * </li>
              * </ul>
@@ -1090,7 +1088,7 @@ public class CreateRuleRequest extends Request {
             }
 
             /**
-             * <p>The HTTP status code that indicates the redirect type. Valid values: <strong>301</strong>, <strong>302</strong>, <strong>303</strong>, <strong>307</strong>, and <strong>308</strong>.</p>
+             * <p>The HTTP status code for the redirect. Valid values: <strong>301</strong>, <strong>302</strong>, <strong>303</strong>, <strong>307</strong>, and <strong>308</strong>.</p>
              * 
              * <strong>example:</strong>
              * <p>301</p>
@@ -1101,14 +1099,12 @@ public class CreateRuleRequest extends Request {
             }
 
             /**
-             * <p>The URL to which requests are redirected. Valid values:</p>
+             * <p>The path to which requests are redirected. Valid values:</p>
              * <ul>
-             * <li><p>Default value: <strong>${path}</strong>. <strong>${host}</strong>, <strong>${protocol}</strong>, and <strong>${port}</strong> are also supported. Each variable can be specified only once. You can specify one or more of the preceding variables in each request. You can also combine them with a custom value.</p>
-             * </li>
-             * <li><p>If you want to specify a custom value, make sure that the following requirements are met:</p>
-             * <ul>
-             * <li>The URL must be 1 to 128 characters in length, and is case-sensitive. You can use asterisks (*) and question marks (?) as wildcard characters.</li>
-             * <li>The URL must start with a forward slash (/) and can contain letters, digits, and the following special characters: <code>$ - _ . + / &amp; ~ @ : \&quot; * ?</code>. It cannot contain the following special characters: <code>% # ; ! ( ) [ ] ^ , \ &quot;</code>. You can use asterisks (*) and question marks (?) as wildcard characters.</li>
+             * <li><strong>${path}</strong> (default): You can reference <strong>${host}</strong>, <strong>${protocol}</strong>, and <strong>${port}</strong>. Each variable can appear at most once. These variables can be used together or concatenated with strings within the allowed character set listed below.</li>
+             * <li>Other values: The character set and format requirements are as follows:<ul>
+             * <li>The path must be 1 to 256 characters in length and is case-sensitive. Asterisks (*) and question marks (?) are supported as wildcards.</li>
+             * <li>The path must start with a forward slash (/) and can contain letters, digits, and the following special characters: <code>$-_.+/&amp;~@:\&quot;*?</code>. The following characters are not supported: <code>&quot;</code>, <code>%</code>, <code>#</code>, <code>;</code>, <code>!</code>, <code>(</code>, <code>)</code>, <code>[</code>, <code>]</code>, <code>^</code>, <code>,</code>, and <code>\</code>. Asterisks (*) and question marks (?) are also supported.</li>
              * </ul>
              * </li>
              * </ul>
@@ -1122,10 +1118,10 @@ public class CreateRuleRequest extends Request {
             }
 
             /**
-             * <p>The port to which requests are distributed.</p>
+             * <p>The port to which requests are redirected. Valid values:</p>
              * <ul>
-             * <li><strong>${port}</strong> (default): If you set the value to ${port}, you cannot append other characters to the value.</li>
-             * <li>You can also enter a port number. Valid values: <strong>1 to 63335</strong>.</li>
+             * <li><strong>${port}</strong> (default): This value cannot be used together with other characters.</li>
+             * <li>Other values: <strong>1</strong> to <strong>63335</strong>.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1137,18 +1133,18 @@ public class CreateRuleRequest extends Request {
             }
 
             /**
-             * <p>The redirect protocol. Valid values:</p>
+             * <p>The protocol to which requests are redirected. Valid values:</p>
              * <ul>
-             * <li><strong>${protocol}</strong> (default): If you set the value to ${protocol}, you cannot modify the value or append other characters.</li>
+             * <li><strong>${protocol}</strong> (default): This value can only be used independently and cannot be modified or concatenated with other characters.</li>
              * <li><strong>HTTP</strong></li>
-             * <li><strong>HTTPS</strong></li>
-             * </ul>
-             * <blockquote>
+             * <li><strong>HTTPS</strong><blockquote>
              * <ul>
-             * <li>HTTPS listeners support only HTTPS redirection.</li>
-             * <li>HTTP listeners support HTTP and HTTPS redirection.</li>
+             * <li>HTTPS listeners support redirection only to the HTTPS protocol.</li>
+             * <li>HTTP listeners support redirection to both HTTP and HTTPS protocols.</li>
              * </ul>
              * </blockquote>
+             * </li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>HTTP</p>
@@ -1159,14 +1155,12 @@ public class CreateRuleRequest extends Request {
             }
 
             /**
-             * <p>The query string to which requests are redirected.</p>
+             * <p>The query string to which requests are redirected. Valid values:</p>
              * <ul>
-             * <li><p>Default value: <strong>${query}</strong>. <strong>${host}</strong>, <strong>${protocol}</strong>, and <strong>${port}</strong> are also supported. Each variable can be specified only once. You can specify one or more of the preceding variables in each request. You can also combine them with a custom value.</p>
-             * </li>
-             * <li><p>If you want to specify a custom value, make sure that the following requirements are met:</p>
-             * <ul>
+             * <li><strong>${query}</strong> (default): You can reference <strong>${host}</strong>, <strong>${protocol}</strong>, and <strong>${port}</strong>. Each variable can appear at most once. These variables can be used together or concatenated with strings within the allowed character set listed below.</li>
+             * <li>Other values: The character set and format requirements are as follows:<ul>
              * <li>The query string must be 1 to 128 characters in length.</li>
-             * <li>It can contain printable characters, excluding space characters, the special characters <code># [ ] { } \ | &lt; &gt; &quot;</code>, and lowercase letters.</li>
+             * <li>Visible characters are supported. Spaces and <code>#[]{}\|&lt;&gt;&quot;</code> are not supported. Letters must be lowercase.</li>
              * </ul>
              * </li>
              * </ul>
@@ -1226,10 +1220,10 @@ public class CreateRuleRequest extends Request {
             } 
 
             /**
-             * <p>The keys of the headers to be removed. The header keys must be 1 to 40 characters in length, and can contain letters, digits, underscores (_), and hyphens (-). The header keys specified in RemoveHeader must be unique.</p>
+             * <p>The name of the header to remove. The name must be 1 to 40 characters in length and can contain letters, digits, underscores (_), and hyphens (-). Header names in RemoveHeader must be unique.</p>
              * <ul>
-             * <li>If Direction is set to Request, the following request headers cannot be removed: <code>slb-id</code>, <code>slb-ip</code>, <code>x-forwarded-for</code>, <code>x-forwarded-proto</code>, <code>x-forwarded-eip</code>, <code>x-forwarded-port</code>, <code>x-forwarded-client-srcport</code>, <code>connection</code>, <code>upgrade</code>, <code>content-length</code>, <code>transfer-encoding</code>, <code>keep-alive</code>, <code>te</code>, <code>host</code>, <code>cookie</code>, <code>remoteip</code>, <code>authority</code>, and <code>x-forwarded-host</code>. Request headers are not case-sensitive.</li>
-             * <li>If Direction is set to Response, the following response header keys are not supported: <code>connection</code>, <code>upgrade</code>, <code>content-length</code>, and <code>transfer-encoding</code>. The header keys are not case-sensitive.</li>
+             * <li>Request direction (when Direction is set to Request): You cannot set the header name to any of the following fields (case-insensitive): <code>slb-id</code>, <code>slb-ip</code>, <code>x-forwarded-for</code>, <code>x-forwarded-proto</code>, <code>x-forwarded-eip</code>, <code>x-forwarded-port</code>, <code>x-forwarded-client-srcport</code>, <code>connection</code>, <code>upgrade</code>, <code>content-length</code>, <code>transfer-encoding</code>, <code>keep-alive</code>, <code>te</code>, <code>host</code>, <code>cookie</code>, <code>remoteip</code>, <code>authority</code>, and <code>x-forwarded-host</code>.</li>
+             * <li>Response direction (when Direction is set to Response): You cannot set the header name to any of the following fields (case-insensitive): <code>connection</code>, <code>upgrade</code>, <code>content-length</code>, and <code>transfer-encoding</code>.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1313,16 +1307,14 @@ public class CreateRuleRequest extends Request {
             } 
 
             /**
-             * <p>The hostname to which requests are redirected. Valid values:</p>
+             * <p>The destination host for the internal rewrite. Valid values:</p>
              * <ul>
-             * <li><p><strong>${host}</strong> (default): If you set the value to ${host}, you cannot append other characters.</p>
-             * </li>
-             * <li><p>If you want to specify a custom value, make sure that the following requirements are met:</p>
-             * <ul>
-             * <li>The hostname must be 3 to 128 characters in length, and can contain lowercase letters, digits, and the following characters: - . * = ~ _ + \ ^ ! $ &amp; | ( ) [ ] ?.</li>
-             * <li>The hostname must contain at least one period (.) but cannot start or end with a period (.).</li>
-             * <li>The rightmost domain label can contain only letters and wildcard characters, and cannot contain digits or hyphens (-). The leftmost <code>domain label</code> can be an asterisk (*).</li>
-             * <li>The domain labels cannot start or end with hyphens (-). You can use asterisks (*) and question marks (?) anywhere in a domain label as wildcard characters.</li>
+             * <li><strong>${host}</strong> (default): This value cannot be concatenated with other characters.</li>
+             * <li>Other values: The character format requirements are as follows:<ul>
+             * <li>The hostname must be 3 to 256 characters in length and can contain lowercase letters, digits, hyphens (-), periods (.), asterisks (*), equal signs (=), tildes (~), underscores (_), plus signs (+), backslashes (), carets (^), exclamation marks (!), dollar signs ($), ampersands (&amp;), vertical bars (|), parentheses (()), square brackets ([]), and question marks (?).</li>
+             * <li>The hostname must contain at least one period (.), and the period (.) cannot be at the beginning or end.</li>
+             * <li>The rightmost domain label can contain only letters and wildcards, and cannot contain digits or hyphens (-). The leftmost <code>domainlabel</code> can be an asterisk (*).</li>
+             * <li>A hyphen (-) cannot be at the beginning or end of other domain labels. Asterisks (*) and question marks (?) can appear anywhere in a domain label.</li>
              * </ul>
              * </li>
              * </ul>
@@ -1336,14 +1328,12 @@ public class CreateRuleRequest extends Request {
             }
 
             /**
-             * <p>The URL to which requests are redirected. Valid values:</p>
+             * <p>The path to which requests are redirected. Valid values:</p>
              * <ul>
-             * <li><p>Default value: <strong>${path}</strong>. <strong>${host}</strong>, <strong>${protocol}</strong>, and <strong>${port}</strong> are also supported. Each variable can be specified only once. You can specify one or more of the preceding variables in each request. You can also combine them with a custom value.</p>
-             * </li>
-             * <li><p>If you want to specify a custom value, make sure that the following requirements are met:</p>
-             * <ul>
-             * <li>The URL must be 1 to 128 characters in length, and is case-sensitive. You can use asterisks (*) and question marks (?) as wildcard characters.</li>
-             * <li>The URL must start with a forward slash (/) and can contain letters, digits, and the following special characters: <code>$ - _ . + / &amp; ~ @ : \&quot; * ?</code>. It cannot contain the following special characters: <code>% # ; ! ( ) [ ] ^ , \ &quot;</code>. You can use asterisks (*) and question marks (?) as wildcard characters.</li>
+             * <li><strong>${path}</strong> (default): You can reference <strong>${host}</strong>, <strong>${protocol}</strong>, and <strong>${port}</strong>. Each variable can appear at most once. These variables can be used together or concatenated with strings within the allowed character set listed below.</li>
+             * <li>Other values: The character set and format requirements are as follows:<ul>
+             * <li>The path must be 1 to 256 characters in length and is case-sensitive. Asterisks (*) and question marks (?) are supported as wildcards.</li>
+             * <li>The path must start with a forward slash (/) and can contain letters, digits, and the following special characters: <code>$-_.+/&amp;~@:\&quot;*?</code>. The following characters are not supported: <code>&quot;</code>, <code>%</code>, <code>#</code>, <code>;</code>, <code>!</code>, <code>(</code>, <code>)</code>, <code>[</code>, <code>]</code>, <code>^</code>, <code>,</code>, and <code>\</code>. Asterisks (*) and question marks (?) are also supported.</li>
              * </ul>
              * </li>
              * </ul>
@@ -1357,14 +1347,12 @@ public class CreateRuleRequest extends Request {
             }
 
             /**
-             * <p>The query string of the URL to which requests are distributed.</p>
+             * <p>The query string for the internal rewrite. Valid values:</p>
              * <ul>
-             * <li><p>Default value: <strong>${query}</strong>. <strong>${host}</strong>, <strong>${protocol}</strong>, and <strong>${port}</strong> are also supported. Each variable can be specified only once. The preceding variables can be used at the same time or combined with a custom value.</p>
-             * </li>
-             * <li><p>If you want to specify a custom value, make sure that the following requirements are met:</p>
-             * <ul>
-             * <li>The path must be 1 to 128 characters in length.</li>
-             * <li>It can contain printable characters, excluding space characters, the special characters <code># [ ] { } \ | &lt; &gt; &quot;</code> and lowercase letters.</li>
+             * <li><strong>${query}</strong> (default): You can reference <strong>${host}</strong>, <strong>${protocol}</strong>, and <strong>${port}</strong>. Each variable can appear at most once. These variables can be used together or concatenated with strings within the allowed character set listed below.</li>
+             * <li>Other values: The character set and format requirements are as follows:<ul>
+             * <li>The query string must be 1 to 128 characters in length.</li>
+             * <li>Visible characters are supported. Spaces and <code>#[]{}\|&lt;&gt;&quot;</code> are not supported. Letters must be lowercase.</li>
              * </ul>
              * </li>
              * </ul>
@@ -1437,9 +1425,9 @@ public class CreateRuleRequest extends Request {
             } 
 
             /**
-             * <p>The number of requests per IP address. Value values: <strong>1 to 1000000</strong>.</p>
+             * <p>The number of queries per second from a single IP address. Valid values: <strong>1</strong> to <strong>1000000</strong>.</p>
              * <blockquote>
-             * <p> If both the <strong>QPS</strong> and <strong>PerIpQps</strong> parameters are specified, the value of the <strong>QPS</strong> parameter is smaller than the value of the PerIpQps parameter.</p>
+             * <p>If the <strong>QPS</strong> parameter is also configured, the value of <strong>PerIpQps</strong> must be less than the value of <strong>QPS</strong>.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1451,7 +1439,7 @@ public class CreateRuleRequest extends Request {
             }
 
             /**
-             * <p>The queries per second (QPS). Valid values: <strong>1 to 1000000</strong>.</p>
+             * <p>The number of queries per second (QPS). Valid values: <strong>1</strong> to <strong>1000000</strong>.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -1508,7 +1496,7 @@ public class CreateRuleRequest extends Request {
             } 
 
             /**
-             * <p>The server group ID.</p>
+             * <p>The ID of the server group.</p>
              * 
              * <strong>example:</strong>
              * <p>sgp-00mkgijak0w4qgz9****</p>
@@ -1565,7 +1553,7 @@ public class CreateRuleRequest extends Request {
             } 
 
             /**
-             * <p>The configuration of the server group to which traffic is mirrored.</p>
+             * <p>The configuration for mirroring traffic to a server group.</p>
              */
             public Builder serverGroupTuples(java.util.List<MirrorGroupConfigServerGroupTuples> serverGroupTuples) {
                 this.serverGroupTuples = serverGroupTuples;
@@ -1632,7 +1620,7 @@ public class CreateRuleRequest extends Request {
             } 
 
             /**
-             * <p>The configuration of the server group to which traffic is mirrored.</p>
+             * <p>The configuration for mirroring traffic to a server group.</p>
              */
             public Builder mirrorGroupConfig(MirrorGroupConfig mirrorGroupConfig) {
                 this.mirrorGroupConfig = mirrorGroupConfig;
@@ -1640,9 +1628,9 @@ public class CreateRuleRequest extends Request {
             }
 
             /**
-             * <p>The type of destination to which network traffic is mirrored. Valid values:</p>
+             * <p>The target type for traffic mirroring. Valid values:</p>
              * <ul>
-             * <li><strong>ForwardGroupMirror</strong>: a server group.</li>
+             * <li><strong>ForwardGroupMirror</strong>: mirrors traffic to a server group.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1832,7 +1820,7 @@ public class CreateRuleRequest extends Request {
             } 
 
             /**
-             * <p>Request forwarding based on CORS.</p>
+             * <p>The CORS configuration.</p>
              */
             public Builder corsConfig(CorsConfig corsConfig) {
                 this.corsConfig = corsConfig;
@@ -1840,7 +1828,7 @@ public class CreateRuleRequest extends Request {
             }
 
             /**
-             * <p>The configuration of the custom response.</p>
+             * <p>The fixed response content configuration.</p>
              */
             public Builder fixedResponseConfig(FixedResponseConfig fixedResponseConfig) {
                 this.fixedResponseConfig = fixedResponseConfig;
@@ -1848,7 +1836,7 @@ public class CreateRuleRequest extends Request {
             }
 
             /**
-             * <p>The server groups to which requests are forwarded. You can specify at most five server groups for each forwarding rule.</p>
+             * <p>The list of destination server groups to which requests are forwarded. You can add up to five destination server groups in a forwarding rule.</p>
              */
             public Builder forwardGroupConfig(ForwardGroupConfig forwardGroupConfig) {
                 this.forwardGroupConfig = forwardGroupConfig;
@@ -1856,7 +1844,7 @@ public class CreateRuleRequest extends Request {
             }
 
             /**
-             * <p>The key of the header to be inserted.</p>
+             * <p>The configuration for inserting an HTTP header.</p>
              */
             public Builder insertHeaderConfig(InsertHeaderConfig insertHeaderConfig) {
                 this.insertHeaderConfig = insertHeaderConfig;
@@ -1864,7 +1852,7 @@ public class CreateRuleRequest extends Request {
             }
 
             /**
-             * <p>The priority of the action. Valid values: <strong>1 to 50000</strong>. A smaller value indicates a higher priority. The actions of a forwarding rule are applied in descending order of priority. This parameter cannot empty. The priority of each action within a forwarding rule must be unique.</p>
+             * <p>The execution order of the forwarding rule action. Valid values: <strong>1</strong> to <strong>50000</strong>. Actions are executed in ascending order of their values. The value cannot be empty and must be unique.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1876,9 +1864,9 @@ public class CreateRuleRequest extends Request {
             }
 
             /**
-             * <p>The configuration of the redirect action.</p>
+             * <p>The redirect configuration.</p>
              * <blockquote>
-             * <p> Do not set all fields in <strong>RedirectConfig</strong> to default values, except for <strong>httpCode</strong>.</p>
+             * <p>For the parameters in <strong>RedirectConfig</strong>, you cannot use default values for all parameters except <strong>HttpCode</strong>.</p>
              * </blockquote>
              */
             public Builder redirectConfig(RedirectConfig redirectConfig) {
@@ -1887,7 +1875,7 @@ public class CreateRuleRequest extends Request {
             }
 
             /**
-             * <p>The HTTP headers to be removed.</p>
+             * <p>The configuration for removing an HTTP header.</p>
              */
             public Builder removeHeaderConfig(RemoveHeaderConfig removeHeaderConfig) {
                 this.removeHeaderConfig = removeHeaderConfig;
@@ -1895,9 +1883,9 @@ public class CreateRuleRequest extends Request {
             }
 
             /**
-             * <p>The configuration of the rewrite action.</p>
+             * <p>The rewrite configuration.</p>
              * <blockquote>
-             * <p> If you specify multiple actions for a forwarding rule, you must configure the <strong>ForwardGroup</strong> parameter for the <strong>RewriteConfig</strong> action.</p>
+             * <p>If multiple actions are configured in the same forwarding rule, the <strong>RewriteConfig</strong> action must be used together with the <strong>ForwardGroup</strong> action type.</p>
              * </blockquote>
              */
             public Builder rewriteConfig(RewriteConfig rewriteConfig) {
@@ -1906,7 +1894,7 @@ public class CreateRuleRequest extends Request {
             }
 
             /**
-             * <p>The configuration of the traffic throttling action.</p>
+             * <p>The traffic throttling configuration.</p>
              */
             public Builder trafficLimitConfig(TrafficLimitConfig trafficLimitConfig) {
                 this.trafficLimitConfig = trafficLimitConfig;
@@ -1914,7 +1902,7 @@ public class CreateRuleRequest extends Request {
             }
 
             /**
-             * <p>The configuration of the traffic mirroring action.</p>
+             * <p>The traffic mirroring configuration.</p>
              */
             public Builder trafficMirrorConfig(TrafficMirrorConfig trafficMirrorConfig) {
                 this.trafficMirrorConfig = trafficMirrorConfig;
@@ -1922,23 +1910,30 @@ public class CreateRuleRequest extends Request {
             }
 
             /**
-             * <p>The action. Valid values:</p>
+             * <p>The action type. Valid values:</p>
              * <ul>
-             * <li><strong>ForwardGroup</strong>: distributes requests to multiple vServer groups.</li>
-             * <li><strong>Redirect</strong>: redirects requests.</li>
-             * <li><strong>FixedResponse</strong>: returns a custom response.</li>
-             * <li><strong>Rewrite</strong>: rewrites requests.</li>
-             * <li><strong>InsertHeader</strong>: inserts headers.</li>
-             * <li><strong>RemoveHeaderConfig:</strong> deletes the header of a request.</li>
-             * <li><strong>TrafficLimit</strong>: throttles traffic.</li>
-             * <li><strong>TrafficMirror</strong>: mirrors network traffic.</li>
-             * <li><strong>Cors</strong>: enables cross-origin resource sharing (CORS).</li>
+             * <li><p><strong>ForwardGroup</strong>: forward requests to multiple virtual services.</p>
+             * </li>
+             * <li><p><strong>Redirect</strong>: redirect requests.</p>
+             * </li>
+             * <li><p><strong>FixedResponse</strong>: return a fixed response.</p>
+             * </li>
+             * <li><p><strong>Rewrite</strong>: rewrite requests.</p>
+             * </li>
+             * <li><p><strong>InsertHeader</strong>: insert an HTTP header.</p>
+             * </li>
+             * <li><p><strong>RemoveHeader</strong>: delete an HTTP header.</p>
+             * </li>
+             * <li><p><strong>TrafficLimit</strong>: limit traffic.</p>
+             * </li>
+             * <li><p><strong>TrafficMirror</strong>: mirror traffic.</p>
+             * </li>
+             * <li><p><strong>Cors</strong>: configure cross-origin resource sharing (CORS).</p>
+             * </li>
              * </ul>
-             * <p>The following action types are supported:</p>
-             * <ul>
-             * <li><strong>FinalType</strong>: Each forwarding rule can contain only one FinalType action, which is performed at the end. You can specify only one of <strong>ForwardGroup</strong>, <strong>Redirect</strong>, and <strong>FixedResponse</strong>.</li>
-             * <li><strong>ExtType</strong>: Each forwarding rule can contain one or more <strong>ExtType</strong> actions, which are performed before the <strong>FinalType</strong> action. If you want to specify an ExtType action, you must also specify a <strong>FinalType</strong> action. You can specify multiple <strong>InsertHeader</strong> actions or one <strong>Rewrite</strong> action.</li>
-             * </ul>
+             * <blockquote>
+             * <p>A forwarding rule must contain at least one <strong>ForwardGroup</strong>, <strong>Redirect</strong>, or <strong>FixedResponse</strong> action. If it is used together with other action types, it must be executed last.</p>
+             * </blockquote>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -2011,9 +2006,9 @@ public class CreateRuleRequest extends Request {
             /**
              * <p>The cookie key.</p>
              * <ul>
-             * <li>The cookie key must be 1 to 100 characters in length.</li>
-             * <li>You can use asterisks (*) and question marks (?) as wildcard characters.</li>
-             * <li>The value can contain printable characters, excluding uppercase letters, space characters, and the following special characters: <code>; # [ ] { } \ | &lt; &gt; &amp; &quot;</code>.</li>
+             * <li>Must be 1 to 100 characters in length.</li>
+             * <li>Supports visible characters, the asterisk (*) wildcard, and the half-width question mark (?). Letters must be lowercase.</li>
+             * <li>Does not support spaces or the following characters: <code>;#[]{}\|&lt;&gt;&amp;&quot;</code>.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -2027,9 +2022,9 @@ public class CreateRuleRequest extends Request {
             /**
              * <p>The cookie value.</p>
              * <ul>
-             * <li>The cookie value must be 1 to 100 characters in length.</li>
-             * <li>You can use asterisks (*) and question marks (?) as wildcard characters.</li>
-             * <li>The value can contain printable characters, excluding uppercase letters, space characters, and the following special characters: <code>; # [ ] { } \ | &lt; &gt; &amp; &quot;</code>.</li>
+             * <li>Must be 1 to 100 characters in length.</li>
+             * <li>Supports visible characters, the asterisk (*) wildcard, and the half-width question mark (?). Letters must be lowercase.</li>
+             * <li>Does not support spaces or the following characters: <code>;#[]{}\|&lt;&gt;&amp;&quot;</code>.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -2087,7 +2082,7 @@ public class CreateRuleRequest extends Request {
             } 
 
             /**
-             * <p>The cookie values.</p>
+             * <p>The list of cookie values.</p>
              */
             public Builder values(java.util.List<Values> values) {
                 this.values = values;
@@ -2154,11 +2149,11 @@ public class CreateRuleRequest extends Request {
             } 
 
             /**
-             * <p>The header key.</p>
+             * <p>The header field key.</p>
              * <ul>
-             * <li>The header key must be 1 to 40 characters in length.</li>
-             * <li>The key can contain letters, digits, hyphens (-), and underscores (_).</li>
-             * <li>Cookie and Host are not supported.</li>
+             * <li>Supports 1 to 40 characters.</li>
+             * <li>Supports lowercase letters a to z, digits, hyphens (-), and underscores (_).</li>
+             * <li>Does not support Cookie and Host.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -2170,7 +2165,7 @@ public class CreateRuleRequest extends Request {
             }
 
             /**
-             * <p>The header values.</p>
+             * <p>The list of header field values.</p>
              */
             public Builder values(java.util.List<String> values) {
                 this.values = values;
@@ -2224,7 +2219,7 @@ public class CreateRuleRequest extends Request {
             } 
 
             /**
-             * <p>The hostnames.</p>
+             * <p>The list of hostnames.</p>
              */
             public Builder values(java.util.List<String> values) {
                 this.values = values;
@@ -2278,7 +2273,7 @@ public class CreateRuleRequest extends Request {
             } 
 
             /**
-             * <p>The request methods.</p>
+             * <p>The list of request methods.</p>
              */
             public Builder values(java.util.List<String> values) {
                 this.values = values;
@@ -2332,7 +2327,7 @@ public class CreateRuleRequest extends Request {
             } 
 
             /**
-             * <p>The forwarding URLs.</p>
+             * <p>The list of forwarding paths.</p>
              */
             public Builder values(java.util.List<String> values) {
                 this.values = values;
@@ -2399,10 +2394,10 @@ public class CreateRuleRequest extends Request {
             } 
 
             /**
-             * <p>They key of the query string.</p>
+             * <p>The query string key.</p>
              * <ul>
-             * <li>The key must be 1 to 100 characters in length.</li>
-             * <li>You can use asterisks (*) and question marks (?) as wildcard characters. It can contain printable characters, excluding uppercase letters, space characters, and the following special characters: <code># [ ] { } \ | &lt; &gt; &amp; &quot;</code>.</li>
+             * <li>Must be 1 to 100 characters in length.</li>
+             * <li>Supports visible characters, wildcard asterisks (*), and half-width question marks (?). Letters must be lowercase. Does not support spaces or the following characters: <code>#[]{}\|&lt;&gt;&amp;&quot;</code>.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -2414,10 +2409,10 @@ public class CreateRuleRequest extends Request {
             }
 
             /**
-             * <p>The value of the query string.</p>
+             * <p>The query string value.</p>
              * <ul>
-             * <li>The value must be 1 to 128 characters in length.</li>
-             * <li>It can contain printable characters, but cannot contain uppercase letters, space characters, or the following special characters: <code># [ ] { } \ | &lt; &gt; &amp;</code>. You can use asterisks (*) and question marks (?) as wildcard characters.</li>
+             * <li>Must be 1 to 128 characters in length.</li>
+             * <li>Supports lowercase letters, visible characters, wildcard asterisks (*), and half-width question marks (?). Does not support spaces or the following characters: <code>#[]{}\|&lt;&gt;&amp;&quot;</code>.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -2475,7 +2470,7 @@ public class CreateRuleRequest extends Request {
             } 
 
             /**
-             * <p>The query strings.</p>
+             * <p>The list of query strings.</p>
              */
             public Builder values(java.util.List<QueryStringConfigValues> values) {
                 this.values = values;
@@ -2542,11 +2537,11 @@ public class CreateRuleRequest extends Request {
             } 
 
             /**
-             * <p>The header key.</p>
+             * <p>The header field key.</p>
              * <ul>
-             * <li>The key must be 1 to 40 characters in length.</li>
-             * <li>It can contain letters, digits, hyphens (-), and underscores (_).</li>
-             * <li>Cookie and Host are not supported.</li>
+             * <li>Must be 1 to 40 characters in length.</li>
+             * <li>Supports lowercase letters a to z, digits, hyphens (-), and underscores (_).</li>
+             * <li>Does not support Cookie and Host.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -2558,7 +2553,7 @@ public class CreateRuleRequest extends Request {
             }
 
             /**
-             * <p>The header values.</p>
+             * <p>The list of header field values.</p>
              */
             public Builder values(java.util.List<String> values) {
                 this.values = values;
@@ -2612,7 +2607,7 @@ public class CreateRuleRequest extends Request {
             } 
 
             /**
-             * <p>The response status codes.</p>
+             * <p>The list of response status codes.</p>
              */
             public Builder values(java.util.List<String> values) {
                 this.values = values;
@@ -2666,7 +2661,7 @@ public class CreateRuleRequest extends Request {
             } 
 
             /**
-             * <p>The source IP addresses used for traffic matching.</p>
+             * <p>The list of source IP-based service traffic matching conditions.</p>
              */
             public Builder values(java.util.List<String> values) {
                 this.values = values;
@@ -2838,7 +2833,7 @@ public class CreateRuleRequest extends Request {
             } 
 
             /**
-             * <p>The key-value pairs of the cookie.</p>
+             * <p>The cookie configuration.</p>
              */
             public Builder cookieConfig(CookieConfig cookieConfig) {
                 this.cookieConfig = cookieConfig;
@@ -2846,7 +2841,7 @@ public class CreateRuleRequest extends Request {
             }
 
             /**
-             * <p>The configuration of the header.</p>
+             * <p>The header field configuration.</p>
              */
             public Builder headerConfig(HeaderConfig headerConfig) {
                 this.headerConfig = headerConfig;
@@ -2854,7 +2849,7 @@ public class CreateRuleRequest extends Request {
             }
 
             /**
-             * <p>The configuration of the host.</p>
+             * <p>The host configuration.</p>
              */
             public Builder hostConfig(HostConfig hostConfig) {
                 this.hostConfig = hostConfig;
@@ -2862,7 +2857,7 @@ public class CreateRuleRequest extends Request {
             }
 
             /**
-             * <p>The configurations of the request method.</p>
+             * <p>The request method configuration.</p>
              */
             public Builder methodConfig(MethodConfig methodConfig) {
                 this.methodConfig = methodConfig;
@@ -2870,7 +2865,7 @@ public class CreateRuleRequest extends Request {
             }
 
             /**
-             * <p>The configurations of the URL to which requests are forwarded.</p>
+             * <p>The forwarding path configuration.</p>
              */
             public Builder pathConfig(PathConfig pathConfig) {
                 this.pathConfig = pathConfig;
@@ -2878,7 +2873,7 @@ public class CreateRuleRequest extends Request {
             }
 
             /**
-             * <p>The configuration of the query strings.</p>
+             * <p>The query string configuration.</p>
              */
             public Builder queryStringConfig(QueryStringConfig queryStringConfig) {
                 this.queryStringConfig = queryStringConfig;
@@ -2886,7 +2881,7 @@ public class CreateRuleRequest extends Request {
             }
 
             /**
-             * <p>The configuration of headers.</p>
+             * <p>The header condition configuration.</p>
              */
             public Builder responseHeaderConfig(ResponseHeaderConfig responseHeaderConfig) {
                 this.responseHeaderConfig = responseHeaderConfig;
@@ -2894,7 +2889,7 @@ public class CreateRuleRequest extends Request {
             }
 
             /**
-             * <p>The configuration of the response status codes.</p>
+             * <p>The response status code configuration.</p>
              */
             public Builder responseStatusCodeConfig(ResponseStatusCodeConfig responseStatusCodeConfig) {
                 this.responseStatusCodeConfig = responseStatusCodeConfig;
@@ -2902,7 +2897,7 @@ public class CreateRuleRequest extends Request {
             }
 
             /**
-             * <p>Configuration of traffic matching based on source IP addresses. This parameter is required and valid when <strong>Type</strong> is set to <strong>SourceIP</strong>.</p>
+             * <p>The source IP-based service traffic matching configuration. Required and valid only when <strong>Type</strong> is set to <strong>SourceIP</strong>.</p>
              */
             public Builder sourceIpConfig(SourceIpConfig sourceIpConfig) {
                 this.sourceIpConfig = sourceIpConfig;
@@ -2910,17 +2905,26 @@ public class CreateRuleRequest extends Request {
             }
 
             /**
-             * <p>The type of forwarding rule. Valid values:</p>
+             * <p>The forwarding rule type. Valid values:</p>
              * <ul>
-             * <li><strong>Host</strong>: Requests are distributed based on hosts.</li>
-             * <li><strong>Path</strong>: Requests are distributed based on paths.</li>
-             * <li><strong>Header</strong>: Requests are distributed based on HTTP headers.</li>
-             * <li><strong>QueryString</strong>: Requests are distributed based on query strings.</li>
-             * <li><strong>Method</strong>: Requests are distributed based on request methods.</li>
-             * <li><strong>Cookie</strong>: Requests are distributed based on cookies.</li>
-             * <li><strong>SourceIp</strong>: Requests are forwarded based on source IP addresses.</li>
-             * <li><strong>ResponseHeader</strong>: Requests are forwarded based on HTTP response headers.</li>
-             * <li><strong>ResponseStatusCode</strong>: Requests are forwarded based on response status codes.</li>
+             * <li><p><strong>Host</strong>: Host.</p>
+             * </li>
+             * <li><p><strong>Path</strong>: Path.</p>
+             * </li>
+             * <li><p><strong>Header</strong>: HTTP header fields.</p>
+             * </li>
+             * <li><p><strong>QueryString</strong>: Query string.</p>
+             * </li>
+             * <li><p><strong>Method</strong>: Request method.</p>
+             * </li>
+             * <li><p><strong>Cookie</strong>: Cookie.</p>
+             * </li>
+             * <li><p><strong>SourceIp</strong>: Source IP address.</p>
+             * </li>
+             * <li><p><strong>ResponseHeader</strong>: Response HTTP header fields.</p>
+             * </li>
+             * <li><p><strong>ResponseStatusCode</strong>: Response status code.</p>
+             * </li>
              * </ul>
              * <p>This parameter is required.</p>
              * 
@@ -2992,7 +2996,7 @@ public class CreateRuleRequest extends Request {
             } 
 
             /**
-             * <p>The tag key. The tag key can be up to 128 characters in length. It cannot start with aliyun or acs: and cannot contain http:// or https://.</p>
+             * <p>The tag key. Can be up to 128 characters in length. Cannot start with <code>aliyun</code> or <code>acs:</code>. Cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>env</p>
@@ -3003,7 +3007,7 @@ public class CreateRuleRequest extends Request {
             }
 
             /**
-             * <p>The tag value can be up to 128 characters in length. It cannot start with aliyun or acs: and cannot contain http:// or https://.</p>
+             * <p>The tag value. Can be up to 128 characters in length. Cannot start with <code>aliyun</code> or <code>acs:</code>. Cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>product</p>

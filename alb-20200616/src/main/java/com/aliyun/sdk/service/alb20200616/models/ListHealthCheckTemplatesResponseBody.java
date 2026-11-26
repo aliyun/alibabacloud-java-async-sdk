@@ -106,7 +106,7 @@ public class ListHealthCheckTemplatesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The health check templates.</p>
+         * <p>The list of health check templates.</p>
          */
         public Builder healthCheckTemplates(java.util.List<HealthCheckTemplates> healthCheckTemplates) {
             this.healthCheckTemplates = healthCheckTemplates;
@@ -114,7 +114,7 @@ public class ListHealthCheckTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries returned per page. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
+         * <p>The number of entries to return per page. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -125,10 +125,10 @@ public class ListHealthCheckTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results. Valid values:</p>
+         * <p>The pagination token. Valid values:</p>
          * <ul>
-         * <li>If <strong>NextToken</strong> is empty, no next page exists.</li>
-         * <li>If a value of <strong>NextToken</strong> was returned in the previous query, specify the value to obtain the next set of results.</li>
+         * <li>If <strong>NextToken</strong> is empty, no next query is available.</li>
+         * <li>If <strong>NextToken</strong> is returned, the value indicates the token for the next query.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -143,7 +143,7 @@ public class ListHealthCheckTemplatesResponseBody extends TeaModel {
          * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>365F4154-92F6-4AE4-92F8-7FF34B540710</p>
+         * <p>365F4154-92F6-4AE4-92F8-7FF3******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -151,7 +151,7 @@ public class ListHealthCheckTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of records returned for the current request.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
@@ -220,7 +220,7 @@ public class ListHealthCheckTemplatesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The tag key. The tag key can be up to 128 characters in length, and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>acs:</code> or <code>aliyun</code>.</p>
+             * <p>The tag key. The key can be up to 128 characters in length, and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>env</p>
@@ -231,7 +231,7 @@ public class ListHealthCheckTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag value. The tag value can be up to 128 characters in length, and cannot contain <code>http://</code> or <code>https://</code>. The tag value cannot start with <code>acs:</code> or <code>aliyun</code>.</p>
+             * <p>The tag value. The value can be up to 128 characters in length, and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>product</p>
@@ -470,7 +470,7 @@ public class ListHealthCheckTemplatesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The HTTP status codes that indicate healthy backend servers.</p>
+             * <p>The list of status codes that indicate a successful health check.</p>
              */
             public Builder healthCheckCodes(java.util.List<String> healthCheckCodes) {
                 this.healthCheckCodes = healthCheckCodes;
@@ -478,9 +478,9 @@ public class ListHealthCheckTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The port that is used for health checks.</p>
-             * <p>Valid values: ** 0 to 65535**.</p>
-             * <p>The default value is <strong>0</strong>, which specifies that the port of a backend server is used for health checks.</p>
+             * <p>The port used for health checks.</p>
+             * <p>Valid values: <strong>0</strong> to <strong>65535</strong>.</p>
+             * <p>Default value: <strong>0</strong>, which indicates that the port of the backend server is used for health checks.</p>
              * 
              * <strong>example:</strong>
              * <p>80</p>
@@ -491,17 +491,19 @@ public class ListHealthCheckTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The domain name that is used for health checks. Valid values:</p>
+             * <p>The domain name used for health checks. Valid values:</p>
              * <ul>
-             * <li><strong>$SERVER_IP</strong> (default): the private IP address of a backend server. If an IP address is specified, or this parameter is not specified, the ALB instance uses the private IP address of each backend server as the domain name for health checks.</li>
-             * <li><strong>domain</strong>: The domain name must be 1 to 80 characters in length, and can contain letters, digits, periods (.), and hyphens (-).</li>
+             * <li><p><strong>$SERVER_IP</strong> (default): the private IP of the backend server. If you specify an IP address or leave this parameter empty, load balancing uses the private IP of each backend server as the domain name for health checks.</p>
+             * </li>
+             * <li><p><strong>domain</strong>: The domain name must be 1 to 80 characters in length, and can contain only letters, digits, periods (.), and hyphens (-).</p>
+             * </li>
              * </ul>
              * <blockquote>
-             * <p> This parameter takes effect only if you set <code>HealthCheckProtocol</code> to <strong>HTTP</strong> or <strong>HTTPS</strong>.</p>
+             * <p>This parameter takes effect only when <code>HealthCheckProtocol</code> is set to <strong>HTTP</strong> or <strong>HTTPS</strong>.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
-             * <p>$_ip</p>
+             * <p>$SERVER_IP</p>
              */
             public Builder healthCheckHost(String healthCheckHost) {
                 this.healthCheckHost = healthCheckHost;
@@ -509,11 +511,11 @@ public class ListHealthCheckTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The HTTP version for health checks.</p>
+             * <p>The HTTP version used for health checks.</p>
              * <p>Valid values: <strong>HTTP 1.0</strong> and <strong>HTTP 1.1</strong>.</p>
              * <p>Default value: <strong>HTTP 1.1</strong>.</p>
              * <blockquote>
-             * <p> This parameter takes effect only if you set <code>HealthCheckProtocol</code> to <strong>HTTP</strong> or <strong>HTTPS</strong>.</p>
+             * <p>This parameter takes effect only when <code>HealthCheckProtocol</code> is set to <strong>HTTP</strong> or <strong>HTTPS</strong>.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -525,7 +527,7 @@ public class ListHealthCheckTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The interval at which health checks are performed. Unit: seconds. Valid values: <strong>1 to 50</strong>. Default value: <strong>2</strong>.</p>
+             * <p>The interval between two consecutive health checks. Unit: seconds. Valid values: <strong>1</strong> to <strong>50</strong>. Default value: <strong>2</strong>.</p>
              * 
              * <strong>example:</strong>
              * <p>5</p>
@@ -536,14 +538,17 @@ public class ListHealthCheckTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The HTTP method that is used for health checks. Valid values:</p>
+             * <p>The health check method. Valid values:</p>
              * <ul>
-             * <li><strong>HEAD</strong> (default): By default, HTTP and HTTPS health checks use the HEAD method.</li>
-             * <li><strong>GET</strong>: If the length of a response exceeds 8 KB, the response is truncated. However, the health check result is not affected.</li>
-             * <li><strong>POST</strong>: gRPC health checks use the POST method by default.</li>
+             * <li><p><strong>HEAD</strong> (default): The default method for HTTP and HTTPS health checks.</p>
+             * </li>
+             * <li><p><strong>GET</strong>: If the length of the response message exceeds 8 KB, the message is truncated. However, the truncation does not affect the health check result.</p>
+             * </li>
+             * <li><p><strong>POST</strong>: The default method for gRPC health checks.</p>
+             * </li>
              * </ul>
              * <blockquote>
-             * <p> This parameter takes effect only if you set <strong>HealthCheckProtocol</strong> to <strong>HTTP</strong>, <strong>HTTPS</strong>, or <strong>gRPC</strong>.</p>
+             * <p>This parameter takes effect only when <strong>HealthCheckProtocol</strong> is set to <strong>HTTP</strong>, <strong>HTTPS</strong>, or <strong>gRPC</strong>.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -555,8 +560,8 @@ public class ListHealthCheckTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The URL path that you want to use for health checks.</p>
-             * <p>The URL must be 1 to 80 characters in length, and can contain letters, digits, the following special characters: - / . % ? # &amp;, and the following extended characters: <code>_ ; ~ ! ( ) * [ ] @ $ ^ : \&quot; , +</code>. The URL must start with a forward slash (/).</p>
+             * <p>The URL used for health checks.</p>
+             * <p>The URL must be 1 to 80 characters in length and can contain only letters, digits, hyphens (-), forward slashes (/), periods (.), percent signs (%), question marks (?), number signs (#), ampersands (&amp;), and the following extended characters: <code>_;~!()*[]@$^:\&quot;,+</code>. The URL must start with a forward slash (/).</p>
              * 
              * <strong>example:</strong>
              * <p>/test/index.html</p>
@@ -567,12 +572,16 @@ public class ListHealthCheckTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The protocol that is used for health checks. Valid values:</p>
+             * <p>The protocol used for health checks. Valid values:</p>
              * <ul>
-             * <li><strong>HTTP</strong> (default): The ALB instance sends HEAD or GET requests, which simulate browser requests, to check whether the backend server is healthy.</li>
-             * <li><strong>HTTPS</strong>: HTTPS health checks simulate browser behaviors by sending HEAD or GET requests to probe the availability of backend servers. HTTPS provides higher security because HTTPS supports data encryption.</li>
-             * <li><strong>TCP</strong>: TCP health checks send TCP SYN packets to a backend server to check whether the port of the backend server is reachable.</li>
-             * <li><strong>gRPC</strong>: gRPC health checks send POST or GET requests to a backend server to check whether the backend server is healthy.</li>
+             * <li><p><strong>HTTP</strong> (default): sends HEAD or GET requests to perform browser access impersonation and check whether the server application is healthy.</p>
+             * </li>
+             * <li><p><strong>HTTPS</strong>: sends HEAD or GET requests to perform browser access impersonation and check whether the server application is healthy. (With data encryption, it is more secure than HTTP.)</p>
+             * </li>
+             * <li><p><strong>TCP</strong>: sends SYN handshake messages to check whether the server port is alive.</p>
+             * </li>
+             * <li><p><strong>gRPC</strong>: sends POST or GET requests to check whether the server application is healthy.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -584,7 +593,7 @@ public class ListHealthCheckTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the health check template.</p>
+             * <p>The health check template ID.</p>
              * 
              * <strong>example:</strong>
              * <p>hct-bp1qjwo61pqz3ahltv****</p>
@@ -595,8 +604,8 @@ public class ListHealthCheckTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the health check template.</p>
-             * <p>The name must be 2 to 128 character characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). It must start with a letter.</p>
+             * <p>The health check template name.</p>
+             * <p>The name must be 2 to 128 characters in length, and must start with a letter or a Chinese character. It can contain digits, periods (.), underscores (_), and hyphens (-).</p>
              * 
              * <strong>example:</strong>
              * <p>HealthCheckTemplate1</p>
@@ -607,8 +616,8 @@ public class ListHealthCheckTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timeout period of a health check response. If a backend Elastic Compute Service (ECS) instance does not respond within the specified timeout period, the ECS instance fails to pass the health check.</p>
-             * <p>Valid values: <strong>1 to 300</strong>. Unit: seconds.</p>
+             * <p>The timeout period for receiving a response from a health check. If the backend ECS instance does not return a correct response within the specified timeout period, the health check is considered failed.</p>
+             * <p>Valid values: <strong>1</strong> to <strong>300</strong>. Unit: seconds.</p>
              * <p>Default value: <strong>5</strong>.</p>
              * 
              * <strong>example:</strong>
@@ -620,8 +629,8 @@ public class ListHealthCheckTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of times that an unhealthy backend server must consecutively pass health checks before it is declared healthy. In this case, the health status changes from <strong>fail</strong> to <strong>success</strong>.</p>
-             * <p>Valid values: <strong>2 to 10</strong>.</p>
+             * <p>The number of consecutive successful health checks required to change the health check status of a backend server from <strong>Failed</strong> to <strong>Successful</strong>.</p>
+             * <p>Valid values: <strong>2</strong> to <strong>10</strong>.</p>
              * <p>Default value: <strong>3</strong>.</p>
              * 
              * <strong>example:</strong>
@@ -652,8 +661,8 @@ public class ListHealthCheckTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of times that a healthy backend server must consecutively fail health checks before it is declared unhealthy. In this case, the health status changes from <strong>success</strong> to <strong>fail</strong>.</p>
-             * <p>Valid values: <strong>2 to 10</strong>.</p>
+             * <p>The number of consecutive failed health checks required to change the health check status of a backend server from <strong>Successful</strong> to <strong>Failed</strong>.</p>
+             * <p>Valid values: <strong>2</strong> to <strong>10</strong>.</p>
              * <p>Default value: <strong>3</strong>.</p>
              * 
              * <strong>example:</strong>

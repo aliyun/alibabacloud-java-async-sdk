@@ -118,9 +118,9 @@ public class UpdateLoadBalancerZonesRequest extends Request {
 
         /**
          * <p>The client token that is used to ensure the idempotence of the request.</p>
-         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+         * <p>You can generate a parameter value on your client to ensure that the value is unique across different requests. The client token can contain only ASCII characters.</p>
          * <blockquote>
-         * <p>If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+         * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request may be different.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -133,10 +133,12 @@ public class UpdateLoadBalancerZonesRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+         * <p>Specifies whether to perform a dry run. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
-         * <li><strong>false</strong> (default): performs a dry run and sends the request. If the request passes the dry run, a <code>2xx HTTP</code> status code is returned and the operation is performed.</li>
+         * <li><p><strong>true</strong>: performs a dry run and does not modify the active zone property of the application load balancing instance. The system checks whether the required parameters are specified, the request format is valid, and the service limits are met. If the request fails the dry run, the system returns an error. If the request passes the dry run, the system returns the <code>DryRunOperation</code> error code.</p>
+         * </li>
+         * <li><p><strong>false</strong> (default): performs a dry run and sends a Normal request. If the request passes the dry run, the system returns an <code>HTTP_2xx</code> status code and performs the operation.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -149,11 +151,11 @@ public class UpdateLoadBalancerZonesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the ALB instance.</p>
+         * <p>The instance ID of the application load balancing instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>lb-bp1b6c719dfa08ex****</p>
+         * <p>alb-o9ulmq5hfn68jk****</p>
          */
         public Builder loadBalancerId(String loadBalancerId) {
             this.putQueryParameter("LoadBalancerId", loadBalancerId);
@@ -162,7 +164,7 @@ public class UpdateLoadBalancerZonesRequest extends Request {
         }
 
         /**
-         * RetainResourceType.
+         * <p>The types of resources that undergo automatic creation and attach to the ALB instance, which need to be retained. When you remove an active zone from an Internet-facing ALB instance, you can update the Settings to eip to retain the EIP that undergoes automatic creation and attach by ALB. Anycast EIPs do not support retention, and EIPs that users manually attach are automatically retained.</p>
          */
         public Builder retainResourceType(java.util.List<String> retainResourceType) {
             this.putQueryParameter("RetainResourceType", retainResourceType);
@@ -171,7 +173,7 @@ public class UpdateLoadBalancerZonesRequest extends Request {
         }
 
         /**
-         * <p>The zones and the vSwitches in the zones. You can specify a maximum of 10 zones. If the selected region supports two or more zones, select at least two zones to ensure the high availability of your service. The specified zones and vSwitches overwrite the existing configurations.</p>
+         * <p>The mappings between zones and vSwitches. You can specify up to 10 zones. If the current region supports two or more zones, you must specify at least two zones. If you specify this parameter, the previous zone configurations are replaced.</p>
          * <p>This parameter is required.</p>
          */
         public Builder zoneMappings(java.util.List<ZoneMappings> zoneMappings) {
@@ -268,13 +270,13 @@ public class UpdateLoadBalancerZonesRequest extends Request {
             } 
 
             /**
-             * <p>The type of EIP. Valid values:</p>
+             * <p>The type of the Internet-facing EIP. Valid values:</p>
              * <ul>
-             * <li><strong>Common</strong>: an EIP.</li>
-             * <li><strong>Anycast</strong>: an Anycast EIP.</li>
+             * <li><strong>Common</strong>: EIP.</li>
+             * <li><strong>Anycast</strong>: Anycast EIP.</li>
              * </ul>
              * <blockquote>
-             * <p> For more information about the regions in which ALB supports Anycast EIPs, see <a href="https://help.aliyun.com/document_detail/460727.html">Limits</a>.</p>
+             * <p>For more information about the regions where ALB supports Anycast EIPs, see <a href="https://help.aliyun.com/document_detail/460727.html">Limits</a>.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -286,7 +288,7 @@ public class UpdateLoadBalancerZonesRequest extends Request {
             }
 
             /**
-             * <p>The private IPv4 address. You must specify at least two zones. You can specify a maximum of 10 zones.</p>
+             * <p>The IPv4 private endpoint of the private network. You must add at least two active zones and can add up to 10 active zones.</p>
              * 
              * <strong>example:</strong>
              * <p>192.168.10.1</p>
@@ -297,11 +299,11 @@ public class UpdateLoadBalancerZonesRequest extends Request {
             }
 
             /**
-             * <p>The ID of the vSwitch in the zone. By default, each zone contains one vSwitch and one subnet. You can specify at most 10 zones. If the region supports two or more zones, specify at least two zones.</p>
+             * <p>The vSwitch that corresponds to the zone. By default, each zone uses one vSwitch and one subnet. You can add up to 10 zones. If the current region supports two or more zones, you must add at least two zones.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
-             * <p>vsw-bp1rmcrwg3erh1fh8****</p>
+             * <p>vsw-bp1rmcrwg3srh1fh8****</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -309,7 +311,7 @@ public class UpdateLoadBalancerZonesRequest extends Request {
             }
 
             /**
-             * <p>The zone name. You can call the <a href="https://help.aliyun.com/document_detail/189196.html">DescribeZones</a> operation to query the most recent zone list. You can specify at most 10 zones. If the region supports two or more zones, specify at least two zones.</p>
+             * <p>The name of the zone. You can obtain the zone name by calling the <a href="https://help.aliyun.com/document_detail/189196.html">DescribeZones</a> operation. You can add up to 10 zones. If the current region supports two or more zones, you must add at least two zones.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

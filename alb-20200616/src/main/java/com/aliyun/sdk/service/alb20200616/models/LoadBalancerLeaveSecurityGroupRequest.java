@@ -135,7 +135,7 @@ public class LoadBalancerLeaveSecurityGroupRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>alb-iv9gj3lpak6fbj****</p>
+         * <p>alb-iv9gj3spak6fbj****</p>
          */
         public Builder loadBalancerId(String loadBalancerId) {
             this.putQueryParameter("LoadBalancerId", loadBalancerId);

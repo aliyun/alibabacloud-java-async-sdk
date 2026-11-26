@@ -102,10 +102,10 @@ public class GetListenerHealthStatusRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether to return the health check results of forwarding rules. Valid values:</p>
+         * <p>Specifies whether to include the health check results of forwarding rules. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong> (default)</li>
+         * <li><strong>true</strong>: Include the results.</li>
+         * <li><strong>false</strong> (default): Do not include the results.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -118,11 +118,11 @@ public class GetListenerHealthStatusRequest extends Request {
         }
 
         /**
-         * <p>The listener ID.</p>
+         * <p>The listener ID of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>lsr-bp1bpn0kn908w4nbw****</p>
+         * <p>lsn-o4u54y73wq7b******</p>
          */
         public Builder listenerId(String listenerId) {
             this.putQueryParameter("ListenerId", listenerId);
@@ -131,7 +131,7 @@ public class GetListenerHealthStatusRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page. Valid values: <strong>1</strong> to <strong>30</strong>. Default value: <strong>20</strong>.</p>
+         * <p>The maximum number of entries to return per page in a paginated query. Valid values: <strong>1</strong> to <strong>30</strong>. Default value: <strong>20</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -143,10 +143,10 @@ public class GetListenerHealthStatusRequest extends Request {
         }
 
         /**
-         * <p>The token that determines the start point of the query. Valid values:</p>
+         * <p>Specifies whether there is a token for the next query. Valid values:</p>
          * <ul>
-         * <li>If this is your first query or no next queries are to be sent, ignore this parameter.</li>
-         * <li>If a next query is to be sent, set the value to the value of <strong>NextToken</strong> that is returned from the last call.</li>
+         * <li>For the first query or when no next query exists, leave this parameter empty.</li>
+         * <li>If a next query exists, set this parameter to the <strong>NextToken</strong> value returned by the previous API call.</li>
          * </ul>
          * 
          * <strong>example:</strong>

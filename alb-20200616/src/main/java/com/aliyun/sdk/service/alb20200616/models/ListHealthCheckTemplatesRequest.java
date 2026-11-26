@@ -130,7 +130,7 @@ public class ListHealthCheckTemplatesRequest extends Request {
         } 
 
         /**
-         * <p>The IDs of health check templates.</p>
+         * <p>The list of health check template IDs.</p>
          */
         public Builder healthCheckTemplateIds(java.util.List<String> healthCheckTemplateIds) {
             this.putQueryParameter("HealthCheckTemplateIds", healthCheckTemplateIds);
@@ -139,7 +139,7 @@ public class ListHealthCheckTemplatesRequest extends Request {
         }
 
         /**
-         * <p>The health check templates.</p>
+         * <p>The list of health check template names.</p>
          */
         public Builder healthCheckTemplateNames(java.util.List<String> healthCheckTemplateNames) {
             this.putQueryParameter("HealthCheckTemplateNames", healthCheckTemplateNames);
@@ -148,7 +148,7 @@ public class ListHealthCheckTemplatesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return in each call. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong></p>
+         * <p>The number of entries to return per page. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -160,10 +160,10 @@ public class ListHealthCheckTemplatesRequest extends Request {
         }
 
         /**
-         * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
+         * <p>The pagination token. Valid values:</p>
          * <ul>
-         * <li>You do not need to specify this parameter for the first request.</li>
-         * <li>You must specify the token that is obtained from the previous query as the value of <strong>NextToken</strong>.</li>
+         * <li>If this is the first query or no next query is required, leave this parameter empty.</li>
+         * <li>If a next query is required, set the value to the <strong>NextToken</strong> value returned from the previous API call.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -176,7 +176,7 @@ public class ListHealthCheckTemplatesRequest extends Request {
         }
 
         /**
-         * <p>The resource group ID. You can filter the query results based on the specified ID.</p>
+         * <p>The resource group ID. The results are filtered based on the specified resource group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-atstuj3rtop****</p>
@@ -256,7 +256,7 @@ public class ListHealthCheckTemplatesRequest extends Request {
             } 
 
             /**
-             * <p>The tag key. The tag key can be up to 128 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>The tag key. The key can be up to 128 characters in length, and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>env</p>
@@ -267,7 +267,7 @@ public class ListHealthCheckTemplatesRequest extends Request {
             }
 
             /**
-             * <p>The tag value. The tag value can be up to 128 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>The tag value. The value can be up to 128 characters in length, and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>product</p>

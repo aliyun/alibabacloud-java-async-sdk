@@ -67,7 +67,7 @@ public class AttachCommonBandwidthPackageToLoadBalancerResponseBody extends TeaM
         } 
 
         /**
-         * <p>The asynchronous task ID.</p>
+         * <p>The ID of the asynchronous task.</p>
          * 
          * <strong>example:</strong>
          * <p>72dcd26b-f12d-4c27-b3af-18f6aed5****</p>
@@ -81,7 +81,7 @@ public class AttachCommonBandwidthPackageToLoadBalancerResponseBody extends TeaM
          * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>2EF39708-974B-5E74-AFF5-3445263035A8</p>
+         * <p>2EF39708-974B-5E74-AFF5-3445******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

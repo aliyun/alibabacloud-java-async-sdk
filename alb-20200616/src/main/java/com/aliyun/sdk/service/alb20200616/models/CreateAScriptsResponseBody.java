@@ -80,7 +80,7 @@ public class CreateAScriptsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The AScript rule IDs.</p>
+         * <p>The list of programmable script IDs.</p>
          */
         public Builder aScriptIds(java.util.List<AScriptIds> aScriptIds) {
             this.aScriptIds = aScriptIds;
@@ -102,7 +102,7 @@ public class CreateAScriptsResponseBody extends TeaModel {
          * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>BF0FE763-9603-558F-A55B-0F4B9A3E3C02</p>
+         * <p>BF0FE763-9603-558F-A55B-0F4******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -155,7 +155,7 @@ public class CreateAScriptsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The AScript rule ID.</p>
+             * <p>The programmable script ID.</p>
              * 
              * <strong>example:</strong>
              * <p>as-xvq5igaa7uv6vr****</p>

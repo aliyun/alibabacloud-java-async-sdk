@@ -127,8 +127,10 @@ public class ListAclsResponseBody extends TeaModel {
         /**
          * <p>The token that is used for the next query. Valid values:</p>
          * <ul>
-         * <li>If <strong>NextToken</strong> is empty, it indicates that no next query is to be sent.</li>
-         * <li>If <strong>NextToken</strong> is returned, the value indicates the token that is used for the next query.</li>
+         * <li><p>If <strong>NextToken</strong> is empty, it indicates that no next query is to be sent.</p>
+         * </li>
+         * <li><p>If <strong>NextToken</strong> is returned, the value indicates the token that is used for the next query.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -143,7 +145,7 @@ public class ListAclsResponseBody extends TeaModel {
          * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>593B0448-D13E-4C56-AC0D-FDF0FDE0E9A3</p>
+         * <p>593B0448-D13E-4C56-AC0D-FDF******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -382,7 +384,7 @@ public class ListAclsResponseBody extends TeaModel {
              * <p>The ACL ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>nacl-hp34s2h0xx1ht4nwo****</p>
+             * <p>acl-hp34s2h0xx1ht4nwo****</p>
              */
             public Builder aclId(String aclId) {
                 this.aclId = aclId;
@@ -403,9 +405,12 @@ public class ListAclsResponseBody extends TeaModel {
             /**
              * <p>The status of the ACL. Valid values:</p>
              * <ul>
-             * <li><strong>Creating</strong>: The network ACL is being created.</li>
-             * <li><strong>Available</strong>: The network ACL is available.</li>
-             * <li><strong>Configuring</strong></li>
+             * <li><p><strong>Creating</strong>: The network ACL is being created.</p>
+             * </li>
+             * <li><p><strong>Available</strong>: The network ACL is available.</p>
+             * </li>
+             * <li><p><strong>Configuring</strong></p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -430,8 +435,10 @@ public class ListAclsResponseBody extends TeaModel {
             /**
              * <p>Indicates whether configuration management is enabled. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong></li>
+             * <li><p><strong>true</strong></p>
+             * </li>
+             * <li><p><strong>false</strong></p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>

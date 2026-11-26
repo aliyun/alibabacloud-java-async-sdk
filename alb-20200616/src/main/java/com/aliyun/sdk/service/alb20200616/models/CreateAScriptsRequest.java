@@ -102,7 +102,7 @@ public class CreateAScriptsRequest extends Request {
         } 
 
         /**
-         * <p>The information about the AScript rules.</p>
+         * <p>The list of programmable script information.</p>
          */
         public Builder aScripts(java.util.List<AScripts> aScripts) {
             this.putQueryParameter("AScripts", aScripts);
@@ -111,11 +111,11 @@ public class CreateAScriptsRequest extends Request {
         }
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request.</p>
-         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+         * <p>The client token used to ensure the idempotence of the request.</p>
+         * <p>Generate a unique value from your client for each request. ClientToken supports only ASCII characters.</p>
          * 
          * <strong>example:</strong>
-         * <p>5A2CFF0E-5718-45B5-9D4D-70B3FF3898</p>
+         * <p>5A2CFF0E-5718-45B5-9D4D-70B******</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -124,10 +124,10 @@ public class CreateAScriptsRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+         * <p>Specifies whether to perform a dry run. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
-         * <li><strong>false</strong>(default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
+         * <li><strong>true</strong>: Sends a dry run request. No programmable script is created. The system checks whether the required parameters are specified, the request format is valid, and business limits are met. If the check fails, the corresponding error is returned. If the check passes, the error code <code>DryRunOperation</code> is returned.</li>
+         * <li><strong>false</strong> (default): Sends a regular request. If the check passes, an HTTP 2xx status code is returned and the operation is performed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -212,8 +212,8 @@ public class CreateAScriptsRequest extends Request {
             } 
 
             /**
-             * <p>The key of the extended attribute.</p>
-             * <p>You can only set the key to <strong>EsDebug</strong>. This extended attribute adds a debug response header to record the execution of the AScript rule if the client request includes the _es_dbg parameter and its value matches the specified value of the extended attribute.</p>
+             * <p>The attribute key of the AScript script.</p>
+             * <p>Valid values: <strong>EsDebug</strong> only. When a request carries the _es_dbg parameter and its value matches the key configured here, the corresponding debug response headers are enabled to output rule execution records.</p>
              * 
              * <strong>example:</strong>
              * <p>EsDebug</p>
@@ -224,7 +224,7 @@ public class CreateAScriptsRequest extends Request {
             }
 
             /**
-             * <p>The value of the extended attribute, which can contain a maximum of 128 characters, including letters and digits.</p>
+             * <p>The attribute value. The value can contain uppercase and lowercase letters and digits, and must be 1 to 128 characters in length.</p>
              * 
              * <strong>example:</strong>
              * <p>test123</p>
@@ -348,8 +348,8 @@ public class CreateAScriptsRequest extends Request {
             } 
 
             /**
-             * <p>The name of the AScript rule.</p>
-             * <p>The length must be between 2 and 128 characters. This name must start with a letter and can contain letters, digits, periods (.), underscores (_), and hyphens (-).</p>
+             * <p>The name of the programmable script.</p>
+             * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), hyphens (-), and spaces. It must start with a letter, Chinese character, or digit.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -361,10 +361,12 @@ public class CreateAScriptsRequest extends Request {
             }
 
             /**
-             * <p>Enables the AScript rule. Valid values:</p>
+             * <p>Specifies whether to enable the programmable script. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong> (default)</li>
+             * <li><p><strong>true</strong>: Enabled.</p>
+             * </li>
+             * <li><p><strong>false</strong> (default): Disabled.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -376,10 +378,12 @@ public class CreateAScriptsRequest extends Request {
             }
 
             /**
-             * <p>Enables the extended attribute of the Ascript rule. Valid values:</p>
+             * <p>Specifies whether to enable the extended attributes of the programmable script. Valid values:</p>
              * <ul>
-             * <li>true</li>
-             * <li>false (default)</li>
+             * <li><p>true: Enabled.</p>
+             * </li>
+             * <li><p>false (default): Disabled.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -391,7 +395,7 @@ public class CreateAScriptsRequest extends Request {
             }
 
             /**
-             * <p>The extended attribute of the AScript rule.</p>
+             * <p>The extended attributes.</p>
              */
             public Builder extAttributes(java.util.List<ExtAttributes> extAttributes) {
                 this.extAttributes = extAttributes;
@@ -399,11 +403,14 @@ public class CreateAScriptsRequest extends Request {
             }
 
             /**
-             * <p>The position where the Ascript rule is evaluated. Valid values are:</p>
+             * <p>The execution position of the programmable script. Valid values:</p>
              * <ul>
-             * <li>RequestHead (default): before inbound rules are evaluated</li>
-             * <li>RequestFoot: after inbound rules are evaluated</li>
-             * <li>ResponseHead: before outbound rules are evaluated</li>
+             * <li><p>RequestHead (default): before request-direction rules are executed.</p>
+             * </li>
+             * <li><p>RequestFoot: after request-direction rules are executed.</p>
+             * </li>
+             * <li><p>ResponseHead: before response-direction rules are executed.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -415,7 +422,7 @@ public class CreateAScriptsRequest extends Request {
             }
 
             /**
-             * <p>The content of the AScript rule.</p>
+             * <p>The content of the programmable script.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

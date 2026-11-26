@@ -102,10 +102,7 @@ public class CreateRulesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The priority of the forwarding rule. Valid values: <strong>1 to 10000</strong>. A lower value specifies a higher priority.</p>
-         * <blockquote>
-         * <p>The priorities of the forwarding rules created for the same listener is unique.</p>
-         * </blockquote>
+         * <p>The list of forwarding rules.</p>
          */
         public Builder ruleIds(java.util.List<RuleIds> ruleIds) {
             this.ruleIds = ruleIds;
@@ -173,7 +170,7 @@ public class CreateRulesResponseBody extends TeaModel {
             /**
              * <p>The priority of the forwarding rule. Valid values: <strong>1 to 10000</strong>. A smaller value indicates a higher priority.</p>
              * <blockquote>
-             * <p>The priorities of the forwarding rules created for the same listener must be unique.</p>
+             * <p>The priority of each rule within the same listener must be unique.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -185,7 +182,7 @@ public class CreateRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The forwarding rule ID.</p>
+             * <p>The ID of the forwarding rule.</p>
              * 
              * <strong>example:</strong>
              * <p>rule-a3x3pg1yohq3lq****</p>

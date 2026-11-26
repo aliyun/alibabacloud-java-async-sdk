@@ -243,13 +243,13 @@ public class UpdateServerGroupAttributeRequest extends Request {
 
         /**
          * <p>The client token that is used to ensure the idempotence of the request.</p>
-         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+         * <p>You can use the client to generate the value, but you must ensure that it is unique among different requests. The client token can contain only ASCII characters.</p>
          * <blockquote>
-         * <p>If you do not specify this parameter, the system automatically uses the request ID as the client token. The request ID may be different for each request.</p>
+         * <p>If you do not specify this parameter, the system automatically uses the RequestId of the API request as the client token. The RequestId of each API request may be different.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>5A2CFF0E-5718-45B5-9D4D-70B3FF3898</p>
+         * <p>5A2CFF0E-5718-45B5-9D4D-70B3******</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -258,12 +258,12 @@ public class UpdateServerGroupAttributeRequest extends Request {
         }
 
         /**
-         * <p>The configurations of connection draining.</p>
-         * <p>After connection draining is enabled, SLB remains data transmission for a period of time after a backend server is removed or declared unhealthy.</p>
+         * <p>The graceful connection break configuration.</p>
+         * <p>After the graceful connection break is enabled, load balancing allows existing connections to be normally transmitted within a specified period after a backend server is removed or a health check is failed.</p>
          * <blockquote>
          * <ul>
-         * <li>Basic SLB instances do not support connection draining. Standard and WAF-enabled SLB instances support connection draining.</li>
-         * <li>Server groups of the server and IP types support connection draining. Server groups of the Function Compute type do not support connection draining.</li>
+         * <li>Basic Edition instances do not support connection draining. Only Standard Edition and WAF-enhanced Edition instances support this feature.</li>
+         * <li>Server group types that support connection draining include server type and IP type. Function Compute type is not supported.</li>
          * </ul>
          * </blockquote>
          */
@@ -274,16 +274,18 @@ public class UpdateServerGroupAttributeRequest extends Request {
         }
 
         /**
-         * <p>Indicates whether cross-zone load balancing is enabled for the server group. Valid values:</p>
+         * <p>Specifies whether to enable cross-zone load balancing for the server group. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong> (default)</li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong>: enables cross-zone load balancing (default).</p>
+         * </li>
+         * <li><p><strong>false</strong>: disables cross-zone load balancing.</p>
+         * </li>
          * </ul>
          * <blockquote>
          * <ul>
-         * <li>Basic ALB instances do not support server groups that have cross-zone load balancing disabled. Only Standard and WAF-enabled ALB instances support server groups that have cross-zone load balancing.</li>
-         * <li>Cross-zone load balancing can be disabled for server groups of the server and IP type, but not for server groups of the Function Compute type.</li>
-         * <li>When cross-zone load balancing is disabled, session persistence cannot be enabled.</li>
+         * <li>Basic Edition instances do not support server groups with cross-zone load balancing disabled. Only Standard Edition and WAF-enhanced Edition instances support this feature.</li>
+         * <li>Server group types that support disabling cross-zone load balancing include server type and IP type. Function Compute type is not supported.</li>
+         * <li>Session persistence cannot be enabled when cross-zone load balancing is disabled.</li>
          * </ul>
          * </blockquote>
          * 
@@ -297,10 +299,10 @@ public class UpdateServerGroupAttributeRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+         * <p>Specifies whether to perform only a dry run. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: checks the request without performing the operation. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
-         * <li><strong>false</strong> (default): performs a dry run and performs the actual request. If the request passes the dry run, a <code>2xx</code> HTTP status code is returned and the operation is performed.</li>
+         * <li><strong>true</strong>: performs only a dry run and does not modify resources. The system checks the required parameters, request format, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+         * <li><strong>false</strong> (default): performs a dry run and sends the actual request. If the request passes the dry run, an HTTP <code>2xx</code> status code is returned and the operation is performed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -313,7 +315,10 @@ public class UpdateServerGroupAttributeRequest extends Request {
         }
 
         /**
-         * <p>The configuration of health checks.</p>
+         * <p>The health check configuration struct.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder healthCheckConfig(HealthCheckConfig healthCheckConfig) {
             this.putQueryParameter("HealthCheckConfig", healthCheckConfig);
@@ -322,7 +327,15 @@ public class UpdateServerGroupAttributeRequest extends Request {
         }
 
         /**
-         * IpVersionAffinityMode.
+         * <p>The IP version affinity mode. Valid values:</p>
+         * <ul>
+         * <li>NonAffinity (default): no affinity mode.</li>
+         * <li>Affinity: affinity mode.</li>
+         * </ul>
+         * <p>This parameter takes effect only when Ipv6Enabled is set to true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Affinity</p>
          */
         public Builder ipVersionAffinityMode(String ipVersionAffinityMode) {
             this.putQueryParameter("IpVersionAffinityMode", ipVersionAffinityMode);
@@ -333,9 +346,9 @@ public class UpdateServerGroupAttributeRequest extends Request {
         /**
          * <p>The scheduling algorithm. Valid values:</p>
          * <ul>
-         * <li><strong>Wrr</strong>: the weighted round robin algorithm. Backend servers that have higher weights receive more requests than those that have lower weights.</li>
-         * <li><strong>Wlc</strong>: the weighted least connections algorithm. Requests are distributed based on the weights and the number of connections to backend servers. If two backend servers have the same weight, the backend server that has fewer connections is expected to receive more requests.</li>
-         * <li><strong>Sch</strong>: the consistent hashing algorithm. Requests from the same source IP address are distributed to the same backend server.</li>
+         * <li><strong>Wrr</strong>: weighted round-robin. Backend servers with higher weights receive more requests.</li>
+         * <li><strong>Wlc</strong>: weighted least connections. Requests are distributed based on the weights and actual loads (number of connections) of backend servers. If backend servers have the same weight, the server with the fewest connections receives more requests.</li>
+         * <li><strong>Sch</strong>: consistent hashing. Requests with the same hash factor are scheduled to the same backend server. If the UchConfig parameter is not configured, the default hash factor is the source IP address, and requests from the same source IP address are distributed to the same backend server. If the UchConfig parameter is configured, the hash factor is the URL parameter, and requests with the same URL parameter are distributed to the same backend server.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -348,7 +361,7 @@ public class UpdateServerGroupAttributeRequest extends Request {
         }
 
         /**
-         * <p>The server group ID.</p>
+         * <p>The ID of the server group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -361,8 +374,8 @@ public class UpdateServerGroupAttributeRequest extends Request {
         }
 
         /**
-         * <p>The server group name.</p>
-         * <p>The name must be 2 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter.</p>
+         * <p>The name of the server group.</p>
+         * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), hyphens (-), and spaces. It must start with a letter or a digit.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -374,7 +387,7 @@ public class UpdateServerGroupAttributeRequest extends Request {
         }
 
         /**
-         * <p>This parameter is available only if the ALB Ingress controller is used. In this case, set this parameter to the name of the <code>Kubernetes Service</code> that is associated with the server group.</p>
+         * <p>This parameter is applicable only to ALB Ingress scenarios and specifies the name of the <code>K8s Service</code> that corresponds to the server group.</p>
          * 
          * <strong>example:</strong>
          * <p>test2</p>
@@ -386,13 +399,13 @@ public class UpdateServerGroupAttributeRequest extends Request {
         }
 
         /**
-         * <p>The configurations of slow starts.</p>
-         * <p>After slow starts are enabled, ALB prefetches data to newly added backend servers. Requests distributed to the backend servers gradually increase.</p>
+         * <p>The slow start configuration.</p>
+         * <p>After slow start is enabled, newly added backend servers in the backend server group are warmed up within the specified time period, and the number of requests forwarded to the servers increases linearly.</p>
          * <blockquote>
          * <ul>
-         * <li>Basic ALB instances do not support slow starts. Standard and WAF-enabled ALB instances support slow starts.</li>
-         * <li>Server groups of the instance and IP types support slow starts. Server groups of the Function Compute type do not support slow starts.</li>
-         * <li>Slow start is supported only by the weighted round-robin scheduling algorithm.</li>
+         * <li>Basic Edition instances do not support slow start. Only Standard Edition and WAF-enhanced Edition instances support this feature.</li>
+         * <li>Server group types that support slow start include server type and IP type. Function Compute type is not supported.</li>
+         * <li>Slow start can be enabled only when the backend scheduling algorithm is weighted round-robin polling.</li>
          * </ul>
          * </blockquote>
          */
@@ -403,7 +416,7 @@ public class UpdateServerGroupAttributeRequest extends Request {
         }
 
         /**
-         * <p>The configuration of session persistence.</p>
+         * <p>The session persistence configuration struct.</p>
          */
         public Builder stickySessionConfig(StickySessionConfig stickySessionConfig) {
             this.putQueryParameter("StickySessionConfig", stickySessionConfig);
@@ -412,7 +425,7 @@ public class UpdateServerGroupAttributeRequest extends Request {
         }
 
         /**
-         * <p>The configurations of consistent hashing based on URLs.</p>
+         * <p>The URL consistent hashing parameter settings.</p>
          */
         public Builder uchConfig(UchConfig uchConfig) {
             this.putQueryParameter("UchConfig", uchConfig);
@@ -421,10 +434,16 @@ public class UpdateServerGroupAttributeRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable persistent TCP connections.</p>
+         * <p>Specifies whether to enable backend keep-alive. Valid values:</p>
+         * <ul>
+         * <li><p><strong>true</strong>: enables backend keep-alive.</p>
+         * </li>
+         * <li><p><strong>false</strong>: disables backend keep-alive.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
-         * <p>true</p>
+         * <p>false</p>
          */
         public Builder upstreamKeepaliveEnabled(Boolean upstreamKeepaliveEnabled) {
             this.putQueryParameter("UpstreamKeepaliveEnabled", upstreamKeepaliveEnabled);
@@ -494,8 +513,8 @@ public class UpdateServerGroupAttributeRequest extends Request {
             /**
              * <p>Specifies whether to enable connection draining. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong></li>
+             * <li><strong>true</strong>: enables connection draining.</li>
+             * <li><strong>false</strong>: disables connection draining.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -507,7 +526,7 @@ public class UpdateServerGroupAttributeRequest extends Request {
             }
 
             /**
-             * <p>The timeout period of connection draining.</p>
+             * <p>The connection draining timeout period.</p>
              * <p>Valid values: <strong>0</strong> to <strong>900</strong>.</p>
              * 
              * <strong>example:</strong>
@@ -713,7 +732,7 @@ public class UpdateServerGroupAttributeRequest extends Request {
             } 
 
             /**
-             * <p>The HTTP status codes that indicate healthy backend servers.</p>
+             * <p>The list of status codes that indicate a successful health check.</p>
              */
             public Builder healthCheckCodes(java.util.List<String> healthCheckCodes) {
                 this.healthCheckCodes = healthCheckCodes;
@@ -721,11 +740,11 @@ public class UpdateServerGroupAttributeRequest extends Request {
             }
 
             /**
-             * <p>The backend port that is used for health checks.</p>
+             * <p>The port of the backend server that is used for health checks.</p>
              * <p>Valid values: <strong>0</strong> to <strong>65535</strong>.</p>
-             * <p>If you set the value to <strong>0</strong>, the backend port is used for health checks.</p>
+             * <p>A value of <strong>0</strong> indicates that the port of the backend server is used for health checks.</p>
              * <blockquote>
-             * <p> This parameter takes effect only if you set <strong>HealthCheckEnabled</strong> to <strong>true</strong>.</p>
+             * <p>The parameter settings take effect only when <strong>HealthCheckEnabled</strong> is set to <strong>true</strong> for the server group.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -737,10 +756,10 @@ public class UpdateServerGroupAttributeRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to enable the health check feature. Valid values:</p>
+             * <p>Specifies whether to enable health checks. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong></li>
+             * <li><strong>true</strong>: enables health checks.</li>
+             * <li><strong>false</strong>: disables health checks.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -754,20 +773,25 @@ public class UpdateServerGroupAttributeRequest extends Request {
             /**
              * <p>The domain name that is used for health checks.</p>
              * <ul>
-             * <li><p><strong>Backend Server Internal IP</strong> (default): Use the internal IP address of backend servers as the health check domain name.</p>
+             * <li><p><strong>Internal IP address of the backend server</strong> (default): The internal IP address of the backend server is used as the domain name for health checks.</p>
              * </li>
-             * <li><p><strong>Custom Domain Name</strong>: Enter a domain name.</p>
+             * <li><p><strong>Custom domain name</strong>: Enter a domain name.</p>
              * <ul>
-             * <li>The domain name must be 1 to 80 characters in length.</li>
-             * <li>The domain name can contain lowercase letters, digits, hyphens (-), and periods (.).</li>
-             * <li>The domain name must contain at least one period (.) but cannot start or end with a period (.).</li>
-             * <li>The rightmost domain label of the domain name can contain only letters, and cannot contain digits or hyphens (-).</li>
-             * <li>The domain name cannot start or end with a hyphen (-).</li>
+             * <li><p>The domain name must be 1 to 80 characters in length.</p>
+             * </li>
+             * <li><p>It can contain lowercase letters, digits, hyphens (-), and periods (.).</p>
+             * </li>
+             * <li><p>It must contain at least one period (.), and the period (.) cannot be at the beginning or end.</p>
+             * </li>
+             * <li><p>The rightmost domain label can contain only letters, and cannot contain digits or hyphens (-).</p>
+             * </li>
+             * <li><p>The domain name cannot start or end with a hyphen (-).</p>
+             * </li>
              * </ul>
              * </li>
              * </ul>
              * <blockquote>
-             * <p> This parameter takes effect only if <strong>HealthCheckProtocol</strong> is set to <strong>HTTP</strong>, <strong>HTTPS</strong>, or <strong>gRPC</strong>.</p>
+             * <p>This parameter takes effect only when <strong>HealthCheckProtocol</strong> is set to <strong>HTTP</strong>, <strong>HTTPS</strong>, or <strong>gRPC</strong>.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -785,7 +809,7 @@ public class UpdateServerGroupAttributeRequest extends Request {
              * <li><strong>HTTP1.1</strong></li>
              * </ul>
              * <blockquote>
-             * <p> This parameter takes effect only if you set <strong>HealthCheckEnabled</strong> to true and <strong>HealthCheckProtocol</strong> to <strong>HTTP</strong> or <strong>HTTPS</strong>.</p>
+             * <p>This parameter takes effect only when <strong>HealthCheckEnabled</strong> is set to true and <strong>HealthCheckProtocol</strong> is set to <strong>HTTP</strong> or <strong>HTTPS</strong> for the server group.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -797,10 +821,10 @@ public class UpdateServerGroupAttributeRequest extends Request {
             }
 
             /**
-             * <p>The interval at which health checks are performed. Unit: seconds.</p>
+             * <p>The interval between two consecutive health checks. Unit: seconds. </p>
              * <p>Valid values: <strong>1</strong> to <strong>50</strong>.</p>
              * <blockquote>
-             * <p> This parameter takes effect only if you set <strong>HealthCheckEnabled</strong> to <strong>true</strong>.</p>
+             * <p>The parameter settings take effect only when <strong>HealthCheckEnabled</strong> is set to <strong>true</strong> for the server group.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -814,12 +838,15 @@ public class UpdateServerGroupAttributeRequest extends Request {
             /**
              * <p>The HTTP method that is used for health checks. Valid values:</p>
              * <ul>
-             * <li><strong>GET</strong>: If the length of a response exceeds 8 KB, the response is truncated. However, the health check result is not affected.</li>
-             * <li><strong>POST</strong>: gRPC health checks use the POST method by default.</li>
-             * <li><strong>HEAD</strong>: HTTP and HTTPS health checks use the HEAD method by default.</li>
+             * <li><p><strong>GET</strong>: If the length of the response message exceeds 8 KB, the message is truncated. However, the health check result is not affected.</p>
+             * </li>
+             * <li><p><strong>POST</strong>: The POST method is used by default for gRPC listener health checks.</p>
+             * </li>
+             * <li><p><strong>HEAD</strong>: The HEAD method is used by default for HTTP and HTTPS listener health checks.</p>
+             * </li>
              * </ul>
              * <blockquote>
-             * <p> This parameter takes effect only if you set <strong>HealthCheckEnabled</strong> to true and <strong>HealthCheckProtocol</strong> to <strong>HTTP</strong>, <strong>HTTPS</strong>, or <strong>gRPC</strong>.</p>
+             * <p>This parameter takes effect only when <strong>HealthCheckEnabled</strong> is set to true and <strong>HealthCheckProtocol</strong> is set to <strong>HTTP</strong>, <strong>HTTPS</strong>, or <strong>gRPC</strong> for the server group.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -831,10 +858,10 @@ public class UpdateServerGroupAttributeRequest extends Request {
             }
 
             /**
-             * <p>The URL that is used for health checks.</p>
-             * <p>The URL must be 1 to 80 characters in length, and can contain letters, digits, and the following special characters: <code>- / . % ? # &amp; =</code>. It can also contain the following extended characters: <code>_ ; ~ ! ( ) * [ ] @ $ ^ : \&quot; , +</code>. The URL must start with a forward slash (<code>/</code>).</p>
+             * <p>The path that is used for health checks.</p>
+             * <p>The path must be 1 to 80 characters in length, and can contain only letters, digits, the characters <code>-/.%?#&amp;=</code>, and the extension characters <code>_;~!()*[]@$^:\&quot;,+</code>. The path must start with a forward slash.</p>
              * <blockquote>
-             * <p> This parameter takes effect only if you set <strong>HealthCheckEnabled</strong> to <strong>true</strong> and <strong>HealthCheckProtocol</strong> to <strong>HTTP</strong> or <strong>HTTPS</strong>.</p>
+             * <p>This parameter takes effect only when <strong>HealthCheckEnabled</strong> is set to <strong>true</strong> and the <strong>HealthCheckProtocol</strong> settings are <strong>HTTP</strong> or <strong>HTTPS</strong> for the server group.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -846,12 +873,16 @@ public class UpdateServerGroupAttributeRequest extends Request {
             }
 
             /**
-             * <p>The protocol that you want to use for health checks. Valid values:</p>
+             * <p>The protocol that is used for health checks. Valid values:</p>
              * <ul>
-             * <li><strong>HTTP</strong>: HTTP health checks simulate browser behaviors by sending HEAD or GET requests to probe the availability of backend servers.</li>
-             * <li><strong>HTTPS</strong>: HTTPS health checks simulate browser behaviors by sending HEAD or GET requests to probe the availability of backend servers. HTTPS supports encryption and provides higher security than HTTP.</li>
-             * <li><strong>TCP</strong>: TCP health checks send TCP SYN packets to a backend server to probe the availability of backend servers.</li>
-             * <li><strong>gRPC</strong>: gRPC health checks send POST or GET requests to a backend server to check whether the backend server is healthy.</li>
+             * <li><p><strong>HTTP</strong>: sends HEAD or GET requests for browser impersonation to check whether the server application is healthy.</p>
+             * </li>
+             * <li><p><strong>HTTPS</strong>: sends HEAD or GET requests for browser impersonation to check whether the server application is healthy. (Data encryption makes it more secure than HTTP.)</p>
+             * </li>
+             * <li><p><strong>TCP</strong>: sends SYN handshake packets to check whether the server port is alive.</p>
+             * </li>
+             * <li><p><strong>gRPC</strong>: sends POST or GET requests to check whether the server application is healthy.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -863,10 +894,10 @@ public class UpdateServerGroupAttributeRequest extends Request {
             }
 
             /**
-             * <p>The timeout period of a health check response. If a backend ECS instance does not respond within the specified timeout period, the ECS instance fails the health check. Unit: seconds.</p>
+             * <p>The timeout period to accept a response from a health check. If the backend ECS instance does not respond correctly within the specified time, the health check is failed. Unit: seconds.</p>
              * <p>Valid values: <strong>1</strong> to <strong>300</strong>.</p>
              * <blockquote>
-             * <p> This parameter takes effect only if you set <strong>HealthCheckEnabled</strong> to <strong>true</strong>.</p>
+             * <p>The parameter settings take effect only when <strong>HealthCheckEnabled</strong> is set to <strong>true</strong> for the server group.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -878,7 +909,7 @@ public class UpdateServerGroupAttributeRequest extends Request {
             }
 
             /**
-             * <p>The number of times that an unhealthy backend server must consecutively pass health checks before it can be declared healthy. In this case, the health check status of the backend server changes from <strong>fail</strong> to <strong>success</strong>.</p>
+             * <p>The number of consecutive successful health checks that must occur before the health check status of a backend server changes from <strong>fail</strong> to <strong>success</strong>.</p>
              * <p>Valid values: <strong>2</strong> to <strong>10</strong>.</p>
              * 
              * <strong>example:</strong>
@@ -890,7 +921,7 @@ public class UpdateServerGroupAttributeRequest extends Request {
             }
 
             /**
-             * <p>The number of times that a healthy backend server must consecutively fail health checks before it can be declared unhealthy. In this case, the health check status of the backend server changes from <strong>success</strong> to <strong>fail</strong>.</p>
+             * <p>The number of consecutive failed health checks that must occur before the health check status of a backend server changes from <strong>success</strong> to <strong>fail</strong>.</p>
              * <p>Valid values: <strong>2</strong> to <strong>10</strong>.</p>
              * 
              * <strong>example:</strong>
@@ -961,7 +992,8 @@ public class UpdateServerGroupAttributeRequest extends Request {
             } 
 
             /**
-             * <p>The duration of a slow start.</p>
+             * <p>The slow start duration.</p>
+             * <p>Valid values: <strong>30</strong> to <strong>900</strong>.</p>
              * 
              * <strong>example:</strong>
              * <p>30</p>
@@ -972,10 +1004,10 @@ public class UpdateServerGroupAttributeRequest extends Request {
             }
 
             /**
-             * <p>Indicates whether slow starts are enabled. Valid values:</p>
+             * <p>Specifies whether to enable slow start. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong></li>
+             * <li><strong>true</strong>: enables slow start.</li>
+             * <li><strong>false</strong>: disables slow start.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1073,14 +1105,14 @@ public class UpdateServerGroupAttributeRequest extends Request {
             } 
 
             /**
-             * <p>The cookie to be configured on the server.</p>
-             * <p>The cookie must be 1 to 200 characters in length and can contain only ASCII characters and digits. It cannot contain commas (,), semicolons (;), or space characters. It cannot start with a dollar sign ($).</p>
+             * <p>The cookie configured on the server.</p>
+             * <p>The cookie must be 1 to 200 characters in length, and can contain only ASCII letters and digits. It cannot contain commas (,), semicolons (;), or spaces, and cannot start with a dollar sign ($).</p>
              * <blockquote>
-             * <p>This parameter takes effect when the <strong>StickySessionEnabled</strong> parameter is set to <strong>true</strong> and the <strong>StickySessionType</strong> parameter is set to <strong>Server</strong>.</p>
+             * <p>This parameter takes effect only when <strong>StickySessionEnabled</strong> is set to <strong>true</strong> and <strong>StickySessionType</strong> is set to <strong>Server</strong> for the server group.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
-             * <p>B490B5EBF6F3CD402E515D22BCDA1598</p>
+             * <p>B490B5EBF6F3CD402E515D22B******</p>
              */
             public Builder cookie(String cookie) {
                 this.cookie = cookie;
@@ -1088,10 +1120,10 @@ public class UpdateServerGroupAttributeRequest extends Request {
             }
 
             /**
-             * <p>The timeout period of a cookie. Unit: seconds.</p>
+             * <p>The timeout period of the cookie. Unit: seconds.</p>
              * <p>Valid values: <strong>1</strong> to <strong>86400</strong>.</p>
              * <blockquote>
-             * <p>This parameter takes effect when the <strong>StickySessionEnabled</strong> parameter is set to <strong>true</strong> and the <strong>StickySessionType</strong> parameter is set to <strong>Insert</strong>.</p>
+             * <p>This parameter takes effect only when <strong>StickySessionEnabled</strong> is set to <strong>true</strong> and <strong>StickySessionType</strong> is set to <strong>Insert</strong> for the server group.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1105,8 +1137,8 @@ public class UpdateServerGroupAttributeRequest extends Request {
             /**
              * <p>Specifies whether to enable session persistence. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong> (default)</li>
+             * <li><strong>true</strong>: enables session persistence.</li>
+             * <li><strong>false</strong>: disables session persistence.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1118,17 +1150,15 @@ public class UpdateServerGroupAttributeRequest extends Request {
             }
 
             /**
-             * <p>The method that is used to handle a cookie. Valid values:</p>
+             * <p>The method that is used to handle cookies. Valid values:</p>
              * <ul>
-             * <li><strong>Insert</strong>: inserts a cookie.</li>
+             * <li><strong>Insert</strong>: inserts a cookie.
+             * When a client accesses the server for the first time, load balancing inserts a cookie (SERVERID) into the HTTP or HTTPS response. The next time the client accesses the server with this cookie, the load balancing service forwards the request to the recorded backend server.</li>
+             * <li><strong>Server</strong>: rewrites a cookie.
+             * When ALB detects a user-defined cookie, it rewrites the original cookie. The next time the client accesses the server with the new cookie, ALB forwards the request to the recorded backend server.</li>
              * </ul>
-             * <p>ALB inserts a cookie (SERVERID) into the first HTTP or HTTPS response packet that is sent to a client. The next request from the client contains this cookie and the listener forwards this request to the recorded backend server.</p>
-             * <ul>
-             * <li><strong>Server</strong>: rewrites a cookie.</li>
-             * </ul>
-             * <p>When ALB detects a user-defined cookie, it overwrites the original cookie with the user-defined cookie. Subsequent requests to ALB carry this user-defined cookie, and ALB determines the destination servers of the requests based on the cookies.</p>
              * <blockquote>
-             * <p>This parameter takes effect when the <strong>StickySessionEnabled</strong> parameter is set to <strong>true</strong> for the server group.</p>
+             * <p>This parameter takes effect only when <strong>StickySessionEnabled</strong> is set to <strong>true</strong> for the server group.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1201,7 +1231,7 @@ public class UpdateServerGroupAttributeRequest extends Request {
             } 
 
             /**
-             * <p>The type of the parameter. Only query strings are supported.</p>
+             * <p>The parameter type. Only QueryString is supported.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1213,7 +1243,7 @@ public class UpdateServerGroupAttributeRequest extends Request {
             }
 
             /**
-             * <p>The value of the parameter used for consistent hashing.</p>
+             * <p>The consistent hashing parameter value.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

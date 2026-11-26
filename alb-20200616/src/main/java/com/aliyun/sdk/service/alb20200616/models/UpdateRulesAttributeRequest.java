@@ -89,13 +89,13 @@ public class UpdateRulesAttributeRequest extends Request {
 
         /**
          * <p>The client token that is used to ensure the idempotence of the request.</p>
-         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
+         * <p>You can use the client to generate the value, but you must ensure that it is unique among different requests. The ClientToken parameter can contain only ASCII characters.</p>
          * <blockquote>
-         * <p>If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+         * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request is unique.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>123e4567-e89b-12d3-a456-426655440000</p>
+         * <p>123e4567-e89b-12d3-a456-42665544***</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -104,10 +104,12 @@ public class UpdateRulesAttributeRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+         * <p>Specifies whether to perform a dry run only. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
-         * <li><strong>false</strong> (default): performs a dry run and performs the actual request. If the request passes the dry run, a <code>2xx HTTP</code> status code is returned and the operation is performed.</li>
+         * <li><p><strong>true</strong>: performs a dry run only and does not batch update the forwarding rule attributes. The system checks whether required parameters are specified, the request format is valid, and service limits are met. If the request fails the check, an error is returned. If the request passes the check, the <code>DryRunOperation</code> error code is returned.</p>
+         * </li>
+         * <li><p><strong>false</strong> (default): sends a normal request. If the request passes the check, an <code>HTTP 2xx</code> status code is returned and the operation is performed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -120,6 +122,7 @@ public class UpdateRulesAttributeRequest extends Request {
         }
 
         /**
+         * <p>The list of forwarding rules.</p>
          * <p>This parameter is required.</p>
          */
         public Builder rules(java.util.List<Rules> rules) {
@@ -240,7 +243,10 @@ public class UpdateRulesAttributeRequest extends Request {
             } 
 
             /**
-             * AllowCredentials.
+             * <p>Specifies whether to allow credentials in cross-origin requests.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>off</p>
              */
             public Builder allowCredentials(String allowCredentials) {
                 this.allowCredentials = allowCredentials;
@@ -248,7 +254,7 @@ public class UpdateRulesAttributeRequest extends Request {
             }
 
             /**
-             * AllowHeaders.
+             * <p>The list of allowed headers for cross-origin requests.</p>
              */
             public Builder allowHeaders(java.util.List<String> allowHeaders) {
                 this.allowHeaders = allowHeaders;
@@ -256,7 +262,7 @@ public class UpdateRulesAttributeRequest extends Request {
             }
 
             /**
-             * AllowMethods.
+             * <p>The allowed HTTP methods for cross-origin requests.</p>
              */
             public Builder allowMethods(java.util.List<String> allowMethods) {
                 this.allowMethods = allowMethods;
@@ -264,7 +270,7 @@ public class UpdateRulesAttributeRequest extends Request {
             }
 
             /**
-             * AllowOrigin.
+             * <p>The allowed origins.</p>
              */
             public Builder allowOrigin(java.util.List<String> allowOrigin) {
                 this.allowOrigin = allowOrigin;
@@ -272,7 +278,7 @@ public class UpdateRulesAttributeRequest extends Request {
             }
 
             /**
-             * ExposeHeaders.
+             * <p>The list of exposed headers.</p>
              */
             public Builder exposeHeaders(java.util.List<String> exposeHeaders) {
                 this.exposeHeaders = exposeHeaders;
@@ -280,7 +286,10 @@ public class UpdateRulesAttributeRequest extends Request {
             }
 
             /**
-             * MaxAge.
+             * <p>The maximum cache time for preflight requests in the browser.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder maxAge(Long maxAge) {
                 this.maxAge = maxAge;
@@ -360,7 +369,10 @@ public class UpdateRulesAttributeRequest extends Request {
             } 
 
             /**
-             * Content.
+             * <p>The content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dssacav</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -368,7 +380,10 @@ public class UpdateRulesAttributeRequest extends Request {
             }
 
             /**
-             * ContentType.
+             * <p>The content type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>text/plain</p>
              */
             public Builder contentType(String contentType) {
                 this.contentType = contentType;
@@ -376,7 +391,10 @@ public class UpdateRulesAttributeRequest extends Request {
             }
 
             /**
-             * HttpCode.
+             * <p>The HTTP status code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder httpCode(String httpCode) {
                 this.httpCode = httpCode;
@@ -443,7 +461,10 @@ public class UpdateRulesAttributeRequest extends Request {
             } 
 
             /**
-             * Enabled.
+             * <p>Specifies whether session persistence is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -451,7 +472,10 @@ public class UpdateRulesAttributeRequest extends Request {
             }
 
             /**
-             * Timeout.
+             * <p>The timeout period for session persistence across server groups. Unit: seconds. Valid values: 1 to 86400.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder timeout(Integer timeout) {
                 this.timeout = timeout;
@@ -518,7 +542,10 @@ public class UpdateRulesAttributeRequest extends Request {
             } 
 
             /**
-             * ServerGroupId.
+             * <p>The ID of the server group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sgp-3kbj35ay7cvi******</p>
              */
             public Builder serverGroupId(String serverGroupId) {
                 this.serverGroupId = serverGroupId;
@@ -526,7 +553,10 @@ public class UpdateRulesAttributeRequest extends Request {
             }
 
             /**
-             * Weight.
+             * <p>The weight.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder weight(Integer weight) {
                 this.weight = weight;
@@ -593,7 +623,7 @@ public class UpdateRulesAttributeRequest extends Request {
             } 
 
             /**
-             * ServerGroupStickySession.
+             * <p>The session persistence across server groups.</p>
              */
             public Builder serverGroupStickySession(ServerGroupStickySession serverGroupStickySession) {
                 this.serverGroupStickySession = serverGroupStickySession;
@@ -601,7 +631,7 @@ public class UpdateRulesAttributeRequest extends Request {
             }
 
             /**
-             * ServerGroupTuples.
+             * <p>The list of destination server groups to which requests are forwarded.</p>
              */
             public Builder serverGroupTuples(java.util.List<ServerGroupTuples> serverGroupTuples) {
                 this.serverGroupTuples = serverGroupTuples;
@@ -694,7 +724,10 @@ public class UpdateRulesAttributeRequest extends Request {
             } 
 
             /**
-             * CoverEnabled.
+             * <p>Specifies whether to overwrite the existing value in the request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>False</p>
              */
             public Builder coverEnabled(Boolean coverEnabled) {
                 this.coverEnabled = coverEnabled;
@@ -702,7 +735,10 @@ public class UpdateRulesAttributeRequest extends Request {
             }
 
             /**
-             * Key.
+             * <p>The HTTP header.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -710,7 +746,10 @@ public class UpdateRulesAttributeRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The value of the HTTP header.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -718,7 +757,10 @@ public class UpdateRulesAttributeRequest extends Request {
             }
 
             /**
-             * ValueType.
+             * <p>The type of the value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SystemDefined</p>
              */
             public Builder valueType(String valueType) {
                 this.valueType = valueType;
@@ -837,7 +879,10 @@ public class UpdateRulesAttributeRequest extends Request {
             } 
 
             /**
-             * Host.
+             * <p>The host to which requests are redirected.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test.alb.com</p>
              */
             public Builder host(String host) {
                 this.host = host;
@@ -845,7 +890,10 @@ public class UpdateRulesAttributeRequest extends Request {
             }
 
             /**
-             * HttpCode.
+             * <p>The redirect method.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>301</p>
              */
             public Builder httpCode(String httpCode) {
                 this.httpCode = httpCode;
@@ -853,7 +901,10 @@ public class UpdateRulesAttributeRequest extends Request {
             }
 
             /**
-             * Path.
+             * <p>The path to which requests are redirected.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/</p>
              */
             public Builder path(String path) {
                 this.path = path;
@@ -861,7 +912,10 @@ public class UpdateRulesAttributeRequest extends Request {
             }
 
             /**
-             * Port.
+             * <p>The port to which requests are redirected.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>443</p>
              */
             public Builder port(String port) {
                 this.port = port;
@@ -869,7 +923,10 @@ public class UpdateRulesAttributeRequest extends Request {
             }
 
             /**
-             * Protocol.
+             * <p>The protocol to which requests are redirected.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HTTPS</p>
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -877,7 +934,10 @@ public class UpdateRulesAttributeRequest extends Request {
             }
 
             /**
-             * Query.
+             * <p>The query string to which requests are redirected.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>${query}</p>
              */
             public Builder query(String query) {
                 this.query = query;
@@ -931,7 +991,10 @@ public class UpdateRulesAttributeRequest extends Request {
             } 
 
             /**
-             * Key.
+             * <p>The HTTP header key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -1011,7 +1074,10 @@ public class UpdateRulesAttributeRequest extends Request {
             } 
 
             /**
-             * Host.
+             * <p>The hostname.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>${host}</p>
              */
             public Builder host(String host) {
                 this.host = host;
@@ -1019,7 +1085,10 @@ public class UpdateRulesAttributeRequest extends Request {
             }
 
             /**
-             * Path.
+             * <p>The path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/</p>
              */
             public Builder path(String path) {
                 this.path = path;
@@ -1027,7 +1096,10 @@ public class UpdateRulesAttributeRequest extends Request {
             }
 
             /**
-             * Query.
+             * <p>The query string.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>${query}</p>
              */
             public Builder query(String query) {
                 this.query = query;
@@ -1094,7 +1166,10 @@ public class UpdateRulesAttributeRequest extends Request {
             } 
 
             /**
-             * PerIpQps.
+             * <p>The number of requests per second per IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder perIpQps(Integer perIpQps) {
                 this.perIpQps = perIpQps;
@@ -1102,7 +1177,10 @@ public class UpdateRulesAttributeRequest extends Request {
             }
 
             /**
-             * QPS.
+             * <p>The number of requests per second.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder QPS(Integer QPS) {
                 this.QPS = QPS;
@@ -1156,7 +1234,10 @@ public class UpdateRulesAttributeRequest extends Request {
             } 
 
             /**
-             * ServerGroupId.
+             * <p>The server group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sgp-vlnjo1rhw0vc******</p>
              */
             public Builder serverGroupId(String serverGroupId) {
                 this.serverGroupId = serverGroupId;
@@ -1210,7 +1291,7 @@ public class UpdateRulesAttributeRequest extends Request {
             } 
 
             /**
-             * ServerGroupTuples.
+             * <p>The server groups to which traffic is mirrored.</p>
              */
             public Builder serverGroupTuples(java.util.List<MirrorGroupConfigServerGroupTuples> serverGroupTuples) {
                 this.serverGroupTuples = serverGroupTuples;
@@ -1277,7 +1358,7 @@ public class UpdateRulesAttributeRequest extends Request {
             } 
 
             /**
-             * MirrorGroupConfig.
+             * <p>The configuration for mirroring traffic to a server group.</p>
              */
             public Builder mirrorGroupConfig(MirrorGroupConfig mirrorGroupConfig) {
                 this.mirrorGroupConfig = mirrorGroupConfig;
@@ -1285,7 +1366,10 @@ public class UpdateRulesAttributeRequest extends Request {
             }
 
             /**
-             * TargetType.
+             * <p>The type of the mirror target.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ForwardGroupMirror</p>
              */
             public Builder targetType(String targetType) {
                 this.targetType = targetType;
@@ -1471,7 +1555,7 @@ public class UpdateRulesAttributeRequest extends Request {
             } 
 
             /**
-             * CorsConfig.
+             * <p>The CORS configuration.</p>
              */
             public Builder corsConfig(CorsConfig corsConfig) {
                 this.corsConfig = corsConfig;
@@ -1479,7 +1563,7 @@ public class UpdateRulesAttributeRequest extends Request {
             }
 
             /**
-             * FixedResponseConfig.
+             * <p>The configuration of the fixed response action.</p>
              */
             public Builder fixedResponseConfig(FixedResponseConfig fixedResponseConfig) {
                 this.fixedResponseConfig = fixedResponseConfig;
@@ -1487,7 +1571,7 @@ public class UpdateRulesAttributeRequest extends Request {
             }
 
             /**
-             * ForwardGroupConfig.
+             * <p>The configuration of the forward group action.</p>
              */
             public Builder forwardGroupConfig(ForwardGroupConfig forwardGroupConfig) {
                 this.forwardGroupConfig = forwardGroupConfig;
@@ -1495,7 +1579,7 @@ public class UpdateRulesAttributeRequest extends Request {
             }
 
             /**
-             * InsertHeaderConfig.
+             * <p>The configuration of the insert header action.</p>
              */
             public Builder insertHeaderConfig(InsertHeaderConfig insertHeaderConfig) {
                 this.insertHeaderConfig = insertHeaderConfig;
@@ -1503,7 +1587,11 @@ public class UpdateRulesAttributeRequest extends Request {
             }
 
             /**
+             * <p>The priority.</p>
              * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder order(Integer order) {
                 this.order = order;
@@ -1511,7 +1599,7 @@ public class UpdateRulesAttributeRequest extends Request {
             }
 
             /**
-             * RedirectConfig.
+             * <p>The configuration of the redirect action.</p>
              */
             public Builder redirectConfig(RedirectConfig redirectConfig) {
                 this.redirectConfig = redirectConfig;
@@ -1519,7 +1607,7 @@ public class UpdateRulesAttributeRequest extends Request {
             }
 
             /**
-             * RemoveHeaderConfig.
+             * <p>Removes HTTP headers.</p>
              */
             public Builder removeHeaderConfig(RemoveHeaderConfig removeHeaderConfig) {
                 this.removeHeaderConfig = removeHeaderConfig;
@@ -1527,7 +1615,7 @@ public class UpdateRulesAttributeRequest extends Request {
             }
 
             /**
-             * RewriteConfig.
+             * <p>The configuration of the rewrite action.</p>
              */
             public Builder rewriteConfig(RewriteConfig rewriteConfig) {
                 this.rewriteConfig = rewriteConfig;
@@ -1535,7 +1623,7 @@ public class UpdateRulesAttributeRequest extends Request {
             }
 
             /**
-             * TrafficLimitConfig.
+             * <p>The traffic throttling configuration.</p>
              */
             public Builder trafficLimitConfig(TrafficLimitConfig trafficLimitConfig) {
                 this.trafficLimitConfig = trafficLimitConfig;
@@ -1543,7 +1631,7 @@ public class UpdateRulesAttributeRequest extends Request {
             }
 
             /**
-             * TrafficMirrorConfig.
+             * <p>The traffic mirroring configuration.</p>
              */
             public Builder trafficMirrorConfig(TrafficMirrorConfig trafficMirrorConfig) {
                 this.trafficMirrorConfig = trafficMirrorConfig;
@@ -1551,7 +1639,11 @@ public class UpdateRulesAttributeRequest extends Request {
             }
 
             /**
+             * <p>The type of the forwarding rule action.</p>
              * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ForwardGroup</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -1618,7 +1710,10 @@ public class UpdateRulesAttributeRequest extends Request {
             } 
 
             /**
-             * Key.
+             * <p>The cookie condition key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -1626,7 +1721,10 @@ public class UpdateRulesAttributeRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The cookie condition value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -1680,7 +1778,7 @@ public class UpdateRulesAttributeRequest extends Request {
             } 
 
             /**
-             * Values.
+             * <p>The list of cookie key-value pairs.</p>
              */
             public Builder values(java.util.List<Values> values) {
                 this.values = values;
@@ -1747,7 +1845,10 @@ public class UpdateRulesAttributeRequest extends Request {
             } 
 
             /**
-             * Key.
+             * <p>The HTTP header key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -1755,7 +1856,7 @@ public class UpdateRulesAttributeRequest extends Request {
             }
 
             /**
-             * Values.
+             * <p>The list of HTTP header values.</p>
              */
             public Builder values(java.util.List<String> values) {
                 this.values = values;
@@ -1809,7 +1910,7 @@ public class UpdateRulesAttributeRequest extends Request {
             } 
 
             /**
-             * Values.
+             * <p>The list of hostnames.</p>
              */
             public Builder values(java.util.List<String> values) {
                 this.values = values;
@@ -1863,7 +1964,7 @@ public class UpdateRulesAttributeRequest extends Request {
             } 
 
             /**
-             * Values.
+             * <p>The list of HTTP request methods.</p>
              */
             public Builder values(java.util.List<String> values) {
                 this.values = values;
@@ -1917,7 +2018,7 @@ public class UpdateRulesAttributeRequest extends Request {
             } 
 
             /**
-             * Values.
+             * <p>The list of path conditions.</p>
              */
             public Builder values(java.util.List<String> values) {
                 this.values = values;
@@ -1984,7 +2085,10 @@ public class UpdateRulesAttributeRequest extends Request {
             } 
 
             /**
-             * Key.
+             * <p>The query string condition key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>account</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -1992,7 +2096,10 @@ public class UpdateRulesAttributeRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The query string condition value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -2046,7 +2153,7 @@ public class UpdateRulesAttributeRequest extends Request {
             } 
 
             /**
-             * Values.
+             * <p>The list of query string condition key-value pairs.</p>
              */
             public Builder values(java.util.List<QueryStringConfigValues> values) {
                 this.values = values;
@@ -2113,7 +2220,10 @@ public class UpdateRulesAttributeRequest extends Request {
             } 
 
             /**
-             * Key.
+             * <p>The response HTTP header key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -2121,7 +2231,7 @@ public class UpdateRulesAttributeRequest extends Request {
             }
 
             /**
-             * Values.
+             * <p>The response HTTP header values.</p>
              */
             public Builder values(java.util.List<String> values) {
                 this.values = values;
@@ -2175,7 +2285,7 @@ public class UpdateRulesAttributeRequest extends Request {
             } 
 
             /**
-             * Values.
+             * <p>The response status code condition.</p>
              */
             public Builder values(java.util.List<String> values) {
                 this.values = values;
@@ -2229,7 +2339,7 @@ public class UpdateRulesAttributeRequest extends Request {
             } 
 
             /**
-             * Values.
+             * <p>Adds one or more IP addresses or CIDR blocks.</p>
              */
             public Builder values(java.util.List<String> values) {
                 this.values = values;
@@ -2400,7 +2510,7 @@ public class UpdateRulesAttributeRequest extends Request {
             } 
 
             /**
-             * CookieConfig.
+             * <p>The cookie condition configuration.</p>
              */
             public Builder cookieConfig(CookieConfig cookieConfig) {
                 this.cookieConfig = cookieConfig;
@@ -2408,7 +2518,7 @@ public class UpdateRulesAttributeRequest extends Request {
             }
 
             /**
-             * HeaderConfig.
+             * <p>The HTTP header condition configuration.</p>
              */
             public Builder headerConfig(HeaderConfig headerConfig) {
                 this.headerConfig = headerConfig;
@@ -2416,7 +2526,7 @@ public class UpdateRulesAttributeRequest extends Request {
             }
 
             /**
-             * HostConfig.
+             * <p>The hostname condition configuration.</p>
              */
             public Builder hostConfig(HostConfig hostConfig) {
                 this.hostConfig = hostConfig;
@@ -2424,7 +2534,7 @@ public class UpdateRulesAttributeRequest extends Request {
             }
 
             /**
-             * MethodConfig.
+             * <p>The HTTP request method condition configuration.</p>
              */
             public Builder methodConfig(MethodConfig methodConfig) {
                 this.methodConfig = methodConfig;
@@ -2432,7 +2542,7 @@ public class UpdateRulesAttributeRequest extends Request {
             }
 
             /**
-             * PathConfig.
+             * <p>The query character string condition configuration.</p>
              */
             public Builder pathConfig(PathConfig pathConfig) {
                 this.pathConfig = pathConfig;
@@ -2440,7 +2550,7 @@ public class UpdateRulesAttributeRequest extends Request {
             }
 
             /**
-             * QueryStringConfig.
+             * <p>The query character string condition configuration.</p>
              */
             public Builder queryStringConfig(QueryStringConfig queryStringConfig) {
                 this.queryStringConfig = queryStringConfig;
@@ -2448,7 +2558,7 @@ public class UpdateRulesAttributeRequest extends Request {
             }
 
             /**
-             * ResponseHeaderConfig.
+             * <p>The response HTTP header.</p>
              */
             public Builder responseHeaderConfig(ResponseHeaderConfig responseHeaderConfig) {
                 this.responseHeaderConfig = responseHeaderConfig;
@@ -2456,7 +2566,7 @@ public class UpdateRulesAttributeRequest extends Request {
             }
 
             /**
-             * ResponseStatusCodeConfig.
+             * <p>The response status code condition.</p>
              */
             public Builder responseStatusCodeConfig(ResponseStatusCodeConfig responseStatusCodeConfig) {
                 this.responseStatusCodeConfig = responseStatusCodeConfig;
@@ -2464,7 +2574,7 @@ public class UpdateRulesAttributeRequest extends Request {
             }
 
             /**
-             * SourceIpConfig.
+             * <p>The configuration for matching service traffic based on source IP addresses.</p>
              */
             public Builder sourceIpConfig(SourceIpConfig sourceIpConfig) {
                 this.sourceIpConfig = sourceIpConfig;
@@ -2472,7 +2582,10 @@ public class UpdateRulesAttributeRequest extends Request {
             }
 
             /**
-             * <p>This parameter is required.</p>
+             * <p>The condition type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Header</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -2579,7 +2692,10 @@ public class UpdateRulesAttributeRequest extends Request {
             } 
 
             /**
-             * Priority.
+             * <p>The priority of the forwarding rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;
@@ -2587,7 +2703,7 @@ public class UpdateRulesAttributeRequest extends Request {
             }
 
             /**
-             * RuleActions.
+             * <p>The list of actions for the forwarding rule.</p>
              */
             public Builder ruleActions(java.util.List<RuleActions> ruleActions) {
                 this.ruleActions = ruleActions;
@@ -2595,7 +2711,7 @@ public class UpdateRulesAttributeRequest extends Request {
             }
 
             /**
-             * RuleConditions.
+             * <p>The list of forwarding rule conditions.</p>
              */
             public Builder ruleConditions(java.util.List<RuleConditions> ruleConditions) {
                 this.ruleConditions = ruleConditions;
@@ -2603,7 +2719,11 @@ public class UpdateRulesAttributeRequest extends Request {
             }
 
             /**
+             * <p>The ID of the forwarding rule.</p>
              * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rule-n4hfecmmtmfl******</p>
              */
             public Builder ruleId(String ruleId) {
                 this.ruleId = ruleId;
@@ -2611,7 +2731,10 @@ public class UpdateRulesAttributeRequest extends Request {
             }
 
             /**
-             * RuleName.
+             * <p>The name of the forwarding rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rule_111</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;

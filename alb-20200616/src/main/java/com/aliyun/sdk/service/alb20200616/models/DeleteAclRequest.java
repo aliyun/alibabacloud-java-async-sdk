@@ -88,11 +88,11 @@ public class DeleteAclRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the ACL.</p>
+         * <p>The ACL instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>nacl-hp34s2h0xx1ht4nwo****</p>
+         * <p>acl-hp34s2h0xx1ht4nwo****</p>
          */
         public Builder aclId(String aclId) {
             this.putQueryParameter("AclId", aclId);
@@ -102,13 +102,13 @@ public class DeleteAclRequest extends Request {
 
         /**
          * <p>The client token that is used to ensure the idempotence of the request.</p>
-         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+         * <p>You can generate a parameter value on your client to ensure that the value is unique across different requests. The client token supports only ASCII characters.</p>
          * <blockquote>
-         * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+         * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request is unique.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>5A2CFF0E-5718-45B5-9D4D-70B3FF3898</p>
+         * <p>5A2CFF0E-5718-45B5-9D4D-70B3******</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -117,10 +117,12 @@ public class DeleteAclRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+         * <p>Specifies whether to only precheck this request. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
-         * <li><strong>false</strong> (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
+         * <li><p><strong>true</strong>: The system prechecks the request without deleting the ACL. The system checks whether the required parameters are specified, the request format is valid, and the service limits are met. If the request fails the precheck, the system returns an error. If the request passes the precheck, the system returns the <code>DryRunOperation</code> error code.</p>
+         * </li>
+         * <li><p><strong>false</strong> (default): The system sends a normal request. If the request passes the precheck, the system returns an HTTP 2xx status code and performs the operation.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

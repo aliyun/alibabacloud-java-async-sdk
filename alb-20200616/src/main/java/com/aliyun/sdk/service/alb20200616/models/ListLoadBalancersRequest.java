@@ -257,8 +257,8 @@ public class ListLoadBalancersRequest extends Request {
         /**
          * <p>The IP version. Valid values:</p>
          * <ul>
-         * <li><strong>IPv4</strong></li>
-         * <li><strong>DualStack</strong></li>
+         * <li><strong>IPv4</strong>: IPv4.</li>
+         * <li><strong>DualStack</strong>: dual-stack.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -271,10 +271,12 @@ public class ListLoadBalancersRequest extends Request {
         }
 
         /**
-         * <p>The network type. Valid values:</p>
+         * <p>The address type of the instance. Valid values:</p>
          * <ul>
-         * <li><strong>Internet</strong>: The ALB instance uses a public IP address. The domain name of the ALB instance is resolved to the public IP address. Therefore, the ALB instance can be accessed over the Internet.</li>
-         * <li><strong>Intranet</strong>: The ALB instance uses a private IP address. The domain name of the ALB instance is resolved to the private IP address. In this case, the ALB instance can be accessed over the VPC where the ALB instance is deployed.</li>
+         * <li><p><strong>Internet</strong>: The load balancing has a public IP address. The DNS domain name is parsed to the public IP address, so it can be accessed in the public network environment.</p>
+         * </li>
+         * <li><p><strong>Intranet</strong>: The load balancing has only a private IP address. The DNS domain name is parsed to the private IP address, so it can only be accessed in the internal network environment of the VPC where the load balancing resides.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -287,7 +289,7 @@ public class ListLoadBalancersRequest extends Request {
         }
 
         /**
-         * <p>The domain name.</p>
+         * <p>The DNS domain name.</p>
          * 
          * <strong>example:</strong>
          * <p>alb-95qnr2itwu9orb****.cn-hangzhou.alb.aliyuncs.com</p>
@@ -299,10 +301,12 @@ public class ListLoadBalancersRequest extends Request {
         }
 
         /**
-         * <p>The type of IPv6 address that is used by the ALB instance. Valid values:</p>
+         * <p>The IPv6 address type of the application load balancing instance. Valid values:</p>
          * <ul>
-         * <li><strong>Internet</strong>: The ALB instance uses a public IP address. The domain name of the ALB instance is resolved to the public IP address. Therefore, the ALB instance can be accessed over the Internet.</li>
-         * <li><strong>Intranet</strong>: The ALB instance uses a private IP address. The domain name of the ALB instance is resolved to the private IP address. Therefore, the ALB instance can be accessed over the VPC in which the ALB instance is deployed.</li>
+         * <li><p><strong>Internet</strong>: The load balancing has a public IP address. The DNS domain name is parsed to the public IP address, so it can be accessed in the public network environment.</p>
+         * </li>
+         * <li><p><strong>Intranet</strong>: The load balancing has only a private IP address. The DNS domain name is parsed to the private IP address, so it can only be accessed in the internal network environment of the VPC where the load balancing resides.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -315,10 +319,12 @@ public class ListLoadBalancersRequest extends Request {
         }
 
         /**
-         * <p>The service status of the ALB instance. Valid values:</p>
+         * <p>The business status of the application load balancing instance. Valid values:</p>
          * <ul>
-         * <li><strong>Abnormal</strong></li>
-         * <li><strong>Normal</strong></li>
+         * <li><p><strong>Abnormal</strong>: Abnormal.</p>
+         * </li>
+         * <li><p><strong>Normal</strong>: Normal.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -331,7 +337,7 @@ public class ListLoadBalancersRequest extends Request {
         }
 
         /**
-         * <p>The instance IDs. You can specify at most 20 ALB instance IDs.</p>
+         * <p>The IDs of the instances. You can specify up to 20 application load balancing instance IDs.</p>
          */
         public Builder loadBalancerIds(java.util.List<String> loadBalancerIds) {
             this.putQueryParameter("LoadBalancerIds", loadBalancerIds);
@@ -340,7 +346,7 @@ public class ListLoadBalancersRequest extends Request {
         }
 
         /**
-         * <p>The instance names. You can specify at most 10 instance names.</p>
+         * <p>The names of the instances. You can specify up to 10 instance names.</p>
          */
         public Builder loadBalancerNames(java.util.List<String> loadBalancerNames) {
             this.putQueryParameter("LoadBalancerNames", loadBalancerNames);
@@ -349,13 +355,18 @@ public class ListLoadBalancersRequest extends Request {
         }
 
         /**
-         * <p>The status of the ALB instance. Valid values:</p>
+         * <p>The instance status of the application load balancing instance. Valid values:</p>
          * <ul>
-         * <li><strong>Inactive</strong>: The ALB instance is disabled. The listeners do not forward traffic.</li>
-         * <li><strong>Active</strong>: The ALB instance is running.</li>
-         * <li><strong>Provisioning</strong>: The ALB instance is being created.</li>
-         * <li><strong>Configuring</strong>: The ALB instance is being modified.</li>
-         * <li><strong>CreateFailed</strong>: The system failed to create the ALB instance. In this case, you are not charged for the ALB instance. You can only delete the ALB instance. By default, the system deletes the ALB instances that are in the CreateFailed state within the last day.</li>
+         * <li><p><strong>Inactive</strong>: The instance is stopped and listeners no longer forward traffic.</p>
+         * </li>
+         * <li><p><strong>Active</strong>: The instance is running.</p>
+         * </li>
+         * <li><p><strong>Provisioning</strong>: The instance is being created.</p>
+         * </li>
+         * <li><p><strong>Configuring</strong>: Upgrade/Downgrade in progress.</p>
+         * </li>
+         * <li><p><strong>CreateFailed</strong>: The instance failed to be created. In this case, no fees are generated and the instance can only be deleted. By default, the system cleans up instances that failed to be created within the last 24 hours.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -368,7 +379,7 @@ public class ListLoadBalancersRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
+         * <p>The number of entries to return per page. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -380,10 +391,10 @@ public class ListLoadBalancersRequest extends Request {
         }
 
         /**
-         * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
+         * <p>The pagination token for the next query. Valid values:</p>
          * <ul>
-         * <li>You do not need to specify this parameter for the first request.</li>
-         * <li>You must specify the token that is obtained from the previous query as the value of <strong>NextToken</strong>.</li>
+         * <li>Leave this parameter empty for the first query or when no next query is required.</li>
+         * <li>If a next query is required, set the value to the <strong>NextToken</strong> value returned in the previous API call.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -396,8 +407,8 @@ public class ListLoadBalancersRequest extends Request {
         }
 
         /**
-         * <p>The billing method of the ALB instance. Set the value to</p>
-         * <p><strong>PostPay</strong>, which specifies the pay-as-you-go billing method. This is the default value.</p>
+         * <p>The billing method of the instance. Valid values:</p>
+         * <p><strong>PostPay</strong> (default value): pay-as-you-go billing method.</p>
          * 
          * <strong>example:</strong>
          * <p>PostPay</p>
@@ -421,7 +432,7 @@ public class ListLoadBalancersRequest extends Request {
         }
 
         /**
-         * <p>The tags added to the ALB instance.</p>
+         * <p>The instance label.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -430,7 +441,7 @@ public class ListLoadBalancersRequest extends Request {
         }
 
         /**
-         * <p>The ID of the VPC to which the ALB instance belongs. You can specify at most 10 VPC IDs.</p>
+         * <p>The IDs of the VPCs to which the application load balancing instances belong. You can specify up to 10 VPC IDs.</p>
          */
         public Builder vpcIds(java.util.List<String> vpcIds) {
             this.putQueryParameter("VpcIds", vpcIds);
@@ -439,8 +450,8 @@ public class ListLoadBalancersRequest extends Request {
         }
 
         /**
-         * <p>The ID of the zone where the ALB instance is deployed.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/189196.html">DescribeZones</a> operation to query zones.</p>
+         * <p>The ID of the active zone where the application load balancing instance resides.</p>
+         * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/189196.html">DescribeZones</a> operation to query the active zone information corresponding to the active zone ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-a</p>
@@ -511,8 +522,8 @@ public class ListLoadBalancersRequest extends Request {
             } 
 
             /**
-             * <p>The tag key. You can specify at most 20 tag keys. The tag key cannot be an empty string.</p>
-             * <p>The tag key can be up to 64 characters in length and cannot contain <code>http://</code> or <code>https://</code>. It cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
+             * <p>The tag key of the instance. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
+             * <p>The tag key can be up to 64 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>KeyTest</p>
@@ -523,8 +534,8 @@ public class ListLoadBalancersRequest extends Request {
             }
 
             /**
-             * <p>The tag value. You can specify at most 20 tag values. The tag value can be an empty string.</p>
-             * <p>The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. It cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
+             * <p>The tag value of the instance. You can specify up to 20 tag values. The tag value can be an empty string.</p>
+             * <p>The tag value can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>alueTest</p>

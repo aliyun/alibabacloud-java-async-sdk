@@ -116,7 +116,7 @@ public class ListServerGroupServersRequest extends Request {
         } 
 
         /**
-         * <p>The maximum number of entries to return. Valid values: <strong>1</strong> to <strong>100</strong>. If you do not specify a value, the default value <strong>20</strong> is used.</p>
+         * <p>The maximum number of records to return in this request. Valid values: <strong>1</strong> to <strong>100</strong>. If this parameter is not specified, the default value is <strong>20</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -130,8 +130,8 @@ public class ListServerGroupServersRequest extends Request {
         /**
          * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
          * <ul>
-         * <li>You do not need to specify this parameter for the first request.</li>
-         * <li>You must specify the token that is obtained from the previous query as the value of <strong>NextToken</strong>.</li>
+         * <li>You do not need to specify this parameter for the first request or if no next query exists.</li>
+         * <li>If a next query exists, set the value to the NextToken value returned in the previous API call.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -147,7 +147,7 @@ public class ListServerGroupServersRequest extends Request {
          * <p>The server group ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>rg-atstuj3rtop****</p>
+         * <p>sgp-cb25e2i2vr******</p>
          */
         public Builder serverGroupId(String serverGroupId) {
             this.putQueryParameter("ServerGroupId", serverGroupId);
@@ -156,7 +156,7 @@ public class ListServerGroupServersRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the servers.</p>
+         * <p>The list of server IDs.</p>
          */
         public Builder serverIds(java.util.List<String> serverIds) {
             this.putQueryParameter("ServerIds", serverIds);
@@ -165,7 +165,7 @@ public class ListServerGroupServersRequest extends Request {
         }
 
         /**
-         * <p>The tags that are added to the server group. You can specify up to 10 tags in each call.</p>
+         * <p>The tags that are bound to the server group. You can specify up to 10 tags in a single request.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -234,7 +234,7 @@ public class ListServerGroupServersRequest extends Request {
 
             /**
              * <p>The tag key. You can specify up to 10 tag keys.</p>
-             * <p>The tag key can be up to 64 characters in length, and cannot contain <code>http://</code> or <code>https://</code>. It cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
+             * <p>The tag key can be up to 64 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>Test</p>
@@ -246,7 +246,7 @@ public class ListServerGroupServersRequest extends Request {
 
             /**
              * <p>The tag value. You can specify up to 10 tag values.</p>
-             * <p>The tag value can be up to 128 characters in length, and cannot contain <code>http://</code> or <code>https://</code>. It cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
+             * <p>The tag value can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>Test</p>

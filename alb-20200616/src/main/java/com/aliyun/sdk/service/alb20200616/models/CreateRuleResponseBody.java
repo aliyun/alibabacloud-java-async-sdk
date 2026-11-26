@@ -102,7 +102,7 @@ public class CreateRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The forwarding rule ID.</p>
+         * <p>The ID of the forwarding rule.</p>
          * 
          * <strong>example:</strong>
          * <p>rule-a3x3pg1yohq3lq****</p>

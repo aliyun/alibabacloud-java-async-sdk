@@ -70,7 +70,7 @@ public class ListSystemSecurityPoliciesResponseBody extends TeaModel {
          * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>593B0448-D13E-4C56-AC0D-FDF0FDE0E9A3</p>
+         * <p>593B0448-D13E-4C56-AC0D-FDF0F******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -168,7 +168,7 @@ public class ListSystemSecurityPoliciesResponseBody extends TeaModel {
              * <p>The ID of the security policy.</p>
              * 
              * <strong>example:</strong>
-             * <p>spy-n0kn923****</p>
+             * <p>tls_cipher_policy_1_0</p>
              */
             public Builder securityPolicyId(String securityPolicyId) {
                 this.securityPolicyId = securityPolicyId;

@@ -106,7 +106,7 @@ public class DescribeCapacityReservationResponseBody extends TeaModel {
         } 
 
         /**
-         * CapacityReservationState.
+         * <p>The LCU reservation state.</p>
          */
         public Builder capacityReservationState(java.util.List<CapacityReservationState> capacityReservationState) {
             this.capacityReservationState = capacityReservationState;
@@ -114,7 +114,10 @@ public class DescribeCapacityReservationResponseBody extends TeaModel {
         }
 
         /**
-         * DecreaseRequestsRemaining.
+         * <p>The number of remaining attempts to decrease or cancel the LCU reservation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder decreaseRequestsRemaining(Integer decreaseRequestsRemaining) {
             this.decreaseRequestsRemaining = decreaseRequestsRemaining;
@@ -122,7 +125,10 @@ public class DescribeCapacityReservationResponseBody extends TeaModel {
         }
 
         /**
-         * LastModifiedTime.
+         * <p>The time when the LCU reservation was last modified. The time is in the yyyy-MM-dd HH:mm:ss format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-08-22 05:06:58</p>
          */
         public Builder lastModifiedTime(String lastModifiedTime) {
             this.lastModifiedTime = lastModifiedTime;
@@ -130,7 +136,7 @@ public class DescribeCapacityReservationResponseBody extends TeaModel {
         }
 
         /**
-         * MinimumLoadBalancerCapacity.
+         * <p>The minimum LCUs to reserve for an ALB instance.</p>
          */
         public Builder minimumLoadBalancerCapacity(MinimumLoadBalancerCapacity minimumLoadBalancerCapacity) {
             this.minimumLoadBalancerCapacity = minimumLoadBalancerCapacity;
@@ -138,7 +144,10 @@ public class DescribeCapacityReservationResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>365F4154-92F6-4AE4-92F8-7FF3******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -230,7 +239,10 @@ public class DescribeCapacityReservationResponseBody extends TeaModel {
             } 
 
             /**
-             * AvailabilityZone.
+             * <p>The zone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-k</p>
              */
             public Builder availabilityZone(String availabilityZone) {
                 this.availabilityZone = availabilityZone;
@@ -238,7 +250,10 @@ public class DescribeCapacityReservationResponseBody extends TeaModel {
             }
 
             /**
-             * EffectiveCapacityUnits.
+             * <p>The number of effective reserved LCUs per hour.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50.0</p>
              */
             public Builder effectiveCapacityUnits(Double effectiveCapacityUnits) {
                 this.effectiveCapacityUnits = effectiveCapacityUnits;
@@ -246,7 +261,10 @@ public class DescribeCapacityReservationResponseBody extends TeaModel {
             }
 
             /**
-             * Reason.
+             * <p>The cause for the failure. This parameter is returned when the reservation status is Failed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>INSUFFICIENT_CAPACITY</p>
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -254,7 +272,10 @@ public class DescribeCapacityReservationResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the LCU reservation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Provisioned</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -308,7 +329,10 @@ public class DescribeCapacityReservationResponseBody extends TeaModel {
             } 
 
             /**
-             * CapacityUnits.
+             * <p>The number of LCUs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder capacityUnits(Integer capacityUnits) {
                 this.capacityUnits = capacityUnits;

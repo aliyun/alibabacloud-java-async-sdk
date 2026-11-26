@@ -1007,7 +1007,7 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
              * <p>This parameter takes effect only if <strong>Status</strong> is set to <strong>ConsoleProtection</strong>.</p>
              * 
              * <strong>example:</strong>
-             * <p>test</p>
+             * <p>Managed instance</p>
              */
             public Builder reason(String reason) {
                 this.reason = reason;

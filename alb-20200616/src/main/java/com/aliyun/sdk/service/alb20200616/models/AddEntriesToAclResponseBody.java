@@ -67,7 +67,7 @@ public class AddEntriesToAclResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The asynchronous task ID.</p>
+         * <p>The ID of the asynchronous task.</p>
          * 
          * <strong>example:</strong>
          * <p>72dcd26b-f12d-4c27-b3af-18f6aed5****</p>
@@ -78,10 +78,10 @@ public class AddEntriesToAclResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
-         * <p>365F4154-92F6-4AE4-92F8-7FF34B540710</p>
+         * <p>365F4154-92F6-4AE4-92F8-7FF34******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

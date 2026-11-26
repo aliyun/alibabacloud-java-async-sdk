@@ -67,10 +67,10 @@ public class CreateLoadBalancerResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ALB instance ID.</p>
+         * <p>The instance ID of the Application Load Balancing (ALB) instance.</p>
          * 
          * <strong>example:</strong>
-         * <p>alb-o9ulmq5hgn68jk****</p>
+         * <p>alb-o9ulmq5hqn68jk****</p>
          */
         public Builder loadBalancerId(String loadBalancerId) {
             this.loadBalancerId = loadBalancerId;
@@ -78,7 +78,7 @@ public class CreateLoadBalancerResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>CEF72CEB-54B6-4AE8-B225-F876FF7BA984</p>

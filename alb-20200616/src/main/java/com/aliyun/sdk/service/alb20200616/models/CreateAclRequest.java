@@ -115,7 +115,7 @@ public class CreateAclRequest extends Request {
         } 
 
         /**
-         * <p>The name of the ACL. The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter.</p>
+         * <p>The name of the ACL. The name must start with a letter, Chinese character, or digit, and can contain digits, periods (.), underscores (_), hyphens (-), and spaces. The name must be 2 to 128 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>test-acl</p>
@@ -128,13 +128,13 @@ public class CreateAclRequest extends Request {
 
         /**
          * <p>The client token that is used to ensure the idempotence of the request.</p>
-         * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. ClientToken can contain only ASCII characters.</p>
+         * <p>You can generate the parameter value on your client to ensure that the value is unique across different requests. The client token supports only ASCII characters.</p>
          * <blockquote>
-         * <p> If you do not set this parameter, the system uses <strong>RequestId</strong> as <strong>ClientToken</strong>. The value of <strong>RequestId</strong> may be different for each API request.</p>
+         * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request is unique.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>5A2CFF0E-5718-45B5-9D4D-70B3FF3898</p>
+         * <p>5A2CFF0E-5718-45B5-9D4D-70B3*****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -143,10 +143,10 @@ public class CreateAclRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to check the request without performing the operation. Valid values:</p>
+         * <p>Specifies whether to perform a dry run on the request. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: checks the request without performing the operation. The system checks the required parameters, request syntax, and limits. If the request fails the check, an error message is returned. If the request passes the check, the <code>DryRunOperation</code> error code is returned.</li>
-         * <li><strong>false</strong> (default): sends the request. If the request passes the check, an HTTP 2xx status code is returned and the operation is performed.</li>
+         * <li><strong>true</strong>: The system performs a dry run on the request without creating the access control policy group. The system checks whether the required parameters are specified, the request format is valid, and the service limits are met. If the request fails the dry run, the system returns an error. If the request passes the dry run, the system returns the <code>DryRunOperation</code> error code.</li>
+         * <li><strong>false</strong> (default): The system sends a normal request. If the request passes the dry run, the system returns an HTTP 2xx status code and performs the operation.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -172,6 +172,9 @@ public class CreateAclRequest extends Request {
 
         /**
          * <p>The tags.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-12313</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -239,7 +242,7 @@ public class CreateAclRequest extends Request {
             } 
 
             /**
-             * <p>The tag key. The tag key can be up to 128 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>The tag key. The tag key can be up to 128 characters in length. It cannot start with aliyun or acs:, and cannot contain http:// or https://.</p>
              * 
              * <strong>example:</strong>
              * <p>env</p>
@@ -250,7 +253,7 @@ public class CreateAclRequest extends Request {
             }
 
             /**
-             * <p>The tag value. The tag value can be up to 128 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>The tag value. The tag value can be up to 128 characters in length. It cannot start with aliyun or acs:, and cannot contain http:// or https://.</p>
              * 
              * <strong>example:</strong>
              * <p>product</p>

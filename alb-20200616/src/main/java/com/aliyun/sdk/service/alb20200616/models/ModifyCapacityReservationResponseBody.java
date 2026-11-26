@@ -54,7 +54,10 @@ public class ModifyCapacityReservationResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>593B0448-D13E-4C56-AC0D-FDF0F******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

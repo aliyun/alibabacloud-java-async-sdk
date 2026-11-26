@@ -106,7 +106,7 @@ public class ListRulesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The maximum number of entries returned.</p>
+         * <p>The maximum number of records returned for this request.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -117,10 +117,10 @@ public class ListRulesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:</p>
+         * <p>Indicates whether a next query exists. Valid values:</p>
          * <ul>
-         * <li>If <strong>NextToken</strong> is empty, no next page exists.</li>
-         * <li>If a value is returned for <strong>NextToken</strong>, the value is the token that determines the start point of the next query.</li>
+         * <li>If <strong>NextToken</strong> is empty, no next query exists.</li>
+         * <li>If <strong>NextToken</strong> is returned, the value indicates the token for the next query.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -135,7 +135,7 @@ public class ListRulesResponseBody extends TeaModel {
          * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>CEF72CEB-54B6-4AE8-B225-F876FF7BA984</p>
+         * <p>CEF72CEB-54B6-4AE8-B225-F876F******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -143,7 +143,7 @@ public class ListRulesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The details about the forwarding rule.</p>
+         * <p>The list of forwarding rules.</p>
          */
         public Builder rules(java.util.List<Rules> rules) {
             this.rules = rules;
@@ -151,7 +151,7 @@ public class ListRulesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of data records returned for the current request.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
@@ -272,10 +272,10 @@ public class ListRulesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether credentials can be carried in CORS requests. Valid values:</p>
+             * <p>Specifies whether credentials are allowed. Valid values:</p>
              * <ul>
-             * <li><strong>on</strong></li>
-             * <li><strong>off</strong></li>
+             * <li><strong>on</strong>: Credentials are allowed.</li>
+             * <li><strong>off</strong>: Credentials are not allowed.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -287,7 +287,7 @@ public class ListRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The allowed headers of CORS requests.</p>
+             * <p>The allowed cross-origin headers.</p>
              */
             public Builder allowHeaders(java.util.List<String> allowHeaders) {
                 this.allowHeaders = allowHeaders;
@@ -295,7 +295,7 @@ public class ListRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The allowed HTTP methods of CORS requests.</p>
+             * <p>The HTTP methods allowed for cross-origin access.</p>
              */
             public Builder allowMethods(java.util.List<String> allowMethods) {
                 this.allowMethods = allowMethods;
@@ -303,7 +303,7 @@ public class ListRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The allowed origins of CORS requests.</p>
+             * <p>The allowed origins.</p>
              */
             public Builder allowOrigin(java.util.List<String> allowOrigin) {
                 this.allowOrigin = allowOrigin;
@@ -319,7 +319,7 @@ public class ListRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum cache time of dry runs in the browser. Unit: seconds.</p>
+             * <p>The maximum cache time for preflight requests in the browser. Unit: seconds.</p>
              * <p>Valid values: <strong>-1</strong> to <strong>172800</strong>.</p>
              * 
              * <strong>example:</strong>
@@ -403,7 +403,7 @@ public class ListRulesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The content of the custom response. The content can be up to 1 KB in size, and can contain only ASCII characters.</p>
+             * <p>The fixed content to return. The content can be up to 1 KB in size and can contain only ASCII characters.</p>
              * 
              * <strong>example:</strong>
              * <p>dssacav</p>
@@ -414,7 +414,7 @@ public class ListRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The format of the response.</p>
+             * <p>The format of the fixed content to return.</p>
              * <p>Valid values: <strong>text/plain</strong>, <strong>text/css</strong>, <strong>text/html</strong>, <strong>application/javascript</strong>, and <strong>application/json</strong>.</p>
              * 
              * <strong>example:</strong>
@@ -426,7 +426,7 @@ public class ListRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The HTTP status code in responses. Valid values: <strong>HTTP_2xx</strong>, <strong>HTTP_4xx</strong>, and <strong>HTTP_5xx</strong>. <strong>x</strong> is a digit.</p>
+             * <p>The HTTP response code to return. Only numeric strings in the format of <strong>HTTP_2xx</strong>, <strong>HTTP_4xx</strong>, and <strong>HTTP_5xx</strong> are supported, where <strong>x</strong> is any digit.</p>
              * 
              * <strong>example:</strong>
              * <p>HTTP_2xx</p>
@@ -496,7 +496,7 @@ public class ListRulesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>If the value of N in ServerGroupTuple.N is larger than 1, you can enable or disable session persistence for server groups.</p>
+             * <p>Specifies whether to enable session persistence across server groups when multiple server groups are specified.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -507,7 +507,7 @@ public class ListRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>If Enabled is set to True, you can specify a session persistence timeout period.</p>
+             * <p>The timeout period for session persistence when Enabled is set to true. Unit: seconds. Valid values: 1 to 86400.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -577,10 +577,10 @@ public class ListRulesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The server group to which requests are forwarded.</p>
+             * <p>The ID of the destination server group to which requests are forwarded.</p>
              * 
              * <strong>example:</strong>
-             * <p>sg-atstuj3rtoptyui****</p>
+             * <p>sgp-atstuj3rtoptyui****</p>
              */
             public Builder serverGroupId(String serverGroupId) {
                 this.serverGroupId = serverGroupId;
@@ -588,7 +588,7 @@ public class ListRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The weight of the server group. Valid values: <strong>0</strong> to <strong>100</strong>.</p>
+             * <p>The weight. Valid values: <strong>0</strong> to <strong>100</strong>.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -658,7 +658,7 @@ public class ListRulesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The session persistence configurations of the server group.</p>
+             * <p>The session persistence configuration across server groups.</p>
              */
             public Builder serverGroupStickySession(ServerGroupStickySession serverGroupStickySession) {
                 this.serverGroupStickySession = serverGroupStickySession;
@@ -666,7 +666,7 @@ public class ListRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The server groups to which requests are forwarded.</p>
+             * <p>The list of destination server groups to which requests are forwarded.</p>
              */
             public Builder serverGroupTuples(java.util.List<ServerGroupTuples> serverGroupTuples) {
                 this.serverGroupTuples = serverGroupTuples;
@@ -746,9 +746,9 @@ public class ListRulesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The key of the header. The header key must be 1 to 40 characters in length, and can contain letters, digits, underscores (_), and hyphens (-). The header key specified in <code>InsertHeader</code> must be unique.</p>
+             * <p>The name of the header field to insert. The name must be 1 to 40 characters in length and can contain lowercase and uppercase letters a to z, digits, underscores (_), and hyphens (-). The header field name cannot be used more than once in <code>InsertHeader</code>.</p>
              * <blockquote>
-             * <p> <strong>Cookie</strong> and <strong>Host</strong> are not supported.</p>
+             * <p>You cannot use <strong>Cookie</strong> or <strong>Host</strong> as the header field name.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -760,21 +760,18 @@ public class ListRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The value of the header to be inserted.</p>
+             * <p>The content of the header field to insert.</p>
              * <ul>
-             * <li><p>If <strong>ValueType</strong> is set to <strong>SystemDefined</strong>, you can set the Value parameter to one of the following values:</p>
-             * <ul>
+             * <li>If <strong>ValueType</strong> is set to <strong>SystemDefined</strong>, the following values are supported:<ul>
              * <li><strong>ClientSrcPort</strong>: the client port.</li>
-             * <li><strong>ClientSrcIp</strong>: the IP address of the client.</li>
-             * <li><strong>Protocol</strong>: the request protocol (HTTP or HTTPS).</li>
-             * <li><strong>SLBId</strong>: the ID of the ALB instance.</li>
-             * <li><strong>SLBPort</strong>: the listener port.</li>
+             * <li><strong>ClientSrcIp</strong>: the client IP address.</li>
+             * <li><strong>Protocol</strong>: the protocol used by the client request (HTTP or HTTPS).</li>
+             * <li><strong>SLBId</strong>: the load balancing instance ID.</li>
+             * <li><strong>SLBPort</strong>: the load balancing instance listener port.</li>
              * </ul>
              * </li>
-             * <li><p>If <strong>ValueType</strong> is set to <strong>UserDefined</strong>, you can specify a custom header value. The header value must be 1 to 128 characters in length, and can contain wildcard characters, such as asterisks (*) and question marks (?), and printable characters whose ASCII values are <code>larger than or equal to 32 and smaller than 127</code>. The header value cannot start or end with a space character.</p>
-             * </li>
-             * <li><p>If <strong>ValueType</strong> is set to <strong>ReferenceHeader</strong>, you can reference a value from a request header. The header value must be 1 to 128 characters in length, and can contain lowercase letters, digits, hyphens (-), and underscores (_).</p>
-             * </li>
+             * <li>If <strong>ValueType</strong> is set to <strong>UserDefined</strong>: you can specify a custom header field content. The content must be 1 to 128 characters in length and can contain wildcards such as asterisks (*) and question marks (?), as well as printable characters with ASCII values in the range of <code>ch &gt;= 32 &amp;&amp; ch &lt; 127</code>. The content cannot start or end with a space.</li>
+             * <li>If <strong>ValueType</strong> is set to <strong>ReferenceHeader</strong>: you can reference a field from the request header. The value must be 1 to 128 characters in length and can contain lowercase letters a to z, digits, hyphens (-), and underscores (_).</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -786,11 +783,14 @@ public class ListRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the header value. Valid values:</p>
+             * <p>The content type of the header field. Valid values:</p>
              * <ul>
-             * <li><strong>UserDefined</strong>: a user-defined header value.</li>
-             * <li><strong>ReferenceHeader</strong>: a header value that is referenced from a request header.</li>
-             * <li><strong>SystemDefined:</strong> a system-defined header value.</li>
+             * <li><p><strong>UserDefined</strong>: user-defined.</p>
+             * </li>
+             * <li><p><strong>ReferenceHeader</strong>: references a field from the client request header.</p>
+             * </li>
+             * <li><p><strong>SystemDefined</strong>: system-defined.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -913,17 +913,15 @@ public class ListRulesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The hostname to which requests are redirected. Valid values:</p>
+             * <p>The host address to redirect to. Valid values:</p>
              * <ul>
-             * <li><p><strong>${host}</strong> (default): If ${host} is returned, no other characters are appended.</p>
-             * </li>
-             * <li><p>A custom value. Make sure that the custom value meets the following requirements:</p>
-             * <ul>
-             * <li>The hostname must be 3 to 128 characters in length, and can contain lowercase letters, digits, hyphens (-), periods (.), asterisks (*), and question marks (?).</li>
-             * <li>The hostname must contain at least one period (.) but cannot start or end with a period (.).</li>
-             * <li>The rightmost domain label can contain only letters and wildcard characters. It cannot contain digits or hyphens (-).</li>
-             * <li>The domain labels cannot start or end with a hyphen (-).</li>
-             * <li>You can use asterisks (*) and question marks (?) anywhere in a domain label as wildcard characters.</li>
+             * <li><strong>${host}</strong> (default): this value cannot be concatenated with other characters.</li>
+             * <li>Other values. The character set and format restrictions are as follows:<ul>
+             * <li>The hostname must be 3 to 128 characters in length and can contain lowercase letters a to z, digits, hyphens (-), periods (.), asterisks (*), and question marks (?).</li>
+             * <li>The hostname must contain at least one period (.) and cannot start or end with a period (.).</li>
+             * <li>The rightmost domain label can contain only letters and wildcards, and cannot contain digits or hyphens (-).</li>
+             * <li>Hyphens (-) cannot appear at the beginning or end of other domain labels.</li>
+             * <li>Asterisks (*) and question marks (?) can appear at any position within a domain label.</li>
              * </ul>
              * </li>
              * </ul>
@@ -937,7 +935,7 @@ public class ListRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The forwarding method. Valid values: <strong>301</strong>, <strong>302</strong>, <strong>303</strong>, <strong>307</strong>, and <strong>308</strong>.</p>
+             * <p>The redirect type. Valid values: <strong>301</strong>, <strong>302</strong>, <strong>303</strong>, <strong>307</strong>, and <strong>308</strong>.</p>
              * 
              * <strong>example:</strong>
              * <p>301</p>
@@ -948,14 +946,12 @@ public class ListRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The URL to which requests are redirected. Valid values:</p>
+             * <p>The path to redirect to. Valid values:</p>
              * <ul>
-             * <li><p><strong>${path}</strong> (default): You can reference **${host}<strong>, <strong>${protocol}</strong>, and</strong>${port}<strong>. The URL can consist of <strong>${host}</strong>,</strong>${protocol}**, and **${port}**. Each variable can be used only once. The preceding variables can be used at the same time or combined with a custom value.</p>
-             * </li>
-             * <li><p>A custom value. Make sure that the custom value meets the following requirements:</p>
-             * <ul>
-             * <li>The URL must be 1 to 128 characters in length.</li>
-             * <li>It must start with a forward slash (/) and can contain letters, digits, and the following special characters: <code>$ - _ .+ / &amp; ~ @ :</code>. It cannot contain the following special characters: <code>&quot; % # ; ! ( ) [ ] ^ , &quot;</code>. You can use asterisks (*) and question marks (?) as wildcard characters.</li>
+             * <li><strong>${path}</strong> (default): you can reference <strong>${host}</strong>, <strong>${protocol}</strong>, and <strong>${port}</strong>, which consist of <strong>${host}</strong>, <strong>${protocol}</strong>, and <strong>${port}</strong>. Each variable can appear at most once. These variables can be used together or concatenated with strings from the following valid character set.</li>
+             * <li>Other values. The character set and format restrictions are as follows:<ul>
+             * <li>The path must be 1 to 128 characters in length.</li>
+             * <li>The path must start with a forward slash (/) and can contain letters, digits, and the special characters <code>$-_.+/&amp;~@:</code>. The characters <code>&quot;%#;!()[]^,&quot; </code> are not supported. Asterisks (*) and question marks (?) are supported as wildcards.</li>
              * </ul>
              * </li>
              * </ul>
@@ -969,10 +965,10 @@ public class ListRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The port to which requests are redirected. Valid values:</p>
+             * <p>The port to redirect to. Valid values:</p>
              * <ul>
-             * <li><strong>${port}</strong> (default): If ${port} is returned, no other characters are appended.</li>
-             * <li>Other valid values: <strong>1 to 63335</strong>.</li>
+             * <li><strong>${port}</strong> (default): this value cannot be used with other characters.</li>
+             * <li>Other values: <strong>1</strong> to <strong>63335</strong>.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -984,13 +980,13 @@ public class ListRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The redirect protocol. Valid values:</p>
+             * <p>The protocol to redirect to. Valid values:</p>
              * <ul>
-             * <li><strong>${protocol}</strong> (default): If ${protocol} is returned, no other characters are appended.</li>
-             * <li><strong>HTTP</strong> or <strong>HTTPS</strong></li>
+             * <li><strong>${protocol}</strong> (default): this value cannot be concatenated with other characters.</li>
+             * <li><strong>HTTP</strong> or <strong>HTTPS</strong>.</li>
              * </ul>
              * <blockquote>
-             * <p> HTTPS listeners supports only HTTPS redirects.</p>
+             * <p>HTTPS listeners support only redirects to HTTPS.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1002,7 +998,7 @@ public class ListRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The query string of the URL to which requests are redirected. The query string must be 1 to 128 characters in length, and can contain printable characters, excluding uppercase letters and the following special characters: <code># [ ] { } \ | &lt; &gt; &amp;</code>.</p>
+             * <p>The query string to redirect to. The query string must be 1 to 128 characters in length and can contain lowercase letters and visible characters. The characters <code>#[]{}\|&lt;&gt;&amp;</code> are not supported.</p>
              * 
              * <strong>example:</strong>
              * <p>quert</p>
@@ -1059,10 +1055,10 @@ public class ListRulesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The key of the header to be removed. The header key must be 1 to 40 characters in length, and can contain letters, digits, underscores (_), and hyphens (-). The header keys specified in RemoveHeader must be unique.</p>
+             * <p>The name of the header field to remove. The name must be 1 to 40 characters in length and can contain lowercase and uppercase letters a to z, digits, underscores (_), and hyphens (-). The header field name cannot be used more than once in RemoveHeader.</p>
              * <ul>
-             * <li>If Direction is set to Request, the specified headers are removed from requests. The following header keys are not supported (not case-sensitive): <code>slb-id</code>, <code>slb-ip</code>, <code>x-forwarded-for</code>, <code>x-forwarded-proto</code>, <code>x-forwarded-eip</code>, <code>x-forwarded-port</code>, <code>x-forwarded-client-srcport</code>, <code>connection</code>, <code>upgrade</code>, <code>content-length</code>, <code>transfer-encoding</code>, <code>keep-alive</code>, <code>te</code>, <code>host</code>, <code>cookie</code>, <code>remoteip</code>, and <code>authority</code>.</li>
-             * <li>If Direction is set to Response, the specified headers are removed from responses. The following header keys are not supported (not case-sensitive): <code>connection</code>, <code>upgrade</code>, <code>content-length</code>, and <code>transfer-encoding</code>.</li>
+             * <li>Request direction (Direction is set to Request): the header name cannot be set to the following fields (case-insensitive): <code>slb-id</code>, <code>slb-ip</code>, <code>x-forwarded-for</code>, <code>x-forwarded-proto</code>, <code>x-forwarded-eip</code>, <code>x-forwarded-port</code>, <code>x-forwarded-client-srcport</code>, <code>connection</code>, <code>upgrade</code>, <code>content-length</code>, <code>transfer-encoding</code>, <code>keep-alive</code>, <code>te</code>, <code>host</code>, <code>cookie</code>, <code>remoteip</code>, <code>authority</code>.</li>
+             * <li>Response direction (Direction is set to Response): the header name cannot be set to the following fields (case-insensitive): <code>connection</code>, <code>upgrade</code>, <code>content-length</code>, <code>transfer-encoding</code>.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1146,17 +1142,15 @@ public class ListRulesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The hostname to which requests are redirected. Valid values:</p>
+             * <p>The host address to redirect to. Valid values:</p>
              * <ul>
-             * <li><p><strong>${host}</strong> (default): If ${host} is returned, no other characters are appended.</p>
-             * </li>
-             * <li><p>A custom value. Make sure that the custom value meets the following requirements:</p>
-             * <ul>
-             * <li>The hostname must be 3 to 128 characters in length, and can contain lowercase letters, digits, hyphens (-), periods (.), asterisks (*), and question marks (?).</li>
-             * <li>The hostname must contain at least one period (.) but cannot start or end with a period (.).</li>
-             * <li>The rightmost domain label can contain only letters and wildcard characters. It cannot contain digits or hyphens (-).</li>
-             * <li>The domain labels cannot start or end with a hyphen (-).</li>
-             * <li>You can use asterisks (*) and question marks (?) anywhere in a domain label as wildcard characters.</li>
+             * <li><strong>${host}</strong> (default): this value cannot be concatenated with other characters.</li>
+             * <li>Other values. The character set and format restrictions are as follows:<ul>
+             * <li>The hostname must be 3 to 128 characters in length and can contain lowercase letters a to z, digits, hyphens (-), periods (.), asterisks (*), and question marks (?).</li>
+             * <li>The hostname must contain at least one period (.) and cannot start or end with a period (.).</li>
+             * <li>The rightmost domain label can contain only letters and wildcards, and cannot contain digits or hyphens (-).</li>
+             * <li>Hyphens (-) cannot appear at the beginning or end of other domain labels.</li>
+             * <li>Asterisks (*) and question marks (?) can appear at any position within a domain label.</li>
              * </ul>
              * </li>
              * </ul>
@@ -1170,7 +1164,7 @@ public class ListRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The URL to which requests are redirected. The URL must be 1 to 128 characters in length, and can contain letters, digits, asterisks (*), question marks (?), and the following special characters: <code>$ - _ . + / &amp; ~ @ :</code>. It must start with a forward slash (/) and does not contain the following special characters: <code>&quot; % # ; ! ( ) [ ] ^ , &quot;</code>.</p>
+             * <p>The destination path for the internal redirect. The path must be 1 to 128 characters in length, start with a forward slash (/), and can contain letters, digits, asterisks (*), question marks (?), and <code>$-_.+/&amp;~@:</code>. The characters <code>&quot;%#;!()[]^,&quot; </code> are not supported.</p>
              * 
              * <strong>example:</strong>
              * <p>/tsdf</p>
@@ -1181,7 +1175,7 @@ public class ListRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The query string of the URL to which requests are redirected. The query string must be 1 to 128 characters in length, and can contain printable characters, excluding uppercase letters and the following special characters: <code># [ ] { } \ | &lt; &gt; &amp;</code>.</p>
+             * <p>The query string for the internal redirect. The query string must be 1 to 128 characters in length and can contain lowercase letters and visible characters. The characters <code>#[]{}\|&lt;&gt;&amp;</code> are not supported.</p>
              * 
              * <strong>example:</strong>
              * <p>quedsa</p>
@@ -1251,9 +1245,9 @@ public class ListRulesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of requests per IP address. Valid values: <strong>1 to 100000</strong>.</p>
+             * <p>The QPS for each IP address. Valid values: <strong>1</strong> to <strong>100000</strong>.</p>
              * <blockquote>
-             * <p> If both the <strong>QPS</strong> and <strong>PerIpQps</strong> parameters are specified, the value of the <strong>QPS</strong> parameter is smaller than the value of the PerIpQps parameter.</p>
+             * <p>If you configure both the <strong>QPS</strong> and <strong>PerIpQps</strong> parameters, the value of <strong>PerIpQps</strong> must be smaller than the value of <strong>QPS</strong>.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1265,7 +1259,7 @@ public class ListRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of queries per second (QPS). Valid values: <strong>1</strong> to <strong>100000</strong>.</p>
+             * <p>The queries per second (QPS). Valid values: <strong>1</strong> to <strong>100000</strong>.</p>
              * 
              * <strong>example:</strong>
              * <p>4</p>
@@ -1335,10 +1329,10 @@ public class ListRulesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the server group.</p>
+             * <p>The server group ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>srg-00mkgijak0w4qgz9****</p>
+             * <p>sgp-00mkgijak0w4qgz9****</p>
              */
             public Builder serverGroupId(String serverGroupId) {
                 this.serverGroupId = serverGroupId;
@@ -1346,7 +1340,7 @@ public class ListRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The weight of the server group. Valid values: <strong>0</strong> to <strong>100</strong>.</p>
+             * <p>The weight. Valid values: <strong>0</strong> to <strong>100</strong>.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -1403,7 +1397,7 @@ public class ListRulesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The server group to which traffic is mirrored.</p>
+             * <p>The configuration for mirroring traffic to a server group.</p>
              */
             public Builder serverGroupTuples(java.util.List<MirrorGroupConfigServerGroupTuples> serverGroupTuples) {
                 this.serverGroupTuples = serverGroupTuples;
@@ -1470,7 +1464,7 @@ public class ListRulesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The configuration of the server group to which traffic is mirrored.</p>
+             * <p>The configuration for mirroring traffic to a server group.</p>
              */
             public Builder mirrorGroupConfig(MirrorGroupConfig mirrorGroupConfig) {
                 this.mirrorGroupConfig = mirrorGroupConfig;
@@ -1478,7 +1472,7 @@ public class ListRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The destination to which traffic is mirrored. The destination can be a server group.</p>
+             * <p>The destination of traffic mirroring, which can be a server group.</p>
              * 
              * <strong>example:</strong>
              * <p>ForwardGroupMirror</p>
@@ -1673,7 +1667,7 @@ public class ListRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The configuration of the custom response.</p>
+             * <p>The fixed response configuration.</p>
              */
             public Builder fixedResponseConfig(FixedResponseConfig fixedResponseConfig) {
                 this.fixedResponseConfig = fixedResponseConfig;
@@ -1681,7 +1675,7 @@ public class ListRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The configurations of the server groups.</p>
+             * <p>The forward group configuration.</p>
              */
             public Builder forwardGroupConfig(ForwardGroupConfig forwardGroupConfig) {
                 this.forwardGroupConfig = forwardGroupConfig;
@@ -1689,7 +1683,7 @@ public class ListRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The key of the header to be inserted.</p>
+             * <p>The insert header field configuration.</p>
              */
             public Builder insertHeaderConfig(InsertHeaderConfig insertHeaderConfig) {
                 this.insertHeaderConfig = insertHeaderConfig;
@@ -1697,7 +1691,7 @@ public class ListRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The priority of the action. Valid values: <strong>1 to 50000</strong>. A smaller value indicates a higher priority. The actions of a forwarding rule are applied in descending order of priority. This parameter cannot empty. The priority of each action within a forwarding rule must be unique.</p>
+             * <p>The order in which the forwarding rule action is executed. Valid values: <strong>1</strong> to <strong>50000</strong>. Actions are executed in ascending order of value. The value cannot be empty or duplicated.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1708,7 +1702,7 @@ public class ListRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The configuration of the redirect action.</p>
+             * <p>The redirect configuration.</p>
              */
             public Builder redirectConfig(RedirectConfig redirectConfig) {
                 this.redirectConfig = redirectConfig;
@@ -1716,7 +1710,7 @@ public class ListRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The HTTP header to be removed.</p>
+             * <p>The remove HTTP header configuration.</p>
              */
             public Builder removeHeaderConfig(RemoveHeaderConfig removeHeaderConfig) {
                 this.removeHeaderConfig = removeHeaderConfig;
@@ -1724,7 +1718,7 @@ public class ListRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The configuration of the rewrite action.</p>
+             * <p>The rewrite configuration.</p>
              */
             public Builder rewriteConfig(RewriteConfig rewriteConfig) {
                 this.rewriteConfig = rewriteConfig;
@@ -1732,7 +1726,7 @@ public class ListRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The configuration of traffic throttling.</p>
+             * <p>The traffic throttling configuration.</p>
              */
             public Builder trafficLimitConfig(TrafficLimitConfig trafficLimitConfig) {
                 this.trafficLimitConfig = trafficLimitConfig;
@@ -1740,7 +1734,7 @@ public class ListRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The configuration of traffic mirroring.</p>
+             * <p>The traffic mirror configuration.</p>
              */
             public Builder trafficMirrorConfig(TrafficMirrorConfig trafficMirrorConfig) {
                 this.trafficMirrorConfig = trafficMirrorConfig;
@@ -1748,22 +1742,26 @@ public class ListRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The action. Valid values:</p>
+             * <p>The action type. Valid values:</p>
              * <ul>
-             * <li><strong>ForwardGroup</strong>: distributes requests to multiple vServer groups.</li>
-             * <li><strong>Redirect</strong>: redirects requests.</li>
-             * <li><strong>FixedResponse</strong>: returns a custom response.</li>
-             * <li><strong>Rewrite</strong>: rewrites requests.</li>
-             * <li><strong>InsertHeader</strong>: inserts headers.</li>
-             * <li><strong>RemoveHeaderConfig</strong>: removes headers.</li>
-             * <li><strong>TrafficLimitConfig</strong>: throttles network traffic.</li>
-             * <li><strong>TrafficMirrorConfig</strong>: mirrors network traffic.</li>
-             * <li><strong>CorsConfig</strong>: forwards requests based on CORS.</li>
-             * </ul>
-             * <p>The preceding actions can be classified into two broad types:</p>
-             * <ul>
-             * <li><strong>FinalType</strong>: Each forwarding rule can contain only one FinalType action, which is performed at the end. You can specify only one of <strong>ForwardGroup</strong>, <strong>Redirect</strong>, and <strong>FixedResponse</strong>.</li>
-             * <li><strong>ExtType</strong>: Each forwarding rule can contain one or more <strong>ExtType</strong> actions, which are performed before the <strong>FinalType</strong> action. If you want to specify an ExtType action, you must also specify a <strong>FinalType</strong> action. You can specify multiple <strong>InsertHeader</strong> actions or one <strong>Rewrite</strong> action.</li>
+             * <li><p><strong>ForwardGroup</strong>: forwards requests to multiple virtual server groups.</p>
+             * </li>
+             * <li><p><strong>Redirect</strong>: redirects requests.</p>
+             * </li>
+             * <li><p><strong>FixedResponse</strong>: returns a fixed response.</p>
+             * </li>
+             * <li><p><strong>Rewrite</strong>: rewrites requests.</p>
+             * </li>
+             * <li><p><strong>InsertHeader</strong>: inserts a header field.</p>
+             * </li>
+             * <li><p><strong>RemoveHeaderConfig</strong>: deletes a header field.</p>
+             * </li>
+             * <li><p><strong>TrafficLimitConfig</strong>: throttles traffic.</p>
+             * </li>
+             * <li><p><strong>TrafficMirrorConfig</strong>: mirrors traffic.</p>
+             * </li>
+             * <li><p><strong>CorsConfig</strong>: enables cross-origin resource sharing (CORS).</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1834,7 +1832,7 @@ public class ListRulesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The cookie key. The cookie key must be 1 to 100 characters in length, and can contain lowercase letters, printable ASCII characters, asterisks (*), and question marks (?). It cannot contain space characters or the following special characters: <code># [ ] { } \ | &lt; &gt; &amp;</code>.</p>
+             * <p>The cookie key. The key must be 1 to 100 characters in length and can contain lowercase letters, printable characters, asterisks (*), and question marks (?). The key cannot contain spaces or <code>#[]{}\|&lt;&gt;&amp;</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -1845,7 +1843,7 @@ public class ListRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The cookie value. The cookie value must be 1 to 128 characters in length, and can contain lowercase letters, printable ASCII characters, asterisks (*), and question marks (?). It cannot contain space characters or the following special characters: <code># [ ] { } \ | &lt; &gt; &amp;</code>.</p>
+             * <p>The cookie value. The value must be 1 to 128 characters in length and can contain lowercase letters, printable characters, asterisks (*), and question marks (?). The value cannot contain spaces or <code>#[]{}\|&lt;&gt;&amp;</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -1902,7 +1900,7 @@ public class ListRulesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The cookie value.</p>
+             * <p>The cookie values.</p>
              */
             public Builder values(java.util.List<Values> values) {
                 this.values = values;
@@ -1969,7 +1967,7 @@ public class ListRulesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The key of the header. The header key must be 1 to 40 characters in length. It can contain letters, digits, hyphens (-), and underscores (_). Cookie and Host are not supported.</p>
+             * <p>The header field key. The key must be 1 to 40 characters in length and can contain letters a to z, digits, hyphens (-), and underscores (_). Cookie and Host are not supported.</p>
              * 
              * <strong>example:</strong>
              * <p>Port</p>
@@ -1980,7 +1978,7 @@ public class ListRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The value of the header.</p>
+             * <p>The header field values.</p>
              */
             public Builder values(java.util.List<String> values) {
                 this.values = values;
@@ -2142,7 +2140,7 @@ public class ListRulesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The URLs to which requests are forwarded.</p>
+             * <p>The forwarding paths.</p>
              */
             public Builder values(java.util.List<String> values) {
                 this.values = values;
@@ -2209,7 +2207,7 @@ public class ListRulesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>They key of the query string. The key must be 1 to 100 characters in length, and can contain lowercase letters, printable ASCII characters, asterisks (*), and question marks (?). It cannot contain space characters or the following special characters: <code># [ ] { } \ | &lt; &gt; &amp;</code>.</p>
+             * <p>The query string key. The key must be 1 to 100 characters in length and can contain lowercase letters, printable characters, asterisks (*), and question marks (?). The key cannot contain spaces or <code>#[]{}\|&lt;&gt;&amp;</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -2220,7 +2218,7 @@ public class ListRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The value of the query string. The value must be 1 to 128 characters in length, and can contain lowercase letters, printable ASCII characters, asterisks (*), and question marks (?). It cannot contain space characters or the following special characters: <code># [ ] { } \ | &lt; &gt; &amp;</code>.</p>
+             * <p>The query string value. The value must be 1 to 128 characters in length and can contain lowercase letters, printable characters, asterisks (*), and question marks (?). The value cannot contain spaces or <code>#[]{}\|&lt;&gt;&amp;</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -2277,7 +2275,7 @@ public class ListRulesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The query string.</p>
+             * <p>The query strings.</p>
              */
             public Builder values(java.util.List<QueryStringConfigValues> values) {
                 this.values = values;
@@ -2344,7 +2342,7 @@ public class ListRulesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The key of the HTTP header. The header key must be 1 to 40 characters in length, It can contain letters, digits, hyphens (-), and underscores (_). Cookie and Host are not supported.</p>
+             * <p>The key of the response HTTP header. The key must be 1 to 40 characters in length. It can contain lowercase letters, digits, hyphens (-), and underscores (_). Cookie and Host are not supported.</p>
              * 
              * <strong>example:</strong>
              * <p>key</p>
@@ -2355,7 +2353,7 @@ public class ListRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The values of the HTTP header.</p>
+             * <p>The list of response HTTP header values.</p>
              */
             public Builder values(java.util.List<String> values) {
                 this.values = values;
@@ -2409,7 +2407,7 @@ public class ListRulesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The response status codes.</p>
+             * <p>The list of response status codes.</p>
              */
             public Builder values(java.util.List<String> values) {
                 this.values = values;
@@ -2463,7 +2461,7 @@ public class ListRulesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The source IP addresses.</p>
+             * <p>The source IP addresses to match.</p>
              */
             public Builder values(java.util.List<String> values) {
                 this.values = values;
@@ -2634,7 +2632,7 @@ public class ListRulesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The key-value pairs of the cookie.</p>
+             * <p>The cookie configuration.</p>
              */
             public Builder cookieConfig(CookieConfig cookieConfig) {
                 this.cookieConfig = cookieConfig;
@@ -2642,7 +2640,7 @@ public class ListRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The configuration of the header.</p>
+             * <p>The header field configuration.</p>
              */
             public Builder headerConfig(HeaderConfig headerConfig) {
                 this.headerConfig = headerConfig;
@@ -2650,7 +2648,7 @@ public class ListRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The configuration of the hosts.</p>
+             * <p>The hostname configuration.</p>
              */
             public Builder hostConfig(HostConfig hostConfig) {
                 this.hostConfig = hostConfig;
@@ -2658,7 +2656,7 @@ public class ListRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The configurations of the request methods.</p>
+             * <p>The request method configuration.</p>
              */
             public Builder methodConfig(MethodConfig methodConfig) {
                 this.methodConfig = methodConfig;
@@ -2666,7 +2664,7 @@ public class ListRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The configurations of the forwarding URLs.</p>
+             * <p>The forwarding path configuration.</p>
              */
             public Builder pathConfig(PathConfig pathConfig) {
                 this.pathConfig = pathConfig;
@@ -2674,7 +2672,7 @@ public class ListRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The configurations of the query strings.</p>
+             * <p>The query string configuration.</p>
              */
             public Builder queryStringConfig(QueryStringConfig queryStringConfig) {
                 this.queryStringConfig = queryStringConfig;
@@ -2682,7 +2680,7 @@ public class ListRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The HTTP header in responses.</p>
+             * <p>The response HTTP header configuration.</p>
              */
             public Builder responseHeaderConfig(ResponseHeaderConfig responseHeaderConfig) {
                 this.responseHeaderConfig = responseHeaderConfig;
@@ -2690,7 +2688,7 @@ public class ListRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The configurations of the response status codes.</p>
+             * <p>The response status code configuration.</p>
              */
             public Builder responseStatusCodeConfig(ResponseStatusCodeConfig responseStatusCodeConfig) {
                 this.responseStatusCodeConfig = responseStatusCodeConfig;
@@ -2698,7 +2696,7 @@ public class ListRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Traffic matching based on source IP addresses.</p>
+             * <p>The source IP-based service traffic matching configuration.</p>
              */
             public Builder sourceIpConfig(SourceIpConfig sourceIpConfig) {
                 this.sourceIpConfig = sourceIpConfig;
@@ -2706,15 +2704,22 @@ public class ListRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of forwarding rule. Valid values:</p>
+             * <p>The type of the forwarding rule. Valid values:</p>
              * <ul>
-             * <li><strong>Host</strong>: Responses are forwarded based on hosts.</li>
-             * <li><strong>Path</strong>: Responses are forwarded based on URLs.</li>
-             * <li><strong>Header</strong>: Responses are forwarded based on HTTP headers.</li>
-             * <li><strong>QueryString</strong>: Responses are forwarded based on query strings.</li>
-             * <li><strong>Method</strong>: Responses are forwarded based on request methods.</li>
-             * <li><strong>Cookie</strong>: Responses are forwarded based on cookies.</li>
-             * <li><strong>SourceIp</strong>: Responses are forwarded based on source IP addresses.</li>
+             * <li><p><strong>Host</strong>: host.</p>
+             * </li>
+             * <li><p><strong>Path</strong>: path.</p>
+             * </li>
+             * <li><p><strong>Header</strong>: HTTP header field.</p>
+             * </li>
+             * <li><p><strong>QueryString</strong>: query character string.</p>
+             * </li>
+             * <li><p><strong>Method</strong>: request method.</p>
+             * </li>
+             * <li><p><strong>Cookie</strong>: cookie.</p>
+             * </li>
+             * <li><p><strong>SourceIp</strong>: source IP address.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -2785,7 +2790,7 @@ public class ListRulesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The tag key. The tag key can be up to 128 characters in length. It cannot start with aliyun or acs: and cannot contain http:// or https://.</p>
+             * <p>The tag key. The tag key can be up to 128 characters in length and cannot start with aliyun or acs:. It cannot contain http:// or https://.</p>
              * 
              * <strong>example:</strong>
              * <p>env</p>
@@ -2796,7 +2801,7 @@ public class ListRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag value. The tag value can be up to 128 characters in length. It cannot start with aliyun or acs: and cannot contain http:// or https://.</p>
+             * <p>The tag value. The tag value can be up to 128 characters in length and cannot start with aliyun or acs:. It cannot contain http:// or https://.</p>
              * 
              * <strong>example:</strong>
              * <p>product</p>
@@ -2970,13 +2975,15 @@ public class ListRulesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The direction to which the forwarding rule is applied. Valid values:</p>
+             * <p>The direction of the forwarding rule. Valid values:</p>
              * <ul>
-             * <li>Request (default): The forwarding rule is applied to requests. The forwarding action is performed on packets that are forwarded from clients to ALB.</li>
-             * <li>Responses: The forwarding rule is applied to responses. The forwarding action is performed on packets that are returned from backend servers to ALB.</li>
+             * <li><p>Request (default): request-based. Condition matching and corresponding processing are performed on requests sent from clients to ALB.</p>
+             * </li>
+             * <li><p>Response: response-based. Condition matching and corresponding processing are performed on responses returned from backend server groups to ALB.</p>
+             * </li>
              * </ul>
              * <blockquote>
-             * <p> Basic ALB instances support only the Response direction.</p>
+             * <p>ALB Basic Edition instances do not support the Response type.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -2988,7 +2995,7 @@ public class ListRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the listener that is associated with the forwarding rule.</p>
+             * <p>The ID of the listener to which the forwarding rule belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>lsn-i35udpz3pxsmnf****</p>
@@ -2999,7 +3006,7 @@ public class ListRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the Application Load Balancer (ALB) instance that is associated with the forwarding rule.</p>
+             * <p>The instance ID of the load balancing instance to which the forwarding rule belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>alb-x30o38azsuj0sx****</p>
@@ -3010,9 +3017,9 @@ public class ListRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The priority of the forwarding rule. Valid values: <strong>1 to 10000</strong>. A smaller value indicates a higher priority.</p>
+             * <p>The rule priority. Valid values: <strong>1</strong> to <strong>10000</strong>. A smaller value indicates a higher priority.</p>
              * <blockquote>
-             * <p> The priority of each forwarding rule added to a listener must be unique.</p>
+             * <p>Rule priorities must be unique within the same listener.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -3024,7 +3031,7 @@ public class ListRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The action of the forwarding rule.</p>
+             * <p>The list of forwarding rule actions.</p>
              */
             public Builder ruleActions(java.util.List<RuleActions> ruleActions) {
                 this.ruleActions = ruleActions;
@@ -3032,7 +3039,7 @@ public class ListRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The conditions of the forwarding rule.</p>
+             * <p>The list of forwarding rule conditions.</p>
              */
             public Builder ruleConditions(java.util.List<RuleConditions> ruleConditions) {
                 this.ruleConditions = ruleConditions;
@@ -3040,7 +3047,7 @@ public class ListRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the forwarding rule.</p>
+             * <p>The forwarding rule ID.</p>
              * 
              * <strong>example:</strong>
              * <p>rule-bpn0kn908w4nbw****</p>
@@ -3051,7 +3058,7 @@ public class ListRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the forwarding rule. The name must be 2 to 128 letters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter.</p>
+             * <p>The name of the forwarding rule. The name must be 2 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter.</p>
              * 
              * <strong>example:</strong>
              * <p>rule-instance-test</p>
@@ -3064,9 +3071,12 @@ public class ListRulesResponseBody extends TeaModel {
             /**
              * <p>The status of the forwarding rule. Valid values:</p>
              * <ul>
-             * <li><strong>Provisioning</strong>: The forwarding rule is being created.</li>
-             * <li><strong>Configuring</strong>: The forwarding rule is being modified.</li>
-             * <li><strong>Available</strong>: The forwarding rule is available.</li>
+             * <li><p><strong>Provisioning</strong>: being created.</p>
+             * </li>
+             * <li><p><strong>Configuring</strong>: being modified.</p>
+             * </li>
+             * <li><p><strong>Available</strong>: running.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>

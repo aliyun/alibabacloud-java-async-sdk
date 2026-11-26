@@ -67,7 +67,7 @@ public class UpdateSecurityPolicyAttributeResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The asynchronous task ID.</p>
+         * <p>The ID of the asynchronous task.</p>
          * 
          * <strong>example:</strong>
          * <p>72dcd26b-f12d-4c27-b3af-18f6aed5****</p>
@@ -78,10 +78,10 @@ public class UpdateSecurityPolicyAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
-         * <p>593B0448-D13E-4C56-AC0D-FDF0FDE0E9A3</p>
+         * <p>593B0448-D13E-4C56-AC0D-FDF0******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
