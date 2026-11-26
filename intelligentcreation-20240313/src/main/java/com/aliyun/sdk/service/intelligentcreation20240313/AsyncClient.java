@@ -20,6 +20,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
+     * @param request the request parameters of AddScriptHotWord  AddScriptHotWordRequest
+     * @return AddScriptHotWordResponse
+     */
+    CompletableFuture<AddScriptHotWordResponse> addScriptHotWord(AddScriptHotWordRequest request);
+
+    /**
      * @param request the request parameters of AddTextFeedback  AddTextFeedbackRequest
      * @return AddTextFeedbackResponse
      */
@@ -198,6 +204,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteIndividuationTextResponse
      */
     CompletableFuture<DeleteIndividuationTextResponse> deleteIndividuationText(DeleteIndividuationTextRequest request);
+
+    /**
+     * @param request the request parameters of DeleteScriptHotWord  DeleteScriptHotWordRequest
+     * @return DeleteScriptHotWordResponse
+     */
+    CompletableFuture<DeleteScriptHotWordResponse> deleteScriptHotWord(DeleteScriptHotWordRequest request);
 
     /**
      * @param request the request parameters of DescribeDocument  DescribeDocumentRequest
@@ -406,6 +418,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<QueryIndividuationTextTaskResponse> queryIndividuationTextTask(QueryIndividuationTextTaskRequest request);
 
     /**
+     * @param request the request parameters of QueryScriptHotWordList  QueryScriptHotWordListRequest
+     * @return QueryScriptHotWordListResponse
+     */
+    CompletableFuture<QueryScriptHotWordListResponse> queryScriptHotWordList(QueryScriptHotWordListRequest request);
+
+    /**
      * @param request the request parameters of QuerySessionInfo  QuerySessionInfoRequest
      * @return QuerySessionInfoResponse
      */
@@ -512,5 +530,11 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateAgentResponse
      */
     CompletableFuture<UpdateAgentResponse> updateAgent(UpdateAgentRequest request);
+
+    /**
+     * @param request the request parameters of UpdateScriptHotWord  UpdateScriptHotWordRequest
+     * @return UpdateScriptHotWordResponse
+     */
+    CompletableFuture<UpdateScriptHotWordResponse> updateScriptHotWord(UpdateScriptHotWordRequest request);
 
 }

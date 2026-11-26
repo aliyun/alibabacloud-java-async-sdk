@@ -41,6 +41,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of AddScriptHotWord  AddScriptHotWordRequest
+     * @return AddScriptHotWordResponse
+     */
+    @Override
+    public CompletableFuture<AddScriptHotWordResponse> addScriptHotWord(AddScriptHotWordRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("AddScriptHotWord").setMethod(HttpMethod.POST).setPathRegex("/yic/yic-console/openService/v1/aicoach/addScriptHotWord").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(AddScriptHotWordResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<AddScriptHotWordResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of AddTextFeedback  AddTextFeedbackRequest
      * @return AddTextFeedbackResponse
      */
@@ -575,6 +593,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DeleteIndividuationTextResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteScriptHotWord  DeleteScriptHotWordRequest
+     * @return DeleteScriptHotWordResponse
+     */
+    @Override
+    public CompletableFuture<DeleteScriptHotWordResponse> deleteScriptHotWord(DeleteScriptHotWordRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteScriptHotWord").setMethod(HttpMethod.DELETE).setPathRegex("/yic/yic-console/openService/v1/aicoach/deleteScriptHotWord").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteScriptHotWordResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteScriptHotWordResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1203,6 +1239,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of QueryScriptHotWordList  QueryScriptHotWordListRequest
+     * @return QueryScriptHotWordListResponse
+     */
+    @Override
+    public CompletableFuture<QueryScriptHotWordListResponse> queryScriptHotWordList(QueryScriptHotWordListRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("QueryScriptHotWordList").setMethod(HttpMethod.GET).setPathRegex("/yic/yic-console/openService/v1/aicoach/listScriptHotWord").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(QueryScriptHotWordListResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<QueryScriptHotWordListResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of QuerySessionInfo  QuerySessionInfoRequest
      * @return QuerySessionInfoResponse
      */
@@ -1538,6 +1592,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateAgentResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateScriptHotWord  UpdateScriptHotWordRequest
+     * @return UpdateScriptHotWordResponse
+     */
+    @Override
+    public CompletableFuture<UpdateScriptHotWordResponse> updateScriptHotWord(UpdateScriptHotWordRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateScriptHotWord").setMethod(HttpMethod.POST).setPathRegex("/yic/yic-console/openService/v1/aicoach/updateScriptHotWord").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateScriptHotWordResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateScriptHotWordResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
