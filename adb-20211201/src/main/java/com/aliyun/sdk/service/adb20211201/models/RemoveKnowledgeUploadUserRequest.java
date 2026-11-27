@@ -116,7 +116,7 @@ public class RemoveKnowledgeUploadUserRequest extends Request {
         }
 
         /**
-         * <p>The file ID.</p>
+         * <p>The ID of the file.</p>
          * 
          * <strong>example:</strong>
          * <p>2134143</p>

@@ -187,7 +187,7 @@ public class DescribeTableStatisticsResponseBody extends TeaModel {
          * <p>The list of database names.</p>
          * 
          * <strong>example:</strong>
-         * <p>[\&quot;adb_platform\&quot;, \&quot;adb_ai\&quot;, \&quot;adb_data\&quot;]</p>
+         * <p>[&quot;adb_platform&quot;, &quot;adb_ai&quot;, &quot;adb_data&quot;]</p>
          */
         public Builder schemaNames(String schemaNames) {
             this.schemaNames = schemaNames;

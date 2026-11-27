@@ -409,7 +409,7 @@ public class DescribeSparkAuditLogRecordsRequest extends Request {
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>[{\&quot;Field\&quot;:\&quot;ExecuteTime\&quot;,\&quot;Type\&quot;:\&quot;Desc\&quot;}]</p>
+         * <p>[{&quot;Field&quot;:&quot;ExecuteTime&quot;,&quot;Type&quot;:&quot;Desc&quot;}]</p>
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);

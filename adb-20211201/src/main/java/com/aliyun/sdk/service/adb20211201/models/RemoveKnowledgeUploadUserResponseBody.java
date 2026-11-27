@@ -192,7 +192,7 @@ public class RemoveKnowledgeUploadUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of successfully deleted users.</p>
+             * <p>The number of users that were successfully removed.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -203,7 +203,7 @@ public class RemoveKnowledgeUploadUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the request is successful. Valid values:</p>
+             * <p>Indicates whether the request was successful. Valid values:</p>
              * <ul>
              * <li><strong>true</strong>: Successful.</li>
              * <li><strong>false</strong>: Failed.</li>

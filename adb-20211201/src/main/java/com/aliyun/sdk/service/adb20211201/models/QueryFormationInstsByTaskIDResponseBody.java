@@ -587,7 +587,7 @@ public class QueryFormationInstsByTaskIDResponseBody extends TeaModel {
              * <p>The task type.</p>
              * 
              * <strong>example:</strong>
-             * <p>Update\&quot;\&quot;</p>
+             * <p>Update&quot;&quot;</p>
              */
             public Builder taskType(String taskType) {
                 this.taskType = taskType;

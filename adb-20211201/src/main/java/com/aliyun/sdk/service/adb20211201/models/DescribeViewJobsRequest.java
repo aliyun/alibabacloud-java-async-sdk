@@ -235,7 +235,7 @@ public class DescribeViewJobsRequest extends Request {
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>{\&quot;Field\&quot;:\&quot;StartTime\&quot;,\&quot;Type\&quot;:\&quot;Desc\&quot;}</p>
+         * <p>{&quot;Field&quot;:&quot;StartTime&quot;,&quot;Type&quot;:&quot;Desc&quot;}</p>
          */
         public Builder orderBy(String orderBy) {
             this.putQueryParameter("OrderBy", orderBy);

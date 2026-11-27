@@ -220,7 +220,7 @@ public class DescribeMvRecommendSubTasksRequest extends Request {
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>{\&quot;Type\&quot;: \&quot;ASC\&quot;, \&quot;Field\&quot;: \&quot;StartTime\&quot;}</p>
+         * <p>{&quot;Type&quot;: &quot;ASC&quot;, &quot;Field&quot;: &quot;StartTime&quot;}</p>
          */
         public Builder orderBy(String orderBy) {
             this.putQueryParameter("OrderBy", orderBy);

@@ -93,7 +93,7 @@ public class CancelSqlPatternCompareReportResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The time when the report was first canceled. The time is in UTC in the yyyy-MM-ddTHH:mmZ format.</p>
+         * <p>The time of the first cancellation. The time is displayed in UTC in the yyyy-MM-ddTHH:mmZ format.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-09-08T01:06Z</p>
@@ -104,7 +104,7 @@ public class CancelSqlPatternCompareReportResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the report is canceled. The value true is returned when the report is successfully canceled or canceled again.</p>
+         * <p>Indicates whether the report is canceled. true is returned if the cancellation is successful or if the report is repeatedly canceled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -115,7 +115,7 @@ public class CancelSqlPatternCompareReportResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The SQL Pattern comparison report ID.</p>
+         * <p>The ID of the SQL pattern comparison report.</p>
          * 
          * <strong>example:</strong>
          * <p>1001</p>

@@ -388,7 +388,7 @@ public class OpenStructMvDetailModel extends TeaModel {
          * <p>The refresh interval.</p>
          * 
          * <strong>example:</strong>
-         * <p>(now() + INTERVAL \&quot;10\&quot; SECOND)</p>
+         * <p>(now() + INTERVAL &quot;10&quot; SECOND)</p>
          */
         public Builder refreshInterval(String refreshInterval) {
             this.refreshInterval = refreshInterval;

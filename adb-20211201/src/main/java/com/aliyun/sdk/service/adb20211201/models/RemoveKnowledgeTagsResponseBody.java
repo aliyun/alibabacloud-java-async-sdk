@@ -170,7 +170,7 @@ public class RemoveKnowledgeTagsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The knowledge base file location.</p>
+             * <p>The location of the knowledge base file.</p>
              * 
              * <strong>example:</strong>
              * <p>oss://bucket/doc.pdf</p>
@@ -181,7 +181,7 @@ public class RemoveKnowledgeTagsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The API message.</p>
+             * <p>The message returned by the API.</p>
              * 
              * <strong>example:</strong>
              * <p>Successful</p>
@@ -192,7 +192,7 @@ public class RemoveKnowledgeTagsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of tags successfully deleted.</p>
+             * <p>The number of successfully deleted tags.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>

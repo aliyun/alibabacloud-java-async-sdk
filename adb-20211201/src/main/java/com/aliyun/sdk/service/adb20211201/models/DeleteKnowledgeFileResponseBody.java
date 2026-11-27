@@ -157,7 +157,7 @@ public class DeleteKnowledgeFileResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The file path. Currently, only OSS paths are supported.</p>
+             * <p>The file location. Currently, only OSS paths are supported.</p>
              * 
              * <strong>example:</strong>
              * <p>oss://bucket/doc.pdf</p>
@@ -181,8 +181,8 @@ public class DeleteKnowledgeFileResponseBody extends TeaModel {
             /**
              * <p>Indicates whether the request is successful. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong>: The request is successful.</li>
-             * <li><strong>false</strong>: The request fails.</li>
+             * <li><strong>true</strong>: Successful.</li>
+             * <li><strong>false</strong>: Failed.</li>
              * </ul>
              * 
              * <strong>example:</strong>

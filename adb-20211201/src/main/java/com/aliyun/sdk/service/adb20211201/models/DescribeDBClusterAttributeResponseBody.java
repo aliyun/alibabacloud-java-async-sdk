@@ -659,6 +659,15 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
+        @com.aliyun.core.annotation.NameInMap("RoutingControllerNodeCountFree")
+        private Integer routingControllerNodeCountFree;
+
+        @com.aliyun.core.annotation.NameInMap("RoutingControllerNodeCountPaid")
+        private Integer routingControllerNodeCountPaid;
+
+        @com.aliyun.core.annotation.NameInMap("RoutingControllerNodeSize")
+        private String routingControllerNodeSize;
+
         @com.aliyun.core.annotation.NameInMap("SecondaryVSwitchId")
         private String secondaryVSwitchId;
 
@@ -736,6 +745,9 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             this.reservedNodeCount = builder.reservedNodeCount;
             this.reservedNodeSize = builder.reservedNodeSize;
             this.resourceGroupId = builder.resourceGroupId;
+            this.routingControllerNodeCountFree = builder.routingControllerNodeCountFree;
+            this.routingControllerNodeCountPaid = builder.routingControllerNodeCountPaid;
+            this.routingControllerNodeSize = builder.routingControllerNodeSize;
             this.secondaryVSwitchId = builder.secondaryVSwitchId;
             this.secondaryZoneId = builder.secondaryZoneId;
             this.storageResource = builder.storageResource;
@@ -999,6 +1011,27 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * @return routingControllerNodeCountFree
+         */
+        public Integer getRoutingControllerNodeCountFree() {
+            return this.routingControllerNodeCountFree;
+        }
+
+        /**
+         * @return routingControllerNodeCountPaid
+         */
+        public Integer getRoutingControllerNodeCountPaid() {
+            return this.routingControllerNodeCountPaid;
+        }
+
+        /**
+         * @return routingControllerNodeSize
+         */
+        public String getRoutingControllerNodeSize() {
+            return this.routingControllerNodeSize;
+        }
+
+        /**
          * @return secondaryVSwitchId
          */
         public String getSecondaryVSwitchId() {
@@ -1131,6 +1164,9 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             private Integer reservedNodeCount; 
             private String reservedNodeSize; 
             private String resourceGroupId; 
+            private Integer routingControllerNodeCountFree; 
+            private Integer routingControllerNodeCountPaid; 
+            private String routingControllerNodeSize; 
             private String secondaryVSwitchId; 
             private String secondaryZoneId; 
             private String storageResource; 
@@ -1184,6 +1220,9 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
                 this.reservedNodeCount = model.reservedNodeCount;
                 this.reservedNodeSize = model.reservedNodeSize;
                 this.resourceGroupId = model.resourceGroupId;
+                this.routingControllerNodeCountFree = model.routingControllerNodeCountFree;
+                this.routingControllerNodeCountPaid = model.routingControllerNodeCountPaid;
+                this.routingControllerNodeSize = model.routingControllerNodeSize;
                 this.secondaryVSwitchId = model.secondaryVSwitchId;
                 this.secondaryZoneId = model.secondaryZoneId;
                 this.storageResource = model.storageResource;
@@ -1469,6 +1508,30 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
+                return this;
+            }
+
+            /**
+             * RoutingControllerNodeCountFree.
+             */
+            public Builder routingControllerNodeCountFree(Integer routingControllerNodeCountFree) {
+                this.routingControllerNodeCountFree = routingControllerNodeCountFree;
+                return this;
+            }
+
+            /**
+             * RoutingControllerNodeCountPaid.
+             */
+            public Builder routingControllerNodeCountPaid(Integer routingControllerNodeCountPaid) {
+                this.routingControllerNodeCountPaid = routingControllerNodeCountPaid;
+                return this;
+            }
+
+            /**
+             * RoutingControllerNodeSize.
+             */
+            public Builder routingControllerNodeSize(String routingControllerNodeSize) {
+                this.routingControllerNodeSize = routingControllerNodeSize;
                 return this;
             }
 

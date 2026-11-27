@@ -114,14 +114,14 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Cancels a specified SQL Pattern comparison report. Reports in the following statuses can be canceled:</p>
+     * <p>Cancels a specified SQL pattern comparison report. You can cancel reports in the following states:</p>
      * <ul>
-     * <li><code>PENDING</code>: Waiting to be generated.</li>
-     * <li><code>RUNNING</code>: Being generated.<blockquote>
+     * <li><code>PENDING</code>: Pending generation.</li>
+     * <li><code>RUNNING</code>: Generation in progress.<blockquote>
      * <ul>
      * <li>Only reports with <code>CancelAvailable</code> set to <code>true</code> can be canceled.</li>
-     * <li>Reports that are completed, failed, or expired cannot be canceled.</li>
-     * <li>When you cancel an already canceled report again, <code>Canceled</code> still returns <code>true</code>, and <code>CancelTime</code> retains the time of the first cancellation.</li>
+     * <li>Completed, failed, or expired reports cannot be canceled.</li>
+     * <li>If you repeatedly cancel an already canceled report, <code>Canceled</code> still returns <code>true</code>, and <code>CancelTime</code> remains the time of the first cancellation.</li>
      * <li>Reports are isolated by instance and Alibaba Cloud account.</li>
      * </ul>
      * </blockquote>
@@ -327,12 +327,12 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>创建语义视图。调用前请确认已满足以下条件：</p>
+     * <p>Creates a semantic view. Before calling this operation, ensure that the following conditions are met:</p>
      * <ol>
-     * <li>已创建 ADB 集群，可通过 DescribeDBClusters 获取集群 ID（DBClusterId）。</li>
-     * <li>集群中已存在 Super 类型的数据库账号，可通过 CreateAccount 创建。</li>
-     * <li>当前 RAM 用户已绑定到该数据库账号：BindAccount 仅支持绑定数据库普通账号；若目标账号为 Super 类型，建议通过 CreateAccount 的 RamUserList 参数完成绑定。</li>
-     * <li>SchemaName 指定的数据库已存在。</li>
+     * <li>An ADB cluster is created. You can call DescribeDBClusters to obtain the cluster ID (DBClusterId).</li>
+     * <li>A Super database account exists in the cluster. You can call CreateAccount to create one.</li>
+     * <li>The current RAM user is bound to the database account. BindAccount only supports binding regular database accounts. If the target account is a Super account, bind the RAM user by using the RamUserList parameter of CreateAccount.</li>
+     * <li>The database specified by SchemaName already exists.</li>
      * </ol>
      * 
      * @param request the request parameters of CreateSemanticView  CreateSemanticViewRequest
@@ -837,7 +837,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>To find the endpoints for this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * <p>For the service registration address of the current service, refer to <a href="https://help.aliyun.com/document_detail/612373.html">Service registration</a>.</p>
      * 
      * @param request the request parameters of DescribeDBClusterAttribute  DescribeDBClusterAttributeRequest
      * @return DescribeDBClusterAttributeResponse

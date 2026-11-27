@@ -375,7 +375,7 @@ public class GetADBSparkNecessaryRAMPermissionsResponseBody extends TeaModel {
              * <p>The recommended configurations in the RAM system based on the diagnostic information.</p>
              * 
              * <strong>example:</strong>
-             * <p>Grant the system RAM policy \&quot;AliyunADBDeveloperAccess\&quot; to current RAM user can quickly solve this issue.</p>
+             * <p>Grant the system RAM policy &quot;AliyunADBDeveloperAccess&quot; to current RAM user can quickly solve this issue.</p>
              */
             public Builder suggestion(String suggestion) {
                 this.suggestion = suggestion;
