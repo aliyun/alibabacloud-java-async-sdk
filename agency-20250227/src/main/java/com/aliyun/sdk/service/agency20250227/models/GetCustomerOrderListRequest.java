@@ -325,7 +325,7 @@ public class GetCustomerOrderListRequest extends Request {
         }
 
         /**
-         * <p>The customer UID.</p>
+         * <p>The UID of the customer.</p>
          * 
          * <strong>example:</strong>
          * <p>123456</p>
@@ -337,7 +337,7 @@ public class GetCustomerOrderListRequest extends Request {
         }
 
         /**
-         * <p>The start timestamp for order creation. The time range cannot exceed 6 months. The order creation time range and the order payment time range cannot both be empty.</p>
+         * <p>The start timestamp for order creation. The time range cannot exceed 6 months. The order creation time range and the order payment time range cannot be empty at the same time.</p>
          * 
          * <strong>example:</strong>
          * <p>1727789348000</p>
@@ -349,7 +349,7 @@ public class GetCustomerOrderListRequest extends Request {
         }
 
         /**
-         * <p>The end timestamp for order creation. The time range cannot exceed 6 months. The order creation time range and the order payment time range cannot both be empty.</p>
+         * <p>The end timestamp for order creation. The time range cannot exceed 6 months. The order creation time range and the order payment time range cannot be empty at the same time.</p>
          * 
          * <strong>example:</strong>
          * <p>1741008566000</p>
@@ -373,7 +373,7 @@ public class GetCustomerOrderListRequest extends Request {
         }
 
         /**
-         * <p>The start timestamp for order payment. The time range cannot exceed 6 months. The order creation time range and the order payment time range cannot both be empty.</p>
+         * <p>The start timestamp for order payment. The time range cannot exceed 6 months. The order creation time range and the order payment time range cannot be empty at the same time.</p>
          * 
          * <strong>example:</strong>
          * <p>1727789348000</p>
@@ -385,7 +385,7 @@ public class GetCustomerOrderListRequest extends Request {
         }
 
         /**
-         * <p>The end timestamp for order payment. The time range cannot exceed 6 months. The order creation time range and the order payment time range cannot both be empty.</p>
+         * <p>The end timestamp for order payment. The time range cannot exceed 6 months. The order creation time range and the order payment time range cannot be empty at the same time.</p>
          * 
          * <strong>example:</strong>
          * <p>1741008566000</p>
@@ -399,9 +399,9 @@ public class GetCustomerOrderListRequest extends Request {
         /**
          * <p>The order status. Valid values:</p>
          * <ul>
-         * <li>1: unpaid</li>
-         * <li>2: canceled</li>
-         * <li>3: paid.</li>
+         * <li>1: Unpaid.</li>
+         * <li>2: Canceled.</li>
+         * <li>3: Paid.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -437,7 +437,7 @@ public class GetCustomerOrderListRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The page size.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -474,10 +474,10 @@ public class GetCustomerOrderListRequest extends Request {
         }
 
         /**
-         * <p>The payment type. Valid values:</p>
+         * <p>The payment method. Valid values:</p>
          * <ul>
-         * <li>1: non-delegated payment</li>
-         * <li>2: delegated payment.</li>
+         * <li>1: Self-paid.</li>
+         * <li>2: Paid on behalf.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -505,7 +505,7 @@ public class GetCustomerOrderListRequest extends Request {
          * <p>The product name.</p>
          * 
          * <strong>example:</strong>
-         * <p>Elastic computing</p>
+         * <p>Elastic Compute</p>
          */
         public Builder productName(String productName) {
             this.putQueryParameter("ProductName", productName);
@@ -526,7 +526,7 @@ public class GetCustomerOrderListRequest extends Request {
         }
 
         /**
-         * <p>The employee who follows up with the customer.</p>
+         * <p>The RAM account of the customer manager.</p>
          * 
          * <strong>example:</strong>
          * <p>1234532</p>
@@ -538,7 +538,10 @@ public class GetCustomerOrderListRequest extends Request {
         }
 
         /**
-         * RebateType.
+         * <p>The transaction mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder rebateType(Integer rebateType) {
             this.putQueryParameter("RebateType", rebateType);

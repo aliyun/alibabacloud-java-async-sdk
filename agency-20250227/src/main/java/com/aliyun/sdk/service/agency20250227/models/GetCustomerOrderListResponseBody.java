@@ -171,7 +171,7 @@ public class GetCustomerOrderListResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details of the access denial.</p>
+         * <p>The access denial details.</p>
          * 
          * <strong>example:</strong>
          * <p>None</p>
@@ -234,7 +234,7 @@ public class GetCustomerOrderListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The page size.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -256,7 +256,7 @@ public class GetCustomerOrderListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -604,7 +604,7 @@ public class GetCustomerOrderListResponseBody extends TeaModel {
              * <p>The customer classification.</p>
              * 
              * <strong>example:</strong>
-             * <p>Type C</p>
+             * <p>Class C</p>
              */
             public Builder customerClassification(String customerClassification) {
                 this.customerClassification = customerClassification;
@@ -612,7 +612,7 @@ public class GetCustomerOrderListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The customer UID.</p>
+             * <p>The UID of the customer.</p>
              * 
              * <strong>example:</strong>
              * <p>123456</p>
@@ -623,7 +623,7 @@ public class GetCustomerOrderListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The coupon amount.</p>
+             * <p>The voucher amount.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -656,12 +656,7 @@ public class GetCustomerOrderListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The order status. Valid values:</p>
-             * <ul>
-             * <li>1: unpaid</li>
-             * <li>2: paid</li>
-             * <li>3: canceled.</li>
-             * </ul>
+             * <p>The order status. Valid values: 1: Unpaid. 2: Paid. 3: Canceled.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -672,7 +667,7 @@ public class GetCustomerOrderListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The order type. Valid values: BUY, UPGRADE, DOWNGRADE, RENEW, REFUND, OTHERS.</p>
+             * <p>The order type. Valid values: BUY, UPGRADE, DOWNGRADE, RENEW, REFUND, and OTHERS.</p>
              * 
              * <strong>example:</strong>
              * <p>BUY</p>
@@ -694,10 +689,10 @@ public class GetCustomerOrderListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The payment type. Valid values:</p>
+             * <p>The payment method. Valid values:</p>
              * <ul>
-             * <li>1: non-delegated payment</li>
-             * <li>2: delegated payment.</li>
+             * <li>1: Self-paid.</li>
+             * <li>2: Paid on behalf.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -753,7 +748,7 @@ public class GetCustomerOrderListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The employee who follows up with the customer.</p>
+             * <p>The RAM account of the customer manager.</p>
              */
             public Builder ramAccountForCustomerManagers(java.util.List<String> ramAccountForCustomerManagers) {
                 this.ramAccountForCustomerManagers = ramAccountForCustomerManagers;
@@ -761,7 +756,10 @@ public class GetCustomerOrderListResponseBody extends TeaModel {
             }
 
             /**
-             * RebateType.
+             * <p>The transaction mode. Valid values: 1: Domestic reseller. 2: Domestic payer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder rebateType(Integer rebateType) {
                 this.rebateType = rebateType;
