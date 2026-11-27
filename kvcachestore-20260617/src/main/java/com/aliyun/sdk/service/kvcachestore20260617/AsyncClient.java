@@ -23,7 +23,7 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <b>description</b> :
      * <p>This operation is asynchronous. A return value of Attaching indicates that the request is accepted. Call ListKVCacheStoreAttachInfo to query the mount records. When the record status changes to Attached, the mounting is complete.</p>
      * <ul>
-     * <li>The KVCacheStore must be in the Available or InUse state to be mounted.</li>
+     * <li>The KVCacheStore must be in the Available or InUse state before it can be mounted.</li>
      * </ul>
      * 
      * @param request the request parameters of AttachKVCacheStore  AttachKVCacheStoreRequest
@@ -72,7 +72,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This operation is asynchronous. A return value of Detaching indicates that the request is accepted. Call ListKVCacheStoreAttachInfo to query mount records. If no record is found for the specified KvcsId and VscId, the unmount operation is complete.</p>
+     * <p>This operation is asynchronous. A return value of Detaching indicates that the request is accepted. Call ListKVCacheStoreAttachInfo to query the mount records. If no record is found for the specified KvcsId and VscId, the detach operation is complete.</p>
      * 
      * @param request the request parameters of DetachKVCacheStore  DetachKVCacheStoreRequest
      * @return DetachKVCacheStoreResponse

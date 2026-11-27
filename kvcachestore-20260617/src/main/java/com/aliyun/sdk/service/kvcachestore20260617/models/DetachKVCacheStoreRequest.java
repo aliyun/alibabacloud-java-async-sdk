@@ -101,7 +101,7 @@ public class DetachKVCacheStoreRequest extends Request {
         }
 
         /**
-         * <p>The region ID. Example: cn-hangzhou.</p>
+         * <p>The region ID, such as cn-hangzhou.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,7 +114,7 @@ public class DetachKVCacheStoreRequest extends Request {
         }
 
         /**
-         * <p>The list of resources to unmount. You can specify up to 100 resources.</p>
+         * <p>The list of resources to detach. You can specify up to 100 resources.</p>
          * <p>This parameter is required.</p>
          */
         public Builder resourceIds(java.util.List<ResourceIds> resourceIds) {
@@ -137,15 +137,18 @@ public class DetachKVCacheStoreRequest extends Request {
      * <p>DetachKVCacheStoreRequest</p>
      */
     public static class ResourceIds extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
+        private String instanceId;
+
         @com.aliyun.core.annotation.NameInMap("KvcsId")
         @com.aliyun.core.annotation.Validation(required = true)
         private String kvcsId;
 
         @com.aliyun.core.annotation.NameInMap("VscId")
-        @com.aliyun.core.annotation.Validation(required = true)
         private String vscId;
 
         private ResourceIds(Builder builder) {
+            this.instanceId = builder.instanceId;
             this.kvcsId = builder.kvcsId;
             this.vscId = builder.vscId;
         }
@@ -156,6 +159,13 @@ public class DetachKVCacheStoreRequest extends Request {
 
         public static ResourceIds create() {
             return builder().build();
+        }
+
+        /**
+         * @return instanceId
+         */
+        public String getInstanceId() {
+            return this.instanceId;
         }
 
         /**
@@ -173,6 +183,7 @@ public class DetachKVCacheStoreRequest extends Request {
         }
 
         public static final class Builder {
+            private String instanceId; 
             private String kvcsId; 
             private String vscId; 
 
@@ -180,9 +191,21 @@ public class DetachKVCacheStoreRequest extends Request {
             } 
 
             private Builder(ResourceIds model) {
+                this.instanceId = model.instanceId;
                 this.kvcsId = model.kvcsId;
                 this.vscId = model.vscId;
             } 
+
+            /**
+             * <p>The ID of the compute instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-hdska8721321</p>
+             */
+            public Builder instanceId(String instanceId) {
+                this.instanceId = instanceId;
+                return this;
+            }
 
             /**
              * <p>KVCacheStore KvcsId</p>
@@ -198,7 +221,6 @@ public class DetachKVCacheStoreRequest extends Request {
 
             /**
              * <p>The ID of the VSC on the compute side.</p>
-             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>vsc-uf6cpove22nrjnpenwkyal</p>
