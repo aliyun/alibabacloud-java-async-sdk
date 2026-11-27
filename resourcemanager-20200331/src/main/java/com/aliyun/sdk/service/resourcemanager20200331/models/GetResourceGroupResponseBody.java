@@ -67,7 +67,7 @@ public class GetResourceGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>2D69A58F-345C-4FDE-88E4-BF5189484043</p>
@@ -491,7 +491,7 @@ public class GetResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the resource group was created (UTC).</p>
+             * <p>The time when the resource group was created. The time is displayed in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2015-01-23T12:33:18Z</p>
@@ -513,7 +513,7 @@ public class GetResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The resource group ID.</p>
+             * <p>The ID of the resource group.</p>
              * 
              * <strong>example:</strong>
              * <p>rg-9gLOoK****</p>
@@ -547,7 +547,7 @@ public class GetResourceGroupResponseBody extends TeaModel {
              * <ul>
              * <li>Creating: The resource group is being created.</li>
              * <li>OK: The resource group is created.</li>
-             * <li>PendingDelete: The resource group is waiting to be deleted.</li>
+             * <li>PendingDelete: The resource group is pending deletion.</li>
              * </ul>
              * 
              * <strong>example:</strong>

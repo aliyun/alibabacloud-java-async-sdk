@@ -60,7 +60,7 @@ public class GetAccountDeletionCheckResultRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the member account that you want to delete.</p>
+         * <p>The ID of the member to be deleted.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

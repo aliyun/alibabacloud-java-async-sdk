@@ -67,7 +67,7 @@ public class GetHandshakeResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The handshake information.</p>
+         * <p>The invitation information.</p>
          */
         public Builder handshake(Handshake handshake) {
             this.handshake = handshake;
@@ -287,7 +287,7 @@ public class GetHandshakeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The creation time of the handshake (UTC).</p>
+             * <p>The creation time of the invitation in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2018-08-10T09:55:41Z</p>
@@ -298,7 +298,7 @@ public class GetHandshakeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The expiration time of the handshake (UTC).</p>
+             * <p>The expiration time of the invitation in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2018-08-24T09:55:41Z</p>
@@ -309,7 +309,7 @@ public class GetHandshakeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The handshake ID.</p>
+             * <p>The invitation ID.</p>
              * 
              * <strong>example:</strong>
              * <p>h-ycm4rp****</p>
@@ -322,7 +322,7 @@ public class GetHandshakeResponseBody extends TeaModel {
             /**
              * <p>The real-name verification information of the invited account.</p>
              * <blockquote>
-             * <p>This parameter is visible only when the invited account calls this operation.</p>
+             * <p>This parameter is returned only when the invited account calls this operation.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -358,7 +358,7 @@ public class GetHandshakeResponseBody extends TeaModel {
             /**
              * <p>The real-name verification information of the management account of the resource directory.</p>
              * <blockquote>
-             * <p>This parameter is visible only when the invited account calls this operation.</p>
+             * <p>This parameter is returned only when the invited account calls this operation.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -370,7 +370,7 @@ public class GetHandshakeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The modification time of the handshake (UTC).</p>
+             * <p>The modification time of the invitation in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2018-08-10T09:55:41Z</p>
@@ -381,7 +381,7 @@ public class GetHandshakeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The remarks.</p>
+             * <p>The note.</p>
              * 
              * <strong>example:</strong>
              * <p>Welcome to join us</p>
@@ -392,7 +392,7 @@ public class GetHandshakeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The resource directory ID.</p>
+             * <p>The ID of the resource directory.</p>
              * 
              * <strong>example:</strong>
              * <p>rd-abcdef****</p>
@@ -403,12 +403,12 @@ public class GetHandshakeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the handshake. Valid values:</p>
+             * <p>The invitation status. Valid values:</p>
              * <ul>
-             * <li>Pending: Waiting for confirmation.</li>
+             * <li>Pending: Awaiting confirmation.</li>
              * <li>Accepted: Accepted.</li>
              * <li>Cancelled: Cancelled.</li>
-             * <li>Declined: Rejected.</li>
+             * <li>Declined: Declined.</li>
              * <li>Expired: Expired.</li>
              * </ul>
              * 
@@ -434,8 +434,8 @@ public class GetHandshakeResponseBody extends TeaModel {
             /**
              * <p>The type of the invited account. Valid values:</p>
              * <ul>
-             * <li>Account: account ID.</li>
-             * <li>Email: logon email address of the account.</li>
+             * <li>Account: The account ID.</li>
+             * <li>Email: The logon email address.</li>
              * </ul>
              * 
              * <strong>example:</strong>

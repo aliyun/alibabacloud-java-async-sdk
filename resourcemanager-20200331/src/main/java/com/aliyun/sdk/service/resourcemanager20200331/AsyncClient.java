@@ -21,8 +21,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>After the invited Alibaba Cloud account successfully joins a resource directory, the account becomes a member of the resource directory. The resource directory uses the name of the invited Alibaba Cloud account as the display name and account name of the member by default.
-     * This topic provides an example on how the invited Alibaba Cloud account <code>177242285274****</code> accepts an invitation from the resource directory <code>rd-3G****</code>. The handshake ID is <code>h-Ih8IuPfvV0t0****</code>.</p>
+     * <p>After an invited Alibaba Cloud account successfully joins a resource directory, it becomes a member of the resource directory. By default, the resource directory uses the name of the invited Alibaba Cloud account as the member name and account name of the member. This topic provides an example where the invited Alibaba Cloud account <code>177242285274****</code> accepts an invitation from the resource directory <code>rd-3G****</code>. The invitation ID is <code>h-Ih8IuPfvV0t0****</code>.</p>
      * 
      * @param request the request parameters of AcceptHandshake  AcceptHandshakeRequest
      * @return AcceptHandshakeResponse
@@ -31,11 +30,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>After the control policy is attached, the resource folder or member immediately becomes subject to the control policy. Make sure that the result of the attach operation is as expected to avoid affecting your business.
-     * The system attaches the system policy FullAliyunAccess to resource folders and members by default.
-     * A control policy takes effect on the entire node to which it is attached. A control policy attached to a parent resource folder also takes effect on its child resource folders and members.
-     * Each node (resource folder or member) can have a maximum of 10 control policies attached.
-     * This topic provides an example on how to attach the custom policy <code>cp-jExXAqIYkwHN****</code> to the resource folder <code>fd-ZDNPiT****</code>.</p>
+     * <p>After a control policy is attached, the folder or member is immediately governed by the control policy. Make sure that the attach operation produces the expected results to avoid disrupting your business.
+     * By default, the system attaches the system policy FullAliyunAccess to folders and members.
+     * A control policy takes effect on all nodes under the node to which it is attached. For example, a control policy attached to a parent folder also takes effect on its child folders and members.
+     * You can attach a maximum of 10 control policies to each node (folder or member).
+     * This topic provides an example on how to attach the custom policy <code>cp-jExXAqIYkwHN****</code> to the folder <code>fd-ZDNPiT****</code>.</p>
      * 
      * @param request the request parameters of AttachControlPolicy  AttachControlPolicyRequest
      * @return AttachControlPolicyResponse
@@ -50,9 +49,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is used only to set a secure phone number for a resource account for the first time. It cannot be used to modify an existing secure phone number.
-     * To ensure that the system can record the specific author of management operations, use a Resource Access Management (RAM) user or RAM role under the management account that has the resource folder management permission (AliyunResourceDirectoryFullAccess) to invoke this API operation.
-     * This topic provides an example of how to set a secure phone number for the member <code>138660628348****</code>.</p>
+     * <p>This API operation is used only to set the secure secure phone number for a resource account for the first time. You cannot use this operation to modify an existing secure secure phone number.
+     * To ensure that the system can record the specific operator of management operations, call this API operation as a Resource Access Management (RAM) user or RAM role that has the AliyunResourceDirectoryFullAccess permission under the management account.
+     * This topic provides an example on how to set the secure secure phone number for the member <code>138660628348****</code>.</p>
      * 
      * @param request the request parameters of BindSecureMobilePhone  BindSecureMobilePhoneRequest
      * @return BindSecureMobilePhoneResponse
@@ -60,6 +59,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<BindSecureMobilePhoneResponse> bindSecureMobilePhone(BindSecureMobilePhoneRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>调用前，目标成员需存在待验证的邮箱修改记录，否则返回 404 EntityNotExists.EmailModifyRecord。邮箱修改记录可通过 ChangeAccountEmail 发起。
+     * 目标成员处于删除中状态时，相关操作会返回 409 NotSupportedOperation.DeletingAccount，请等待删除流程结束或先取消删除。</p>
+     * 
      * @param request the request parameters of CancelChangeAccountEmail  CancelChangeAccountEmailRequest
      * @return CancelChangeAccountEmailResponse
      */
@@ -73,7 +76,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example on how to cancel the handshake whose ID is <code>h-ycm4rp****</code>.</p>
+     * <p>This topic provides an example of canceling an invitation with the ID <code>h-ycm4rp****</code>.</p>
      * 
      * @param request the request parameters of CancelHandshake  CancelHandshakeRequest
      * @return CancelHandshakeResponse
@@ -94,7 +97,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Before deleting a member account, call this API to perform a pre-deletion condition check on the target member account.</p>
+     * <p>Before you delete a member, call this API to check the deletion conditions for the target member.</p>
      * 
      * @param request the request parameters of CheckAccountDelete  CheckAccountDeleteRequest
      * @return CheckAccountDeleteResponse
@@ -161,7 +164,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>In a resource directory, a member serves as a resource container and is a resource grouping unit. A member typically represents a project or application. Resources in each member are physically isolated from resources in other members.</p>
+     * <p>In a resource directory, a member serves as a resource container and a resource grouping unit. Members typically represent projects or applications. Resources in each member are physically isolated from resources in other members.</p>
      * 
      * @param request the request parameters of CreateResourceAccount  CreateResourceAccountRequest
      * @return CreateResourceAccountResponse
@@ -171,7 +174,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>You can create a maximum of 30 resource groups within an Alibaba Cloud account.</p>
+     * <p>You can create a maximum of 30 resource groups under an Alibaba Cloud account.</p>
      * </blockquote>
      * 
      * @param request the request parameters of CreateResourceGroup  CreateResourceGroupRequest
@@ -199,8 +202,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Before deleting a member, call <a href="https://help.aliyun.com/document_detail/448542.html">CheckAccountDelete</a> and <a href="https://help.aliyun.com/document_detail/448775.html">GetAccountDeletionCheckResult</a> to perform a pre-deletion check on the member. Only members that meet the deletion conditions can be successfully deleted by calling DeleteAccount.
-     * After you successfully submit a member deletion request, you can call <a href="https://help.aliyun.com/document_detail/449001.html">GetAccountDeletionStatus</a> to query the deletion status. Once a member is deleted, all resources and data in the member are deleted. You can no longer log on to or use the member, and the data cannot be recovered. Proceed with caution. For more information about member deletion, see <a href="https://help.aliyun.com/document_detail/446078.html">Delete a member of the resource account type</a>.</p>
+     * <p>Before you delete a member, call <a href="https://help.aliyun.com/document_detail/448542.html">CheckAccountDelete</a> and <a href="https://help.aliyun.com/document_detail/448775.html">GetAccountDeletionCheckResult</a> to check the deletion conditions for the member. You can successfully delete a member by calling DeleteAccount only if the member meets the deletion conditions.
+     * After you successfully submit a member deletion request, you can call <a href="https://help.aliyun.com/document_detail/449001.html">GetAccountDeletionStatus</a> to query the deletion status. Once a member is deleted, all resources and data in the member are deleted. You cannot log on to or use the member again, and the data cannot be recovered. Proceed with caution. For more information about member deletion, see <a href="https://help.aliyun.com/document_detail/446078.html">Delete a member of the resource account type</a>.</p>
      * 
      * @param request the request parameters of DeleteAccount  DeleteAccountRequest
      * @return DeleteAccountResponse
@@ -215,8 +218,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>To delete a custom control policy that is attached to a resource folder or member accounts, invoke <a href="https://help.aliyun.com/document_detail/208331.html">DetachControlPolicy</a> to detach the policy first.
-     * This topic provides an example on how to delete the custom control policy cp-SImPt8GCEwiq****.</p>
+     * <p>If a custom control policy is attached to resource folders or member accounts, you must invoke <a href="https://help.aliyun.com/document_detail/208331.html">DetachControlPolicy</a> to detach it before you can delete it.
+     * This topic provides an example of deleting the custom control policy <code>cp-SImPt8GCEwiq****</code>.</p>
      * 
      * @param request the request parameters of DeleteControlPolicy  DeleteControlPolicyRequest
      * @return DeleteControlPolicyResponse
@@ -226,7 +229,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>Before deleting a folder, make sure that the folder does not contain any member accounts or subfolders.</p>
+     * <p>Before deleting a folder, ensure that the folder contains no members or subfolders.</p>
      * </blockquote>
      * 
      * @param request the request parameters of DeleteFolder  DeleteFolderRequest
@@ -238,8 +241,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <b>description</b> :
      * <blockquote>
      * <ul>
-     * <li>Before deleting an access policy, delete all non-default versions of the policy. For information about how to delete a policy version, see <a href="https://help.aliyun.com/document_detail/159041.html">DeletePolicyVersion</a>.</li>
-     * <li>Before deleting an access policy, make sure that the policy is not referenced, meaning it is not attached to any Resource Access Management (RAM) user, user group, or RAM role. For information about how to remove an authorization, see <a href="https://help.aliyun.com/document_detail/159168.html">DetachPolicy</a>.</li>
+     * <li>Before deleting an access policy, you must delete all non-default versions of the policy. For more information about how to delete an access policy version, see <a href="https://help.aliyun.com/document_detail/159041.html">DeletePolicyVersion</a>.</li>
+     * <li>Before deleting an access policy, ensure that the policy is not referenced (that is, not granted to Resource Access Management (RAM) users, user groups, or RAM roles). For more information about how to remove authorization, see <a href="https://help.aliyun.com/document_detail/159168.html">DetachPolicy</a>.</li>
      * </ul>
      * </blockquote>
      * 
@@ -262,7 +265,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>Before you delete a resource group, delete all resources in the resource group.</p>
+     * <p>Before deleting a resource group, delete the resources in the resource group.</p>
      * </blockquote>
      * 
      * @param request the request parameters of DeleteResourceGroup  DeleteResourceGroupRequest
@@ -285,7 +288,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>If the delegated administrator account being removed has historical management tasks in the trusted service, the removal may affect the normal use of the trusted service. Carefully consider the potential impact before performing the removal.</p>
+     * <p>If the delegated administrator account to be removed has historical management tasks in the trusted service, the removal operation may affect the normal use of the trusted service. Carefully consider the potential impact before removing the account.</p>
      * </blockquote>
      * 
      * @param request the request parameters of DeregisterDelegatedAdministrator  DeregisterDelegatedAdministratorRequest
@@ -295,10 +298,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Before closing a resource directory, make sure that you have completed the following operations:</p>
+     * <p>Before closing the resource directory, ensure that the following operations are completed:</p>
      * <ul>
-     * <li>All members in the resource directory have been removed. For information about how to remove a member, see <a href="https://help.aliyun.com/document_detail/159431.html">RemoveCloudAccount</a>.</li>
-     * <li>All folders except the Root folder in the resource directory have been deleted. For information about how to delete a folder, see <a href="https://help.aliyun.com/document_detail/159432.html">DeleteFolder</a>.</li>
+     * <li>All members in the resource directory have been removed. For more information about how to remove a member, see <a href="https://help.aliyun.com/document_detail/159431.html">RemoveCloudAccount</a>.</li>
+     * <li>All folders except the Root folder in the resource directory have been deleted. For more information about how to delete a folder, see <a href="https://help.aliyun.com/document_detail/159432.html">DeleteFolder</a>.</li>
      * </ul>
      * 
      * @param request the request parameters of DestroyResourceDirectory  DestroyResourceDirectoryRequest
@@ -308,9 +311,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>After the control policy is detached, the resource folder or member that was previously associated with the policy immediately loses the governance enforced by the policy. Make sure that the result of the detach operation is as expected to avoid impact on your business.
-     * Both system policies and custom control policies can be detached. However, the last control policy associated with a resource folder or member cannot be detached.
-     * This topic provides an example on how to detach the custom policy <code>cp-jExXAqIYkwHN****</code> from the resource folder <code>fd-ZDNPiT****</code>.</p>
+     * <p>After the dissociation succeeds, the folder or member immediately loses the governance applied by the control policy. Make sure that the dissociation produces the expected results to avoid affecting your business.
+     * Both system policies and custom control policies can be dissociated. However, you cannot dissociate the last control policy associated with a folder or member.
+     * This topic provides an example to show how to dissociate the custom policy cp-jExXAqIYkwHN**** from the folder fd-ZDNPiT****.</p>
      * 
      * @param request the request parameters of DetachControlPolicy  DetachControlPolicyRequest
      * @return DetachControlPolicyResponse
@@ -337,9 +340,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>After you disable the control policy feature, all control policies that are attached to resource folders and member accounts are automatically detached. However, the control policies are not deleted. They cannot be attached to any target nodes.</p>
+     * <p>After you disable the control policy feature, all control policies attached to folders and member accounts are automatically detached. The control policies are not deleted, but they can no longer be attached to any target nodes.</p>
      * <blockquote>
-     * <p>Disabling the control policy feature affects the permissions of resource folders and member accounts in the entire resource directory. Proceed with caution.</p>
+     * <p>Disabling the control policy feature affects the permissions of folders and member accounts in the entire resource directory. Proceed with caution.</p>
      * </blockquote>
      * 
      * @param request the request parameters of DisableControlPolicy  DisableControlPolicyRequest
@@ -367,7 +370,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>A resource directory control policy is an access control policy based on the resource structure (resource folders or member accounts). It allows you to centrally manage the access permissions border for resource access at each level of the resource directory and establish overall or localized access control principles for your enterprise. Control policies define only the access permissions border and do not actually grant permissions. You must also set permissions by using Resource Access Management (RAM) in a member account before the corresponding identity can have access permissions to resources. For more information, see <a href="https://help.aliyun.com/document_detail/178671.html">Overview of control policies</a>.</p>
+     * <p>A control policy in Resource Directory is an access control policy based on the resource structure (folders or member accounts). It allows you to manage permission boundaries for resource access across all levels of the resource directory in a unified manner and establish enterprise-wide or specific access control principles. Control policies only define permission boundaries and do not grant permissions. You must also configure permissions in the Resource Access Management (RAM) Settings of a member account before the corresponding identity has access permissions to resources. For more information, see <a href="https://help.aliyun.com/document_detail/178671.html">Control policy overview</a>.</p>
      * 
      * @param request the request parameters of EnableControlPolicy  EnableControlPolicyRequest
      * @return EnableControlPolicyResponse
@@ -398,8 +401,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>After you call <a href="https://help.aliyun.com/document_detail/448542.html">CheckAccountDelete</a> to perform a member deletion check task, you can call GetAccountDeletionCheckResult to query the result of the member deletion check. If the deletion check requirements are met, the member account can be deleted. Otherwise, manually handle the non-compliant items until all requirements are met.
-     * This topic provides an example on how to query the deletion check result of the member account <code>179855839641****</code> that you want to delete. The response shows that the member account does not meet the deletion requirements.</p>
+     * <p>After you call <a href="https://help.aliyun.com/document_detail/448542.html">CheckAccountDelete</a> to execute a member deletion check task, you can call GetAccountDeletionCheckResult to query the result of the member deletion check. If the member meets the deletion check requirements, the member can be deleted. Otherwise, manually handle the non-compliant items until the requirements are met.
+     * This topic provides an example to query the deletion check result of the member <code>179855839641****</code> to be deleted. The returned result shows that the member does not meet the deletion requirements.</p>
      * 
      * @param request the request parameters of GetAccountDeletionCheckResult  GetAccountDeletionCheckResultRequest
      * @return GetAccountDeletionCheckResultResponse
@@ -450,7 +453,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example on how to retrieve the information about the handshake whose ID is <code>h-ycm4rp****</code>.</p>
+     * <p>This topic provides an example of retrieving the invitation information for the invitation whose ID is <code>h-ycm4rp****</code>.</p>
      * 
      * @param request the request parameters of GetHandshake  GetHandshakeRequest
      * @return GetHandshakeResponse
@@ -477,7 +480,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example of how to use a management account to query the details of the resource directory created by the management account.</p>
+     * <p>This topic provides an example on how to query the details of a resource directory enabled by a management account.</p>
      * 
      * @param request the request parameters of GetResourceDirectory  GetResourceDirectoryRequest
      * @return GetResourceDirectoryResponse
@@ -536,7 +539,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example on how to invite the external account <code>someone@example.com</code> to join a resource directory.</p>
+     * <p>This topic provides an example of inviting an external account <code>someone@example.com</code> to join a resource directory.</p>
      * 
      * @param request the request parameters of InviteAccountToResourceDirectory  InviteAccountToResourceDirectoryRequest
      * @return InviteAccountToResourceDirectoryResponse
@@ -545,7 +548,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>The management account of the resource directory and the delegated administrator accounts of trusted services can call this operation.</p>
+     * <p>The management account of the resource directory and the delegated administrator account of a trusted service can call this operation.</p>
      * 
      * @param request the request parameters of ListAccounts  ListAccountsRequest
      * @return ListAccountsResponse
@@ -622,7 +625,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example on how to query the invitation records of the current management account <code>172841235500****</code>.</p>
+     * <p>This topic provides an example of querying the invitation records for the current management account <code>172841235500****</code>.</p>
      * 
      * @param request the request parameters of ListHandshakesForAccount  ListHandshakesForAccountRequest
      * @return ListHandshakesForAccountResponse
@@ -669,7 +672,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to query all resource groups under the current account. You can also filter resource groups by resource group status, resource group ID, resource group identifier, or resource group display name.</p>
+     * <p>You can call this operation to query all resource groups within the current account. You can also query specific resource groups by resource group status, resource group ID, resource group identifier, or resource group display name.</p>
      * 
      * @param request the request parameters of ListResourceGroups  ListResourceGroupsRequest
      * @return ListResourceGroupsResponse
@@ -714,7 +717,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <h3>Usage notes</h3>
-     * <p>This topic provides an example on how to query the tag values of the tag key k1. The response shows that the tag value corresponding to the tag key k1 is v1.</p>
+     * <p>This topic provides an example to query the tag values for the tag key k1. The response shows that the tag value for the tag key k1 is v1.</p>
      * 
      * @param request the request parameters of ListTagValues  ListTagValuesRequest
      * @return ListTagValuesResponse
@@ -722,6 +725,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListTagValuesResponse> listTagValues(ListTagValuesRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>调用本接口前，请先开启管控策略功能（EnableControlPolicy），可通过 GetControlPolicyEnablementStatus 确认状态为 Enabled（已开启）。功能未开启时，管控策略无法绑定到任何节点。</p>
+     * 
      * @param request the request parameters of ListTargetAttachmentsForControlPolicy  ListTargetAttachmentsForControlPolicyRequest
      * @return ListTargetAttachmentsForControlPolicyResponse
      */
@@ -752,8 +758,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Supports batch transfer of resources across regions, cloud services, and resource groups.
-     * For cloud services that support resource group transfer, see the <strong>API</strong> column in <a href="https://help.aliyun.com/document_detail/94479.html">Cloud services that support resource groups</a>.</p>
+     * <p>You can transfer resources in batches across regions, cloud services, and resource groups.
+     * For cloud services that support resource groups, see the <strong>API</strong> column in <a href="https://help.aliyun.com/document_detail/94479.html">Cloud services that support resource groups</a>.</p>
      * 
      * @param request the request parameters of MoveResources  MoveResourcesRequest
      * @return MoveResourcesResponse
@@ -761,6 +767,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<MoveResourcesResponse> moveResources(MoveResourcesRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>本接口仅支持升级资源账号类型的成员；成员类型或状态不匹配时返回 409 AccountTypeOrStatusMismatch，成员处于删除中状态时不支持升级。</p>
+     * 
      * @param request the request parameters of PromoteResourceAccount  PromoteResourceAccountRequest
      * @return PromoteResourceAccountResponse
      */
@@ -768,12 +777,12 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>After the settings are complete, the delegated administrator account is granted authorization to access the organizational information of the resource directory, which provides visibility into the organization members and structure. The delegated administrator account executes service-related management operations on behalf of the management account in the specified trusted service.
+     * <p>After the Settings are applied, the delegated administrator account receives authorization to access the organization information of the resource folder, which provides visibility into the organization members and structure. The delegated administrator account executes service-related management operations on behalf of the management account of the resource folder in the specified trusted service.
      * Limits:</p>
      * <ul>
-     * <li>Only some trusted services support the delegated administrator feature. For more information, see <a href="https://help.aliyun.com/document_detail/208133.html">Supported trusted services</a>.</li>
-     * <li>Only the management account of the resource directory and authorized Resource Access Management (RAM) users and RAM roles under the management account can invoke this API operation.</li>
-     * <li>The maximum number of delegated administrator accounts that can be added is defined by each trusted service.</li>
+     * <li>Only specific trusted services support the delegated administrator feature. For more information, see <a href="https://help.aliyun.com/document_detail/208133.html">Supported trusted services</a>.</li>
+     * <li>Only the management account of the resource folder and its authorized Resource Access Management (RAM) users and RAM roles can invoke this API.</li>
+     * <li>The maximum number of delegated administrator accounts that can be added for a trusted service is defined by the trusted service.</li>
      * </ul>
      * 
      * @param request the request parameters of RegisterDelegatedAdministrator  RegisterDelegatedAdministratorRequest
@@ -782,6 +791,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RegisterDelegatedAdministratorResponse> registerDelegatedAdministrator(RegisterDelegatedAdministratorRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>本接口仅适用于云账号类型的成员。资源账号类型的成员不能通过本接口移除，需通过 DeleteAccount 删除。
+     * 移除前需确认该账号未被可信服务使用；被可信服务使用时返回 409 Deny.TrustedService，请先将该账号从可信服务中解除使用。
+     * 成员类型或状态不匹配时返回 409 AccountTypeOrStatusMismatch。
+     * 若目标云账号是可信服务的委派管理员，需先调用 DeregisterDelegatedAdministrator 移除其委派管理员身份，否则无法移除。</p>
+     * 
      * @param request the request parameters of RemoveCloudAccount  RemoveCloudAccountRequest
      * @return RemoveCloudAccountResponse
      */
@@ -800,6 +815,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ResendPromoteResourceAccountEmailResponse> resendPromoteResourceAccountEmail(ResendPromoteResourceAccountEmailRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>调用前，目标成员需存在待验证的邮箱修改记录，否则返回 404 EntityNotExists.EmailModifyRecord。邮箱修改记录可通过 ChangeAccountEmail 发起。</p>
+     * 
      * @param request the request parameters of RetryChangeAccountEmail  RetryChangeAccountEmailRequest
      * @return RetryChangeAccountEmailResponse
      */
@@ -854,9 +872,9 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <b>description</b> :
      * <h3>Before you begin</h3>
      * <ul>
-     * <li>To ensure that the system can record the specific operator of management operations, use a Resource Access Management (RAM) user or RAM role under the management account that has the resource folder management permission (AliyunResourceDirectoryFullAccess) to invoke this API operation.</li>
-     * <li>For the conditions that must be met to switch a resource account to a cloud account, see <a href="https://help.aliyun.com/document_detail/111233.html">Switch a resource account to a cloud account</a>.</li>
-     * <li>For the conditions that must be met to switch a cloud account to a resource account, see <a href="https://help.aliyun.com/document_detail/209980.html">Switch a cloud account to a resource account</a>.</li>
+     * <li>To ensure that the system can record the specific operator of management operations, call this API as a Resource Access Management (RAM) user or RAM role that has the resource directory management permissions (AliyunResourceDirectoryFullAccess) under the management account.</li>
+     * <li>For the conditions that must be met when switching a resource account to a cloud account, refer to <a href="https://help.aliyun.com/document_detail/111233.html">Switch a resource account to a cloud account</a>.</li>
+     * <li>For the conditions that must be met when switching a cloud account to a resource account, refer to <a href="https://help.aliyun.com/document_detail/209980.html">Switch a cloud account to a resource account</a>.</li>
      * </ul>
      * 
      * @param request the request parameters of UpdateAccount  UpdateAccountRequest

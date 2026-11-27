@@ -60,7 +60,7 @@ public class RemoveCloudAccountRequest extends Request {
         } 
 
         /**
-         * <p>The member ID.</p>
+         * <p>The ID of the member.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

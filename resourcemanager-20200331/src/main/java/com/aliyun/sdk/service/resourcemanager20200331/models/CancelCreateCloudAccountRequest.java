@@ -60,7 +60,7 @@ public class CancelCreateCloudAccountRequest extends Request {
         } 
 
         /**
-         * <p>The account record ID.</p>
+         * <p>The ID of the account record.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -60,7 +60,7 @@ public class CancelChangeAccountEmailRequest extends Request {
         } 
 
         /**
-         * <p>The member account ID.</p>
+         * <p>The member ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

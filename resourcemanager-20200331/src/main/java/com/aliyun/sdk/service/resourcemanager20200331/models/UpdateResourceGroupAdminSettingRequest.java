@@ -60,7 +60,7 @@ public class UpdateResourceGroupAdminSettingRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether to set the resource group creator as the resource group administrator.</p>
+         * <p>Specifies whether to set the creator of the resource group as the resource group administrator.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

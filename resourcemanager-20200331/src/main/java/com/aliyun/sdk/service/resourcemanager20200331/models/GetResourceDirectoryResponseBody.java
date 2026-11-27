@@ -225,9 +225,9 @@ public class GetResourceDirectoryResponseBody extends TeaModel {
              * <p>The status of the control policy. Valid values:</p>
              * <ul>
              * <li>Enabled: Enabled.</li>
-             * <li>PendingEnable: Being enabled.</li>
+             * <li>PendingEnable: Enabling.</li>
              * <li>Disabled: Disabled.</li>
-             * <li>PendingDisable: Being disabled.</li>
+             * <li>PendingDisable: Disabling.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -239,7 +239,7 @@ public class GetResourceDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the resource directory was created. The time is displayed in UTC in RFC 3339 format, indicated by Z.</p>
+             * <p>The time when the resource directory was enabled. The time is in the RFC 3339 UTC format, where Z indicates UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2019-02-18T15:32:10.473Z</p>
@@ -250,10 +250,10 @@ public class GetResourceDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The real-name verification information of the member.</p>
+             * <p>The real-name information of the member.</p>
              * 
              * <strong>example:</strong>
-             * <p>***有限公司</p>
+             * <p>*** Co., Ltd</p>
              */
             public Builder identityInformation(String identityInformation) {
                 this.identityInformation = identityInformation;
@@ -283,9 +283,9 @@ public class GetResourceDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether member deletion is enabled. Valid values:</p>
+             * <p>Specifies whether member deletion permission is enabled. Valid values:</p>
              * <ul>
-             * <li>Enabled: Enabled. You can call <a href="https://help.aliyun.com/document_detail/311546.html">DeleteAccount</a> to delete members of the resource account type.</li>
+             * <li>Enabled: Enabled. You can call the <a href="https://help.aliyun.com/document_detail/311546.html">DeleteAccount</a> operation to delete members of the resource account type.</li>
              * <li>Disabled: Disabled. You cannot delete members of the resource account type.</li>
              * </ul>
              * 

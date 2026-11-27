@@ -89,7 +89,7 @@ public class TagResourcesRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the resource group or the ID of the resource directory member account.</p>
+         * <p>The ID of the resource group or the member of the resource directory.</p>
          * <p>You can specify up to 50 IDs.</p>
          * <p>This parameter is required.</p>
          */
@@ -102,11 +102,11 @@ public class TagResourcesRequest extends Request {
         /**
          * <p>The resource type. Valid values:</p>
          * <ul>
-         * <li>ResourceGroup (default): attaches labels to resource groups.</li>
-         * <li>Account: attaches labels to member accounts of a resource directory.</li>
+         * <li>ResourceGroup (default): Attaches tags to a resource group.</li>
+         * <li>Account: Attaches tags to a member of a resource directory.</li>
          * </ul>
          * <blockquote>
-         * <p>This parameter is required when you attach labels to member accounts of a resource directory.</p>
+         * <p>This parameter is required when you attach tags to a member of a resource directory.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -119,8 +119,8 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The labels.</p>
-         * <p>You can attach up to 20 labels.</p>
+         * <p>The tags.</p>
+         * <p>You can attach up to 20 tags.</p>
          * <p>This parameter is required.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
@@ -189,8 +189,8 @@ public class TagResourcesRequest extends Request {
             } 
 
             /**
-             * <p>The label key.</p>
-             * <p>The key can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>, or contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>The tag key.</p>
+             * <p>The key can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>k1</p>
@@ -201,8 +201,8 @@ public class TagResourcesRequest extends Request {
             }
 
             /**
-             * <p>The label value.</p>
-             * <p>The value can be up to 128 characters in length and cannot start with <code>acs:</code>, or contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>The tag value.</p>
+             * <p>The value can be up to 128 characters in length. It cannot start with <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>v1</p>

@@ -78,7 +78,7 @@ public class GetResourceGroupNotificationSettingResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether group event notification is enabled.</p>
+         * <p>Indicates whether resource group event notification is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

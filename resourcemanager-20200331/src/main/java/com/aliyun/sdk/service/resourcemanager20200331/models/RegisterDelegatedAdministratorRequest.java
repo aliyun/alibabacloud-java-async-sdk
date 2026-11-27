@@ -75,7 +75,7 @@ public class RegisterDelegatedAdministratorRequest extends Request {
         } 
 
         /**
-         * <p>The UID of a member account in the resource directory.</p>
+         * <p>The UID of member accounts in the resource folder.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

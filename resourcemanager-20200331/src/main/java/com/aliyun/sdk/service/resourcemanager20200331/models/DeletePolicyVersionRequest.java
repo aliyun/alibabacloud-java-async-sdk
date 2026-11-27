@@ -75,8 +75,8 @@ public class DeletePolicyVersionRequest extends Request {
         } 
 
         /**
-         * <p>Policy Name of the access policy.</p>
-         * <p>Policy Name must be 1 to 128 characters in length and can contain letters, digits, and hyphens (-).</p>
+         * <p>The Policy Name.</p>
+         * <p>The name must be 1 to 128 characters in length and can contain letters, digits, and hyphens (-).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -89,8 +89,8 @@ public class DeletePolicyVersionRequest extends Request {
         }
 
         /**
-         * <p>The ID of the access policy version.</p>
-         * <p>You can call <a href="https://help.aliyun.com/document_detail/159982.html">ListPolicyVersions</a> to query access policy version IDs.</p>
+         * <p>The ID of access policy version.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/159982.html">ListPolicyVersions</a> operation to query the ID of access policy version.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

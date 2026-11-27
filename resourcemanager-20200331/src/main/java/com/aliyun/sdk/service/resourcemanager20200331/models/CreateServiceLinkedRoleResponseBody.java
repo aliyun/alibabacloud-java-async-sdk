@@ -233,10 +233,10 @@ public class CreateServiceLinkedRoleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The trust policy of the role.</p>
+             * <p>The trust policy content of the role.</p>
              * 
              * <strong>example:</strong>
-             * <p>{\&quot;Statement\&quot;:[{\&quot;Action\&quot;:\&quot;sts:AssumeRole\&quot;,\&quot;Effect\&quot;:\&quot;Allow\&quot;,\&quot;Principal\&quot;:{\&quot;Service\&quot;:[\&quot;polardb.aliyuncs.com\&quot;]}}],\&quot;Version\&quot;:\&quot;1\&quot;}</p>
+             * <p>{&quot;Statement&quot;:[{&quot;Action&quot;:&quot;sts:AssumeRole&quot;,&quot;Effect&quot;:&quot;Allow&quot;,&quot;Principal&quot;:{&quot;Service&quot;:[&quot;polardb.aliyuncs.com&quot;]}}],&quot;Version&quot;:&quot;1&quot;}</p>
              */
             public Builder assumeRolePolicyDocument(String assumeRolePolicyDocument) {
                 this.assumeRolePolicyDocument = assumeRolePolicyDocument;
@@ -266,7 +266,7 @@ public class CreateServiceLinkedRoleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the role is a service-linked role. Valid values:</p>
+             * <p>Specifies whether the role is a service-linked role. Valid values:</p>
              * <ul>
              * <li>true: The role is a service-linked role.</li>
              * <li>false: The role is not a service-linked role.</li>

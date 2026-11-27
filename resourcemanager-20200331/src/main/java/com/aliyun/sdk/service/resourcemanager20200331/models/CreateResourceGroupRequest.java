@@ -18,9 +18,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateResourceGroupRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Validation(maxLength = 64, minLength = 1)
+    private String clientToken;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DisplayName")
     @com.aliyun.core.annotation.Validation(required = true)
     private String displayName;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
+    private Boolean dryRun;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Name")
@@ -33,7 +42,9 @@ public class CreateResourceGroupRequest extends Request {
 
     private CreateResourceGroupRequest(Builder builder) {
         super(builder);
+        this.clientToken = builder.clientToken;
         this.displayName = builder.displayName;
+        this.dryRun = builder.dryRun;
         this.name = builder.name;
         this.tag = builder.tag;
     }
@@ -52,10 +63,24 @@ public class CreateResourceGroupRequest extends Request {
     }
 
     /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    /**
      * @return displayName
      */
     public String getDisplayName() {
         return this.displayName;
+    }
+
+    /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     /**
@@ -73,7 +98,9 @@ public class CreateResourceGroupRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateResourceGroupRequest, Builder> {
+        private String clientToken; 
         private String displayName; 
+        private Boolean dryRun; 
         private String name; 
         private java.util.List<Tag> tag; 
 
@@ -83,10 +110,24 @@ public class CreateResourceGroupRequest extends Request {
 
         private Builder(CreateResourceGroupRequest request) {
             super(request);
+            this.clientToken = request.clientToken;
             this.displayName = request.displayName;
+            this.dryRun = request.dryRun;
             this.name = request.name;
             this.tag = request.tag;
         } 
+
+        /**
+         * <p>The client token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
+            return this;
+        }
 
         /**
          * <p>The display name of the resource group.</p>
@@ -103,8 +144,17 @@ public class CreateResourceGroupRequest extends Request {
         }
 
         /**
+         * <p>Specifies whether to perform a dry run.</p>
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
+            return this;
+        }
+
+        /**
          * <p>The unique identifier of the resource group.</p>
-         * <p>The identifier must be 2 to 50 characters in length and can contain letters, digits, and hyphens (-). It must start with a letter.</p>
+         * <p>The name must be 2 to 50 characters in length and can contain letters, digits, and hyphens (-). It must start with a letter.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -186,7 +236,7 @@ public class CreateResourceGroupRequest extends Request {
 
             /**
              * <p>The tag key.</p>
-             * <p>The tag key can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>The key can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>k1</p>
@@ -198,7 +248,7 @@ public class CreateResourceGroupRequest extends Request {
 
             /**
              * <p>The tag value.</p>
-             * <p>The tag value can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>The value can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>v1</p>

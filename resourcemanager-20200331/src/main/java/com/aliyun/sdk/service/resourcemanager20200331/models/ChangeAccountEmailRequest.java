@@ -75,7 +75,7 @@ public class ChangeAccountEmailRequest extends Request {
         } 
 
         /**
-         * <p>The member account ID.</p>
+         * <p>The ID of the member.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -88,9 +88,9 @@ public class ChangeAccountEmailRequest extends Request {
         }
 
         /**
-         * <p>The email address of the member account.</p>
+         * <p>The email address of the member.</p>
          * <blockquote>
-         * <p>The system automatically sends a verification email to the specified email address. The modification takes effect only after the verification is complete. After the verification is complete, the system synchronously updates the email address and security email address of the account.</p>
+         * <p>The system automatically sends a verification email to the specified email address. The modification takes effect only after the email address is verified. After the verification, the system synchronously updates the email address and security email address of the account.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 

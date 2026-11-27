@@ -171,8 +171,8 @@ public class ListResourceGroupsRequest extends Request {
         } 
 
         /**
-         * <p>The display name of the resource group. This parameter is used as a filter condition. Fuzzy match is supported.</p>
-         * <p>The value cannot exceed 50 characters in length.</p>
+         * <p>The display name of the resource group, used as a filter condition for the query. Fuzzy match is supported.</p>
+         * <p>The value can be up to 50 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>my-project</p>
@@ -190,7 +190,7 @@ public class ListResourceGroupsRequest extends Request {
          * </li>
          * <li><p>true: Tag information is returned.</p>
          * <blockquote>
-         * <p>If you specify tag-based filter conditions, tag information is always returned regardless of the value of IncludeTags.</p>
+         * <p>If you specify a tag filter condition, tag information is returned regardless of the value of IncludeTags.</p>
          * </blockquote>
          * </li>
          * </ul>
@@ -205,8 +205,8 @@ public class ListResourceGroupsRequest extends Request {
         }
 
         /**
-         * <p>The unique identifier of the resource group. This parameter is used as a filter condition. Fuzzy match is supported.</p>
-         * <p>The value cannot exceed 50 characters in length and can contain letters, digits, and hyphens (-).</p>
+         * <p>The unique identifier of the resource group, used as a filter condition for the query. Fuzzy match is supported.</p>
+         * <p>The value can be up to 50 characters in length and can contain letters, digits, and hyphens (-).</p>
          * 
          * <strong>example:</strong>
          * <p>my-project</p>
@@ -219,7 +219,7 @@ public class ListResourceGroupsRequest extends Request {
 
         /**
          * <p>The page number.</p>
-         * <p>Minimum value: 1. Default value: 1.</p>
+         * <p>Starting value: 1. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -231,7 +231,7 @@ public class ListResourceGroupsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of entries to return on each page.</p>
          * <p>Valid values: 1 to 100. Default value: 10.</p>
          * 
          * <strong>example:</strong>
@@ -244,10 +244,10 @@ public class ListResourceGroupsRequest extends Request {
         }
 
         /**
-         * <p>The resource group ID. This parameter is used as a filter condition.</p>
-         * <p>The value cannot exceed 18 characters in length and must start with <code>rg-</code>.</p>
+         * <p>The ID of the resource group, used as a filter condition for the query.</p>
+         * <p>The value can be up to 18 characters in length and must start with rg-.</p>
          * <blockquote>
-         * <p>This parameter has been incorporated into the ResourceGroupIds parameter. If you set both ResourceGroupId and ResourceGroupIds, the value of ResourceGroupIds takes precedence.</p>
+         * <p>This parameter is incorporated into the ResourceGroupIds parameter. If you specify both ResourceGroupId and ResourceGroupIds, ResourceGroupIds takes precedence.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -260,10 +260,10 @@ public class ListResourceGroupsRequest extends Request {
         }
 
         /**
-         * <p>The list of resource group IDs. This parameter is used as a filter condition.</p>
+         * <p>The list of resource group IDs, used as filter conditions for the query.</p>
          * <p>You can specify up to 100 resource group IDs.</p>
          * <blockquote>
-         * <p>If you set both ResourceGroupId and ResourceGroupIds, the value of ResourceGroupIds takes precedence.</p>
+         * <p>If you specify both ResourceGroupId and ResourceGroupIds, ResourceGroupIds takes precedence.</p>
          * </blockquote>
          */
         public Builder resourceGroupIds(java.util.List<String> resourceGroupIds) {
@@ -273,7 +273,7 @@ public class ListResourceGroupsRequest extends Request {
         }
 
         /**
-         * <p>The resource group status. This parameter is used as a filter condition. Valid values:</p>
+         * <p>The status of the resource group, used as a filter condition for the query. Valid values:</p>
          * <ul>
          * <li>Creating: The resource group is being created.</li>
          * <li>OK: The resource group is created.</li>
@@ -290,7 +290,7 @@ public class ListResourceGroupsRequest extends Request {
         }
 
         /**
-         * <p>The tags. This parameter is used as a filter condition.</p>
+         * <p>The tags, used as filter conditions for the query.</p>
          * <p>You can specify up to 20 tags.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {

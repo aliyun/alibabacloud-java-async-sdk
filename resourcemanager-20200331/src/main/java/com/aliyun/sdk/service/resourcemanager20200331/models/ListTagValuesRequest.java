@@ -117,7 +117,7 @@ public class ListTagValuesRequest extends Request {
         } 
 
         /**
-         * <p>The maximum number of entries to return in a single request.</p>
+         * <p>The maximum number of entries to return for a single request.</p>
          * <p>Valid values: 1 to 100. Default value: 10.</p>
          * 
          * <strong>example:</strong>
@@ -130,7 +130,7 @@ public class ListTagValuesRequest extends Request {
         }
 
         /**
-         * <p>The token that is used to start the next query.</p>
+         * <p>The token for the next query.</p>
          * 
          * <strong>example:</strong>
          * <p>TGlzdFJlc291cm****</p>
@@ -143,7 +143,10 @@ public class ListTagValuesRequest extends Request {
 
         /**
          * <p>The resource type.</p>
-         * <p>Set the value to Account, which indicates a member of a resource directory.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Account: members of a resource directory.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -156,7 +159,7 @@ public class ListTagValuesRequest extends Request {
         }
 
         /**
-         * <p>The tag key that is used as a filter condition for the query.</p>
+         * <p>The tag key used as a filter for the query.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -169,7 +172,7 @@ public class ListTagValuesRequest extends Request {
         }
 
         /**
-         * <p>The tag value for fuzzy match.</p>
+         * <p>The tag value for fuzzy search.</p>
          * 
          * <strong>example:</strong>
          * <p>v1</p>

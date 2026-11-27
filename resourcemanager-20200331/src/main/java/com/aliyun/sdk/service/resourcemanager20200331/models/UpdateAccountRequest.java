@@ -103,11 +103,11 @@ public class UpdateAccountRequest extends Request {
         /**
          * <p>The new type of the member. Valid values:</p>
          * <ul>
-         * <li>ResourceAccount: switches the specified cloud account to a resource account.</li>
-         * <li>CloudAccount: switches the specified resource account to a cloud account.</li>
+         * <li>ResourceAccount: Switches the specified cloud account to a resource account.</li>
+         * <li>CloudAccount: Switches the specified resource account to a cloud account.</li>
          * </ul>
          * <blockquote>
-         * <p>Set either NewDisplayName or NewAccountType. You cannot set both of them at the same time.</p>
+         * <p>You can specify either <code>NewDisplayName</code> or <code>NewAccountType</code>, but not both.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -122,7 +122,7 @@ public class UpdateAccountRequest extends Request {
         /**
          * <p>The new name of the member.</p>
          * <blockquote>
-         * <p>Set either NewDisplayName or NewAccountType. You cannot set both of them at the same time.</p>
+         * <p>You can specify either <code>NewDisplayName</code> or <code>NewAccountType</code>, but not both.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

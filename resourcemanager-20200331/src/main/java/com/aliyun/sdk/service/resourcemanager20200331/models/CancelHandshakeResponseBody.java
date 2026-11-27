@@ -67,7 +67,7 @@ public class CancelHandshakeResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The handshake information.</p>
+         * <p>The invitation information.</p>
          */
         public Builder handshake(Handshake handshake) {
             this.handshake = handshake;
@@ -261,7 +261,7 @@ public class CancelHandshakeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The creation time of the handshake (UTC).</p>
+             * <p>The creation time of the invitation in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2018-08-10T09:55:41Z</p>
@@ -272,7 +272,7 @@ public class CancelHandshakeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The expiration time of the handshake (UTC).</p>
+             * <p>The expiration time of the invitation in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2018-08-24T09:55:41Z</p>
@@ -283,7 +283,7 @@ public class CancelHandshakeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The handshake ID.</p>
+             * <p>The invitation ID.</p>
              * 
              * <strong>example:</strong>
              * <p>h-ycm4rp****</p>
@@ -316,7 +316,7 @@ public class CancelHandshakeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The modification time of the handshake (UTC).</p>
+             * <p>The modification time of the invitation in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2018-08-10T09:55:41Z</p>
@@ -327,10 +327,10 @@ public class CancelHandshakeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The remarks.</p>
+             * <p>The note.</p>
              * 
              * <strong>example:</strong>
-             * <p>Welcome to join us</p>
+             * <p>Welcome to join</p>
              */
             public Builder note(String note) {
                 this.note = note;
@@ -338,7 +338,7 @@ public class CancelHandshakeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The resource directory ID.</p>
+             * <p>The ID of the resource directory.</p>
              * 
              * <strong>example:</strong>
              * <p>h-ycm4rp****</p>
@@ -349,13 +349,13 @@ public class CancelHandshakeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the handshake. Valid values:</p>
+             * <p>The status of the invitation. Valid values:</p>
              * <ul>
-             * <li>Pending: Waiting for confirmation.</li>
-             * <li>Accepted: Accepted.</li>
-             * <li>Cancelled: Cancelled.</li>
-             * <li>Declined: Rejected.</li>
-             * <li>Expired: Expired.</li>
+             * <li>Pending: pending confirmation</li>
+             * <li>Accepted: accepted</li>
+             * <li>Cancelled: canceled</li>
+             * <li>Declined: declined</li>
+             * <li>Expired: expired</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -380,8 +380,8 @@ public class CancelHandshakeResponseBody extends TeaModel {
             /**
              * <p>The type of the invited account. Valid values:</p>
              * <ul>
-             * <li>Account: account ID.</li>
-             * <li>Email: account logon email address.</li>
+             * <li>Account: account ID</li>
+             * <li>Email: logon email address</li>
              * </ul>
              * 
              * <strong>example:</strong>

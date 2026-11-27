@@ -60,7 +60,7 @@ public class RetryChangeAccountEmailRequest extends Request {
         } 
 
         /**
-         * <p>The member account ID.</p>
+         * <p>The ID of the member.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

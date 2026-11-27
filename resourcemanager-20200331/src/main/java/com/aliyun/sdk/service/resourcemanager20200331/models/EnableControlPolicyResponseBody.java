@@ -67,12 +67,12 @@ public class EnableControlPolicyResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The status of the control policy feature. Valid values:</p>
+         * <p>The status of the control policy. Valid values:</p>
          * <ul>
          * <li>Enabled: Enabled.</li>
-         * <li>PendingEnable: Being enabled.</li>
+         * <li>PendingEnable: Enabling.</li>
          * <li>Disabled: Disabled.</li>
-         * <li>PendingDisable: Being disabled.</li>
+         * <li>PendingDisable: Disabling.</li>
          * </ul>
          * 
          * <strong>example:</strong>

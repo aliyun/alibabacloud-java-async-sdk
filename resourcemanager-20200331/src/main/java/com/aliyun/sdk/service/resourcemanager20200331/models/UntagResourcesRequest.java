@@ -102,7 +102,7 @@ public class UntagResourcesRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether to unbind all tags from the specified resource group or resource directory member. Valid values:</p>
+         * <p>Specifies whether to remove all tags from the specified resource group or member of a resource directory. Valid values:</p>
          * <ul>
          * <li>false (default): No.</li>
          * <li>true: Yes.</li>
@@ -118,7 +118,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group or resource directory member.</p>
+         * <p>The ID of the resource group or the member of the resource directory.</p>
          * <p>You can specify up to 50 IDs.</p>
          * <p>This parameter is required.</p>
          */
@@ -131,11 +131,11 @@ public class UntagResourcesRequest extends Request {
         /**
          * <p>The resource type. Valid values:</p>
          * <ul>
-         * <li>ResourceGroup (default): Unbinds tags from a resource group.</li>
-         * <li>Account: Unbinds tags from a resource directory member.</li>
+         * <li>ResourceGroup (default): Removes tags from resource groups.</li>
+         * <li>Account: Removes tags from members of a resource directory.</li>
          * </ul>
          * <blockquote>
-         * <p>This parameter is required when you unbind tags from a resource directory member.</p>
+         * <p>This parameter is required when you remove tags from members of a resource directory.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -149,9 +149,9 @@ public class UntagResourcesRequest extends Request {
 
         /**
          * <p>The tag key.</p>
-         * <p>You can unbind up to 20 tag keys.</p>
+         * <p>You can remove up to 20 tag keys.</p>
          * <blockquote>
-         * <p>If the <code>All</code> parameter for unbinding all tags is set to <code>true</code>, you do not need to specify tag keys.</p>
+         * <p>If the All parameter is set to true to remove all tags, you do not need to specify tag keys.</p>
          * </blockquote>
          */
         public Builder tagKey(java.util.List<String> tagKey) {

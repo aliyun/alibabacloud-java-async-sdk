@@ -67,7 +67,7 @@ public class GetAccountDeletionCheckResultResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The result of the member deletion check.</p>
+         * <p>The member deletion check result.</p>
          */
         public Builder accountDeletionCheckResultInfo(AccountDeletionCheckResultInfo accountDeletionCheckResultInfo) {
             this.accountDeletionCheckResultInfo = accountDeletionCheckResultInfo;
@@ -168,7 +168,7 @@ public class GetAccountDeletionCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The service name of the cloud service to which the check item belongs.</p>
+             * <p>The service name to which the check item belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>Container Service</p>
@@ -182,7 +182,7 @@ public class GetAccountDeletionCheckResultResponseBody extends TeaModel {
              * <p>The description of the check item.</p>
              * 
              * <strong>example:</strong>
-             * <p>Cloud service instances are running. Submit a ticket to contact customer service for assistance</p>
+             * <p>Cloud service instances are running. Contact customer service and submit a ticket</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -273,7 +273,7 @@ public class GetAccountDeletionCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The service name of the cloud service to which the check item belongs.</p>
+             * <p>The service name to which the check item belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>Enterprise finance</p>
@@ -380,7 +380,7 @@ public class GetAccountDeletionCheckResultResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The check items that you can choose to abandon and proceed with the member deletion.</p>
+             * <p>The check items that you can choose to bypass to continue the member deletion.</p>
              * <blockquote>
              * <p>This parameter may be returned when AllowDelete is set to true.</p>
              * </blockquote>
@@ -391,10 +391,10 @@ public class GetAccountDeletionCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the member account can be deleted. Valid values:</p>
+             * <p>Specifies whether the member can be deleted. Valid values:</p>
              * <ul>
-             * <li>true: The member account can be deleted.</li>
-             * <li>false: The member account cannot be deleted.</li>
+             * <li>true: The member can be deleted.</li>
+             * <li>false: The member cannot be deleted.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -406,9 +406,9 @@ public class GetAccountDeletionCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The reasons why the member account cannot be deleted.</p>
+             * <p>The reason why the member cannot be deleted.</p>
              * <blockquote>
-             * <p>This parameter is returned only when AllowDelete is set to false.</p>
+             * <p>This parameter is returned when AllowDelete is set to false.</p>
              * </blockquote>
              */
             public Builder notAllowReason(java.util.List<NotAllowReason> notAllowReason) {

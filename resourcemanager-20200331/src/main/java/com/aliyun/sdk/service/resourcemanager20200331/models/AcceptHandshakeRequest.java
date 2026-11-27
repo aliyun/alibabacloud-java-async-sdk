@@ -60,8 +60,7 @@ public class AcceptHandshakeRequest extends Request {
         } 
 
         /**
-         * <p>The handshake ID.</p>
-         * <p>You can call <a href="https://help.aliyun.com/document_detail/160006.html">ListHandshakesForAccount</a> to obtain the handshake ID.</p>
+         * <p>The invitation ID. You can call the <a href="https://help.aliyun.com/document_detail/160006.html">ListHandshakesForAccount</a> operation to obtain the invitation ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

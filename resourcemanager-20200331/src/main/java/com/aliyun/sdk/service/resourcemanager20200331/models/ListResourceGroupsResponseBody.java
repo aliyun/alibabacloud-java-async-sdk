@@ -117,7 +117,7 @@ public class ListResourceGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of entries returned per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -147,7 +147,7 @@ public class ListResourceGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries that match the conditional request parameter criteria.</p>
+         * <p>The total number of entries that match the conditional request parameters.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>

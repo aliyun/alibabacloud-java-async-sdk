@@ -67,7 +67,7 @@ public class DeleteServiceLinkedRoleResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The deletion task ID.</p>
+         * <p>The ID of the deletion task.</p>
          * 
          * <strong>example:</strong>
          * <p>task/acs-service-role/polardb.aliyuncs.com/AliyunServiceRoleForPolarDB/64c4f9cc-fac2-4692-ae1b-804ae4b9****</p>
@@ -78,7 +78,7 @@ public class DeleteServiceLinkedRoleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>B595E5BF-FF5F-4E7F-B95A-B90FE242FEB6</p>

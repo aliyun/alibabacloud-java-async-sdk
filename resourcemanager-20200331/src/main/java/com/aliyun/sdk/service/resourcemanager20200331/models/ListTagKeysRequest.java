@@ -114,8 +114,7 @@ public class ListTagKeysRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries to return in a single request.</p>
-         * <p>Valid values: 1 to 100. Default value: 10.</p>
+         * <p>The maximum number of entries to return for a single request. Valid values: 1 to 100. Default value: 10.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -127,7 +126,7 @@ public class ListTagKeysRequest extends Request {
         }
 
         /**
-         * <p>The token that determines the start point of the next query.</p>
+         * <p>The token for the next query.</p>
          * 
          * <strong>example:</strong>
          * <p>TGlzdFJlc291cm****</p>
@@ -139,8 +138,7 @@ public class ListTagKeysRequest extends Request {
         }
 
         /**
-         * <p>The resource type.</p>
-         * <p>Set this parameter to Account, which indicates a member account of a resource directory.</p>
+         * <p>The resource type. Valid value: Account, which indicates a member of the resource directory.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

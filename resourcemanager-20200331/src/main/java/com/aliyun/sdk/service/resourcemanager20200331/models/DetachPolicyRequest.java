@@ -120,8 +120,8 @@ public class DetachPolicyRequest extends Request {
         } 
 
         /**
-         * <p>Policy Name of the access policy.</p>
-         * <p>Policy Name must be 1 to 128 characters in length and can contain letters, digits, and hyphens (-).</p>
+         * <p>The policy name.</p>
+         * <p>The name must be 1 to 128 characters in length and can contain letters, digits, and hyphens (-).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -151,7 +151,7 @@ public class DetachPolicyRequest extends Request {
         }
 
         /**
-         * <p>The name of the object from which you want to detach the policy.</p>
+         * <p>The name of the principal.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -164,7 +164,7 @@ public class DetachPolicyRequest extends Request {
         }
 
         /**
-         * <p>The authorization object type. Valid values:</p>
+         * <p>The object type of the principal to which the authorization is granted. Valid values:</p>
          * <ul>
          * <li>IMSUser: Resource Access Management (RAM) user.</li>
          * <li>IMSGroup: RAM user group.</li>
@@ -182,8 +182,7 @@ public class DetachPolicyRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group or the ID of the Alibaba Cloud account that owns the resource group.</p>
-         * <p>Specifies the resource group or Alibaba Cloud account from which to detach the policy.</p>
+         * <p>The ID of the resource group or the ID of the Alibaba Cloud account to which the resource group belongs. Specifies the resource group or account from which to remove the authorization.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
