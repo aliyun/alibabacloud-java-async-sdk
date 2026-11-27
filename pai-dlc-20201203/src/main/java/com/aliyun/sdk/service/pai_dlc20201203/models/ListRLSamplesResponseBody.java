@@ -119,7 +119,7 @@ public class ListRLSamplesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>作业 ID</p>
+         * <p>The job ID.</p>
          * 
          * <strong>example:</strong>
          * <p>dlc5yfk7eyg95lac</p>
@@ -130,7 +130,7 @@ public class ListRLSamplesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>生效的页码；未传分页参数时为默认值 1</p>
+         * <p>The effective page number. If pagination parameters are not specified, the default value 1 is used.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -141,7 +141,7 @@ public class ListRLSamplesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>生效的每页条数；未传分页参数时为默认值 10</p>
+         * <p>The effective number of entries per page. If pagination parameters are not specified, the default value 10 is used.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -152,7 +152,7 @@ public class ListRLSamplesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>请求 ID</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
@@ -163,7 +163,7 @@ public class ListRLSamplesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>当前页的样本轨迹概览，按 PromptUid 字典序、SampleIndex 数值升序排列。</p>
+         * <p>The list of trajectories on the current page.</p>
          */
         public Builder samples(java.util.List<RLSample> samples) {
             this.samples = samples;
@@ -171,7 +171,7 @@ public class ListRLSamplesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>分页前的匹配轨迹总数，不是当前页条数。查询规模受限时可能仅为下界，不保证是精确总数。</p>
+         * <p>The total number of trajectories within the window before pagination. If Truncated is set to true, this value represents a lower bound rather than the exact total count.</p>
          * 
          * <strong>example:</strong>
          * <p>21596</p>

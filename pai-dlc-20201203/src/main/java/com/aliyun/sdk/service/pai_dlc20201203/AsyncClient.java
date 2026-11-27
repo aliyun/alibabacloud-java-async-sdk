@@ -166,7 +166,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>获取DLC作业RL轨迹流转分析</p>
+     * <p>Retrieves the RL trajectory flow analysis of a DLC job.</p>
      * 
      * @param request the request parameters of GetRLFlowAnalysis  GetRLFlowAnalysisRequest
      * @return GetRLFlowAnalysisResponse
@@ -175,7 +175,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>获取DLC作业某条异常日志的上下文</p>
+     * <p>Retrieves the context of a specific exception log for a DLC job.</p>
      * 
      * @param request the request parameters of GetRLLogContext  GetRLLogContextRequest
      * @return GetRLLogContextResponse
@@ -199,6 +199,15 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetRLTrainingProgressResponse
      */
     CompletableFuture<GetRLTrainingProgressResponse> getRLTrainingProgress(GetRLTrainingProgressRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Retrieves the multi-turn generation details of a single RL trajectory for a DLC job.</p>
+     * 
+     * @param request the request parameters of GetRLTrajectory  GetRLTrajectoryRequest
+     * @return GetRLTrajectoryResponse
+     */
+    CompletableFuture<GetRLTrajectoryResponse> getRLTrajectory(GetRLTrajectoryRequest request);
 
     /**
      * <b>description</b> :
@@ -278,7 +287,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>分页获取DLC作业的RL轨迹样本列表</p>
+     * <p>Retrieves a paginated list of RL trajectory samples for a DLC job.</p>
      * 
      * @param request the request parameters of ListRLSamples  ListRLSamplesRequest
      * @return ListRLSamplesResponse
@@ -287,7 +296,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>分页获取DLC作业某个uid下的RL轨迹列表</p>
+     * <p>Retrieves a paginated list of RL trajectories for a specific UID in a DLC job.</p>
      * 
      * @param request the request parameters of ListRLTrajectories  ListRLTrajectoriesRequest
      * @return ListRLTrajectoriesResponse

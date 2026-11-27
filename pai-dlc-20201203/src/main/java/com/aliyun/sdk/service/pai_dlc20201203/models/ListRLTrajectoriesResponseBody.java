@@ -132,7 +132,7 @@ public class ListRLTrajectoriesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>作业 ID</p>
+         * <p>The job ID.</p>
          * 
          * <strong>example:</strong>
          * <p>dlc********</p>
@@ -143,7 +143,7 @@ public class ListRLTrajectoriesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>生效的页码；未传分页参数时为默认值 1</p>
+         * <p>The effective page number. If pagination parameters are not provided, the default value 1 is used.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -154,7 +154,7 @@ public class ListRLTrajectoriesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>生效的每页条数；未传分页参数时为默认值 10</p>
+         * <p>The effective number of entries per page. If pagination parameters are not provided, the default value 10 is used.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -165,7 +165,7 @@ public class ListRLTrajectoriesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>样本 uid</p>
+         * <p>The sample UID.</p>
          * 
          * <strong>example:</strong>
          * <p>3afcfbdf-3956-4ab2-b9cb-f9c204b8fc9c</p>
@@ -176,7 +176,7 @@ public class ListRLTrajectoriesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>请求 ID</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
@@ -187,7 +187,7 @@ public class ListRLTrajectoriesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>指定 PromptUid 下分页前的轨迹总数，不是当前页条数。查询规模受限时可能仅为下界，不保证是精确总数。</p>
+         * <p>The total number of trajectories under this UID before pagination. This is an exact value, and represents a lower bound only when Truncated is true.</p>
          * 
          * <strong>example:</strong>
          * <p>16</p>
@@ -198,7 +198,7 @@ public class ListRLTrajectoriesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>轨迹列表（当前页，按 SampleIndex 数值升序）</p>
+         * <p>The list of trajectories on the current page, sorted in ascending order by SampleIndex.</p>
          */
         public Builder trajectories(java.util.List<RLTrajectory> trajectories) {
             this.trajectories = trajectories;

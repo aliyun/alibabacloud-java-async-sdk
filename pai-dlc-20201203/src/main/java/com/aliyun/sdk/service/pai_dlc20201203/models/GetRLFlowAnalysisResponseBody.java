@@ -236,7 +236,7 @@ public class GetRLFlowAnalysisResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>窗口内是否有轨迹数据</p>
+         * <p>Indicates whether trajectory data exists within the query window.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -247,7 +247,7 @@ public class GetRLFlowAnalysisResponseBody extends TeaModel {
         }
 
         /**
-         * <p>轨迹流转漏斗，按 traj → dispatch → run → rollout → reward → sampled → trained 的七级顺序返回。各级按已观测到的事件独立计数，不保证逐级递减。</p>
+         * <p>The 6-level funnel: traj → dispatch → run → push → selected → trained.</p>
          */
         public Builder funnel(java.util.List<RLFlowFunnelStage> funnel) {
             this.funnel = funnel;
@@ -255,7 +255,7 @@ public class GetRLFlowAnalysisResponseBody extends TeaModel {
         }
 
         /**
-         * <p>在途轨迹按环节计数（按 Count 降序）</p>
+         * <p>The count of in-flight trajectories by milestone, sorted in descending order of Count.</p>
          */
         public Builder inflightByMilestone(java.util.List<RLFlowMilestoneCount> inflightByMilestone) {
             this.inflightByMilestone = inflightByMilestone;
@@ -263,7 +263,7 @@ public class GetRLFlowAnalysisResponseBody extends TeaModel {
         }
 
         /**
-         * <p>作业 ID</p>
+         * <p>The job ID.</p>
          * 
          * <strong>example:</strong>
          * <p>dlc-20210126170216-xxxxxxx</p>
@@ -274,7 +274,7 @@ public class GetRLFlowAnalysisResponseBody extends TeaModel {
         }
 
         /**
-         * <p>megatron 侧 step 编号相对 global_step 的偏移，取值为 0 或 1；缺少可用对齐信息时返回 0。</p>
+         * <p>The offset of the Megatron global_step relative to the FORM_BATCH batch_id. Valid values: 0 or 1.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -285,7 +285,7 @@ public class GetRLFlowAnalysisResponseBody extends TeaModel {
         }
 
         /**
-         * <p>服务端观察时刻（毫秒，= min(EndTime, now)），在途 idle 计算基准</p>
+         * <p>The server observation time in milliseconds, calculated as min(EndTime, now). This value serves as the baseline for calculating in-flight idle time.</p>
          * 
          * <strong>example:</strong>
          * <p>1787475397000</p>
@@ -296,7 +296,7 @@ public class GetRLFlowAnalysisResponseBody extends TeaModel {
         }
 
         /**
-         * <p>请求 ID</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
@@ -307,7 +307,7 @@ public class GetRLFlowAnalysisResponseBody extends TeaModel {
         }
 
         /**
-         * <p>桑基图</p>
+         * <p>The Sankey diagram.</p>
          */
         public Builder sankey(RLFlowSankey sankey) {
             this.sankey = sankey;
@@ -315,7 +315,7 @@ public class GetRLFlowAnalysisResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Steps 的时刻来源：progress 表示取自任务日志的 Step 标记，trace 表示按 trace 里的 global_step 归步，空表示无 step 数据</p>
+         * <p>The time source for steps. A value of progress indicates that the time is extracted from the step markers in the task logs. A value of trace indicates that the time is grouped by global_step in the trace. An empty value indicates that no step data is available.</p>
          * 
          * <strong>example:</strong>
          * <p>progress</p>
@@ -326,7 +326,7 @@ public class GetRLFlowAnalysisResponseBody extends TeaModel {
         }
 
         /**
-         * <p>step 生产-消费视图</p>
+         * <p>The step production-consumption view.</p>
          */
         public Builder steps(java.util.List<RLFlowStep> steps) {
             this.steps = steps;
@@ -334,7 +334,7 @@ public class GetRLFlowAnalysisResponseBody extends TeaModel {
         }
 
         /**
-         * <p>在途卡点 Top100（按 IdleSec 降序）</p>
+         * <p>The top 100 in-flight stuck points, sorted in descending order of IdleSec.</p>
          */
         public Builder stuck(java.util.List<RLFlowStuckItem> stuck) {
             this.stuck = stuck;
@@ -342,7 +342,7 @@ public class GetRLFlowAnalysisResponseBody extends TeaModel {
         }
 
         /**
-         * <p>总量统计</p>
+         * <p>The total statistics.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;Sampled&quot;: 0, &quot;Uids&quot;: 0, &quot;Inflight&quot;: 0, &quot;Trained&quot;: 0, &quot;Trajs&quot;: 0, &quot;Rewarded&quot;: 0}</p>
@@ -353,7 +353,7 @@ public class GetRLFlowAnalysisResponseBody extends TeaModel {
         }
 
         /**
-         * <p>12 个阶段的耗时分位统计，耗时单位为秒。</p>
+         * <p>The percentile statistics for the duration in seconds of 8 stages.</p>
          */
         public Builder transitions(java.util.List<RLFlowTransition> transitions) {
             this.transitions = transitions;
@@ -361,7 +361,7 @@ public class GetRLFlowAnalysisResponseBody extends TeaModel {
         }
 
         /**
-         * <p>生成轮数分布</p>
+         * <p>The distribution of generation turns.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;Count&quot;: 0, &quot;Max&quot;: None, &quot;Avg&quot;: None, &quot;P50&quot;: None, &quot;P90&quot;: None}</p>
@@ -372,7 +372,7 @@ public class GetRLFlowAnalysisResponseBody extends TeaModel {
         }
 
         /**
-         * <p>有效算力统计。UsefulSec 为已完成训练轨迹的累计执行耗时，单位为整数秒；可包含重叠时段，不等同于作业运行时长或训练更新耗时。</p>
+         * <p>The oversampling waste.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;UsefulSec&quot;: 0}</p>

@@ -118,7 +118,7 @@ public class ListRLSamplesRequest extends Request {
         } 
 
         /**
-         * <p>作业 ID</p>
+         * <p>The job ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -131,7 +131,7 @@ public class ListRLSamplesRequest extends Request {
         }
 
         /**
-         * <p>查询窗口截止时间，采用 RFC3339 格式。未提供时使用服务端当前 UTC 时间，并向下对齐到 30 秒边界。为容纳日志采集延迟，实际读取的采集时间上界在该值基础上延后 5 分钟，并非严格按事件发生时间过滤。</p>
+         * <p>The end time of the query window in UTC RFC 3339 format. Default value: now.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-08-07T00:00:00Z</p>
@@ -143,7 +143,7 @@ public class ListRLSamplesRequest extends Request {
         }
 
         /**
-         * <p>页码（从 1 开始，最大 1000000）；与 PageSize 必须同时提供，均不传则按默认分页 PageNumber=1、PageSize=10 返回</p>
+         * <p>The page number, starting from 1. This parameter must be specified together with PageSize. If neither parameter is specified, the default values PageNumber=1 and PageSize=10 are used.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -155,7 +155,7 @@ public class ListRLSamplesRequest extends Request {
         }
 
         /**
-         * <p>每页条数（最大 1000）；与 PageNumber 必须同时提供，均不传则默认 10</p>
+         * <p>The number of entries per page. Maximum value: 1000. This parameter must be specified together with PageNumber. If neither parameter is specified, the default value 10 is used.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -167,7 +167,7 @@ public class ListRLSamplesRequest extends Request {
         }
 
         /**
-         * <p>查询窗口起始时间，采用 RFC3339 格式。未提供时默认为 EndTime 前 7 天；必须早于 EndTime，时间跨度不得超过 30 天。</p>
+         * <p>The start time of the query window in UTC RFC 3339 format. Default value: EndTime-7d.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-08-04T00:00:00Z</p>
