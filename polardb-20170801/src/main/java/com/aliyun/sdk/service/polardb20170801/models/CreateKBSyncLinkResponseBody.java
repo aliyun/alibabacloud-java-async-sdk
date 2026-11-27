@@ -38,6 +38,12 @@ public class CreateKBSyncLinkResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
+    @com.aliyun.core.annotation.NameInMap("SelectionMode")
+    private String selectionMode;
+
+    @com.aliyun.core.annotation.NameInMap("SelectionRules")
+    private String selectionRules;
+
     @com.aliyun.core.annotation.NameInMap("SourceDir")
     private String sourceDir;
 
@@ -47,6 +53,9 @@ public class CreateKBSyncLinkResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("SyncStatus")
     private String syncStatus;
 
+    @com.aliyun.core.annotation.NameInMap("TaskId")
+    private Integer taskId;
+
     private CreateKBSyncLinkResponseBody(Builder builder) {
         this.clientId = builder.clientId;
         this.creationTime = builder.creationTime;
@@ -55,9 +64,12 @@ public class CreateKBSyncLinkResponseBody extends TeaModel {
         this.linkId = builder.linkId;
         this.linkName = builder.linkName;
         this.requestId = builder.requestId;
+        this.selectionMode = builder.selectionMode;
+        this.selectionRules = builder.selectionRules;
         this.sourceDir = builder.sourceDir;
         this.syncIntervalMinutes = builder.syncIntervalMinutes;
         this.syncStatus = builder.syncStatus;
+        this.taskId = builder.taskId;
     }
 
     public static Builder builder() {
@@ -122,6 +134,20 @@ public class CreateKBSyncLinkResponseBody extends TeaModel {
     }
 
     /**
+     * @return selectionMode
+     */
+    public String getSelectionMode() {
+        return this.selectionMode;
+    }
+
+    /**
+     * @return selectionRules
+     */
+    public String getSelectionRules() {
+        return this.selectionRules;
+    }
+
+    /**
      * @return sourceDir
      */
     public String getSourceDir() {
@@ -142,6 +168,13 @@ public class CreateKBSyncLinkResponseBody extends TeaModel {
         return this.syncStatus;
     }
 
+    /**
+     * @return taskId
+     */
+    public Integer getTaskId() {
+        return this.taskId;
+    }
+
     public static final class Builder {
         private String clientId; 
         private String creationTime; 
@@ -150,9 +183,12 @@ public class CreateKBSyncLinkResponseBody extends TeaModel {
         private String linkId; 
         private String linkName; 
         private String requestId; 
+        private String selectionMode; 
+        private String selectionRules; 
         private String sourceDir; 
         private Integer syncIntervalMinutes; 
         private String syncStatus; 
+        private Integer taskId; 
 
         private Builder() {
         } 
@@ -165,9 +201,12 @@ public class CreateKBSyncLinkResponseBody extends TeaModel {
             this.linkId = model.linkId;
             this.linkName = model.linkName;
             this.requestId = model.requestId;
+            this.selectionMode = model.selectionMode;
+            this.selectionRules = model.selectionRules;
             this.sourceDir = model.sourceDir;
             this.syncIntervalMinutes = model.syncIntervalMinutes;
             this.syncStatus = model.syncStatus;
+            this.taskId = model.taskId;
         } 
 
         /**
@@ -182,7 +221,7 @@ public class CreateKBSyncLinkResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The creation time. The time is displayed in ISO 8601 format in the UTC time zone (format: YYYY-MM-DDTHH:mm:ssZ).</p>
+         * <p>The creation time. The time follows the ISO 8601 standard and uses the UTC time zone (format: YYYY-MM-DDTHH:mm:ssZ).</p>
          * 
          * <strong>example:</strong>
          * <p>2026-08-14T05:58:42Z</p>
@@ -248,6 +287,25 @@ public class CreateKBSyncLinkResponseBody extends TeaModel {
         }
 
         /**
+         * <p>The current configuration. This does not indicate that synchronization is complete. This parameter may not be returned if it is not set.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SELECTED</p>
+         */
+        public Builder selectionMode(String selectionMode) {
+            this.selectionMode = selectionMode;
+            return this;
+        }
+
+        /**
+         * <p>The current configuration. This does not indicate that synchronization is complete. This parameter may not be returned if it is not set.</p>
+         */
+        public Builder selectionRules(String selectionRules) {
+            this.selectionRules = selectionRules;
+            return this;
+        }
+
+        /**
          * <p>The address of the source directory for synchronization.</p>
          * 
          * <strong>example:</strong>
@@ -283,6 +341,17 @@ public class CreateKBSyncLinkResponseBody extends TeaModel {
          */
         public Builder syncStatus(String syncStatus) {
             this.syncStatus = syncStatus;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the asynchronous configuration task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
+         */
+        public Builder taskId(Integer taskId) {
+            this.taskId = taskId;
             return this;
         }
 

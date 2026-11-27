@@ -39,6 +39,10 @@ public class UpdateKnowledgeBaseRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("SearchMode")
     private String searchMode;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceDeleteSyncEnabled")
+    private Boolean sourceDeleteSyncEnabled;
+
     private UpdateKnowledgeBaseRequest(Builder builder) {
         super(builder);
         this.description = builder.description;
@@ -46,6 +50,7 @@ public class UpdateKnowledgeBaseRequest extends Request {
         this.name = builder.name;
         this.regionId = builder.regionId;
         this.searchMode = builder.searchMode;
+        this.sourceDeleteSyncEnabled = builder.sourceDeleteSyncEnabled;
     }
 
     public static Builder builder() {
@@ -96,12 +101,20 @@ public class UpdateKnowledgeBaseRequest extends Request {
         return this.searchMode;
     }
 
+    /**
+     * @return sourceDeleteSyncEnabled
+     */
+    public Boolean getSourceDeleteSyncEnabled() {
+        return this.sourceDeleteSyncEnabled;
+    }
+
     public static final class Builder extends Request.Builder<UpdateKnowledgeBaseRequest, Builder> {
         private String description; 
         private String knowledgeBaseId; 
         private String name; 
         private String regionId; 
         private String searchMode; 
+        private Boolean sourceDeleteSyncEnabled; 
 
         private Builder() {
             super();
@@ -114,6 +127,7 @@ public class UpdateKnowledgeBaseRequest extends Request {
             this.name = request.name;
             this.regionId = request.regionId;
             this.searchMode = request.searchMode;
+            this.sourceDeleteSyncEnabled = request.sourceDeleteSyncEnabled;
         } 
 
         /**
@@ -182,6 +196,18 @@ public class UpdateKnowledgeBaseRequest extends Request {
         public Builder searchMode(String searchMode) {
             this.putQueryParameter("SearchMode", searchMode);
             this.searchMode = searchMode;
+            return this;
+        }
+
+        /**
+         * <p>Specifies whether to enable source deletion synchronization.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
+        public Builder sourceDeleteSyncEnabled(Boolean sourceDeleteSyncEnabled) {
+            this.putQueryParameter("SourceDeleteSyncEnabled", sourceDeleteSyncEnabled);
+            this.sourceDeleteSyncEnabled = sourceDeleteSyncEnabled;
             return this;
         }
 

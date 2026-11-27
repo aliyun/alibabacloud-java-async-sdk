@@ -23,9 +23,13 @@ public class CreateKnowledgeBaseResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
+    @com.aliyun.core.annotation.NameInMap("TaskId")
+    private Integer taskId;
+
     private CreateKnowledgeBaseResponseBody(Builder builder) {
         this.knowledgeBaseId = builder.knowledgeBaseId;
         this.requestId = builder.requestId;
+        this.taskId = builder.taskId;
     }
 
     public static Builder builder() {
@@ -54,9 +58,17 @@ public class CreateKnowledgeBaseResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    /**
+     * @return taskId
+     */
+    public Integer getTaskId() {
+        return this.taskId;
+    }
+
     public static final class Builder {
         private String knowledgeBaseId; 
         private String requestId; 
+        private Integer taskId; 
 
         private Builder() {
         } 
@@ -64,6 +76,7 @@ public class CreateKnowledgeBaseResponseBody extends TeaModel {
         private Builder(CreateKnowledgeBaseResponseBody model) {
             this.knowledgeBaseId = model.knowledgeBaseId;
             this.requestId = model.requestId;
+            this.taskId = model.taskId;
         } 
 
         /**
@@ -85,6 +98,17 @@ public class CreateKnowledgeBaseResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the asynchronous configuration task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
+         */
+        public Builder taskId(Integer taskId) {
+            this.taskId = taskId;
             return this;
         }
 

@@ -23,13 +23,25 @@ public class UpdateKBSyncLinkResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
+    @com.aliyun.core.annotation.NameInMap("SelectionMode")
+    private String selectionMode;
+
+    @com.aliyun.core.annotation.NameInMap("SelectionRules")
+    private String selectionRules;
+
     @com.aliyun.core.annotation.NameInMap("SyncSchedule")
     private String syncSchedule;
+
+    @com.aliyun.core.annotation.NameInMap("TaskId")
+    private Integer taskId;
 
     private UpdateKBSyncLinkResponseBody(Builder builder) {
         this.linkId = builder.linkId;
         this.requestId = builder.requestId;
+        this.selectionMode = builder.selectionMode;
+        this.selectionRules = builder.selectionRules;
         this.syncSchedule = builder.syncSchedule;
+        this.taskId = builder.taskId;
     }
 
     public static Builder builder() {
@@ -59,16 +71,40 @@ public class UpdateKBSyncLinkResponseBody extends TeaModel {
     }
 
     /**
+     * @return selectionMode
+     */
+    public String getSelectionMode() {
+        return this.selectionMode;
+    }
+
+    /**
+     * @return selectionRules
+     */
+    public String getSelectionRules() {
+        return this.selectionRules;
+    }
+
+    /**
      * @return syncSchedule
      */
     public String getSyncSchedule() {
         return this.syncSchedule;
     }
 
+    /**
+     * @return taskId
+     */
+    public Integer getTaskId() {
+        return this.taskId;
+    }
+
     public static final class Builder {
         private String linkId; 
         private String requestId; 
+        private String selectionMode; 
+        private String selectionRules; 
         private String syncSchedule; 
+        private Integer taskId; 
 
         private Builder() {
         } 
@@ -76,7 +112,10 @@ public class UpdateKBSyncLinkResponseBody extends TeaModel {
         private Builder(UpdateKBSyncLinkResponseBody model) {
             this.linkId = model.linkId;
             this.requestId = model.requestId;
+            this.selectionMode = model.selectionMode;
+            this.selectionRules = model.selectionRules;
             this.syncSchedule = model.syncSchedule;
+            this.taskId = model.taskId;
         } 
 
         /**
@@ -102,10 +141,40 @@ public class UpdateKBSyncLinkResponseBody extends TeaModel {
         }
 
         /**
+         * <p>Returns the current configuration, which does not indicate that the synchronization is complete. This parameter may not be returned if it is not set.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SELECTED</p>
+         */
+        public Builder selectionMode(String selectionMode) {
+            this.selectionMode = selectionMode;
+            return this;
+        }
+
+        /**
+         * <p>Returns the current configuration, which does not indicate that the synchronization is complete. This parameter may not be returned if it is not set.</p>
+         */
+        public Builder selectionRules(String selectionRules) {
+            this.selectionRules = selectionRules;
+            return this;
+        }
+
+        /**
          * <p>The scheduled time of the synchronization task.</p>
          */
         public Builder syncSchedule(String syncSchedule) {
             this.syncSchedule = syncSchedule;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the asynchronous configuration task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
+         */
+        public Builder taskId(Integer taskId) {
+            this.taskId = taskId;
             return this;
         }
 

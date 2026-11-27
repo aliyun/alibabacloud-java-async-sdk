@@ -44,6 +44,10 @@ public class CreateKnowledgeBaseRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("SearchMode")
     private String searchMode;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceDeleteSyncEnabled")
+    private Boolean sourceDeleteSyncEnabled;
+
     private CreateKnowledgeBaseRequest(Builder builder) {
         super(builder);
         this.description = builder.description;
@@ -52,6 +56,7 @@ public class CreateKnowledgeBaseRequest extends Request {
         this.name = builder.name;
         this.regionId = builder.regionId;
         this.searchMode = builder.searchMode;
+        this.sourceDeleteSyncEnabled = builder.sourceDeleteSyncEnabled;
     }
 
     public static Builder builder() {
@@ -109,6 +114,13 @@ public class CreateKnowledgeBaseRequest extends Request {
         return this.searchMode;
     }
 
+    /**
+     * @return sourceDeleteSyncEnabled
+     */
+    public Boolean getSourceDeleteSyncEnabled() {
+        return this.sourceDeleteSyncEnabled;
+    }
+
     public static final class Builder extends Request.Builder<CreateKnowledgeBaseRequest, Builder> {
         private String description; 
         private String knowledgeBaseType; 
@@ -116,6 +128,7 @@ public class CreateKnowledgeBaseRequest extends Request {
         private String name; 
         private String regionId; 
         private String searchMode; 
+        private Boolean sourceDeleteSyncEnabled; 
 
         private Builder() {
             super();
@@ -129,6 +142,7 @@ public class CreateKnowledgeBaseRequest extends Request {
             this.name = request.name;
             this.regionId = request.regionId;
             this.searchMode = request.searchMode;
+            this.sourceDeleteSyncEnabled = request.sourceDeleteSyncEnabled;
         } 
 
         /**
@@ -144,7 +158,7 @@ public class CreateKnowledgeBaseRequest extends Request {
         }
 
         /**
-         * <p>The type of the knowledge base: PERSONAL or PUBLIC.</p>
+         * <p>The type of the knowledge base. Valid values: PERSONAL and PUBLIC.</p>
          * 
          * <strong>example:</strong>
          * <p>PUBLIC</p>
@@ -197,11 +211,11 @@ public class CreateKnowledgeBaseRequest extends Request {
         /**
          * <p>The search mode. Valid values:</p>
          * <ul>
-         * <li>balanced (default): balanced mode</li>
+         * <li>balanced: balanced mode (default)</li>
          * <li>precise: precise mode</li>
          * <li>semantic: semantic mode</li>
          * <li>knn: KNN mode</li>
-         * <li>rrf: reciprocal rank fusion</li>
+         * <li>rrf: RRF fusion</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -210,6 +224,18 @@ public class CreateKnowledgeBaseRequest extends Request {
         public Builder searchMode(String searchMode) {
             this.putQueryParameter("SearchMode", searchMode);
             this.searchMode = searchMode;
+            return this;
+        }
+
+        /**
+         * <p>Specifies whether to synchronize deletions from the source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
+        public Builder sourceDeleteSyncEnabled(Boolean sourceDeleteSyncEnabled) {
+            this.putQueryParameter("SourceDeleteSyncEnabled", sourceDeleteSyncEnabled);
+            this.sourceDeleteSyncEnabled = sourceDeleteSyncEnabled;
             return this;
         }
 

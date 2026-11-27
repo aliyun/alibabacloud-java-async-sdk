@@ -47,6 +47,9 @@ public class DescribeKnowledgeBaseAttributeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ShardCount")
     private Integer shardCount;
 
+    @com.aliyun.core.annotation.NameInMap("SourceDeleteSyncEnabled")
+    private Boolean sourceDeleteSyncEnabled;
+
     @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
@@ -67,6 +70,7 @@ public class DescribeKnowledgeBaseAttributeResponseBody extends TeaModel {
         this.requestId = builder.requestId;
         this.searchMode = builder.searchMode;
         this.shardCount = builder.shardCount;
+        this.sourceDeleteSyncEnabled = builder.sourceDeleteSyncEnabled;
         this.status = builder.status;
         this.totalDocs = builder.totalDocs;
         this.totalSizeBytes = builder.totalSizeBytes;
@@ -155,6 +159,13 @@ public class DescribeKnowledgeBaseAttributeResponseBody extends TeaModel {
     }
 
     /**
+     * @return sourceDeleteSyncEnabled
+     */
+    public Boolean getSourceDeleteSyncEnabled() {
+        return this.sourceDeleteSyncEnabled;
+    }
+
+    /**
      * @return status
      */
     public String getStatus() {
@@ -186,6 +197,7 @@ public class DescribeKnowledgeBaseAttributeResponseBody extends TeaModel {
         private String requestId; 
         private String searchMode; 
         private Integer shardCount; 
+        private Boolean sourceDeleteSyncEnabled; 
         private String status; 
         private Integer totalDocs; 
         private Long totalSizeBytes; 
@@ -204,13 +216,14 @@ public class DescribeKnowledgeBaseAttributeResponseBody extends TeaModel {
             this.requestId = model.requestId;
             this.searchMode = model.searchMode;
             this.shardCount = model.shardCount;
+            this.sourceDeleteSyncEnabled = model.sourceDeleteSyncEnabled;
             this.status = model.status;
             this.totalDocs = model.totalDocs;
             this.totalSizeBytes = model.totalSizeBytes;
         } 
 
         /**
-         * <p>The number of AI applications associated with the knowledge base.</p>
+         * <p>The number of associated AI applications.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -221,8 +234,7 @@ public class DescribeKnowledgeBaseAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The time when the knowledge base was created.</p>
-         * <p>The time is in ISO 8601 format in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</p>
+         * <p>The creation time. The time is displayed in ISO 8601 format in UTC (YYYY-MM-DDTHH:mm:ssZ).</p>
          * 
          * <strong>example:</strong>
          * <p>2020-08-14T05:58:42Z</p>
@@ -255,11 +267,7 @@ public class DescribeKnowledgeBaseAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The type of the knowledge base. Valid values:</p>
-         * <ul>
-         * <li>PUBLIC</li>
-         * <li>PERSONAL</li>
-         * </ul>
+         * <p>The type of the knowledge base. Valid values: PUBLIC and PERSONAL.</p>
          * 
          * <strong>example:</strong>
          * <p>PUBLIC</p>
@@ -332,7 +340,18 @@ public class DescribeKnowledgeBaseAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The status of the knowledge base.</p>
+         * <p>Specifies whether source deletion synchronization is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
+        public Builder sourceDeleteSyncEnabled(Boolean sourceDeleteSyncEnabled) {
+            this.sourceDeleteSyncEnabled = sourceDeleteSyncEnabled;
+            return this;
+        }
+
+        /**
+         * <p>The status.</p>
          * 
          * <strong>example:</strong>
          * <p>Activation</p>

@@ -18,6 +18,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class UpdateKBSyncLinkRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AiTableMcpEndpoint")
+    @com.aliyun.core.annotation.Validation(maxLength = 2048)
+    private String aiTableMcpEndpoint;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ChatMemberStaleTtlSeconds")
+    @com.aliyun.core.annotation.Validation(maximum = 2147483647)
+    private Integer chatMemberStaleTtlSeconds;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClientId")
     private String clientId;
 
@@ -51,9 +61,21 @@ public class UpdateKBSyncLinkRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SelectionMode")
+    private String selectionMode;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SelectionRules")
+    private String selectionRules;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SheetMcpEndpoint")
     @com.aliyun.core.annotation.Validation(maxLength = 2048)
     private String sheetMcpEndpoint;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceDeleteSyncEnabled")
+    private Boolean sourceDeleteSyncEnabled;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SyncEnabled")
@@ -78,6 +100,8 @@ public class UpdateKBSyncLinkRequest extends Request {
 
     private UpdateKBSyncLinkRequest(Builder builder) {
         super(builder);
+        this.aiTableMcpEndpoint = builder.aiTableMcpEndpoint;
+        this.chatMemberStaleTtlSeconds = builder.chatMemberStaleTtlSeconds;
         this.clientId = builder.clientId;
         this.clientSecret = builder.clientSecret;
         this.feishuChatMemberStaleTtlSeconds = builder.feishuChatMemberStaleTtlSeconds;
@@ -85,7 +109,10 @@ public class UpdateKBSyncLinkRequest extends Request {
         this.linkId = builder.linkId;
         this.mcpEndpoint = builder.mcpEndpoint;
         this.regionId = builder.regionId;
+        this.selectionMode = builder.selectionMode;
+        this.selectionRules = builder.selectionRules;
         this.sheetMcpEndpoint = builder.sheetMcpEndpoint;
+        this.sourceDeleteSyncEnabled = builder.sourceDeleteSyncEnabled;
         this.syncEnabled = builder.syncEnabled;
         this.syncIntervalMinutes = builder.syncIntervalMinutes;
         this.userAccessToken = builder.userAccessToken;
@@ -104,6 +131,20 @@ public class UpdateKBSyncLinkRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return aiTableMcpEndpoint
+     */
+    public String getAiTableMcpEndpoint() {
+        return this.aiTableMcpEndpoint;
+    }
+
+    /**
+     * @return chatMemberStaleTtlSeconds
+     */
+    public Integer getChatMemberStaleTtlSeconds() {
+        return this.chatMemberStaleTtlSeconds;
     }
 
     /**
@@ -156,10 +197,31 @@ public class UpdateKBSyncLinkRequest extends Request {
     }
 
     /**
+     * @return selectionMode
+     */
+    public String getSelectionMode() {
+        return this.selectionMode;
+    }
+
+    /**
+     * @return selectionRules
+     */
+    public String getSelectionRules() {
+        return this.selectionRules;
+    }
+
+    /**
      * @return sheetMcpEndpoint
      */
     public String getSheetMcpEndpoint() {
         return this.sheetMcpEndpoint;
+    }
+
+    /**
+     * @return sourceDeleteSyncEnabled
+     */
+    public Boolean getSourceDeleteSyncEnabled() {
+        return this.sourceDeleteSyncEnabled;
     }
 
     /**
@@ -198,6 +260,8 @@ public class UpdateKBSyncLinkRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UpdateKBSyncLinkRequest, Builder> {
+        private String aiTableMcpEndpoint; 
+        private Integer chatMemberStaleTtlSeconds; 
         private String clientId; 
         private String clientSecret; 
         private Integer feishuChatMemberStaleTtlSeconds; 
@@ -205,7 +269,10 @@ public class UpdateKBSyncLinkRequest extends Request {
         private String linkId; 
         private String mcpEndpoint; 
         private String regionId; 
+        private String selectionMode; 
+        private String selectionRules; 
         private String sheetMcpEndpoint; 
+        private Boolean sourceDeleteSyncEnabled; 
         private Boolean syncEnabled; 
         private Integer syncIntervalMinutes; 
         private String userAccessToken; 
@@ -218,6 +285,8 @@ public class UpdateKBSyncLinkRequest extends Request {
 
         private Builder(UpdateKBSyncLinkRequest request) {
             super(request);
+            this.aiTableMcpEndpoint = request.aiTableMcpEndpoint;
+            this.chatMemberStaleTtlSeconds = request.chatMemberStaleTtlSeconds;
             this.clientId = request.clientId;
             this.clientSecret = request.clientSecret;
             this.feishuChatMemberStaleTtlSeconds = request.feishuChatMemberStaleTtlSeconds;
@@ -225,13 +294,40 @@ public class UpdateKBSyncLinkRequest extends Request {
             this.linkId = request.linkId;
             this.mcpEndpoint = request.mcpEndpoint;
             this.regionId = request.regionId;
+            this.selectionMode = request.selectionMode;
+            this.selectionRules = request.selectionRules;
             this.sheetMcpEndpoint = request.sheetMcpEndpoint;
+            this.sourceDeleteSyncEnabled = request.sourceDeleteSyncEnabled;
             this.syncEnabled = request.syncEnabled;
             this.syncIntervalMinutes = request.syncIntervalMinutes;
             this.userAccessToken = request.userAccessToken;
             this.userId = request.userId;
             this.userRefreshToken = request.userRefreshToken;
         } 
+
+        /**
+         * <p>The endpoint of the DingTalk AI Tables MCP server. An empty string indicates deletion.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://mcp-gw.dingtalk.com/server/example">https://mcp-gw.dingtalk.com/server/example</a></p>
+         */
+        public Builder aiTableMcpEndpoint(String aiTableMcpEndpoint) {
+            this.putQueryParameter("AiTableMcpEndpoint", aiTableMcpEndpoint);
+            this.aiTableMcpEndpoint = aiTableMcpEndpoint;
+            return this;
+        }
+
+        /**
+         * <p>The validity period of the successful group member snapshot used for fallback reuse, in seconds. This parameter applies to DingTalk and Lark synchronization links. If this field is explicitly configured, it takes precedence. If not configured, Lark uses FeishuChatMemberStaleTtlSeconds. A value of -1 indicates that the snapshot never expires. A value of 0 disables snapshot fallback reuse. A positive integer indicates the maximum age of successful snapshots in the same workspace, enterprise, and group allowed for reuse. If omitted, the original value is retained. Explicitly passing -1 restores the default behavior.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-1</p>
+         */
+        public Builder chatMemberStaleTtlSeconds(Integer chatMemberStaleTtlSeconds) {
+            this.putQueryParameter("ChatMemberStaleTtlSeconds", chatMemberStaleTtlSeconds);
+            this.chatMemberStaleTtlSeconds = chatMemberStaleTtlSeconds;
+            return this;
+        }
 
         /**
          * <p>The client identifier.</p>
@@ -246,7 +342,7 @@ public class UpdateKBSyncLinkRequest extends Request {
         }
 
         /**
-         * <p>The client secret.</p>
+         * <p>The client secret information.</p>
          * 
          * <strong>example:</strong>
          * <p>example-client-secret</p>
@@ -258,7 +354,7 @@ public class UpdateKBSyncLinkRequest extends Request {
         }
 
         /**
-         * <p>The validity period of the successful snapshot of Lark group members for fallback reuse, in seconds. This parameter can be explicitly set only for FEISHU synchronization links. A value of -1 indicates that the snapshot never expires. A value of 0 disables snapshot fallback reuse. A positive integer indicates the maximum age of the snapshot allowed for reuse. If this parameter is omitted, the original value is retained. Explicitly passing -1 restores the default behavior.</p>
+         * <p>The validity period of the successful Lark group member snapshot used for fallback reuse, in seconds. This parameter can only be explicitly set for Lark synchronization links. A value of -1 indicates that the snapshot never expires. A value of 0 disables snapshot fallback reuse. A positive integer indicates the maximum age of the snapshot allowed for reuse. If omitted, the original value is retained. Explicitly passing -1 restores the default behavior.</p>
          * 
          * <strong>example:</strong>
          * <p>-1</p>
@@ -321,6 +417,27 @@ public class UpdateKBSyncLinkRequest extends Request {
         }
 
         /**
+         * <p>This parameter applies only to DingTalk sources and must be set together with SelectionRules. Valid values: ALL: Synchronizes files in the source directory that are not excluded by excludes. The includes parameter must be an empty array. SELECTED: Synchronizes only files that match includes and are not excluded by excludes. If includes is empty, no files are selected. If this parameter is not provided, the original configuration is retained. If both parameters are provided, the original rules are replaced. This parameter cannot be modified at the same time as SyncEnabled. The new configuration takes effect starting from the next synchronization.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SELECTED</p>
+         */
+        public Builder selectionMode(String selectionMode) {
+            this.putQueryParameter("SelectionMode", selectionMode);
+            this.selectionMode = selectionMode;
+            return this;
+        }
+
+        /**
+         * <p>The file path filtering rules in JSON format. It only contains two required string arrays: includes and excludes. Paths are relative to SourceDir, and exclusion rules take precedence. GLOB is supported: * and ? do not cross directories, and ** matches zero or more directory levels when it occupies a path segment alone. The two arrays can contain a maximum of 256 entries in total. Each entry must be 1 to 512 characters in length. The maximum size of the JSON text is 65,536 UTF-8 bytes. After a file is removed from the synchronization scope, the corresponding documents imported by this synchronization link are cleared, without affecting the source files and documents of other synchronization links.</p>
+         */
+        public Builder selectionRules(String selectionRules) {
+            this.putQueryParameter("SelectionRules", selectionRules);
+            this.selectionRules = selectionRules;
+            return this;
+        }
+
+        /**
          * <p>The endpoint of the DingTalk Sheets MCP server.</p>
          * 
          * <strong>example:</strong>
@@ -329,6 +446,18 @@ public class UpdateKBSyncLinkRequest extends Request {
         public Builder sheetMcpEndpoint(String sheetMcpEndpoint) {
             this.putQueryParameter("SheetMcpEndpoint", sheetMcpEndpoint);
             this.sheetMcpEndpoint = sheetMcpEndpoint;
+            return this;
+        }
+
+        /**
+         * <p>Specifies whether to synchronize deletions from the source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
+        public Builder sourceDeleteSyncEnabled(Boolean sourceDeleteSyncEnabled) {
+            this.putQueryParameter("SourceDeleteSyncEnabled", sourceDeleteSyncEnabled);
+            this.sourceDeleteSyncEnabled = sourceDeleteSyncEnabled;
             return this;
         }
 
@@ -369,7 +498,7 @@ public class UpdateKBSyncLinkRequest extends Request {
         }
 
         /**
-         * <p>The ID of the DingTalk user who performs the operation.</p>
+         * <p>The ID of the DingTalk operator.</p>
          * 
          * <strong>example:</strong>
          * <p>123***56</p>
@@ -381,7 +510,7 @@ public class UpdateKBSyncLinkRequest extends Request {
         }
 
         /**
-         * <p>The new Lark user refresh token. Pass this parameter together with UserAccessToken. Passing empty strings for both parameters deletes the tokens.</p>
+         * <p>The new Lark user refresh token. It must be provided together with UserAccessToken. Passing two empty strings indicates deletion.</p>
          * 
          * <strong>example:</strong>
          * <p>example-user-refresh-token</p>

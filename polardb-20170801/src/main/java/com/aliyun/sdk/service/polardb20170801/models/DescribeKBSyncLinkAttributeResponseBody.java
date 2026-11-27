@@ -41,6 +41,15 @@ public class DescribeKBSyncLinkAttributeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
+    @com.aliyun.core.annotation.NameInMap("SelectionMode")
+    private String selectionMode;
+
+    @com.aliyun.core.annotation.NameInMap("SelectionRules")
+    private String selectionRules;
+
+    @com.aliyun.core.annotation.NameInMap("SourceDeleteSyncEnabled")
+    private Boolean sourceDeleteSyncEnabled;
+
     @com.aliyun.core.annotation.NameInMap("SourceDir")
     private String sourceDir;
 
@@ -59,6 +68,9 @@ public class DescribeKBSyncLinkAttributeResponseBody extends TeaModel {
         this.linkId = builder.linkId;
         this.linkName = builder.linkName;
         this.requestId = builder.requestId;
+        this.selectionMode = builder.selectionMode;
+        this.selectionRules = builder.selectionRules;
+        this.sourceDeleteSyncEnabled = builder.sourceDeleteSyncEnabled;
         this.sourceDir = builder.sourceDir;
         this.syncIntervalMinutes = builder.syncIntervalMinutes;
         this.syncStatus = builder.syncStatus;
@@ -133,6 +145,27 @@ public class DescribeKBSyncLinkAttributeResponseBody extends TeaModel {
     }
 
     /**
+     * @return selectionMode
+     */
+    public String getSelectionMode() {
+        return this.selectionMode;
+    }
+
+    /**
+     * @return selectionRules
+     */
+    public String getSelectionRules() {
+        return this.selectionRules;
+    }
+
+    /**
+     * @return sourceDeleteSyncEnabled
+     */
+    public Boolean getSourceDeleteSyncEnabled() {
+        return this.sourceDeleteSyncEnabled;
+    }
+
+    /**
      * @return sourceDir
      */
     public String getSourceDir() {
@@ -162,6 +195,9 @@ public class DescribeKBSyncLinkAttributeResponseBody extends TeaModel {
         private String linkId; 
         private String linkName; 
         private String requestId; 
+        private String selectionMode; 
+        private String selectionRules; 
+        private Boolean sourceDeleteSyncEnabled; 
         private String sourceDir; 
         private Integer syncIntervalMinutes; 
         private String syncStatus; 
@@ -178,6 +214,9 @@ public class DescribeKBSyncLinkAttributeResponseBody extends TeaModel {
             this.linkId = model.linkId;
             this.linkName = model.linkName;
             this.requestId = model.requestId;
+            this.selectionMode = model.selectionMode;
+            this.selectionRules = model.selectionRules;
+            this.sourceDeleteSyncEnabled = model.sourceDeleteSyncEnabled;
             this.sourceDir = model.sourceDir;
             this.syncIntervalMinutes = model.syncIntervalMinutes;
             this.syncStatus = model.syncStatus;
@@ -195,7 +234,7 @@ public class DescribeKBSyncLinkAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The synchronization configuration whitelist returned based on the source type. For DingTalk, UserId is returned. For Lark, FeishuChatMemberStaleTtlSeconds is returned.</p>
+         * <p>The synchronization configuration whitelist returned by source type. For DINGTALK, UserId can be returned. For FEISHU, FeishuChatMemberStaleTtlSeconds can be returned.</p>
          */
         public Builder config(Config config) {
             this.config = config;
@@ -269,7 +308,37 @@ public class DescribeKBSyncLinkAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The source directory. For OSS sources, the bucket and object prefix in the oss://<bucket>/<prefix> format are returned. For other sources, the directory identifier or path of the corresponding channel is returned.</p>
+         * <p>Returns the current configuration, which does not indicate that synchronization is complete. This field may not be returned if it is not set.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SELECTED</p>
+         */
+        public Builder selectionMode(String selectionMode) {
+            this.selectionMode = selectionMode;
+            return this;
+        }
+
+        /**
+         * <p>Returns the current configuration, which does not indicate that synchronization is complete. This field may not be returned if it is not set.</p>
+         */
+        public Builder selectionRules(String selectionRules) {
+            this.selectionRules = selectionRules;
+            return this;
+        }
+
+        /**
+         * <p>The switch for source deletion synchronization.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
+        public Builder sourceDeleteSyncEnabled(Boolean sourceDeleteSyncEnabled) {
+            this.sourceDeleteSyncEnabled = sourceDeleteSyncEnabled;
+            return this;
+        }
+
+        /**
+         * <p>The source directory.</p>
          * 
          * <strong>example:</strong>
          * <p>/documents</p>
@@ -314,6 +383,10 @@ public class DescribeKBSyncLinkAttributeResponseBody extends TeaModel {
      * <p>DescribeKBSyncLinkAttributeResponseBody</p>
      */
     public static class Config extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ChatMemberStaleTtlSeconds")
+        @com.aliyun.core.annotation.Validation(maximum = 2147483647)
+        private Integer chatMemberStaleTtlSeconds;
+
         @com.aliyun.core.annotation.NameInMap("FeishuChatMemberStaleTtlSeconds")
         @com.aliyun.core.annotation.Validation(maximum = 2147483647)
         private Integer feishuChatMemberStaleTtlSeconds;
@@ -322,6 +395,7 @@ public class DescribeKBSyncLinkAttributeResponseBody extends TeaModel {
         private String userId;
 
         private Config(Builder builder) {
+            this.chatMemberStaleTtlSeconds = builder.chatMemberStaleTtlSeconds;
             this.feishuChatMemberStaleTtlSeconds = builder.feishuChatMemberStaleTtlSeconds;
             this.userId = builder.userId;
         }
@@ -332,6 +406,13 @@ public class DescribeKBSyncLinkAttributeResponseBody extends TeaModel {
 
         public static Config create() {
             return builder().build();
+        }
+
+        /**
+         * @return chatMemberStaleTtlSeconds
+         */
+        public Integer getChatMemberStaleTtlSeconds() {
+            return this.chatMemberStaleTtlSeconds;
         }
 
         /**
@@ -349,6 +430,7 @@ public class DescribeKBSyncLinkAttributeResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Integer chatMemberStaleTtlSeconds; 
             private Integer feishuChatMemberStaleTtlSeconds; 
             private String userId; 
 
@@ -356,12 +438,24 @@ public class DescribeKBSyncLinkAttributeResponseBody extends TeaModel {
             } 
 
             private Builder(Config model) {
+                this.chatMemberStaleTtlSeconds = model.chatMemberStaleTtlSeconds;
                 this.feishuChatMemberStaleTtlSeconds = model.feishuChatMemberStaleTtlSeconds;
                 this.userId = model.userId;
             } 
 
             /**
-             * <p>The validity period of the successful snapshot of Lark group members for fallback reuse, in seconds. This parameter is returned only for Lark synchronization links. A value of -1 indicates that the snapshot never expires. A value of 0 indicates that snapshot fallback reuse is disabled. A positive integer indicates the maximum age of the snapshot allowed for reuse. The valid value configured for the link is returned. If no value is configured, the default value -1 is returned.</p>
+             * <p>The validity period of the group member success snapshot used for fallback reuse, in seconds. This field can be returned for DINGTALK and FEISHU synchronization links. Explicit general configurations take precedence. If it is not configured, Lark uses the legacy dedicated field. A value of -1 indicates that the snapshot never expires. A value of 0 indicates that snapshot fallback reuse is disabled. A positive integer indicates the maximum age of the snapshot allowed for reuse. If it is not configured for DingTalk, -1 is returned. If the general field is not explicitly configured for Lark, this field may not be returned, and the legacy dedicated field returns a valid value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>-1</p>
+             */
+            public Builder chatMemberStaleTtlSeconds(Integer chatMemberStaleTtlSeconds) {
+                this.chatMemberStaleTtlSeconds = chatMemberStaleTtlSeconds;
+                return this;
+            }
+
+            /**
+             * <p>The validity period of the Lark group member success snapshot used for fallback reuse, in seconds. This field is returned only for FEISHU synchronization links. A value of -1 indicates that the snapshot never expires. A value of 0 indicates that snapshot fallback reuse is disabled. A positive integer indicates the maximum age of the snapshot allowed for reuse. The valid value configured for the link is returned. If it is not configured, the default value -1 is returned.</p>
              * 
              * <strong>example:</strong>
              * <p>-1</p>
@@ -372,7 +466,7 @@ public class DescribeKBSyncLinkAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the DingTalk user who performs the operation. This parameter is returned only for DingTalk synchronization links.</p>
+             * <p>The ID of the DingTalk user who performs the operation. This field is returned only for DINGTALK synchronization links.</p>
              * 
              * <strong>example:</strong>
              * <p>manager123</p>
