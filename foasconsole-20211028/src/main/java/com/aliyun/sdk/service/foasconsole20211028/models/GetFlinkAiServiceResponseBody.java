@@ -80,7 +80,7 @@ public class GetFlinkAiServiceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The Flink AI service data transfer object.</p>
+         * <p>The data transfer object for the Flink AI service.</p>
          */
         public Builder flinkAiServiceDTO(FlinkAiServiceDTO flinkAiServiceDTO) {
             this.flinkAiServiceDTO = flinkAiServiceDTO;
@@ -99,7 +99,7 @@ public class GetFlinkAiServiceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -207,7 +207,7 @@ public class GetFlinkAiServiceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether deletion protection is enabled.</p>
+             * <p>Indicates whether release protection is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -220,12 +220,12 @@ public class GetFlinkAiServiceResponseBody extends TeaModel {
             /**
              * <p>The status of the Flink AI instance. Valid values:</p>
              * <ul>
-             * <li>CLOSED: closed or not activated.</li>
-             * <li>WAITING: waiting to be activated after payment.</li>
-             * <li>OPENING: being activated.</li>
-             * <li>RUNNING: activated.</li>
-             * <li>CLOSING: being closed.</li>
-             * <li>DISABLE: overdue payment.</li>
+             * <li>CLOSED: Closed or not activated.</li>
+             * <li>WAITING: Waiting for activation after successful payment.</li>
+             * <li>OPENING: Activating.</li>
+             * <li>RUNNING: Activated.</li>
+             * <li>CLOSING: Closing.</li>
+             * <li>DISABLE: Overdue payment.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -237,7 +237,7 @@ public class GetFlinkAiServiceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The AI service order instance ID.</p>
+             * <p>The instance ID of the AI service order.</p>
              * 
              * <strong>example:</strong>
              * <p>sc_flinkaifuncpost_public_cn-o3s4xabcdef</p>
@@ -259,7 +259,7 @@ public class GetFlinkAiServiceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the AI service was activated, in timestamp format (milliseconds).</p>
+             * <p>The time when the AI service was activated, in the millisecond timestamp format.</p>
              * 
              * <strong>example:</strong>
              * <p>1786934292</p>

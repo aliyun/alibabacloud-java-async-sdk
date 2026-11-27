@@ -163,7 +163,7 @@ public class QueryConvertInstancePriceRequest extends Request {
         } 
 
         /**
-         * <p>The number of pricing cycles.</p>
+         * <p>The duration of the billing cycle.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -176,7 +176,7 @@ public class QueryConvertInstancePriceRequest extends Request {
         }
 
         /**
-         * <p>The order instance ID.</p>
+         * <p>The instance ID of the order.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -202,7 +202,7 @@ public class QueryConvertInstancePriceRequest extends Request {
         }
 
         /**
-         * <p>The resource specifications of the namespace.</p>
+         * <p>The resource specifications of the workspace.</p>
          * <p>This parameter is required.</p>
          */
         public Builder namespaceResourceSpecs(java.util.List<NamespaceResourceSpecs> namespaceResourceSpecs) {
@@ -213,7 +213,7 @@ public class QueryConvertInstancePriceRequest extends Request {
         }
 
         /**
-         * <p>The pricing cycle. Only Year and Month are supported.</p>
+         * <p>The billing cycle. Only Year and Month are supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -226,7 +226,10 @@ public class QueryConvertInstancePriceRequest extends Request {
         }
 
         /**
-         * PromotionCode.
+         * <p>The coupon code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>500043499350689</p>
          */
         public Builder promotionCode(String promotionCode) {
             this.putBodyParameter("PromotionCode", promotionCode);
@@ -248,7 +251,11 @@ public class QueryConvertInstancePriceRequest extends Request {
         }
 
         /**
-         * UsePromotionCode.
+         * <p>Specifies whether to use a coupon. Valid values:</p>
+         * <ul>
+         * <li>true: Uses a coupon.</li>
+         * <li>false: Does not use a coupon.</li>
+         * </ul>
          */
         public Builder usePromotionCode(Boolean usePromotionCode) {
             this.putBodyParameter("UsePromotionCode", usePromotionCode);
@@ -332,7 +339,7 @@ public class QueryConvertInstancePriceRequest extends Request {
             /**
              * <p>The memory size. Unit: GB.</p>
              * <blockquote>
-             * <p>The memory size must be 4 times the number of CPUs.</p>
+             * <p>The memory size must be four times the number of CPUs.</p>
              * </blockquote>
              * <p>This parameter is required.</p>
              * 
@@ -406,7 +413,7 @@ public class QueryConvertInstancePriceRequest extends Request {
             } 
 
             /**
-             * <p>The namespace name.</p>
+             * <p>The name of the workspace.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -418,7 +425,7 @@ public class QueryConvertInstancePriceRequest extends Request {
             }
 
             /**
-             * <p>The resource specifications of the namespace.</p>
+             * <p>The resource specifications of the workspace.</p>
              * <p>This parameter is required.</p>
              */
             public Builder resourceSpec(ResourceSpec resourceSpec) {

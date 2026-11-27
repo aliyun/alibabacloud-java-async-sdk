@@ -90,7 +90,7 @@ public class DeleteNamespaceRequest extends Request {
         } 
 
         /**
-         * <p>The order instance ID.</p>
+         * <p>The instance ID of the order.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -103,7 +103,7 @@ public class DeleteNamespaceRequest extends Request {
         }
 
         /**
-         * <p>The namespace name.</p>
+         * <p>The name of the namespace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

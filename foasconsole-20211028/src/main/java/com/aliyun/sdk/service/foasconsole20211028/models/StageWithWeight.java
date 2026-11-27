@@ -80,7 +80,10 @@ public class StageWithWeight extends TeaModel {
         } 
 
         /**
-         * StepIndex.
+         * <p>The ordinal number of the execution stage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder stepIndex(Integer stepIndex) {
             this.stepIndex = stepIndex;
@@ -88,7 +91,7 @@ public class StageWithWeight extends TeaModel {
         }
 
         /**
-         * StepName.
+         * <p>The name of the execution stage.</p>
          */
         public Builder stepName(String stepName) {
             this.stepName = stepName;
@@ -96,7 +99,10 @@ public class StageWithWeight extends TeaModel {
         }
 
         /**
-         * Weight.
+         * <p>The weight of the stage in the overall progress.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder weight(Integer weight) {
             this.weight = weight;

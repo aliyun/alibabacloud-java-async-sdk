@@ -145,7 +145,7 @@ public class DescribeNamespacesRequest extends Request {
         } 
 
         /**
-         * Ha.
+         * <p>Specifies whether to enable high availability across zones.</p>
          */
         public Builder ha(Boolean ha) {
             this.putQueryParameter("Ha", ha);
@@ -154,7 +154,7 @@ public class DescribeNamespacesRequest extends Request {
         }
 
         /**
-         * <p>The order instance ID.</p>
+         * <p>The instance ID of the order.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -167,7 +167,7 @@ public class DescribeNamespacesRequest extends Request {
         }
 
         /**
-         * <p>The namespace name.</p>
+         * <p>The name of the namespace.</p>
          * 
          * <strong>example:</strong>
          * <p>di-590843445844225</p>

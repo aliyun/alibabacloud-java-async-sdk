@@ -93,7 +93,10 @@ public class ClusterStage extends TeaModel {
         } 
 
         /**
-         * CurrentStage.
+         * <p>The ordinal number of the current execution stage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder currentStage(Integer currentStage) {
             this.currentStage = currentStage;
@@ -101,7 +104,10 @@ public class ClusterStage extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The execution information of the current stage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Creating resources</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +115,10 @@ public class ClusterStage extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The execution status of the current stage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CREATING</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -117,7 +126,7 @@ public class ClusterStage extends TeaModel {
         }
 
         /**
-         * TotalStageWithWeight.
+         * <p>The list of execution stages and their weights.</p>
          */
         public Builder totalStageWithWeight(java.util.List<StageWithWeight> totalStageWithWeight) {
             this.totalStageWithWeight = totalStageWithWeight;

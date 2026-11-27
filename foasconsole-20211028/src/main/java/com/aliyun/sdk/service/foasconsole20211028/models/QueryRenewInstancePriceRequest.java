@@ -159,13 +159,7 @@ public class QueryRenewInstancePriceRequest extends Request {
         }
 
         /**
-         * <p>The subscription period. Valid values:</p>
-         * <ul>
-         * <li>Month: month.</li>
-         * <li>Year: year.</li>
-         * <li>Hour: hour.</li>
-         * <li>Day: day.</li>
-         * </ul>
+         * <p>The unit of the subscription period.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -178,7 +172,10 @@ public class QueryRenewInstancePriceRequest extends Request {
         }
 
         /**
-         * PromotionCode.
+         * <p>The coupon code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>500043499350689</p>
          */
         public Builder promotionCode(String promotionCode) {
             this.putBodyParameter("PromotionCode", promotionCode);
@@ -200,7 +197,11 @@ public class QueryRenewInstancePriceRequest extends Request {
         }
 
         /**
-         * UsePromotionCode.
+         * <p>Specifies whether to use a coupon. Valid values:</p>
+         * <ul>
+         * <li>true: Uses a coupon.</li>
+         * <li>false: Does not use a coupon.</li>
+         * </ul>
          */
         public Builder usePromotionCode(Boolean usePromotionCode) {
             this.putBodyParameter("UsePromotionCode", usePromotionCode);

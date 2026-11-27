@@ -106,7 +106,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The token for the next query.</p>
+         * <p>The token used to start the next query.</p>
          * 
          * <strong>example:</strong>
          * <p>27AE00</p>
@@ -130,8 +130,8 @@ public class ListTagResourcesResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the request was successful. Valid values:</p>
          * <ul>
-         * <li>true: Successful.</li>
-         * <li>false: Failed.</li>
+         * <li>true: The request was successful.</li>
+         * <li>false: The request failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -143,7 +143,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The tag request ID.</p>
+         * <p>The ID of the tag request.</p>
          * 
          * <strong>example:</strong>
          * <p>87AE00</p>
@@ -246,7 +246,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The order instance ID.</p>
+             * <p>The instance ID of the order.</p>
              * 
              * <strong>example:</strong>
              * <p>f-cn-tyts</p>
@@ -257,7 +257,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The resource type. The value is fixed as vvpinstance.</p>
+             * <p>The resource type. The value is fixed to vvpinstance.</p>
              * 
              * <strong>example:</strong>
              * <p>vvpinstance</p>

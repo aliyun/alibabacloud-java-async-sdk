@@ -67,7 +67,7 @@ public class FlussVswitch extends TeaModel {
         } 
 
         /**
-         * VSwitchIds.
+         * <p>The list of vSwitch IDs in the zone.</p>
          */
         public Builder vSwitchIds(java.util.List<String> vSwitchIds) {
             this.vSwitchIds = vSwitchIds;
@@ -75,7 +75,10 @@ public class FlussVswitch extends TeaModel {
         }
 
         /**
-         * ZoneId.
+         * <p>The ID of the zone to which the vSwitch belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing-g</p>
          */
         public Builder zoneId(String zoneId) {
             this.zoneId = zoneId;

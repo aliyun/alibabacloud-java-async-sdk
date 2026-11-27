@@ -160,7 +160,7 @@ public class ModifyInstanceSpecRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether the workspace has zone-disaster recovery resources.</p>
+         * <p>Specifies whether the workspace has cross-zone high-availability resources.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -172,7 +172,7 @@ public class ModifyInstanceSpecRequest extends Request {
         }
 
         /**
-         * <p>The zone-disaster recovery resource specifications.</p>
+         * <p>The description of the cross-zone high-availability resources.</p>
          */
         public Builder haResourceSpec(HaResourceSpec haResourceSpec) {
             String haResourceSpecShrink = shrink(haResourceSpec, "HaResourceSpec", "json");
@@ -182,7 +182,7 @@ public class ModifyInstanceSpecRequest extends Request {
         }
 
         /**
-         * <p>The vSwitch group in the secondary zone for zone-disaster recovery.</p>
+         * <p>The vSwitch group in the secondary zone for cross-zone high availability.</p>
          */
         public Builder haVSwitchIds(java.util.List<String> haVSwitchIds) {
             String haVSwitchIdsShrink = shrink(haVSwitchIds, "HaVSwitchIds", "json");
@@ -192,7 +192,7 @@ public class ModifyInstanceSpecRequest extends Request {
         }
 
         /**
-         * <p>The order instance ID.</p>
+         * <p>The instance ID of the order.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -319,7 +319,7 @@ public class ModifyInstanceSpecRequest extends Request {
             /**
              * <p>The memory size.</p>
              * <blockquote>
-             * <p>The memory size must be 4 times the number of CPUs.</p>
+             * <p>The memory size must be four times the number of CPUs.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -406,7 +406,7 @@ public class ModifyInstanceSpecRequest extends Request {
             /**
              * <p>The memory size.</p>
              * <blockquote>
-             * <p>The memory size must be 4 times the number of CPUs.</p>
+             * <p>The memory size must be four times the number of CPUs.</p>
              * </blockquote>
              * <p>This parameter is required.</p>
              * 

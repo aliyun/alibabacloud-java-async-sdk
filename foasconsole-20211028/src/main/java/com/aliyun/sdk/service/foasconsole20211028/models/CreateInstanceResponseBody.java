@@ -99,7 +99,7 @@ public class CreateInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -194,7 +194,7 @@ public class CreateInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The order instance ID.</p>
+             * <p>The ID of the instance in the order.</p>
              * 
              * <strong>example:</strong>
              * <p>f-cn-zvp2q0zik06</p>
@@ -216,7 +216,7 @@ public class CreateInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The storage instance ID.</p>
+             * <p>The ID of the storage instance.</p>
              * 
              * <strong>example:</strong>
              * <p>sc_flinkstorage_public_cn-w*****</p>
@@ -227,7 +227,7 @@ public class CreateInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The storage order ID.</p>
+             * <p>The ID of the storage order.</p>
              * 
              * <strong>example:</strong>
              * <p>240353501970749</p>

@@ -288,7 +288,7 @@ public class FlussInstance extends TeaModel {
         } 
 
         /**
-         * ClusterState.
+         * <p>The running state information of the cluster.</p>
          */
         public Builder clusterState(ClusterState clusterState) {
             this.clusterState = clusterState;
@@ -296,7 +296,10 @@ public class FlussInstance extends TeaModel {
         }
 
         /**
-         * <p>The cluster status.</p>
+         * <p>The status of the Fluss cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RUNNING</p>
          */
         public Builder clusterStatus(String clusterStatus) {
             this.clusterStatus = clusterStatus;
@@ -304,7 +307,7 @@ public class FlussInstance extends TeaModel {
         }
 
         /**
-         * <p>The URL of the instance management console.</p>
+         * <p>The console access URL of the Fluss instance.</p>
          */
         public Builder consoleUrl(String consoleUrl) {
             this.consoleUrl = consoleUrl;
@@ -312,7 +315,10 @@ public class FlussInstance extends TeaModel {
         }
 
         /**
-         * <p>The disk size, in GB.</p>
+         * <p>The disk size of a single TabletServer node, in GiB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>900</p>
          */
         public Builder diskSize(Long diskSize) {
             this.diskSize = diskSize;
@@ -320,7 +326,7 @@ public class FlussInstance extends TeaModel {
         }
 
         /**
-         * <p>Specifies whether high availability (HA) is enabled.</p>
+         * <p>Specifies whether multi-zone high availability is enabled.</p>
          */
         public Builder ha(Boolean ha) {
             this.ha = ha;
@@ -328,7 +334,10 @@ public class FlussInstance extends TeaModel {
         }
 
         /**
-         * <p>The instance ID.</p>
+         * <p>The ID of the Fluss instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>f-cn-zvp2q0z****</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -336,7 +345,10 @@ public class FlussInstance extends TeaModel {
         }
 
         /**
-         * <p>The instance name.</p>
+         * <p>The name of the Fluss instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fluss-test</p>
          */
         public Builder instanceName(String instanceName) {
             this.instanceName = instanceName;
@@ -344,7 +356,10 @@ public class FlussInstance extends TeaModel {
         }
 
         /**
-         * <p>The order state.</p>
+         * <p>The order status of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NORMAL</p>
          */
         public Builder orderState(String orderState) {
             this.orderState = orderState;
@@ -352,7 +367,10 @@ public class FlussInstance extends TeaModel {
         }
 
         /**
-         * <p>The ID of the region.</p>
+         * <p>The ID of the region where the instance resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -360,7 +378,10 @@ public class FlussInstance extends TeaModel {
         }
 
         /**
-         * <p>The creation time of the resource, as a UNIX timestamp in milliseconds.</p>
+         * <p>The creation time of the instance, represented as a UNIX timestamp in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1629879567394</p>
          */
         public Builder resourceCreateTime(Long resourceCreateTime) {
             this.resourceCreateTime = resourceCreateTime;
@@ -368,7 +389,10 @@ public class FlussInstance extends TeaModel {
         }
 
         /**
-         * <p>The expiration time of the resource, as a UNIX timestamp in milliseconds.</p>
+         * <p>The time when the instance expires, represented as a UNIX timestamp in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1637337600000</p>
          */
         public Builder resourceExpiredTime(Long resourceExpiredTime) {
             this.resourceExpiredTime = resourceExpiredTime;
@@ -376,7 +400,10 @@ public class FlussInstance extends TeaModel {
         }
 
         /**
-         * <p>The tablet server model.</p>
+         * <p>The TabletServer node specifications.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4 RCU</p>
          */
         public Builder tabletServerModel(String tabletServerModel) {
             this.tabletServerModel = tabletServerModel;
@@ -384,7 +411,10 @@ public class FlussInstance extends TeaModel {
         }
 
         /**
-         * <p>The number of tablet servers.</p>
+         * <p>The number of TabletServer nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder tabletServerNum(Long tabletServerNum) {
             this.tabletServerNum = tabletServerNum;
@@ -392,7 +422,10 @@ public class FlussInstance extends TeaModel {
         }
 
         /**
-         * <p>The tablet server type.</p>
+         * <p>The type of TabletServer node specifications.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4 RCU</p>
          */
         public Builder tabletServerType(String tabletServerType) {
             this.tabletServerType = tabletServerType;
@@ -400,7 +433,10 @@ public class FlussInstance extends TeaModel {
         }
 
         /**
-         * <p>The number of compute units (CUs) for post-tiering.</p>
+         * <p>The upper limit of elastic compute resources for the lake-stream synchronization service, in CUs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder tieringPostCu(Long tieringPostCu) {
             this.tieringPostCu = tieringPostCu;
@@ -408,7 +444,7 @@ public class FlussInstance extends TeaModel {
         }
 
         /**
-         * <p>The number of compute units (CUs) for pre-tiering.</p>
+         * <p>The base compute resource count for the lake-stream synchronization service, in CUs.</p>
          */
         public Builder tieringPreCu(Long tieringPreCu) {
             this.tieringPreCu = tieringPreCu;
@@ -416,7 +452,10 @@ public class FlussInstance extends TeaModel {
         }
 
         /**
-         * <p>The Alibaba Cloud account ID (UID).</p>
+         * <p>The UID of the Alibaba Cloud account to which the instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>183899668736****</p>
          */
         public Builder uid(String uid) {
             this.uid = uid;
@@ -424,7 +463,7 @@ public class FlussInstance extends TeaModel {
         }
 
         /**
-         * <p>The VSwitch details.</p>
+         * <p>The list of zone and vSwitch configurations used by the instance.</p>
          */
         public Builder vSwitches(java.util.List<FlussVswitch> vSwitches) {
             this.vSwitches = vSwitches;
@@ -432,7 +471,10 @@ public class FlussInstance extends TeaModel {
         }
 
         /**
-         * <p>The VPC ID.</p>
+         * <p>The ID of the VPC to which the instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-2ze9*******nxfmfcdi</p>
          */
         public Builder vpcId(String vpcId) {
             this.vpcId = vpcId;

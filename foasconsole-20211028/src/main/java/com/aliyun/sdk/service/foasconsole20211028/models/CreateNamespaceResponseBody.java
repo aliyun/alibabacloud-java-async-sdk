@@ -78,10 +78,10 @@ public class CreateNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
-         * <p>Is successful</p>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

@@ -176,7 +176,7 @@ public class ConvertInstanceRequest extends Request {
         }
 
         /**
-         * <p>The order instance ID.</p>
+         * <p>The instance ID of the order.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -202,7 +202,7 @@ public class ConvertInstanceRequest extends Request {
         }
 
         /**
-         * <p>The resource specifications of the namespace.</p>
+         * <p>The resource specifications of the workspace.</p>
          * <p>This parameter is required.</p>
          */
         public Builder namespaceResourceSpecs(java.util.List<NamespaceResourceSpecs> namespaceResourceSpecs) {
@@ -226,7 +226,10 @@ public class ConvertInstanceRequest extends Request {
         }
 
         /**
-         * PromotionCode.
+         * <p>The coupon code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>500043499350689</p>
          */
         public Builder promotionCode(String promotionCode) {
             this.putBodyParameter("PromotionCode", promotionCode);
@@ -248,7 +251,11 @@ public class ConvertInstanceRequest extends Request {
         }
 
         /**
-         * UsePromotionCode.
+         * <p>Specifies whether to use a coupon. Valid values:</p>
+         * <ul>
+         * <li>true: Use a coupon.</li>
+         * <li>false: Do not use a coupon.</li>
+         * </ul>
          */
         public Builder usePromotionCode(Boolean usePromotionCode) {
             this.putBodyParameter("UsePromotionCode", usePromotionCode);
@@ -403,7 +410,7 @@ public class ConvertInstanceRequest extends Request {
             } 
 
             /**
-             * <p>The namespace name.</p>
+             * <p>The name of the namespace.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

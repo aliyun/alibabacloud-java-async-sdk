@@ -373,8 +373,8 @@ public class CreateInstanceRequest extends Request {
         /**
          * <p>Specifies whether to enable auto-renewal. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: Enabled.</li>
-         * <li><strong>false</strong>: Disabled. This is the default value.</li>
+         * <li><strong>true</strong>: enables auto-renewal.</li>
+         * <li><strong>false</strong>: disables auto-renewal. This is the default value.</li>
          * </ul>
          * <blockquote>
          * <p>This parameter does not take effect for pay-as-you-go instances.</p>
@@ -392,8 +392,8 @@ public class CreateInstanceRequest extends Request {
         /**
          * <p>The billing method. Valid values:</p>
          * <ul>
-         * <li>POST: pay-as-you-go.</li>
-         * <li>PRE: subscription.</li>
+         * <li>POST: pay-as-you-go</li>
+         * <li>PRE: subscription</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -407,7 +407,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * <p>The default high-availability namespace resource configuration.</p>
+         * <p>The resource configurations for the default high-availability namespace.</p>
          */
         public Builder defaultHaNamespaceResourceSpec(DefaultHaNamespaceResourceSpec defaultHaNamespaceResourceSpec) {
             String defaultHaNamespaceResourceSpecShrink = shrink(defaultHaNamespaceResourceSpec, "DefaultHaNamespaceResourceSpec", "json");
@@ -417,7 +417,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * <p>The default namespace resource configuration.</p>
+         * <p>The resource configurations for the default namespace.</p>
          */
         public Builder defaultNamespaceResourceSpec(DefaultNamespaceResourceSpec defaultNamespaceResourceSpec) {
             String defaultNamespaceResourceSpecShrink = shrink(defaultNamespaceResourceSpec, "DefaultNamespaceResourceSpec", "json");
@@ -427,7 +427,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * <p>The subscription duration.</p>
+         * <p>The number of subscription periods.</p>
          * <blockquote>
          * <p>This parameter is required when ChargeType is set to PRE.</p>
          * </blockquote>
@@ -466,7 +466,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * <p>The zone-disaster recovery resource specifications.</p>
+         * <p>The resource specifications for zone-disaster recovery.</p>
          */
         public Builder haResourceSpec(HaResourceSpec haResourceSpec) {
             String haResourceSpecShrink = shrink(haResourceSpec, "HaResourceSpec", "json");
@@ -476,7 +476,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * <p>The list of vSwitch IDs in the secondary zone for zone-disaster recovery.</p>
+         * <p>The vSwitches in the secondary zone for zone-disaster recovery.</p>
          */
         public Builder haVSwitchIds(java.util.List<String> haVSwitchIds) {
             String haVSwitchIdsShrink = shrink(haVSwitchIds, "HaVSwitchIds", "json");
@@ -486,7 +486,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * <p>The workspace name. The name must start with a lowercase letter and can contain lowercase letters, digits, and hyphens (-). The name cannot end with a hyphen.</p>
+         * <p>The name of the workspace. The name must start with a lowercase letter and can contain lowercase letters, digits, and hyphens. It cannot end with a hyphen.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -511,13 +511,13 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * <p>The billing cycle of the subscription instance. Valid values:</p>
+         * <p>The subscription period unit for the subscription instance. Valid values:</p>
          * <ul>
-         * <li><strong>year</strong>: yearly.</li>
-         * <li><strong>month</strong>: monthly.</li>
+         * <li><strong>year</strong>: year</li>
+         * <li><strong>month</strong>: month</li>
          * </ul>
          * <blockquote>
-         * <p>This parameter is required when ChargeType is set to PRE.</p>
+         * <p>This parameter is required when the billing method is subscription.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -555,7 +555,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * <p>The resource group ID.</p>
+         * <p>The ID of the resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfmxbavps3rpiy</p>
@@ -591,7 +591,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * <p>The list of tags. A maximum of 20 tags can be specified.</p>
+         * <p>The list of tags. You can add up to 20 tags.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             String tagShrink = shrink(tag, "Tag", "json");
@@ -603,8 +603,8 @@ public class CreateInstanceRequest extends Request {
         /**
          * <p>Specifies whether to use a coupon. Valid values:</p>
          * <ul>
-         * <li>true: Use a coupon.</li>
-         * <li>false: Do not use a coupon.</li>
+         * <li>true: uses a coupon.</li>
+         * <li>false: does not use a coupon.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -617,7 +617,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * <p>The list of vSwitch IDs.</p>
+         * <p>The vSwitch IDs.</p>
          * <p>This parameter is required.</p>
          */
         public Builder vSwitchIds(java.util.List<String> vSwitchIds) {
@@ -628,7 +628,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * <p>The virtual private cloud (VPC) ID.</p>
+         * <p>The ID of the virtual private cloud (VPC).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -713,7 +713,7 @@ public class CreateInstanceRequest extends Request {
             /**
              * <p>The memory size. Unit: GB.</p>
              * <blockquote>
-             * <p>The memory size must be 4 times the number of CPUs.</p>
+             * <p>The memory size must be four times the number of CPUs.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -797,7 +797,7 @@ public class CreateInstanceRequest extends Request {
             /**
              * <p>The memory size. Unit: GB.</p>
              * <blockquote>
-             * <p>The memory size must be 4 times the number of CPUs.</p>
+             * <p>The memory size must be four times the number of CPUs.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -879,7 +879,7 @@ public class CreateInstanceRequest extends Request {
             }
 
             /**
-             * <p>The memory size for zone-disaster recovery high availability (HA).</p>
+             * <p>The memory size for high-availability zone-disaster recovery.</p>
              * 
              * <strong>example:</strong>
              * <p>40</p>
@@ -952,7 +952,7 @@ public class CreateInstanceRequest extends Request {
              * <p>The number of CPUs.</p>
              * <blockquote>
              * <ul>
-             * <li>This parameter is required for subscription workspaces. For pay-as-you-go workspaces, you do not need to specify this parameter.- The number of CPUs for the target project must be less than the remaining CPUs in the workspace (total purchased CPUs minus CPUs already allocated to other projects). Otherwise, an error is returned.</li>
+             * <li>This parameter is required for subscription workspaces. For pay-as-you-go workspaces, this parameter is optional. - The number of CPUs for the target project to be created must be less than the number of remaining CPUs in the workspace (the total number of CPUs purchased for the workspace minus the number of CPUs allocated to other projects). Otherwise, an error is reported.</li>
              * </ul>
              * </blockquote>
              * 
@@ -967,7 +967,7 @@ public class CreateInstanceRequest extends Request {
             /**
              * <p>The memory size. Unit: GB.</p>
              * <blockquote>
-             * <p>The memory size must be 4 times the number of CPUs.</p>
+             * <p>The memory size must be four times the number of CPUs.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1096,10 +1096,10 @@ public class CreateInstanceRequest extends Request {
             } 
 
             /**
-             * <p>Specifies whether to use fully managed storage. You can select only one of fully managed storage or binding an OSS bucket. Valid values:</p>
+             * <p>Specifies whether to use fully managed storage. You can choose either fully managed storage or binding an OSS bucket. Valid values:</p>
              * <ul>
-             * <li>true: Use fully managed storage.</li>
-             * <li>false: Do not use fully managed storage.</li>
+             * <li>true: uses fully managed storage.</li>
+             * <li>false: does not use fully managed storage.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1111,7 +1111,7 @@ public class CreateInstanceRequest extends Request {
             }
 
             /**
-             * <p>The OSS storage configurations.</p>
+             * <p>The OSS storage.</p>
              */
             public Builder oss(Oss oss) {
                 this.oss = oss;

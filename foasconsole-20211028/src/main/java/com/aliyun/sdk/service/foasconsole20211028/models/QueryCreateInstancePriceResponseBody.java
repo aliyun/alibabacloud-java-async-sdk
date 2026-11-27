@@ -80,7 +80,7 @@ public class QueryCreateInstancePriceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The price information, including the price and promotion rules.</p>
+         * <p>The price information, including the price and discount rules.</p>
          */
         public Builder priceInfo(PriceInfo priceInfo) {
             this.priceInfo = priceInfo;
@@ -99,7 +99,7 @@ public class QueryCreateInstancePriceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -217,7 +217,10 @@ public class QueryCreateInstancePriceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The price reduction ratio.</p>
+             * <p>The price reduction rate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>34%</p>
              */
             public Builder cheapRate(String cheapRate) {
                 this.cheapRate = cheapRate;
@@ -225,7 +228,10 @@ public class QueryCreateInstancePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total list price after the price reduction.</p>
+             * <p>The total price on the official website after the price reduction.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8000</p>
              */
             public Builder cheapStandAmount(String cheapStandAmount) {
                 this.cheapStandAmount = cheapStandAmount;
@@ -233,7 +239,7 @@ public class QueryCreateInstancePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether to display the price reduction percentage.</p>
+             * <p>Indicates whether to display the price reduction rate.</p>
              */
             public Builder isShow(Boolean isShow) {
                 this.isShow = isShow;
@@ -241,7 +247,10 @@ public class QueryCreateInstancePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The monthly equivalent price.</p>
+             * <p>The equivalent monthly price.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder monthPrice(String monthPrice) {
                 this.monthPrice = monthPrice;
@@ -249,7 +258,10 @@ public class QueryCreateInstancePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The original total list price.</p>
+             * <p>The original total price on the official website.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12000</p>
              */
             public Builder originalStandAmount(String originalStandAmount) {
                 this.originalStandAmount = originalStandAmount;
@@ -257,7 +269,10 @@ public class QueryCreateInstancePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time of the price reduction.</p>
+             * <p>The start time of the price reduction, in ISO 8601 format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-08-21T02:06:00Z</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -266,6 +281,255 @@ public class QueryCreateInstancePriceResponseBody extends TeaModel {
 
             public DepreciateInfo build() {
                 return new DepreciateInfo(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link QueryCreateInstancePriceResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryCreateInstancePriceResponseBody</p>
+     */
+    public static class ModulePrices extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("DiscountAmount")
+        private Float discountAmount;
+
+        @com.aliyun.core.annotation.NameInMap("FinalUnitFee")
+        private String finalUnitFee;
+
+        @com.aliyun.core.annotation.NameInMap("ModuleCode")
+        private String moduleCode;
+
+        @com.aliyun.core.annotation.NameInMap("ModuleName")
+        private String moduleName;
+
+        @com.aliyun.core.annotation.NameInMap("OriginalAmount")
+        private Float originalAmount;
+
+        @com.aliyun.core.annotation.NameInMap("PayAmount")
+        private Float payAmount;
+
+        @com.aliyun.core.annotation.NameInMap("PriceType")
+        private String priceType;
+
+        @com.aliyun.core.annotation.NameInMap("PriceUnit")
+        private String priceUnit;
+
+        @com.aliyun.core.annotation.NameInMap("Quantity")
+        private String quantity;
+
+        private ModulePrices(Builder builder) {
+            this.discountAmount = builder.discountAmount;
+            this.finalUnitFee = builder.finalUnitFee;
+            this.moduleCode = builder.moduleCode;
+            this.moduleName = builder.moduleName;
+            this.originalAmount = builder.originalAmount;
+            this.payAmount = builder.payAmount;
+            this.priceType = builder.priceType;
+            this.priceUnit = builder.priceUnit;
+            this.quantity = builder.quantity;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ModulePrices create() {
+            return builder().build();
+        }
+
+        /**
+         * @return discountAmount
+         */
+        public Float getDiscountAmount() {
+            return this.discountAmount;
+        }
+
+        /**
+         * @return finalUnitFee
+         */
+        public String getFinalUnitFee() {
+            return this.finalUnitFee;
+        }
+
+        /**
+         * @return moduleCode
+         */
+        public String getModuleCode() {
+            return this.moduleCode;
+        }
+
+        /**
+         * @return moduleName
+         */
+        public String getModuleName() {
+            return this.moduleName;
+        }
+
+        /**
+         * @return originalAmount
+         */
+        public Float getOriginalAmount() {
+            return this.originalAmount;
+        }
+
+        /**
+         * @return payAmount
+         */
+        public Float getPayAmount() {
+            return this.payAmount;
+        }
+
+        /**
+         * @return priceType
+         */
+        public String getPriceType() {
+            return this.priceType;
+        }
+
+        /**
+         * @return priceUnit
+         */
+        public String getPriceUnit() {
+            return this.priceUnit;
+        }
+
+        /**
+         * @return quantity
+         */
+        public String getQuantity() {
+            return this.quantity;
+        }
+
+        public static final class Builder {
+            private Float discountAmount; 
+            private String finalUnitFee; 
+            private String moduleCode; 
+            private String moduleName; 
+            private Float originalAmount; 
+            private Float payAmount; 
+            private String priceType; 
+            private String priceUnit; 
+            private String quantity; 
+
+            private Builder() {
+            } 
+
+            private Builder(ModulePrices model) {
+                this.discountAmount = model.discountAmount;
+                this.finalUnitFee = model.finalUnitFee;
+                this.moduleCode = model.moduleCode;
+                this.moduleName = model.moduleName;
+                this.originalAmount = model.originalAmount;
+                this.payAmount = model.payAmount;
+                this.priceType = model.priceType;
+                this.priceUnit = model.priceUnit;
+                this.quantity = model.quantity;
+            } 
+
+            /**
+             * <p>The discount amount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>648.0</p>
+             */
+            public Builder discountAmount(Float discountAmount) {
+                this.discountAmount = discountAmount;
+                return this;
+            }
+
+            /**
+             * <p>The unit price of the module.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>183600.0000</p>
+             */
+            public Builder finalUnitFee(String finalUnitFee) {
+                this.finalUnitFee = finalUnitFee;
+                return this;
+            }
+
+            /**
+             * <p>The module code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>overhead_cu</p>
+             */
+            public Builder moduleCode(String moduleCode) {
+                this.moduleCode = moduleCode;
+                return this;
+            }
+
+            /**
+             * <p>The module name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Control and Management Services</p>
+             */
+            public Builder moduleName(String moduleName) {
+                this.moduleName = moduleName;
+                return this;
+            }
+
+            /**
+             * <p>The original amount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4320.0</p>
+             */
+            public Builder originalAmount(Float originalAmount) {
+                this.originalAmount = originalAmount;
+                return this;
+            }
+
+            /**
+             * <p>The payment amount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3672.0</p>
+             */
+            public Builder payAmount(Float payAmount) {
+                this.payAmount = payAmount;
+                return this;
+            }
+
+            /**
+             * <p>The billing method.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>yearPrice</p>
+             */
+            public Builder priceType(String priceType) {
+                this.priceType = priceType;
+                return this;
+            }
+
+            /**
+             * <p>The pricing unit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Yuan/CU</p>
+             */
+            public Builder priceUnit(String priceUnit) {
+                this.priceUnit = priceUnit;
+                return this;
+            }
+
+            /**
+             * <p>The order quantity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
+             */
+            public Builder quantity(String quantity) {
+                this.quantity = quantity;
+                return this;
+            }
+
+            public ModulePrices build() {
+                return new ModulePrices(this);
             } 
 
         } 
@@ -350,7 +614,7 @@ public class QueryCreateInstancePriceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The coupon description.</p>
+             * <p>The description of the coupon.</p>
              * 
              * <strong>example:</strong>
              * <p>¥1,391.5 coupon (valid until 03/23/2022)</p>
@@ -361,7 +625,7 @@ public class QueryCreateInstancePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The coupon name.</p>
+             * <p>The name of the coupon.</p>
              * 
              * <strong>example:</strong>
              * <p>¥1,391.5 coupon</p>
@@ -372,7 +636,7 @@ public class QueryCreateInstancePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The coupon ID.</p>
+             * <p>The ID of the coupon.</p>
              * 
              * <strong>example:</strong>
              * <p>500011220010099</p>
@@ -383,7 +647,7 @@ public class QueryCreateInstancePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the coupon is selected. Valid values:</p>
+             * <p>Specifies whether the coupon is selected. Valid values:</p>
              * <ul>
              * <li>true: Selected.</li>
              * <li>false: Not selected.</li>
@@ -460,7 +724,7 @@ public class QueryCreateInstancePriceResponseBody extends TeaModel {
              * <p>The description of the promotion rule.</p>
              * 
              * <strong>example:</strong>
-             * <p>Purchase for one year or longer and enjoy a 15% discount off the list price</p>
+             * <p>Enjoy a 15% discount on the official website price for a 1-year subscription</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -468,7 +732,7 @@ public class QueryCreateInstancePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The promotion ID.</p>
+             * <p>The ID of the promotion rule.</p>
              * 
              * <strong>example:</strong>
              * <p>587</p>
@@ -513,6 +777,9 @@ public class QueryCreateInstancePriceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
+        @com.aliyun.core.annotation.NameInMap("ModulePrices")
+        private java.util.List<ModulePrices> modulePrices;
+
         @com.aliyun.core.annotation.NameInMap("OptionalPromotions")
         private java.util.List<OptionalPromotions> optionalPromotions;
 
@@ -539,6 +806,7 @@ public class QueryCreateInstancePriceResponseBody extends TeaModel {
             this.isContractActivity = builder.isContractActivity;
             this.lxRequestId = builder.lxRequestId;
             this.message = builder.message;
+            this.modulePrices = builder.modulePrices;
             this.optionalPromotions = builder.optionalPromotions;
             this.originalAmount = builder.originalAmount;
             this.rules = builder.rules;
@@ -605,6 +873,13 @@ public class QueryCreateInstancePriceResponseBody extends TeaModel {
         }
 
         /**
+         * @return modulePrices
+         */
+        public java.util.List<ModulePrices> getModulePrices() {
+            return this.modulePrices;
+        }
+
+        /**
          * @return optionalPromotions
          */
         public java.util.List<OptionalPromotions> getOptionalPromotions() {
@@ -654,6 +929,7 @@ public class QueryCreateInstancePriceResponseBody extends TeaModel {
             private Boolean isContractActivity; 
             private String lxRequestId; 
             private String message; 
+            private java.util.List<ModulePrices> modulePrices; 
             private java.util.List<OptionalPromotions> optionalPromotions; 
             private Float originalAmount; 
             private java.util.List<Rules> rules; 
@@ -672,6 +948,7 @@ public class QueryCreateInstancePriceResponseBody extends TeaModel {
                 this.isContractActivity = model.isContractActivity;
                 this.lxRequestId = model.lxRequestId;
                 this.message = model.message;
+                this.modulePrices = model.modulePrices;
                 this.optionalPromotions = model.optionalPromotions;
                 this.originalAmount = model.originalAmount;
                 this.rules = model.rules;
@@ -722,7 +999,7 @@ public class QueryCreateInstancePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether an enterprise discount is applied.</p>
+             * <p>Indicates whether the key account promotion is applied.</p>
              */
             public Builder isContractActivity(Boolean isContractActivity) {
                 this.isContractActivity = isContractActivity;
@@ -730,7 +1007,7 @@ public class QueryCreateInstancePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Lingxiao request ID of the call.</p>
+             * <p>The Lingxiao request ID.</p>
              * 
              * <strong>example:</strong>
              * <p>67F33190-946B-1105-B6A1-E2DF0426DD51</p>
@@ -744,10 +1021,18 @@ public class QueryCreateInstancePriceResponseBody extends TeaModel {
              * <p>The error message.</p>
              * 
              * <strong>example:</strong>
-             * <p>An unpaid order exists. Pay for or cancel the existing order first</p>
+             * <p>Unpaid orders exist. Pay for or cancel the existing orders first</p>
              */
             public Builder message(String message) {
                 this.message = message;
+                return this;
+            }
+
+            /**
+             * <p>The module prices.</p>
+             */
+            public Builder modulePrices(java.util.List<ModulePrices> modulePrices) {
+                this.modulePrices = modulePrices;
                 return this;
             }
 
@@ -760,7 +1045,7 @@ public class QueryCreateInstancePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The original price.</p>
+             * <p>The original amount.</p>
              * 
              * <strong>example:</strong>
              * <p>4368</p>
@@ -779,7 +1064,10 @@ public class QueryCreateInstancePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The promotional price based on the standard discount from the official website.</p>
+             * <p>The discounted price based on the official website discount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>21321</p>
              */
             public Builder standDiscountPrice(String standDiscountPrice) {
                 this.standDiscountPrice = standDiscountPrice;
@@ -787,7 +1075,10 @@ public class QueryCreateInstancePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The standard discounted price on the official website or the direct sales contract discounted price.</p>
+             * <p>The discounted price on the official website or the discounted price in the direct sales contract.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>32432</p>
              */
             public Builder standPrice(String standPrice) {
                 this.standPrice = standPrice;
@@ -795,7 +1086,7 @@ public class QueryCreateInstancePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The final price, which is the original price minus the discount.</p>
+             * <p>The final amount, which is the original amount minus the discount.</p>
              * 
              * <strong>example:</strong>
              * <p>3712.8</p>

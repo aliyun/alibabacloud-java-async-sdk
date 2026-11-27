@@ -75,7 +75,7 @@ public class ModifyAiServiceProtectionRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether to enable manual shutdown protection.</p>
+         * <p>Specifies whether to enable protection against manual shutdown operations.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -88,11 +88,11 @@ public class ModifyAiServiceProtectionRequest extends Request {
         }
 
         /**
-         * <p>The region ID.</p>
+         * <p>The region ID. It must match the region where the API endpoint is deployed.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
+         * <p>cn-beijing</p>
          */
         public Builder region(String region) {
             this.putBodyParameter("Region", region);

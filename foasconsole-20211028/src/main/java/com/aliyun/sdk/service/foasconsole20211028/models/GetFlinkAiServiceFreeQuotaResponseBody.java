@@ -80,7 +80,7 @@ public class GetFlinkAiServiceFreeQuotaResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The Flink AI free quota data transfer object.</p>
+         * <p>The Flink AI free quota DTO.</p>
          */
         public Builder flinkAiFreeQuotaDTO(FlinkAiFreeQuotaDTO flinkAiFreeQuotaDTO) {
             this.flinkAiFreeQuotaDTO = flinkAiFreeQuotaDTO;
@@ -99,7 +99,7 @@ public class GetFlinkAiServiceFreeQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -168,7 +168,7 @@ public class GetFlinkAiServiceFreeQuotaResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The used quota for this usage type.</p>
+             * <p>The used quota for the usage type.</p>
              * 
              * <strong>example:</strong>
              * <p>35.5</p>

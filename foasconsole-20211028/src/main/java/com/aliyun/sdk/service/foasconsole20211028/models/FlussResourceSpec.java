@@ -106,7 +106,10 @@ public class FlussResourceSpec extends TeaModel {
         } 
 
         /**
-         * <p>Disk size per node, in GB.</p>
+         * <p>The disk capacity of a single TabletServer node, in GiB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>900</p>
          */
         public Builder diskSizeInGB(Long diskSizeInGB) {
             this.diskSizeInGB = diskSizeInGB;
@@ -114,7 +117,10 @@ public class FlussResourceSpec extends TeaModel {
         }
 
         /**
-         * <p>Instance type of the slave nodes.</p>
+         * <p>The node specifications of the TabletServer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4 RCU</p>
          */
         public Builder slaveModel(String slaveModel) {
             this.slaveModel = slaveModel;
@@ -122,7 +128,10 @@ public class FlussResourceSpec extends TeaModel {
         }
 
         /**
-         * <p>Number of slave nodes.</p>
+         * <p>The number of TabletServer nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder slaveNum(Long slaveNum) {
             this.slaveNum = slaveNum;
@@ -130,7 +139,10 @@ public class FlussResourceSpec extends TeaModel {
         }
 
         /**
-         * <p>Number of CUs for the post-tiering stage.</p>
+         * <p>The maximum number of elastic compute resources for the lake-stream synchronization service, in CUs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder tieringPostCu(Long tieringPostCu) {
             this.tieringPostCu = tieringPostCu;
@@ -138,7 +150,7 @@ public class FlussResourceSpec extends TeaModel {
         }
 
         /**
-         * <p>Number of compute units (CUs) for the pre-tiering stage.</p>
+         * <p>The baseline resource count of the lake-stream synchronization service, in CUs.</p>
          */
         public Builder tieringPreCu(Long tieringPreCu) {
             this.tieringPreCu = tieringPreCu;

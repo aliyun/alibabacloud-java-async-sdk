@@ -154,7 +154,7 @@ public class DescribeSupportedRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of region information.</p>
+         * <p>The list of regions.</p>
          */
         public Builder regions(java.util.List<Regions> regions) {
             this.regions = regions;
@@ -188,7 +188,7 @@ public class DescribeSupportedRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of regions returned.</p>
+         * <p>The number of regions returned.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

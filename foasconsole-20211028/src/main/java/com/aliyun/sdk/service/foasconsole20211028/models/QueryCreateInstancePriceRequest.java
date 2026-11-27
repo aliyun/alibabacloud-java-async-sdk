@@ -285,8 +285,8 @@ public class QueryCreateInstancePriceRequest extends Request {
         /**
          * <p>Specifies whether to enable auto-renewal. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: Enabled.</li>
-         * <li><strong>false</strong>: Disabled (default).</li>
+         * <li><strong>true</strong>: enables auto-renewal.</li>
+         * <li><strong>false</strong>: disables auto-renewal (default).</li>
          * </ul>
          * <blockquote>
          * <p>This parameter does not take effect for pay-as-you-go instances.</p>
@@ -321,7 +321,7 @@ public class QueryCreateInstancePriceRequest extends Request {
         /**
          * <p>The number of billing cycles.</p>
          * <blockquote>
-         * <p>When ChargeType is set to PRE, the Duration parameter is required.</p>
+         * <p>This parameter is required when ChargeType is set to PRE.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -358,7 +358,7 @@ public class QueryCreateInstancePriceRequest extends Request {
         }
 
         /**
-         * <p>The zone-disaster recovery resource specifications.</p>
+         * <p>The description of zone-disaster recovery resources.</p>
          */
         public Builder haResourceSpec(HaResourceSpec haResourceSpec) {
             String haResourceSpecShrink = shrink(haResourceSpec, "HaResourceSpec", "json");
@@ -368,7 +368,7 @@ public class QueryCreateInstancePriceRequest extends Request {
         }
 
         /**
-         * <p>The workspace name.</p>
+         * <p>The name of the workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>rtc-e2e-test-post</p>
@@ -380,7 +380,7 @@ public class QueryCreateInstancePriceRequest extends Request {
         }
 
         /**
-         * <p>The billing cycle. Subscription instances support only Year and Month. Pay-as-you-go instances support Hour.</p>
+         * <p>The billing cycle. Subscription instances support only yearly (Year) and monthly (Month) billing cycles. Pay-as-you-go instances support only hourly (Hour) billing cycles.</p>
          * 
          * <strong>example:</strong>
          * <p>Month</p>
@@ -439,8 +439,8 @@ public class QueryCreateInstancePriceRequest extends Request {
         /**
          * <p>Specifies whether to use a coupon. Valid values:</p>
          * <ul>
-         * <li>true: Use a coupon.</li>
-         * <li>false: Do not use a coupon.</li>
+         * <li>true: uses a coupon.</li>
+         * <li>false: does not use a coupon.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -463,7 +463,7 @@ public class QueryCreateInstancePriceRequest extends Request {
         }
 
         /**
-         * <p>The VPC ID of the user.</p>
+         * <p>The ID of the VPC.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-2ze9xoh8qyt1rnxfmfcdi</p>
@@ -545,7 +545,7 @@ public class QueryCreateInstancePriceRequest extends Request {
             }
 
             /**
-             * <p>The active memory size for zone-disaster recovery.</p>
+             * <p>The memory size of the active zone-disaster recovery resource.</p>
              * 
              * <strong>example:</strong>
              * <p>80</p>
@@ -628,7 +628,7 @@ public class QueryCreateInstancePriceRequest extends Request {
             /**
              * <p>The memory size.</p>
              * <blockquote>
-             * <p>The memory size must be 4 times the number of CPUs.</p>
+             * <p>The memory size must be four times the number of CPUs.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>

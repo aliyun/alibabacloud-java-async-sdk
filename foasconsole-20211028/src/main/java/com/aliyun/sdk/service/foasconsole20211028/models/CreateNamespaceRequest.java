@@ -118,7 +118,7 @@ public class CreateNamespaceRequest extends Request {
         } 
 
         /**
-         * Ha.
+         * <p>Specifies whether to enable cross-zone high availability.</p>
          */
         public Builder ha(Boolean ha) {
             this.putBodyParameter("Ha", ha);
@@ -140,7 +140,7 @@ public class CreateNamespaceRequest extends Request {
         }
 
         /**
-         * <p>The namespace name.</p>
+         * <p>The name of the namespace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -248,7 +248,7 @@ public class CreateNamespaceRequest extends Request {
             /**
              * <p>The memory size. Unit: GB.</p>
              * <blockquote>
-             * <p>The memory size must be 4 times the number of CPUs.</p>
+             * <p>The memory size must be four times the number of CPUs.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>

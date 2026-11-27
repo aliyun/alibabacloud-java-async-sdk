@@ -80,7 +80,7 @@ public class ClusterState extends TeaModel {
         } 
 
         /**
-         * ClusterStage.
+         * <p>The stage progress information for cluster operations.</p>
          */
         public Builder clusterStage(ClusterStage clusterStage) {
             this.clusterStage = clusterStage;
@@ -88,7 +88,10 @@ public class ClusterState extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The cluster running status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RUNNING</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -96,7 +99,10 @@ public class ClusterState extends TeaModel {
         }
 
         /**
-         * SubStatus.
+         * <p>The cluster running sub-status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RUNNING</p>
          */
         public Builder subStatus(String subStatus) {
             this.subStatus = subStatus;

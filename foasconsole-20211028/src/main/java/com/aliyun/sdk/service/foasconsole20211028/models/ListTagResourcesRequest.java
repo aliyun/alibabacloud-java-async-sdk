@@ -117,7 +117,7 @@ public class ListTagResourcesRequest extends Request {
         } 
 
         /**
-         * <p>The token for the next query.</p>
+         * <p>The token used to start the next query.</p>
          * 
          * <strong>example:</strong>
          * <p>27AE00</p>
@@ -142,7 +142,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The order instance IDs.</p>
+         * <p>The IDs of the order instances. You can call DescribeInstances to query the instance IDs of the workspace.</p>
          */
         public Builder resourceId(java.util.List<String> resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -164,7 +164,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The tag list. A maximum of 20 items are supported.</p>
+         * <p>The list of tags. You can specify up to 20 tags.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);

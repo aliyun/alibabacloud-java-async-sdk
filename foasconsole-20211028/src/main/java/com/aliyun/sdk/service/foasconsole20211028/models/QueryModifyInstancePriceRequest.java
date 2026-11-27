@@ -160,7 +160,7 @@ public class QueryModifyInstancePriceRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether to select zone-disaster recovery resources.</p>
+         * <p>Specifies whether to select high-availability resources for zone-disaster recovery.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -172,7 +172,7 @@ public class QueryModifyInstancePriceRequest extends Request {
         }
 
         /**
-         * <p>The zone-disaster recovery resource description.</p>
+         * <p>The description of high-availability resources for zone-disaster recovery.</p>
          */
         public Builder haResourceSpec(HaResourceSpec haResourceSpec) {
             String haResourceSpecShrink = shrink(haResourceSpec, "HaResourceSpec", "json");
@@ -182,7 +182,7 @@ public class QueryModifyInstancePriceRequest extends Request {
         }
 
         /**
-         * <p>The vSwitch group for the zone-disaster recovery secondary zone.</p>
+         * <p>The vSwitch group in the secondary zone for zone-disaster recovery.</p>
          */
         public Builder haVSwitchIds(java.util.List<String> haVSwitchIds) {
             String haVSwitchIdsShrink = shrink(haVSwitchIds, "HaVSwitchIds", "json");
@@ -192,7 +192,7 @@ public class QueryModifyInstancePriceRequest extends Request {
         }
 
         /**
-         * <p>The order instance ID.</p>
+         * <p>The instance ID of the order.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -205,7 +205,10 @@ public class QueryModifyInstancePriceRequest extends Request {
         }
 
         /**
-         * PromotionCode.
+         * <p>The coupon code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>500043499350689</p>
          */
         public Builder promotionCode(String promotionCode) {
             this.putBodyParameter("PromotionCode", promotionCode);
@@ -238,7 +241,11 @@ public class QueryModifyInstancePriceRequest extends Request {
         }
 
         /**
-         * UsePromotionCode.
+         * <p>Specifies whether to use a coupon. Valid values:</p>
+         * <ul>
+         * <li>true: Yes.</li>
+         * <li>false: No.</li>
+         * </ul>
          */
         public Builder usePromotionCode(Boolean usePromotionCode) {
             this.putBodyParameter("UsePromotionCode", usePromotionCode);
@@ -306,7 +313,7 @@ public class QueryModifyInstancePriceRequest extends Request {
             } 
 
             /**
-             * <p>The number of CPUs for zone-disaster recovery.</p>
+             * <p>The number of CPUs for zone-disaster recovery high availability.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>
@@ -317,7 +324,7 @@ public class QueryModifyInstancePriceRequest extends Request {
             }
 
             /**
-             * <p>The active memory size for zone-disaster recovery.</p>
+             * <p>The memory size for high availability in zone-disaster recovery.</p>
              * 
              * <strong>example:</strong>
              * <p>80</p>
@@ -403,7 +410,7 @@ public class QueryModifyInstancePriceRequest extends Request {
             /**
              * <p>The memory size after the specification change.</p>
              * <blockquote>
-             * <p>The memory size must be 4 times the number of CPUs.</p>
+             * <p>The memory size must be four times the number of CPUs.</p>
              * </blockquote>
              * <p>This parameter is required.</p>
              * 
