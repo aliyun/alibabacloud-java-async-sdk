@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateDirRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
+    private Boolean dryRun;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("FileSystemId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String fileSystemId;
@@ -48,6 +52,7 @@ public class CreateDirRequest extends Request {
 
     private CreateDirRequest(Builder builder) {
         super(builder);
+        this.dryRun = builder.dryRun;
         this.fileSystemId = builder.fileSystemId;
         this.ownerGroupId = builder.ownerGroupId;
         this.ownerUserId = builder.ownerUserId;
@@ -67,6 +72,13 @@ public class CreateDirRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     /**
@@ -112,6 +124,7 @@ public class CreateDirRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateDirRequest, Builder> {
+        private Boolean dryRun; 
         private String fileSystemId; 
         private Integer ownerGroupId; 
         private Integer ownerUserId; 
@@ -125,6 +138,7 @@ public class CreateDirRequest extends Request {
 
         private Builder(CreateDirRequest request) {
             super(request);
+            this.dryRun = request.dryRun;
             this.fileSystemId = request.fileSystemId;
             this.ownerGroupId = request.ownerGroupId;
             this.ownerUserId = request.ownerUserId;
@@ -134,7 +148,16 @@ public class CreateDirRequest extends Request {
         } 
 
         /**
-         * <p>The file system ID.</p>
+         * <p>Specifies whether to perform a dry run on the request.</p>
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the file system.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -147,7 +170,7 @@ public class CreateDirRequest extends Request {
         }
 
         /**
-         * <p>The user group ID of the directory owner. Valid values: 0 to 4294967295.</p>
+         * <p>The ID of the user group that owns the directory. Valid values: 0 to 4294967295.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -160,7 +183,7 @@ public class CreateDirRequest extends Request {
         }
 
         /**
-         * <p>The user ID of the directory owner. Valid values: 0 to 4294967295.</p>
+         * <p>The ID of the user that owns the directory. Valid values: 0 to 4294967295.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -173,7 +196,7 @@ public class CreateDirRequest extends Request {
         }
 
         /**
-         * <p>The POSIX permissions to apply to the root directory path. The value is a valid octal number, such as 0755.</p>
+         * <p>The POSIX permissions applied to the root directory path. The value must be a valid octal number, such as 0755.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -186,9 +209,9 @@ public class CreateDirRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to create a multi-level directory. Valid values:</p>
+         * <p>Specifies whether to create multi-level directories. Valid values:</p>
          * <ul>
-         * <li>true (default): If the multi-level directory does not exist, the system creates the directories level by level.</li>
+         * <li>true (default): If the multi-level directories do not exist, the system creates them level by level.</li>
          * <li>false: Only the last-level directory is created. If the parent directory does not exist, an error message is returned.</li>
          * </ul>
          * 
@@ -202,15 +225,15 @@ public class CreateDirRequest extends Request {
         }
 
         /**
-         * <p>The directory name.</p>
+         * <p>The name of the directory.</p>
          * <ul>
-         * <li>The name must start with a forward slash (/).</li>
-         * <li>The name can contain digits and uppercase and lowercase letters.</li>
-         * <li>The name can contain underscores (_), hyphens (-), or periods (.).</li>
+         * <li>Must start with a forward slash (/).</li>
+         * <li>Supports digits, uppercase letters, and lowercase letters.</li>
+         * <li>Can contain underscores (_), hyphens (-), or periods (.).</li>
          * <li>The path cannot contain symbolic links, such as the current directory (.), the parent directory (..), or other symbolic links.<blockquote>
          * <ul>
-         * <li>If the root directory does not exist, configure the automatic creation information. The system automatically creates the specified root directory based on the settings.</li>
-         * <li>If the root directory already exists, you do not need to configure the automatic creation information. If you configure the information, the automatic creation settings are ignored.</li>
+         * <li>If the root directory does not exist, you must configure the automatic creation information. The system automatically creates the specified root directory based on the settings.</li>
+         * <li>If the root directory already exists, you do not need to configure the automatic creation information. If you configure it, the configurations in the automatic creation information are ignored.</li>
          * </ul>
          * </blockquote>
          * </li>

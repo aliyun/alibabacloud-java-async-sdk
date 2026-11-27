@@ -54,7 +54,7 @@ public class ModifyFileSystemResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>5BC5CB97-9F28-42FE-84A4-0CD0DF42****</p>

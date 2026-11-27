@@ -75,11 +75,11 @@ public class GetFilesetRequest extends Request {
         } 
 
         /**
-         * <p>The file system ID.</p>
+         * <p>The ID of the file system.</p>
          * <ul>
-         * <li><p>CPFS: The ID must start with <code>cpfs-</code>, such as cpfs-125487\<em>\</em>\<em>\</em>.</p>
+         * <li><p>CPFS: The ID must start with <code>cpfs-</code>, such as cpfs-125487****.</p>
          * </li>
-         * <li><p>CPFS for Lingjun: The ID must start with <code>bmcpfs-</code>, such as bmcpfs-0015\<em>\</em>\<em>\</em>.</p>
+         * <li><p>CPFS for Lingjun: The ID must start with <code>bmcpfs-</code>, such as bmcpfs-0015****.</p>
          * </li>
          * </ul>
          * <p>This parameter is required.</p>
@@ -94,9 +94,9 @@ public class GetFilesetRequest extends Request {
         }
 
         /**
-         * <p>The Fileset ID.</p>
+         * <p>The ID of the Fileset.</p>
          * <blockquote>
-         * <p>This parameter is required if the file system type is CPFS.</p>
+         * <p>This parameter is required when the file system type is CPFS.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 

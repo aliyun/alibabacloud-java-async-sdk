@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DeleteMountTargetRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
+    private Boolean dryRun;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("FileSystemId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String fileSystemId;
@@ -29,6 +33,7 @@ public class DeleteMountTargetRequest extends Request {
 
     private DeleteMountTargetRequest(Builder builder) {
         super(builder);
+        this.dryRun = builder.dryRun;
         this.fileSystemId = builder.fileSystemId;
         this.mountTargetDomain = builder.mountTargetDomain;
     }
@@ -47,6 +52,13 @@ public class DeleteMountTargetRequest extends Request {
     }
 
     /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
+    }
+
+    /**
      * @return fileSystemId
      */
     public String getFileSystemId() {
@@ -61,6 +73,7 @@ public class DeleteMountTargetRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DeleteMountTargetRequest, Builder> {
+        private Boolean dryRun; 
         private String fileSystemId; 
         private String mountTargetDomain; 
 
@@ -70,18 +83,28 @@ public class DeleteMountTargetRequest extends Request {
 
         private Builder(DeleteMountTargetRequest request) {
             super(request);
+            this.dryRun = request.dryRun;
             this.fileSystemId = request.fileSystemId;
             this.mountTargetDomain = request.mountTargetDomain;
         } 
 
         /**
-         * <p>The file system ID.</p>
+         * <p>Specifies whether to perform a dry run on the request.</p>
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the file system.</p>
          * <ul>
-         * <li><p>General-purpose NAS: 31a8e4\<em>\</em>\<em>\</em>.</p>
+         * <li><p>General-purpose NAS: 31a8e4****.</p>
          * </li>
-         * <li><p>Extreme NAS: must start with <code>extreme-</code>, for example, extreme-0015\<em>\</em>\<em>\</em>.</p>
+         * <li><p>Extreme NAS: must start with <code>extreme-</code>, such as extreme-0015****.</p>
          * </li>
-         * <li><p>Cloud Parallel File Storage (CPFS): must start with <code>cpfs-</code>, for example, cpfs-125487\<em>\</em>\<em>\</em>.</p>
+         * <li><p>CPFS: must start with <code>cpfs-</code>, such as cpfs-125487****.</p>
          * </li>
          * </ul>
          * <p>This parameter is required.</p>

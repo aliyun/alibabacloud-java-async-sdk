@@ -91,10 +91,10 @@ public class DescribeRegionsRequest extends Request {
          * <p>The file system type.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>all: all types</li>
-         * <li>standard: General-purpose NAS (default)</li>
-         * <li>extreme: Extreme NAS</li>
-         * <li>cpfs: Cloud Parallel File Storage</li>
+         * <li>all: All types.</li>
+         * <li>standard: General-purpose NAS. This is the default value.</li>
+         * <li>extreme: Extreme NAS.</li>
+         * <li>cpfs: Cloud Parallel File Storage.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -120,7 +120,7 @@ public class DescribeRegionsRequest extends Request {
         }
 
         /**
-         * <p>The number of regions per page in a paging query.</p>
+         * <p>The number of regions per page for paging in a paged query.</p>
          * <p>Valid values: 1 to 100.</p>
          * <p>Default value: 10.</p>
          * 

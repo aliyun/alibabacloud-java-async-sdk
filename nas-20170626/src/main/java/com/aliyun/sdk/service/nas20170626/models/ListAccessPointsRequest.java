@@ -102,7 +102,7 @@ public class ListAccessPointsRequest extends Request {
         } 
 
         /**
-         * <p>The file system ID.</p>
+         * <p>The ID of the file system.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -124,7 +124,7 @@ public class ListAccessPointsRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of results to return per query.</p>
+         * <p>The maximum number of entries to return for a single request.</p>
          * <ul>
          * <li>Maximum value: 100.</li>
          * <li>Minimum value: 10.</li>
@@ -141,7 +141,7 @@ public class ListAccessPointsRequest extends Request {
         }
 
         /**
-         * <p>The query token. Set this parameter to the value of NextToken that was returned in the previous API call.</p>
+         * <p>The query token. The value is the NextToken parameter value returned by the previous API call.</p>
          * 
          * <strong>example:</strong>
          * <p>MTY4NzcxOTcwMjAzMDk2Nzc0MyM4MDM4****</p>
@@ -214,7 +214,7 @@ public class ListAccessPointsRequest extends Request {
             /**
              * <p>The name of the filter key. Valid values:</p>
              * <ul>
-             * <li>AccessGroup (not supported for agentic)</li>
+             * <li>AccessGroup (not supported by agentic)</li>
              * <li>AccessPointId</li>
              * <li>AgenticSpaceId</li>
              * </ul>

@@ -89,7 +89,7 @@ public class CreateLifecycleRetrieveJobRequest extends Request {
         } 
 
         /**
-         * <p>The file system ID.</p>
+         * <p>The ID of the file system.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,7 +102,7 @@ public class CreateLifecycleRetrieveJobRequest extends Request {
         }
 
         /**
-         * <p>The list of directories or file paths to retrieve. A maximum of 10 paths are supported.</p>
+         * <p>The list of paths of the directories or files to retrieve. You can specify up to 10 paths.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,10 +115,10 @@ public class CreateLifecycleRetrieveJobRequest extends Request {
         }
 
         /**
-         * <p>The storage class. Valid values:</p>
+         * <p>The tiered storage type. Valid values:</p>
          * <ul>
          * <li>InfrequentAccess (default): IA storage class.</li>
-         * <li>Archive: Archive storage class.</li>
+         * <li>Archive: Archive storage.</li>
          * </ul>
          * 
          * <strong>example:</strong>

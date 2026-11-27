@@ -60,7 +60,7 @@ public class DisableNfsAclRequest extends Request {
         } 
 
         /**
-         * <p>The file system ID.</p>
+         * <p>The ID of the file system.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

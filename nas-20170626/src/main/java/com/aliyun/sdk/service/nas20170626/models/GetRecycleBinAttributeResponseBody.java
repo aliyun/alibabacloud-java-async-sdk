@@ -67,7 +67,7 @@ public class GetRecycleBinAttributeResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The recycle bin description.</p>
+         * <p>The attributes of the recycle bin.</p>
          */
         public Builder recycleBinAttribute(RecycleBinAttribute recycleBinAttribute) {
             this.recycleBinAttribute = recycleBinAttribute;
@@ -75,7 +75,7 @@ public class GetRecycleBinAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>9E15E394-38A6-457A-A62A-D9797C9A****</p>
@@ -196,7 +196,7 @@ public class GetRecycleBinAttributeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The storage usage of archived data in the recycle bin. Unit: bytes.</p>
+             * <p>The storage usage of archive data in the recycle bin. Unit: bytes.</p>
              * 
              * <strong>example:</strong>
              * <p>1611661312</p>
@@ -207,7 +207,7 @@ public class GetRecycleBinAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the recycle bin was enabled. The time follows the ISO 8601 standard in UTC. Format: yyyy-MM-ddTHH:mm:ssZ.</p>
+             * <p>The time when the recycle bin was enabled. The time is displayed in UTC and follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-05-30T10:08:08Z</p>
@@ -218,8 +218,7 @@ public class GetRecycleBinAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The retention period of files in the recycle bin. Unit: days.</p>
-             * <p>If the recycle bin is disabled, this parameter returns 0.</p>
+             * <p>The retention period of files in the recycle bin. Unit: days. If the recycle bin is disabled, this parameter returns 0.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -230,7 +229,7 @@ public class GetRecycleBinAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The storage usage of IA storage class data in the recycle bin. Unit: bytes.</p>
+             * <p>The storage usage of IA data in the recycle bin. Unit: bytes.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -252,8 +251,7 @@ public class GetRecycleBinAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The recycle bin status.</p>
-             * <p>Valid values:</p>
+             * <p>The status of the recycle bin. Valid values:</p>
              * <ul>
              * <li>Enable: The recycle bin is enabled.</li>
              * <li>Disable: The recycle bin is disabled.</li>

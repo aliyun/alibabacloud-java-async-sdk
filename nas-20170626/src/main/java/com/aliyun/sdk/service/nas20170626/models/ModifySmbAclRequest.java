@@ -209,7 +209,7 @@ public class ModifySmbAclRequest extends Request {
         /**
          * <p>The home folder path for each user. The file path must meet the following format requirements:</p>
          * <ul>
-         * <li><p>Forward slashes (/) or backslashes (\) are used as separators.</p>
+         * <li><p>Forward slashes (/) or backslashes () are used as separators.</p>
          * </li>
          * <li><p>Each segment cannot contain <code>&lt;&gt;&quot;:|?*</code>.</p>
          * </li>

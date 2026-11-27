@@ -115,8 +115,8 @@ public class DescribeAccessPointsRequest extends Request {
         } 
 
         /**
-         * <p>The permission group name.</p>
-         * <p>This parameter is required if the file system is a General-purpose NAS file system.</p>
+         * <p>The name of the permission group.</p>
+         * <p>This parameter is required when the target file system is a General-purpose NAS file system.</p>
          * <p>Default permission group: DEFAULT_VPC_GROUP_NAME (the default permission group for VPCs).</p>
          * 
          * <strong>example:</strong>
@@ -141,7 +141,7 @@ public class DescribeAccessPointsRequest extends Request {
         }
 
         /**
-         * <p>The number of results for each query.</p>
+         * <p>The number of entries to return for each query.</p>
          * <p>Valid values: 10 to 100. Default value: 10.</p>
          * 
          * <strong>example:</strong>
@@ -154,7 +154,7 @@ public class DescribeAccessPointsRequest extends Request {
         }
 
         /**
-         * <p>The query token. Set the value to the NextToken value returned in the previous API call.</p>
+         * <p>The query token. Set the value to the NextToken value returned by the previous API call.</p>
          * 
          * <strong>example:</strong>
          * <p>MTY4NzcxOTcwMjAzMDk2Nzc0MyM4MDM4****</p>
@@ -238,9 +238,9 @@ public class DescribeAccessPointsRequest extends Request {
              * <p>Limits:</p>
              * <ul>
              * <li>Valid values of N: 1 to 20.</li>
-             * <li>The tag key can be up to 128 characters in length.</li>
-             * <li>The tag key cannot start with aliyun or acs:.</li>
-             * <li>The tag key cannot contain http:// or https://.</li>
+             * <li>It can be up to 128 characters in length.</li>
+             * <li>It cannot start with aliyun or acs:.</li>
+             * <li>It cannot contain http:// or https://.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -256,9 +256,9 @@ public class DescribeAccessPointsRequest extends Request {
              * <p>Limits:</p>
              * <ul>
              * <li>Valid values of N: 1 to 20.</li>
-             * <li>The tag value can be up to 128 characters in length.</li>
-             * <li>The tag value cannot start with aliyun or acs:.</li>
-             * <li>The tag value cannot contain http:// or https://.</li>
+             * <li>It can be up to 128 characters in length.</li>
+             * <li>It cannot start with aliyun or acs:.</li>
+             * <li>It cannot contain http:// or https://.</li>
              * </ul>
              * 
              * <strong>example:</strong>

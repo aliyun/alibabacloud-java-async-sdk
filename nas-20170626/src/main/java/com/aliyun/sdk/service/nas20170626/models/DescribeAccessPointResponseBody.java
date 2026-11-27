@@ -159,7 +159,7 @@ public class DescribeAccessPointResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The POSIX user group ID.</p>
+             * <p>The ID of the POSIX user group.</p>
              * 
              * <strong>example:</strong>
              * <p>12</p>
@@ -170,7 +170,10 @@ public class DescribeAccessPointResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The secondary user group IDs.</p>
+             * <p>The IDs of the secondary user groups.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[123,123]</p>
              */
             public Builder posixSecondaryGroupIds(java.util.List<Integer> posixSecondaryGroupIds) {
                 this.posixSecondaryGroupIds = posixSecondaryGroupIds;
@@ -178,7 +181,7 @@ public class DescribeAccessPointResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The POSIX user ID.</p>
+             * <p>The ID of the POSIX user.</p>
              * 
              * <strong>example:</strong>
              * <p>123</p>
@@ -261,7 +264,7 @@ public class DescribeAccessPointResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The file group ID.</p>
+             * <p>The ID of the owner user group.</p>
              * 
              * <strong>example:</strong>
              * <p>123</p>
@@ -272,7 +275,7 @@ public class DescribeAccessPointResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The file owner ID.</p>
+             * <p>The ID of the owner user.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -681,7 +684,7 @@ public class DescribeAccessPointResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The access point ARN.</p>
+             * <p>The ARN of the access point.</p>
              * 
              * <strong>example:</strong>
              * <p>acs:nas:cn-hangzhou:178321033379****:accesspoint/ap-ie15yd****</p>
@@ -692,7 +695,7 @@ public class DescribeAccessPointResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The permission group name.</p>
+             * <p>The name of the permission group.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -714,7 +717,7 @@ public class DescribeAccessPointResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The access point name.</p>
+             * <p>The name of the access point.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -725,7 +728,7 @@ public class DescribeAccessPointResponseBody extends TeaModel {
             }
 
             /**
-             * <p>AgenticSpace Id。</p>
+             * <p>The AgenticSpace ID.</p>
              * 
              * <strong>example:</strong>
              * <p>agentic-229oypxjgpau2****</p>
@@ -736,7 +739,7 @@ public class DescribeAccessPointResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the access point was created. Format: Unix/POSIX timestamp.</p>
+             * <p>The creation time of the access point. Format: UNIX/POSIX timestamp.</p>
              * 
              * <strong>example:</strong>
              * <p>1709619668276167</p>
@@ -747,7 +750,7 @@ public class DescribeAccessPointResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the access point was created. The time follows the ISO 8601 standard. Format: yyyy-MM-ddTHH:mm:ssZ.</p>
+             * <p>The creation time of the AgenticSpace. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-06-10T10:08:08Z</p>
@@ -758,7 +761,7 @@ public class DescribeAccessPointResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The access point domain name.</p>
+             * <p>The domain name of the access point.</p>
              * 
              * <strong>example:</strong>
              * <p>ap-ie15ydanoz.001014****-w****.cn-hangzhou.nas.aliyuncs.com</p>
@@ -791,7 +794,7 @@ public class DescribeAccessPointResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the access point was last modified. Format: Unix/POSIX timestamp.</p>
+             * <p>The modification time of the access point. Format: UNIX/POSIX timestamp.</p>
              * 
              * <strong>example:</strong>
              * <p>1709619668276167</p>
@@ -802,7 +805,7 @@ public class DescribeAccessPointResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the access point was last modified. The time follows the ISO 8601 standard. Format: yyyy-MM-ddTHH:mm:ssZ.</p>
+             * <p>The update time of the AgenticSpace. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-06-10T10:08:08Z</p>
@@ -843,7 +846,7 @@ public class DescribeAccessPointResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The root directory creation permissions.</p>
+             * <p>The creation permissions for the root directory.</p>
              */
             public Builder rootPathPermission(RootPathPermission rootPathPermission) {
                 this.rootPathPermission = rootPathPermission;
@@ -851,12 +854,11 @@ public class DescribeAccessPointResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The current root directory status.</p>
-             * <p>Valid values:</p>
+             * <p>The current status of the root directory. Valid values:</p>
              * <ul>
-             * <li>0: The root path status is unknown.</li>
-             * <li>1: The root path does not exist. It may have been deleted by the user.</li>
-             * <li>2: The root path status is normal.</li>
+             * <li>0: The status of the root path is unknown.</li>
+             * <li>1: The root path does not exist and may have been deleted by the user.</li>
+             * <li>2: The status of the root path is normal.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -868,17 +870,16 @@ public class DescribeAccessPointResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The current access point status.</p>
-             * <p>Valid values:</p>
+             * <p>The current status of the access point. Valid values:</p>
              * <ul>
-             * <li>Active: active</li>
-             * <li>Inactive: inactive</li>
-             * <li>Pending: being created</li>
-             * <li>Deleting: being deleted</li>
+             * <li>active: The access point is available.</li>
+             * <li>inactive: The access point is unavailable.</li>
+             * <li>pending: The access point is being created.</li>
+             * <li>deleting: The access point is being deleted.</li>
              * </ul>
              * 
              * <strong>example:</strong>
-             * <p>Active</p>
+             * <p>active</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -886,7 +887,7 @@ public class DescribeAccessPointResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of access point tags.</p>
+             * <p>The list of tags for the access point.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
@@ -905,8 +906,7 @@ public class DescribeAccessPointResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The VPC ID.</p>
-             * <p>The VPC must be the same as the VPC of the Elastic Computing Service (ECS) server to be mounted.</p>
+             * <p>The VPC ID. The VPC must be the same as the VPC of the Elastic Computing Service (ECS) server to which the file system is to be mounted.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-2zesj9afh3y518k9o****</p>

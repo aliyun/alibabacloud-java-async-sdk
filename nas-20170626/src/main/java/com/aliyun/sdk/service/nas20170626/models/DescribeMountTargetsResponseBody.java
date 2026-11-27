@@ -125,7 +125,7 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of mount targets on each page when paging is used.</p>
+         * <p>The number of mount targets per paging in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

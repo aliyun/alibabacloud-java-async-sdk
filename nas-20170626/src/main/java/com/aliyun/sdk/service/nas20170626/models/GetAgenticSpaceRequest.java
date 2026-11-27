@@ -75,7 +75,7 @@ public class GetAgenticSpaceRequest extends Request {
         } 
 
         /**
-         * <p>AgenticSpace Id。</p>
+         * <p>The AgenticSpace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -88,7 +88,7 @@ public class GetAgenticSpaceRequest extends Request {
         }
 
         /**
-         * <p>The file system ID.</p>
+         * <p>The ID of the file system.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

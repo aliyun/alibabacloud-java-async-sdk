@@ -114,7 +114,7 @@ public class DescribeCpfsAccessPointMountedClientsResponseBody extends TeaModel 
         }
 
         /**
-         * <p>The page number of the list.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -125,7 +125,7 @@ public class DescribeCpfsAccessPointMountedClientsResponseBody extends TeaModel 
         }
 
         /**
-         * <p>The number of entries per page. Valid values: 1 to 100. Default value: 10.</p>
+         * <p>The number of entries returned on each page. Valid values: 1 to 100. Default value: 10.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -229,11 +229,7 @@ public class DescribeCpfsAccessPointMountedClientsResponseBody extends TeaModel 
             } 
 
             /**
-             * <p>The type of the client mounted to the access point. Valid values:</p>
-             * <ul>
-             * <li>vsc</li>
-             * <li>tcp</li>
-             * </ul>
+             * <p>The channel type of the client mounted to the access point, such as vsc or tcp.</p>
              * 
              * <strong>example:</strong>
              * <p>vsc</p>

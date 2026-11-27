@@ -104,7 +104,7 @@ public class ListDataInsightDirectoriesRequest extends Request {
         /**
          * <p>The file system ID.</p>
          * <ul>
-         * <li>CPFS for Lingjun: The ID must start with <code>bmcpfs-</code>, such as bmcpfs-0015\<em>\</em>\<em>\</em>.<blockquote>
+         * <li>CPFS for Lingjun: The ID must start with <code>bmcpfs-</code>, such as bmcpfs-0015****.<blockquote>
          * <p>Only CPFS for Lingjun file systems are supported.</p>
          * </blockquote>
          * </li>
@@ -121,8 +121,8 @@ public class ListDataInsightDirectoriesRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of directories to return.</p>
-         * <p>Valid values: 10 to 100.</p>
+         * <p>The maximum number of directories to return for the query.
+         * Valid values: 10 to 100.</p>
          * <p>Default value: 10.</p>
          * 
          * <strong>example:</strong>
@@ -135,7 +135,7 @@ public class ListDataInsightDirectoriesRequest extends Request {
         }
 
         /**
-         * <p>The pagination token. Set this parameter to the NextToken value returned in the previous API call. Leave this parameter empty for the first request. Default value: &quot;&quot;.</p>
+         * <p>The query token. Set the value to the NextToken value returned from the previous API call. You can leave this parameter empty for the first request. Default value: &quot;&quot;.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;&quot;</p>
@@ -147,7 +147,7 @@ public class ListDataInsightDirectoriesRequest extends Request {
         }
 
         /**
-         * <p>The parent directory path. Specifies the parent directory to query. Default value: root directory &quot;/&quot;.</p>
+         * <p>The path of the parent directory. Specifies the parent directory to query. Default value: /.</p>
          * 
          * <strong>example:</strong>
          * <p>/</p>

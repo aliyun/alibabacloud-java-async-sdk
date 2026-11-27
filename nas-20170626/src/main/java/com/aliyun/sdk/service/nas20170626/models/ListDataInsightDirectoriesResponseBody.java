@@ -106,7 +106,7 @@ public class ListDataInsightDirectoriesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The directory information.</p>
+         * <p>The collection of directory information.</p>
          */
         public Builder directory(Directory directory) {
             this.directory = directory;
@@ -125,7 +125,7 @@ public class ListDataInsightDirectoriesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The maximum number of directories returned.</p>
+         * <p>The maximum number of directories to return for the query.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -136,7 +136,7 @@ public class ListDataInsightDirectoriesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The pagination token returned in this call.</p>
+         * <p>The query token returned by the current call.</p>
          * 
          * <strong>example:</strong>
          * <p>/subDir</p>
@@ -346,7 +346,7 @@ public class ListDataInsightDirectoriesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the directory was created. The time follows the ISO 8601 standard in UTC. Format: yyyy-MM-ddTHH:mm:ssZ.</p>
+             * <p>The time when the directory was created. The time is displayed in UTC and follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-07-23T12:47:14Z</p>
@@ -390,7 +390,7 @@ public class ListDataInsightDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The subdirectory level.</p>
+             * <p>The level of the subdirectory.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -401,7 +401,7 @@ public class ListDataInsightDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The subdirectory name.</p>
+             * <p>The name of the subdirectory.</p>
              * 
              * <strong>example:</strong>
              * <p>/dir_l1_n000</p>
@@ -456,7 +456,7 @@ public class ListDataInsightDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the database directory data record was last updated. The time follows the ISO 8601 standard in UTC. Format: yyyy-MM-ddTHH:mm:ssZ.</p>
+             * <p>The update time of the database directory data record. The time is displayed in UTC and follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-07-29T03:41:12Z</p>
@@ -467,7 +467,7 @@ public class ListDataInsightDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the directory was last accessed. The time follows the ISO 8601 standard in UTC. Format: yyyy-MM-ddTHH:mm:ssZ.</p>
+             * <p>The last access time of the directory. The time is displayed in UTC and follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-07-29T03:41:12Z</p>
@@ -615,7 +615,7 @@ public class ListDataInsightDirectoriesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The directory capacity.</p>
+             * <p>The capacity of the directory.</p>
              * 
              * <strong>example:</strong>
              * <p>10240</p>
@@ -659,7 +659,7 @@ public class ListDataInsightDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of Infrequent Access (IA) files.</p>
+             * <p>The number of IA files.</p>
              * 
              * <strong>example:</strong>
              * <p>204800</p>
@@ -692,7 +692,7 @@ public class ListDataInsightDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The subdirectory information.</p>
+             * <p>The collection of subdirectory information.</p>
              */
             public Builder subDirectories(java.util.List<SubDirectories> subDirectories) {
                 this.subDirectories = subDirectories;

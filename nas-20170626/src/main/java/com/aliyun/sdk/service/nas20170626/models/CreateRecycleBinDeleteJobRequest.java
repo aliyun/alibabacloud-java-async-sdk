@@ -89,10 +89,10 @@ public class CreateRecycleBinDeleteJobRequest extends Request {
         } 
 
         /**
-         * <p>Ensures the idempotence of the request.</p>
-         * <p>Generate a parameter value from your client to ensure that the value is unique among different requests. ClientToken supports only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>Generate a parameter value from your client to ensure that the value is unique across different requests. The ClientToken parameter supports only ASCII characters and can be up to 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
          * <blockquote>
-         * <p>If you do not specify ClientToken, the system automatically uses the RequestId of the API request as the ClientToken. The RequestId may vary for each API request.</p>
+         * <p>If you do not specify a ClientToken, the system automatically uses the RequestId of the API request as the ClientToken. The RequestId may be different for each API request.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -105,8 +105,8 @@ public class CreateRecycleBinDeleteJobRequest extends Request {
         }
 
         /**
-         * <p>The FileId of the file or directory that you want to permanently delete.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/2412174.html">ListRecycledDirectoriesAndFiles</a> operation to query the FileId of deleted data.</p>
+         * <p>The ID of the file or directory to be permanently deleted.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/2412174.html">ListRecycledDirectoriesAndFiles</a> operation to query the file ID of the deleted data.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -119,7 +119,7 @@ public class CreateRecycleBinDeleteJobRequest extends Request {
         }
 
         /**
-         * <p>The file system ID.</p>
+         * <p>The ID of the file system.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -80,7 +80,7 @@ public class ListRecycledDirectoriesAndFilesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The collection of files or directories in the recycle bin.</p>
+         * <p>The collection of information about files or directories in the recycle bin.</p>
          */
         public Builder entries(java.util.List<Entries> entries) {
             this.entries = entries;
@@ -88,8 +88,8 @@ public class ListRecycledDirectoriesAndFilesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The pagination token for the next page.</p>
-         * <p>If a single query does not return all files and directories, a non-empty NextToken is returned. You can pass the correct NextToken in subsequent queries to continue retrieving results.</p>
+         * <p>The token for the next page.</p>
+         * <p>If the query does not return all files and directories, a non-empty NextToken is returned. You can use the returned NextToken to continue the query.</p>
          * 
          * <strong>example:</strong>
          * <p>None</p>
@@ -100,7 +100,7 @@ public class ListRecycledDirectoriesAndFilesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>98696EF0-1607-4E9D-B01D-F20930B6****</p>
@@ -260,7 +260,7 @@ public class ListRecycledDirectoriesAndFilesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The most recent access time. The time follows the ISO 8601 standard in UTC. Format: yyyy-MM-ddTHH:mm:ssZ.</p>
+             * <p>The last access time. The time is displayed in UTC and formatted in accordance with the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</p>
              * 
              * <strong>example:</strong>
              * <p>2019-10-30T10:08:08Z</p>
@@ -271,7 +271,7 @@ public class ListRecycledDirectoriesAndFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The most recent metadata modification time. The time follows the ISO 8601 standard in UTC. Format: yyyy-MM-ddTHH:mm:ssZ.</p>
+             * <p>The last modification time of the metadata. The time is displayed in UTC and formatted in accordance with the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</p>
              * 
              * <strong>example:</strong>
              * <p>2019-10-30T10:08:08Z</p>
@@ -282,7 +282,7 @@ public class ListRecycledDirectoriesAndFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the file or directory was deleted. The time follows the ISO 8601 standard in UTC. Format: yyyy-MM-ddTHH:mm:ssZ.</p>
+             * <p>The time when the file or directory was deleted. The time is displayed in UTC and formatted in accordance with the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-05-30T10:08:08Z</p>
@@ -315,7 +315,7 @@ public class ListRecycledDirectoriesAndFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The most recent modification time. The time follows the ISO 8601 standard in UTC. Format: yyyy-MM-ddTHH:mm:ssZ.</p>
+             * <p>The last modification time. The time is displayed in UTC and formatted in accordance with the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</p>
              * 
              * <strong>example:</strong>
              * <p>2019-10-30T10:08:08Z</p>
@@ -326,7 +326,7 @@ public class ListRecycledDirectoriesAndFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the file or directory before deletion.</p>
+             * <p>The name of the file or directory before it was deleted.</p>
              * 
              * <strong>example:</strong>
              * <p>test001</p>
@@ -337,8 +337,8 @@ public class ListRecycledDirectoriesAndFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The file size. Unit: bytes.</p>
-             * <p>When Type is set to Directory, the value 0 is returned.</p>
+             * <p>The size of the file. Unit: bytes.</p>
+             * <p>If Type is set to Directory, 0 is returned.</p>
              * 
              * <strong>example:</strong>
              * <p>1073741824</p>
@@ -349,7 +349,7 @@ public class ListRecycledDirectoriesAndFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The object type. Valid values:</p>
+             * <p>The returned object type. Valid values:</p>
              * <ul>
              * <li>File: file</li>
              * <li>Directory: folder</li>

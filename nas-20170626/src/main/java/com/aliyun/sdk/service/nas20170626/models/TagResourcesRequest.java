@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class TagResourcesRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
+    private Boolean dryRun;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List<String> resourceId;
@@ -34,6 +38,7 @@ public class TagResourcesRequest extends Request {
 
     private TagResourcesRequest(Builder builder) {
         super(builder);
+        this.dryRun = builder.dryRun;
         this.resourceId = builder.resourceId;
         this.resourceType = builder.resourceType;
         this.tag = builder.tag;
@@ -50,6 +55,13 @@ public class TagResourcesRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     /**
@@ -74,6 +86,7 @@ public class TagResourcesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<TagResourcesRequest, Builder> {
+        private Boolean dryRun; 
         private java.util.List<String> resourceId; 
         private String resourceType; 
         private java.util.List<Tag> tag; 
@@ -84,13 +97,23 @@ public class TagResourcesRequest extends Request {
 
         private Builder(TagResourcesRequest request) {
             super(request);
+            this.dryRun = request.dryRun;
             this.resourceId = request.resourceId;
             this.resourceType = request.resourceType;
             this.tag = request.tag;
         } 
 
         /**
-         * <p>The resource IDs. Valid values of array length: 1 to 50.</p>
+         * <p>Specifies whether to perform a dry run on the request.</p>
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
+            return this;
+        }
+
+        /**
+         * <p>The resource ID. Valid values: 1 to 50.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -103,11 +126,10 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The resource type.</p>
-         * <p>Valid values:</p>
+         * <p>The resource type. Valid values:</p>
          * <ul>
-         * <li>filesystem: file system.</li>
-         * <li>accesspoint: access point.</li>
+         * <li>filesystem: File system.</li>
+         * <li>accesspoint: Access point.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -121,7 +143,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The tags. Array length: 1 to 20. If the array contains multiple tag objects, the tag key (Key) must be unique.</p>
+         * <p>The tag array. Length: 1 to 20. If the array contains multiple tag objects, tag keys must be unique.</p>
          * <p>This parameter is required.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
@@ -196,7 +218,7 @@ public class TagResourcesRequest extends Request {
              * <p>Limits:</p>
              * <ul>
              * <li>Cannot be empty or an empty string. </li>
-             * <li>Can be up to 128 characters in length.</li>
+             * <li>Maximum length: 128 characters.</li>
              * <li>Cannot start with <code>aliyun</code> or <code>acs:</code>.</li>
              * <li>Cannot contain <code>http://</code> or <code>https://</code>.</li>
              * </ul>
@@ -214,7 +236,7 @@ public class TagResourcesRequest extends Request {
              * <p>The tag value.</p>
              * <p>Limits:</p>
              * <ul>
-             * <li>Can be up to 128 characters in length.</li>
+             * <li>Maximum length: 128 characters.</li>
              * <li>Cannot contain <code>http://</code> or <code>https://</code>.</li>
              * </ul>
              * <p>This parameter is required.</p>

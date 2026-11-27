@@ -146,9 +146,9 @@ public class DescribeCpfsAccessPointsRequest extends Request {
         /**
          * <p>The file system ID.</p>
          * <ul>
-         * <li><p>CPFS: The ID must start with <code>cpfs-</code>, such as cpfs-099394bd928c****.</p>
+         * <li><p>CPFS: The ID must start with <code>cpfs-</code>. Example: cpfs-099394bd928c****.</p>
          * </li>
-         * <li><p>CPFS for Lingjun: The ID must start with <code>bmcpfs-</code>, such as bmcpfs-290w65p03ok64ya****.</p>
+         * <li><p>CPFS for Lingjun: The ID must start with <code>bmcpfs-</code>. Example: bmcpfs-290w65p03ok64ya****.</p>
          * </li>
          * </ul>
          * <p>This parameter is required.</p>
@@ -163,7 +163,7 @@ public class DescribeCpfsAccessPointsRequest extends Request {
         }
 
         /**
-         * <p>The page number of the list.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -175,7 +175,7 @@ public class DescribeCpfsAccessPointsRequest extends Request {
         }
 
         /**
-         * <p>The number of results per query.
+         * <p>The number of entries to return on each page.
          * Valid values: 1 to 100.
          * Default value: 10.</p>
          * 
@@ -202,7 +202,7 @@ public class DescribeCpfsAccessPointsRequest extends Request {
         }
 
         /**
-         * <p>The list of tags for the CPFS access point.</p>
+         * <p>The tags of the CPFS access point.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);

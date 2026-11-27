@@ -31,26 +31,26 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <p><em>Before you begin</em>*
-     * Only Advanced Extreme NAS file systems support this operation. Before you call this operation, complete the following preparations:</p>
+     * This operation is supported only by Advanced Extreme NAS file systems. Before you call this operation, complete the following preparations:</p>
      * <ul>
-     * <li>An Advanced Extreme NAS file system is created. When you call the <a href="https://www.alibabacloud.com/help/en/nas/developer-reference/api-nas-2017-06-26-createfilesystem">CreateFileSystem</a> operation to create a file system, set the following parameters:<ul>
+     * <li>An Advanced Extreme NAS file system is created. When you invoke the <a href="https://www.alibabacloud.com/help/en/nas/developer-reference/api-nas-2017-06-26-createfilesystem">CreateFileSystem</a> operation to create the file system, you must configure the following parameter Settings:<ul>
      * <li>FileSystemType: extreme</li>
      * <li>StorageType: advance</li>
      * </ul>
      * </li>
      * <li>An automatic snapshot policy is created. For more information, see <a href="https://www.alibabacloud.com/help/en/nas/developer-reference/api-nas-2017-06-26-createautosnapshotpolicy">CreateAutoSnapshotPolicy</a>.</li>
-     * <li>The AliyunNASManageENIRole authorization is completed in the console. Before creating an Extreme NAS file system, associate the AliyunNASManageENIRole service-linked role with File Storage NAS to allow File Storage NAS to manage network interface controllers (NICs). For more information, see <a href="https://help.aliyun.com/document_detail/208530.html">Manage the service-linked role for File Storage NAS</a>.
-     * <strong>Operation description</strong>
+     * <li>You have completed the console authorization for AliyunNASManageENIRole. Before you create an Extreme NAS file system, you must grant authorization to the NAS service-linked role AliyunNASManageENIRole to allow NAS to associate and manage elastic network interfaces (ENIs) and the network interface controller (NIC). For more information, see <a href="https://help.aliyun.com/document_detail/208530.html">Manage the service-linked role for NAS</a>.
+     * <strong>Usage notes</strong>
      * &lt;props=&quot;china&quot;&gt;</li>
-     * <li>This feature is in free public preview. During the public preview, the <a href="https://terms.aliyun.com/legal-agreement/terms/suit_bu1_ali_cloud/suit_bu1_ali_cloud201803061139_99860.html?spm=a2c4g.11186623.0.0.5c895ff2YPLrwe">File Storage NAS Service-Level Agreement (SLA)</a> is not guaranteed.</li>
-     * <li>Each file system can have only one automatic snapshot policy applied.</li>
-     * <li>An automatic snapshot policy can be applied to multiple file systems.</li>
-     * <li>If the target file system already has an automatic snapshot policy applied, calling the ApplyAutoSnapshotPolicy operation replaces the current automatic snapshot policy of the file system.
+     * <li>This feature is in free public preview. During the public preview, the <a href="https://terms.aliyun.com/legal-agreement/terms/suit_bu1_ali_cloud/suit_bu1_ali_cloud201803061139_99860.html?spm=a2c4g.11186623.0.0.5c895ff2YPLrwe">File Storage NAS Service-Level Agreement (SLA) protocol</a> is not guaranteed.</li>
+     * <li>You can apply only one automatic snapshot policy to a file system.</li>
+     * <li>You can apply an automatic snapshot policy to multiple file systems.</li>
+     * <li>If an automatic snapshot policy is already applied to the destination file system, you can invoke the ApplyAutoSnapshotPolicy operation to replace the current automatic snapshot policy.
      * &lt;props=&quot;intl&quot;&gt;</li>
      * <li>This feature is in free public preview.</li>
-     * <li>Each file system can have only one automatic snapshot policy applied.</li>
-     * <li>An automatic snapshot policy can be applied to multiple file systems.</li>
-     * <li>If the target file system already has an automatic snapshot policy applied, calling the ApplyAutoSnapshotPolicy operation replaces the current automatic snapshot policy of the file system.</li>
+     * <li>You can apply only one automatic snapshot policy to a file system.</li>
+     * <li>You can apply an automatic snapshot policy to multiple file systems.</li>
+     * <li>If an automatic snapshot policy is already applied to the destination file system, you can call the ApplyAutoSnapshotPolicy operation to replace the current automatic snapshot policy.</li>
      * </ul>
      * 
      * @param request the request parameters of ApplyAutoSnapshotPolicy  ApplyAutoSnapshotPolicyRequest
@@ -61,18 +61,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>This operation applies only to Cloud Parallel File Storage (CPFS) file systems.</li>
+     * <li>This operation applies only to CPFS file systems.</li>
      * <li>Only CPFS 2.2.0 and later support data flows. You can view the version information on the file system details page in the console.</li>
-     * <li>You can add automatic update configurations only for data flows in the <code>Running</code> state.</li>
-     * <li>You can add up to five automatic update configurations for a data flow.</li>
-     * <li>It generally takes 2 to 5 minutes to create an automatic update configuration. You can call <a href="https://help.aliyun.com/document_detail/336901.html">DescribeDataFlows</a> to query the data flow status.</li>
-     * <li>Automatic updates depend on EventBridge to collect object modification events from the source OSS storage. You must first <a href="https://help.aliyun.com/document_detail/182246.html">activate EventBridge</a>.<blockquote>
-     * <p>The event buses and event rules that CPFS creates in EventBridge contain the description <code>Create for cpfs auto refresh</code>. Do not modify or delete these event buses or event rules. Otherwise, automatic updates cannot work properly.</p>
+     * <li>You can add an auto-refresh configuration only to data flows in the <code>Running</code> (normal) state.</li>
+     * <li>You can add up to five auto-refresh configurations to a data flow.</li>
+     * <li>Creating an auto-refresh configuration usually takes 2 to 5 minutes. You can call <a href="https://help.aliyun.com/document_detail/336901.html">DescribeDataFlows</a> to query the data flow status.</li>
+     * <li>Auto-refresh relies on EventBridge to collect object modification events from the source OSS bucket. You must first <a href="https://help.aliyun.com/document_detail/182246.html">activate EventBridge</a>.<blockquote>
+     * <p>The event buses and event rules that CPFS creates in EventBridge have the description <code>Create for cpfs auto refresh</code>. Do not modify or delete the event buses or event rules. Otherwise, auto-refresh cannot work properly.</p>
      * </blockquote>
      * </li>
-     * <li>Automatic updates apply to prefixes specified by the RefreshPath parameter. When CPFS configures automatic synchronization for a prefix in a data flow, an event bus is created on the user side, and an event rule is created for the prefix of the source OSS bucket. When an object modification occurs within the prefix of the source OSS bucket, an OSS event is generated in EventBridge and processed by the CPFS data flow.</li>
-     * <li>After you configure automatic updates (AutoRefresh), when data changes in the source storage, the changed metadata is automatically synchronized to the CPFS file system. The changed data is loaded on demand when a user accesses the file, or you can start a data stream task to load the data.</li>
-     * <li>The automatic update interval (AutoRefreshInterval) specifies the interval at which CPFS checks whether data updates exist within the prefix of the source OSS bucket. If data updates exist, an automatic synchronization task is started. When the frequency of object modification events in the source OSS bucket exceeds the processing capability of the CPFS data flow, automatic update tasks accumulate, metadata updates are delayed, and the data flow status changes to Misconfigured. To resolve this issue, upgrade the data flow specifications or reduce the modification frequency in OSS.</li>
+     * <li>Auto-refresh applies to a prefix specified by the RefreshPath parameter. When you configure auto-refresh for a prefix in a CPFS data stream, the system creates an event bus in your account and creates an event rule for the prefix of the source OSS bucket. After an object in the prefix of the source OSS bucket is modified, EventBridge generates an OSS event, and the CPFS data stream processes the event.</li>
+     * <li>After you configure auto-refresh (AutoRefresh), when data in the source storage changes, automatic synchronization of the changed metadata to the CPFS file system is performed. The changed data is loaded on demand when you access files, or you can start a data stream node to load the data.</li>
+     * <li>The auto-refresh interval (AutoRefreshInterval) specifies how often CPFS checks whether data in the prefix of the source OSS bucket is updated. If updates exist, CPFS starts an auto-refresh node. If the frequency of object modification events in the source OSS bucket exceeds the processing capacity of the CPFS data stream, auto-refresh nodes accumulate, metadata updates are delayed, and the data stream status becomes Misconfigured. To resolve this issue, upgrade the data stream specification or reduce the OSS modification frequency.</li>
      * </ul>
      * 
      * @param request the request parameters of ApplyDataFlowAutoRefresh  ApplyDataFlowAutoRefreshRequest
@@ -84,7 +84,7 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <b>description</b> :
      * <ul>
      * <li>Only CPFS for Lingjun supports this feature.</li>
-     * <li>Batch execution is supported. In batch execution, only one VscId can be associated with multiple FileSystemIds. This means the ResourceIds.VscId values must be identical.</li>
+     * <li>Batch execution is supported. In batch execution, only one VscId can be associated with multiple FileSystemIds. That is, the ResourceIds.VscId values must be the same.</li>
      * </ul>
      * 
      * @param request the request parameters of AttachVscToFilesystems  AttachVscToFilesystemsRequest
@@ -113,10 +113,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>This operation applies only to Cloud Parallel File Storage (CPFS) file systems.</li>
-     * <li>Data flows are supported only by CPFS 2.2.0 and later. You can view the version information on the file system details page in the console.</li>
-     * <li>You can cancel the automatic update configuration only for data flows in the <code>Running</code> or <code>Stopped</code> state.</li>
-     * <li>Canceling the automatic update configuration typically takes 2 to 5 minutes. You can call <a href="https://help.aliyun.com/document_detail/2402270.html">DescribeDataFlows</a> to query the status of the cancel automatic update task.</li>
+     * <li>This operation is applicable only to Cloud Parallel File Storage (CPFS) file systems.</li>
+     * <li>Data flows are supported only in CPFS 2.2.0 and later. You can view the version information on the file system details page in the console.</li>
+     * <li>You can cancel the auto-update configuration only for data flows in the <code>Running</code> or <code>Stopped</code> state.</li>
+     * <li>Canceling the auto-update configuration typically takes 2 to 5 minutes. You can call the <a href="https://help.aliyun.com/document_detail/2402270.html">DescribeDataFlows</a> operation to query the status of the cancel task.</li>
      * </ul>
      * 
      * @param request the request parameters of CancelDataFlowAutoRefresh  CancelDataFlowAutoRefreshRequest
@@ -212,7 +212,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Only General-purpose NAS file systems support this feature.</p>
+     * <p>This feature is supported only by General-purpose NAS file systems.</p>
      * 
      * @param request the request parameters of CancelLifecycleRetrieveJob  CancelLifecycleRetrieveJobRequest
      * @return CancelLifecycleRetrieveJobResponse
@@ -223,10 +223,10 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <b>description</b> :
      * <h3>Operation description</h3>
      * <ul>
-     * <li>Only General-purpose NAS file systems support this feature.</li>
-     * <li>You can cancel only tasks that are in the Running state. The cancel operation does not take effect on tasks that have reached a final state (PartialSuccess, Success, Fail, or Cancelled).</li>
-     * <li>When you cancel a running permanent deletion task, files that have already been permanently deleted cannot be recovered.</li>
-     * <li>When you cancel a running file restoration task, restored files can be queried in the file system, and unrestored files can be queried in the recycle bin.</li>
+     * <li>This feature is supported only by General-purpose NAS file systems.</li>
+     * <li>You can cancel only running tasks. The cancel operation does not take effect on tasks that have reached a terminal state (PartialSuccess: partially successful, Success: successful, Fail: failed, or Cancelled: cancelled).</li>
+     * <li>When you cancel a running permanent deletion task, the permanently deleted files cannot be recovered.</li>
+     * <li>When you cancel a running file restoration task, you can query the restored files in the file system and the unrestored files in the recycle bin.</li>
      * </ul>
      * 
      * @param request the request parameters of CancelRecycleBinJob  CancelRecycleBinJobRequest
@@ -256,7 +256,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>When you use the CreateAccessPoint operation to create an access point, some resources are generated asynchronously. Therefore, after executing the CreateAccessPoint operation successfully, first invoke the <a href="https://help.aliyun.com/document_detail/2712239.html">DescribeAccessPoints</a> or <a href="https://help.aliyun.com/document_detail/2712240.html">DescribeAccessPoint</a> operation to query the status of the access point. Execute the file system mount operation only after the access point enters the <strong>Active</strong> state. Otherwise, it may result in a failed mount.</li>
+     * <li>When you invoke the CreateAccessPoint operation to create an access point, some resources are generated asynchronously. Therefore, after you successfully execute the CreateAccessPoint operation, invoke the <a href="https://help.aliyun.com/document_detail/2712239.html">DescribeAccessPoints</a> or <a href="https://help.aliyun.com/document_detail/2712240.html">DescribeAccessPoint</a> operation to query the status of the access point. Wait until the access point enters the <strong>Active</strong> state before you mount the file system. Otherwise, the mount operation may fail.</li>
      * <li>Only General-purpose NAS NFS file systems support this feature.</li>
      * <li>If you enable the RAM policy (EnabledRam), you must configure the corresponding RAM permissions. For more information, see <a href="https://help.aliyun.com/document_detail/2545998.html">Manage access points</a>.</li>
      * </ul>
@@ -268,7 +268,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can add up to 300 rules to a permission group.</p>
+     * <p>A single permission group supports up to 300 rules.</p>
      * 
      * @param request the request parameters of CreateAccessRule  CreateAccessRuleRequest
      * @return CreateAccessRuleResponse
@@ -278,12 +278,13 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <p><em>Before you begin</em>*
-     * Complete the following preparations before calling this operation:</p>
+     * Before calling this operation, complete the following preparations:</p>
      * <ol>
      * <li><strong>An Agentic file system is created</strong>: When calling <a href="https://www.alibabacloud.com/help/en/cpfs/cpfsonecs/developer-reference/api-nas-2017-06-26-createfilesystem-cpfs">CreateFileSystem</a> to create a file system, set the following parameters:<ul>
+     * <li><code>FileSystemType</code>: Set to <code>standard</code>.</li>
      * <li><code>StorageType</code>: Set to <code>Agentic</code>.</li>
      * <li><code>ProtocolType</code>: Set to <code>NFS</code>.</li>
-     * <li><strong>Supported regions</strong>: The Agentic storage type is available only in specific regions and zones. Check the console for details.
+     * <li><strong>Supported regions</strong>: The Agentic storage type is available only in specific regions and zones. Go to the <a href="https://nasnext.console.aliyun.com/">NAS console</a> to view the available regions and zones, or contact Alibaba Cloud technical support for the latest list of supported regions.
      * <strong>Usage notes</strong></li>
      * </ul>
      * </li>
@@ -291,9 +292,9 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <ul>
      * <li>This operation applies only to Agentic file systems.</li>
      * <li>Complete call chain example:<ol>
-     * <li>Call CreateFileSystem to create an Agentic file system (StorageType=Agentic, ProtocolType=NFS).</li>
-     * <li>After the file system is created (status is Running), call CreateAgenticSpace to create an Agentic space.</li>
-     * <li>To modify the Agentic space configuration, call the <a href="https://www.alibabacloud.com/help/en/nas/developer-reference/api-nas-2017-06-26-modifyagenticspace">ModifyAgenticSpace</a> operation.</li>
+     * <li>Call CreateFileSystem to create an Agentic file system (FileSystemType=standard, StorageType=Agentic, ProtocolType=NFS).</li>
+     * <li>After the file system is created and its status changes to Running, call this CreateAgenticSpace operation to create an Agentic space.</li>
+     * <li>To modify the configurations of the Agentic space, call the <a href="https://www.alibabacloud.com/help/en/nas/developer-reference/api-nas-2017-06-26-modifyagenticspace">ModifyAgenticSpace</a> operation.</li>
      * </ol>
      * </li>
      * </ul>
@@ -337,7 +338,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Creates an access point for a CPFS for Lingjun file system.</p>
+     * <p>Creates an access point for CPFS for Lingjun.</p>
      * 
      * @param request the request parameters of CreateCpfsAccessPoint  CreateCpfsAccessPointRequest
      * @return CreateCpfsAccessPointResponse
@@ -526,7 +527,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Only General-purpose NAS NFS protocol file systems support this feature.</p>
+     * <p>Only General-purpose NAS NFS file systems support this feature.</p>
      * 
      * @param request the request parameters of CreateDir  CreateDirRequest
      * @return CreateDirResponse
@@ -536,25 +537,25 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>This operation is available only to specific users.</li>
-     * <li>Only General-purpose NAS file systems that use the SMB Protocol Type and have access control enabled are supported. Alibaba Cloud Key Management Service (KMS) must also be activated.</li>
+     * <li>This API operation is available only to selected users.</li>
+     * <li>This operation supports only General-purpose NAS file systems of the SMB Protocol Type that have access control enabled. You must also activate Alibaba Cloud Key Management Service (KMS).</li>
      * </ul>
      * <h2>Prerequisites</h2>
-     * <p>Before calling this API to create a file, complete the following four steps:</p>
+     * <p>Before you call this API operation to create a file, you must complete the following four prerequisite steps:</p>
      * <ol>
-     * <li><strong>Create an SMB General-purpose NAS file system</strong>: Call the <a href="https://www.alibabacloud.com/help/en/nas/developer-reference/api-nas-2017-06-26-createfilesystem">CreateFileSystem</a> operation with ProtocolType set to SMB to create a General-purpose NAS file system that supports the SMB protocol.</li>
+     * <li><strong>Create a General-purpose NAS file system that uses the SMB protocol</strong>: Call the <a href="https://www.alibabacloud.com/help/en/nas/developer-reference/api-nas-2017-06-26-createfilesystem">CreateFileSystem</a> operation and set ProtocolType to SMB to create a General-purpose NAS file system that supports the SMB protocol.</li>
      * <li><strong>Activate KMS</strong>: Activate KMS by using one of the following methods:<ul>
      * <li>Call the Kms.OpenKmsService API operation.</li>
-     * <li>Go to the <a href="https://common-buy.aliyun.com/?commodityCode=kms#/open">console activation page</a>.</li>
+     * <li>Go to the <a href="https://common-buy.aliyun.com/?commodityCode=kms#/open">console to activate the service</a>.</li>
      * </ul>
      * </li>
-     * <li><strong>Enable SMB ACL</strong>: Call the <a href="https://www.alibabacloud.com/help/en/nas/developer-reference/api-nas-2017-06-26-enablesmbacl">EnableSmbAcl</a> operation to enable the SMB ACL feature. Recommended configuration:<ul>
+     * <li><strong>Enable SMB ACL</strong>: Call the <a href="https://www.alibabacloud.com/help/en/nas/developer-reference/api-nas-2017-06-26-enablesmbacl">EnableSmbAcl</a> operation to enable the SMB ACL feature. Recommended configurations:<ul>
      * <li>AuthMethod=NTLM</li>
      * <li>AuthCenter=EDS</li>
      * <li>This configuration does not require an AD domain Keytab and is easier to use.</li>
      * </ul>
      * </li>
-     * <li><strong>Call CreateFile</strong>: After completing the preceding steps, call this operation to create a directory or file.</li>
+     * <li><strong>Call CreateFile</strong>: After you complete the preceding prerequisite steps, call this API operation to create a directory or a file.</li>
      * </ol>
      * 
      * @param request the request parameters of CreateFile  CreateFileRequest
@@ -566,13 +567,13 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <b>description</b> :
      * <p>&lt;props=&quot;china&quot;&gt;</p>
      * <ul>
-     * <li>Before calling this operation, ensure that you fully understand the billing methods and pricing of File Storage NAS. For more information, see <a href="https://help.aliyun.com/document_detail/178365.html">Billing overview</a> and <a href="https://www.aliyun.com/price/product?#/nas/">Pricing</a>.</li>
-     * <li>To create a file system, you must pass real-name verification. For more information, see <a href="https://help.aliyun.com/document_detail/48263.html">Real-name verification for accounts</a>.</li>
-     * <li>When you invoke this operation, the service-linked role required for NAS is automatically created. For more information, see <a href="https://help.aliyun.com/document_detail/208530.html">Manage the service-linked role for NAS</a>.
+     * <li>Before calling this operation, make sure that you fully understand the billing methods and pricing of File Storage NAS. For more information, see <a href="https://help.aliyun.com/document_detail/178365.html">Billing overview</a> and <a href="https://www.aliyun.com/price/product?#/nas/">Pricing</a>.</li>
+     * <li>To create a file system, you must pass real-name verification. For more information, see <a href="https://help.aliyun.com/document_detail/48263.html">Real-name verification</a>.</li>
+     * <li>When you invoke this operation, the service-linked role required for the operation is automatically created. For more information, see <a href="https://help.aliyun.com/document_detail/208530.html">Manage the service-linked role for NAS</a>.
      * &lt;props=&quot;intl&quot;&gt;</li>
-     * <li>Before calling this operation, ensure that you fully understand the billing methods and pricing of File Storage NAS. For more information, see <a href="https://help.aliyun.com/document_detail/178365.html">Billing overview</a> and <a href="https://www.alibabacloud.com/zh/product/nas/pricing?_p_lc=1&spm=a2796.7960336.8215766810.64.414bb91aiZQiRG&spm=a2c4g.11186623.help-menu-27516.d_5_1_4_2_0.572a1880hEiKCk">Pricing</a>.</li>
-     * <li>To create a file system, you must pass real-name verification. For more information, see <a href="https://help.aliyun.com/document_detail/48263.html">Real-name verification for accounts</a>.</li>
-     * <li>When you invoke this operation, the service-linked role required for NAS is automatically created. For more information, see <a href="https://help.aliyun.com/document_detail/208530.html">Manage the service-linked role for NAS</a>.</li>
+     * <li>Before calling this operation, make sure that you fully understand the billing methods and pricing of File Storage NAS. For more information, see <a href="https://help.aliyun.com/document_detail/178365.html">Billing overview</a> and <a href="https://www.alibabacloud.com/zh/product/nas/pricing?_p_lc=1&spm=a2796.7960336.8215766810.64.414bb91aiZQiRG&spm=a2c4g.11186623.help-menu-27516.d_5_1_4_2_0.572a1880hEiKCk">Pricing</a>.</li>
+     * <li>To create a file system, you must pass real-name verification. For more information, see <a href="https://help.aliyun.com/document_detail/48263.html">Real-name verification</a>.</li>
+     * <li>When you invoke this operation, the service-linked role required for the operation is automatically created. For more information, see <a href="https://help.aliyun.com/document_detail/208530.html">Manage the service-linked role for NAS</a>.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateFileSystem  CreateFileSystemRequest
@@ -583,26 +584,26 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Usage notes for CPFS.<ul>
-     * <li>Only CPFS 2.2.0 and later support fileset creation. You can view the version information on the file system details page in the console.</li>
-     * <li>A maximum of 10 filesets can be created for a single CPFS file system.</li>
+     * <li>CPFS usage notes.<ul>
+     * <li>Only CPFS 2.2.0 and later support Fileset creation. You can view the version information on the file system details page in the console.</li>
+     * <li>A single CPFS file system supports the creation of up to 10 Filesets.</li>
      * <li>The parent directory must be an existing directory.</li>
-     * <li>The maximum depth of a fileset path is 8 levels, with the root directory / as level 0. For example, a fileset path of /test/aaa/ccc/ has a depth of 3 levels.</li>
-     * <li>Nesting filesets within a fileset is not supported. If a parent directory is already specified as a fileset, its subdirectories cannot be specified as filesets.</li>
-     * <li>A fileset supports a maximum of 1,000,000 files. If the number of files exceeds this limit, adding new files returns a <code>no space</code> error message.</li>
+     * <li>The maximum supported depth of a Fileset path is 8 levels. The root directory / is level 0. For example, if the Fileset path is /test/aaa/ccc/, the path depth is 3 levels.</li>
+     * <li>You cannot nest Filesets. If a parent directory is already specified as a Fileset, its subdirectories cannot be specified as Filesets.</li>
+     * <li>A Fileset supports up to 1 million files. If the number of files exceeds this limit, adding a new file returns the <code>no space</code> error message.</li>
      * </ul>
      * </li>
-     * <li>Usage notes for CPFS for Lingjun<ul>
-     * <li>Only CPFS for Lingjun 2.7.0 and later support fileset creation. You can view the version information on the file system details page in the console.</li>
-     * <li>A maximum of 500 filesets can be created for a single CPFS file system.</li>
-     * <li>The fileset path must be a new path and cannot be an existing path. Renaming a fileset path is not supported, and the path cannot be a symbolic link.</li>
-     * <li>The maximum depth of a fileset path is 8 levels, with the root directory / as level 0. For example, a fileset path of /test/aaa/ccc/ has a depth of 3 levels.</li>
-     * <li>If the fileset path contains multiple directory levels, the parent directory must be an existing directory.</li>
-     * <li>Nesting filesets within a fileset is not supported. If a parent directory is already specified as a fileset, its subdirectories cannot be specified as filesets. Only one quota is supported for each fileset path.</li>
-     * <li>The minimum capacity quota for a fileset is 10 GiB, and the capacity can be increased in increments of 1 GiB.</li>
-     * <li>A fileset supports a maximum of 10,000,000,000 files or directories, with a minimum of 10,000 and an increment of 1.</li>
-     * <li>When you modify a directory quota, the quota capacity or file count must be greater than the used capacity or file count.</li>
-     * <li>Quota statistics have a 15-minute delay. The current actual usage takes effect after 15 minutes.</li>
+     * <li>CPFS for Lingjun usage notes<ul>
+     * <li>Only CPFS for Lingjun 2.7.0 and later support Fileset creation. You can view the version information on the file system details page in the console.</li>
+     * <li>A single CPFS for Lingjun file system supports the creation of up to 500 Filesets.</li>
+     * <li>The Fileset path must be a new path and cannot be an existing path. Fileset paths cannot be renamed and cannot be symbolic links.</li>
+     * <li>The maximum supported depth of a Fileset path is 8 levels. The root directory / is level 0. For example, if the Fileset path is /test/aaa/ccc/, the path depth is 3 levels.</li>
+     * <li>If the Fileset path contains multiple directory levels, the parent directory must be an existing directory.</li>
+     * <li>You cannot nest Filesets. If a parent directory is already specified as a Fileset, its subdirectories cannot be specified as Filesets. Each Fileset path supports only one quota.</li>
+     * <li>For the Fileset capacity quota, the minimum initial value is 10 GiB, and the expansion unit is 1 GiB.</li>
+     * <li>A Fileset supports up to 10 billion files or directories. The minimum initial value is 10,000, and the expansion unit is 1.</li>
+     * <li>When you modify a directory quota, the configured quota capacity or file count must be greater than the used capacity or file count.</li>
+     * <li>Quota statistics have a 15-minute delay. The current actual usage is reflected only after 15 minutes.</li>
      * </ul>
      * </li>
      * </ul>
@@ -653,8 +654,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>When you call the CreateMountTarget operation to create a mount target, some resources are generated asynchronously. After the CreateMountTarget operation succeeds, call the DescribeMountTargets operation to query the mount target status. Mount the file system only after the mount target status changes to <strong>Active</strong>. Otherwise, the mount operation may fail.</li>
-     * <li>Calling this operation triggers the automatic creation of the service-linked role required for the operation. For more information, see <a href="https://help.aliyun.com/document_detail/208530.html">Manage the service-linked role for NAS</a>.</li>
+     * <li>When you invoke the CreateMountTarget operation to create a mount target, some resources are generated asynchronously. Therefore, after the CreateMountTarget operation succeeds, invoke the DescribeMountTargets operation to query the status of the mount target. Execute the file system mount operation only after the mount target enters the <strong>Active</strong> state. Otherwise, the mount operation may result in a failed state.</li>
+     * <li>Invoking this operation triggers the automatic creation of the service-linked role and will associate it with the NAS service. For more information, see <a href="https://help.aliyun.com/document_detail/208530.html">Manage the service-linked role for NAS</a>.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateMountTarget  CreateMountTargetRequest
@@ -665,17 +666,17 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li><p>This operation applies only to Cloud Parallel File Storage (CPFS) file systems.</p>
+     * <li><p>This operation is applicable only to CPFS file systems.</p>
      * </li>
      * <li><p>Before you begin</p>
-     * <p>The target CPFS file system must be in the Running state, and a protocol service must have been created.</p>
+     * <p> The target CPFS file system must be in the Running state, and a protocol service must be created.</p>
      * </li>
-     * <li><p>Other information</p>
+     * <li><p>Other limits</p>
      * <ul>
      * <li>The VPC CIDR block of the protocol service export must not overlap with the VPC CIDR block of the file system.</li>
-     * <li>The VPC CIDR blocks of multiple exports on the same protocol service must not overlap with each other.</li>
+     * <li>The CIDR blocks of multiple export VPCs on the same protocol service must not overlap.</li>
      * <li>You can create up to 10 export directories for a single protocol service.</li>
-     * <li>Creating a protocol service export directory consumes IP addresses from the specified vSwitch (up to 32 IP addresses). Make sure that the target vSwitch has sufficient IP address resources.</li>
+     * <li>Creating an export directory for a protocol service consumes IP addresses on the specified vSwitch (up to 32 IP addresses). Make sure that the target vSwitch has sufficient IP addresses.</li>
      * </ul>
      * </li>
      * </ul>
@@ -688,30 +689,30 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li><p>This operation applies only to CPFS file systems.</p>
+     * <li><p>This operation is applicable only to CPFS file systems.</p>
      * </li>
-     * <li><p>Only CPFS 2.3.0 and later support protocol services. You can call the <a href="https://help.aliyun.com/document_detail/163314.html">DescribeFileSystems</a> operation to query the version of a file system.</p>
+     * <li><p>Only CPFS 2.3.0 and later support protocol services. You can call the <a href="https://help.aliyun.com/document_detail/163314.html">DescribeFileSystems</a> operation to query the version of the target file system.</p>
      * </li>
      * <li><p>Protocol service specifications.
-     * Protocol services include two Protocol Types: General and Cache. Compared with the General type, the Cache type provides hot spot data caching. When the cache is hit, the bandwidth of the Cache type protocol service can exceed the bandwidth of the CPFS file system and reach the maximum bandwidth configured for the protocol service.</p>
+     * Protocol services include two protocol types: General-purpose and Cache. Compared with the General-purpose type, the Cache type provides the capability to cache hot spot data. When a cache hit occurs, the bandwidth of a Cache protocol service can exceed the bandwidth of the CPFS file system and reach the maximum bandwidth configured for the protocol service.</p>
      * <ul>
-     * <li>General: Provides NFS protocol access and <a href="https://help.aliyun.com/document_detail/427175.html">folder-level mount targets</a> for CPFS. You do not need to configure a POSIX client cluster management. This feature is free of charge.</li>
-     * <li>Cache: Provides server-side in-memory caching based on the LRU policy on top of the General type. When data is cached in memory, CPFS can provide higher internal network bandwidth. The Cache type protocol service is available in two specifications: Cache L1 and Cache L2, which differ in internal network bandwidth and memory cache size.<blockquote>
-     * <p> The Cache type protocol service is a paid service and is in invitational preview. For information about the billing of the Cache type protocol service, see <a href="https://help.aliyun.com/document_detail/111858.html">Billable items</a>. If you have any feedback or questions, join the DingTalk user group (group ID: 31045006299) to communicate with CPFS engineers.</p>
+     * <li>General-purpose: Provides NFS protocol access and <a href="https://help.aliyun.com/document_detail/427175.html">folder-level mount targets</a> for CPFS. Users do not need to configure a POSIX client for cluster management. This feature is free of charge.</li>
+     * <li>Cache: Provides server-side memory caching based on the LRU policy in addition to the features of the General-purpose type. When data is cached in memory, CPFS can provide higher internal network bandwidth. Cache protocol services are divided into two specifications: Cache 1 and Cache 2. The difference lies in the internal network bandwidth and memory cache size.<blockquote>
+     * <p>Cache protocol services are paid services and are currently in invitational preview. For the billing methods of Cache protocol services, see <a href="https://help.aliyun.com/document_detail/111858.html">Billable items</a>. If you have any feedback or questions, join the DingTalk group (group ID: 31045006299) to communicate and discuss with CPFS engineers.</p>
      * </blockquote>
      * </li>
      * </ul>
      * </li>
-     * <li><p>Protocol type.
-     * Only NFSv3 is supported.</p>
+     * <li><p>Protocol types.
+     * Only the NFSv3 protocol is supported.</p>
      * </li>
-     * <li><p>Before you begin.
-     * The CPFS file system must be created and in the Running state.</p>
+     * <li><p>Prerequisites.
+     * The target CPFS file system must be created and in the Running state.</p>
      * </li>
-     * <li><p>Other information.</p>
+     * <li><p>Others.</p>
      * <ul>
-     * <li>Only one protocol service can be created for each CPFS file system.</li>
-     * <li>Creating a protocol service consumes IP addresses on the specified vSwitch (up to 32 IP addresses). Make sure that the vSwitch has sufficient IP address resources.</li>
+     * <li>You can create only one protocol service for a CPFS file system.</li>
+     * <li>Creating a protocol service consumes IP addresses on the specified vSwitch (up to 32 IP addresses). Make sure that the target vSwitch has sufficient IP addresses.</li>
      * </ul>
      * </li>
      * </ul>
@@ -726,9 +727,9 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <ul>
      * <li>Only General-purpose NAS file systems support this feature.</li>
      * <li>The recycle bin must be enabled.</li>
-     * <li>Mount the file system by using NFS or SMB (you must use an ECS instance in the same VPC to mount the file system), and then delete the target file from the mount directory to move it to the recycle bin.</li>
-     * <li>When you permanently delete a directory, the contents in the directory are recursively deleted.</li>
-     * <li>Only one permanent deletion task can be run at a time for a single file system. While a file or directory is being permanently deleted, you cannot initiate a new restoration or cleanup task.</li>
+     * <li>Mount the file system over NFS or SMB (you must use an ECS instance in the same VPC to mount the file system), and then delete the target files in the mount directory to move them to the recycle bin.</li>
+     * <li>When a directory is permanently deleted, its contents are recursively deleted.</li>
+     * <li>Only one permanent deletion task can be executed at a time for a single file system. You cannot initiate a new restoration or cleanup task while files or directories are being permanently deleted.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateRecycleBinDeleteJob  CreateRecycleBinDeleteJobRequest
@@ -740,9 +741,9 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <b>description</b> :
      * <ul>
      * <li>Only General-purpose NAS file systems support this feature.</li>
-     * <li>A single file system can run only one file restoration or cleanup task at a time. While a file is being restored, you cannot initiate a new file restoration or cleanup task.</li>
+     * <li>A single file system can execute only one file restoration or cleanup task at a time. You cannot initiate a new file restoration or cleanup task while a file is being restored.</li>
      * <li>A single restoration task can restore only one file or directory. Restoring a specified directory recursively restores all files in the directory.</li>
-     * <li>After a file is restored, data reorganization is performed. Read request performance slightly decreases during data reorganization.</li>
+     * <li>After a file is restored, data organization is performed. During data organization, the performance of read requests slightly decreases.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateRecycleBinRestoreJob  CreateRecycleBinRestoreJobRequest
@@ -792,8 +793,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Only NFS protocol file systems of General-purpose NAS support this feature.</li>
-     * <li>After you delete an access point, all I/O operations that are accessing the folder through the access point are immediately interrupted. Proceed with caution.</li>
+     * <li>This feature is supported only by General-purpose NAS NFS file systems.</li>
+     * <li>After you delete an access point, all I/O operations that are currently accessing this folder through the access point will immediately break. Proceed with caution.</li>
      * </ul>
      * 
      * @param request the request parameters of DeleteAccessPoint  DeleteAccessPointRequest
@@ -812,7 +813,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Applicable to agentic file systems.</p>
+     * <p>Applies to Agentic file systems.</p>
      * 
      * @param request the request parameters of DeleteAgenticSpace  DeleteAgenticSpaceRequest
      * @return DeleteAgenticSpaceResponse
@@ -849,9 +850,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Only CPFS 2.2.0 and later and CPFS for Lingjun 2.4.0 and later support dataflows. You can view the version information on the file system details page in the console.</li>
-     * <li>You can delete only dataflows in the <code>Running</code> or <code>Stopped</code> state.</li>
-     * <li>After a dataflow is deleted, the related resources are released and cannot be recovered. To use a dataflow again, create a new one.</li>
+     * <li>Only CPFS 2.2.0 and later and CPFS for Lingjun 2.4.0 and later support data flows. You can view the version information on the file system details page in the console.</li>
+     * <li>You can delete only data flows in the <code>Running</code> or <code>Stopped</code> state.</li>
+     * <li>After a data flow is deleted, its related resources are released and cannot be recovered. To use a data flow again, create a new one.</li>
      * </ul>
      * 
      * @param request the request parameters of DeleteDataFlow  DeleteDataFlowRequest
@@ -862,9 +863,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>You can delete a file system only when the number of mount targets on the file system is 0.</li>
-     * <li>You can delete a file system only when no lifecycle policy is created for the file system.</li>
-     * <li>After a file system is deleted, the data cannot be recovered. Proceed with caution.</li>
+     * <li>A file system instance can be deleted only when the number of mount targets for the file system is 0.</li>
+     * <li>A file system instance can be deleted only when no lifecycle management policy is created for the file system.</li>
+     * <li>Once a file system instance is deleted, the data cannot be recovered. Proceed with caution.</li>
      * </ul>
      * 
      * @param request the request parameters of DeleteFileSystem  DeleteFileSystemRequest
@@ -875,10 +876,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Only CPFS 2.2.0 and later and CPFS for Lingjun 2.7.0 and later support fileset deletion. After a fileset is deleted, all data in the directory is permanently deleted and cannot be recovered. Proceed with caution.</li>
-     * <li>If deletion protection is enabled, you must disable deletion protection before you can delete the fileset.</li>
-     * <li>All filesets on the target file system must be in the CREATED desired state before you can perform the delete operation.</li>
-     * <li>Deleting a CPFS general-purpose fileset immediately releases disk space. Deleting a CPFS for Lingjun fileset gradually releases disk space. Deleted data cannot be recovered. Proceed with caution.</li>
+     * <li>Only CPFS 2.2.0 and CPFS for Lingjun 2.7.0 and later support deleting filesets. After a fileset is deleted, all data in the directory is also deleted and cannot be recovered. Proceed with caution.</li>
+     * <li>If deletion protection is enabled, you must disable it before you can delete the fileset.</li>
+     * <li>All filesets in the destination file system must be in the CREATED desired state before you can perform the delete operation.</li>
+     * <li>Deleting a fileset in a general-purpose CPFS file system immediately releases disk space. Deleting a fileset in a CPFS for Lingjun file system gradually releases disk space. Deleted data cannot be recovered. Proceed with caution.</li>
      * </ul>
      * 
      * @param request the request parameters of DeleteFileset  DeleteFilesetRequest
@@ -913,7 +914,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>After a mount target is deleted, it cannot be recovered. Proceed with caution.</p>
+     * <p>Deleted mount targets cannot be recovered. Proceed with caution.</p>
      * 
      * @param request the request parameters of DeleteMountTarget  DeleteMountTargetRequest
      * @return DeleteMountTargetResponse
@@ -932,8 +933,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>This operation applies only to CPFS file systems.</li>
-     * <li>When you delete a protocol service, all export directories in the protocol service are also deleted.</li>
+     * <li>This operation is applicable only to Cloud Parallel File Storage (CPFS) file systems.</li>
+     * <li>When you delete a protocol service, the export directories in the protocol service are also deleted.</li>
      * </ul>
      * 
      * @param request the request parameters of DeleteProtocolService  DeleteProtocolServiceRequest
@@ -991,17 +992,17 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <b>description</b> :
      * <p>Applies to Agentic file systems.</p>
      * <h2>Before you begin</h2>
-     * <p>Before you call this operation, create resources in the following order:</p>
+     * <p>Before you call this operation, you must create resources in the following order:</p>
      * <ol>
-     * <li><strong>Create an Agentic file system</strong>: When you call <a href="https://www.alibabacloud.com/help/en/cpfs/cpfsonecs/developer-reference/api-nas-2017-06-26-createfilesystem-cpfs">CreateFileSystem</a> to create a file system, set the following parameters:<ul>
+     * <li><strong>Create an Agentic file system</strong>: When you call <a href="https://www.alibabacloud.com/help/en/cpfs/cpfsonecs/developer-reference/api-nas-2017-06-26-createfilesystem-cpfs">CreateFileSystem</a> to create a file system, you must set the following parameters:<ul>
      * <li><code>StorageType</code>: Set to <code>Agentic</code>.</li>
      * <li><code>ProtocolType</code>: Set to <code>NFS</code>.</li>
      * <li><strong>Supported regions</strong>: The Agentic storage type is available only in specific regions and zones. For more information, see the console.</li>
      * </ul>
      * </li>
      * <li><strong>Query the AgenticSpace list</strong>: After the file system is created and its status changes to Running, call the DescribeAgenticSpaces operation to query the AgenticSpace list under the file system.<ul>
-     * <li>If Agentic spaces are created under the file system, the complete list is returned.</li>
-     * <li>If no Agentic spaces are created under the file system, an empty list is returned.</li>
+     * <li>If AgenticSpaces are created under the file system, the complete list is returned.</li>
+     * <li>If no AgenticSpaces are created under the file system, an empty list is returned.</li>
      * </ul>
      * </li>
      * </ol>
@@ -1055,7 +1056,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Queries the list of clients mounted to an access point of a CPFS for Lingjun file system.</p>
+     * <p>Queries the list of clients mounted to a CPFS for Lingjun access point.</p>
      * 
      * @param request the request parameters of DescribeCpfsAccessPointMountedClients  DescribeCpfsAccessPointMountedClientsRequest
      * @return DescribeCpfsAccessPointMountedClientsResponse
@@ -1064,7 +1065,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Queries access points of CPFS for Lingjun.</p>
+     * <p>Queries the access points of CPFS for Lingjun.</p>
      * 
      * @param request the request parameters of DescribeCpfsAccessPoints  DescribeCpfsAccessPointsRequest
      * @return DescribeCpfsAccessPointsResponse
@@ -1090,7 +1091,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Only CPFS 2.2.0 and later and CPFS for Lingjun 2.4.0 and later support querying data flow tasks. You can view the version information on the file system details page in the console.</p>
+     * <p>Only CPFS 2.2.0 and later, and CPFS for Lingjun 2.4.0 and later support querying data flow tasks. You can view the version information on the file system details page in the console.</p>
      * 
      * @param request the request parameters of DescribeDataFlowTasks  DescribeDataFlowTasksRequest
      * @return DescribeDataFlowTasksResponse
@@ -1100,7 +1101,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Data flows are supported only by CPFS 2.2.0 and later, and CPFS for Lingjun 2.4.0 and later. You can view the version information on the file system details page in the console.</li>
+     * <li>Data flow is supported only by CPFS 2.2.0 and later, and CPFS for Lingjun 2.4.0 and later. You can view the version information on the file system details page in the console.</li>
      * <li>Among the filter keys in Filters, FsetIds, DataFlowIds, SourceStorage, ThroughputList, and Status require exact match, while FileSystemPath, Description, and SourceStoragePath support fuzzy match.</li>
      * <li>Combined queries are supported.</li>
      * </ul>
@@ -1135,9 +1136,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Only CPFS 2.2.0 and later and CPFS for Lingjun 2.7.0 and later support filesets. You can view the version information on the file system details page in the console.</li>
-     * <li>For filter keys (Filters), FsetIds requires an exact match, while FileSystemPath and Description support fuzzy match.</li>
-     * <li>Combination queries are supported.</li>
+     * <li>Only CPFS 2.2.0 and CPFS for Lingjun 2.7.0 and later support filesets. You can view the version information on the file system details page in the console.</li>
+     * <li>For filter keys, FsetIds requires an exact match, whereas FileSystemPath and Description support fuzzy matching.</li>
+     * <li>Combined queries are supported.</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeFilesets  DescribeFilesetsRequest
@@ -1161,8 +1162,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <b>description</b> :
      * <ul>
      * <li>Only CPFS for Lingjun supports this feature. To use CPFS for Lingjun, you must first submit a ticket to apply for the service whitelist, and then create a file system in the NAS console.</li>
-     * <li>Batch execution is supported. In batch execution, only one VscId can be associated with multiple FileSystemIds. This means that the ResourceIds.VscId values must be identical.</li>
-     * <li>To query the association results between file systems and virtual storage channels, call AttachVscToFilesystems first to complete the association. You can call the ListVscs operation of Lingjun AI Computing Service eflo-controller/2022-12-15 to query the VscId. If the virtual storage channel is not created, call CreateVsc to create one.</li>
+     * <li>Batch execution is supported. In batch execution, only one VscId can be associated with multiple FileSystemIds. This means the ResourceIds.VscId values must be identical.</li>
+     * <li>To query the association results between file systems and virtual storage channels, call AttachVscToFilesystems to complete the association first. You can call the ListVscs operation of Lingjun AI Computing Service eflo-controller/2022-12-15 to query the VscId. If the virtual storage channel is not created, call CreateVsc to create one.</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeFilesystemsVscAttachInfo  DescribeFilesystemsVscAttachInfoRequest
@@ -1181,10 +1182,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Queries the execution logs of a lifecycle policy. You can query the logs generated within the last 90 days or up to 1,000 log entries. Only CPFS for Lingjun is supported.</p>
+     * <p>Queries the execution logs of a lifecycle policy. You can query up to 1,000 logs from the last 90 days. This operation is supported only by CPFS for Lingjun.</p>
      * <h2>Before you begin</h2>
      * <ul>
-     * <li>Make sure that the file system specified by FileSystemId is a CPFS for Lingjun file system.</li>
+     * <li>Ensure that the file system specified by FileSystemId is a CPFS for Lingjun file system.</li>
      * <li>Before you call this operation, call <a href="https://www.alibabacloud.com/help/en/nas/developer-reference/api-nas-2017-06-26-describelifecyclepolicies">DescribeLifecyclePolicies</a> to query and obtain a valid LifecyclePolicyId.</li>
      * </ul>
      * 
@@ -1228,7 +1229,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This operation is applicable only to Cloud Parallel File Storage (CPFS) file systems.</p>
+     * <p>This operation applies only to CPFS file systems.</p>
      * 
      * @param request the request parameters of DescribeProtocolMountTarget  DescribeProtocolMountTargetRequest
      * @return DescribeProtocolMountTargetResponse
@@ -1237,7 +1238,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This operation is applicable only to Cloud Parallel File Storage (CPFS) file systems.</p>
+     * <p>This operation is applicable only to CPFS file systems.</p>
      * 
      * @param request the request parameters of DescribeProtocolService  DescribeProtocolServiceRequest
      * @return DescribeProtocolServiceResponse
@@ -1293,7 +1294,7 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <b>description</b> :
      * <ul>
      * <li>Only CPFS for Lingjun supports this feature.</li>
-     * <li>Batch operations are supported. In batch mode, only one VscId can be associated with multiple FileSystemId values. This means the ResourceIds.VscId values must be the same.</li>
+     * <li>Batch execution is supported. In batch execution, only one VscId can be associated with multiple FileSystemIds. This means the ResourceIds.VscId values must be identical.</li>
      * </ul>
      * 
      * @param request the request parameters of DetachVscFromFilesystems  DetachVscFromFilesystemsRequest
@@ -1306,7 +1307,7 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <ul>
      * <li>Only General-purpose NAS file systems support this feature.</li>
      * <li>Disabling the recycle bin permanently deletes all files in the recycle bin.</li>
-     * <li>After a disabled recycle bin is re-enabled, the recycle bin is empty. Files deleted before the recycle bin was re-enabled cannot be recovered.</li>
+     * <li>After you re-enable a disabled recycle bin, the recycle bin is empty, and you cannot recover files that were deleted before the recycle bin feature was enabled.</li>
      * </ul>
      * 
      * @param request the request parameters of DisableAndCleanRecycleBin  DisableAndCleanRecycleBinRequest
@@ -1317,7 +1318,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>This operation is currently in invitational preview. To use this feature, submit a ticket.</li>
+     * <li>This feature is currently in invitational preview. To use this feature, submit a ticket.</li>
      * </ul>
      * 
      * @param request the request parameters of DisableDataInsight  DisableDataInsightRequest
@@ -1347,9 +1348,12 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <ul>
-     * <li>This feature is currently in invitational preview. To use this feature, submit a ticket.</li>
-     * </ul>
+     * <p>Enables the EBS Lens feature. This feature is supported only by CPFS for Lingjun and is currently in the invitational preview phase.</p>
+     * <h2>Before you begin</h2>
+     * <ol>
+     * <li>You have obtained the qualification for the invitational preview of CPFS for Lingjun by submitting a ticket.</li>
+     * <li>You have purchased a CPFS for Lingjun file system through the NAS console and obtained a file system ID with the <code>bmcpfs-*</code> prefix.</li>
+     * </ol>
      * 
      * @param request the request parameters of EnableDataInsight  EnableDataInsightRequest
      * @return EnableDataInsightResponse
@@ -1367,7 +1371,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Only General-purpose NAS file systems support this operation.</p>
+     * <p>Only General-purpose NAS file systems support this API operation.</p>
      * 
      * @param request the request parameters of EnableRecycleBin  EnableRecycleBinRequest
      * @return EnableRecycleBinResponse
@@ -1388,7 +1392,19 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Applies to agentic-type file systems.</p>
+     * <p>Applies to Agentic file systems.</p>
+     * <h2>Before you begin</h2>
+     * <p>Before you call this operation, create resources in the following order:</p>
+     * <ol>
+     * <li><strong>Create an Agentic file system</strong>: When you call <a href="https://www.alibabacloud.com/help/en/cpfs/cpfsonecs/developer-reference/api-nas-2017-06-26-createfilesystem-cpfs">CreateFileSystem</a> to create a file system, set the following parameters:<ul>
+     * <li><code>FileSystemType</code>: Set to <code>standard</code>.</li>
+     * <li><code>StorageType</code>: Set to <code>Agentic</code>.</li>
+     * <li><code>ProtocolType</code>: Set to <code>NFS</code>.</li>
+     * <li><strong>Supported regions</strong>: The Agentic storage class is available only in specific regions and zones. Go to the <a href="https://nasnext.console.aliyun.com/">NAS console</a> to view the available regions and zones, or contact Alibaba Cloud technical support to obtain the latest list of supported regions.</li>
+     * </ul>
+     * </li>
+     * <li><strong>Create an Agentic space</strong>: After the file system is created and its status changes to Running, call the <a href="https://www.alibabacloud.com/help/en/nas/developer-reference/api-nas-2017-06-26-createagenticspace">CreateAgenticSpace</a> operation to create an Agentic space in the file system and obtain the returned AgenticSpaceId.</li>
+     * </ol>
      * 
      * @param request the request parameters of GetAgenticSpace  GetAgenticSpaceRequest
      * @return GetAgenticSpaceResponse
@@ -1406,7 +1422,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Only CPFS 2.2.0 and later and CPFS for Lingjun 2.7.0 and later support Filesets. You can view the version information on the file system details page in the console.</p>
+     * <p>Only CPFS 2.2.0 and CPFS for Lingjun 2.7.0 and later support Filesets. You can view the version information on the file system details page in the console.</p>
      * 
      * @param request the request parameters of GetFileset  GetFilesetRequest
      * @return GetFilesetResponse
@@ -1415,13 +1431,13 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Queries the export directory information of a protocol service.
+     * <p>Queries the information about protocol service export directories.
      * <strong>Before you begin</strong>
-     * Before you call this operation, make sure that each dependent resource in the following three-layer resource model already exists:</p>
+     * Before you call this operation, make sure that each dependent resource in the following three-tier resource model exists:</p>
      * <ol>
      * <li><strong>File system (FileSystem)</strong>: Call <a href="https://www.alibabacloud.com/help/en/nas/developer-reference/api-nas-2017-06-26-describefilesystems">DescribeFileSystems</a> to obtain the FileSystemId.</li>
-     * <li><strong>Protocol service (ProtocolService)</strong>: Call <a href="https://www.alibabacloud.com/help/en/cpfs/cpfsonecs/developer-reference/api-nas-2017-06-26-describeprotocolservice-cpfs">DescribeProtocolService</a> to obtain the ProtocolServiceId, or call <a href="https://www.alibabacloud.com/help/en/cpfs/cpfsonecs/developer-reference/api-nas-2017-06-26-createprotocolservice-cpfs">CreateProtocolService</a> to create one.</li>
-     * <li><strong>Export directory (ProtocolMountTarget)</strong>: Call <a href="https://www.alibabacloud.com/help/en/cpfs/cpfsonecs/developer-reference/api-nas-2017-06-26-createprotocolmounttarget-cpfs">CreateProtocolMountTarget</a> to create an export directory and obtain the ExportId, or call <a href="https://www.alibabacloud.com/help/en/cpfs/cpfsonecs/developer-reference/api-nas-2017-06-26-describeprotocolmounttarget-cpfs">DescribeProtocolMountTarget</a> to query the ExportId.</li>
+     * <li><strong>Protocol service (ProtocolService)</strong>: Call <a href="https://www.alibabacloud.com/help/en/cpfs/cpfsonecs/developer-reference/api-nas-2017-06-26-describeprotocolservice-cpfs">DescribeProtocolService</a> to obtain the ProtocolServiceId, or call <a href="https://www.alibabacloud.com/help/en/cpfs/cpfsonecs/developer-reference/api-nas-2017-06-26-createprotocolservice-cpfs">CreateProtocolService</a> to create a protocol service.</li>
+     * <li><strong>Export directory (ProtocolMountTarget)</strong>: Call <a href="https://www.alibabacloud.com/help/en/cpfs/cpfsonecs/developer-reference/api-nas-2017-06-26-createprotocolmounttarget-cpfs">CreateProtocolMountTarget</a> to create an export directory and obtain the ExportId, or call <a href="https://www.alibabacloud.com/help/en/cpfs/cpfsonecs/developer-reference/api-nas-2017-06-26-describeprotocolmounttarget-cpfs">DescribeProtocolMountTarget</a> to query the export directory.</li>
      * </ol>
      * 
      * @param request the request parameters of GetProtocolMountTarget  GetProtocolMountTargetRequest
@@ -1503,7 +1519,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Only General-purpose NAS file systems support this feature.</p>
+     * <p>Only General-purpose NAS supports this feature.</p>
      * 
      * @param request the request parameters of ListRecycledDirectoriesAndFiles  ListRecycledDirectoriesAndFilesRequest
      * @return ListRecycledDirectoriesAndFilesResponse
@@ -1527,7 +1543,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Only General-purpose NAS NFS file systems support this feature.</p>
+     * <p>This feature is supported only by General-purpose NAS NFS file systems.</p>
      * 
      * @param request the request parameters of ModifyAccessPoint  ModifyAccessPointRequest
      * @return ModifyAccessPointResponse
@@ -1545,24 +1561,24 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p><em>Prerequisites</em>*
-     * Before you call this operation, complete the following preparations:</p>
+     * <p><em>Before you begin</em>*
+     * Before calling this operation, complete the following preparations:</p>
      * <ol>
-     * <li><strong>Obtain an AgenticSpaceId</strong>: Call the <a href="https://www.alibabacloud.com/help/en/nas/developer-reference/api-nas-2017-06-26-createagenticspace">CreateAgenticSpace</a> operation to create an Agentic space and obtain the AgenticSpaceId.</li>
-     * <li><strong>Create an Agentic file system</strong>: When you call the <a href="https://www.alibabacloud.com/help/en/cpfs/cpfsonecs/developer-reference/api-nas-2017-06-26-createfilesystem-cpfs">CreateFileSystem</a> operation to create a file system, set the following parameters:<ul>
+     * <li><strong>Obtained the AgenticSpaceId</strong>: Call the <a href="https://www.alibabacloud.com/help/en/nas/developer-reference/api-nas-2017-06-26-createagenticspace">CreateAgenticSpace</a> operation to create an Agentic space and obtain the AgenticSpaceId.</li>
+     * <li><strong>Created an Agentic file system</strong>: When calling <a href="https://www.alibabacloud.com/help/en/cpfs/cpfsonecs/developer-reference/api-nas-2017-06-26-createfilesystem-cpfs">CreateFileSystem</a> to create a file system, set the following parameters:<ul>
      * <li><code>StorageType</code>: Set to <code>Agentic</code>.</li>
      * <li><code>ProtocolType</code>: Set to <code>NFS</code>.</li>
-     * <li><strong>Supported regions</strong>: The Agentic storage type is available only in specific regions and zones. Check the console for details.
+     * <li><strong>Supported regions</strong>: The Agentic storage type is available only in specific regions and zones. For more information, see the console.
      * <strong>Usage notes</strong></li>
      * </ul>
      * </li>
      * </ol>
      * <ul>
      * <li>This operation applies only to Agentic file systems.</li>
-     * <li>Complete call chain example:<ol>
+     * <li>Example of a complete call chain:<ol>
      * <li>Call CreateFileSystem to create an Agentic file system (StorageType=Agentic, ProtocolType=NFS).</li>
      * <li>After the file system is created (status is Running), call CreateAgenticSpace to create an Agentic space.</li>
-     * <li>Call ModifyAgenticSpace to modify the Agentic space configurations.</li>
+     * <li>Call this ModifyAgenticSpace operation to modify the configurations of the Agentic space.</li>
      * </ol>
      * </li>
      * </ul>
@@ -1590,7 +1606,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Modifies an access point of a CPFS for Lingjun file system.</p>
+     * <p>Modifies an access point of CPFS for Lingjun.</p>
      * 
      * @param request the request parameters of ModifyCpfsAccessPoint  ModifyCpfsAccessPointRequest
      * @return ModifyCpfsAccessPointResponse
@@ -1639,7 +1655,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Only CPFS 2.2.0 and later and CPFS for Lingjun 2.7.0 and later support modifying fileset information.</p>
+     * <p>Only CPFS 2.2.0 and CPFS for Lingjun 2.7.0 or later support modifying fileset information.</p>
      * 
      * @param request the request parameters of ModifyFileset  ModifyFilesetRequest
      * @return ModifyFilesetResponse
@@ -1676,13 +1692,13 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Before you begin: This operation applies only to Cloud Parallel File Storage (CPFS) file systems.</li>
-     * <li>Status prerequisite: Before calling this operation, the export directory corresponding to ExportId must be in the AVAILABLE state. Call <a href="https://www.alibabacloud.com/help/en/cpfs/cpfsonecs/developer-reference/api-nas-2017-06-26-describeprotocolmounttarget-cpfs">DescribeProtocolMountTarget</a> to query the status and wait until the creation is complete before retrying.</li>
-     * <li>Dependency chain:<ol>
-     * <li>Call <a href="https://www.alibabacloud.com/help/en/cpfs/cpfsonecs/developer-reference/api-nas-2017-06-26-describefilesystems-cpfs">DescribeFileSystems</a> (with FileSystemType set to cpfs) to obtain the CPFS file system.</li>
-     * <li>Call <a href="https://www.alibabacloud.com/help/en/cpfs/cpfsonecs/developer-reference/api-nas-2017-06-26-describeprotocolservice-cpfs">DescribeProtocolService</a> to verify that the protocol service is in the Running state.</li>
-     * <li>Call <a href="https://www.alibabacloud.com/help/en/cpfs/cpfsonecs/developer-reference/api-nas-2017-06-26-describeprotocolmounttarget-cpfs">DescribeProtocolMountTarget</a> to verify that the export directory is in the AVAILABLE state.</li>
-     * <li>If no export directory exists, call <a href="https://www.alibabacloud.com/help/en/cpfs/cpfsonecs/developer-reference/api-nas-2017-06-26-createprotocolmounttarget-cpfs">CreateProtocolMountTarget</a> to create one first.</li>
+     * <li>Before you begin: This API operation applies only to CPFS file systems.</li>
+     * <li>Status prerequisite: Before you call this operation, the export directory specified by the ExportId parameter must be in the AVAILABLE state. Call <a href="https://www.alibabacloud.com/help/en/cpfs/cpfsonecs/developer-reference/api-nas-2017-06-26-describeprotocolmounttarget-cpfs">DescribeProtocolMountTarget</a> to query the status and wait until the creation is complete before you retry.</li>
+     * <li>Prerequisite dependency chain:<ol>
+     * <li>Call <a href="https://www.alibabacloud.com/help/en/cpfs/cpfsonecs/developer-reference/api-nas-2017-06-26-describefilesystems-cpfs">DescribeFileSystems</a> (with the FileSystemType parameter set to cpfs) to obtain the CPFS file system.</li>
+     * <li>Call <a href="https://www.alibabacloud.com/help/en/cpfs/cpfsonecs/developer-reference/api-nas-2017-06-26-describeprotocolservice-cpfs">DescribeProtocolService</a> to confirm that the protocol service is in the Running state.</li>
+     * <li>Call <a href="https://www.alibabacloud.com/help/en/cpfs/cpfsonecs/developer-reference/api-nas-2017-06-26-describeprotocolmounttarget-cpfs">DescribeProtocolMountTarget</a> to confirm that the export directory is in the AVAILABLE state.</li>
+     * <li>If no export directory exists, call <a href="https://www.alibabacloud.com/help/en/cpfs/cpfsonecs/developer-reference/api-nas-2017-06-26-createprotocolmounttarget-cpfs">CreateProtocolMountTarget</a> to create one.</li>
      * </ol>
      * </li>
      * </ul>
@@ -1694,12 +1710,12 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This operation applies only to Cloud Parallel File Storage (CPFS) file systems.</p>
+     * <p>This operation is applicable only to Cloud Parallel File Storage (CPFS) file systems.</p>
      * <ul>
      * <li>This operation allows you to modify the description of a protocol service.</li>
-     * <li>You can obtain the protocol service ID (ProtocolServiceId) in the following ways:<ul>
-     * <li>From the response of the <a href="https://www.alibabacloud.com/help/en/cpfs/cpfsonecs/developer-reference/api-nas-2017-06-26-createprotocolservice-cpfs">CreateProtocolService</a> operation after you create a protocol service.</li>
-     * <li>From the response of the <a href="https://www.alibabacloud.com/help/en/cpfs/cpfsonecs/developer-reference/api-nas-2017-06-26-describeprotocolservice-cpfs">DescribeProtocolService</a> operation that queries existing protocol services.</li>
+     * <li>To obtain the protocol service ID (ProtocolServiceId):<ul>
+     * <li>Call the <a href="https://www.alibabacloud.com/help/en/cpfs/cpfsonecs/developer-reference/api-nas-2017-06-26-createprotocolservice-cpfs">CreateProtocolService</a> operation to create a protocol service and obtain the ID from the response.</li>
+     * <li>Call the <a href="https://www.alibabacloud.com/help/en/cpfs/cpfsonecs/developer-reference/api-nas-2017-06-26-describeprotocolservice-cpfs">DescribeProtocolService</a> operation to query the list of existing protocol services.</li>
      * </ul>
      * </li>
      * </ul>
@@ -1779,18 +1795,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <p><em>Before you begin</em>*
-     * Before you call this operation, complete the following preparations:</p>
+     * Before calling this operation, complete the following preparations:</p>
      * <ol>
-     * <li><strong>Obtain an AgenticSpaceId</strong>: Call the <a href="https://www.alibabacloud.com/help/en/nas/developer-reference/api-nas-2017-06-26-createagenticspace">CreateAgenticSpace</a> operation to create an Agentic space and obtain the AgenticSpaceId.</li>
-     * <li><strong>Create an Agentic file system</strong>: When you call the <a href="https://www.alibabacloud.com/help/en/cpfs/cpfsonecs/developer-reference/api-nas-2017-06-26-createfilesystem-cpfs">CreateFileSystem</a> operation to create a file system, set <code>StorageType=Agentic</code>.<ul>
-     * <li><strong>Supported regions</strong>: The Agentic storage type is available only in specific regions and zones. Check the console for details.
+     * <li><strong>Obtain the AgenticSpaceId</strong>: Call the <a href="https://www.alibabacloud.com/help/en/nas/developer-reference/api-nas-2017-06-26-createagenticspace">CreateAgenticSpace</a> operation to create an Agentic space and obtain the AgenticSpaceId.</li>
+     * <li><strong>Create an Agentic file system</strong>: When calling <a href="https://www.alibabacloud.com/help/en/cpfs/cpfsonecs/developer-reference/api-nas-2017-06-26-createfilesystem-cpfs">CreateFileSystem</a> to create a file system, set <code>StorageType=Agentic</code>.<ul>
+     * <li><strong>Supported regions</strong>: The Agentic storage type is available only in specific regions and zones. For more information, refer to the console.
      * <strong>Usage notes</strong></li>
      * </ul>
      * </li>
      * </ol>
      * <ul>
      * <li>This operation applies only to Agentic file systems.</li>
-     * <li>Quota statistics have a 15-minute delay. The actual usage takes effect 15 minutes later.</li>
+     * <li>Quota statistics have a 15-minute delay. The current actual usage takes effect after 15 minutes.</li>
      * </ul>
      * 
      * @param request the request parameters of SetAgenticSpaceQuota  SetAgenticSpaceQuotaRequest
@@ -1800,7 +1816,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Only General-purpose NAS file systems support the directory quota feature.</p>
+     * <p>Only general-purpose NAS file systems support the directory quota feature.</p>
      * 
      * @param request the request parameters of SetDirQuota  SetDirQuotaRequest
      * @return SetDirQuotaResponse
@@ -1826,11 +1842,11 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>This operation is applicable only to Cloud Parallel File Storage (CPFS) file systems.</li>
+     * <li>This operation is applicable only to CPFS file systems.</li>
      * <li>Only CPFS 2.2.0 and later support data flows. You can view the version information on the file system details page in the console.</li>
-     * <li>You can enable only a data flow that is in the <code>Stopped</code> state.</li>
-     * <li>If DryRun is set to <code>true</code>, you can check whether sufficient resources are available to enable a data flow of the specified specifications. If inventory resources are insufficient, the data flow cannot be enabled.</li>
-     * <li>Enabling a data flow typically takes 2 to 5 minutes. You can call <a href="https://help.aliyun.com/document_detail/2402270.html">DescribeDataFlows</a> to query the data flow status.</li>
+     * <li>Only data flows in the <code>Stopped</code> state can be started.</li>
+     * <li>When DryRun is set to <code>true</code>, you can check whether sufficient resources are available to start a data flow with the specified specifications. If resources are insufficient, the data flow cannot be started.</li>
+     * <li>Starting a data flow typically takes 2 to 5 minutes. You can call <a href="https://help.aliyun.com/document_detail/2402270.html">DescribeDataFlows</a> to query the status of the data flow.</li>
      * </ul>
      * 
      * @param request the request parameters of StartDataFlow  StartDataFlowRequest
@@ -1840,8 +1856,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Starts the execution of a lifecycle management policy.
-     * This operation is supported only when LifecyclePolicyType is set to OnDemand in the lifecycle management policy of a CPFS for Lingjun file system.</p>
+     * <p>Starts the execution of a lifecycle policy. This operation is supported only when the LifecyclePolicyType parameter of the lifecycle management policy for a CPFS for Lingjun file system is set to OnDemand.</p>
      * 
      * @param request the request parameters of StartLifecyclePolicyExecution  StartLifecyclePolicyExecutionRequest
      * @return StartLifecyclePolicyExecutionResponse
@@ -1851,12 +1866,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>This operation applies only to Cloud Parallel File Storage (CPFS) file systems.</li>
-     * <li>Only CPFS 2.2.0 and later support dataflows. You can view the version information on the file system details page in the console.</li>
-     * <li>You can disable only a dataflow in the <code>Running</code> state.</li>
-     * <li>After a dataflow is disabled, you cannot create dataflow tasks for it. If automatic update is configured, data updates on the source are not synchronized to CPFS.</li>
-     * <li>After a dataflow is disabled, the dataflow bandwidth is no longer billed because resources are reclaimed. However, re-enabling the dataflow may fail due to insufficient inventory.</li>
-     * <li>Disabling a dataflow typically takes 2 to 5 minutes. You can call <a href="https://help.aliyun.com/document_detail/2402271.html">DescribeDataFlows</a> to query the dataflow status.</li>
+     * <li>This operation applies only to CPFS file systems.</li>
+     * <li>Only CPFS 2.2.0 and later support data flows. You can view the version information on the file system details page in the console.</li>
+     * <li>Only data flows in the <code>Running</code> (normal) state can be disabled.</li>
+     * <li>After a data flow is disabled, you cannot create data flow tasks for the data flow. If automatic update is configured, data updates that occur on the source are not synchronized to CPFS.</li>
+     * <li>After a data flow is disabled, the data flow bandwidth is no longer billed because resources are reclaimed. However, restarting the data flow may fail due to insufficient inventory.</li>
+     * <li>Disabling a data flow typically takes 2 to 5 minutes. You can call <a href="https://help.aliyun.com/document_detail/2402271.html">DescribeDataFlows</a> to query the data flow status.</li>
      * </ul>
      * 
      * @param request the request parameters of StopDataFlow  StopDataFlowRequest
@@ -1867,7 +1882,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <p>Stops the execution of a lifecycle policy.
-     * This operation is supported only when LifecyclePolicyType is set to OnDemand in the lifecycle management policy of a CPFS for Lingjun file system.</p>
+     * This operation is supported only when the LifecyclePolicyType parameter is set to OnDemand in the lifecycle management policy of a CPFS for Lingjun file system.</p>
      * 
      * @param request the request parameters of StopLifecyclePolicyExecution  StopLifecyclePolicyExecutionRequest
      * @return StopLifecyclePolicyExecutionResponse

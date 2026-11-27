@@ -67,7 +67,7 @@ public class CreateAccessRuleResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the permission rule.</p>
+         * <p>The ID of the permission group rule.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

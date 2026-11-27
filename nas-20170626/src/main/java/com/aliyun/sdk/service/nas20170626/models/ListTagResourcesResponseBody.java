@@ -80,7 +80,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The token for the next query. If NextToken is empty, no more results exist.</p>
+         * <p>The token for the next query. If NextToken is empty, it indicates that the current page is the last page.</p>
          * 
          * <strong>example:</strong>
          * <p>None</p>

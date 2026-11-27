@@ -80,7 +80,7 @@ public class OpenNASServiceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details of the permission verification failure.</p>
+         * <p>The details of the permission check failure.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -99,7 +99,7 @@ public class OpenNASServiceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The order ID for activating the service.</p>
+         * <p>The order ID for the service activation.</p>
          * 
          * <strong>example:</strong>
          * <p>20671870151****</p>

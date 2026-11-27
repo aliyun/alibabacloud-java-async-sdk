@@ -131,7 +131,7 @@ public class SetAgenticSpaceQuotaRequest extends Request {
         } 
 
         /**
-         * <p>AgenticSpace Id。</p>
+         * <p>The AgenticSpace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -144,10 +144,10 @@ public class SetAgenticSpaceQuotaRequest extends Request {
         }
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests.</p>
-         * <p>The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, and you must ensure that the value is unique among different requests.</p>
+         * <p>The client token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">Ensure idempotence</a>.</p>
          * <blockquote>
-         * <p>If you do not specify this parameter, the system automatically uses the RequestId of the API request as the ClientToken. The RequestId may differ for each API request.</p>
+         * <p>If you do not specify this parameter, the system automatically uses the RequestId of the API request as the client token. The RequestId of each API request may be different.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -160,11 +160,11 @@ public class SetAgenticSpaceQuotaRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to perform a dry run for this request. A dry run checks parameter validity and dependencies without actually modifying the instance or incurring fees.</p>
+         * <p>Specifies whether to perform a dry run on the modification request. A dry run checks the validity of parameters and dependencies without actually modifying the instance or incurring fees.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>true: Sends a dry run request without modifying the protocol service. The check items include required parameters, request format, and business dependency conditions. If the check fails, the corresponding error is returned. If the check succeeds, HTTP status code 200 is returned.</li>
-         * <li>false (default): Sends a normal request. After the check succeeds, the protocol service is directly modified.</li>
+         * <li>true: performs a dry run. The protocol service is not modified. The system checks whether required parameters are specified, the request format is valid, and business limits and dependencies are met. If the request fails the dry run, an error is returned. If the request passes the dry run, the HTTP status code 200 is returned.</li>
+         * <li>false: performs a normal request. The protocol service is modified directly after the request passes the check. This is the default value.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -177,7 +177,7 @@ public class SetAgenticSpaceQuotaRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of files allowed by the quota. Valid values:</p>
+         * <p>The file count limit for the quota. Valid values:</p>
          * <ul>
          * <li><p>Minimum value: 10,000.</p>
          * </li>
@@ -195,7 +195,7 @@ public class SetAgenticSpaceQuotaRequest extends Request {
         }
 
         /**
-         * <p>The file system ID.</p>
+         * <p>The ID of the file system.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -208,12 +208,12 @@ public class SetAgenticSpaceQuotaRequest extends Request {
         }
 
         /**
-         * <p>The total capacity limit of the quota. Unit: bytes.</p>
+         * <p>The total capacity limit for the quota. Unit: bytes.</p>
          * <p>Valid values:</p>
          * <ul>
          * <li>Minimum value: 10,737,418,240 (10 GiB).</li>
          * <li>Maximum value: 1,099,511,627,776,000 (1,024,000 GiB).</li>
-         * <li>Increment: 1,073,741,824 (1 GiB).</li>
+         * <li>Step size: 1,073,741,824 (1 GiB).</li>
          * </ul>
          * 
          * <strong>example:</strong>

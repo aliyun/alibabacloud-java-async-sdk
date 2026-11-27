@@ -159,7 +159,7 @@ public class UpdateLifecyclePolicyRequest extends Request {
         } 
 
         /**
-         * <p>The expiration and deletion rules for file data.</p>
+         * <p>The file data expiration and deletion rules.</p>
          */
         public Builder deleteRules(java.util.List<DeleteRules> deleteRules) {
             this.putQueryParameter("DeleteRules", deleteRules);
@@ -172,7 +172,7 @@ public class UpdateLifecyclePolicyRequest extends Request {
          * <p>Format:
          * The description must be 3 to 64 characters in length. It must start with a letter and can contain letters, digits, underscores (_), and hyphens (-).</p>
          * <blockquote>
-         * <p>Supported only for CPFS for Lingjun.</p>
+         * <p>Supported only by CPFS for Lingjun.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -185,9 +185,9 @@ public class UpdateLifecyclePolicyRequest extends Request {
         }
 
         /**
-         * <p>The ID of the file system. The ID starts with bmcpfs-, such as bmcpfs-290w65p03ok64ya****. To use CPFS for Lingjun, you must first submit a ticket to apply for the service whitelist and then create the file system in the NAS console.</p>
+         * <p>The ID of the file system. The ID starts with bmcpfs-, such as bmcpfs-290w65p03ok64ya****. To use CPFS for Lingjun, you must first submit a ticket to apply for the service whitelist and then create a file system in the NAS console.</p>
          * <blockquote>
-         * <p>Supported only when LifecyclePolicyType is set to OnDemand in the lifecycle management policy of a CPFS for Lingjun file system.</p>
+         * <p>This parameter is supported only when LifecyclePolicyType is set to OnDemand in the lifecycle management policy of a CPFS for Lingjun file system.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -226,9 +226,9 @@ public class UpdateLifecyclePolicyRequest extends Request {
         }
 
         /**
-         * <p>The data retrieval rules for files. You can configure up to one rule.</p>
+         * <p>The file data retrieval rules. You can configure up to one rule.</p>
          * <blockquote>
-         * <p>Supported only for CPFS for Lingjun file systems.</p>
+         * <p>Supported only by CPFS for Lingjun file systems.</p>
          * </blockquote>
          */
         public Builder retrieveRules(java.util.List<RetrieveRules> retrieveRules) {
@@ -240,7 +240,7 @@ public class UpdateLifecyclePolicyRequest extends Request {
         /**
          * <p>The tiered storage type. Valid values:</p>
          * <ul>
-         * <li>InfrequentAccess: IA storage class. This is the default value.</li>
+         * <li>InfrequentAccess: IA storage class (default).</li>
          * <li>Archive: Archive storage class.</li>
          * </ul>
          * 
@@ -254,9 +254,9 @@ public class UpdateLifecyclePolicyRequest extends Request {
         }
 
         /**
-         * <p>The data transition rules for files. You can configure up to one rule.</p>
+         * <p>The file data dump rules. You can configure up to one rule.</p>
          * <blockquote>
-         * <p>Supported only when LifecyclePolicyType is set to Auto for a CPFS for Lingjun file system.</p>
+         * <p>Supported only when LifecyclePolicyType is set to Auto for CPFS for Lingjun file systems.</p>
          * </blockquote>
          */
         public Builder transitRules(java.util.List<TransitRules> transitRules) {
@@ -328,7 +328,7 @@ public class UpdateLifecyclePolicyRequest extends Request {
              * <p>The attribute of the rule.</p>
              * <p>Valid values:</p>
              * <ul>
-             * <li>Atime: the last access time of the file.</li>
+             * <li>Atime: the access time of the file.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -343,7 +343,7 @@ public class UpdateLifecyclePolicyRequest extends Request {
              * <p>The threshold of the rule.</p>
              * <p>Valid values:</p>
              * <ul>
-             * <li>If Attribute is set to Atime, the value indicates the number of days that a file has not been accessed. Valid values: 1 to 365.</li>
+             * <li>When Attribute is set to Atime, the value indicates the number of days a file has not been accessed. Valid values: 1 to 365.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -428,10 +428,13 @@ public class UpdateLifecyclePolicyRequest extends Request {
             }
 
             /**
-             * <p>The threshold of the rule. Valid values for RetrieveType:</p>
+             * <p>The threshold of the rule. Valid values:</p>
              * <ul>
-             * <li>AfterVisit: supported when LifecyclePolicyType is set to Auto. This value indicates best-effort recall on visit.</li>
-             * <li>All: supported when LifecyclePolicyType is set to OnDemand. This value indicates that all data is retrieved.</li>
+             * <li>RetrieveType<ul>
+             * <li>AfterVisit: Supported when LifecyclePolicyType is set to Auto. This value indicates best-effort recall on visit.</li>
+             * <li>All: Supported when LifecyclePolicyType is set to OnDemand. This value indicates that all data is retrieved.</li>
+             * </ul>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -505,7 +508,7 @@ public class UpdateLifecyclePolicyRequest extends Request {
              * <p>The attribute of the rule.</p>
              * <p>Valid values:</p>
              * <ul>
-             * <li>Atime: the last access time of the file.</li>
+             * <li>Atime: the access time of the file.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -520,7 +523,7 @@ public class UpdateLifecyclePolicyRequest extends Request {
              * <p>The threshold of the rule.</p>
              * <p>Valid values:</p>
              * <ul>
-             * <li>If Attribute is set to Atime, the value indicates the number of days that a file has not been accessed. Valid values: 1 to 365.</li>
+             * <li>When Attribute is set to Atime, the value indicates the number of days a file has not been accessed. Valid values: 1 to 365.</li>
              * </ul>
              * 
              * <strong>example:</strong>

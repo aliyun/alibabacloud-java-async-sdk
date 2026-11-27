@@ -67,7 +67,7 @@ public class GetAgenticSpaceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The AgenticSpace information.</p>
+         * <p>The Agentic space information.</p>
          */
         public Builder agenticSpace(AgenticSpace agenticSpace) {
             this.agenticSpace = agenticSpace;
@@ -75,7 +75,7 @@ public class GetAgenticSpaceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>473469C7-AA6F-4DC5-B3DB-A3DC0D****3E</p>
@@ -165,8 +165,8 @@ public class GetAgenticSpaceResponseBody extends TeaModel {
              * <p>Valid values:</p>
              * <ul>
              * <li>Minimum value: 10,737,418,240 (10 GiB).</li>
-             * <li>Maximum value: 1,099,511,627,776,000 (1024000 GiB).</li>
-             * <li>Step: 1,073,741,824 (1 GiB).</li>
+             * <li>Maximum value: 1,099,511,627,776,000 (1,024,000 GiB).</li>
+             * <li>Step size: 1,073,741,824 (1 GiB).</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -354,7 +354,7 @@ public class GetAgenticSpaceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>AgenticSpace Id。</p>
+             * <p>The AgenticSpace ID.</p>
              * 
              * <strong>example:</strong>
              * <p>agentic-229oypxjgpau2****</p>
@@ -376,8 +376,7 @@ public class GetAgenticSpaceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the AgenticSpace was created.
-             * The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</p>
+             * <p>The time when the Agentic space was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-06-10T10:08:08Z</p>
@@ -388,7 +387,7 @@ public class GetAgenticSpaceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>AgenticSpace Description。</p>
+             * <p>The description of the AgenticSpace.</p>
              * 
              * <strong>example:</strong>
              * <p>AgenticSpace Description。</p>
@@ -399,7 +398,7 @@ public class GetAgenticSpaceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The file count usage.</p>
+             * <p>The number of files used.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -410,7 +409,7 @@ public class GetAgenticSpaceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The file system ID.</p>
+             * <p>The ID of the file system.</p>
              * 
              * <strong>example:</strong>
              * <p>06229oypxjgox0u****</p>
@@ -421,7 +420,7 @@ public class GetAgenticSpaceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The absolute file path.</p>
+             * <p>The absolute path of the file.</p>
              * 
              * <strong>example:</strong>
              * <p>/test/</p>
@@ -440,7 +439,7 @@ public class GetAgenticSpaceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The capacity usage. Unit: bytes.</p>
+             * <p>The used capacity. Unit: bytes.</p>
              * 
              * <strong>example:</strong>
              * <p>1024</p>
@@ -451,9 +450,13 @@ public class GetAgenticSpaceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the AgenticSpace. Valid values:</p>
+             * <p>The status of the Agentic space. Valid values:</p>
              * <ul>
-             * <li>Running</li>
+             * <li>Running: The space is running.</li>
+             * <li>Deleted: The space is deleted.</li>
+             * <li>Creating: The space is being created.</li>
+             * <li>Deleting: The space is being deleted.</li>
+             * <li>CreateFailed: The space failed to be created.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -465,8 +468,7 @@ public class GetAgenticSpaceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the AgenticSpace was last updated.
-             * The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</p>
+             * <p>The time when the Agentic space was updated. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-06-10T10:08:08Z</p>
