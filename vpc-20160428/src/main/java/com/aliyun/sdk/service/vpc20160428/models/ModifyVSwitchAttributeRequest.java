@@ -241,7 +241,14 @@ public class ModifyVSwitchAttributeRequest extends Request {
         }
 
         /**
-         * EnableDns64.
+         * <p>Specifies whether to enable DNS64 for the vSwitch. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: enables DNS64. IPv6 must be enabled for the vSwitch.</li>
+         * <li><strong>false</strong>: disables DNS64.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enableDns64(Boolean enableDns64) {
             this.putQueryParameter("EnableDns64", enableDns64);
@@ -252,8 +259,8 @@ public class ModifyVSwitchAttributeRequest extends Request {
         /**
          * <p>Specifies whether to enable IPv6 for the vSwitch. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: Enables IPv6. IPv6 must be enabled for the VPC to which the vSwitch belongs. You must also specify Ipv6CidrBlock to allocate an IPv6 CIDR block to the vSwitch.</li>
-         * <li><strong>false</strong> (default): Disables IPv6. Before you disable IPv6 for the vSwitch, make sure that no IPv6 addresses are in use. You cannot specify Ipv6CidrBlock at the same time.</li>
+         * <li><strong>true</strong>: enables IPv6. IPv6 must be enabled for the VPC to which the vSwitch belongs, and you must also specify Ipv6CidrBlock to assign an IPv6 CIDR block to the vSwitch.</li>
+         * <li><strong>false</strong> (default): disables IPv6. When you disable IPv6 for the vSwitch, make sure that no IPv6 addresses are in use, and do not specify Ipv6CidrBlock at the same time.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -267,7 +274,7 @@ public class ModifyVSwitchAttributeRequest extends Request {
 
         /**
          * <p>The last 8 bits of the IPv6 CIDR block of the vSwitch. Valid values: <strong>0</strong> to <strong>255</strong>.</p>
-         * <p>You can set this parameter only when IPv6 is enabled for the VPC to which the vSwitch belongs. This parameter allows you to allocate an IPv6 CIDR block to the vSwitch. After the IPv6 CIDR block is allocated, it cannot be changed to another CIDR block. Make sure that the CIDR block does not overlap with those of other vSwitches in the same VPC.</p>
+         * <p>You can specify this parameter to assign an IPv6 CIDR block to the vSwitch only when IPv6 is enabled for the VPC to which the vSwitch belongs. After an IPv6 CIDR block is assigned, it cannot be changed to another CIDR block. Make sure that the IPv6 CIDR block does not overlap with the CIDR blocks of other vSwitches in the same VPC.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -279,7 +286,7 @@ public class ModifyVSwitchAttributeRequest extends Request {
         }
 
         /**
-         * <p>The IPv6 CIDR block mask of the vSwitch. You can set this parameter only when IPv6 is enabled for the VPC to which the vSwitch belongs.</p>
+         * <p>The mask of the IPv6 CIDR block of the vSwitch. You can specify this parameter to assign an IPv6 CIDR block to the vSwitch only when IPv6 is enabled for the VPC to which the vSwitch belongs.</p>
          * <blockquote>
          * <p>Only 64 is supported.</p>
          * </blockquote>
@@ -312,7 +319,7 @@ public class ModifyVSwitchAttributeRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the vSwitch. You can call <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> to query the most recent region list.</p>
+         * <p>The region ID of the vSwitch. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -369,7 +376,7 @@ public class ModifyVSwitchAttributeRequest extends Request {
 
         /**
          * <p>The IPv6 CIDR block of the VPC to which the vSwitch belongs.
-         * If the VPC has multiple IPv6 CIDR blocks, you can specify this parameter to indicate the IPv6 CIDR block range for the vSwitch. If you do not specify this parameter, the IPv6 CIDR block assigned when IPv6 was enabled for the VPC is used.</p>
+         * If the VPC has multiple IPv6 CIDR blocks, you can specify this parameter to specify the IPv6 CIDR block range to which the vSwitch belongs. If you do not specify this parameter, the IPv6 CIDR block assigned when IPv6 is enabled for the VPC is selected.</p>
          * 
          * <strong>example:</strong>
          * <p>2408:XXXX:312:3e00::/56</p>

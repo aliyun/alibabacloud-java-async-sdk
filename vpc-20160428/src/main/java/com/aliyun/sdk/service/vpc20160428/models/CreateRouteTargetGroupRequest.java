@@ -203,7 +203,7 @@ public class CreateRouteTargetGroupRequest extends Request {
         } 
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters. If you do not specify this parameter, the system automatically uses the RequestId value as the ClientToken value. The RequestId value is different for each API request.</p>
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The client token can only contain ASCII characters. Note: If you do not specify this parameter, the system automatically uses the RequestId of the API request as the client token. The RequestId of each API request is different.</p>
          * 
          * <strong>example:</strong>
          * <p>0c593ea1-3bea-11e9-b96b-88e9fe6****</p>
@@ -217,7 +217,7 @@ public class CreateRouteTargetGroupRequest extends Request {
         /**
          * <p>The configuration mode of the route target group. Valid values:</p>
          * <ul>
-         * <li><strong>Active-Standby</strong>: active/standby mode.</li>
+         * <li><strong>Active-Standby</strong>: Active/standby mode.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -231,7 +231,7 @@ public class CreateRouteTargetGroupRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * <p>Specifies whether to perform a dry run without executing the operation.</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -240,7 +240,10 @@ public class CreateRouteTargetGroupRequest extends Request {
         }
 
         /**
-         * IpVersion.
+         * <p>The IP version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>IPv4</p>
          */
         public Builder ipVersion(String ipVersion) {
             this.putQueryParameter("IpVersion", ipVersion);
@@ -249,7 +252,7 @@ public class CreateRouteTargetGroupRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the route target group. You can call the DescribeRegions operation to query the most recent region list.</p>
+         * <p>The region ID of the route target group. You can call the DescribeRegions operation to obtain the region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -262,7 +265,7 @@ public class CreateRouteTargetGroupRequest extends Request {
         }
 
         /**
-         * <p>The resource group ID.</p>
+         * <p>The ID of the resource group.</p>
          * <p>For more information about resource groups, see <a href="https://help.aliyun.com/document_detail/2381067.html">What is a resource group?</a>.</p>
          * 
          * <strong>example:</strong>
@@ -275,7 +278,8 @@ public class CreateRouteTargetGroupRequest extends Request {
         }
 
         /**
-         * <p>The description of the route target group. The description must be 1 to 256 characters in length and cannot start with http:// or https://.</p>
+         * <p>The description of the route target group.
+         * The description must be 1 to 256 characters in length and cannot start with http:// or https://.</p>
          * 
          * <strong>example:</strong>
          * <p>myRouteTargetGroupDescription</p>
@@ -301,10 +305,10 @@ public class CreateRouteTargetGroupRequest extends Request {
 
         /**
          * <p>The list of members in the route target group.</p>
-         * <p>In active/standby mode, the following limits apply to route target group members:</p>
+         * <p>In active/standby mode, the following limits apply to the members of the route target group:</p>
          * <ol>
-         * <li>The number of route target group members must be 2.</li>
-         * <li>The route target group members must be in different zones.</li>
+         * <li>The number of members in the route target group must be 2.</li>
+         * <li>The members of the route target group must belong to different zones.</li>
          * </ol>
          * <p>This parameter is required.</p>
          */
@@ -412,7 +416,7 @@ public class CreateRouteTargetGroupRequest extends Request {
             } 
 
             /**
-             * <p>The instance ID of the route target group member.</p>
+             * <p>The instance ID of the member in the routing target group.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -424,8 +428,8 @@ public class CreateRouteTargetGroupRequest extends Request {
             }
 
             /**
-             * <p>The type of the route target group member.</p>
-             * <p>Supported type:</p>
+             * <p>The type of the member in the route target group.</p>
+             * <p>Supported types:</p>
              * <ul>
              * <li><strong>GatewayLoadBalancerEndpoint</strong></li>
              * </ul>
@@ -441,7 +445,7 @@ public class CreateRouteTargetGroupRequest extends Request {
             }
 
             /**
-             * <p>The weight of the route target group member. Valid values:</p>
+             * <p>The weight of the member in the route target group. Valid values:</p>
              * <ul>
              * <li><strong>100</strong>: The member is the primary instance.</li>
              * <li><strong>0</strong>: The member is the secondary instance.</li>
@@ -517,8 +521,8 @@ public class CreateRouteTargetGroupRequest extends Request {
             } 
 
             /**
-             * <p>The tag key of the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
-             * <p>The tag key can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>The tag key of the resource. You can specify up to 20 tag keys. If you specify this parameter, you cannot enter an empty string.</p>
+             * <p>A tag key can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>FinanceDept</p>
@@ -529,8 +533,8 @@ public class CreateRouteTargetGroupRequest extends Request {
             }
 
             /**
-             * <p>The tag value of the resource. You can specify up to 20 tag values. The tag value can be an empty string.</p>
-             * <p>The tag value can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>The tag value of the resource. You can specify up to 20 tag values. If you specify this parameter, you can enter an empty string.</p>
+             * <p>A tag value can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>FinanceJoshua</p>

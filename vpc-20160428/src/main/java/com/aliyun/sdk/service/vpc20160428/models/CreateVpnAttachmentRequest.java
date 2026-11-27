@@ -464,6 +464,9 @@ public class CreateVpnAttachmentRequest extends Request {
 
         /**
          * <p>The customer gateway ID.</p>
+         * <blockquote>
+         * <p>This parameter must be specified only when you create an IPsec-VPN connection in single-tunnel mode.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>cgw-p0w2jemrcj5u61un8****</p>
@@ -476,6 +479,10 @@ public class CreateVpnAttachmentRequest extends Request {
 
         /**
          * <p>Specifies whether to perform a dry run. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: sends a check request and does not create the IPsec connection. The system checks whether required parameters are specified, whether the request format is valid, and whether business limits are exceeded. If the check fails, the corresponding error is returned. If the check succeeds, the error code <code>DryRunOperation</code> is returned.</li>
+         * <li><strong>false</strong> (default): sends a normal request. After the check succeeds, the system directly creates the IPsec connection.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -488,6 +495,10 @@ public class CreateVpnAttachmentRequest extends Request {
 
         /**
          * <p>Specifies whether the configuration of the IPsec-VPN connection takes effect immediately. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: yes. After the configuration is complete, the system immediately starts IPsec negotiation.</li>
+         * <li><strong>false</strong> (default): no. The system starts IPsec negotiation only after traffic flows in.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -538,6 +549,10 @@ public class CreateVpnAttachmentRequest extends Request {
 
         /**
          * <p>This parameter is supported when you create a dual-tunnel IPsec-VPN connection.</p>
+         * <p>Specifies whether to enable BGP for the tunnel. Valid values: <strong>true</strong> and <strong>false</strong> (default).</p>
+         * <blockquote>
+         * <p>Before you add BGP configurations, we recommend that you understand the working mechanism and usage limits of BGP dynamic routing. For more information, see <a href="https://help.aliyun.com/document_detail/445767.html">Configure BGP dynamic routing</a>.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -550,6 +565,25 @@ public class CreateVpnAttachmentRequest extends Request {
 
         /**
          * <p>This parameter is supported when you create a single-tunnel IPsec-VPN connection.</p>
+         * <p>Health check configurations:</p>
+         * <ul>
+         * <li><p><strong>HealthCheckConfig.enable</strong>: specifies whether to enable health checks. Valid values: <strong>true</strong> and <strong>false</strong> (default).</p>
+         * </li>
+         * <li><p><strong>HealthCheckConfig.dip</strong>: the destination IP address of health checks. Enter the IP address of the on-premises data center that can be accessed from the VPC side over the IPsec connection.</p>
+         * </li>
+         * <li><p><strong>HealthCheckConfig.sip</strong>: the source IP address of health checks. Enter the IP address on the VPC side that can be accessed from the on-premises data center over the IPsec connection.</p>
+         * </li>
+         * <li><p><strong>HealthCheckConfig.interval</strong>: the interval at which health check retries are performed. Unit: seconds. Default value: <strong>3</strong>.</p>
+         * </li>
+         * <li><p><strong>HealthCheckConfig.retry</strong>: the number of packets that are retransmitted for health checks. Default value: <strong>3</strong>.</p>
+         * </li>
+         * <li><p><strong>HealthCheckConfig.Policy</strong>: specifies whether to revoke the published routes if a health check fails. Valid values:</p>
+         * <ul>
+         * <li><strong>revoke_route</strong> (default): revokes the published routes.</li>
+         * <li><strong>reserve_route</strong>: does not revoke the published routes.</li>
+         * </ul>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>{&quot;enable&quot;:&quot;true&quot;,&quot;dip&quot;:&quot;192.168.1.1&quot;,&quot;sip&quot;:&quot;10.1.1.1&quot;,&quot;interval&quot;:&quot;3&quot;,&quot;retry&quot;:&quot;3&quot;,&quot;Policy&quot;: &quot;revoke_route&quot;}</p>
@@ -644,6 +678,7 @@ public class CreateVpnAttachmentRequest extends Request {
 
         /**
          * <p>The name of the IPsec-VPN connection.</p>
+         * <p>The name must be 1 to 100 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>nametest</p>
@@ -656,6 +691,10 @@ public class CreateVpnAttachmentRequest extends Request {
 
         /**
          * <p>The network type of the IPsec-VPN connection. Valid values:</p>
+         * <ul>
+         * <li><strong>public</strong> (default): public network. The IPsec connection establishes an encrypted communication channel over the public network.</li>
+         * <li><strong>private</strong>: private network. The IPsec connection establishes an encrypted communication channel over a private network.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>public</p>
@@ -756,6 +795,7 @@ public class CreateVpnAttachmentRequest extends Request {
 
         /**
          * <p>The list of tags to add to the IPsec-VPN connection.</p>
+         * <p>You can add up to 20 tags to an IPsec connection at a time.</p>
          */
         public Builder tags(java.util.List<Tags> tags) {
             this.putQueryParameter("Tags", tags);
@@ -764,7 +804,9 @@ public class CreateVpnAttachmentRequest extends Request {
         }
 
         /**
-         * <p>The bandwidth specification of a single VPN tunnel. Valid values:</p>
+         * <p>The bandwidth specification of a single VPN tunnel. Valid values:
+         * Standard (default): Standard type. Default bandwidth: 1 Gbps
+         * Large: Large type. Default bandwidth: 3 Gbps</p>
          * 
          * <strong>example:</strong>
          * <p>Standard</p>
@@ -1502,6 +1544,9 @@ public class CreateVpnAttachmentRequest extends Request {
 
             /**
              * <p>The ID of the customer gateway associated with the tunnel.</p>
+             * <blockquote>
+             * <p>This parameter is required when you create an IPsec-VPN connection in dual-tunnel mode.</p>
+             * </blockquote>
              * 
              * <strong>example:</strong>
              * <p>cgw-p0w2jemrcj5u61un8****</p>

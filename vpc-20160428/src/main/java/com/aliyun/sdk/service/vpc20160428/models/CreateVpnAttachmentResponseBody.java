@@ -189,6 +189,10 @@ public class CreateVpnAttachmentResponseBody extends TeaModel {
 
         /**
          * <p>Indicates whether the current task is successfully executed.</p>
+         * <ul>
+         * <li><strong>true</strong>: The task is successfully executed.</li>
+         * <li><strong>false</strong>: The task fails to be executed.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>

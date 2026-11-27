@@ -106,7 +106,7 @@ public class ListRouteTargetGroupsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -117,7 +117,7 @@ public class ListRouteTargetGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The token used to retrieve the next page of results. If NextToken is empty, no subsequent query is required. If NextToken is returned, the value indicates the token for the next query.</p>
+         * <p>The token for the next query. If the NextToken parameter is empty, no subsequent query is available. If the NextToken parameter is returned, the value indicates the token for the next query.</p>
          * 
          * <strong>example:</strong>
          * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
@@ -260,7 +260,7 @@ public class ListRouteTargetGroupsResponseBody extends TeaModel {
              * <li><strong>Enable</strong>: Enabled.</li>
              * <li><strong>Disable</strong>: Disabled.</li>
              * </ul>
-             * <p>Only members in the Disabled state can be changed to other instances. Members in the Enabled state cannot be modified.</p>
+             * <p>Only members in the Disabled state can be changed to other instances. Members in the Enabled state cannot be changed.</p>
              * 
              * <strong>example:</strong>
              * <p>Enable</p>
@@ -286,7 +286,7 @@ public class ListRouteTargetGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The member instance ID of the routing target group.</p>
+             * <p>The instance ID of the member in the route target group.</p>
              * 
              * <strong>example:</strong>
              * <p>ep-xxxx</p>
@@ -297,7 +297,7 @@ public class ListRouteTargetGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The member type of the route target group.</p>
+             * <p>The type of the member in the route target group.</p>
              * <p>Currently supported types:</p>
              * <ul>
              * <li><strong>GatewayLoadBalancerEndpoint</strong></li>
@@ -398,7 +398,8 @@ public class ListRouteTargetGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag value of the resource. You can specify up to 20 tag values. If you specify this parameter, you can enter an empty string. A tag value can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>The tag value of the resource. You can specify up to 20 tag values. If you specify this parameter, you can specify an empty string.</p>
+             * <p>A tag value can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>8</p>
@@ -613,7 +614,7 @@ public class ListRouteTargetGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the route target group was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
+             * <p>The time when the route target group was created. The time is displayed in UTC and follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-12-30T06:40:50Z</p>
@@ -624,6 +625,7 @@ public class ListRouteTargetGroupsResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The IP version of the route target group.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -669,7 +671,7 @@ public class ListRouteTargetGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance ID of the routing target group.</p>
+             * <p>The instance ID of the route target group.</p>
              * 
              * <strong>example:</strong>
              * <p>rtg-xxxx</p>
@@ -699,16 +701,16 @@ public class ListRouteTargetGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the routing target group. Valid values:</p>
+             * <p>The status of the route target group. Valid values:</p>
              * <ul>
-             * <li><strong>Recovering</strong>: Switching back to the primary instance.</li>
-             * <li><strong>Switched</strong>: Primary/secondary switchover completed.</li>
-             * <li><strong>Available</strong>: active.</li>
-             * <li><strong>Abnormal</strong>: Secondary instance failures.</li>
-             * <li><strong>Pending</strong>: Creating.</li>
-             * <li><strong>Switching</strong>: Performing primary/secondary switchover.</li>
-             * <li><strong>Deleting</strong>: delete.</li>
-             * <li><strong>Unavailable</strong>: Both primary and secondary instances have instance failures.</li>
+             * <li><strong>Recovering</strong>: The active/standby switchback is in progress.</li>
+             * <li><strong>Switched</strong>: The active/standby switchover is completed.</li>
+             * <li><strong>Available</strong>: The route target group is available.</li>
+             * <li><strong>Abnormal</strong>: The secondary instance is abnormal.</li>
+             * <li><strong>Pending</strong>: The route target group is being created.</li>
+             * <li><strong>Switching</strong>: The active/standby switchover is in progress.</li>
+             * <li><strong>Deleting</strong>: The route target group is being deleted.</li>
+             * <li><strong>Unavailable</strong>: Both the primary and secondary instances are abnormal.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -720,7 +722,8 @@ public class ListRouteTargetGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag value of the resource. You can specify up to 20 tag values. If you specify this parameter, you can enter an empty string. A tag value can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>The tag value of the resource. You can specify up to 20 tag values. If you specify this parameter, you can specify an empty string.</p>
+             * <p>A tag value can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;

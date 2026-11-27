@@ -244,7 +244,7 @@ public class CreateRouteEntryRequest extends Request {
 
         /**
          * <p>The client token that is used to ensure the idempotence of the request.</p>
-         * <p>You can use the client to generate the value, but you must ensure that it is unique among different requests. The client token can contain only ASCII characters.</p>
+         * <p>You can use the client to generate the value, but you must make sure that the value is unique among different requests. The client token can contain only ASCII characters.</p>
          * <blockquote>
          * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request is unique.</p>
          * </blockquote>
@@ -274,9 +274,9 @@ public class CreateRouteEntryRequest extends Request {
         /**
          * <p>The destination CIDR block of the custom route entry. IPv4 CIDR blocks, IPv6 CIDR blocks, destination CIDR blocks of prefix lists, and prefix list instance IDs are supported. The destination CIDR block must meet the following requirements:</p>
          * <ul>
-         * <li><p>The destination CIDR block cannot point to <code>100.64.0.0/10</code> or be contained by <code>100.64.0.0/10</code>.  </p>
+         * <li><p>The destination CIDR block cannot point to 100.64.0.0/10 or be contained by 100.64.0.0/10.  </p>
          * </li>
-         * <li><p>Different route entries in the same route table cannot have the same destination CIDR block.</p>
+         * <li><p>Route entries in the same route table cannot have the same destination CIDR block.</p>
          * </li>
          * </ul>
          * <p>This parameter is required.</p>
@@ -291,10 +291,10 @@ public class CreateRouteEntryRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to precheck only this request. Valid values:</p>
+         * <p>Specifies whether to only precheck the request. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: performs a precheck and does not create the route entry. The system checks whether required parameters are specified, the request format is valid, and the service limits are met. If the request fails the precheck, the corresponding error code is returned. If the request passes the precheck, the <code>DryRunOperation</code> error code is returned.</li>
-         * <li><strong>false</strong> (default): performs a precheck. If the request passes the precheck, a 2xx HTTP status code is returned and the operation is performed.</li>
+         * <li><strong>true</strong>: The system prechecks the request without creating the route entry. The system checks whether the required parameters are specified, the request format is valid, and the service limits are met. If the request fails the precheck, the corresponding error is returned. If the request passes the precheck, the <code>DryRunOperation</code> error code is returned.</li>
+         * <li><strong>false</strong> (default): The system sends a regular request. If the request passes the precheck, an HTTP 2xx status code is returned and the operation is performed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -307,7 +307,7 @@ public class CreateRouteEntryRequest extends Request {
         }
 
         /**
-         * <p>The ID of the next hop for the custom route entry.</p>
+         * <p>The ID of the next hop instance for the custom route entry.</p>
          * <blockquote>
          * <h2>If you set NextHopType to ECR, you can call the <a href="https://help.aliyun.com/document_detail/2712069.html">DescribeExpressConnectRouterAssociation</a> operation to obtain the AssociationId as the next hop ID.</h2>
          * </blockquote>
@@ -339,7 +339,7 @@ public class CreateRouteEntryRequest extends Request {
          * </li>
          * <li><p><strong>RouterInterface</strong>: a vRouter interface.</p>
          * </li>
-         * <li><p><strong>NetworkInterface</strong>: an elastic network interface controller (NIC).</p>
+         * <li><p><strong>NetworkInterface</strong>: an elastic network interface (ENI).</p>
          * </li>
          * <li><p><strong>VpnGateway</strong>: a VPN gateway.</p>
          * </li>
@@ -391,8 +391,8 @@ public class CreateRouteEntryRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region to which the route table belongs.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</p>
+         * <p>The region ID of the route table.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -422,7 +422,7 @@ public class CreateRouteEntryRequest extends Request {
         }
 
         /**
-         * <p>The name of the custom route entry that you want to add.</p>
+         * <p>The name of the custom route entry to be added.</p>
          * <p>The name must be 1 to 128 characters in length, and cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
@@ -520,7 +520,7 @@ public class CreateRouteEntryRequest extends Request {
             } 
 
             /**
-             * <p>The ID of the next hop for the ECMP route.</p>
+             * <p>The ID of the next hop instance for the ECMP route.</p>
              * 
              * <strong>example:</strong>
              * <p>ri-2zeo3xzyf3cd8r4****</p>
@@ -531,7 +531,7 @@ public class CreateRouteEntryRequest extends Request {
             }
 
             /**
-             * <p>The type of the next hop for the ECMP route. Set the value to <strong>RouterInterface</strong> (router interface).</p>
+             * <p>The type of the next hop for the ECMP route. Valid value: <strong>RouterInterface</strong> (router interface).</p>
              * 
              * <strong>example:</strong>
              * <p>RouterInterface</p>

@@ -960,6 +960,23 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateNatIpCidrResponse> createNatIpCidr(CreateNatIpCidrRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This operation creates a rate limiting rule for an enhanced Internet NAT gateway or a VPC NAT gateway. The term NAT gateway in this document refers to both types unless otherwise specified.
+     * When you call this operation to add a rate limiting rule, take note of the following items:</p>
+     * <ul>
+     * <li>The CreateNatRateLimitRule operation is asynchronous. The system returns a rate limiting rule ID, but the rule is not immediately added. The addition task is still running in the background.<ul>
+     * <li>If the rule is in the Creating state, the source IP address rate limiting rule is being created. In this state, you can only perform query operations.</li>
+     * <li>If the rule is in the Available state, the source IP address rate limiting rule is created.</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * 
+     * @param request the request parameters of CreateNatRateLimitRule  CreateNatRateLimitRuleRequest
+     * @return CreateNatRateLimitRuleResponse
+     */
+    CompletableFuture<CreateNatRateLimitRuleResponse> createNatRateLimitRule(CreateNatRateLimitRuleRequest request);
+
+    /**
      * @param request the request parameters of CreateNetworkAcl  CreateNetworkAclRequest
      * @return CreateNetworkAclResponse
      */
@@ -1032,26 +1049,26 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>The <strong>CreateRouteEntry</strong> operation is asynchronous. After you invoke this operation, the system returns an instance ID, but the addition of the route is not immediately completed. A background startup task is still running. You can invoke <a href="https://help.aliyun.com/document_detail/138148.html">DescribeRouteEntryList</a> to query the addition status of the route:<ul>
-     * <li>When the route is in the <strong>Creating</strong> state, it indicates that the route is being added.</li>
-     * <li>When the route is in the <strong>Created</strong> state, it indicates that the route addition is complete.</li>
+     * <li>The <strong>CreateRouteEntry</strong> operation is asynchronous. After you send the request, the system returns an instance ID, but custom route entry is not immediately created. A background task is still running. You can call the <a href="https://help.aliyun.com/document_detail/138148.html">DescribeRouteEntryList</a> operation to query the status of custom route entry:<ul>
+     * <li>If custom route entry is in the <strong>Creating</strong> state, custom route entry is being created.</li>
+     * <li>If custom route entry is in the <strong>Created</strong> state, custom route entry is created.</li>
      * </ul>
      * </li>
-     * <li>The <strong>CreateRouteEntry</strong> operation does not support adding a custom route entry concurrently in the same VPC or on the same VBR.</li>
-     * <li>If you invoke the <strong>CreateRouteEntry</strong> operation concurrently, the system may return the <strong>TaskConflict</strong> error code. Retry the operation as needed.
-     * <strong>When you call this operation to add a custom route entry to the route table of a vRouter, take note of the following items:</strong><blockquote>
-     * <p>If the route entry that you want to add is a prefix list route, the system checks whether the sum of the number of existing routes and the maximum number of route entries in the prefix list exceeds the route quota.</p>
+     * <li>You cannot use the <strong>CreateRouteEntry</strong> operation to concurrently create custom route entries in the same VPC or on the same VBR.</li>
+     * <li>The <strong>CreateRouteEntry</strong> operation may return the <strong>TaskConflict</strong> error code in case of concurrency. Retry the request as needed.
+     * <strong>When you use this operation to add a custom route entry to the route table of a vRouter, take note of the following items:</strong><blockquote>
+     * <p>When the route to be added is a prefix list route, the route quota is calculated based on whether the sum of the number of existing routes and the maximum number of route entries for the prefix list route exceeds the route quota limit.</p>
      * </blockquote>
      * </li>
-     * <li>You can add up to 200 custom route entries to a route table.</li>
+     * <li>A route table can contain at most 200 custom route entries.</li>
      * <li>The destination CIDR block (<strong>DestinationCidrBlock</strong>) of a custom route entry cannot be the same as the CIDR block of a vSwitch in the VPC. The destination CIDR block can contain the CIDR block of the vSwitch, but cannot be contained by the CIDR block of the vSwitch.</li>
      * <li>The destination CIDR block (<strong>DestinationCidrBlock</strong>) of a custom route entry can be a more specific CIDR block than the system route CIDR block <code>100.64.0.0/10</code> for cloud services, but cannot be the same as <code>100.64.0.0/10</code>.
-     * <notice>The system route whose destination CIDR block is <code>100.64.0.0/10</code> is used for communication between cloud services in a VPC. Proceed with caution when you configure a more specific route. An incorrect configuration may cause cloud services to become inaccessible.</notice></li>
+     * <notice>The system route whose destination CIDR block is <code>100.64.0.0/10</code> is used for communication between cloud services in the VPC. Proceed with caution when you configure a more specific route. Incorrect configurations may cause cloud services to become inaccessible.</notice></li>
      * <li>Route entries in the same route table cannot have the same destination CIDR block (<strong>DestinationCidrBlock</strong>).</li>
      * <li>If the specified destination CIDR block (<strong>DestinationCidrBlock</strong>) is an IP address, it is processed as a CIDR block with a 32-bit subnet mask.</li>
-     * <li>More than one custom route entry can point to the same next hop (<strong>NextHopId</strong>).</li>
+     * <li>Multiple custom route entries can point to the same next hop (<strong>NextHopId</strong>).</li>
      * <li>The next hop (<strong>NextHopId</strong>) of a custom route entry must be in the same VPC as the route table.</li>
-     * <li>You can use the <strong>NextHopList</strong> parameter settings to configure ECMP routing:<ul>
+     * <li>You can configure equal-cost multi-path (ECMP) routing through the <strong>NextHopList</strong> parameter settings:<ul>
      * <li><p>When you add a regular (non-ECMP) custom route, you must specify the <strong>DestinationCidrBlock</strong>, <strong>NextHopType</strong>, and <strong>NextHopId</strong> parameters, and you cannot specify the <strong>NextHopList</strong> parameter.   </p>
      * </li>
      * <li><p>When you add an ECMP route, you must specify the <strong>DestinationCidrBlock</strong> and <strong>NextHopList</strong> parameters, and you cannot specify the <strong>NextHopType</strong> and <strong>NextHopId</strong> parameters.</p>
@@ -1059,26 +1076,26 @@ public interface AsyncClient extends SdkAutoCloseable {
      * </ul>
      * </li>
      * </ul>
-     * <p><strong>When you call this operation to add a custom route entry to the route table of a VBR, take note of the following items:</strong></p>
+     * <p><strong>When you use this operation to add a custom route entry to the route table of a VBR, take note of the following items:</strong></p>
      * <ul>
-     * <li><p>You can add up to 200 custom route entries to a route table.  </p>
+     * <li><p>A route table can contain at most 200 custom route entries.  </p>
      * </li>
      * <li><p>The <strong>NextHopList</strong> parameter is not supported.   </p>
      * </li>
      * <li><p>The destination CIDR block (<strong>DestinationCidrBlock</strong>) of a custom route entry can be a more specific CIDR block than the system route CIDR block <code>100.64.0.0/10</code> for cloud services, but cannot be the same as <code>100.64.0.0/10</code>.
-     * <notice>The system route whose destination CIDR block is <code>100.64.0.0/10</code> is used for communication between cloud services in a VPC. Proceed with caution when you configure a more specific route. A configuration error may cause cloud services to become inaccessible.</notice></p>
+     * <notice>The system route whose destination CIDR block is <code>100.64.0.0/10</code> is used for communication between cloud services in the VPC. Proceed with caution when you configure a more specific route. Incorrect configurations may cause cloud services to become inaccessible.</notice></p>
      * </li>
      * <li><p>Route entries in the same route table cannot have the same destination CIDR block (<strong>DestinationCidrBlock</strong>).   </p>
      * </li>
      * <li><p>If the specified destination CIDR block (<strong>DestinationCidrBlock</strong>) is an IP address, it is processed as a CIDR block with a 32-bit subnet mask.   </p>
      * </li>
-     * <li><p>More than one custom route entry can point to the same next hop (<strong>NextHopId</strong>).  </p>
+     * <li><p>Multiple custom route entries can point to the same next hop (<strong>NextHopId</strong>).  </p>
      * </li>
      * <li><p>The next hop (<strong>NextHopId</strong>) of a custom route entry must be a vRouter interface associated with the VBR.  </p>
      * </li>
-     * <li><p>You can create a route entry on a VBR only when the VBR is in the <strong>Active</strong> state, the associated Express Connect circuit is in the <strong>Enabled</strong> state, and the VBR is not locked due to overdue payments.  </p>
+     * <li><p>You can create a route entry on a VBR only when the VBR is in the <strong>Active</strong> state, the associated Express Connect circuit is in the <strong>Enabled</strong> state, and the VBR is not locked due to an overdue payment.  </p>
      * </li>
-     * <li><p>Only regular (non-ECMP) routes are supported. You must specify the <strong>DestinationCidrBlock</strong>, <strong>NextHopType</strong>, and <strong>NextHopId</strong> parameters, and you cannot specify the <strong>NextHopList</strong> parameter.</p>
+     * <li><p>Only regular (non-ECMP) routes can be added. You must specify the <strong>DestinationCidrBlock</strong>, <strong>NextHopType</strong>, and <strong>NextHopId</strong> parameters, and you cannot specify the <strong>NextHopList</strong> parameter.</p>
      * </li>
      * </ul>
      * 
@@ -1106,14 +1123,14 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li><strong>CreateRouteTargetGroup</strong> is an asynchronous operation. After you invoke this operation, the system returns an instance ID, but the routing target group instance is not yet created. The creation task continues in the background. You can invoke <strong>ListRouteTargetGroup</strong> to query the creation status of the routing target group:<ul>
-     * <li>If the routing target group is in the <strong>Pending</strong> state, the routing target group is being created.</li>
-     * <li>If the routing target group is in the <strong>Available</strong>, <strong>Unavailable</strong>, <strong>Switched</strong>, or <strong>Abnormal</strong> state, the routing target group is created.</li>
+     * <li>The <strong>CreateRouteTargetGroup</strong> operation is asynchronous. The system returns an instance ID, but the routing target group instance is not yet created and the background creation node is still in progress. You can invoke <strong>ListRouteTargetGroup</strong> to query the creation status of the routing target group:<ul>
+     * <li>When the routing target group is in the <strong>Pending</strong> state, it indicates that the routing target group is being created.</li>
+     * <li>When the routing target group is in the <strong>Available</strong>, <strong>Unavailable</strong>, <strong>Switched</strong>, or <strong>Abnormal</strong> state, it indicates that the routing target group is created.</li>
      * </ul>
      * </li>
-     * <li><strong>Active/standby mode</strong>: When you create a routing target group, configure primary and secondary instances that are in different zones and of the same type.</li>
-     * <li><strong>Primary instance</strong>: The weight is 100. The primary instance handles all traffic under normal conditions and takes effect when health checks are successful.</li>
-     * <li><strong>Secondary instance</strong>: The weight is 0. The secondary instance takes over traffic when the primary instance fails, serving as disaster recovery and backup.</li>
+     * <li><strong>Active/standby pattern</strong>: When you create a routing target group, you must configure primary and secondary instances that are of the same type and located in different zones.</li>
+     * <li><strong>Primary instance</strong>: The weight is 100. It carries all traffic under normal circumstances and takes effect when the health check is normal.</li>
+     * <li><strong>Secondary instance</strong>: The weight is 0. It takes over traffic after the primary instance fails and serves as disaster recovery and backup.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateRouteTargetGroup  CreateRouteTargetGroupRequest
@@ -1983,9 +2000,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li><strong>DeleteRouteTargetGroup</strong> is an asynchronous operation. After you send a request, the system returns a request ID, but the route target group is not yet deleted. The deletion task continues to run in the background. You can call ListRouteTargetGroup to query the deletion status of the route target group:<ul>
+     * <li>The <strong>DeleteRouteTargetGroup</strong> operation is asynchronous. After you call this operation, the system returns a request ID, but the route target group is not immediately deleted. The deletion task is still running in the background. You can call the ListRouteTargetGroup operation to query the deletion status of the route target group:<ul>
      * <li>If the route target group is in the <strong>Deleting</strong> state, the route target group is being deleted.</li>
-     * <li>If the specified route target group cannot be found, the route target group is deleted.</li>
+     * <li>If the specified route target group cannot be queried, the route target group is deleted.</li>
      * </ul>
      * </li>
      * </ul>
@@ -3169,6 +3186,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListNatIpsResponse> listNatIps(ListNatIpsRequest request);
 
     /**
+     * @param request the request parameters of ListNatRateLimitRules  ListNatRateLimitRulesRequest
+     * @return ListNatRateLimitRulesResponse
+     */
+    CompletableFuture<ListNatRateLimitRulesResponse> listNatRateLimitRules(ListNatRateLimitRulesRequest request);
+
+    /**
      * @param request the request parameters of ListPhysicalConnectionFeatures  ListPhysicalConnectionFeaturesRequest
      * @return ListPhysicalConnectionFeaturesResponse
      */
@@ -3194,7 +3217,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Queries the list of route target groups.</p>
+     * <p>Queries route target groups.</p>
      * 
      * @param request the request parameters of ListRouteTargetGroups  ListRouteTargetGroupsRequest
      * @return ListRouteTargetGroupsResponse
@@ -3744,12 +3767,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li><strong>ModifyVSwitchAttribute</strong> is an asynchronous operation. After you call this operation, the system returns a request ID, but the vSwitch configuration has not been modified yet. The modification task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/94567.html">DescribeVSwitchAttributes</a> to query the modification status of the vSwitch:<ul>
-     * <li>If the vSwitch is in the <strong>Pending</strong> state, the configuration is being modified.</li>
+     * <li>The <strong>ModifyVSwitchAttribute</strong> operation is asynchronous. The system returns a request ID, but the configurations of the vSwitch are not immediately modified. The modification task is still running in the background. You can call the <a href="https://help.aliyun.com/document_detail/94567.html">DescribeVSwitchAttributes</a> operation to query the modification status of the vSwitch:<ul>
+     * <li>If the vSwitch is in the <strong>Pending</strong> state, the configurations of the vSwitch are being modified.</li>
      * <li>If the vSwitch is in the <strong>Available</strong> state, the vSwitch is available.</li>
      * </ul>
      * </li>
-     * <li><strong>ModifyVSwitchAttribute</strong> does not support concurrent modifications to the same vSwitch.</li>
+     * <li>The <strong>ModifyVSwitchAttribute</strong> operation does not support concurrent modifications to the configurations of the same vSwitch.</li>
      * </ul>
      * 
      * @param request the request parameters of ModifyVSwitchAttribute  ModifyVSwitchAttributeRequest
@@ -4517,9 +4540,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>The <strong>UpdateRouteTargetGroup</strong> operation is asynchronous. The system returns a request ID, but the route target group is not yet updated. The update task is still running in the background. You can call the ListRouteTargetGroup operation to query the update status of the route target group:<ul>
-     * <li>If the route target group is in the <strong>Updating</strong> state, the route target group is being updated.</li>
-     * <li>If the route target group is in the <strong>Available</strong>, <strong>Unavailable</strong>, <strong>Switched</strong>, or <strong>Abnormal</strong> state, the route target group is updated.</li>
+     * <li>The <strong>UpdateRouteTargetGroup</strong> operation is asynchronous. After you call this operation, the system returns a request ID, but the update task is still running in the background. You can call ListRouteTargetGroup to query the update status of the route target group:<ul>
+     * <li>When the route target group is in the <strong>Updating</strong> state, the route target group is being updated.</li>
+     * <li>When the route target group is in the <strong>Available</strong>, <strong>Unavailable</strong>, <strong>Switched</strong>, or <strong>Abnormal</strong> state, the update is complete.</li>
      * </ul>
      * </li>
      * </ul>

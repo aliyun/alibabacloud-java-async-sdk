@@ -159,7 +159,7 @@ public class UpdateRouteTargetGroupRequest extends Request {
         } 
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, and you must ensure that the value is unique among different requests. The client token can contain only ASCII characters. Note: If you do not specify this parameter, the system automatically uses the RequestId of the API request as the client token. The RequestId of each API request may be different.</p>
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The client token can contain only ASCII characters. Note: If you do not specify this parameter, the system automatically uses the RequestId of the API request as the client token. The RequestId of each API request may be different.</p>
          * 
          * <strong>example:</strong>
          * <p>123e4567-e89b-12d3-a456-426655440000</p>
@@ -171,7 +171,7 @@ public class UpdateRouteTargetGroupRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * <p>Specifies whether to perform a dry run without executing the actual operation.</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -180,7 +180,10 @@ public class UpdateRouteTargetGroupRequest extends Request {
         }
 
         /**
-         * IpVersion.
+         * <p>The IP version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>IPv4</p>
          */
         public Builder ipVersion(String ipVersion) {
             this.putQueryParameter("IpVersion", ipVersion);
@@ -215,7 +218,7 @@ public class UpdateRouteTargetGroupRequest extends Request {
         }
 
         /**
-         * <p>The instance ID of the routing target group.</p>
+         * <p>The routing target group instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -327,7 +330,7 @@ public class UpdateRouteTargetGroupRequest extends Request {
             } 
 
             /**
-             * <p>The instance ID of the member in the routing target group.</p>
+             * <p>The routing target group member instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>ep-xxxx</p>
@@ -338,7 +341,7 @@ public class UpdateRouteTargetGroupRequest extends Request {
             }
 
             /**
-             * <p>The type of the member in the route target group.</p>
+             * <p>The type of the route target group member.</p>
              * <p>Valid values:</p>
              * <ul>
              * <li><strong>GatewayLoadBalancerEndpoint</strong></li>
@@ -354,7 +357,7 @@ public class UpdateRouteTargetGroupRequest extends Request {
             }
 
             /**
-             * <p>The weight of the member in the route target group. Valid values:</p>
+             * <p>The weight of the route target group member. Valid values:</p>
              * <ul>
              * <li>100: The member is the primary instance.</li>
              * <li>0: The member is the secondary instance.</li>

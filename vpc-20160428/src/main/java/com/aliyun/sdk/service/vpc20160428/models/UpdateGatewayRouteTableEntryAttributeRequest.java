@@ -247,7 +247,7 @@ public class UpdateGatewayRouteTableEntryAttributeRequest extends Request {
          * <p>The client token that is used to ensure the idempotence of the request.</p>
          * <p>You can use the client to generate the value, but you must make sure that the value is unique among different requests. The client token can contain only ASCII characters.</p>
          * <blockquote>
-         * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request is different.</p>
+         * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request is unique.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -261,7 +261,7 @@ public class UpdateGatewayRouteTableEntryAttributeRequest extends Request {
 
         /**
          * <p>The description of the gateway route table.</p>
-         * <p>The description must be 2 to 256 characters in length, and must start with a letter or a Chinese character. It cannot start with <code>http://</code> or <code>https://</code>.</p>
+         * <p>The description must be 2 to 256 characters in length, and must start with a letter or a Chinese character. It cannot start with http:// or https://.</p>
          * 
          * <strong>example:</strong>
          * <p>new</p>
@@ -286,9 +286,9 @@ public class UpdateGatewayRouteTableEntryAttributeRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to perform a dry run. Valid values:</p>
+         * <p>Specifies whether to perform only a dry run. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: performs a dry run and does not modify the gateway route table. The system checks whether the required parameters are specified, the request format is valid, and the service limits are met. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+         * <li><strong>true</strong>: performs only a dry run and does not modify the gateway route table. The system checks whether the required parameters are specified, the request format is valid, and the service limits are met. If the request fails the dry run, an error message is returned. If the request passes the dry run, the DryRunOperation error code is returned.</li>
          * <li><strong>false</strong> (default): performs a dry run and sends the request. If the request passes the dry run, an HTTP 2xx status code is returned and the gateway route table is modified.</li>
          * </ul>
          * 
@@ -342,11 +342,11 @@ public class UpdateGatewayRouteTableEntryAttributeRequest extends Request {
          * <p>The instance ID of the next hop to be modified.</p>
          * <ul>
          * <li>If <strong>NextHopType</strong> is set to <strong>Instance</strong>, <strong>NextHopId</strong> is the ID of the ECS instance.</li>
-         * <li>If <strong>NextHopType</strong> is set to <strong>NetworkInterface</strong>, <strong>NextHopId</strong> is the ID of the elastic network interface controller (NIC) instance.</li>
+         * <li>If <strong>NextHopType</strong> is set to <strong>NetworkInterface</strong>, <strong>NextHopId</strong> is the ID of the elastic network interface controller (NIC).</li>
          * <li>If <strong>NextHopType</strong> is set to <strong>Local</strong>, <strong>NextHopId</strong> is empty, which indicates local.</li>
          * </ul>
          * <blockquote>
-         * <p>To modify the next hop of a route whose next hop type is <strong>Instance</strong> or <strong>NetworkInterface</strong>, you must first change <strong>NextHopType</strong> to <strong>Local</strong>, and then change <strong>NextHopType</strong> back to <strong>Instance</strong> or <strong>NetworkInterface</strong> and specify a new <strong>NextHopId</strong>. You cannot directly change the next hop to other elastic network interface controllers (NICs) or ECS instances.</p>
+         * <p>If the next hop type of the routing entry is <strong>Instance</strong> or <strong>NetworkInterface</strong> and you want to modify the next hop, you must first change <strong>NextHopType</strong> to <strong>Local</strong>, and then change <strong>NextHopType</strong> back to <strong>Instance</strong> or <strong>NetworkInterface</strong> before modifying the specific <strong>NextHopId</strong>. You cannot directly change the next hop from an elastic network interface controller (NIC) or an ECS instance to another elastic network interface controller (NIC) or ECS instance.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -359,11 +359,11 @@ public class UpdateGatewayRouteTableEntryAttributeRequest extends Request {
         }
 
         /**
-         * <p>The next hop type of the route to be modified. Valid values:</p>
+         * <p>The next hop type of the routing entry to be modified. Valid values:</p>
          * <ul>
          * <li><p><strong>Instance</strong>: an ECS instance.</p>
          * </li>
-         * <li><p><strong>NetworkInterface</strong>: an elastic network interface controller (NIC) instance.</p>
+         * <li><p><strong>NetworkInterface</strong>: an elastic network interface controller (NIC).</p>
          * </li>
          * <li><p><strong>Local</strong>: local.</p>
          * </li>
@@ -399,7 +399,7 @@ public class UpdateGatewayRouteTableEntryAttributeRequest extends Request {
 
         /**
          * <p>The region ID of the gateway route table to be modified.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to obtain the region ID.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
