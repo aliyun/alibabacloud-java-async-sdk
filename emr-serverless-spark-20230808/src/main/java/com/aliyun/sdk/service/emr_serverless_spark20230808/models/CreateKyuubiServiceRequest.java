@@ -212,7 +212,7 @@ public class CreateKyuubiServiceRequest extends Request {
          * <p>The Kyuubi service configurations.</p>
          * 
          * <strong>example:</strong>
-         * <p>[{\&quot;key\&quot;:\&quot;kyuubi.engine.share.level\&quot;,\&quot;value\&quot;:\&quot;USER\&quot;}]</p>
+         * <p>[{&quot;key&quot;:&quot;kyuubi.engine.share.level&quot;,&quot;value&quot;:&quot;USER&quot;}]</p>
          */
         public Builder kyuubiConfigs(String kyuubiConfigs) {
             this.putBodyParameter("kyuubiConfigs", kyuubiConfigs);
@@ -296,7 +296,7 @@ public class CreateKyuubiServiceRequest extends Request {
          * <p>The Spark configurations.</p>
          * 
          * <strong>example:</strong>
-         * <p>[{\&quot;key\&quot;:\&quot;spark.app.name\&quot;,\&quot;value\&quot;:\&quot;test\&quot;}]</p>
+         * <p>[{&quot;key&quot;:&quot;spark.app.name&quot;,&quot;value&quot;:&quot;test&quot;}]</p>
          */
         public Builder sparkConfigs(String sparkConfigs) {
             this.putBodyParameter("sparkConfigs", sparkConfigs);

@@ -928,7 +928,7 @@ public class GetWorkspaceResponseBody extends TeaModel {
              * <p>The tag key.</p>
              * 
              * <strong>example:</strong>
-             * <p>[\&quot;COST\&quot;]</p>
+             * <p>[&quot;COST&quot;]</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;

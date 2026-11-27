@@ -364,7 +364,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
              * <p>The amount of resources currently allocated.</p>
              * 
              * <strong>example:</strong>
-             * <p>{\&quot;cpu\&quot;:\&quot;1\&quot;,\&quot;memory\&quot;:\&quot;4Gi\&quot;,\&quot;cu\&quot;:\&quot;1\&quot;}</p>
+             * <p>{&quot;cpu&quot;:&quot;1&quot;,&quot;memory&quot;:&quot;4Gi&quot;,&quot;cu&quot;:&quot;1&quot;}</p>
              */
             public Builder allocatedResource(String allocatedResource) {
                 this.allocatedResource = allocatedResource;
@@ -423,7 +423,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
              * <p>The maximum amount of resources that can be used.</p>
              * 
              * <strong>example:</strong>
-             * <p>{\&quot;cpu\&quot;:\&quot;1\&quot;,\&quot;memory\&quot;:\&quot;4Gi\&quot;,\&quot;cu\&quot;:\&quot;1\&quot;}</p>
+             * <p>{&quot;cpu&quot;:&quot;1&quot;,&quot;memory&quot;:&quot;4Gi&quot;,&quot;cu&quot;:&quot;1&quot;}</p>
              */
             public Builder maxResource(String maxResource) {
                 this.maxResource = maxResource;
@@ -461,7 +461,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
              * <p>The amount of resources currently used.</p>
              * 
              * <strong>example:</strong>
-             * <p>{\&quot;cpu\&quot;:\&quot;0\&quot;,\&quot;memory\&quot;:\&quot;0Gi\&quot;,\&quot;cu\&quot;:\&quot;0\&quot;}</p>
+             * <p>{&quot;cpu&quot;:&quot;0&quot;,&quot;memory&quot;:&quot;0Gi&quot;,&quot;cu&quot;:&quot;0&quot;}</p>
              */
             public Builder usedResource(String usedResource) {
                 this.usedResource = usedResource;
@@ -1005,7 +1005,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
              * <p>The tag key.</p>
              * 
              * <strong>example:</strong>
-             * <p>[\&quot;COST\&quot;]</p>
+             * <p>[&quot;COST&quot;]</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;

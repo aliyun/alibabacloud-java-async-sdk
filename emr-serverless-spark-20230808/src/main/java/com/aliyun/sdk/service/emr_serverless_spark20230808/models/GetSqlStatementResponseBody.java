@@ -160,7 +160,7 @@ public class GetSqlStatementResponseBody extends TeaModel {
              * <p>The query data, formatted as a string serialized in JSON.</p>
              * 
              * <strong>example:</strong>
-             * <p>[{\&quot;values\&quot;:[\&quot;test_db\&quot;,\&quot;test_table\&quot;,false]}</p>
+             * <p>[{&quot;values&quot;:[&quot;test_db&quot;,&quot;test_table&quot;,false]}</p>
              */
             public Builder rows(String rows) {
                 this.rows = rows;
@@ -179,7 +179,7 @@ public class GetSqlStatementResponseBody extends TeaModel {
              * <p>The detailed schema information, formatted as a string serialized in JSON.</p>
              * 
              * <strong>example:</strong>
-             * <p>{\&quot;type\&quot;:\&quot;struct\&quot;,\&quot;fields\&quot;:[{\&quot;name\&quot;:\&quot;namespace\&quot;,\&quot;type\&quot;:\&quot;string\&quot;,\&quot;nullable\&quot;:false,\&quot;metadata\&quot;:{}},{\&quot;name\&quot;:\&quot;tableName\&quot;,\&quot;type\&quot;:\&quot;string\&quot;,\&quot;nullable\&quot;:false,\&quot;metadata\&quot;:{}},{\&quot;name\&quot;:\&quot;isTemporary\&quot;,\&quot;type\&quot;:\&quot;boolean\&quot;,\&quot;nullable\&quot;:false,\&quot;metadata\&quot;:{}}]}</p>
+             * <p>{&quot;type&quot;:&quot;struct&quot;,&quot;fields&quot;:[{&quot;name&quot;:&quot;namespace&quot;,&quot;type&quot;:&quot;string&quot;,&quot;nullable&quot;:false,&quot;metadata&quot;:{}},{&quot;name&quot;:&quot;tableName&quot;,&quot;type&quot;:&quot;string&quot;,&quot;nullable&quot;:false,&quot;metadata&quot;:{}},{&quot;name&quot;:&quot;isTemporary&quot;,&quot;type&quot;:&quot;boolean&quot;,&quot;nullable&quot;:false,&quot;metadata&quot;:{}}]}</p>
              */
             public Builder schema(String schema) {
                 this.schema = schema;

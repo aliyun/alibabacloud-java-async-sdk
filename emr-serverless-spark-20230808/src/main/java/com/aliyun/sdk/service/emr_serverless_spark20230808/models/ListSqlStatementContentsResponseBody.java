@@ -173,7 +173,7 @@ public class ListSqlStatementContentsResponseBody extends TeaModel {
              * <p>The list of SQL execution result contents.</p>
              * 
              * <strong>example:</strong>
-             * <p>[{\&quot;values\&quot;:[\&quot;wj*****\&quot;,\&quot;test\&quot;,\&quot;2025-04-15\&quot;]}]</p>
+             * <p>[{&quot;values&quot;:[&quot;wj*****&quot;,&quot;test&quot;,&quot;2025-04-15&quot;]}]</p>
              */
             public Builder contents(String contents) {
                 this.contents = contents;

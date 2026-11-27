@@ -233,7 +233,7 @@ public class ListSecretValueResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The secret content.</p>
+             * <p>The content of the secret.</p>
              * 
              * <strong>example:</strong>
              * <p>password</p>
@@ -277,7 +277,7 @@ public class ListSecretValueResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The secret name.</p>
+             * <p>The name of the secret.</p>
              * 
              * <strong>example:</strong>
              * <p>mysecret</p>
@@ -299,7 +299,7 @@ public class ListSecretValueResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The secret type. The value is fixed to secret.</p>
+             * <p>The type of the secret. The value is fixed to secret.</p>
              * 
              * <strong>example:</strong>
              * <p>secret</p>

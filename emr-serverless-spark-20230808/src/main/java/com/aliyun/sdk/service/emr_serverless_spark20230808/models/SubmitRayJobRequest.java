@@ -365,7 +365,7 @@ public class SubmitRayJobRequest extends Request {
         }
 
         /**
-         * <p>The job timeout period, which includes the cluster creation and job execution time. The job is canceled if it exceeds this period.</p>
+         * <p>The job timeout period, which includes the cluster creation time and job execution time. If this period is exceeded, the job is canceled.</p>
          * 
          * <strong>example:</strong>
          * <p>3600</p>
@@ -377,7 +377,7 @@ public class SubmitRayJobRequest extends Request {
         }
 
         /**
-         * <p>The ID of the existing Ray cluster.</p>
+         * <p>The ID of the existing Ray cluster to submit to. This parameter is not fully supported. Do not use it.</p>
          * 
          * <strong>example:</strong>
          * <p>ray-xxxxxxxxx</p>
@@ -389,7 +389,7 @@ public class SubmitRayJobRequest extends Request {
         }
 
         /**
-         * <p>The Ray DPI engine database engine version number.</p>
+         * <p>The Ray DPI engine version number.</p>
          * 
          * <strong>example:</strong>
          * <p>err-1.2.0 (Ray 2.55.1, Python 3.12)</p>
@@ -404,7 +404,7 @@ public class SubmitRayJobRequest extends Request {
          * <p>The entrypoint command.</p>
          * 
          * <strong>example:</strong>
-         * <p>python -c &quot;print(\&quot;hello ray job\&quot;)&quot;</p>
+         * <p>python -c &quot;print(&quot;hello ray job&quot;)&quot;</p>
          */
         public Builder entrypoint(String entrypoint) {
             this.putBodyParameter("entrypoint", entrypoint);
@@ -461,7 +461,7 @@ public class SubmitRayJobRequest extends Request {
         }
 
         /**
-         * <p>The JSON string for additional parameters.</p>
+         * <p>The JSON string for extra parameters.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;userDefinedFiles&quot;: &quot;oss://mybucket/artifact/config.json,oss://mybucket/artifact/config2.json&quot;, &quot;userRequirementsFile&quot;: &quot;oss://mybucket/requirements.txt&quot;}</p>
@@ -740,7 +740,7 @@ public class SubmitRayJobRequest extends Request {
             }
 
             /**
-             * <p>The Ray DPI engine database engine version.</p>
+             * <p>The Ray DPI engine version.</p>
              * 
              * <strong>example:</strong>
              * <p>err-1.3.0 (Ray 2.55.1, Python 3.12)</p>
@@ -751,7 +751,7 @@ public class SubmitRayJobRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to enable auto-scaling for worker nodes.</p>
+             * <p>Specifies whether to enable auto scaling for workers.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -773,7 +773,7 @@ public class SubmitRayJobRequest extends Request {
             }
 
             /**
-             * <p>The idle time for worker nodes after auto-scaling is enabled.</p>
+             * <p>The worker idle time after auto scaling is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>60</p>
@@ -1094,7 +1094,7 @@ public class SubmitRayJobRequest extends Request {
             }
 
             /**
-             * <p>The maximum number of workers when automatic scaling is enabled.</p>
+             * <p>The maximum number of workers after auto-scaling is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -1116,7 +1116,7 @@ public class SubmitRayJobRequest extends Request {
             }
 
             /**
-             * <p>The minimum number of workers when automatic scaling is enabled.</p>
+             * <p>The minimum number of workers after auto-scaling is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>

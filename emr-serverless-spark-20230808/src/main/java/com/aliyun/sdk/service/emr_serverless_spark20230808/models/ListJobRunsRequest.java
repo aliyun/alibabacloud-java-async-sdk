@@ -314,7 +314,7 @@ public class ListJobRunsRequest extends Request {
          * <p>The Spark configurations.</p>
          * 
          * <strong>example:</strong>
-         * <p>[{\&quot;key\&quot;:\&quot;spark.app.name\&quot;,\&quot;value\&quot;:\&quot;test\&quot;}]</p>
+         * <p>[{&quot;key&quot;:&quot;spark.app.name&quot;,&quot;value&quot;:&quot;test&quot;}]</p>
          */
         public Builder applicationConfigs(String applicationConfigs) {
             this.putQueryParameter("applicationConfigs", applicationConfigs);
@@ -465,7 +465,7 @@ public class ListJobRunsRequest extends Request {
          * <p>The runtime configurations.</p>
          * 
          * <strong>example:</strong>
-         * <p>[{\&quot;key\&quot;:\&quot;mainClass\&quot;,\&quot;value\&quot;:\&quot;yourClass\&quot;}]</p>
+         * <p>[{&quot;key&quot;:&quot;mainClass&quot;,&quot;value&quot;:&quot;yourClass&quot;}]</p>
          */
         public Builder runtimeConfigs(String runtimeConfigs) {
             this.putQueryParameter("runtimeConfigs", runtimeConfigs);

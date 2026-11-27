@@ -452,6 +452,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RefreshLivyComputeTokenResponse> refreshLivyComputeToken(RefreshLivyComputeTokenRequest request);
 
     /**
+     * @param request the request parameters of RemoveMember  RemoveMemberRequest
+     * @return RemoveMemberResponse
+     */
+    CompletableFuture<RemoveMemberResponse> removeMember(RemoveMemberRequest request);
+
+    /**
+     * @param request the request parameters of RevokeRoleFromUsers  RevokeRoleFromUsersRequest
+     * @return RevokeRoleFromUsersResponse
+     */
+    CompletableFuture<RevokeRoleFromUsersResponse> revokeRoleFromUsers(RevokeRoleFromUsersRequest request);
+
+    /**
      * @param request the request parameters of StartCacheCluster  StartCacheClusterRequest
      * @return StartCacheClusterResponse
      */
