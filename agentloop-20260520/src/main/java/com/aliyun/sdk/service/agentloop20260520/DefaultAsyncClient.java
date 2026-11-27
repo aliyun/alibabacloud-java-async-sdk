@@ -40,6 +40,36 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
+     * <ul>
+     * <li>PUT /agentspace/{agentSpace}/audit/sources/{type}/{instanceID} contains only three required path parameters and no JSON request body or query parameters.</li>
+     * <li>Data is isolated by the complete tenant key consisting of user_id, agent_space, and region_id. The agentSpace parameter is obtained from the path. The user ID and region are obtained from the trusted identity headers of the gateway. The region header is X-Acs-System-Region-Id and cannot be overridden by the request body or query parameters. The service verifies the access permissions for the AgentSpace and the region matching.</li>
+     * <li>If type is set to gateway, only configJson.audit_enabled_gateway_instances is modified. If type is set to trace, only configJson.audit_enabled_trace_apps is modified. Other fields in the configuration remain unchanged.</li>
+     * <li>Each list can contain a maximum of 100 distinct objects. The total number of UTF-8 bytes for all IDs after normalization cannot exceed 8,192. If the list limit is exceeded after the addition, a 400 InvalidParameter.Config error is returned. This limit is verified by the backend.</li>
+     * <li>An HTTP 204 response with no response body indicates that the member is already in the selected state. The configuration is written upon the first addition. Repeated additions also return a 204 response without duplicate writes.</li>
+     * <li>The addition operation only modifies the list membership and does not synchronously start the transformation task. The coordinator processes task changes asynchronously afterward. A 204 response does not indicate that the task has been started or is running properly.</li>
+     * <li>The error response is an ErrorResponse object that includes requestId (the value of the request ID header, which may be an empty string if missing), code, and message. The HTTP status code and response body for errors are passed through exactly as returned by the backend.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of AddAuditConversionSource  AddAuditConversionSourceRequest
+     * @return AddAuditConversionSourceResponse
+     */
+    @Override
+    public CompletableFuture<AddAuditConversionSourceResponse> addAuditConversionSource(AddAuditConversionSourceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("AddAuditConversionSource").setMethod(HttpMethod.PUT).setPathRegex("/agentspace/{agentSpace}/audit/sources/{type}/{instanceID}").setBodyType(BodyType.NONE).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(AddAuditConversionSourceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<AddAuditConversionSourceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of AddDatasetData  AddDatasetDataRequest
      * @return AddDatasetDataResponse
      */
@@ -630,6 +660,34 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetAgentSpaceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
+     * <ul>
+     * <li>GET /agentspace/{agentSpace}/audit/sources/{type}/{instanceID} contains only three required path parameters, with no JSON request body or query parameters.</li>
+     * <li>Isolated by the complete tenant key of user_id + agent_space + region_id. The agentSpace parameter comes from the path. The user ID and region come from the trusted identity headers of the gateway. The region header is X-Acs-System-Region-Id and cannot be overridden by the request body or query parameters. The service verifies the AgentSpace access permissions and region matching.</li>
+     * <li>Reads only the transformation list of the corresponding type. It does not create audit configurations or check whether the transformation object is online or the transformation task is healthy.</li>
+     * <li>An HTTP 200 response returns id and selected, excluding requestId. If the object is not selected or the current AgentSpace has no audit configuration, selected is false, and a 404 error is not returned.</li>
+     * <li>The error response is ErrorResponse: requestId (the value of the request ID header, which may be an empty string if missing), code, and message. Error HTTP status codes and response bodies are passed through as-is from the backend.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of GetAuditConversionSource  GetAuditConversionSourceRequest
+     * @return GetAuditConversionSourceResponse
+     */
+    @Override
+    public CompletableFuture<GetAuditConversionSourceResponse> getAuditConversionSource(GetAuditConversionSourceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetAuditConversionSource").setMethod(HttpMethod.GET).setPathRegex("/agentspace/{agentSpace}/audit/sources/{type}/{instanceID}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetAuditConversionSourceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetAuditConversionSourceResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1237,6 +1295,35 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<PreviewPipelineResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
+     * <ul>
+     * <li>The DELETE /agentspace/{agentSpace}/audit/sources/{type}/{instanceID} operation includes only three required path parameters and does not contain a JSON request body or query parameters.</li>
+     * <li>Isolation is based on the complete tenant key that consists of user_id, agent_space, and region_id. The agentSpace parameter is obtained from the path. The user ID and region are obtained from the trusted identity headers of the gateway. The region header is X-Acs-System-Region-Id and cannot be overridden by the request body or query parameters. The service verifies the access permissions and region matching for the AgentSpace.</li>
+     * <li>If type is set to gateway, only the ID in configJson.audit_enabled_gateway_instances is removed. If type is set to trace, only the ID in configJson.audit_enabled_trace_apps is removed, and other configuration fields are retained.</li>
+     * <li>An HTTP 204 response with no response body indicates that the member is already in the unselected state. Repeated calls when the member is unselected also return 204 instead of 404. If the current AgentSpace does not have an audit configuration, no new configuration is created for the delete operation.</li>
+     * <li>The removal operation only modifies the list membership and does not synchronously stop the transformation task. After the actual change occurs, the coordinator asynchronously processes the task changes.</li>
+     * <li>The error response is an ErrorResponse object, which includes requestId (the value of the request ID header, which may be an empty string if missing), code, and message. Error HTTP status codes and response bodies are passed through as-is from the backend.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of RemoveAuditConversionSource  RemoveAuditConversionSourceRequest
+     * @return RemoveAuditConversionSourceResponse
+     */
+    @Override
+    public CompletableFuture<RemoveAuditConversionSourceResponse> removeAuditConversionSource(RemoveAuditConversionSourceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("RemoveAuditConversionSource").setMethod(HttpMethod.DELETE).setPathRegex("/agentspace/{agentSpace}/audit/sources/{type}/{instanceID}").setBodyType(BodyType.NONE).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RemoveAuditConversionSourceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<RemoveAuditConversionSourceResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

@@ -143,7 +143,7 @@ public class ListContextStoresRequest extends Request {
         }
 
         /**
-         * <p>The name of the context store used for filtering. Exact match is supported. If this parameter is not specified, no filtering is performed.</p>
+         * <p>The name of the context store used to filter results. Exact match is supported. If you do not specify this parameter, no filtering is applied.</p>
          * 
          * <strong>example:</strong>
          * <p>my-context-store</p>
@@ -155,7 +155,7 @@ public class ListContextStoresRequest extends Request {
         }
 
         /**
-         * <p>The type of the context store used for filtering, such as experience or memory. If this parameter is not specified, no filtering is performed.</p>
+         * <p>The type of the context store used to filter results, such as experience or memory. If you do not specify this parameter, no filtering is applied.</p>
          * 
          * <strong>example:</strong>
          * <p>experience</p>
@@ -191,7 +191,7 @@ public class ListContextStoresRequest extends Request {
         }
 
         /**
-         * <p>The data source type of the memory context store used for filtering. Valid values: manual, trajectory, and dataset. If this parameter is not specified, no filtering is performed.</p>
+         * <p>The memory data source type used to filter results. Valid values: manual, trajectory, and dataset. If you do not specify this parameter, no filtering is applied.</p>
          * 
          * <strong>example:</strong>
          * <p>trajectory</p>

@@ -172,6 +172,9 @@ public class ExperimentConfig extends TeaModel {
 
         /**
          * <p>The endpoint connector ID, which is required in user or agent mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>otv-odezh-1x1h75w7330v19783f2n4ootvro96751</p>
          */
         public Builder endpointConnectorId(String endpointConnectorId) {
             this.endpointConnectorId = endpointConnectorId;

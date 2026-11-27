@@ -201,7 +201,7 @@ public class GetContextStoreResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The type of the context store, such as experience (experience store) or memory (memory store).</p>
+         * <p>The type of the context store, such as experience for experience store and memory for memory store.</p>
          * 
          * <strong>example:</strong>
          * <p>experience</p>
@@ -257,7 +257,7 @@ public class GetContextStoreResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The status of the context store. Valid values: ACTIVE, INITIALIZING, and FAILED.</p>
+         * <p>The status of the context store, such as ACTIVE, INITIALIZING, or FAILED.</p>
          * 
          * <strong>example:</strong>
          * <p>ACTIVE</p>
@@ -351,7 +351,7 @@ public class GetContextStoreResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Specifies whether to write item events for dropped candidates during recall. Default value: false.</p>
+             * <p>Specifies whether to write item events for candidates dropped during recall. Default value: false.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -362,7 +362,7 @@ public class GetContextStoreResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The query recording mode for recall. Valid values: raw (plaintext) and hash (HMAC only). Default value: raw.</p>
+             * <p>The recording method for recalled queries. Valid values: raw (plaintext) and hash (HMAC only). Default value: raw.</p>
              * 
              * <strong>example:</strong>
              * <p>raw</p>
@@ -454,7 +454,7 @@ public class GetContextStoreResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the SLS project where the audit logs of the experience store are stored.</p>
+             * <p>The name of the SLS project where the audit logs for the experience store are stored.</p>
              * 
              * <strong>example:</strong>
              * <p>agentloop-xxx</p>
@@ -646,7 +646,7 @@ public class GetContextStoreResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The allowed storage actions. By default, all actions are allowed, including ADD, UPDATE, MERGE, and DELETE.</p>
+             * <p>The allowed storage actions. Default value: all actions, including ADD, UPDATE, MERGE, and DELETE.</p>
              * 
              * <strong>example:</strong>
              * <p>[&quot;ADD&quot;,&quot;UPDATE&quot;,&quot;MERGE&quot;,&quot;DELETE&quot;]</p>
@@ -712,7 +712,7 @@ public class GetContextStoreResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of days before a memory expires. A value of 0 indicates that the memory does not expire.</p>
+             * <p>The number of days before memories expire. A value of 0 indicates that memories do not expire.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -885,7 +885,7 @@ public class GetContextStoreResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The custom extraction instructions. This parameter is required when preset is set to custom. Length: 1 to 8000 characters.</p>
+             * <p>The custom extraction instruction. This parameter is required when preset is set to custom. The length must be 1 to 8,000 characters.</p>
              * 
              * <strong>example:</strong>
              * <p>Extract only user product preferences</p>
@@ -907,10 +907,10 @@ public class GetContextStoreResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of exclusion rules. Content that matches these rules is not extracted.</p>
+             * <p>The list of exclusion rules. Content that matches the rules is not extracted.</p>
              * 
              * <strong>example:</strong>
-             * <p>[&quot;Password&quot;, &quot;ID number&quot;]</p>
+             * <p>[&quot;密码&quot;,&quot;证件号&quot;]</p>
              */
             public Builder excludeRules(java.util.List<String> excludeRules) {
                 this.excludeRules = excludeRules;
@@ -948,7 +948,7 @@ public class GetContextStoreResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The independent storage rules for this policy. If this parameter is omitted, the original value is retained. A new policy uses the default value. Repeatedly confirmed memories refresh the validity period by default.</p>
+             * <p>The independent storage rules for this policy. If omitted, the original value is retained. A new policy uses the default value. Repeatedly confirmed memories refresh the validity period by default.</p>
              */
             public Builder storagePolicy(StoragePolicy storagePolicy) {
                 this.storagePolicy = storagePolicy;
@@ -956,7 +956,7 @@ public class GetContextStoreResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The stable ID of the extraction policy. It must start with a letter and can contain only letters, digits, underscores, and hyphens. The maximum length is 64 characters. The ID must be unique within the same context library and remains unchanged when the name or instructions are modified.</p>
+             * <p>The stable ID of the extraction policy. The ID must start with a letter and can contain only letters, digits, underscores, and hyphens. It can be up to 64 characters in length. The ID is unique within the same context library and remains unchanged when the name or instructions are modified.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1134,7 +1134,7 @@ public class GetContextStoreResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The custom extraction instructions. This parameter is required when preset is set to custom. Length: 1 to 8000 characters.</p>
+             * <p>The custom extraction instruction. This parameter is required when preset is set to custom. The length must be 1 to 8,000 characters.</p>
              * 
              * <strong>example:</strong>
              * <p>Extract only user product preferences</p>
@@ -1145,10 +1145,10 @@ public class GetContextStoreResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of exclusion rules. Content that matches these rules is not extracted.</p>
+             * <p>The list of exclusion rules. Content that matches the rules is not extracted.</p>
              * 
              * <strong>example:</strong>
-             * <p>[&quot;Password&quot;, &quot;ID number&quot;]</p>
+             * <p>[&quot;密码&quot;,&quot;证件号&quot;]</p>
              */
             public Builder excludeRules(java.util.List<String> excludeRules) {
                 this.excludeRules = excludeRules;
@@ -1536,7 +1536,7 @@ public class GetContextStoreResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The scope fields that require at least one non-empty value. Valid values: userId, agentId, appId, and runId.</p>
+             * <p>Specifies that at least one of the scope fields must be non-empty. Valid values for the elements: userId, agentId, appId, and runId.</p>
              * 
              * <strong>example:</strong>
              * <p>[&quot;userId&quot;]</p>
@@ -1645,7 +1645,7 @@ public class GetContextStoreResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The description of the field. This parameter is required when usage is set to extraction-input and is appended to the extraction prompt.</p>
+             * <p>The description of the field. This parameter is required when usage is set to extraction-input. The description is appended to the extraction prompt.</p>
              * 
              * <strong>example:</strong>
              * <p>Customer tier</p>
@@ -1656,7 +1656,7 @@ public class GetContextStoreResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether the field is a sensitive field.</p>
+             * <p>Specifies whether the field is sensitive.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -1678,7 +1678,7 @@ public class GetContextStoreResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The target write path, such as metadata.customerTier.</p>
+             * <p>The target path for writing, such as metadata.customerTier.</p>
              * 
              * <strong>example:</strong>
              * <p>metadata.customerTier</p>
@@ -1851,7 +1851,7 @@ public class GetContextStoreResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The dataset version specified for the fixed mode.</p>
+             * <p>The Dataset version specified for the fixed mode.</p>
              * 
              * <strong>example:</strong>
              * <p>v3</p>
@@ -1981,7 +1981,7 @@ public class GetContextStoreResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the dataset in the same AgentSpace. This parameter cannot be modified after creation.</p>
+             * <p>The name of the Dataset in the same AgentSpace. The name cannot be changed after creation.</p>
              * 
              * <strong>example:</strong>
              * <p>trajectory-with-crm-profile</p>
@@ -1992,7 +1992,7 @@ public class GetContextStoreResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The row filter conditions.</p>
+             * <p>The row filter condition.</p>
              */
             public Builder filter(Filter filter) {
                 this.filter = filter;
@@ -2011,7 +2011,7 @@ public class GetContextStoreResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The row schema contract of the dataset. The value is fixed to MemorySourceV1 in the current phase.</p>
+             * <p>The row schema contract of the Dataset. The value is fixed to MemorySourceV1 in the current phase.</p>
              * 
              * <strong>example:</strong>
              * <p>MemorySourceV1</p>
@@ -2022,7 +2022,7 @@ public class GetContextStoreResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version consumption policy of the dataset.</p>
+             * <p>The version consumption policy of the Dataset.</p>
              */
             public Builder versionPolicy(VersionPolicy versionPolicy) {
                 this.versionPolicy = versionPolicy;
@@ -2139,7 +2139,7 @@ public class GetContextStoreResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether to exclude degraded trajectories. Default value: false, which means degraded trajectories are included.</p>
+             * <p>Specifies whether to exclude degraded trajectories. Default value: false, which indicates that degraded trajectories are included.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -2268,7 +2268,7 @@ public class GetContextStoreResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The JSONPath for agentId. Default value: $.agent_name.</p>
+             * <p>The JSONPath of agentId. Default value: $.agent_name.</p>
              * 
              * <strong>example:</strong>
              * <p>$.agent_name</p>
@@ -2279,7 +2279,7 @@ public class GetContextStoreResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The JSONPath for appId. Default value: $.service_names[0].</p>
+             * <p>The JSONPath of appId. Default value: $.service_names[0].</p>
              * 
              * <strong>example:</strong>
              * <p>$.service_names[0]</p>
@@ -2290,7 +2290,7 @@ public class GetContextStoreResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The JSONPath for runId. By default, this field is not mapped to prevent memory isolation by a single trajectory.</p>
+             * <p>The JSONPath of runId. By default, this field is not mapped to prevent memory isolation by a single trajectory.</p>
              * 
              * <strong>example:</strong>
              * <p>$.trajectory_id</p>
@@ -2301,7 +2301,7 @@ public class GetContextStoreResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The JSONPath for userId. By default, version 1 does not map this field, and version 2 sequentially retrieves user.id and enduser.id from agent attributes.</p>
+             * <p>The JSONPath of userId. By default, version 1 does not map this field, and version 2 sequentially retrieves user.id and enduser.id from agent attributes.</p>
              * 
              * <strong>example:</strong>
              * <p>$.trajectory_extensions.user_id</p>
@@ -2453,7 +2453,7 @@ public class GetContextStoreResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The scope field mapping. Dot paths, array indices, and quoted property keys are supported. An empty string indicates no mapping.</p>
+             * <p>The scope field mapping. Dot paths, array subscripts, and quoted property keys are supported. An empty string indicates no mapping.</p>
              */
             public Builder scopeMapping(ScopeMapping scopeMapping) {
                 this.scopeMapping = scopeMapping;
@@ -2461,7 +2461,7 @@ public class GetContextStoreResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The default mapping version for trajectory identity. Valid values: 1: Retains legacy rules. 2: Reads user.id or enduser.id from agent attributes. The version is frozen upon creation.</p>
+             * <p>The default mapping version for trajectory identity. A value of 1 retains legacy rules, and a value of 2 reads user.id or enduser.id from agent attributes. The version is frozen upon creation.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -2472,7 +2472,7 @@ public class GetContextStoreResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time for trajectory consumption, in ISO 8601 UTC format. If not specified, the default is the creation time.</p>
+             * <p>The start time for trajectory consumption, in ISO 8601 UTC format. If not specified, the creation time is used by default.</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
              * 
              * <strong>example:</strong>
@@ -2554,7 +2554,7 @@ public class GetContextStoreResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The initial consumed append sequence number, which is a decimal string of a non-negative int64. Default value: 0. The __dataset_seq field is used, and the business timestamp is not used as the consumption checkpoint.</p>
+             * <p>The initial consumed append sequence number, which is a decimal string of a non-negative int64 value. Default value: 0. The __dataset_seq field is used, and the business timestamp is not used as the consumption checkpoint.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -2728,7 +2728,7 @@ public class GetContextStoreResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The AgentSpace where the trace data source is located, which is the same as the AgentSpace to which it belongs upon creation.</p>
+             * <p>The AgentSpace where the trace data source is located, which is the same as the AgentSpace to which it belonged upon creation.</p>
              * 
              * <strong>example:</strong>
              * <p>my-agent-space</p>
@@ -2780,7 +2780,7 @@ public class GetContextStoreResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum number of records read in a single dataset operation. Valid values: 1 to 1000.</p>
+             * <p>The maximum number of records read in a single dataset read operation. Valid values: 1 to 1000.</p>
              * 
              * <strong>example:</strong>
              * <p>1000</p>
@@ -2811,7 +2811,7 @@ public class GetContextStoreResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The source type, which can be trajectory or dataset. For the experience type, if this parameter is not passed, trajectory is used. For Dataset, the datasetName, format, and binding at this level are used. The default is manual, and versionPolicy.mode=follow continuously processes and automatically applies to the experience store. For the memory type, if this parameter is not passed, it indicates manual (only AddContexts writes). Otherwise, the trajectory or dataset sub-configuration with the same name is used. This parameter cannot be changed after creation.</p>
+             * <p>The source type, which can be trajectory or dataset. For the experience type, if this parameter is not specified, trajectory is used. If dataset is used, the datasetName, format, and binding at this level are used. The default is manual. If versionPolicy.mode is set to follow, continuous processing is performed and automatically applied to the experience store. For the memory type, if this parameter is not specified, manual is used, meaning only AddContexts writes are allowed. Otherwise, the trajectory or dataset sub-configuration with the same name is used. This parameter cannot be changed after creation.</p>
              * 
              * <strong>example:</strong>
              * <p>dataset</p>
@@ -2822,7 +2822,7 @@ public class GetContextStoreResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The continuous consumption configuration for the native experience store dataset. The default is manual. The follow mode only allows binding.selection.mode=all and consumes by append sequence number. This parameter cannot be changed after creation.</p>
+             * <p>The continuous consumption configuration for the native experience store dataset. The default is manual. The follow mode only allows binding.selection.mode=all and consumes data by append sequence number. This parameter cannot be changed after creation.</p>
              */
             public Builder versionPolicy(SourceVersionPolicy versionPolicy) {
                 this.versionPolicy = versionPolicy;
@@ -2954,7 +2954,7 @@ public class GetContextStoreResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The processing progress. For memory trajectory, the value is {processTimeNs, watermarkMs}. For dataset, the value is {seq}. For manual, the value is {}. For experience dataset follow, the seq uses an exact int64 decimal string.</p>
+             * <p>The processing progress. For memory trajectory, the format is {processTimeNs, watermarkMs}. For dataset, the format is {seq}. For manual, the format is {}. The seq for experience dataset follow uses an exact int64 decimal string.</p>
              */
             public Builder checkpoint(java.util.Map<String, ?> checkpoint) {
                 this.checkpoint = checkpoint;
@@ -2962,7 +2962,7 @@ public class GetContextStoreResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The current reserved sequence window {after,until,runId} for experience dataset follow. All sequence numbers are decimal strings. A failure does not advance the submitted checkpoint.</p>
+             * <p>The current reserved sequence window for experience dataset follow, formatted as {after, until, runId}. All sequence numbers are decimal strings. A failure does not advance the submitted checkpoint.</p>
              */
             public Builder currentWindow(java.util.Map<String, String> currentWindow) {
                 this.currentWindow = currentWindow;
@@ -2981,7 +2981,7 @@ public class GetContextStoreResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The run ID of the last successful automatic application to the native experience library. This is for audit purposes only.</p>
+             * <p>The run ID of the last successful automatic application to the native experience library. This field is for audit purposes only.</p>
              * 
              * <strong>example:</strong>
              * <p>opr-example</p>
@@ -3149,7 +3149,7 @@ public class GetContextStoreResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The allowed storage actions. By default, all actions are allowed, including ADD, UPDATE, MERGE, and DELETE.</p>
+             * <p>The allowed storage actions. Default value: all actions, including ADD, UPDATE, MERGE, and DELETE.</p>
              * 
              * <strong>example:</strong>
              * <p>[&quot;ADD&quot;,&quot;UPDATE&quot;,&quot;MERGE&quot;,&quot;DELETE&quot;]</p>
@@ -3215,7 +3215,7 @@ public class GetContextStoreResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of days before a memory expires. A value of 0 indicates that the memory does not expire.</p>
+             * <p>The number of days before memories expire. A value of 0 indicates that memories do not expire.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -3522,7 +3522,7 @@ public class GetContextStoreResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The extraction policies. A total of 1 to 10 policies can be configured. The strategyVersion field indicates the snapshot version of the global configuration.</p>
+             * <p>The extraction policies. You can configure 1 to 10 policies. The strategyVersion indicates the snapshot version of the global configuration.</p>
              */
             public Builder extractionPolicies(java.util.List<ExtractionPolicies> extractionPolicies) {
                 this.extractionPolicies = extractionPolicies;
@@ -3538,7 +3538,7 @@ public class GetContextStoreResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The system-assigned coordinates of the event Logstore for the memory type, which is located in the SLS project bound to the AgentSpace.</p>
+             * <p>The coordinates of the system-assigned event Logstore for the memory type, which is located in the SLS project bound to the AgentSpace.</p>
              */
             public Builder innerSource(InnerSource innerSource) {
                 this.innerSource = innerSource;
@@ -3546,7 +3546,7 @@ public class GetContextStoreResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The metadata field mapping. The key is the business field and the value is the storage field.</p>
+             * <p>The metadata field mapping. The key is the business field, and the value is the storage field.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;userId&quot;:&quot;user_id&quot;,&quot;sessionId&quot;:&quot;session_id&quot;}</p>
@@ -3568,7 +3568,7 @@ public class GetContextStoreResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the internal running task associated with the server. Continuous databases use this for read-only viewing of consumption records, while manual databases can run limited mining. This value is not inferred by the client and cannot replace the ingestion and recall criteria of the native experience database.</p>
+             * <p>The name of the internal running task associated with the server. Continuous databases use this for read-only viewing of consumption records, while manual databases can run limited mining. This name is not inferred by the client and cannot replace the ingestion and recall criteria of the native experience database.</p>
              * 
              * <strong>example:</strong>
              * <p>experience-review-library</p>
@@ -3622,7 +3622,7 @@ public class GetContextStoreResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of service names, which works with source.agentSpace to locate the trace data source. This parameter cannot be modified in the current phase.</p>
+             * <p>The list of service names, which are used together with source.agentSpace to locate the trace data source. The list cannot be changed in the current phase.</p>
              * 
              * <strong>example:</strong>
              * <p>[&quot;order-service&quot;,&quot;payment-service&quot;]</p>
@@ -3633,7 +3633,7 @@ public class GetContextStoreResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The datasource config passed by the user, which serves only as the root identity of the data source.</p>
+             * <p>The datasource config provided by the user, which serves only as the root identity of the data source.</p>
              */
             public Builder source(Source source) {
                 this.source = source;
@@ -3641,7 +3641,7 @@ public class GetContextStoreResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The running status of the data source for the memory type and experience dataset follow. The experience library submits a checkpoint only after it is published and automatically applied. The checkpoint is retained when the process is paused or restarted.</p>
+             * <p>The running status of the data source for the memory type and experience dataset follow. The experience library submits a checkpoint only after it is published and automatically applied. Pausing and restarting retain the checkpoint.</p>
              */
             public Builder sourceStatus(SourceStatus sourceStatus) {
                 this.sourceStatus = sourceStatus;
