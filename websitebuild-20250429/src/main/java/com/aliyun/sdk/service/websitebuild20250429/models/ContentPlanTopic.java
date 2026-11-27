@@ -340,7 +340,7 @@ public class ContentPlanTopic extends TeaModel {
         } 
 
         /**
-         * <p>The article generation session ID.</p>
+         * <p>The session ID for article generation.</p>
          * 
          * <strong>example:</strong>
          * <p>conv_8a2b3c</p>
@@ -351,7 +351,7 @@ public class ContentPlanTopic extends TeaModel {
         }
 
         /**
-         * <p>The generated article ID.</p>
+         * <p>The ID of the generated article.</p>
          * 
          * <strong>example:</strong>
          * <p>art_9f2k3d</p>
@@ -362,7 +362,7 @@ public class ContentPlanTopic extends TeaModel {
         }
 
         /**
-         * <p>The status of the associated article. Valid values: DRAFT, PUBLISHED, and PUBLISH_FAILED. This parameter is empty if the article is not generated.</p>
+         * <p>The status of the associated article. Valid values: DRAFT, PUBLISHED, and PUBLISH_FAILED. This field is empty if no article is generated.</p>
          * 
          * <strong>example:</strong>
          * <p>PUBLISHED</p>
@@ -373,7 +373,10 @@ public class ContentPlanTopic extends TeaModel {
         }
 
         /**
-         * DeliveryMode.
+         * <p>The delivery mode inherited from the plan. Valid values: SOCIAL, WEBSITE, and BOTH. Historical and unplanned manual entries default to SOCIAL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BOTH</p>
          */
         public Builder deliveryMode(String deliveryMode) {
             this.deliveryMode = deliveryMode;
@@ -381,7 +384,7 @@ public class ContentPlanTopic extends TeaModel {
         }
 
         /**
-         * <p>The GEO diagnostic item references.</p>
+         * <p>The GEO diagnostic references.</p>
          */
         public Builder diagnosisReferences(java.util.List<String> diagnosisReferences) {
             this.diagnosisReferences = diagnosisReferences;
@@ -400,7 +403,7 @@ public class ContentPlanTopic extends TeaModel {
         }
 
         /**
-         * <p>The reason for the execution failure.</p>
+         * <p>The reason for execution failure.</p>
          * 
          * <strong>example:</strong>
          * <p>Article generation failed. Try again later</p>
@@ -411,7 +414,7 @@ public class ContentPlanTopic extends TeaModel {
         }
 
         /**
-         * NeedsAttention.
+         * <p>Specifies whether user action is still required. Ignored or successful channels are not counted as pending tasks.</p>
          */
         public Builder needsAttention(Boolean needsAttention) {
             this.needsAttention = needsAttention;
@@ -419,7 +422,10 @@ public class ContentPlanTopic extends TeaModel {
         }
 
         /**
-         * OriginType.
+         * <p>The origin type. Valid values: PLAN for full-term plans and MANUAL for manual scheduling.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PLAN</p>
          */
         public Builder originType(String originType) {
             this.originType = originType;
@@ -438,7 +444,7 @@ public class ContentPlanTopic extends TeaModel {
         }
 
         /**
-         * <p>The workspace ID. This refers to the GEO workspace for brand marketing, which is the appWorkspaceId.</p>
+         * <p>The workspace ID, which refers to the appWorkspaceId for GEO workspaces of the brand marketing type.</p>
          * 
          * <strong>example:</strong>
          * <p>d4e5f60718293a4b5c6d7e8f90a1b2c3</p>
@@ -449,10 +455,10 @@ public class ContentPlanTopic extends TeaModel {
         }
 
         /**
-         * <p>The rationale for topic selection.</p>
+         * <p>The topic rationale.</p>
          * 
          * <strong>example:</strong>
-         * <p>Users show high interest in AI website builder capabilities, making it a suitable entry point for brand awareness</p>
+         * <p>Users show high interest in the capabilities of AI website building products, making it a suitable entry point for brand awareness</p>
          */
         public Builder rationale(String rationale) {
             this.rationale = rationale;
@@ -482,7 +488,7 @@ public class ContentPlanTopic extends TeaModel {
          * <p>The reason for skipping.</p>
          * 
          * <strong>example:</strong>
-         * <p>This topic duplicates a published article and has been skipped</p>
+         * <p>This topic is a duplicate of a published article and has been skipped</p>
          */
         public Builder skipReason(String skipReason) {
             this.skipReason = skipReason;
@@ -490,7 +496,10 @@ public class ContentPlanTopic extends TeaModel {
         }
 
         /**
-         * SocialStatus.
+         * <p>The social media delivery status. Valid values: PENDING, RUNNING, FAILED, SUCCESS, and IGNORED. This field is empty if no record exists. Platform drafts are not considered successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PENDING</p>
          */
         public Builder socialStatus(String socialStatus) {
             this.socialStatus = socialStatus;
@@ -512,7 +521,7 @@ public class ContentPlanTopic extends TeaModel {
          * <p>The content title.</p>
          * 
          * <strong>example:</strong>
-         * <p>Analysis of the core capabilities of Wanxiaozhi AI website builder</p>
+         * <p>Core capabilities of the Wanxiaozhi AI website builder</p>
          */
         public Builder title(String title) {
             this.title = title;
@@ -531,7 +540,10 @@ public class ContentPlanTopic extends TeaModel {
         }
 
         /**
-         * WebsiteDraftId.
+         * <p>The channel draft ID bound to the website delivery. This field is empty if no draft is created or no record exists.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>draft_example001</p>
          */
         public Builder websiteDraftId(String websiteDraftId) {
             this.websiteDraftId = websiteDraftId;
@@ -539,7 +551,10 @@ public class ContentPlanTopic extends TeaModel {
         }
 
         /**
-         * WebsiteId.
+         * <p>The website target ID for the entry. If delivery exists, the bound website is used. If no article is generated, the plan configuration is inherited.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WS20261126000000000001</p>
          */
         public Builder websiteId(String websiteId) {
             this.websiteId = websiteId;
@@ -547,7 +562,10 @@ public class ContentPlanTopic extends TeaModel {
         }
 
         /**
-         * WebsiteStatus.
+         * <p>The website delivery status. Valid values: PENDING, RUNNING, UNKNOWN, FAILED, SUCCESS, and IGNORED. This field is empty if no record exists.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         public Builder websiteStatus(String websiteStatus) {
             this.websiteStatus = websiteStatus;
@@ -555,10 +573,10 @@ public class ContentPlanTopic extends TeaModel {
         }
 
         /**
-         * <p>The writing direction, which only describes the structure and perspective.</p>
+         * <p>The writing direction, which describes only the structure and perspective.</p>
          * 
          * <strong>example:</strong>
-         * <p>First summarize the product positioning, then introduce the core capabilities point by point, and finally provide the applicable scenarios</p>
+         * <p>Start with an overview of the product positioning, introduce the core capabilities in bullet points, and conclude with applicable scenarios</p>
          */
         public Builder writingDirection(String writingDirection) {
             this.writingDirection = writingDirection;

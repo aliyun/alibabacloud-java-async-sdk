@@ -283,7 +283,7 @@ public class GetAppInstanceEntitlementResponseBody extends TeaModel {
          * <p>The root error message.</p>
          * 
          * <strong>example:</strong>
-         * <p>系统异常</p>
+         * <p>System exception</p>
          */
         public Builder rootErrorMsg(String rootErrorMsg) {
             this.rootErrorMsg = rootErrorMsg;
@@ -566,7 +566,7 @@ public class GetAppInstanceEntitlementResponseBody extends TeaModel {
              * <p>Indicates whether this entitlement item is currently available.</p>
              * 
              * <strong>example:</strong>
-             * <p>true</p>
+             * <p>on</p>
              */
             public Builder available(Boolean available) {
                 this.available = available;
@@ -695,7 +695,7 @@ public class GetAppInstanceEntitlementResponseBody extends TeaModel {
              * <p>Indicates whether the instance is running.</p>
              * 
              * <strong>example:</strong>
-             * <p>true</p>
+             * <p>0</p>
              */
             public Builder running(Boolean running) {
                 this.running = running;

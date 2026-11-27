@@ -153,7 +153,10 @@ public class CreateAIStaffChatRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>The optional business idempotency token. The same token under the same primary account must correspond to the same input.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>27d4520e-90ab-49a2-a164-7d48e8a82115</p>
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("ClientToken", clientToken);
@@ -315,7 +318,7 @@ public class CreateAIStaffChatRequest extends Request {
             }
 
             /**
-             * <p>The business extension metadata in map format. The value must be a JSON string.</p>
+             * <p>The business extension metadata in map format. Must be a JSON string.</p>
              * 
              * <strong>example:</strong>
              * <p>{}</p>

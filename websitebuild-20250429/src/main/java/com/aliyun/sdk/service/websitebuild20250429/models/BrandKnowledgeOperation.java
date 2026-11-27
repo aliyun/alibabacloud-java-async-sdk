@@ -80,7 +80,10 @@ public class BrandKnowledgeOperation extends TeaModel {
         } 
 
         /**
-         * DocumentId.
+         * <p>The knowledge base document ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bkd_example001</p>
          */
         public Builder documentId(String documentId) {
             this.documentId = documentId;
@@ -88,7 +91,10 @@ public class BrandKnowledgeOperation extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The processing status after the material operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PARSING</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -96,7 +102,10 @@ public class BrandKnowledgeOperation extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * <p>The task ID used to query the processing progress.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bwb_example001</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

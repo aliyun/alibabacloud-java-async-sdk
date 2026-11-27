@@ -231,7 +231,7 @@ public class AuthorizeAppProxyOpsResponseBody extends TeaModel {
          * <p>The dynamic error message.</p>
          * 
          * <strong>example:</strong>
-         * <p>请求参数不合法。</p>
+         * <p>xxx</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -280,7 +280,7 @@ public class AuthorizeAppProxyOpsResponseBody extends TeaModel {
          * <p>The root error message.</p>
          * 
          * <strong>example:</strong>
-         * <p>系统异常</p>
+         * <p>System exception</p>
          */
         public Builder rootErrorMsg(String rootErrorMsg) {
             this.rootErrorMsg = rootErrorMsg;
@@ -373,7 +373,7 @@ public class AuthorizeAppProxyOpsResponseBody extends TeaModel {
              * <p>Indicates whether the service-linked role is authorized.</p>
              * 
              * <strong>example:</strong>
-             * <p>true</p>
+             * <p>Y</p>
              */
             public Builder authorized(Boolean authorized) {
                 this.authorized = authorized;

@@ -171,7 +171,10 @@ public class MarketingContentTodo extends TeaModel {
         } 
 
         /**
-         * ArticleId.
+         * <p>The article ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>article_example001</p>
          */
         public Builder articleId(String articleId) {
             this.articleId = articleId;
@@ -179,7 +182,10 @@ public class MarketingContentTodo extends TeaModel {
         }
 
         /**
-         * ConversationId.
+         * <p>The article creation session ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>conversation_example001</p>
          */
         public Builder conversationId(String conversationId) {
             this.conversationId = conversationId;
@@ -187,7 +193,10 @@ public class MarketingContentTodo extends TeaModel {
         }
 
         /**
-         * PlanId.
+         * <p>The content creation plan ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>plan_example001</p>
          */
         public Builder planId(String planId) {
             this.planId = planId;
@@ -195,7 +204,10 @@ public class MarketingContentTodo extends TeaModel {
         }
 
         /**
-         * ProjectId.
+         * <p>The GEO project ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AW20261126000000000001</p>
          */
         public Builder projectId(String projectId) {
             this.projectId = projectId;
@@ -203,7 +215,10 @@ public class MarketingContentTodo extends TeaModel {
         }
 
         /**
-         * Reason.
+         * <p>The reason for adding the entry to the to-do list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WEBSITE_PUBLISH_FAILED</p>
          */
         public Builder reason(String reason) {
             this.reason = reason;
@@ -211,7 +226,10 @@ public class MarketingContentTodo extends TeaModel {
         }
 
         /**
-         * ScheduledAt.
+         * <p>The scheduled publication date of the entry in yyyy-MM-dd format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-11-26</p>
          */
         public Builder scheduledAt(String scheduledAt) {
             this.scheduledAt = scheduledAt;
@@ -219,7 +237,10 @@ public class MarketingContentTodo extends TeaModel {
         }
 
         /**
-         * SocialStatus.
+         * <p>The distribution status of the social media channel.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PENDING</p>
          */
         public Builder socialStatus(String socialStatus) {
             this.socialStatus = socialStatus;
@@ -227,7 +248,10 @@ public class MarketingContentTodo extends TeaModel {
         }
 
         /**
-         * Title.
+         * <p>The web page or content title.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>About Example Technology</p>
          */
         public Builder title(String title) {
             this.title = title;
@@ -235,7 +259,10 @@ public class MarketingContentTodo extends TeaModel {
         }
 
         /**
-         * TopicId.
+         * <p>The calendar topic ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>topic_example001</p>
          */
         public Builder topicId(String topicId) {
             this.topicId = topicId;
@@ -243,7 +270,10 @@ public class MarketingContentTodo extends TeaModel {
         }
 
         /**
-         * WebsiteStatus.
+         * <p>The distribution status of the official website channel.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         public Builder websiteStatus(String websiteStatus) {
             this.websiteStatus = websiteStatus;

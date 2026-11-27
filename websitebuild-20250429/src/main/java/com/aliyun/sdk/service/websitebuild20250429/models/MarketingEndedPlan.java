@@ -80,7 +80,10 @@ public class MarketingEndedPlan extends TeaModel {
         } 
 
         /**
-         * EndDate.
+         * <p>The end date of the plan, in yyyy-MM-dd format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-12-25</p>
          */
         public Builder endDate(String endDate) {
             this.endDate = endDate;
@@ -88,7 +91,10 @@ public class MarketingEndedPlan extends TeaModel {
         }
 
         /**
-         * PlanId.
+         * <p>The creation plan ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>plan_example001</p>
          */
         public Builder planId(String planId) {
             this.planId = planId;
@@ -96,7 +102,10 @@ public class MarketingEndedPlan extends TeaModel {
         }
 
         /**
-         * ProjectId.
+         * <p>The GEO project ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AW20261126000000000001</p>
          */
         public Builder projectId(String projectId) {
             this.projectId = projectId;

@@ -184,7 +184,7 @@ public class CreateAIStaffChatResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details of the access denial.</p>
+         * <p>The detailed cause of the access denied error.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -195,7 +195,7 @@ public class CreateAIStaffChatResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether a retry is allowed.</p>
+         * <p>Indicates whether retries are allowed.</p>
          * 
          * <strong>example:</strong>
          * <p>False</p>
@@ -206,7 +206,7 @@ public class CreateAIStaffChatResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The application name.</p>
+         * <p>The app name.</p>
          * 
          * <strong>example:</strong>
          * <p>spring-cloud-b</p>

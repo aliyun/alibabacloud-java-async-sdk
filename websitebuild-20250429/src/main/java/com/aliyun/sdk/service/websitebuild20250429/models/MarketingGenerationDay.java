@@ -93,7 +93,10 @@ public class MarketingGenerationDay extends TeaModel {
         } 
 
         /**
-         * ArticleTasks.
+         * <p>The number of article generation tasks on the day.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder articleTasks(Long articleTasks) {
             this.articleTasks = articleTasks;
@@ -101,7 +104,10 @@ public class MarketingGenerationDay extends TeaModel {
         }
 
         /**
-         * Date.
+         * <p>The statistical date. Format: yyyy-MM-dd.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-11-26</p>
          */
         public Builder date(String date) {
             this.date = date;
@@ -109,7 +115,10 @@ public class MarketingGenerationDay extends TeaModel {
         }
 
         /**
-         * ImageTasks.
+         * <p>The number of image generation tasks on the day.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder imageTasks(Long imageTasks) {
             this.imageTasks = imageTasks;
@@ -117,7 +126,10 @@ public class MarketingGenerationDay extends TeaModel {
         }
 
         /**
-         * VideoTasks.
+         * <p>The number of video generation tasks on the day.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder videoTasks(Long videoTasks) {
             this.videoTasks = videoTasks;

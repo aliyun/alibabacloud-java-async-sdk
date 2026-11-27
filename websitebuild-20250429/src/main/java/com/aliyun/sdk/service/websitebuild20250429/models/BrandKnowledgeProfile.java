@@ -132,7 +132,10 @@ public class BrandKnowledgeProfile extends TeaModel {
         } 
 
         /**
-         * Advantages.
+         * <p>The differentiated brand advantages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Implementation support based on business processes</p>
          */
         public Builder advantages(String advantages) {
             this.advantages = advantages;
@@ -140,7 +143,7 @@ public class BrandKnowledgeProfile extends TeaModel {
         }
 
         /**
-         * Faqs.
+         * <p>The list of brand FAQs with answers.</p>
          */
         public Builder faqs(java.util.List<BrandKnowledgeFaq> faqs) {
             this.faqs = faqs;
@@ -148,7 +151,7 @@ public class BrandKnowledgeProfile extends TeaModel {
         }
 
         /**
-         * Keywords.
+         * <p>The list of core brand keywords.</p>
          */
         public Builder keywords(java.util.List<String> keywords) {
             this.keywords = keywords;
@@ -156,7 +159,10 @@ public class BrandKnowledgeProfile extends TeaModel {
         }
 
         /**
-         * Positioning.
+         * <p>The one-sentence brand positioning statement.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Software service provider for small and medium-sized enterprises</p>
          */
         public Builder positioning(String positioning) {
             this.positioning = positioning;
@@ -164,7 +170,10 @@ public class BrandKnowledgeProfile extends TeaModel {
         }
 
         /**
-         * Products.
+         * <p>The core brand products and services.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Enterprise collaboration software and implementation services</p>
          */
         public Builder products(String products) {
             this.products = products;
@@ -172,7 +181,10 @@ public class BrandKnowledgeProfile extends TeaModel {
         }
 
         /**
-         * TargetAudience.
+         * <p>The target customer base.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Operations teams of small and medium-sized enterprises</p>
          */
         public Builder targetAudience(String targetAudience) {
             this.targetAudience = targetAudience;
@@ -180,7 +192,10 @@ public class BrandKnowledgeProfile extends TeaModel {
         }
 
         /**
-         * WritingTone.
+         * <p>The writing tone used for content creation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Pragmatic and clear</p>
          */
         public Builder writingTone(String writingTone) {
             this.writingTone = writingTone;

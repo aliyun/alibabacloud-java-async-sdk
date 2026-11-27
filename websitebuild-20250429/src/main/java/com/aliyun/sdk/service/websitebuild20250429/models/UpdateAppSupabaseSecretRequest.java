@@ -153,7 +153,7 @@ public class UpdateAppSupabaseSecretRequest extends Request {
          * <p>The secret key.</p>
          * 
          * <strong>example:</strong>
-         * <p>EXAMPLE_API_KEY</p>
+         * <hr>
          */
         public Builder secretKey(String secretKey) {
             this.putQueryParameter("SecretKey", secretKey);

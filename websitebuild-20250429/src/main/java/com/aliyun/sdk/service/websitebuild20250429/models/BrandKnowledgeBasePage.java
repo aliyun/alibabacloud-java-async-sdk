@@ -106,7 +106,10 @@ public class BrandKnowledgeBasePage extends TeaModel {
         } 
 
         /**
-         * CurrentPageNum.
+         * <p>The current page number, starting from 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPageNum(Integer currentPageNum) {
             this.currentPageNum = currentPageNum;
@@ -114,7 +117,7 @@ public class BrandKnowledgeBasePage extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The list of records on the current page.</p>
          */
         public Builder data(java.util.List<BrandKnowledgeBase> data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class BrandKnowledgeBasePage extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The maximum number of records returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -130,7 +136,10 @@ public class BrandKnowledgeBasePage extends TeaModel {
         }
 
         /**
-         * TotalItemNum.
+         * <p>The total count of matching records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>28</p>
          */
         public Builder totalItemNum(Integer totalItemNum) {
             this.totalItemNum = totalItemNum;
@@ -138,7 +147,10 @@ public class BrandKnowledgeBasePage extends TeaModel {
         }
 
         /**
-         * TotalPageNum.
+         * <p>The total number of pages for matching records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalPageNum(Integer totalPageNum) {
             this.totalPageNum = totalPageNum;

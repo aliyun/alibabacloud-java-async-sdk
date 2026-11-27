@@ -184,7 +184,10 @@ public class BrandKnowledgeWebsitePage extends TeaModel {
         } 
 
         /**
-         * CapturedAt.
+         * <p>The time when the web page was captured.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-11-26T08:00:00Z</p>
          */
         public Builder capturedAt(String capturedAt) {
             this.capturedAt = capturedAt;
@@ -192,7 +195,10 @@ public class BrandKnowledgeWebsitePage extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The description displayed when a failure occurs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Failed to fetch the web page</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -200,7 +206,10 @@ public class BrandKnowledgeWebsitePage extends TeaModel {
         }
 
         /**
-         * ExistingMaterialId.
+         * <p>The ID of the existing material with the same URL in the same knowledge base.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bkm_example001</p>
          */
         public Builder existingMaterialId(String existingMaterialId) {
             this.existingMaterialId = existingMaterialId;
@@ -208,7 +217,10 @@ public class BrandKnowledgeWebsitePage extends TeaModel {
         }
 
         /**
-         * FinalUrl.
+         * <p>The final web page address obtained after following redirects.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://example.com/company/about">https://example.com/company/about</a></p>
          */
         public Builder finalUrl(String finalUrl) {
             this.finalUrl = finalUrl;
@@ -216,7 +228,10 @@ public class BrandKnowledgeWebsitePage extends TeaModel {
         }
 
         /**
-         * ImportErrorCode.
+         * <p>The business error code when a single-page import fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BrandKnowledge.ImportFailed</p>
          */
         public Builder importErrorCode(String importErrorCode) {
             this.importErrorCode = importErrorCode;
@@ -224,7 +239,10 @@ public class BrandKnowledgeWebsitePage extends TeaModel {
         }
 
         /**
-         * ImportErrorMessage.
+         * <p>The description displayed when a single-page import fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Material quota exceeded</p>
          */
         public Builder importErrorMessage(String importErrorMessage) {
             this.importErrorMessage = importErrorMessage;
@@ -232,7 +250,10 @@ public class BrandKnowledgeWebsitePage extends TeaModel {
         }
 
         /**
-         * ImportStatus.
+         * <p>The import status of the web page material.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCEEDED</p>
          */
         public Builder importStatus(String importStatus) {
             this.importStatus = importStatus;
@@ -240,7 +261,10 @@ public class BrandKnowledgeWebsitePage extends TeaModel {
         }
 
         /**
-         * PageId.
+         * <p>The ID of the web page in the collection batch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bwp_example001</p>
          */
         public Builder pageId(String pageId) {
             this.pageId = pageId;
@@ -248,7 +272,10 @@ public class BrandKnowledgeWebsitePage extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The fetch result of the web page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>READY</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -256,7 +283,10 @@ public class BrandKnowledgeWebsitePage extends TeaModel {
         }
 
         /**
-         * Title.
+         * <p>The title of the web page or content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>About Sample Technology</p>
          */
         public Builder title(String title) {
             this.title = title;
@@ -264,7 +294,10 @@ public class BrandKnowledgeWebsitePage extends TeaModel {
         }
 
         /**
-         * Url.
+         * <p>The original web page address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://example.com/about">https://example.com/about</a></p>
          */
         public Builder url(String url) {
             this.url = url;

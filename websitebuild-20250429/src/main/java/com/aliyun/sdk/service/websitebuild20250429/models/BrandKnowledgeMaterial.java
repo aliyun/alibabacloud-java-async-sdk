@@ -210,7 +210,10 @@ public class BrandKnowledgeMaterial extends TeaModel {
         } 
 
         /**
-         * CurrentDocumentId.
+         * <p>The document ID of the current available version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bkd_example001</p>
          */
         public Builder currentDocumentId(String currentDocumentId) {
             this.currentDocumentId = currentDocumentId;
@@ -218,7 +221,7 @@ public class BrandKnowledgeMaterial extends TeaModel {
         }
 
         /**
-         * Enabled.
+         * <p>Specifies whether the material is enabled for retrieval.</p>
          */
         public Builder enabled(Boolean enabled) {
             this.enabled = enabled;
@@ -226,7 +229,10 @@ public class BrandKnowledgeMaterial extends TeaModel {
         }
 
         /**
-         * ImportErrorMessage.
+         * <p>The error message displayed when a single page fails to be imported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Material quota exceeded</p>
          */
         public Builder importErrorMessage(String importErrorMessage) {
             this.importErrorMessage = importErrorMessage;
@@ -234,7 +240,10 @@ public class BrandKnowledgeMaterial extends TeaModel {
         }
 
         /**
-         * ImportStatus.
+         * <p>The import status of the web material.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCEEDED</p>
          */
         public Builder importStatus(String importStatus) {
             this.importStatus = importStatus;
@@ -242,7 +251,10 @@ public class BrandKnowledgeMaterial extends TeaModel {
         }
 
         /**
-         * KnowledgeBaseId.
+         * <p>The ID of the brand knowledge base.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bkb_example001</p>
          */
         public Builder knowledgeBaseId(String knowledgeBaseId) {
             this.knowledgeBaseId = knowledgeBaseId;
@@ -250,7 +262,10 @@ public class BrandKnowledgeMaterial extends TeaModel {
         }
 
         /**
-         * MaterialId.
+         * <p>The ID of the brand material.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bkm_example001</p>
          */
         public Builder materialId(String materialId) {
             this.materialId = materialId;
@@ -258,7 +273,10 @@ public class BrandKnowledgeMaterial extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>The name of the material.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Official website product introduction</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -266,7 +284,10 @@ public class BrandKnowledgeMaterial extends TeaModel {
         }
 
         /**
-         * PendingDocumentId.
+         * <p>The document ID of the new version being processed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bkd_example002</p>
          */
         public Builder pendingDocumentId(String pendingDocumentId) {
             this.pendingDocumentId = pendingDocumentId;
@@ -274,7 +295,10 @@ public class BrandKnowledgeMaterial extends TeaModel {
         }
 
         /**
-         * SourceType.
+         * <p>The source type of the material.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WEB</p>
          */
         public Builder sourceType(String sourceType) {
             this.sourceType = sourceType;
@@ -282,7 +306,10 @@ public class BrandKnowledgeMaterial extends TeaModel {
         }
 
         /**
-         * SourceUrl.
+         * <p>The source web address of the material.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://example.com/about">https://example.com/about</a></p>
          */
         public Builder sourceUrl(String sourceUrl) {
             this.sourceUrl = sourceUrl;
@@ -290,7 +317,10 @@ public class BrandKnowledgeMaterial extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The business status of the material.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACTIVE</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -298,7 +328,10 @@ public class BrandKnowledgeMaterial extends TeaModel {
         }
 
         /**
-         * Version.
+         * <p>The version number of the record, which is used to detect concurrent modifications.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder version(Long version) {
             this.version = version;
@@ -306,7 +339,10 @@ public class BrandKnowledgeMaterial extends TeaModel {
         }
 
         /**
-         * WebsiteId.
+         * <p>The ID of the Wanxiaozhi site.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WS20261126000000000001</p>
          */
         public Builder websiteId(String websiteId) {
             this.websiteId = websiteId;

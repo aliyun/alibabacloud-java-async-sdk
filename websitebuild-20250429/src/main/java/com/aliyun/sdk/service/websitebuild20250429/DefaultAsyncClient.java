@@ -249,7 +249,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Initiates a Wanxiaozhi 2.0 AI conversation.</p>
+     * <p>The Wanxiaozhi 2.0 AI conversation.</p>
      * 
      * @param request the request parameters of CreateAIStaffChat  CreateAIStaffChatRequest
      * @return CreateAIStaffChatResponse
@@ -984,6 +984,28 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetAIStaffPreviewUrlResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Sign the request with an identity that is added to the partner whitelist and granted the websitebuild:GetAklessTmpIdentityForPartner permission. Pass a role code in the query parameters and make a separate call for each role.
+     * After a successful call, read the three ciphertext strings from Data.Credentials and decrypt them by using the pre-shared key. After decryption, configure the AccessKey ID, AccessKey secret, and security token from the same response into the SDK of the target cloud service. The validity period of the temporary credentials is managed by Akless.</p>
+     * 
+     * @param request the request parameters of GetAklessTmpIdentityForPartner  GetAklessTmpIdentityForPartnerRequest
+     * @return GetAklessTmpIdentityForPartnerResponse
+     */
+    @Override
+    public CompletableFuture<GetAklessTmpIdentityForPartnerResponse> getAklessTmpIdentityForPartner(GetAklessTmpIdentityForPartnerRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetAklessTmpIdentityForPartner").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetAklessTmpIdentityForPartnerResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetAklessTmpIdentityForPartnerResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

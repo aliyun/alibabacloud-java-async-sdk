@@ -105,7 +105,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Initiates a Wanxiaozhi 2.0 AI conversation.</p>
+     * <p>The Wanxiaozhi 2.0 AI conversation.</p>
      * 
      * @param request the request parameters of CreateAIStaffChat  CreateAIStaffChatRequest
      * @return CreateAIStaffChatResponse
@@ -392,6 +392,16 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetAIStaffPreviewUrlResponse
      */
     CompletableFuture<GetAIStaffPreviewUrlResponse> getAIStaffPreviewUrl(GetAIStaffPreviewUrlRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Sign the request with an identity that is added to the partner whitelist and granted the websitebuild:GetAklessTmpIdentityForPartner permission. Pass a role code in the query parameters and make a separate call for each role.
+     * After a successful call, read the three ciphertext strings from Data.Credentials and decrypt them by using the pre-shared key. After decryption, configure the AccessKey ID, AccessKey secret, and security token from the same response into the SDK of the target cloud service. The validity period of the temporary credentials is managed by Akless.</p>
+     * 
+     * @param request the request parameters of GetAklessTmpIdentityForPartner  GetAklessTmpIdentityForPartnerRequest
+     * @return GetAklessTmpIdentityForPartnerResponse
+     */
+    CompletableFuture<GetAklessTmpIdentityForPartnerResponse> getAklessTmpIdentityForPartner(GetAklessTmpIdentityForPartnerRequest request);
 
     /**
      * <b>description</b> :

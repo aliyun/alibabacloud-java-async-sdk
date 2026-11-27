@@ -340,7 +340,7 @@ public class BrandKnowledgeDocument extends TeaModel {
         } 
 
         /**
-         * <p>Specifies whether the content is sufficient to be considered for plan summary candidates.</p>
+         * <p>Specifies whether the content is sufficient to be included as a candidate for plan summaries.</p>
          */
         public Builder contentSufficient(Boolean contentSufficient) {
             this.contentSufficient = contentSufficient;
@@ -359,7 +359,7 @@ public class BrandKnowledgeDocument extends TeaModel {
         }
 
         /**
-         * <p>The creation time in Unix milliseconds.</p>
+         * <p>The creation time in UNIX milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1735660800000</p>
@@ -381,7 +381,7 @@ public class BrandKnowledgeDocument extends TeaModel {
          * <p>The display title.</p>
          * 
          * <strong>example:</strong>
-         * <p>Wanxiaozhi product introduction</p>
+         * <p>Wanxiaozhi Product Introduction</p>
          */
         public Builder displayTitle(String displayTitle) {
             this.displayTitle = displayTitle;
@@ -400,7 +400,7 @@ public class BrandKnowledgeDocument extends TeaModel {
         }
 
         /**
-         * <p>The ID of the brand knowledge document.</p>
+         * <p>The brand knowledge document ID.</p>
          * 
          * <strong>example:</strong>
          * <p>bkd_3f7a1c2e9b7d4a5f8c0e1d2b3a4c5d6e</p>
@@ -411,7 +411,7 @@ public class BrandKnowledgeDocument extends TeaModel {
         }
 
         /**
-         * Enabled.
+         * <p>Specifies whether the brand material corresponding to the document is enabled for retrieval.</p>
          */
         public Builder enabled(Boolean enabled) {
             this.enabled = enabled;
@@ -460,7 +460,10 @@ public class BrandKnowledgeDocument extends TeaModel {
         }
 
         /**
-         * KnowledgeBaseId.
+         * <p>The ID of the brand knowledge base to which the document belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bkb_example001</p>
          */
         public Builder knowledgeBaseId(String knowledgeBaseId) {
             this.knowledgeBaseId = knowledgeBaseId;
@@ -468,7 +471,10 @@ public class BrandKnowledgeDocument extends TeaModel {
         }
 
         /**
-         * MaterialId.
+         * <p>The brand material ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bkm_example001</p>
          */
         public Builder materialId(String materialId) {
             this.materialId = materialId;
@@ -476,10 +482,10 @@ public class BrandKnowledgeDocument extends TeaModel {
         }
 
         /**
-         * <p>The one-line summary, which is used only to construct search queries and cannot be used as factual evidence.</p>
+         * <p>The one-line summary, which is used only to construct retrieval queries and cannot be used as factual evidence.</p>
          * 
          * <strong>example:</strong>
-         * <p>Introduces the product positioning and core capabilities of the Wanxiaozhi AI website building platform. It can be used as a reference for content topic selection</p>
+         * <p>Introduces the product positioning and core capabilities of the Wanxiaozhi AI website building platform, which can be used as a reference for content topic selection</p>
          */
         public Builder oneLineSummary(String oneLineSummary) {
             this.oneLineSummary = oneLineSummary;
@@ -490,7 +496,7 @@ public class BrandKnowledgeDocument extends TeaModel {
          * <p>The original file name.</p>
          * 
          * <strong>example:</strong>
-         * <p>Wanxiaozhi product introduction.pdf</p>
+         * <p>Wanxiaozhi Product Introduction.pdf</p>
          */
         public Builder originalName(String originalName) {
             this.originalName = originalName;
@@ -498,7 +504,7 @@ public class BrandKnowledgeDocument extends TeaModel {
         }
 
         /**
-         * <p>The ID of the business workspace. For GEO business workspaces of the brand marketing type, this is the appWorkspaceId.</p>
+         * <p>The workspace ID, which is the GEO workspace for brand marketing, namely appWorkspaceId.</p>
          * 
          * <strong>example:</strong>
          * <p>d4e5f60718293a4b5c6d7e8f90a1b2c3</p>
@@ -509,7 +515,7 @@ public class BrandKnowledgeDocument extends TeaModel {
         }
 
         /**
-         * <p>The time when the document is ready for reference, in Unix milliseconds.</p>
+         * <p>The time when the document is ready for citation, in UNIX milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1735660900000</p>
@@ -531,7 +537,7 @@ public class BrandKnowledgeDocument extends TeaModel {
         }
 
         /**
-         * <p>The message displayed on the status page.</p>
+         * <p>The text displayed on the status page.</p>
          * 
          * <strong>example:</strong>
          * <p>Parsing completed and available for content plans</p>
@@ -564,7 +570,7 @@ public class BrandKnowledgeDocument extends TeaModel {
         }
 
         /**
-         * <p>The last update time in Unix milliseconds.</p>
+         * <p>The last update time in UNIX milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1735660900000</p>

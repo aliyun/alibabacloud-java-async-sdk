@@ -327,7 +327,7 @@ public class MarketingOverview extends TeaModel {
         } 
 
         /**
-         * ChannelDistribution.
+         * <p>The number of articles distributed, aggregated by channel.</p>
          */
         public Builder channelDistribution(java.util.List<MarketingChannelDistribution> channelDistribution) {
             this.channelDistribution = channelDistribution;
@@ -335,7 +335,10 @@ public class MarketingOverview extends TeaModel {
         }
 
         /**
-         * ContentGenerationFailedCount.
+         * <p>The number of items for which content generation failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder contentGenerationFailedCount(Long contentGenerationFailedCount) {
             this.contentGenerationFailedCount = contentGenerationFailedCount;
@@ -343,7 +346,10 @@ public class MarketingOverview extends TeaModel {
         }
 
         /**
-         * ContentTodoCount.
+         * <p>The number of content to-do items.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder contentTodoCount(Long contentTodoCount) {
             this.contentTodoCount = contentTodoCount;
@@ -351,7 +357,10 @@ public class MarketingOverview extends TeaModel {
         }
 
         /**
-         * DistributedArticles.
+         * <p>The number of distributed articles.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder distributedArticles(Long distributedArticles) {
             this.distributedArticles = distributedArticles;
@@ -359,7 +368,10 @@ public class MarketingOverview extends TeaModel {
         }
 
         /**
-         * EndedPlanCount.
+         * <p>The number of ended creation plans.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder endedPlanCount(Long endedPlanCount) {
             this.endedPlanCount = endedPlanCount;
@@ -367,7 +379,7 @@ public class MarketingOverview extends TeaModel {
         }
 
         /**
-         * EndedPlans.
+         * <p>The list of ended creation plans.</p>
          */
         public Builder endedPlans(java.util.List<MarketingEndedPlan> endedPlans) {
             this.endedPlans = endedPlans;
@@ -375,7 +387,10 @@ public class MarketingOverview extends TeaModel {
         }
 
         /**
-         * GeneratedArticleTasks.
+         * <p>The number of tasks for which articles have been generated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder generatedArticleTasks(Long generatedArticleTasks) {
             this.generatedArticleTasks = generatedArticleTasks;
@@ -383,7 +398,10 @@ public class MarketingOverview extends TeaModel {
         }
 
         /**
-         * GeneratedImageTasks.
+         * <p>The number of tasks for which images have been generated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder generatedImageTasks(Long generatedImageTasks) {
             this.generatedImageTasks = generatedImageTasks;
@@ -391,7 +409,10 @@ public class MarketingOverview extends TeaModel {
         }
 
         /**
-         * GeneratedVideoTasks.
+         * <p>The number of tasks for which videos have been generated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder generatedVideoTasks(Long generatedVideoTasks) {
             this.generatedVideoTasks = generatedVideoTasks;
@@ -399,7 +420,7 @@ public class MarketingOverview extends TeaModel {
         }
 
         /**
-         * GenerationTrend.
+         * <p>The daily content generation trend.</p>
          */
         public Builder generationTrend(java.util.List<MarketingGenerationDay> generationTrend) {
             this.generationTrend = generationTrend;
@@ -407,7 +428,7 @@ public class MarketingOverview extends TeaModel {
         }
 
         /**
-         * LatestSingleDiagnoses.
+         * <p>The list of recently completed single diagnoses.</p>
          */
         public Builder latestSingleDiagnoses(java.util.List<MarketingDiagnosisSummary> latestSingleDiagnoses) {
             this.latestSingleDiagnoses = latestSingleDiagnoses;
@@ -415,7 +436,10 @@ public class MarketingOverview extends TeaModel {
         }
 
         /**
-         * PendingDistributionCount.
+         * <p>The number of items pending distribution.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder pendingDistributionCount(Long pendingDistributionCount) {
             this.pendingDistributionCount = pendingDistributionCount;
@@ -423,7 +447,10 @@ public class MarketingOverview extends TeaModel {
         }
 
         /**
-         * PendingPlanDrafts.
+         * <p>The number of pending plan drafts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder pendingPlanDrafts(Long pendingPlanDrafts) {
             this.pendingPlanDrafts = pendingPlanDrafts;
@@ -431,7 +458,10 @@ public class MarketingOverview extends TeaModel {
         }
 
         /**
-         * SingleDiagnosisCount.
+         * <p>The cumulative number of completed single GEO diagnostic nodes, which is not limited by the 30-day window and excludes project monitoring.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
          */
         public Builder singleDiagnosisCount(Long singleDiagnosisCount) {
             this.singleDiagnosisCount = singleDiagnosisCount;
@@ -439,7 +469,10 @@ public class MarketingOverview extends TeaModel {
         }
 
         /**
-         * Timezone.
+         * <p>The IANA time zone used for the statistical window.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Asia/Shanghai</p>
          */
         public Builder timezone(String timezone) {
             this.timezone = timezone;
@@ -447,7 +480,10 @@ public class MarketingOverview extends TeaModel {
         }
 
         /**
-         * UnknownGeneratedTimeCount.
+         * <p>The number of records that are missing an available generation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder unknownGeneratedTimeCount(Long unknownGeneratedTimeCount) {
             this.unknownGeneratedTimeCount = unknownGeneratedTimeCount;
@@ -455,7 +491,10 @@ public class MarketingOverview extends TeaModel {
         }
 
         /**
-         * UnknownPublishedTimeCount.
+         * <p>The number of records that are missing an available publish time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder unknownPublishedTimeCount(Long unknownPublishedTimeCount) {
             this.unknownPublishedTimeCount = unknownPublishedTimeCount;
@@ -463,7 +502,7 @@ public class MarketingOverview extends TeaModel {
         }
 
         /**
-         * UnreadDiagnoses.
+         * <p>The list of unread diagnoses.</p>
          */
         public Builder unreadDiagnoses(java.util.List<MarketingDiagnosisSummary> unreadDiagnoses) {
             this.unreadDiagnoses = unreadDiagnoses;
@@ -471,7 +510,10 @@ public class MarketingOverview extends TeaModel {
         }
 
         /**
-         * UnreadDiagnosisCount.
+         * <p>The number of unread diagnosis records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder unreadDiagnosisCount(Long unreadDiagnosisCount) {
             this.unreadDiagnosisCount = unreadDiagnosisCount;
@@ -479,7 +521,10 @@ public class MarketingOverview extends TeaModel {
         }
 
         /**
-         * WebsitePublishFailedCount.
+         * <p>The number of items for which publishing to the official website failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder websitePublishFailedCount(Long websitePublishFailedCount) {
             this.websitePublishFailedCount = websitePublishFailedCount;
@@ -487,7 +532,10 @@ public class MarketingOverview extends TeaModel {
         }
 
         /**
-         * WindowEnd.
+         * <p>The end time of the statistical window, as a Unix timestamp in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1795737600000</p>
          */
         public Builder windowEnd(Long windowEnd) {
             this.windowEnd = windowEnd;
@@ -495,7 +543,10 @@ public class MarketingOverview extends TeaModel {
         }
 
         /**
-         * WindowStart.
+         * <p>The start time of the statistical window, as a Unix timestamp in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1795651200000</p>
          */
         public Builder windowStart(Long windowStart) {
             this.windowStart = windowStart;

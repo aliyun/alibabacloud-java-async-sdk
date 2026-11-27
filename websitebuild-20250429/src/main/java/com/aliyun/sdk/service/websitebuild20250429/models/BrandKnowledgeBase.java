@@ -171,7 +171,10 @@ public class BrandKnowledgeBase extends TeaModel {
         } 
 
         /**
-         * CreatedAt.
+         * <p>The creation time, represented as a UNIX timestamp in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1795658400000</p>
          */
         public Builder createdAt(Long createdAt) {
             this.createdAt = createdAt;
@@ -179,7 +182,10 @@ public class BrandKnowledgeBase extends TeaModel {
         }
 
         /**
-         * Description.
+         * <p>The profile of the brand or collection object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Provides software services to enterprises</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -187,7 +193,10 @@ public class BrandKnowledgeBase extends TeaModel {
         }
 
         /**
-         * KnowledgeBaseId.
+         * <p>The ID of the brand knowledge base.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bkb_example001</p>
          */
         public Builder knowledgeBaseId(String knowledgeBaseId) {
             this.knowledgeBaseId = knowledgeBaseId;
@@ -195,7 +204,10 @@ public class BrandKnowledgeBase extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>The brand name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Example Technology</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -203,7 +215,10 @@ public class BrandKnowledgeBase extends TeaModel {
         }
 
         /**
-         * OfficialSiteUrl.
+         * <p>The URL of the official brand website.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://example.com/">https://example.com/</a></p>
          */
         public Builder officialSiteUrl(String officialSiteUrl) {
             this.officialSiteUrl = officialSiteUrl;
@@ -211,7 +226,7 @@ public class BrandKnowledgeBase extends TeaModel {
         }
 
         /**
-         * Profile.
+         * <p>The structured brand profile.</p>
          */
         public Builder profile(BrandKnowledgeProfile profile) {
             this.profile = profile;
@@ -219,7 +234,7 @@ public class BrandKnowledgeBase extends TeaModel {
         }
 
         /**
-         * Questions.
+         * <p>The list of suggested questions for GEO monitoring.</p>
          */
         public Builder questions(java.util.List<BrandKnowledgeQuestion> questions) {
             this.questions = questions;
@@ -227,7 +242,10 @@ public class BrandKnowledgeBase extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The status of the brand knowledge base.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACTIVE</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -235,7 +253,10 @@ public class BrandKnowledgeBase extends TeaModel {
         }
 
         /**
-         * UpdatedAt.
+         * <p>The last update time, represented as a UNIX timestamp in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1795658460000</p>
          */
         public Builder updatedAt(Long updatedAt) {
             this.updatedAt = updatedAt;
@@ -243,7 +264,10 @@ public class BrandKnowledgeBase extends TeaModel {
         }
 
         /**
-         * Version.
+         * <p>The record version number used to detect concurrent modifications.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder version(Long version) {
             this.version = version;

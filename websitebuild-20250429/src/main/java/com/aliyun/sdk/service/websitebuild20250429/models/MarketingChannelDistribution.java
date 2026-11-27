@@ -67,7 +67,10 @@ public class MarketingChannelDistribution extends TeaModel {
         } 
 
         /**
-         * ArticleCount.
+         * <p>The number of articles in the channel.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder articleCount(Long articleCount) {
             this.articleCount = articleCount;
@@ -75,7 +78,10 @@ public class MarketingChannelDistribution extends TeaModel {
         }
 
         /**
-         * Channel.
+         * <p>The content distribution channel.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WEBSITE</p>
          */
         public Builder channel(String channel) {
             this.channel = channel;

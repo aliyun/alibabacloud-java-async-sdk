@@ -262,7 +262,10 @@ public class BrandKnowledgeProfileAnalysis extends TeaModel {
         } 
 
         /**
-         * Advantages.
+         * <p>The differentiation advantages of the brand.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Providing implementation support based on business processes</p>
          */
         public Builder advantages(String advantages) {
             this.advantages = advantages;
@@ -270,7 +273,10 @@ public class BrandKnowledgeProfileAnalysis extends TeaModel {
         }
 
         /**
-         * BaseVersion.
+         * <p>The knowledge base version at the start of the analysis.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder baseVersion(Long baseVersion) {
             this.baseVersion = baseVersion;
@@ -278,7 +284,10 @@ public class BrandKnowledgeProfileAnalysis extends TeaModel {
         }
 
         /**
-         * Description.
+         * <p>The profile of the brand or collection object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Providing software services for enterprises</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -286,7 +295,7 @@ public class BrandKnowledgeProfileAnalysis extends TeaModel {
         }
 
         /**
-         * Evidence.
+         * <p>The list of source evidence supporting the analysis results.</p>
          */
         public Builder evidence(java.util.List<BrandKnowledgeProfileEvidence> evidence) {
             this.evidence = evidence;
@@ -294,7 +303,7 @@ public class BrandKnowledgeProfileAnalysis extends TeaModel {
         }
 
         /**
-         * ExcludedMaterials.
+         * <p>The unread materials and reasons for this analysis.</p>
          */
         public Builder excludedMaterials(java.util.List<String> excludedMaterials) {
             this.excludedMaterials = excludedMaterials;
@@ -302,7 +311,7 @@ public class BrandKnowledgeProfileAnalysis extends TeaModel {
         }
 
         /**
-         * Faqs.
+         * <p>The list of brand FAQs with answers.</p>
          */
         public Builder faqs(java.util.List<BrandKnowledgeProfileFaq> faqs) {
             this.faqs = faqs;
@@ -310,7 +319,7 @@ public class BrandKnowledgeProfileAnalysis extends TeaModel {
         }
 
         /**
-         * Keywords.
+         * <p>The list of core brand keywords.</p>
          */
         public Builder keywords(java.util.List<String> keywords) {
             this.keywords = keywords;
@@ -318,7 +327,10 @@ public class BrandKnowledgeProfileAnalysis extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>The brand name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Example Technology</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -326,7 +338,10 @@ public class BrandKnowledgeProfileAnalysis extends TeaModel {
         }
 
         /**
-         * Positioning.
+         * <p>The one-sentence positioning of the brand.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Software service provider for small and medium-sized enterprises</p>
          */
         public Builder positioning(String positioning) {
             this.positioning = positioning;
@@ -334,7 +349,10 @@ public class BrandKnowledgeProfileAnalysis extends TeaModel {
         }
 
         /**
-         * Products.
+         * <p>The main products and services of the brand.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Enterprise collaboration software and implementation services</p>
          */
         public Builder products(String products) {
             this.products = products;
@@ -342,7 +360,7 @@ public class BrandKnowledgeProfileAnalysis extends TeaModel {
         }
 
         /**
-         * Questions.
+         * <p>The list of recommended questions for GEO monitoring.</p>
          */
         public Builder questions(java.util.List<BrandKnowledgeQuestion> questions) {
             this.questions = questions;
@@ -350,7 +368,7 @@ public class BrandKnowledgeProfileAnalysis extends TeaModel {
         }
 
         /**
-         * ReadPageIds.
+         * <p>The list of web page IDs successfully read during the analysis.</p>
          */
         public Builder readPageIds(java.util.List<String> readPageIds) {
             this.readPageIds = readPageIds;
@@ -358,7 +376,7 @@ public class BrandKnowledgeProfileAnalysis extends TeaModel {
         }
 
         /**
-         * SourceDocumentIds.
+         * <p>The list of source document IDs used for the analysis.</p>
          */
         public Builder sourceDocumentIds(java.util.List<String> sourceDocumentIds) {
             this.sourceDocumentIds = sourceDocumentIds;
@@ -366,7 +384,10 @@ public class BrandKnowledgeProfileAnalysis extends TeaModel {
         }
 
         /**
-         * TargetAudience.
+         * <p>The target audience of the brand.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Operations teams of small and medium-sized enterprises</p>
          */
         public Builder targetAudience(String targetAudience) {
             this.targetAudience = targetAudience;
@@ -374,7 +395,10 @@ public class BrandKnowledgeProfileAnalysis extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * <p>The brand analysis batch ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bwb_example001</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;
@@ -382,7 +406,7 @@ public class BrandKnowledgeProfileAnalysis extends TeaModel {
         }
 
         /**
-         * UnreadPageIds.
+         * <p>The list of web page IDs where body text was not read during the analysis.</p>
          */
         public Builder unreadPageIds(java.util.List<String> unreadPageIds) {
             this.unreadPageIds = unreadPageIds;
@@ -390,7 +414,10 @@ public class BrandKnowledgeProfileAnalysis extends TeaModel {
         }
 
         /**
-         * WritingTone.
+         * <p>The tone used in content creation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Pragmatic and clear</p>
          */
         public Builder writingTone(String writingTone) {
             this.writingTone = writingTone;
