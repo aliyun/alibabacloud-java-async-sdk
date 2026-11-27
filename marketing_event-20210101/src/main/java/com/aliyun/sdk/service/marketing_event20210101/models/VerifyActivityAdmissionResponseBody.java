@@ -173,6 +173,12 @@ public class VerifyActivityAdmissionResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AllowedDates")
         private java.util.List<String> allowedDates;
 
+        @com.aliyun.core.annotation.NameInMap("ChannelName")
+        private String channelName;
+
+        @com.aliyun.core.annotation.NameInMap("CustomerLabels")
+        private java.util.List<String> customerLabels;
+
         @com.aliyun.core.annotation.NameInMap("Decision")
         private String decision;
 
@@ -203,6 +209,8 @@ public class VerifyActivityAdmissionResponseBody extends TeaModel {
             this.address = builder.address;
             this.admissionDate = builder.admissionDate;
             this.allowedDates = builder.allowedDates;
+            this.channelName = builder.channelName;
+            this.customerLabels = builder.customerLabels;
             this.decision = builder.decision;
             this.endTime = builder.endTime;
             this.maskedIdCardNo = builder.maskedIdCardNo;
@@ -254,6 +262,20 @@ public class VerifyActivityAdmissionResponseBody extends TeaModel {
          */
         public java.util.List<String> getAllowedDates() {
             return this.allowedDates;
+        }
+
+        /**
+         * @return channelName
+         */
+        public String getChannelName() {
+            return this.channelName;
+        }
+
+        /**
+         * @return customerLabels
+         */
+        public java.util.List<String> getCustomerLabels() {
+            return this.customerLabels;
         }
 
         /**
@@ -318,6 +340,8 @@ public class VerifyActivityAdmissionResponseBody extends TeaModel {
             private String address; 
             private String admissionDate; 
             private java.util.List<String> allowedDates; 
+            private String channelName; 
+            private java.util.List<String> customerLabels; 
             private String decision; 
             private String endTime; 
             private String maskedIdCardNo; 
@@ -336,6 +360,8 @@ public class VerifyActivityAdmissionResponseBody extends TeaModel {
                 this.address = model.address;
                 this.admissionDate = model.admissionDate;
                 this.allowedDates = model.allowedDates;
+                this.channelName = model.channelName;
+                this.customerLabels = model.customerLabels;
                 this.decision = model.decision;
                 this.endTime = model.endTime;
                 this.maskedIdCardNo = model.maskedIdCardNo;
@@ -383,6 +409,22 @@ public class VerifyActivityAdmissionResponseBody extends TeaModel {
              */
             public Builder allowedDates(java.util.List<String> allowedDates) {
                 this.allowedDates = allowedDates;
+                return this;
+            }
+
+            /**
+             * ChannelName.
+             */
+            public Builder channelName(String channelName) {
+                this.channelName = channelName;
+                return this;
+            }
+
+            /**
+             * CustomerLabels.
+             */
+            public Builder customerLabels(java.util.List<String> customerLabels) {
+                this.customerLabels = customerLabels;
                 return this;
             }
 
