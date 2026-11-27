@@ -316,7 +316,7 @@ public class DescribeDBClusterConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether the parameter takes effect dynamically without a restart.</p>
+             * <p>Indicates whether the parameter takes effect dynamically without a restart.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -327,7 +327,7 @@ public class DescribeDBClusterConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether users are allowed to modify the parameter.</p>
+             * <p>Indicates whether the parameter can be modified by users.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>

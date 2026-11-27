@@ -80,7 +80,7 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The network information of the BE instances.</p>
+         * <p>The network list of BE instances.</p>
          */
         public Builder DBClustersNetInfos(java.util.List<DBClustersNetInfos> DBClustersNetInfos) {
             this.DBClustersNetInfos = DBClustersNetInfos;
@@ -165,10 +165,10 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The connection port number.</p>
+             * <p>The connection port number. Example values include 9030 and 8080.</p>
              * 
              * <strong>example:</strong>
-             * <p>9030/8080</p>
+             * <p>9030</p>
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -381,7 +381,7 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ports.</p>
+             * <p>The port list.</p>
              */
             public Builder portList(java.util.List<PortList> portList) {
                 this.portList = portList;
@@ -389,10 +389,10 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the network information is visible to users.</p>
+             * <p>Indicates whether the network information is visible to users. Example values include true and false.</p>
              * 
              * <strong>example:</strong>
-             * <p>true/false</p>
+             * <p>true</p>
              */
             public Builder userVisible(Boolean userVisible) {
                 this.userVisible = userVisible;
@@ -411,7 +411,7 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The VPC instance ID.</p>
+             * <p>The VPC-connected instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>selectdb-cn-****-fe-20230816101006</p>
@@ -495,7 +495,7 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
              * <p>The connection port number.</p>
              * 
              * <strong>example:</strong>
-             * <p>MySQLPort</p>
+             * <p>9030</p>
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -512,7 +512,7 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
              * </ul>
              * 
              * <strong>example:</strong>
-             * <p>9030</p>
+             * <p>MySQLPort</p>
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -720,7 +720,7 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ports.</p>
+             * <p>The port objects.</p>
              */
             public Builder portList(java.util.List<DBInstanceNetInfosPortList> portList) {
                 this.portList = portList;
@@ -756,7 +756,7 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The VPC instance ID.</p>
+             * <p>The VPC-connected instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>selectdb-cn-h033cnd****-fe-20230816101006</p>

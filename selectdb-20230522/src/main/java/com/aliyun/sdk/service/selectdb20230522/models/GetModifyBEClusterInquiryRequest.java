@@ -371,7 +371,7 @@ public class GetModifyBEClusterInquiryRequest extends Request {
         }
 
         /**
-         * <p>The coupon ID.</p>
+         * <p>The coupon code.</p>
          * 
          * <strong>example:</strong>
          * <p>123412345</p>

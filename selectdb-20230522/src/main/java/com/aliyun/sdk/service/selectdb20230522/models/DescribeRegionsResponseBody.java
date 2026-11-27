@@ -67,7 +67,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The list of region data.</p>
+         * <p>The list of regions.</p>
          */
         public Builder regionModelList(java.util.List<RegionModelList> regionModelList) {
             this.regionModelList = regionModelList;
@@ -222,7 +222,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The zone description.</p>
+             * <p>The description of the zone.</p>
              * 
              * <strong>example:</strong>
              * <p>Beijing Zone H</p>
@@ -255,7 +255,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The zone name.</p>
+             * <p>The name of the zone.</p>
              * 
              * <strong>example:</strong>
              * <p>Beijing H</p>

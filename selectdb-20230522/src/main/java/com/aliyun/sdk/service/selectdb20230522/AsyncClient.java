@@ -173,7 +173,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Subscription instances cannot be deleted.</p>
+     * <p>You cannot delete subscription instances.</p>
      * 
      * @param request the request parameters of DescribeDBInstanceAttribute  DescribeDBInstanceAttributeRequest
      * @return DescribeDBInstanceAttributeResponse
@@ -304,6 +304,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ModifyElasticRuleResponse
      */
     CompletableFuture<ModifyElasticRuleResponse> modifyElasticRule(ModifyElasticRuleRequest request);
+
+    /**
+     * @param request the request parameters of ModifyFECluster  ModifyFEClusterRequest
+     * @return ModifyFEClusterResponse
+     */
+    CompletableFuture<ModifyFEClusterResponse> modifyFECluster(ModifyFEClusterRequest request);
 
     /**
      * @param request the request parameters of ModifySecurityIPList  ModifySecurityIPListRequest

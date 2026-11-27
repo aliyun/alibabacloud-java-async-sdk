@@ -600,10 +600,10 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The community versions corresponding to the upgradable versions.</p>
+         * <p>The community editions corresponding to the upgradable versions.</p>
          * 
          * <strong>example:</strong>
-         * <p>&quot;4.1.10-20260922&quot;:&quot;Apache Doris 3.1.4&quot;</p>
+         * <p>{&quot;4.1.10-20260922&quot;:&quot;Apache Doris 3.1.4&quot;,&quot;4.0.12-20260801&quot;:&quot;Apache Doris 3.0.11&quot;}</p>
          */
         public Builder canUpgradeVersionCommunityMap(java.util.Map<String, String> canUpgradeVersionCommunityMap) {
             this.canUpgradeVersionCommunityMap = canUpgradeVersionCommunityMap;
@@ -611,10 +611,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of upgradable versions.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>&quot;4.1.10-20260922&quot;</p>
+         * <p>The versions to which the instance can be upgraded.</p>
          */
         public Builder canUpgradeVersions(java.util.List<String> canUpgradeVersions) {
             this.canUpgradeVersions = canUpgradeVersions;
@@ -624,9 +621,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         /**
          * <p>The billing method of the instance. Valid values:</p>
          * <ul>
-         * <li><p><strong>Postpaid</strong>: pay-as-you-go.</p>
+         * <li><p><strong>Postpaid</strong>: Pay-as-you-go.</p>
          * </li>
-         * <li><p><strong>Prepaid</strong>: subscription.</p>
+         * <li><p><strong>Prepaid</strong>: Subscription.</p>
          * </li>
          * </ul>
          * 
@@ -661,7 +658,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The creation time in ISO 8601 format with time zone information.</p>
+         * <p>The time when the instance was created, in ISO 8601 format with time zone information.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-08-14T03:00:42Z</p>
@@ -735,7 +732,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The database version.</p>
+         * <p>The database engine version.</p>
          * 
          * <strong>example:</strong>
          * <p>2.4</p>
@@ -757,7 +754,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of FE clusters.</p>
+         * <p>The FE cluster list.</p>
          */
         public Builder FEClusterList(java.util.List<FEClusterList> FEClusterList) {
             this.FEClusterList = FEClusterList;
@@ -765,7 +762,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The time when the instance was modified, such as restart or public network application. The time is in the yyyy-MM-ddTHH:mmZ format (UTC time).</p>
+         * <p>The time when the instance was modified, such as restart or public network application. The format is yyyy-MM-ddTHH:mmZ (UTC time).</p>
          * 
          * <strong>example:</strong>
          * <p>2023-08-17T09:58Z</p>
@@ -787,10 +784,16 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The lock mode of the instance. A value of <strong>lock</strong> indicates that the instance is locked due to expiration or overdue payment.</p>
+         * <p>The instance lock mode. The instance is locked when it expires. Valid values:</p>
+         * <ul>
+         * <li><p><strong>0</strong>: Unlocked.</p>
+         * </li>
+         * <li><p><strong>1</strong>: Locked.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
-         * <p>lock</p>
+         * <p>0</p>
          */
         public Builder lockMode(Long lockMode) {
             this.lockMode = lockMode;
@@ -809,7 +812,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The service status of the MCP Server.</p>
+         * <p>The MCP Server service status.</p>
          * 
          * <strong>example:</strong>
          * <p>not_enabled</p>
@@ -820,10 +823,10 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Reserved parameter. This parameter is not returned and does not apply to the time format.</p>
+         * <p>A reserved parameter. It is not returned and does not apply to the time format.</p>
          * 
          * <strong>example:</strong>
-         * <p>Reserved parameter, not currently returned</p>
+         * <p>Reserved parameter, not returned</p>
          */
         public Builder maintainEndtime(String maintainEndtime) {
             this.maintainEndtime = maintainEndtime;
@@ -831,10 +834,10 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Reserved parameter. This parameter is not returned and does not apply to the time format.</p>
+         * <p>A reserved parameter. It is not returned and does not apply to the time format.</p>
          * 
          * <strong>example:</strong>
-         * <p>Reserved parameter, not currently returned</p>
+         * <p>Reserved parameter, not returned</p>
          */
         public Builder maintainStarttime(String maintainStarttime) {
             this.maintainStarttime = maintainStarttime;
@@ -842,10 +845,10 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The multi-zone configuration.</p>
+         * <p>The multi-zone configurations.</p>
          * <blockquote>
          * <ul>
-         * <li>This parameter is valid when DeployScheme is set to multi_az.</li>
+         * <li>This parameter is valid only when DeployScheme is set to multi_az.</li>
          * </ul>
          * </blockquote>
          */
@@ -866,7 +869,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The service status of the OTel collector and Grafana.</p>
+         * <p>The status of the OTel collector and Grafana services.</p>
          * 
          * <strong>example:</strong>
          * <p>not_enabled</p>
@@ -910,7 +913,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of CPU cores.</p>
+         * <p>The number of CPUs for the resource.</p>
          * 
          * <strong>example:</strong>
          * <p>8</p>
@@ -932,10 +935,10 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the port direct connection feature is enabled for the VPC where the current instance resides.</p>
+         * <p>Indicates whether the port direct connection feature is enabled for the VPC where the instance is deployed.</p>
          * <ul>
-         * <li>A value of true indicates that the feature is enabled.</li>
-         * <li>A value of false indicates that the feature is disabled.</li>
+         * <li>true: The port direct connection feature is enabled.</li>
+         * <li>false: The port direct connection feature is disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -947,10 +950,10 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the serverless feature is enabled for the current instance.</p>
+         * <p>Indicates whether the Serverless feature is enabled for the instance.</p>
          * <ul>
-         * <li>A value of true indicates that the feature is enabled.</li>
-         * <li>A value of false indicates that the feature is disabled.</li>
+         * <li>true: The Serverless feature is enabled.</li>
+         * <li>false: The Serverless feature is disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -962,19 +965,19 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The status of the instance. Valid values:</p>
+         * <p>The instance status. Valid values:</p>
          * <ul>
-         * <li><p><strong>CREATING</strong>: The instance is being created.</p>
+         * <li><p><strong>CREATING</strong>: Creating.</p>
          * </li>
-         * <li><p><strong>ACTIVE</strong>: The instance is running.</p>
+         * <li><p><strong>ACTIVE</strong>: Running.</p>
          * </li>
-         * <li><p><strong>RESOURCE_CHANGING</strong>: The instance specifications are being changed.</p>
+         * <li><p><strong>RESOURCE_CHANGING</strong>: Changing specifications.</p>
          * </li>
-         * <li><p><strong>ORDER_PREPARING</strong>: The order is being confirmed.</p>
+         * <li><p><strong>ORDER_PREPARING</strong>: Confirming order.</p>
          * </li>
-         * <li><p><strong>READONLY_RESOURCE_CHANGING</strong>: The resources are being changed and the instance is locked for writes.</p>
+         * <li><p><strong>READONLY_RESOURCE_CHANGING</strong>: Changing resources (the instance is locked for write operations).</p>
          * </li>
-         * <li><p><strong>DELETING</strong>: The instance is being deleted.</p>
+         * <li><p><strong>DELETING</strong>: Deleting.</p>
          * </li>
          * </ul>
          * 
@@ -1061,7 +1064,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of virtual clusters.</p>
+         * <p>The virtual clusters.</p>
          */
         public Builder virtualClusterList(java.util.List<VirtualClusterList> virtualClusterList) {
             this.virtualClusterList = virtualClusterList;
@@ -1069,7 +1072,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The VPC ID of the instance.</p>
+         * <p>The ID of the virtual private cloud (VPC) where the instance is deployed.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-bp175iuvg8nxqraf2****</p>
@@ -1080,7 +1083,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The zone ID of the instance.</p>
+         * <p>The ID of the zone where the instance is deployed.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing-h</p>
@@ -1446,9 +1449,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             /**
              * <p>The billing method of the cluster. Valid values:</p>
              * <ul>
-             * <li><p><strong>Postpaid</strong>: pay-as-you-go.</p>
+             * <li><p><strong>Postpaid</strong>: Pay-as-you-go.</p>
              * </li>
-             * <li><p><strong>Prepaid</strong>: subscription.</p>
+             * <li><p><strong>Prepaid</strong>: Subscription.</p>
              * </li>
              * </ul>
              * 
@@ -1472,7 +1475,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of nodes in the cluster. This parameter takes effect only in serverless mode.</p>
+             * <p>The number of cluster nodes. This parameter takes effect only in serverless mode.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1483,7 +1486,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The node type of the cluster. This parameter takes effect only in serverless mode.</p>
+             * <p>The cluster node type. This parameter takes effect only in serverless mode.</p>
              * 
              * <strong>example:</strong>
              * <p>base</p>
@@ -1505,7 +1508,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time of the cluster in ISO 8601 format with time zone information.</p>
+             * <p>The time when the cluster was created. The time is displayed in the ISO 8601 format and includes time zone information.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-08-14T09:24:13Z</p>
@@ -1518,34 +1521,20 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             /**
              * <p>The cluster specifications. Valid values:</p>
              * <ul>
-             * <li><p><strong>selectdb.xlarge</strong>: 4 cores and 16 GB memory</p>
-             * </li>
-             * <li><p><strong>selectdb.2xlarge</strong>: 8 cores and 32 GB memory</p>
-             * </li>
-             * <li><p><strong>selectdb.4xlarge</strong>: 16 cores and 64 GB memory</p>
-             * </li>
-             * <li><p><strong>selectdb.8xlarge</strong>: 32 cores and 128 GB memory</p>
-             * </li>
-             * <li><p><strong>selectdb.16xlarge</strong>: 64 cores and 256 GB memory</p>
-             * </li>
-             * <li><p><strong>selectdb.24xlarge</strong>: 96 cores and 384 GB memory</p>
-             * </li>
-             * <li><p><strong>selectdb.32xlarge</strong>: 128 cores and 512 GB memory</p>
-             * </li>
-             * <li><p><strong>selectdb.g.xlarge</strong>: 4 cores and 16 GB memory</p>
-             * </li>
-             * <li><p><strong>selectdb.g.2xlarge</strong>: 8 cores and 32 GB memory</p>
-             * </li>
-             * <li><p><strong>selectdb.g.4xlarge</strong>: 16 cores and 64 GB memory</p>
-             * </li>
-             * <li><p><strong>selectdb.g.8xlarge</strong>: 32 cores and 128 GB memory</p>
-             * </li>
-             * <li><p><strong>selectdb.g.16xlarge</strong>: 64 cores and 256 GB memory</p>
-             * </li>
-             * <li><p><strong>selectdb.g.24xlarge</strong>: 96 cores and 384 GB memory</p>
-             * </li>
-             * <li><p><strong>selectdb.g.32xlarge</strong>: 128 cores and 512 GB memory</p>
-             * </li>
+             * <li><strong>selectdb.xlarge</strong>: 4 cores, 16 GB.</li>
+             * <li><strong>selectdb.2xlarge</strong>: 8 cores, 32 GB.</li>
+             * <li><strong>selectdb.4xlarge</strong>: 16 cores, 64 GB.</li>
+             * <li><strong>selectdb.8xlarge</strong>: 32 cores, 128 GB.</li>
+             * <li><strong>selectdb.16xlarge</strong>: 64 cores, 256 GB.</li>
+             * <li><strong>selectdb.24xlarge</strong>: 96 cores, 384 GB.</li>
+             * <li><strong>selectdb.32xlarge</strong>: 128 cores, 512 GB.</li>
+             * <li><strong>selectdb.g.xlarge</strong>: 4 cores, 16 GB.</li>
+             * <li><strong>selectdb.g.2xlarge</strong>: 8 cores, 32 GB.</li>
+             * <li><strong>selectdb.g.4xlarge</strong>: 16 cores, 64 GB.</li>
+             * <li><strong>selectdb.g.8xlarge</strong>: 32 cores, 128 GB.</li>
+             * <li><strong>selectdb.g.16xlarge</strong>: 64 cores, 256 GB.</li>
+             * <li><strong>selectdb.g.24xlarge</strong>: 96 cores, 384 GB.</li>
+             * <li><strong>selectdb.g.32xlarge</strong>: 128 cores, 512 GB.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1582,7 +1571,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              * <p>The instance name.</p>
              * 
              * <strong>example:</strong>
-             * <p>Test instance</p>
+             * <p>Instance test</p>
              */
             public Builder dbInstanceName(String dbInstanceName) {
                 this.dbInstanceName = dbInstanceName;
@@ -1601,7 +1590,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The modification time in ISO 8601 format with time zone information.</p>
+             * <p>The modification time. The time is displayed in the ISO 8601 format and includes time zone information.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-07-02T16:35:44+08:00</p>
@@ -1623,7 +1612,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum number of RDS Capacity Units (RCUs) for auto-scaling.</p>
+             * <p>The maximum value of the auto-scaling range for the instance RDS Capacity Unit (RCU).</p>
              * 
              * <strong>example:</strong>
              * <p>4</p>
@@ -1634,7 +1623,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The minimum number of RDS Capacity Units (RCUs) for auto-scaling.</p>
+             * <p>The minimum value of the auto-scaling range for the instance RDS Capacity Unit (RCU).</p>
              * 
              * <strong>example:</strong>
              * <p>0.5</p>
@@ -1645,7 +1634,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether the time-based elastic policy is enabled.</p>
+             * <p>Indicates whether the time-based elastic policy is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -1656,7 +1645,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time of the cluster in ISO 8601 format with time zone information.</p>
+             * <p>The time when the cluster was started. The time is displayed in the ISO 8601 format and includes time zone information.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-08-14T09:24:13Z</p>
@@ -1667,19 +1656,19 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the cluster. Valid values:</p>
+             * <p>The cluster status. Valid values:</p>
              * <ul>
-             * <li><p><strong>CREATING</strong>: The cluster is being created.</p>
+             * <li><p><strong>CREATING</strong>: Creating.</p>
              * </li>
-             * <li><p><strong>ACTIVATION</strong>: The cluster is running.</p>
+             * <li><p><strong>ACTIVATION</strong>: Running.</p>
              * </li>
-             * <li><p><strong>RESOURCE_CHANGING</strong>: The cluster specifications are being changed.</p>
+             * <li><p><strong>RESOURCE_CHANGING</strong>: Changing specifications.</p>
              * </li>
-             * <li><p><strong>ORDER_PREPARING</strong>: The order is being confirmed.</p>
+             * <li><p><strong>ORDER_PREPARING</strong>: Confirming order.</p>
              * </li>
-             * <li><p><strong>READONLY_RESOURCE_CHANGING</strong>: The cluster resources are being changed and the instance is locked for writes.</p>
+             * <li><p><strong>READONLY_RESOURCE_CHANGING</strong>: Changing resources (the instance is locked for write operations).</p>
              * </li>
-             * <li><p><strong>DELETING</strong>: The cluster is being deleted.</p>
+             * <li><p><strong>DELETING</strong>: Deleting.</p>
              * </li>
              * </ul>
              * 
@@ -1856,7 +1845,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The memory size per node in the FE cluster. Unit: GB.</p>
+             * <p>The memory per node in the FE cluster, in GB.</p>
              * 
              * <strong>example:</strong>
              * <p>16</p>
@@ -1974,7 +1963,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The CIDR block information of the prefix list entry.</p>
+             * <p>The Classless Inter-Domain Routing block information of the prefix list entry.</p>
              * 
              * <strong>example:</strong>
              * <p>113.88.14.211/32</p>
@@ -1985,7 +1974,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of vSwitch IDs.</p>
+             * <p>The IDs of the vSwitches.</p>
              */
             public Builder vSwitchIds(java.util.List<String> vSwitchIds) {
                 this.vSwitchIds = vSwitchIds;
@@ -2074,7 +2063,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag value.</p>
+             * <p>The value of the tag.</p>
              * 
              * <strong>example:</strong>
              * <p>testValue</p>
@@ -2244,7 +2233,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time in ISO 8601 format with time zone information.</p>
+             * <p>The time when the instance was created, in ISO 8601 format with time zone information.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-05-31T21:01:09Z</p>
@@ -2277,7 +2266,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the standby cluster.</p>
+             * <p>The ID of the secondary cluster.</p>
              * 
              * <strong>example:</strong>
              * <p>selectdb-x6u7***-be</p>
@@ -2288,7 +2277,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the standby cluster.</p>
+             * <p>The name of the secondary cluster.</p>
              * 
              * <strong>example:</strong>
              * <p>test2</p>
