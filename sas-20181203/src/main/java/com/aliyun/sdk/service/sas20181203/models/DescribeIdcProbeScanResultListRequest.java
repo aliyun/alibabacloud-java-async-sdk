@@ -149,7 +149,7 @@ public class DescribeIdcProbeScanResultListRequest extends Request {
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>[{\&quot;name\&quot;:\&quot;scannedIp\&quot;,\&quot;value\&quot;:\&quot;192.168.2.11\&quot;}]</p>
+         * <p>[{&quot;name&quot;:&quot;scannedIp&quot;,&quot;value&quot;:&quot;192.168.2.11&quot;}]</p>
          */
         public Builder criteria(String criteria) {
             this.putQueryParameter("Criteria", criteria);

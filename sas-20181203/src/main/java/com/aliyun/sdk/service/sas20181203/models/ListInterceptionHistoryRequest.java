@@ -169,7 +169,7 @@ public class ListInterceptionHistoryRequest extends Request {
         }
 
         /**
-         * <p>The page number of the current page in a paged query.</p>
+         * <p>The page number of the current page in a paging query.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -196,7 +196,7 @@ public class ListInterceptionHistoryRequest extends Request {
          * <p>The alert name.</p>
          * 
          * <strong>example:</strong>
-         * <p>异常访问。</p>
+         * <p>Unusual access</p>
          */
         public Builder historyName(String historyName) {
             this.putQueryParameter("HistoryName", historyName);
@@ -205,7 +205,7 @@ public class ListInterceptionHistoryRequest extends Request {
         }
 
         /**
-         * <p>The types of exception events.</p>
+         * <p>The type of the unusual event.</p>
          */
         public Builder interceptionTypes(java.util.List<Integer> interceptionTypes) {
             this.putQueryParameter("InterceptionTypes", interceptionTypes);
@@ -214,10 +214,10 @@ public class ListInterceptionHistoryRequest extends Request {
         }
 
         /**
-         * <p>The language type for the request and response messages. Default value: <strong>zh</strong>. Valid values:</p>
+         * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
          * <ul>
          * <li><strong>zh</strong>: Chinese</li>
-         * <li><strong>en</strong>: English.</li>
+         * <li><strong>en</strong>: English</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -230,7 +230,7 @@ public class ListInterceptionHistoryRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries per page for a paged query.</p>
+         * <p>The maximum number of entries to return on each page in a paging query.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>

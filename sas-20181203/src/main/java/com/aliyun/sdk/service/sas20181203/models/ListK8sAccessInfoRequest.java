@@ -30,6 +30,10 @@ public class ListK8sAccessInfoRequest extends Request {
     private String aliyunYundunGatewayProjectName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    private String clusterId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
@@ -38,6 +42,7 @@ public class ListK8sAccessInfoRequest extends Request {
         this.aliyunYundunGatewayApiName = builder.aliyunYundunGatewayApiName;
         this.aliyunYundunGatewayPopName = builder.aliyunYundunGatewayPopName;
         this.aliyunYundunGatewayProjectName = builder.aliyunYundunGatewayProjectName;
+        this.clusterId = builder.clusterId;
         this.lang = builder.lang;
     }
 
@@ -76,6 +81,13 @@ public class ListK8sAccessInfoRequest extends Request {
     }
 
     /**
+     * @return clusterId
+     */
+    public String getClusterId() {
+        return this.clusterId;
+    }
+
+    /**
      * @return lang
      */
     public String getLang() {
@@ -86,6 +98,7 @@ public class ListK8sAccessInfoRequest extends Request {
         private String aliyunYundunGatewayApiName; 
         private String aliyunYundunGatewayPopName; 
         private String aliyunYundunGatewayProjectName; 
+        private String clusterId; 
         private String lang; 
 
         private Builder() {
@@ -97,14 +110,15 @@ public class ListK8sAccessInfoRequest extends Request {
             this.aliyunYundunGatewayApiName = request.aliyunYundunGatewayApiName;
             this.aliyunYundunGatewayPopName = request.aliyunYundunGatewayPopName;
             this.aliyunYundunGatewayProjectName = request.aliyunYundunGatewayProjectName;
+            this.clusterId = request.clusterId;
             this.lang = request.lang;
         } 
 
         /**
-         * <p>This parameter is deprecated and does not need to be specified.</p>
+         * <p><strong>[Deprecated]</strong> This parameter is deprecated and can be ignored.</p>
          * 
          * <strong>example:</strong>
-         * <p>None</p>
+         * <p>deprecated</p>
          */
         public Builder aliyunYundunGatewayApiName(String aliyunYundunGatewayApiName) {
             this.putQueryParameter("AliyunYundunGatewayApiName", aliyunYundunGatewayApiName);
@@ -113,10 +127,10 @@ public class ListK8sAccessInfoRequest extends Request {
         }
 
         /**
-         * <p>This parameter is deprecated and does not need to be specified.</p>
+         * <p><strong>[Deprecated]</strong> This parameter is deprecated and can be ignored.</p>
          * 
          * <strong>example:</strong>
-         * <p>None</p>
+         * <p>deprecated</p>
          */
         public Builder aliyunYundunGatewayPopName(String aliyunYundunGatewayPopName) {
             this.putQueryParameter("AliyunYundunGatewayPopName", aliyunYundunGatewayPopName);
@@ -125,10 +139,10 @@ public class ListK8sAccessInfoRequest extends Request {
         }
 
         /**
-         * <p>This parameter is deprecated and does not need to be specified.</p>
+         * <p><strong>[Deprecated]</strong> This parameter is deprecated and can be ignored.</p>
          * 
          * <strong>example:</strong>
-         * <p>None</p>
+         * <p>deprecated</p>
          */
         public Builder aliyunYundunGatewayProjectName(String aliyunYundunGatewayProjectName) {
             this.putQueryParameter("AliyunYundunGatewayProjectName", aliyunYundunGatewayProjectName);
@@ -137,7 +151,19 @@ public class ListK8sAccessInfoRequest extends Request {
         }
 
         /**
-         * <p>The language type for requests and responses. Valid values:</p>
+         * <p>Optional. If you specify this parameter, the system queries only the independent installation records for the current multi-cloud lifecycle under the trusted tenant.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cf3824769c85441b4bf3****</p>
+         */
+        public Builder clusterId(String clusterId) {
+            this.putQueryParameter("ClusterId", clusterId);
+            this.clusterId = clusterId;
+            return this;
+        }
+
+        /**
+         * <p>The language type of the request and response messages. Valid values:</p>
          * <ul>
          * <li><strong>zh</strong>: Chinese.</li>
          * <li><strong>en</strong>: English.</li>

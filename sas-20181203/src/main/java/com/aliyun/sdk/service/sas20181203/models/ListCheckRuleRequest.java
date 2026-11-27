@@ -30,6 +30,10 @@ public class ListCheckRuleRequest extends Request {
     private Integer currentPage;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EffectStatus")
+    private String effectStatus;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
@@ -54,6 +58,7 @@ public class ListCheckRuleRequest extends Request {
         this.checkId = builder.checkId;
         this.checkName = builder.checkName;
         this.currentPage = builder.currentPage;
+        this.effectStatus = builder.effectStatus;
         this.lang = builder.lang;
         this.pageSize = builder.pageSize;
         this.ruleType = builder.ruleType;
@@ -96,6 +101,13 @@ public class ListCheckRuleRequest extends Request {
     }
 
     /**
+     * @return effectStatus
+     */
+    public String getEffectStatus() {
+        return this.effectStatus;
+    }
+
+    /**
      * @return lang
      */
     public String getLang() {
@@ -134,6 +146,7 @@ public class ListCheckRuleRequest extends Request {
         private Long checkId; 
         private String checkName; 
         private Integer currentPage; 
+        private String effectStatus; 
         private String lang; 
         private Integer pageSize; 
         private String ruleType; 
@@ -149,6 +162,7 @@ public class ListCheckRuleRequest extends Request {
             this.checkId = request.checkId;
             this.checkName = request.checkName;
             this.currentPage = request.currentPage;
+            this.effectStatus = request.effectStatus;
             this.lang = request.lang;
             this.pageSize = request.pageSize;
             this.ruleType = request.ruleType;
@@ -159,7 +173,7 @@ public class ListCheckRuleRequest extends Request {
         /**
          * <p>The ID of the check item.</p>
          * <blockquote>
-         * <p>You can call the <a href="~~ListCheckResult~~">ListCheckResult</a> API to get the check item ID.</p>
+         * <p>You can call the <a href="~~ListCheckResult~~">ListCheckResult</a> operation to obtain the check item ID.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -184,7 +198,7 @@ public class ListCheckRuleRequest extends Request {
         }
 
         /**
-         * <p>The page number displayed in a paginated query.</p>
+         * <p>The page number of the current page returned for a paging query.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -196,10 +210,22 @@ public class ListCheckRuleRequest extends Request {
         }
 
         /**
-         * <p>Set the language type for the request and response messages. The default is <strong>zh</strong>. Values:</p>
+         * <p>Filters check rules by the effective status of the whitelist rule. Valid values: PERMANENT (Permanent), NOT_STARTED (Not started), EFFECTIVE (Effective), and EXPIRED (Expired). If you do not specify this parameter, rules in all effective statuses are returned. The server determines the status based on the current time and includes it in the pagination count.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EFFECTIVE</p>
+         */
+        public Builder effectStatus(String effectStatus) {
+            this.putQueryParameter("EffectStatus", effectStatus);
+            this.effectStatus = effectStatus;
+            return this;
+        }
+
+        /**
+         * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
          * <ul>
-         * <li>zh: Chinese</li>
-         * <li>en: English</li>
+         * <li>zh: Chinese.</li>
+         * <li>en: English.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -212,7 +238,7 @@ public class ListCheckRuleRequest extends Request {
         }
 
         /**
-         * <p>The number of check items displayed per page in a paginated query. The default value is <strong>20</strong>, indicating 20 check items per page.</p>
+         * <p>The number of check items to return on each page in a paging query. Default value: <strong>20</strong>, which indicates that 20 check items are displayed on each page.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -224,9 +250,9 @@ public class ListCheckRuleRequest extends Request {
         }
 
         /**
-         * <p>The type of rule. Default is <strong>WHITE</strong>. Values:</p>
+         * <p>The rule type. Default value: <strong>WHITE</strong>. Valid values:</p>
          * <ul>
-         * <li><strong>WHITE</strong>: Add to whitelist</li>
+         * <li><strong>WHITE</strong>: Whitelist.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -239,10 +265,10 @@ public class ListCheckRuleRequest extends Request {
         }
 
         /**
-         * <p>The scope where the rule applies. Values:</p>
+         * <p>The effective scope of the rule. Valid values:</p>
          * <ul>
-         * <li><strong>INSTNACE</strong>: Instance</li>
-         * <li><strong>ITEM</strong>: Check item</li>
+         * <li><strong>INSTNACE</strong>: Instance.</li>
+         * <li><strong>ITEM</strong>: Check item.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -255,7 +281,7 @@ public class ListCheckRuleRequest extends Request {
         }
 
         /**
-         * <p>List of task sources.</p>
+         * <p>The list of task sources.</p>
          */
         public Builder taskSources(java.util.List<String> taskSources) {
             this.putQueryParameter("TaskSources", taskSources);

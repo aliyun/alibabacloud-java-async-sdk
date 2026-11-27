@@ -129,7 +129,7 @@ public class ListHoneypotRequest extends Request {
         } 
 
         /**
-         * <p>The page number of the current page in a paged query.</p>
+         * <p>The page number of the current page when paging is used.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -141,7 +141,7 @@ public class ListHoneypotRequest extends Request {
         }
 
         /**
-         * <p>The list of honeypot IDs.</p>
+         * <p>The honeypot IDs.</p>
          */
         public Builder honeypotIds(java.util.List<String> honeypotIds) {
             this.putQueryParameter("HoneypotIds", honeypotIds);
@@ -186,7 +186,7 @@ public class ListHoneypotRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries to return per page in a paged query.</p>
+         * <p>The maximum number of entries to return on each page when paging is used.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>

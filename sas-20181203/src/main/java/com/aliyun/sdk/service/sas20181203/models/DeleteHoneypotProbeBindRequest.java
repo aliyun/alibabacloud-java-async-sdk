@@ -87,7 +87,7 @@ public class DeleteHoneypotProbeBindRequest extends Request {
         } 
 
         /**
-         * <p>The unique ID of the bound service.</p>
+         * <p>The unique ID of the service binding record.</p>
          * 
          * <strong>example:</strong>
          * <p>aa20815f-f0f3-4e3b-8e13-55771742****</p>
@@ -99,10 +99,10 @@ public class DeleteHoneypotProbeBindRequest extends Request {
         }
 
         /**
-         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <p>Specifies the language of the request and response messages. Default value: <strong>zh</strong>. Valid values:</p>
          * <ul>
-         * <li><strong>zh</strong>: Chinese</li>
-         * <li><strong>en</strong>: English</li>
+         * <li><strong>zh</strong>: Chinese.</li>
+         * <li><strong>en</strong>: English.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -115,10 +115,7 @@ public class DeleteHoneypotProbeBindRequest extends Request {
         }
 
         /**
-         * <p>The probe ID.</p>
-         * <blockquote>
-         * <p> You can call the <a href="~~ListHoneypotProbe~~">ListHoneypotProbe</a> operation to query the IDs of probes.</p>
-         * </blockquote>
+         * <p>The probe ID. &gt;You can call the <a href="~~ListHoneypotProbe~~">ListHoneypotProbe</a> operation to obtain this parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>aa234650-cfcf-4e25-b61f-c58f603f****</p>

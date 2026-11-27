@@ -139,14 +139,14 @@ public class ListKspmInstancesRequest extends Request {
         }
 
         /**
-         * <p>The search conditions for assets. This parameter is in JSON format. Pay attention to letter case when you specify this parameter. The following fields are included:</p>
+         * <p>Specifies the conditions for searching assets. This parameter is in JSON format and is case-sensitive. It includes the following fields:</p>
          * <ul>
-         * <li><strong>name</strong>: the search item.</li>
-         * <li><strong>value</strong>: the value of the search item.</li>
+         * <li><strong>name</strong>: the search field.</li>
+         * <li><strong>value</strong>: the value of the search field.</li>
          * <li><strong>logicalExp</strong>: the logical relationship between multiple conditions. Valid values:<ul>
-         * <li><strong>OR</strong>: The conditions are in an OR relationship.</li>
-         * <li><strong>AND</strong>: The conditions are in an AND relationship.<blockquote>
-         * <p>You can search by region, instance name, instance ID, alert status, risk status, or tag.</p>
+         * <li><strong>OR</strong>: The conditions have an <strong>OR</strong> logical relationship.</li>
+         * <li><strong>AND</strong>: The conditions have an <strong>AND</strong> logical relationship.<blockquote>
+         * <p>You can search by region, instance name, instance ID, alert status, risk status, and tags.</p>
          * </blockquote>
          * </li>
          * </ul>
@@ -163,7 +163,7 @@ public class ListKspmInstancesRequest extends Request {
         }
 
         /**
-         * <p>The page number of the page to return in the query results. Default value: 1, which indicates that the results are returned starting from page 1.</p>
+         * <p>The page number of the page to return. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -175,10 +175,10 @@ public class ListKspmInstancesRequest extends Request {
         }
 
         /**
-         * <p>The logical relationship between multiple search conditions. Valid values:</p>
+         * <p>Specifies the logical relationship between multiple search conditions. Valid values:</p>
          * <ul>
-         * <li><strong>OR</strong>: The search conditions are in an OR relationship.</li>
-         * <li><strong>AND</strong>: The search conditions are in an AND relationship.</li>
+         * <li><strong>OR</strong>: The search conditions have an <strong>OR</strong> logical relationship.</li>
+         * <li><strong>AND</strong>: The search conditions have an <strong>AND</strong> logical relationship.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -191,7 +191,7 @@ public class ListKspmInstancesRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries per page in a paged query. Default value: 20.</p>
+         * <p>The maximum number of entries to return on each page in a paged query. Default value: 20.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -287,7 +287,7 @@ public class ListKspmInstancesRequest extends Request {
             } 
 
             /**
-             * <p>The subtype of the asset. The value is in the format of asset type - subtype. Valid values:</p>
+             * <p>The subtype of the product. The asset type and subtype. Valid values:</p>
              * <ul>
              * <li><strong>0</strong>: Workload<ul>
              * <li><strong>0</strong>: Pod</li>
@@ -332,7 +332,7 @@ public class ListKspmInstancesRequest extends Request {
              * </li>
              * <li><strong>8</strong>: Policies<ul>
              * <li><strong>0</strong>: LimitRanges</li>
-             * <li><strong>1</strong>: ResourceQuota.</li>
+             * <li><strong>1</strong>: ResourceQuota</li>
              * </ul>
              * </li>
              * </ul>
@@ -356,7 +356,7 @@ public class ListKspmInstancesRequest extends Request {
              * <li><strong>5</strong>: Container</li>
              * <li><strong>6</strong>: Network</li>
              * <li><strong>7</strong>: Configuration</li>
-             * <li><strong>8</strong>: Policies.</li>
+             * <li><strong>8</strong>: Policies</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -368,7 +368,7 @@ public class ListKspmInstancesRequest extends Request {
             }
 
             /**
-             * <p>The asset vendor. This parameter is fixed to <strong>200</strong>.</p>
+             * <p>The vendor of the asset. Set the value to <strong>200</strong>.</p>
              * 
              * <strong>example:</strong>
              * <p>200</p>

@@ -522,7 +522,7 @@ public class AdvanceSecurityEventOperationsResponseBody extends TeaModel {
              * <p>The configuration of the sub-operation for the alert event handling method.</p>
              * 
              * <strong>example:</strong>
-             * <p>{\&quot;subOperation\&quot;:\&quot;killByMd5andPath\&quot;}</p>
+             * <p>{&quot;subOperation&quot;:&quot;killByMd5andPath&quot;}</p>
              */
             public Builder operationParams(String operationParams) {
                 this.operationParams = operationParams;

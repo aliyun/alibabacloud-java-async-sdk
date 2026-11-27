@@ -17,8 +17,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeInstallCodesRequest</p>
  */
 public class DescribeInstallCodesRequest extends Request {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceDirectoryAccountId")
+    private Long resourceDirectoryAccountId;
+
     private DescribeInstallCodesRequest(Builder builder) {
         super(builder);
+        this.resourceDirectoryAccountId = builder.resourceDirectoryAccountId;
     }
 
     public static Builder builder() {
@@ -34,7 +39,15 @@ public class DescribeInstallCodesRequest extends Request {
         return new Builder(this);
     }
 
+    /**
+     * @return resourceDirectoryAccountId
+     */
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
+    }
+
     public static final class Builder extends Request.Builder<DescribeInstallCodesRequest, Builder> {
+        private Long resourceDirectoryAccountId; 
 
         private Builder() {
             super();
@@ -42,7 +55,23 @@ public class DescribeInstallCodesRequest extends Request {
 
         private Builder(DescribeInstallCodesRequest request) {
             super(request);
+            this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
         } 
+
+        /**
+         * <p>The ID of the member accounts in the resource folder (Alibaba Cloud account).</p>
+         * <blockquote>
+         * <p>You can invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1232428423234****</p>
+         */
+        public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+            this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
+            this.resourceDirectoryAccountId = resourceDirectoryAccountId;
+            return this;
+        }
 
         @Override
         public DescribeInstallCodesRequest build() {

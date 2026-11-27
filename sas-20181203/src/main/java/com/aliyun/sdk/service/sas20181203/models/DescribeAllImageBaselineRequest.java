@@ -59,7 +59,7 @@ public class DescribeAllImageBaselineRequest extends Request {
         } 
 
         /**
-         * <p>The language type for the request and response messages. Default value: <strong>zh</strong>. Valid values:</p>
+         * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
          * <ul>
          * <li><strong>zh</strong>: Chinese.</li>
          * <li><strong>en</strong>: English.</li>

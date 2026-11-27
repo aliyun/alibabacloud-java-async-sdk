@@ -74,9 +74,9 @@ public class StopHoneypotRequest extends Request {
         } 
 
         /**
-         * <p>The honeypot ID.</p>
+         * <p>The ID of the honeypot.</p>
          * <blockquote>
-         * <p>You can call the <a href="~~ListHoneypot~~">ListHoneypot</a> operation to obtain this value.</p>
+         * <p>You can call the <a href="~~ListHoneypot~~">ListHoneypot</a> operation to obtain the value.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 

@@ -60,9 +60,9 @@ public class GetAttackPathWhitelistRequest extends Request {
         } 
 
         /**
-         * <p>The attack path whitelist ID.</p>
+         * <p>The ID of the attack path whitelist.</p>
          * <blockquote>
-         * <p>You can call <a href="~~ListAttackPathWhitelist~~">ListAttackPathWhitelist</a> to query attack path whitelist IDs.</p>
+         * <p>You can call the <a href="~~ListAttackPathWhitelist~~">ListAttackPathWhitelist</a> operation to query the attack path whitelist ID.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 

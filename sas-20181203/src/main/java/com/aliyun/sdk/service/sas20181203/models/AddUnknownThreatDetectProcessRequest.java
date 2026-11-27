@@ -102,7 +102,7 @@ public class AddUnknownThreatDetectProcessRequest extends Request {
         } 
 
         /**
-         * <p>The list of event IDs.</p>
+         * <p>The list of specified event IDs.</p>
          */
         public Builder eventIdList(java.util.List<Long> eventIdList) {
             this.putQueryParameter("EventIdList", eventIdList);
@@ -111,7 +111,7 @@ public class AddUnknownThreatDetectProcessRequest extends Request {
         }
 
         /**
-         * <p>The handling remarks.</p>
+         * <p>The handling remark.</p>
          * 
          * <strong>example:</strong>
          * <p>Confirmed</p>
@@ -132,7 +132,7 @@ public class AddUnknownThreatDetectProcessRequest extends Request {
         }
 
         /**
-         * <p>The list of asset UUIDs for which the process is to be added.</p>
+         * <p>The list of asset UUIDs to which the processes are to be added.</p>
          */
         public Builder uuidList(java.util.List<String> uuidList) {
             this.putQueryParameter("UuidList", uuidList);
@@ -237,7 +237,7 @@ public class AddUnknownThreatDetectProcessRequest extends Request {
             }
 
             /**
-             * <p>The path of the process.</p>
+             * <p>The process path.</p>
              * 
              * <strong>example:</strong>
              * <p>/bin/rm</p>
@@ -248,7 +248,7 @@ public class AddUnknownThreatDetectProcessRequest extends Request {
             }
 
             /**
-             * <p>The remarks.</p>
+             * <p>The remark.</p>
              * 
              * <strong>example:</strong>
              * <p>1330</p>

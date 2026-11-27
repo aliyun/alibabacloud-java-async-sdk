@@ -74,12 +74,10 @@ public class GetHoneypotNodeRequest extends Request {
         } 
 
         /**
-         * <p>The language of the content within the request and response. Valid values:</p>
+         * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
          * <ul>
-         * <li><p><strong>zh</strong>: Chinese</p>
-         * </li>
-         * <li><p><strong>en</strong>: English</p>
-         * </li>
+         * <li><strong>zh</strong>: Chinese.</li>
+         * <li><strong>en</strong>: English.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -94,7 +92,7 @@ public class GetHoneypotNodeRequest extends Request {
         /**
          * <p>The ID of the management node.</p>
          * <blockquote>
-         * <p>You can call the <a href="~~ListHoneypotNode~~">ListHoneypotNode</a> operation to query the IDs of management nodes.</p>
+         * <p>You can call the <a href="~~ListHoneypotNode~~">ListHoneypotNode</a> operation to obtain the value of this parameter.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 

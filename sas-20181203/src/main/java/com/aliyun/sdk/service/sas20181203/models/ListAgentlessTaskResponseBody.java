@@ -474,7 +474,7 @@ public class ListAgentlessTaskResponseBody extends TeaModel {
              * <p>The execution progress of each check item.</p>
              * 
              * <strong>example:</strong>
-             * <p>&quot;{\&quot;scaVul\&quot;:100,\&quot;binary\&quot;:100,\&quot;baseline\&quot;:100,\&quot;vul\&quot;:100,\&quot;webshell\&quot;:100,\&quot;script\&quot;:100,\&quot;sensitiveInfo\&quot;:100}&quot;</p>
+             * <p>&quot;{&quot;scaVul&quot;:100,&quot;binary&quot;:100,&quot;baseline&quot;:100,&quot;vul&quot;:100,&quot;webshell&quot;:100,&quot;script&quot;:100,&quot;sensitiveInfo&quot;:100}&quot;</p>
              */
             public Builder progressByProject(String progressByProject) {
                 this.progressByProject = progressByProject;

@@ -102,7 +102,7 @@ public class ChangeCheckScopeConfigInstanceRequest extends Request {
         } 
 
         /**
-         * <p>The UUIDs of the cloud assets to add.</p>
+         * <p>The list of UUIDs of the cloud assets to add.</p>
          */
         public Builder addAssetUuids(java.util.List<String> addAssetUuids) {
             this.putQueryParameter("AddAssetUuids", addAssetUuids);
@@ -111,7 +111,10 @@ public class ChangeCheckScopeConfigInstanceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the scan scope configuration. You can call the <a href="~~GetCheckScopeConfig~~">GetCheckScopeConfig</a> operation to obtain the ID.</p>
+         * <p>The ID of the scan scope configuration.</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~GetCheckScopeConfig~~">GetCheckScopeConfig</a> operation to obtain this parameter.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -124,7 +127,7 @@ public class ChangeCheckScopeConfigInstanceRequest extends Request {
         }
 
         /**
-         * <p>The UUIDs of the cloud assets to delete.</p>
+         * <p>The list of UUIDs of the cloud assets to delete.</p>
          */
         public Builder deleteAssetUuids(java.util.List<String> deleteAssetUuids) {
             this.putQueryParameter("DeleteAssetUuids", deleteAssetUuids);

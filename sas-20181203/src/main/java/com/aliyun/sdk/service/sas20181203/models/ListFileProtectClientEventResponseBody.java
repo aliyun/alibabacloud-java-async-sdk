@@ -414,13 +414,13 @@ public class ListFileProtectClientEventResponseBody extends TeaModel {
             /**
              * <p>The alert notification level. Valid values:</p>
              * <ul>
-             * <li><p>0: no alert</p>
+             * <li><p>0: No alert.</p>
              * </li>
-             * <li><p>1: reminder</p>
+             * <li><p>1: Reminder.</p>
              * </li>
-             * <li><p>2: suspicious</p>
+             * <li><p>2: Suspicious.</p>
              * </li>
-             * <li><p>3: high-risk</p>
+             * <li><p>3: High-risk.</p>
              * </li>
              * </ul>
              * 
@@ -455,7 +455,7 @@ public class ListFileProtectClientEventResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The file path.</p>
+             * <p>The path of the file.</p>
              * 
              * <strong>example:</strong>
              * <p>/data/*</p>
@@ -466,7 +466,7 @@ public class ListFileProtectClientEventResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp when the event was first detected. Unit: milliseconds.</p>
+             * <p>The time when the event was first detected. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1694576692000</p>
@@ -477,7 +477,7 @@ public class ListFileProtectClientEventResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the event was handled. This value is a UNIX timestamp in milliseconds.</p>
+             * <p>The time when the event was handled. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1694576692000</p>
@@ -488,7 +488,7 @@ public class ListFileProtectClientEventResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The event ID.</p>
+             * <p>The ID of the event.</p>
              * 
              * <strong>example:</strong>
              * <p>3719</p>
@@ -532,7 +532,7 @@ public class ListFileProtectClientEventResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The most recent time when the event occurred. This value is a UNIX timestamp in milliseconds.</p>
+             * <p>The time when the event last occurred. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1694576692000</p>
@@ -549,7 +549,7 @@ public class ListFileProtectClientEventResponseBody extends TeaModel {
              * <li><strong>WRITE</strong>: File write.</li>
              * <li><strong>READ</strong>: File read.</li>
              * <li><strong>RENAME</strong>: File rename.</li>
-             * <li><strong>CHOWN</strong>: Setting the file owner and file group.</li>
+             * <li><strong>CHOWN</strong>: Change of file owner and group.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -561,7 +561,7 @@ public class ListFileProtectClientEventResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The operating system type. Valid values:</p>
+             * <p>The type of the operating system. Valid values:</p>
              * <ul>
              * <li><strong>windows</strong>: Windows.</li>
              * <li><strong>linux</strong>: Linux.</li>
@@ -576,7 +576,7 @@ public class ListFileProtectClientEventResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The process path.</p>
+             * <p>The path of the process.</p>
              * 
              * <strong>example:</strong>
              * <p>c:/<em>Unity</em></p>
@@ -587,7 +587,7 @@ public class ListFileProtectClientEventResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The process permission.</p>
+             * <p>The permissions of the process.</p>
              * 
              * <strong>example:</strong>
              * <p>rwxr-xr-x</p>
@@ -620,7 +620,7 @@ public class ListFileProtectClientEventResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The rule action. Valid values:</p>
+             * <p>The action of the rule. Valid values:</p>
              * <ul>
              * <li><p><strong>block</strong>: Block.</p>
              * </li>
@@ -637,7 +637,7 @@ public class ListFileProtectClientEventResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The rule name.</p>
+             * <p>The name of the rule.</p>
              * 
              * <strong>example:</strong>
              * <p>test-rule-1</p>
@@ -648,7 +648,7 @@ public class ListFileProtectClientEventResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The event status. Valid values:</p>
+             * <p>The status of the event. Valid values:</p>
              * <ul>
              * <li>0: Unhandled. </li>
              * <li>1: Handled.</li>
@@ -747,7 +747,7 @@ public class ListFileProtectClientEventResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of the page to return in a paged query.</p>
+             * <p>The page number of the current page in a paging query.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -758,7 +758,7 @@ public class ListFileProtectClientEventResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum number of entries to return on each page in a paged query.</p>
+             * <p>The maximum number of entries to return per page in a paging query.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>

@@ -117,7 +117,7 @@ public class ListAegisContainerPluginRuleRequest extends Request {
         } 
 
         /**
-         * <p>The query conditions. The format is as follows:</p>
+         * <p>The query conditions. Format:</p>
          * <pre><code class="language-json">[
          *   {
          *     &quot;name&quot;: &quot;ruleName&quot;,
@@ -125,14 +125,14 @@ public class ListAegisContainerPluginRuleRequest extends Request {
          *   }
          * ]
          * </code></pre>
-         * <p><strong>- name</strong>: The condition name. The following conditions are supported:</p>
+         * <p><strong>- name</strong>: the name of the condition. Valid values:</p>
          * <ul>
-         * <li><strong>ruleName</strong>: The rule name.</li>
+         * <li><strong>ruleName</strong>: the name of the rule</li>
          * </ul>
-         * <p><strong>- value</strong>: The condition value.</p>
+         * <p><strong>- value</strong>: the value of the condition</p>
          * 
          * <strong>example:</strong>
-         * <p>[{\&quot;name\&quot;: \&quot;name\&quot;, \&quot;value\&quot;: \&quot;test-1818\&quot;}]</p>
+         * <p>[{&quot;name&quot;: &quot;name&quot;, &quot;value&quot;: &quot;test-1818&quot;}]</p>
          */
         public Builder criteria(String criteria) {
             this.putQueryParameter("Criteria", criteria);
@@ -141,7 +141,7 @@ public class ListAegisContainerPluginRuleRequest extends Request {
         }
 
         /**
-         * <p>The page number of the current page in a paginated query.</p>
+         * <p>The page number of the current page in a paging query.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -154,10 +154,10 @@ public class ListAegisContainerPluginRuleRequest extends Request {
         }
 
         /**
-         * <p>Specifies the language type for the request and response messages. Default value: <strong>zh</strong>. Valid values:</p>
+         * <p>Specifies the language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
          * <ul>
-         * <li><strong>zh</strong>: Chinese.</li>
-         * <li><strong>en</strong>: English.</li>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -170,7 +170,7 @@ public class ListAegisContainerPluginRuleRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page in a paginated query.</p>
+         * <p>The number of entries to return on each page in a paging query.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -183,10 +183,10 @@ public class ListAegisContainerPluginRuleRequest extends Request {
         }
 
         /**
-         * <p>The rule type. Valid values:</p>
+         * <p>The type of the rule. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: User-defined.</li>
-         * <li><strong>1</strong>: System built-in.</li>
+         * <li><strong>0</strong>: custom rule</li>
+         * <li><strong>1</strong>: built-in rule</li>
          * </ul>
          * 
          * <strong>example:</strong>

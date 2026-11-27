@@ -67,10 +67,10 @@ public class DescribeEmgUserAgreementResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Indicates whether the emergency vulnerability scan is authorized. Valid values:</p>
+         * <p>Indicates whether authorization for urgent vulnerability scanning is granted. Valid values:</p>
          * <ul>
          * <li><strong>true</strong>: Authorized.</li>
-         * <li><strong>false</strong>: Not authorized.</li>
+         * <li><strong>false</strong>: Unauthorized.</li>
          * </ul>
          * 
          * <strong>example:</strong>

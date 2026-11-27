@@ -73,9 +73,9 @@ public class DescribeDomainSecureSuggestsRequest extends Request {
         } 
 
         /**
-         * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <p>Specifies the language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
          * <ul>
-         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>zh</strong>: Chinese.</li>
          * <li><strong>en</strong>: English.</li>
          * </ul>
          * 
@@ -89,7 +89,7 @@ public class DescribeDomainSecureSuggestsRequest extends Request {
         }
 
         /**
-         * <p>The IP address of the access source.</p>
+         * <p>The source IP address.</p>
          * 
          * <strong>example:</strong>
          * <p>218.249.<em>.</em></p>

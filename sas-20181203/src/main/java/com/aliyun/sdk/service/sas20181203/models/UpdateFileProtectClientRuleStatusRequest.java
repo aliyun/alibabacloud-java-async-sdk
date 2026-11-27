@@ -26,6 +26,10 @@ public class UpdateFileProtectClientRuleStatusRequest extends Request {
     private java.util.List<Long> excludeIdList;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FileName")
+    private String fileName;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("IdList")
     private java.util.List<Long> idList;
 
@@ -55,6 +59,7 @@ public class UpdateFileProtectClientRuleStatusRequest extends Request {
         super(builder);
         this.alertLevel = builder.alertLevel;
         this.excludeIdList = builder.excludeIdList;
+        this.fileName = builder.fileName;
         this.idList = builder.idList;
         this.platform = builder.platform;
         this.ruleAction = builder.ruleAction;
@@ -88,6 +93,13 @@ public class UpdateFileProtectClientRuleStatusRequest extends Request {
      */
     public java.util.List<Long> getExcludeIdList() {
         return this.excludeIdList;
+    }
+
+    /**
+     * @return fileName
+     */
+    public String getFileName() {
+        return this.fileName;
     }
 
     /**
@@ -135,6 +147,7 @@ public class UpdateFileProtectClientRuleStatusRequest extends Request {
     public static final class Builder extends Request.Builder<UpdateFileProtectClientRuleStatusRequest, Builder> {
         private Integer alertLevel; 
         private java.util.List<Long> excludeIdList; 
+        private String fileName; 
         private java.util.List<Long> idList; 
         private String platform; 
         private String ruleAction; 
@@ -150,6 +163,7 @@ public class UpdateFileProtectClientRuleStatusRequest extends Request {
             super(request);
             this.alertLevel = request.alertLevel;
             this.excludeIdList = request.excludeIdList;
+            this.fileName = request.fileName;
             this.idList = request.idList;
             this.platform = request.platform;
             this.ruleAction = request.ruleAction;
@@ -167,7 +181,7 @@ public class UpdateFileProtectClientRuleStatusRequest extends Request {
          * </li>
          * <li><p>2: Suspicious.</p>
          * </li>
-         * <li><p>3: High-risk.</p>
+         * <li><p>3: High risk.</p>
          * </li>
          * </ul>
          * 
@@ -190,6 +204,18 @@ public class UpdateFileProtectClientRuleStatusRequest extends Request {
         }
 
         /**
+         * <p>The name of the file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
+        public Builder fileName(String fileName) {
+            this.putQueryParameter("FileName", fileName);
+            this.fileName = fileName;
+            return this;
+        }
+
+        /**
          * <p>The list of rule IDs.</p>
          */
         public Builder idList(java.util.List<Long> idList) {
@@ -199,7 +225,7 @@ public class UpdateFileProtectClientRuleStatusRequest extends Request {
         }
 
         /**
-         * <p>The operating system type. Valid values:</p>
+         * <p>The type of the operating system. Valid values:</p>
          * <ul>
          * <li><strong>windows</strong>: Windows.</li>
          * <li><strong>linux</strong>: Linux.</li>
@@ -215,7 +241,7 @@ public class UpdateFileProtectClientRuleStatusRequest extends Request {
         }
 
         /**
-         * <p>The rule action. Valid values:</p>
+         * <p>The action of the rule. Valid values:</p>
          * <ul>
          * <li><p><strong>block</strong>: Block.</p>
          * </li>
@@ -235,7 +261,7 @@ public class UpdateFileProtectClientRuleStatusRequest extends Request {
         }
 
         /**
-         * <p>The rule name.</p>
+         * <p>The name of the rule.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -247,7 +273,7 @@ public class UpdateFileProtectClientRuleStatusRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to select all rules.</p>
+         * <p>Specifies whether to select all.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

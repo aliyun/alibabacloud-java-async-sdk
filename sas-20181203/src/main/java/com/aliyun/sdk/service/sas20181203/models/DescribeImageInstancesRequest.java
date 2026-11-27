@@ -115,14 +115,14 @@ public class DescribeImageInstancesRequest extends Request {
         } 
 
         /**
-         * <p>Sets the conditions for searching assets. This parameter is in JSON format and contains the following fields:</p>
+         * <p>Specifies the conditions for searching assets. This parameter is in JSON format and contains the following fields:</p>
          * <ul>
-         * <li><strong>name</strong>: The search item.</li>
-         * <li><strong>value</strong>: The value of the search item.</li>
-         * <li><strong>logicalExp</strong>: The logical relationship between multiple search item values. Valid values:<ul>
-         * <li><strong>OR</strong>: The multiple search item values are in an <strong>OR</strong> relationship.</li>
-         * <li><strong>AND</strong>: The multiple search item values are in an <strong>AND</strong> relationship.<blockquote>
-         * <p>You can call the <a href="~~DescribeImageRepoCriteria~~">DescribeImageRepoCriteria</a> operation to query supported search conditions.</p>
+         * <li><strong>name</strong>: The search criterion.</li>
+         * <li><strong>value</strong>: The value of the search criterion.</li>
+         * <li><strong>logicalExp</strong>: The logical relationship among multiple search criterion values. Valid values:<ul>
+         * <li><strong>OR</strong>: indicates that the logical relationship among multiple search criterion values is <strong>OR</strong>.</li>
+         * <li><strong>AND</strong>: indicates that the logical relationship among multiple search criterion values is <strong>AND</strong>.<blockquote>
+         * <p>You can call the <a href="~~DescribeImageCriteria~~">DescribeImageCriteria</a> operation to query the supported search criteria.</p>
          * </blockquote>
          * </li>
          * </ul>
@@ -139,7 +139,7 @@ public class DescribeImageInstancesRequest extends Request {
         }
 
         /**
-         * <p>The page number of the returned results to start displaying. The starting value is <strong>1</strong>. Default value: <strong>1</strong>, which indicates that page 1 is displayed.</p>
+         * <p>Specifies the page number of the page to return. Pages start from page <strong>1</strong>. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -151,10 +151,10 @@ public class DescribeImageInstancesRequest extends Request {
         }
 
         /**
-         * <p>Sets the logical relationship between multiple search conditions. Valid values:</p>
+         * <p>Specifies the logical relationship among multiple search criteria. Valid values:</p>
          * <ul>
-         * <li><strong>OR</strong>: The multiple search conditions are in an <strong>OR</strong> relationship.</li>
-         * <li><strong>AND</strong>: The multiple search conditions are in an <strong>AND</strong> relationship.</li>
+         * <li><strong>OR</strong>: indicates that the logical relationship among multiple search criteria is <strong>OR</strong>.</li>
+         * <li><strong>AND</strong>: indicates that the logical relationship among multiple search criteria is <strong>AND</strong>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -167,9 +167,9 @@ public class DescribeImageInstancesRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries to return on each page during a paged query. The default number of entries per page is 20. If the PageSize parameter is left empty, 20 entries are returned by default.</p>
+         * <p>Specifies the maximum number of entries to return on each page in a paging query. The default number of entries returned per page is 20. If the PageSize parameter is left empty, 20 entries are returned by default.</p>
          * <blockquote>
-         * <p>We recommend that you do not leave the PageSize parameter empty.</p>
+         * <p>Specify a value for this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -182,10 +182,10 @@ public class DescribeImageInstancesRequest extends Request {
         }
 
         /**
-         * <p>Indicates whether the image has been scanned. Valid values:</p>
+         * <p>Specifies whether the image has been scanned. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: processed.</li>
-         * <li><strong>false</strong>: not processed.</li>
+         * <li><strong>true</strong>: The image has been scanned.</li>
+         * <li><strong>false</strong>: The image has not been scanned.</li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -147,7 +147,7 @@ public class DescribeTraceInfoDetailRequest extends Request {
         } 
 
         /**
-         * <p>The identifier of the request source. Set the value to <strong>sas</strong>.</p>
+         * <p>The identifier of the request source. The value is fixed to <strong>sas</strong>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -160,7 +160,7 @@ public class DescribeTraceInfoDetailRequest extends Request {
         }
 
         /**
-         * <p>The detection timestamp. Unit: milliseconds.</p>
+         * <p>The timestamp when the detection was performed. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1670555392000</p>
@@ -175,7 +175,7 @@ public class DescribeTraceInfoDetailRequest extends Request {
          * <p>The language of the request and response. Valid values:</p>
          * <ul>
          * <li><strong>zh</strong>: Chinese</li>
-         * <li><strong>en</strong>: English.</li>
+         * <li><strong>en</strong>: English</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -200,7 +200,7 @@ public class DescribeTraceInfoDetailRequest extends Request {
         }
 
         /**
-         * <p>The vertex type. Set the value to <strong>SAS_INCIDENT</strong> for security alerts.</p>
+         * <p>The type of the vertex. For alerts, the value is fixed to <strong>SAS_INCIDENT</strong>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -226,7 +226,7 @@ public class DescribeTraceInfoDetailRequest extends Request {
         }
 
         /**
-         * <p>The vertex ID. You can obtain this value from the AlarmUniqueInfo parameter returned by the <a href="~~DescribeSuspEvents~~">DescribeSuspEvents</a> operation.</p>
+         * <p>The ID of the vertex. You can obtain the value from the AlarmUniqueInfo parameter returned by the <a href="~~DescribeSuspEvents~~">DescribeSuspEvents</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

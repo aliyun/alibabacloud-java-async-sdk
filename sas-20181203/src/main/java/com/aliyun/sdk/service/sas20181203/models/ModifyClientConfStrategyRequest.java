@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ModifyClientConfStrategyRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceDirectoryAccountId")
+    private Long resourceDirectoryAccountId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
     @com.aliyun.core.annotation.Validation(required = true)
     private String tag;
@@ -41,6 +45,7 @@ public class ModifyClientConfStrategyRequest extends Request {
 
     private ModifyClientConfStrategyRequest(Builder builder) {
         super(builder);
+        this.resourceDirectoryAccountId = builder.resourceDirectoryAccountId;
         this.tag = builder.tag;
         this.tagExt = builder.tagExt;
         this.tagValue = builder.tagValue;
@@ -59,6 +64,13 @@ public class ModifyClientConfStrategyRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return resourceDirectoryAccountId
+     */
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
     }
 
     /**
@@ -97,6 +109,7 @@ public class ModifyClientConfStrategyRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyClientConfStrategyRequest, Builder> {
+        private Long resourceDirectoryAccountId; 
         private String tag; 
         private String tagExt; 
         private String tagValue; 
@@ -109,12 +122,22 @@ public class ModifyClientConfStrategyRequest extends Request {
 
         private Builder(ModifyClientConfStrategyRequest request) {
             super(request);
+            this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
             this.tag = request.tag;
             this.tagExt = request.tagExt;
             this.tagValue = request.tagValue;
             this.uuid = request.uuid;
             this.uuids = request.uuids;
         } 
+
+        /**
+         * ResourceDirectoryAccountId.
+         */
+        public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+            this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
+            this.resourceDirectoryAccountId = resourceDirectoryAccountId;
+            return this;
+        }
 
         /**
          * <p>The client configuration tag.</p>
@@ -160,7 +183,7 @@ public class ModifyClientConfStrategyRequest extends Request {
         }
 
         /**
-         * <p>The UUID of the asset to query. You must specify at least one of the Uuid and Uuids parameters. Otherwise, the API returns a 400 error. The Uuid parameter specifies a single asset.</p>
+         * <p>The UUID of the asset to query. You must specify either the Uuid parameter for a single asset or the Uuids parameter for multiple assets. Otherwise, the API returns a 400 error.</p>
          * 
          * <strong>example:</strong>
          * <p>4fe8e1cd-3c37-4851-b9de-124da32c****</p>
@@ -172,7 +195,7 @@ public class ModifyClientConfStrategyRequest extends Request {
         }
 
         /**
-         * <p>The UUIDs of asset instances. A maximum of 500 UUIDs can be specified at a time. You must specify at least one of the Uuids and Uuid parameters. Otherwise, the API returns a 400 error. The Uuids parameter specifies multiple assets in a batch.</p>
+         * <p>The UUIDs of the asset instances. You can specify up to 500 UUIDs at a time. You must specify either the Uuids parameter for multiple assets or the Uuid parameter for a single asset. Otherwise, the API returns a 400 error.</p>
          */
         public Builder uuids(java.util.List<String> uuids) {
             this.putQueryParameter("Uuids", uuids);

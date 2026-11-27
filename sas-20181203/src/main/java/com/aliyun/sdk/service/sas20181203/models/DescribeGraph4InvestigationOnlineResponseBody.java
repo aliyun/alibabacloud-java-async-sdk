@@ -900,7 +900,7 @@ public class DescribeGraph4InvestigationOnlineResponseBody extends TeaModel {
              * <p>The properties.</p>
              * 
              * <strong>example:</strong>
-             * <p>{\&quot;DomainName\&quot;: {\&quot;SupportScratchDetection\&quot;: False, \&quot;Description\&quot;: \&quot;The name of the domain.\&quot;, \&quot;Required\&quot;: True, \&quot;UpdateAllowed\&quot;: False, \&quot;Type\&quot;: \&quot;string\&quot;, \&quot;Immutable\&quot;: False}}</p>
+             * <p>{&quot;DomainName&quot;: {&quot;SupportScratchDetection&quot;: False, &quot;Description&quot;: &quot;The name of the domain.&quot;, &quot;Required&quot;: True, &quot;UpdateAllowed&quot;: False, &quot;Type&quot;: &quot;string&quot;, &quot;Immutable&quot;: False}}</p>
              */
             public Builder properties(String properties) {
                 this.properties = properties;

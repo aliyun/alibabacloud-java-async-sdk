@@ -127,7 +127,7 @@ public class CreateUnknownThreatDetectStrategyRequest extends Request {
         }
 
         /**
-         * <p>The number of days to continue learning after the model is initially created.</p>
+         * <p>The number of days to learn after the model is initially created.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -151,7 +151,7 @@ public class CreateUnknownThreatDetectStrategyRequest extends Request {
         }
 
         /**
-         * <p>The Policy Name.</p>
+         * <p>The policy name.</p>
          * 
          * <strong>example:</strong>
          * <p>strategy****</p>
@@ -165,8 +165,8 @@ public class CreateUnknownThreatDetectStrategyRequest extends Request {
         /**
          * <p>The whitelist mode. Valid values:</p>
          * <ul>
-         * <li><strong>hash</strong>: The process hash.</li>
-         * <li><strong>path</strong>: The process path.</li>
+         * <li><strong>hash</strong>: process hash</li>
+         * <li><strong>path</strong>: process path</li>
          * </ul>
          * 
          * <strong>example:</strong>

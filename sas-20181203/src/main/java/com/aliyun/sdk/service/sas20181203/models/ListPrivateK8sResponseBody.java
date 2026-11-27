@@ -260,7 +260,7 @@ public class ListPrivateK8sResponseBody extends TeaModel {
              * <p>The cluster name.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxx</p>
+             * <p>demo-cluster</p>
              */
             public Builder clusterName(String clusterName) {
                 this.clusterName = clusterName;

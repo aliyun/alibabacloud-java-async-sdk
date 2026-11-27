@@ -270,7 +270,7 @@ public class DescribeChartDataResponseBody extends TeaModel {
          * <p>The property value in the chart.</p>
          * 
          * <strong>example:</strong>
-         * <p>{\&quot;totalCount\&quot;: \&quot;0\&quot;}</p>
+         * <p>{&quot;totalCount&quot;: &quot;0&quot;}</p>
          */
         public Builder propertyValue(String propertyValue) {
             this.propertyValue = propertyValue;

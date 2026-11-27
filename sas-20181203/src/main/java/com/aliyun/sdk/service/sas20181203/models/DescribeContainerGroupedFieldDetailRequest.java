@@ -82,7 +82,7 @@ public class DescribeContainerGroupedFieldDetailRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>[{\&quot;name\&quot;:\&quot;clusterId\&quot;,\&quot;value\&quot;:\&quot;cfd26658431084c73a48dd97328ba8acf\&quot;}]</p>
+         * <p>[{&quot;name&quot;:&quot;clusterId&quot;,&quot;value&quot;:&quot;cfd26658431084c73a48dd97328ba8acf&quot;}]</p>
          */
         public Builder criteria(String criteria) {
             this.putQueryParameter("Criteria", criteria);

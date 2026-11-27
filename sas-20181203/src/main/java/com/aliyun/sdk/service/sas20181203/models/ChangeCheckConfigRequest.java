@@ -379,7 +379,10 @@ public class ChangeCheckConfigRequest extends Request {
         }
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request. Different requests must use different tokens. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * <p>The client token that is used to ensure the idempotence of the request. You must use different tokens for different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>02fb3da4-130e-11e9-8e44-0016e04115b</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -400,9 +403,9 @@ public class ChangeCheckConfigRequest extends Request {
         }
 
         /**
-         * <p>Configures the check policy by using the IDs of the specified regulations.</p>
+         * <p>Configures the check policy by using the IDs of the passed requirements.</p>
          * <blockquote>
-         * <p>You can call the <a href="~~ListCheckResult~~">ListCheckResult</a> operation to obtain the regulation IDs. If the ConfigStandardIds parameter is configured, this parameter does not take effect.</p>
+         * <p>You can call the <a href="~~ListCheckResult~~">ListCheckResult</a> operation to obtain the requirement IDs. If the ConfigStandardIds parameter is configured, this parameter does not take effect.</p>
          * </blockquote>
          */
         public Builder configRequirementIds(ConfigRequirementIds configRequirementIds) {
@@ -413,7 +416,7 @@ public class ChangeCheckConfigRequest extends Request {
         }
 
         /**
-         * <p>Configures the check policy by using the IDs of the specified standards.</p>
+         * <p>Configures the check policy by using the IDs of the passed standards.</p>
          * <blockquote>
          * <p>You can call the <a href="~~ListCheckResult~~">ListCheckResult</a> operation to obtain the standard IDs.</p>
          * </blockquote>
@@ -428,7 +431,7 @@ public class ChangeCheckConfigRequest extends Request {
         /**
          * <p>The field configuration. Valid values:</p>
          * <ul>
-         * <li><strong>all</strong>: Adds all check items.</li>
+         * <li><strong>all</strong>: Add all check items.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -450,7 +453,7 @@ public class ChangeCheckConfigRequest extends Request {
         }
 
         /**
-         * <p>The list of days of the month when the policy cycle is monthly.</p>
+         * <p>The list of days of the month when the policy cycle is set to monthly.</p>
          */
         public Builder daysOfMonth(java.util.List<Integer> daysOfMonth) {
             this.putQueryParameter("DaysOfMonth", daysOfMonth);
@@ -459,12 +462,7 @@ public class ChangeCheckConfigRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to only precheck the request. Valid values:</p>
-         * <ul>
-         * <li>true: Only checks the request without performing the actual operation.</li>
-         * <li>false: Executes the request normally.</li>
-         * </ul>
-         * <p>Default value: false.</p>
+         * <p>Specifies whether to only precheck the request. A value of true indicates that only the request is checked and no actual operations are performed. A value of false indicates that the request is normally executed. Default value: false.</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -473,7 +471,7 @@ public class ChangeCheckConfigRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to check new check items by default when new check items are added to the selected regulations. Valid values:</p>
+         * <p>Specifies whether to check new check items by default when new check items are added to the selected requirements. Valid values:</p>
          * <ul>
          * <li><strong>true</strong>: Enabled.</li>
          * <li><strong>false</strong>: Disabled.</li>
@@ -505,12 +503,12 @@ public class ChangeCheckConfigRequest extends Request {
         }
 
         /**
-         * <p>The end time of the check time period, which indicates the hour of the day. The start time and end time must be selected from the following time intervals. Valid values: 6, 12, 18, and 24.</p>
+         * <p>The end time of the check time period, which indicates the hour of the day. The start time and end time can only be selected from the following time intervals. Valid values: 6, 12, 18, and 24.</p>
          * <ul>
-         * <li><strong>0~6</strong>: If the start time is 0, the end time must be set to 6 on the same day.</li>
-         * <li><strong>6~12</strong>: If the start time is 6, the end time must be set to 12 on the same day.</li>
-         * <li><strong>12~18</strong>: If the start time is 12, the end time must be set to 18 on the same day.</li>
-         * <li><strong>18~24</strong>: If the start time is 18, the end time must be set to 24 on the same day.</li>
+         * <li><strong>0 to 6</strong>: If the start time is 0, the end time must be set to 6 on the same day.</li>
+         * <li><strong>6 to 12</strong>: If the start time is 6, the end time must be set to 12 on the same day.</li>
+         * <li><strong>12 to 18</strong>: If the start time is 12, the end time must be set to 18 on the same day.</li>
+         * <li><strong>18 to 24</strong>: If the start time is 18, the end time must be set to 24 on the same day.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -523,7 +521,7 @@ public class ChangeCheckConfigRequest extends Request {
         }
 
         /**
-         * <p>The end time of the check, in seconds from 00:00:00 of the current day. Valid values: 1 to 86400, where 86400 indicates 00:00:00 of the next day. This parameter is optional. If this parameter is not provided, the current value of the policy is retained. This parameter must be paired with StartTimeSeconds. If only one of them is provided, the system returns IllegalParam (paramName=scheduleTime). If both this parameter and StartTime/EndTime are provided, the second-level parameters take precedence, and the hour-level parameters are ignored. The time window span must not be less than 60 seconds. This parameter is not accepted for the system default policy (ConfigId=default) and will be rejected if provided.</p>
+         * <p>The end time of policy execution.</p>
          * 
          * <strong>example:</strong>
          * <p>32399</p>
@@ -535,13 +533,7 @@ public class ChangeCheckConfigRequest extends Request {
         }
 
         /**
-         * <p>The frequency type. Valid values:</p>
-         * <ul>
-         * <li>DAILY: Daily.</li>
-         * <li>WEEKLY: Weekly.</li>
-         * <li>MONTHLY: Monthly.</li>
-         * <li>6HOURLY: Every 6 hours.</li>
-         * </ul>
+         * <p>The frequency type. Valid values: DAILY, WEEKLY, MONTHLY, and 6HOURLY (every 6 hours).</p>
          * 
          * <strong>example:</strong>
          * <p>DAILY</p>
@@ -579,7 +571,7 @@ public class ChangeCheckConfigRequest extends Request {
         }
 
         /**
-         * <p>The ID of the member accounts in the resource folder, which is an Alibaba Cloud account ID.</p>
+         * <p>The ID of the member accounts (Alibaba Cloud account) in the resource folder.</p>
          * <blockquote>
          * <p>You can invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
          * </blockquote>
@@ -603,12 +595,12 @@ public class ChangeCheckConfigRequest extends Request {
         }
 
         /**
-         * <p>The start time of the check time period, which indicates the hour of the day. The start time and end time must be selected from the following time intervals. Valid values: 0, 6, 12, and 18.</p>
+         * <p>The start time of the check time period, which indicates the hour of the day. The start time and end time can only be selected from the following time intervals. Valid values: 0, 6, 12, and 18.</p>
          * <ul>
-         * <li><strong>0~6</strong>: If the start time is 0, the end time must be set to 6 on the same day.</li>
-         * <li><strong>6~12</strong>: If the start time is 6, the end time must be set to 12 on the same day.</li>
-         * <li><strong>12~18</strong>: If the start time is 12, the end time must be set to 18 on the same day.</li>
-         * <li><strong>18~24</strong>: If the start time is 18, the end time must be set to 24 on the same day.</li>
+         * <li><strong>0 to 6</strong>: If the start time is 0, the end time must be set to 6 on the same day.</li>
+         * <li><strong>6 to 12</strong>: If the start time is 6, the end time must be set to 12 on the same day.</li>
+         * <li><strong>12 to 18</strong>: If the start time is 12, the end time must be set to 18 on the same day.</li>
+         * <li><strong>18 to 24</strong>: If the start time is 18, the end time must be set to 24 on the same day.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -621,7 +613,7 @@ public class ChangeCheckConfigRequest extends Request {
         }
 
         /**
-         * <p>The start time of the check, in seconds from 00:00:00 of the current day. Valid values: 0 to 86399, which correspond to 00:00:00 to 23:59:59. This parameter is optional. If this parameter is not provided, the current value of the policy is retained. This parameter must be paired with EndTimeSeconds. If only one of them is provided, the system returns IllegalParam (paramName=scheduleTime). If both this parameter and StartTime/EndTime are provided, the second-level parameters take precedence, and the hour-level parameters are ignored. If the two sets of parameters are inconsistent, the server records a WARN log. The time window span must not be less than 60 seconds. The frequency of the system default policy (ConfigId=default) is always 6HOURLY. This parameter is not accepted for the default policy and will be rejected if provided. Under a multi-policy frequency, the actual scan execution time is exactly the second specified by this parameter.</p>
+         * <p>The start time of policy execution.</p>
          * 
          * <strong>example:</strong>
          * <p>25200</p>
@@ -636,7 +628,7 @@ public class ChangeCheckConfigRequest extends Request {
          * <p>The policy name.</p>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>sas-demo-strategy</p>
          */
         public Builder strategyName(String strategyName) {
             this.putQueryParameter("StrategyName", strategyName);
@@ -661,7 +653,7 @@ public class ChangeCheckConfigRequest extends Request {
         }
 
         /**
-         * <p>The list of cloud providers.</p>
+         * <p>The list of cloud service providers.</p>
          */
         public Builder vendors(java.util.List<String> vendors) {
             this.putQueryParameter("Vendors", vendors);
@@ -813,7 +805,7 @@ public class ChangeCheckConfigRequest extends Request {
             } 
 
             /**
-             * <p>The list of regulation IDs to be added to the policy.</p>
+             * <p>The list of requirement IDs to be added to the policy.</p>
              */
             public Builder addIds(java.util.List<Long> addIds) {
                 this.addIds = addIds;
@@ -821,7 +813,7 @@ public class ChangeCheckConfigRequest extends Request {
             }
 
             /**
-             * <p>The list of regulation IDs to be removed from the policy.</p>
+             * <p>The list of requirement IDs to be removed from the policy.</p>
              */
             public Builder removeIds(java.util.List<Long> removeIds) {
                 this.removeIds = removeIds;

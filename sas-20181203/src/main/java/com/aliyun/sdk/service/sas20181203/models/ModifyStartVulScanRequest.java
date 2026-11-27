@@ -116,7 +116,7 @@ public class ModifyStartVulScanRequest extends Request {
         } 
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request. You must use different tokens for different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * <p>The client token that is used to ensure the idempotence of the request. You can use different tokens for different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>02fb3da4-130e-11e9-8e44-0016e04115b</p>
@@ -128,12 +128,14 @@ public class ModifyStartVulScanRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to perform a dry run on the request. Valid values:</p>
+         * <p>Specifies whether to only precheck the request. Valid values:</p>
          * <ul>
-         * <li>true: performs a dry run only. The system checks the request but does not perform the actual operation.</li>
-         * <li>false: performs the request.
-         * Default value: false.</li>
+         * <li>true: Only prechecks the request and does not perform the actual operation.</li>
+         * <li>false: Performs the actual operation.</li>
          * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -142,13 +144,13 @@ public class ModifyStartVulScanRequest extends Request {
         }
 
         /**
-         * <p>The ID of the main account of the member accounts in the resource folder.</p>
+         * <p>The ID of the primary account of the resource folder member accounts.</p>
          * <blockquote>
-         * <p>You can invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
+         * <p>You can invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to query the parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>1234567890123456</p>
+         * <p>&quot;1234567890123456&quot;</p>
          */
         public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
             this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
@@ -157,7 +159,7 @@ public class ModifyStartVulScanRequest extends Request {
         }
 
         /**
-         * <p>Settings for the vulnerability types to be detected by the quick scan feature. Valid values:</p>
+         * <p>Settings for the vulnerability types detected by the one-click scan feature. Valid values:</p>
          * <ul>
          * <li><strong>cve</strong>: Linux software vulnerability.</li>
          * <li><strong>sys</strong>: Windows system vulnerability.</li>
@@ -183,7 +185,7 @@ public class ModifyStartVulScanRequest extends Request {
         /**
          * <p>The list of server UUIDs. Separate multiple UUIDs with commas (,).</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/421726.html">DescribeCloudCenterInstances</a> operation to obtain the UUIDs.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/421726.html">DescribeCloudCenterInstances</a> operation to query the UUIDs.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

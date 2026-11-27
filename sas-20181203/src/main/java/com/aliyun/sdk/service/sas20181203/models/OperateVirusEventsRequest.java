@@ -128,7 +128,7 @@ public class OperateVirusEventsRequest extends Request {
          * <p>The scope of the handling operation.</p>
          * 
          * <strong>example:</strong>
-         * <p>[{\&quot;type\&quot;:\&quot;machine\&quot;,\&quot;list\&quot;:[\&quot;xxxxxxxxx-4cbf-4ca6-a1b7-8a09d1f86ab0\&quot;]}]</p>
+         * <p>[{&quot;type&quot;:&quot;machine&quot;,&quot;list&quot;:[&quot;xxxxxxxxx-4cbf-4ca6-a1b7-8a09d1f86ab0&quot;]}]</p>
          */
         public Builder operationRange(String operationRange) {
             this.putQueryParameter("OperationRange", operationRange);

@@ -213,7 +213,7 @@ public class ListClusterCheckResultRequest extends Request {
         }
 
         /**
-         * <p>The Settings for paging in a paged query. Specifies the number of records to display on each page. Default value: <strong>20</strong>, which indicates that 20 records are displayed on each page.</p>
+         * <p>The Settings for paging specify the number of records to return on each page in a paged query. Default value: <strong>20</strong>, which indicates that 20 records are displayed on each page.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>

@@ -437,7 +437,7 @@ public class ListCloudAssetMatchOperatorsResponseBody extends TeaModel {
              * <li><code>&gt;</code>: greater than </li>
              * <li><code>&gt;=</code>: greater than or equal to </li>
              * <li>&lt;: less than </li>
-             * <li>&lt;=: less than or equal to (Note: There seems to be a repetition here, likely meant to be \&quot;&lt;=\&quot; for \&quot;less than or equal to\&quot;)</li>
+             * <li>&lt;=: less than or equal to (Note: There seems to be a repetition here, likely meant to be &quot;&lt;=&quot; for &quot;less than or equal to&quot;)</li>
              * </ol>
              * <ul>
              * <li>For INTEGER type:</li>

@@ -73,7 +73,7 @@ public class GetOssScanConfigRequest extends Request {
         } 
 
         /**
-         * <p>The bucket name.</p>
+         * <p>The name of the bucket. You must specify at least one of BucketName and Id. If neither is specified, the API returns InvalidBucketName (HTTP 400).</p>
          * 
          * <strong>example:</strong>
          * <p>iboxpublic****</p>
@@ -85,7 +85,7 @@ public class GetOssScanConfigRequest extends Request {
         }
 
         /**
-         * <p>The policy ID.</p>
+         * <p>The ID of the policy.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

@@ -129,7 +129,7 @@ public class ListHoneypotAlarmEventsRequest extends Request {
         } 
 
         /**
-         * <p>The page number. Default value: <strong>1</strong>.</p>
+         * <p>Specifies the number of the page to return. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -141,11 +141,11 @@ public class ListHoneypotAlarmEventsRequest extends Request {
         }
 
         /**
-         * <p>The status of the alert event. Default value: <strong>a</strong>. Valid values:</p>
+         * <p>Specifies whether the event is handled. Default value: <strong>a</strong>. Valid values:</p>
          * <ul>
-         * <li><strong>a</strong>: all states</li>
-         * <li><strong>y</strong>: handled</li>
-         * <li><strong>n</strong>: unhandled</li>
+         * <li><strong>a</strong>: All</li>
+         * <li><strong>y</strong>: Handled </li>
+         * <li><strong>n</strong>: Unhandled</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -170,9 +170,9 @@ public class ListHoneypotAlarmEventsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Default value: 100. If you leave this parameter empty, 100 entries are returned on each page.</p>
+         * <p>Specifies the maximum number of entries to return on each page when paging. The default number of entries per page is 100. If the PageSize parameter is left empty, 100 entries are returned by default.</p>
          * <blockquote>
-         * <p> We recommend that you do not leave this parameter empty. We recommend that you set the value to a value no greater than 100.</p>
+         * <p>Set PageSize to a value up to 100.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -185,7 +185,7 @@ public class ListHoneypotAlarmEventsRequest extends Request {
         }
 
         /**
-         * <p>The risk levels.</p>
+         * <p>The list of risk levels.</p>
          */
         public Builder riskLevelList(java.util.List<String> riskLevelList) {
             this.putQueryParameter("RiskLevelList", riskLevelList);

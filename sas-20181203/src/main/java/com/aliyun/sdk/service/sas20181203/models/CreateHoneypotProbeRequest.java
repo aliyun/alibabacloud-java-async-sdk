@@ -202,10 +202,10 @@ public class CreateHoneypotProbeRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether to enable ARP spoof detection. Valid values:</p>
+         * <p>Specifies whether to enable ARP spoofing detection. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: Enabled.</li>
-         * <li><strong>false</strong>: Disabled.</li>
+         * <li><strong>true</strong>: enabled</li>
+         * <li><strong>false</strong>: disabled</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -230,9 +230,9 @@ public class CreateHoneypotProbeRequest extends Request {
         }
 
         /**
-         * <p>The management node ID.</p>
+         * <p>The ID of the management node.</p>
          * <blockquote>
-         * <p>You can call the <a href="~~ListHoneypotNode~~">ListHoneypotNode</a> operation to obtain this value.</p>
+         * <p>You can call the <a href="~~ListHoneypotNode~~">ListHoneypotNode</a> operation to obtain the value.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -246,7 +246,7 @@ public class CreateHoneypotProbeRequest extends Request {
         }
 
         /**
-         * <p>The probe name.</p>
+         * <p>The name of the probe.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -259,7 +259,7 @@ public class CreateHoneypotProbeRequest extends Request {
         }
 
         /**
-         * <p>The collection of service configurations.</p>
+         * <p>The configuration service collection.</p>
          */
         public Builder honeypotBindList(java.util.List<HoneypotBindList> honeypotBindList) {
             this.putQueryParameter("HoneypotBindList", honeypotBindList);
@@ -270,8 +270,8 @@ public class CreateHoneypotProbeRequest extends Request {
         /**
          * <p>Specifies whether to enable ping scan detection. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: Enabled.</li>
-         * <li><strong>false</strong>: Disabled.</li>
+         * <li><strong>true</strong>: enabled</li>
+         * <li><strong>false</strong>: disabled</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -284,7 +284,7 @@ public class CreateHoneypotProbeRequest extends Request {
         }
 
         /**
-         * <p>The probe type. Valid values:</p>
+         * <p>The type of the probe. Valid values:</p>
          * <ul>
          * <li><p><strong>host_probe</strong>: host probe</p>
          * </li>
@@ -303,7 +303,7 @@ public class CreateHoneypotProbeRequest extends Request {
         }
 
         /**
-         * <p>The probe version.</p>
+         * <p>The version of the probe.</p>
          * 
          * <strong>example:</strong>
          * <p>0.0.0</p>
@@ -327,7 +327,7 @@ public class CreateHoneypotProbeRequest extends Request {
         }
 
         /**
-         * <p>The instance UUID.</p>
+         * <p>The UUID of the instance.</p>
          * <blockquote>
          * <p>This parameter is required when <strong>ProbeType</strong> is set to <strong>host_probe</strong>.</p>
          * </blockquote>
@@ -344,7 +344,7 @@ public class CreateHoneypotProbeRequest extends Request {
         /**
          * <p>The ID of the virtual private cloud (VPC).</p>
          * <blockquote>
-         * <p>This parameter is required when <strong>ProbeType</strong> is set to <strong>vpc_black_hole_probe</strong>. You can call the <a href="~~DescribeVpcHoneyPotList~~">DescribeVpcHoneyPotList</a> operation to obtain this value.</p>
+         * <p>This parameter is required when <strong>ProbeType</strong> is set to <strong>vpc_black_hole_probe</strong>. You can call the <a href="~~DescribeVpcHoneyPotList~~">DescribeVpcHoneyPotList</a> operation to obtain the value.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -457,8 +457,8 @@ public class CreateHoneypotProbeRequest extends Request {
             /**
              * <p>Specifies whether to bind the port. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong>: Yes.</li>
-             * <li><strong>false</strong>: No.</li>
+             * <li><strong>true</strong>: yes</li>
+             * <li><strong>false</strong>: no</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -483,8 +483,8 @@ public class CreateHoneypotProbeRequest extends Request {
             /**
              * <p>Specifies whether the port is fixed. Valid values:</p>
              * <ul>
-             * <li><strong>0</strong>: No.</li>
-             * <li><strong>1</strong>: Yes.</li>
+             * <li><strong>0</strong>: no</li>
+             * <li><strong>1</strong>: yes</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -509,7 +509,7 @@ public class CreateHoneypotProbeRequest extends Request {
             /**
              * <p>The destination port.</p>
              * <blockquote>
-             * <p>This parameter is required when <strong>HoneypotId</strong> is not empty.</p>
+             * <p>This parameter is required when <strong>HoneypotId</strong> is specified.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -588,9 +588,9 @@ public class CreateHoneypotProbeRequest extends Request {
             }
 
             /**
-             * <p>The honeypot ID.</p>
+             * <p>The ID of the honeypot.</p>
              * <blockquote>
-             * <p>You can call the <a href="~~ListHoneypot~~">ListHoneypot</a> operation to obtain this value.</p>
+             * <p>You can call the <a href="~~ListHoneypot~~">ListHoneypot</a> operation to obtain the value.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>

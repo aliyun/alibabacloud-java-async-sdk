@@ -311,7 +311,7 @@ public class AddPrivateRegistryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The domain name of the registry.</p>
+             * <p>The domain name of the repository.</p>
              * 
              * <strong>example:</strong>
              * <p>example.com</p>
@@ -351,7 +351,7 @@ public class AddPrivateRegistryResponseBody extends TeaModel {
              * <p>The password.</p>
              * 
              * <strong>example:</strong>
-             * <hr>
+             * <p>Demo****pwd</p>
              */
             public Builder password(String password) {
                 this.password = password;
@@ -374,7 +374,7 @@ public class AddPrivateRegistryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region ID of the registry.</p>
+             * <p>The region ID of the repository.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou</p>
@@ -385,7 +385,7 @@ public class AddPrivateRegistryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IP address of the registry.</p>
+             * <p>The IP address of the repository.</p>
              * 
              * <strong>example:</strong>
              * <p><code>114.55.**.**</code></p>
@@ -396,7 +396,7 @@ public class AddPrivateRegistryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the image registry. Valid values:</p>
+             * <p>The type of the image repository. Valid values:</p>
              * <ul>
              * <li><strong>harbor</strong>: Harbor environment.</li>
              * <li><strong>quay</strong>: Quay environment.</li>
@@ -411,9 +411,9 @@ public class AddPrivateRegistryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version of the image registry. Default value: <strong>-</strong>. Valid values:</p>
+             * <p>The version of the image repository. Default value: <strong>-</strong>. Valid values:</p>
              * <ul>
-             * <li><strong>\-</strong>: Default.</li>
+             * <li><strong>-</strong>: Default.</li>
              * <li><strong>V1</strong>: Version 1.0.</li>
              * <li><strong>V2</strong>: Version 2.0.</li>
              * </ul>
@@ -452,7 +452,7 @@ public class AddPrivateRegistryResponseBody extends TeaModel {
              * <p>The username.</p>
              * 
              * <strong>example:</strong>
-             * <hr>
+             * <p>demo_user</p>
              */
             public Builder userName(String userName) {
                 this.userName = userName;

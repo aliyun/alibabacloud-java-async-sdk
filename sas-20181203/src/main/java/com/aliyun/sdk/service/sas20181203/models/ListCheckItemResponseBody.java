@@ -240,7 +240,7 @@ public class ListCheckItemResponseBody extends TeaModel {
              * <p>The JSON string that defines the type of the custom configuration item for the check item.</p>
              * 
              * <strong>example:</strong>
-             * <p>{\&quot;type\&quot;:\&quot;LIST\&quot;,\&quot;range\&quot;:[1,512],\&quot;listType\&quot;:{\&quot;type\&quot;:\&quot;STRING\&quot;,\&quot;range\&quot;:[0,22]}}</p>
+             * <p>{&quot;type&quot;:&quot;LIST&quot;,&quot;range&quot;:[1,512],&quot;listType&quot;:{&quot;type&quot;:&quot;STRING&quot;,&quot;range&quot;:[0,22]}}</p>
              */
             public Builder typeDefine(String typeDefine) {
                 this.typeDefine = typeDefine;

@@ -174,7 +174,7 @@ public class DescribeSoarStrategyTaskDetailResponseBody extends TeaModel {
              * 
              * <strong>example:</strong>
              * <p>{
-             * &quot;resultContent&quot;: &quot;{\&quot;failedNum\&quot;:0,\&quot;totalNum\&quot;:1,\&quot;successNum\&quot;:1}&quot;,
+             * &quot;resultContent&quot;: &quot;{&quot;failedNum&quot;:0,&quot;totalNum&quot;:1,&quot;successNum&quot;:1}&quot;,
              * &quot;resultStatus&quot;: 0,
              * &quot;status&quot;: 2
              * }</p>

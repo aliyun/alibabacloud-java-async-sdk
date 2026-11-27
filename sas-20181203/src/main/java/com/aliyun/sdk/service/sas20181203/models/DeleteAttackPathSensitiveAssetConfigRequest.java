@@ -60,7 +60,7 @@ public class DeleteAttackPathSensitiveAssetConfigRequest extends Request {
         } 
 
         /**
-         * <p>ID of the attack path sensitive asset configuration.</p>
+         * <p>The ID of the attack path sensitive asset setting.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

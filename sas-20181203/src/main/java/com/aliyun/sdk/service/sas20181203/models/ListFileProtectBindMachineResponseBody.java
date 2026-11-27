@@ -88,7 +88,7 @@ public class ListFileProtectBindMachineResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The paging information for the paged query.</p>
+         * <p>The paging information for a paged query.</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -165,7 +165,7 @@ public class ListFileProtectBindMachineResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of entries on the current page for a paged query.</p>
+             * <p>The number of entries returned on the current page during paging in a paged query.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>

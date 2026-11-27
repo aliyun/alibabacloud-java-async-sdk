@@ -140,7 +140,7 @@ public class ModifyImageFixCycleConfigRequest extends Request {
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>{\&quot;type\&quot;:\&quot;repo\&quot;,\&quot;target\&quot;:[\&quot;cdp-uat/zentao\&quot;,\&quot;qa-dac/yyuan9\&quot;,\&quot;cafdms-qa/xxl-job-admin\&quot;]}</p>
+         * <p>{&quot;type&quot;:&quot;repo&quot;,&quot;target&quot;:[&quot;cdp-uat/zentao&quot;,&quot;qa-dac/yyuan9&quot;,&quot;cafdms-qa/xxl-job-admin&quot;]}</p>
          */
         public Builder imageFixTarget(String imageFixTarget) {
             this.putBodyParameter("ImageFixTarget", imageFixTarget);

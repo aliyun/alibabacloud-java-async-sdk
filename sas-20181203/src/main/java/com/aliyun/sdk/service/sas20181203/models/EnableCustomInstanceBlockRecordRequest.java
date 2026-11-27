@@ -103,7 +103,7 @@ public class EnableCustomInstanceBlockRecordRequest extends Request {
         } 
 
         /**
-         * <p>The IP address for brute-force attacks prevention that you want to enable on the server.</p>
+         * <p>The IP address on the server for which to enable protection against brute-force attacks.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,8 +116,7 @@ public class EnableCustomInstanceBlockRecordRequest extends Request {
         }
 
         /**
-         * <p>The direction in which the brute-force attacks blocking policy blocks the IP address on the server.</p>
-         * <p>Valid values:</p>
+         * <p>The direction of the IP address blocked by the interception policy for brute-force attacks on the server. Valid values:</p>
          * <ul>
          * <li><strong>in</strong>: inbound</li>
          * <li><strong>out</strong>: outbound</li>

@@ -190,7 +190,7 @@ public class ModifyBackupPolicyRequest extends Request {
          * <ul>
          * <li><p><strong>Source</strong>: the server directories to be protected. To protect all directories, set this field to [].</p>
          * </li>
-         * <li><p><strong>Include</strong>: the types of files to be protected. Examples: &quot;\<em>.jpg&quot; and &quot;\</em>.doc&quot;.</p>
+         * <li><p><strong>Include</strong>: the types of files to be protected. Examples: &quot;*.jpg&quot; and &quot;*.doc&quot;.</p>
          * </li>
          * <li><p><strong>Exclude</strong>: the custom directories to be excluded. To exclude the &quot;/home/user&quot; directory, call the DescribeExcludeSystemPath operation to obtain all directories and then add the directories to be excluded. Example: exclude the &quot;/home/user&quot; directory.</p>
          * </li>

@@ -67,7 +67,7 @@ public class CreateFileProtectClientRuleResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The policy ID.</p>
+         * <p>The ID of the rule.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

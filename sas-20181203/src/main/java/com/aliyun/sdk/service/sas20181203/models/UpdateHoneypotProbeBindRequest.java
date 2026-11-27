@@ -213,7 +213,7 @@ public class UpdateHoneypotProbeBindRequest extends Request {
         } 
 
         /**
-         * <p>The unique ID of the bound service.</p>
+         * <p>The unique ID of the service binding.</p>
          * 
          * <strong>example:</strong>
          * <p>f52e8624-e43c-473c-8312-e0fed384****</p>
@@ -236,8 +236,8 @@ public class UpdateHoneypotProbeBindRequest extends Request {
         /**
          * <p>The service binding type. Valid values:</p>
          * <ul>
-         * <li><strong>forward_honey</strong>: forwards traffic to the honeypot.</li>
-         * <li><strong>scan_port</strong>: listens for scans.</li>
+         * <li><strong>forward_honey</strong>: Forwards traffic to a honeypot.</li>
+         * <li><strong>scan_port</strong>: Listens for scans.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -250,7 +250,7 @@ public class UpdateHoneypotProbeBindRequest extends Request {
         }
 
         /**
-         * <p>The page number of the page to return. The value starts from <strong>1</strong>. Default value: <strong>1</strong>, which indicates that the first page is returned.</p>
+         * <p>The page number of the page to return. Pages start from page <strong>1</strong>. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -262,9 +262,9 @@ public class UpdateHoneypotProbeBindRequest extends Request {
         }
 
         /**
-         * <p>The honeypot ID.</p>
+         * <p>The ID of the honeypot.</p>
          * <blockquote>
-         * <p>You can call the <a href="~~ListHoneypot~~">ListHoneypot</a> operation to obtain this value.</p>
+         * <p>You can call the <a href="~~ListHoneypot~~">ListHoneypot</a> operation to retrieve the value.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -277,7 +277,7 @@ public class UpdateHoneypotProbeBindRequest extends Request {
         }
 
         /**
-         * <p>The probe service port ID.</p>
+         * <p>The ID of the probe service port.</p>
          * 
          * <strong>example:</strong>
          * <p>1906</p>
@@ -305,9 +305,9 @@ public class UpdateHoneypotProbeBindRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries to return on each page in a paging query. Default value: 20. If you leave this parameter empty, 20 entries are returned per page by default.</p>
+         * <p>The maximum number of entries to return on each page in a paged query. Default value: <strong>20</strong>. If you leave this paging parameter empty, 20 entries are returned by default.</p>
          * <blockquote>
-         * <p>Do not leave PageSize empty.</p>
+         * <p>Do not leave this parameter empty.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -323,7 +323,7 @@ public class UpdateHoneypotProbeBindRequest extends Request {
          * <p>The listening port range.</p>
          * 
          * <strong>example:</strong>
-         * <p>{\&quot;tcp\&quot;:\&quot;1-65535\&quot;,\&quot;udp\&quot;:\&quot;1-65535\&quot;}</p>
+         * <p>{&quot;tcp&quot;:&quot;1-65535&quot;,&quot;udp&quot;:&quot;1-65535&quot;}</p>
          */
         public Builder ports(String ports) {
             this.putQueryParameter("Ports", ports);
@@ -332,9 +332,9 @@ public class UpdateHoneypotProbeBindRequest extends Request {
         }
 
         /**
-         * <p>The probe ID.</p>
+         * <p>The ID of the probe.</p>
          * <blockquote>
-         * <p>You can call the <a href="~~ListHoneypotProbe~~">ListHoneypotProbe</a> operation to obtain this parameter.</p>
+         * <p>You can call the <a href="~~ListHoneypotProbe~~">ListHoneypotProbe</a> operation to retrieve the value of this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -347,7 +347,7 @@ public class UpdateHoneypotProbeBindRequest extends Request {
         }
 
         /**
-         * <p>The list of listening IP addresses.</p>
+         * <p>The list of listener IP addresses.</p>
          */
         public Builder serviceIpList(java.util.List<String> serviceIpList) {
             this.putQueryParameter("ServiceIpList", serviceIpList);
@@ -356,7 +356,7 @@ public class UpdateHoneypotProbeBindRequest extends Request {
         }
 
         /**
-         * <p>The listening port status setting.</p>
+         * <p>The status setting of the listening port.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -492,7 +492,7 @@ public class UpdateHoneypotProbeBindRequest extends Request {
             } 
 
             /**
-             * <p>Specifies whether to bind the port. Valid values:</p>
+             * <p>Specifies whether the port is bound. Valid values:</p>
              * <ul>
              * <li><strong>true</strong>: Yes.</li>
              * <li><strong>false</strong>: No.</li>
@@ -507,7 +507,7 @@ public class UpdateHoneypotProbeBindRequest extends Request {
             }
 
             /**
-             * <p>The end port that the probe listens on.</p>
+             * <p>The ending listening port of the probe.</p>
              * 
              * <strong>example:</strong>
              * <p>81</p>
@@ -559,7 +559,7 @@ public class UpdateHoneypotProbeBindRequest extends Request {
             }
 
             /**
-             * <p>The start port that the probe listens on.</p>
+             * <p>The starting listening port of the probe.</p>
              * 
              * <strong>example:</strong>
              * <p>81</p>

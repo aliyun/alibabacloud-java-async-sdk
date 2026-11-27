@@ -392,7 +392,7 @@ public class DescribeImageVulWhiteListResponseBody extends TeaModel {
              * </ul>
              * 
              * <strong>example:</strong>
-             * <p>{\&quot;type\&quot;:\&quot;repo\&quot;,\&quot;target\&quot;:[\&quot;sas_test/script_0209\&quot;,\&quot;sas_test/script\&quot;]}</p>
+             * <p>{&quot;type&quot;:&quot;repo&quot;,&quot;target&quot;:[&quot;sas_test/script_0209&quot;,&quot;sas_test/script&quot;]}</p>
              */
             public Builder target(String target) {
                 this.target = target;

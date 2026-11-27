@@ -67,7 +67,7 @@ public class DescribeContainerFieldStatisticsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The statistical information about containers.</p>
+         * <p>The container statistics information.</p>
          */
         public Builder containerGroupedFields(ContainerGroupedFields containerGroupedFields) {
             this.containerGroupedFields = containerGroupedFields;
@@ -75,7 +75,7 @@ public class DescribeContainerFieldStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>F8B6F758-BCD4-597A-8A2C-DA5A552C****</p>
@@ -97,6 +97,111 @@ public class DescribeContainerFieldStatisticsResponseBody extends TeaModel {
      *
      * <p>DescribeContainerFieldStatisticsResponseBody</p>
      */
+    public static class VendorSummaries extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ClusterCount")
+        private Integer clusterCount;
+
+        @com.aliyun.core.annotation.NameInMap("PendingInstallCount")
+        private Integer pendingInstallCount;
+
+        @com.aliyun.core.annotation.NameInMap("Vendor")
+        private Integer vendor;
+
+        private VendorSummaries(Builder builder) {
+            this.clusterCount = builder.clusterCount;
+            this.pendingInstallCount = builder.pendingInstallCount;
+            this.vendor = builder.vendor;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static VendorSummaries create() {
+            return builder().build();
+        }
+
+        /**
+         * @return clusterCount
+         */
+        public Integer getClusterCount() {
+            return this.clusterCount;
+        }
+
+        /**
+         * @return pendingInstallCount
+         */
+        public Integer getPendingInstallCount() {
+            return this.pendingInstallCount;
+        }
+
+        /**
+         * @return vendor
+         */
+        public Integer getVendor() {
+            return this.vendor;
+        }
+
+        public static final class Builder {
+            private Integer clusterCount; 
+            private Integer pendingInstallCount; 
+            private Integer vendor; 
+
+            private Builder() {
+            } 
+
+            private Builder(VendorSummaries model) {
+                this.clusterCount = model.clusterCount;
+                this.pendingInstallCount = model.pendingInstallCount;
+                this.vendor = model.vendor;
+            } 
+
+            /**
+             * <p>The total number of eligible clusters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
+             */
+            public Builder clusterCount(Integer clusterCount) {
+                this.clusterCount = clusterCount;
+                return this;
+            }
+
+            /**
+             * <p>The number of clusters where no client is explicitly detected. Clusters with unknown status are not included.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
+             */
+            public Builder pendingInstallCount(Integer pendingInstallCount) {
+                this.pendingInstallCount = pendingInstallCount;
+                return this;
+            }
+
+            /**
+             * <p>The cloud vendor ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7</p>
+             */
+            public Builder vendor(Integer vendor) {
+                this.vendor = vendor;
+                return this;
+            }
+
+            public VendorSummaries build() {
+                return new VendorSummaries(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeContainerFieldStatisticsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeContainerFieldStatisticsResponseBody</p>
+     */
     public static class ContainerGroupedFields extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppCount")
         private Integer appCount;
@@ -109,6 +214,9 @@ public class DescribeContainerFieldStatisticsResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("ImageCount")
         private Integer imageCount;
+
+        @com.aliyun.core.annotation.NameInMap("InstallPolicyVersion")
+        private String installPolicyVersion;
 
         @com.aliyun.core.annotation.NameInMap("InstanceCount")
         private Integer instanceCount;
@@ -137,11 +245,18 @@ public class DescribeContainerFieldStatisticsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RiskPodCount")
         private Integer riskPodCount;
 
+        @com.aliyun.core.annotation.NameInMap("UnifiedListSupported")
+        private Boolean unifiedListSupported;
+
+        @com.aliyun.core.annotation.NameInMap("VendorSummaries")
+        private java.util.List<VendorSummaries> vendorSummaries;
+
         private ContainerGroupedFields(Builder builder) {
             this.appCount = builder.appCount;
             this.clusterCount = builder.clusterCount;
             this.containerCount = builder.containerCount;
             this.imageCount = builder.imageCount;
+            this.installPolicyVersion = builder.installPolicyVersion;
             this.instanceCount = builder.instanceCount;
             this.namespaceCount = builder.namespaceCount;
             this.podCount = builder.podCount;
@@ -151,6 +266,8 @@ public class DescribeContainerFieldStatisticsResponseBody extends TeaModel {
             this.riskImageCount = builder.riskImageCount;
             this.riskInstanceCount = builder.riskInstanceCount;
             this.riskPodCount = builder.riskPodCount;
+            this.unifiedListSupported = builder.unifiedListSupported;
+            this.vendorSummaries = builder.vendorSummaries;
         }
 
         public static Builder builder() {
@@ -187,6 +304,13 @@ public class DescribeContainerFieldStatisticsResponseBody extends TeaModel {
          */
         public Integer getImageCount() {
             return this.imageCount;
+        }
+
+        /**
+         * @return installPolicyVersion
+         */
+        public String getInstallPolicyVersion() {
+            return this.installPolicyVersion;
         }
 
         /**
@@ -252,11 +376,26 @@ public class DescribeContainerFieldStatisticsResponseBody extends TeaModel {
             return this.riskPodCount;
         }
 
+        /**
+         * @return unifiedListSupported
+         */
+        public Boolean getUnifiedListSupported() {
+            return this.unifiedListSupported;
+        }
+
+        /**
+         * @return vendorSummaries
+         */
+        public java.util.List<VendorSummaries> getVendorSummaries() {
+            return this.vendorSummaries;
+        }
+
         public static final class Builder {
             private Integer appCount; 
             private Integer clusterCount; 
             private Integer containerCount; 
             private Integer imageCount; 
+            private String installPolicyVersion; 
             private Integer instanceCount; 
             private Integer namespaceCount; 
             private Integer podCount; 
@@ -266,6 +405,8 @@ public class DescribeContainerFieldStatisticsResponseBody extends TeaModel {
             private Integer riskImageCount; 
             private Integer riskInstanceCount; 
             private Integer riskPodCount; 
+            private Boolean unifiedListSupported; 
+            private java.util.List<VendorSummaries> vendorSummaries; 
 
             private Builder() {
             } 
@@ -275,6 +416,7 @@ public class DescribeContainerFieldStatisticsResponseBody extends TeaModel {
                 this.clusterCount = model.clusterCount;
                 this.containerCount = model.containerCount;
                 this.imageCount = model.imageCount;
+                this.installPolicyVersion = model.installPolicyVersion;
                 this.instanceCount = model.instanceCount;
                 this.namespaceCount = model.namespaceCount;
                 this.podCount = model.podCount;
@@ -284,6 +426,8 @@ public class DescribeContainerFieldStatisticsResponseBody extends TeaModel {
                 this.riskImageCount = model.riskImageCount;
                 this.riskInstanceCount = model.riskInstanceCount;
                 this.riskPodCount = model.riskPodCount;
+                this.unifiedListSupported = model.unifiedListSupported;
+                this.vendorSummaries = model.vendorSummaries;
             } 
 
             /**
@@ -331,6 +475,17 @@ public class DescribeContainerFieldStatisticsResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The new installation policy version allowed by the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cloud-k8s-install-v2</p>
+             */
+            public Builder installPolicyVersion(String installPolicyVersion) {
+                this.installPolicyVersion = installPolicyVersion;
+                return this;
+            }
+
+            /**
              * <p>The number of instances.</p>
              * 
              * <strong>example:</strong>
@@ -364,7 +519,7 @@ public class DescribeContainerFieldStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of the applications on which risks are detected.</p>
+             * <p>The number of at-risk applications.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -375,7 +530,7 @@ public class DescribeContainerFieldStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of the clusters on which risks are detected.</p>
+             * <p>The number of at-risk clusters calculated based on the existing statistical criteria. Only clusters with a riskLevel of 0 are excluded, and clusters with an empty riskLevel are included. This count does not indicate that clusters with unknown risks have completed risk assessment.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -386,7 +541,7 @@ public class DescribeContainerFieldStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of the containers on which risks are detected.</p>
+             * <p>The number of at-risk containers.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -397,7 +552,7 @@ public class DescribeContainerFieldStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of the images on which risks are detected.</p>
+             * <p>The number of at-risk images.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -408,7 +563,7 @@ public class DescribeContainerFieldStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of the instances on which risks are detected.</p>
+             * <p>The number of at-risk instances.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -419,13 +574,29 @@ public class DescribeContainerFieldStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of the pods on which risks are detected.</p>
+             * <p>The number of at-risk pods.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
              */
             public Builder riskPodCount(Integer riskPodCount) {
                 this.riskPodCount = riskPodCount;
+                return this;
+            }
+
+            /**
+             * <p>Specifies whether the backend structure and unified directory capabilities are ready. If the value is false, the frontend uses the original entry point.</p>
+             */
+            public Builder unifiedListSupported(Boolean unifiedListSupported) {
+                this.unifiedListSupported = unifiedListSupported;
+                return this;
+            }
+
+            /**
+             * <p>The vendor cluster statistics aggregated by the same filter domain, which are not extrapolated from the current page.</p>
+             */
+            public Builder vendorSummaries(java.util.List<VendorSummaries> vendorSummaries) {
+                this.vendorSummaries = vendorSummaries;
                 return this;
             }
 

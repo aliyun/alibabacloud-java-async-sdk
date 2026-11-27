@@ -131,7 +131,7 @@ public class DescribeAccesskeyLeakListRequest extends Request {
         } 
 
         /**
-         * <p>The page number of the current page in a paged query. Default value: <strong>1</strong>.</p>
+         * <p>Specifies the page number of the current page during paging in a paged query. Default value: <strong>1</strong>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -144,9 +144,9 @@ public class DescribeAccesskeyLeakListRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries per page for a paged query. The maximum value of PageSize is 100. The default number of entries per page is 20. If the PageSize parameter is left empty, 20 entries are returned by default.</p>
+         * <p>Specifies the maximum number of entries to return on each page in a paged query.<br>The maximum value of the PageSize parameter is 100. The default number of entries displayed per page during paging is 20. If the PageSize parameter is left empty, 20 entries are returned by default.</p>
          * <blockquote>
-         * <p>Do not leave PageSize empty.</p>
+         * <p>Do not leave the PageSize parameter empty.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -160,7 +160,7 @@ public class DescribeAccesskeyLeakListRequest extends Request {
         }
 
         /**
-         * <p>The AccessKey ID that you want to query. Only exact match is supported.</p>
+         * <p>Specifies the AccessKey ID to query. Only exact match is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>yourAccessKeyID</p>
@@ -172,7 +172,7 @@ public class DescribeAccesskeyLeakListRequest extends Request {
         }
 
         /**
-         * <p>The ID of the member account in the resource directory (Alibaba Cloud account).</p>
+         * <p>The ID of the member accounts in the resource folder (Alibaba Cloud account).</p>
          * <blockquote>
          * <p>You can invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
          * </blockquote>
@@ -187,7 +187,7 @@ public class DescribeAccesskeyLeakListRequest extends Request {
         }
 
         /**
-         * <p>The discovery time of the leaked information that you want to query. All AccessKey leak information discovered after this point in time is returned. This parameter is a UNIX timestamp. Unit: milliseconds.</p>
+         * <p>Specifies the discovery time of the leak information to query. You can query all AccessKey leak information discovered after this point in time. The value is a timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1614155361489</p>
@@ -199,10 +199,10 @@ public class DescribeAccesskeyLeakListRequest extends Request {
         }
 
         /**
-         * <p>The processing status of the leaked AccessKey information that you want to query. Valid values:</p>
+         * <p>Specifies the processing status of the leaked AccessKey information to query. Valid values:</p>
          * <ul>
-         * <li><strong>pending</strong>: unprocessed</li>
-         * <li><strong>dealed</strong>: processed.</li>
+         * <li><strong>pending</strong>: Unprocessed.</li>
+         * <li><strong>dealed</strong>: Processed.</li>
          * </ul>
          * 
          * <strong>example:</strong>

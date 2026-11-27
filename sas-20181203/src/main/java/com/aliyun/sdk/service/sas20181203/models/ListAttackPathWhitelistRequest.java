@@ -129,7 +129,7 @@ public class ListAttackPathWhitelistRequest extends Request {
         } 
 
         /**
-         * <p>The page number Settings of the current page for paging in a paged query. Default value: <strong>1</strong>.</p>
+         * <p>The page number Settings for the current page during paging in a paged query. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -157,7 +157,7 @@ public class ListAttackPathWhitelistRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries to return per page for paging in a paged query. Default value: 20.</p>
+         * <p>The maximum number of entries per page during paging in a paged query. Default value: 20.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -169,10 +169,7 @@ public class ListAttackPathWhitelistRequest extends Request {
         }
 
         /**
-         * <p>The path name description.</p>
-         * <blockquote>
-         * <p>You can call <a href="~~ListAvailableAttackPath~~">ListAvailableAttackPath</a> to query path name descriptions.</p>
-         * </blockquote>
+         * <p>The description of the path name. You can call <a href="~~ListAvailableAttackPath~~">ListAvailableAttackPath</a> to query path name descriptions.</p>
          * 
          * <strong>example:</strong>
          * <p>ECS Instance Can Obtain Long-term Access Credential by Enabling Console Logon for RAM User</p>
@@ -184,10 +181,7 @@ public class ListAttackPathWhitelistRequest extends Request {
         }
 
         /**
-         * <p>The path type.</p>
-         * <blockquote>
-         * <p>You can call <a href="~~ListAvailableAttackPath~~">ListAvailableAttackPath</a> to query path types.</p>
-         * </blockquote>
+         * <p>The path type. You can call <a href="~~ListAvailableAttackPath~~">ListAvailableAttackPath</a> to query path types.</p>
          * 
          * <strong>example:</strong>
          * <p>role_escalation</p>
@@ -199,7 +193,7 @@ public class ListAttackPathWhitelistRequest extends Request {
         }
 
         /**
-         * <p>The whitelist name.</p>
+         * <p>The name of the whitelist.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>

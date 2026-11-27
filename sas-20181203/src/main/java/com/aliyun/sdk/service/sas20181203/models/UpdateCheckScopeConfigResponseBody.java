@@ -106,7 +106,7 @@ public class UpdateCheckScopeConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The result code. A value of <strong>200</strong> indicates success. Any other value indicates failure. You can use this field to determine the cause of the failure.</p>
+         * <p>The result code. A value of <strong>200</strong> indicates success. Other values indicate failure. You can use this field to determine the cause of the failure.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -125,7 +125,7 @@ public class UpdateCheckScopeConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message of the request result.</p>
+         * <p>The message returned for the request.</p>
          * 
          * <strong>example:</strong>
          * <p>successful</p>
@@ -136,7 +136,7 @@ public class UpdateCheckScopeConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The unique ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>676F80E3-4B3F-43DA-9CBB-5FF79F202AA2</p>
@@ -272,21 +272,21 @@ public class UpdateCheckScopeConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The JSON string of the automatic scan configuration. The following fields are included:</p>
+             * <p>The JSON string for the automatic scan configuration. Fields:</p>
              * <ul>
-             * <li><strong>autoInclude</strong>: specifies whether to enable automatic scanning. Valid values: <strong>true</strong>: enabled. <strong>false</strong>: disabled.</li>
-             * <li><strong>autoRule</strong>: the configuration for enabling automatic scanning.</li>
-             * <li><strong>ruleOperator</strong>: the rule operator for the configuration. Set the value to <strong>include</strong>.</li>
-             * <li><strong>operator</strong>: the logical operator. Set the value to <strong>or</strong>.</li>
+             * <li><strong>autoInclude</strong>: specifies whether to enable automatic scanning. Valid values: <strong>true</strong> (enabled) and <strong>false</strong> (disabled).</li>
+             * <li><strong>autoRule</strong>: the enablement configuration.</li>
+             * <li><strong>ruleOperator</strong>: the enablement configuration rule. Valid value: <strong>include</strong>.</li>
+             * <li><strong>operator</strong>: the logical operator. Valid value: <strong>or</strong>.</li>
              * <li><strong>rule</strong>: the rule.</li>
-             * <li><strong>condition</strong>: the rule condition. Valid values: <strong>vendor</strong>: vendor, <strong>assetType</strong>: primary asset type, <strong>assetSubType</strong>: secondary asset type.<blockquote>
-             * <p>For specific meanings, refer to the <a href="~~GetCloudAssetCriteria~~">GetCloudAssetCriteria</a> operation.</p>
+             * <li><strong>condition</strong>: the rule condition. Valid values: <strong>vendor</strong> (vendor), <strong>assetType</strong> (primary asset type), and <strong>assetSubType</strong> (secondary asset type).<blockquote>
+             * <p>For more information about the specific meanings, refer to the <a href="~~GetCloudAssetCriteria~~">GetCloudAssetCriteria</a> operation.</p>
              * </blockquote>
              * </li>
              * </ul>
              * 
              * <strong>example:</strong>
-             * <p>&quot;{\&quot;autoInclude\&quot;:true,\&quot;autoRule\&quot;:{\&quot;ruleOperator\&quot;:\&quot;include\&quot;,\&quot;operator\&quot;:\&quot;or\&quot;,\&quot;rule\&quot;:[{\&quot;condition\&quot;:\&quot;assetSubType\&quot;,\&quot;ruleOperator\&quot;:\&quot;include\&quot;,\&quot;value\&quot;:[{\&quot;vendor\&quot;:\&quot;0\&quot;,\&quot;assetType\&quot;:\&quot;0\&quot;,\&quot;assetSubType\&quot;:\&quot;100\&quot;}]}]}}&quot;</p>
+             * <p>&quot;{&quot;autoInclude&quot;:true,&quot;autoRule&quot;:{&quot;ruleOperator&quot;:&quot;include&quot;,&quot;operator&quot;:&quot;or&quot;,&quot;rule&quot;:[{&quot;condition&quot;:&quot;assetSubType&quot;,&quot;ruleOperator&quot;:&quot;include&quot;,&quot;value&quot;:[{&quot;vendor&quot;:&quot;0&quot;,&quot;assetType&quot;:&quot;0&quot;,&quot;assetSubType&quot;:&quot;100&quot;}]}]}}&quot;</p>
              */
             public Builder autoConfig(String autoConfig) {
                 this.autoConfig = autoConfig;
@@ -296,8 +296,8 @@ public class UpdateCheckScopeConfigResponseBody extends TeaModel {
             /**
              * <p>The type of the automatic scan configuration. Valid values:</p>
              * <ul>
-             * <li><strong>0</strong>: Automatic scan is disabled.</li>
-             * <li><strong>1</strong>: Automatically scan newly added cloud assets.</li>
+             * <li><strong>0</strong>: disable automatic scanning</li>
+             * <li><strong>1</strong>: automatically scan new cloud assets</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -309,7 +309,7 @@ public class UpdateCheckScopeConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the configuration.</p>
+             * <p>The configuration ID.</p>
              * 
              * <strong>example:</strong>
              * <p>97a1fed216908e417407344e1505xxxx</p>

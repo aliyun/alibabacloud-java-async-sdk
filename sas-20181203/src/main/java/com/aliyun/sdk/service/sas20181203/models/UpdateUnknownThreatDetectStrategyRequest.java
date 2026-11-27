@@ -116,7 +116,7 @@ public class UpdateUnknownThreatDetectStrategyRequest extends Request {
         } 
 
         /**
-         * <p>The number of days after the model is initially created before learning stops.</p>
+         * <p>Specifies the number of days the model continues to learn after initial creation.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -128,7 +128,7 @@ public class UpdateUnknownThreatDetectStrategyRequest extends Request {
         }
 
         /**
-         * <p>The number of days after which the model ends if no new processes are added.</p>
+         * <p>Specifies the number of days without new processes before the model stops.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -153,7 +153,7 @@ public class UpdateUnknownThreatDetectStrategyRequest extends Request {
         }
 
         /**
-         * <p>The policy name.</p>
+         * <p>The Policy Name.</p>
          * 
          * <strong>example:</strong>
          * <p>strategy****</p>

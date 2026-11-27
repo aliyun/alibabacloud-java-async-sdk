@@ -30,6 +30,10 @@ public class DescribeOnceTaskRequest extends Request {
     private Integer pageSize;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceDirectoryAccountId")
+    private Long resourceDirectoryAccountId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RootTaskId")
     private String rootTaskId;
 
@@ -54,6 +58,7 @@ public class DescribeOnceTaskRequest extends Request {
         this.currentPage = builder.currentPage;
         this.endTimeQuery = builder.endTimeQuery;
         this.pageSize = builder.pageSize;
+        this.resourceDirectoryAccountId = builder.resourceDirectoryAccountId;
         this.rootTaskId = builder.rootTaskId;
         this.source = builder.source;
         this.startTimeQuery = builder.startTimeQuery;
@@ -96,6 +101,13 @@ public class DescribeOnceTaskRequest extends Request {
     }
 
     /**
+     * @return resourceDirectoryAccountId
+     */
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
+    }
+
+    /**
      * @return rootTaskId
      */
     public String getRootTaskId() {
@@ -134,6 +146,7 @@ public class DescribeOnceTaskRequest extends Request {
         private Integer currentPage; 
         private Long endTimeQuery; 
         private Integer pageSize; 
+        private Long resourceDirectoryAccountId; 
         private String rootTaskId; 
         private String source; 
         private Long startTimeQuery; 
@@ -149,6 +162,7 @@ public class DescribeOnceTaskRequest extends Request {
             this.currentPage = request.currentPage;
             this.endTimeQuery = request.endTimeQuery;
             this.pageSize = request.pageSize;
+            this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
             this.rootTaskId = request.rootTaskId;
             this.source = request.source;
             this.startTimeQuery = request.startTimeQuery;
@@ -169,7 +183,7 @@ public class DescribeOnceTaskRequest extends Request {
         }
 
         /**
-         * <p>The timestamp when the root task ends. Unit: milliseconds.</p>
+         * <p>The timestamp when the root task ended. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1651766520000</p>
@@ -181,7 +195,7 @@ public class DescribeOnceTaskRequest extends Request {
         }
 
         /**
-         * <p>The number of client tasks per page for paging. Default value: <strong>20</strong>, which indicates that each page contains 20 client tasks.</p>
+         * <p>The number of client tasks per page in a paged query. Default value: <strong>20</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -193,10 +207,25 @@ public class DescribeOnceTaskRequest extends Request {
         }
 
         /**
+         * <p>The ID of the member account in the resource directory (Alibaba Cloud account).</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>176618589410****</p>
+         */
+        public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+            this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
+            this.resourceDirectoryAccountId = resourceDirectoryAccountId;
+            return this;
+        }
+
+        /**
          * <p>The root task ID.</p>
          * <blockquote>
-         * <p>You can call the <a href="~~DescribeOnceTask~~">DescribeOnceTask</a> operation and specify TaskType to query the root task list. You can obtain this parameter from TaskManageResponseList[].TaskId in the response.
-         * <strong>TaskType</strong> and <strong>RootTaskId</strong> cannot be empty at the same time. If neither is provided, the API returns HTTP 400 with the error code -101.</p>
+         * <p>You can call the <a href="~~DescribeOnceTask~~">DescribeOnceTask</a> operation and specify TaskType to query the root task list. Obtain this parameter from TaskManageResponseList[].TaskId in the response.
+         * You must specify at least one of <strong>TaskType</strong> and <strong>RootTaskId</strong>. If neither is specified, the API returns an HTTP 400 error with the error code -101.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -211,7 +240,7 @@ public class DescribeOnceTaskRequest extends Request {
         /**
          * <p>The source of the task. Valid values include but are not limited to:</p>
          * <ul>
-         * <li><strong>schedule</strong>: automatic scheduling of vulnerability scanning</li>
+         * <li><strong>schedule</strong>: automatic scheduling for vulnerability scanning</li>
          * <li><strong>console</strong>: one-click detection in the vulnerability scanning console</li>
          * </ul>
          * 
@@ -225,7 +254,7 @@ public class DescribeOnceTaskRequest extends Request {
         }
 
         /**
-         * <p>The timestamp when the root task starts. Unit: milliseconds.</p>
+         * <p>The timestamp when the root task started. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1651737301000</p>
@@ -256,7 +285,7 @@ public class DescribeOnceTaskRequest extends Request {
          * <li><strong>CLIENT_DEV_OPS</strong>: cloud O&amp;M task</li>
          * <li><strong>ASSET_SECURITY_CHECK</strong>: asset collection task</li>
          * <li><strong>ASSET_REFRESH_HOST</strong>: host asset synchronization task<blockquote>
-         * <p><strong>TaskType</strong> and <strong>RootTaskId</strong> cannot be empty at the same time. If neither is provided, the API returns HTTP 400 with the error code -101.</p>
+         * <p>You must specify at least one of <strong>TaskType</strong> and <strong>RootTaskId</strong>. If neither is specified, the API returns an HTTP 400 error with the error code -101.</p>
          * </blockquote>
          * </li>
          * </ul>

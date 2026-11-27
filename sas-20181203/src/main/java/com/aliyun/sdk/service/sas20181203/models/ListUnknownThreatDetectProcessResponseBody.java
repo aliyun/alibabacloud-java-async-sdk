@@ -165,7 +165,7 @@ public class ListUnknownThreatDetectProcessResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The English tag of the process.</p>
+             * <p>The process tag in English.</p>
              * 
              * <strong>example:</strong>
              * <p>System Process</p>
@@ -176,7 +176,7 @@ public class ListUnknownThreatDetectProcessResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Chinese tag of the process.</p>
+             * <p>The process tag in Chinese.</p>
              * 
              * <strong>example:</strong>
              * <p>System Process</p>
@@ -366,7 +366,7 @@ public class ListUnknownThreatDetectProcessResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The English description of the process behavior.</p>
+             * <p>The description of the process behavior in English.</p>
              * 
              * <strong>example:</strong>
              * <p>Normal system process</p>
@@ -377,7 +377,7 @@ public class ListUnknownThreatDetectProcessResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Chinese description of the process behavior.</p>
+             * <p>The description of the process behavior in Chinese.</p>
              * 
              * <strong>example:</strong>
              * <p>正常系统进程</p>
@@ -388,7 +388,7 @@ public class ListUnknownThreatDetectProcessResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp of the first occurrence.</p>
+             * <p>The timestamp when the event first occurred.</p>
              * 
              * <strong>example:</strong>
              * <p>1694576692000</p>
@@ -547,7 +547,7 @@ public class ListUnknownThreatDetectProcessResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of entries returned on the current page.</p>
+             * <p>The number of entries on the current page.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -558,7 +558,7 @@ public class ListUnknownThreatDetectProcessResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The page number of the current page returned during paging for a paged query.</p>
+             * <p>The page number of the current page in a paging query.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -569,7 +569,7 @@ public class ListUnknownThreatDetectProcessResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum number of entries returned on each page during paging for a paged query.</p>
+             * <p>The maximum number of entries per page in a paging query.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>

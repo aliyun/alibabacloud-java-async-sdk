@@ -143,7 +143,7 @@ public class GetFileDetectReportRequest extends Request {
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>Basic,,ThreatTypes,Intelligences,Sandbox</p>
+         * <p>Basic,ThreatTypes,Intelligences,Sandbox</p>
          */
         public Builder field(String field) {
             this.putQueryParameter("Field", field);

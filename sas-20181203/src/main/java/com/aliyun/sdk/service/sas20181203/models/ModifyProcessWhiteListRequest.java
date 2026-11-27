@@ -164,8 +164,8 @@ public class ModifyProcessWhiteListRequest extends Request {
         /**
          * <p>Specifies the whitelist status of the process. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: remove from the whitelist</li>
-         * <li><strong>2</strong>: add to the whitelist</li>
+         * <li><strong>1</strong>: remove from whitelist</li>
+         * <li><strong>2</strong>: add to whitelist</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -179,7 +179,7 @@ public class ModifyProcessWhiteListRequest extends Request {
         }
 
         /**
-         * <p>The ID of the policy.</p>
+         * <p>The policy ID.</p>
          * <blockquote>
          * <p>You can call the <a href="~~DescribeWhiteListStrategyList~~">DescribeWhiteListStrategyList</a> operation to query the ID.</p>
          * </blockquote>

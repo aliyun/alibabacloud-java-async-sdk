@@ -196,7 +196,7 @@ public class GetUnknownThreatDetectStatisticResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of servers that have blocking events.</p>
+             * <p>The number of servers with blocking events.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -207,7 +207,7 @@ public class GetUnknownThreatDetectStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of servers under control.</p>
+             * <p>The number of blocked servers.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -229,7 +229,7 @@ public class GetUnknownThreatDetectStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of servers in warning mode.</p>
+             * <p>The number of servers with alerts.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -240,7 +240,7 @@ public class GetUnknownThreatDetectStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of servers with the service enabled.</p>
+             * <p>The number of enabled servers.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>

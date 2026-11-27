@@ -67,7 +67,7 @@ public class DescribeUuidVulNumClassifyStatisticResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The vulnerability statistics returned by asset unique identifier. The key of the map is the host UUID or image ID specified in the request.</p>
+         * <p>The vulnerability statistics returned based on the unique identifier of the asset. The key of the map is the server UUID or image ID specified in the request.</p>
          */
         public Builder data(java.util.Map<String, DataValue> data) {
             this.data = data;

@@ -102,7 +102,7 @@ public class CreateHoneypotNodeRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether to allow the honeypot to access the Internet. Valid values:</p>
+         * <p>Specifies whether to allow honeypots to access the Internet. Valid values:</p>
          * <ul>
          * <li><strong>true</strong>: Allowed.</li>
          * <li><strong>false</strong>: Not allowed.</li>
@@ -143,7 +143,7 @@ public class CreateHoneypotNodeRequest extends Request {
         }
 
         /**
-         * <p>The list of allowed CIDR blocks. This parameter is required. At least one allowed CIDR block must be specified, such as 0.0.0.0/0. If this parameter is not specified, the API returns InvalidParam (400).</p>
+         * <p>The allowed CIDR blocks. This parameter is required. You must specify at least one allowed CIDR block, such as 0.0.0.0/0. If this parameter is not specified, the API returns InvalidParam (400).</p>
          */
         public Builder securityGroupProbeIpList(java.util.List<String> securityGroupProbeIpList) {
             this.putQueryParameter("SecurityGroupProbeIpList", securityGroupProbeIpList);

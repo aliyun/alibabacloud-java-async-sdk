@@ -276,14 +276,10 @@ public class GetFileProtectClientRuleResponseBody extends TeaModel {
             /**
              * <p>The alert notification level. Valid values:</p>
              * <ul>
-             * <li><p>0: no alert</p>
-             * </li>
-             * <li><p>1: reminder</p>
-             * </li>
-             * <li><p>2: suspicious</p>
-             * </li>
-             * <li><p>3: high-risk.</p>
-             * </li>
+             * <li>0: no alert</li>
+             * <li>1: reminder</li>
+             * <li>2: suspicious</li>
+             * <li>3: high-risk</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -341,7 +337,7 @@ public class GetFileProtectClientRuleResponseBody extends TeaModel {
              * <p>The operating system type. Valid values:</p>
              * <ul>
              * <li><strong>windows</strong>: Windows</li>
-             * <li><strong>linux</strong>: Linux.</li>
+             * <li><strong>linux</strong>: Linux</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -361,14 +357,11 @@ public class GetFileProtectClientRuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The action that the rule takes on the client. Valid values:</p>
+             * <p>The behavior of the rule on the client. Valid values:</p>
              * <ul>
-             * <li><p>monitor: alert</p>
-             * </li>
-             * <li><p>block: block</p>
-             * </li>
-             * <li><p>pass: allow.</p>
-             * </li>
+             * <li>monitor: alert</li>
+             * <li>block: block</li>
+             * <li>pass: allow</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -393,8 +386,8 @@ public class GetFileProtectClientRuleResponseBody extends TeaModel {
             /**
              * <p>The rule status. Valid values:</p>
              * <ul>
-             * <li><strong>0</strong>: disabled.</li>
-             * <li><strong>1</strong>: enabled.</li>
+             * <li><strong>0</strong>: disabled</li>
+             * <li><strong>1</strong>: enabled</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -406,7 +399,7 @@ public class GetFileProtectClientRuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The switch ID that corresponds to the rule.</p>
+             * <p>The ID of the switch associated with the rule.</p>
              * 
              * <strong>example:</strong>
              * <p>USER-CONTAINER-RULE-SWITCH-TYPE_***</p>

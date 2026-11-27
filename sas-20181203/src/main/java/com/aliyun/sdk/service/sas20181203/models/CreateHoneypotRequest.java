@@ -187,7 +187,7 @@ public class CreateHoneypotRequest extends Request {
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>{\&quot;trojan_git\&quot;:\&quot;close\&quot;,\&quot;burp\&quot;:\&quot;close\&quot;,\&quot;portrait_option\&quot;:\&quot;false\&quot;}</p>
+         * <p>{&quot;trojan_git&quot;:&quot;close&quot;,&quot;burp&quot;:&quot;close&quot;,&quot;portrait_option&quot;:&quot;false&quot;}</p>
          */
         public Builder meta(String meta) {
             this.putQueryParameter("Meta", meta);

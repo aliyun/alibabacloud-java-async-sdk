@@ -74,33 +74,23 @@ public class PublicSyncAndCreateImageScanTaskRequest extends Request {
         } 
 
         /**
-         * <p>The information about the images. The value of this parameter is in the JSON format and contains the following fields:</p>
+         * <p>The information about the images to be imported to the asset center. This parameter is in JSON format and contains the following fields:</p>
          * <ul>
-         * <li><p><strong>RegistryType</strong>: the type of the image repository. Valid values:</p>
-         * <ul>
+         * <li><strong>RegistryType</strong>: The type of the image repository. Valid values:<ul>
          * <li>acr</li>
          * <li>harbor</li>
          * <li>quay</li>
          * </ul>
          * </li>
-         * <li><p><strong>RepoId</strong>: the ID of the image repository.</p>
-         * </li>
-         * <li><p><strong>InstanceId</strong>: the ID of the Container Registry instance to which the image repository belongs.</p>
-         * </li>
-         * <li><p><strong>RepoNamespace</strong>: the namespace to which the image repository belongs.</p>
-         * </li>
-         * <li><p><strong>RegionId</strong>: the region ID of the image.</p>
-         * </li>
-         * <li><p><strong>RepoName</strong>: the name of the image repository.</p>
-         * </li>
-         * <li><p><strong>Digest</strong>: the digest of the image.</p>
-         * </li>
-         * <li><p><strong>Tag</strong>: the tag that is added to the image.</p>
-         * </li>
-         * <li><p><strong>CreateTime</strong>: the timestamp when the image was created. Unit: milliseconds.</p>
-         * </li>
-         * <li><p><strong>UpdateTime</strong>: the timestamp when the image was updated. Unit: milliseconds.</p>
-         * </li>
+         * <li><strong>RepoId</strong>: The ID of the image repository.</li>
+         * <li><strong>InstanceId</strong>: The ID of the ACR instance.</li>
+         * <li><strong>RepoNamespace</strong>: The namespace of the image repository.</li>
+         * <li><strong>RegionId</strong>: The region ID of the image.</li>
+         * <li><strong>RepoName</strong>: The name of the image repository.</li>
+         * <li><strong>Digest</strong>: The digest of the image.</li>
+         * <li><strong>Tag</strong>: The tag of the image.</li>
+         * <li><strong>CreateTime</strong>: The timestamp when the image was created. Unit: milliseconds.</li>
+         * <li><strong>UpdateTime</strong>: The timestamp when the image was updated. Unit: milliseconds.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -114,7 +104,7 @@ public class PublicSyncAndCreateImageScanTaskRequest extends Request {
         }
 
         /**
-         * <p>The source IP address of the request.</p>
+         * <p>The IP address of the access source.</p>
          * 
          * <strong>example:</strong>
          * <p>1.2.X.X</p>

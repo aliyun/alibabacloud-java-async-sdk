@@ -115,7 +115,7 @@ public class DescribeWhiteListStrategyStatisticsRequest extends Request {
         } 
 
         /**
-         * <p>The page number of the page to return. Default value: <strong>1</strong>, which indicates the first page.</p>
+         * <p>Specifies the page number of the page to return. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -127,10 +127,10 @@ public class DescribeWhiteListStrategyStatisticsRequest extends Request {
         }
 
         /**
-         * <p>The language type for the request and response messages. Default value: <strong>zh</strong>. Valid values:</p>
+         * <p>Specifies the language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
          * <ul>
          * <li><strong>zh</strong>: Chinese</li>
-         * <li><strong>en</strong>: English.</li>
+         * <li><strong>en</strong>: English</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -143,9 +143,9 @@ public class DescribeWhiteListStrategyStatisticsRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries per page for a paged query. Maximum value: 1000. Default value: 20. If you leave this parameter empty, 20 entries are returned.</p>
+         * <p>Specifies the maximum number of entries to return on each page during paging. In a paged query, the maximum value is 1000. Default value: 20. If you leave this parameter empty, 20 entries are returned by default.</p>
          * <blockquote>
-         * <p>Do not leave PageSize empty.</p>
+         * <p>Specify a value for the PageSize parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -158,7 +158,7 @@ public class DescribeWhiteListStrategyStatisticsRequest extends Request {
         }
 
         /**
-         * <p>The source IP address of the request. You do not need to specify this parameter. The system automatically obtains this value.</p>
+         * <p>The source IP address of the request. You do not need to specify this parameter. The system automatically retrieves the value.</p>
          * 
          * <strong>example:</strong>
          * <p>183.63.XX.XX</p>
@@ -170,9 +170,9 @@ public class DescribeWhiteListStrategyStatisticsRequest extends Request {
         }
 
         /**
-         * <p>The policy ID.</p>
+         * <p>The IDs of the policies.</p>
          * <blockquote>
-         * <p>You can call the <a href="~~DescribeWhiteListStrategyList~~">DescribeWhiteListStrategyList</a> operation to obtain this parameter.</p>
+         * <p>You can call the <a href="~~DescribeWhiteListStrategyList~~">DescribeWhiteListStrategyList</a> operation to obtain the value of this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

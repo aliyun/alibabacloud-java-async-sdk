@@ -130,7 +130,7 @@ public class UpdateHoneypotPresetRequest extends Request {
         /**
          * <p>The unique ID of the honeypot template.</p>
          * <blockquote>
-         * <p>You can call the <a href="~~ListHoneypotPreset~~">ListHoneypotPreset</a> operation to obtain this parameter.</p>
+         * <p>You can call the <a href="~~ListHoneypotPreset~~">ListHoneypotPreset</a> operation to obtain the value of this parameter.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -144,10 +144,10 @@ public class UpdateHoneypotPresetRequest extends Request {
         }
 
         /**
-         * <p>The language of the content in the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
          * <ul>
          * <li><strong>zh</strong>: Chinese</li>
-         * <li><strong>en</strong>: English.</li>
+         * <li><strong>en</strong>: English</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -163,8 +163,8 @@ public class UpdateHoneypotPresetRequest extends Request {
          * <p>The custom parameters of the honeypot template. The value is a JSON string that contains the following fields:</p>
          * <ul>
          * <li><strong>portrait_option</strong>: social tracing</li>
-         * <li><strong>burp</strong>: Burp countermeasure</li>
-         * <li><strong>trojan_git</strong>: Git countermeasure.</li>
+         * <li><strong>burp</strong>: Burp countermeasures</li>
+         * <li><strong>trojan_git</strong>: Git countermeasures</li>
          * </ul>
          * 
          * <strong>example:</strong>

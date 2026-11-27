@@ -90,10 +90,7 @@ public class DeleteHoneypotNodeRequest extends Request {
         }
 
         /**
-         * <p>The ID of the management node.</p>
-         * <blockquote>
-         * <p>You can call the <a href="~~ListHoneypotNode~~">ListHoneypotNode</a> operation to obtain this parameter.</p>
-         * </blockquote>
+         * <p>The ID of the management node. You can call the <a href="~~ListHoneypotNode~~">ListHoneypotNode</a> operation to obtain the ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

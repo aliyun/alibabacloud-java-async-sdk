@@ -265,7 +265,7 @@ public class ListFileProtectClientEventRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return in a paged query.</p>
+         * <p>The page number of the current page in a paging query.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -289,7 +289,7 @@ public class ListFileProtectClientEventRequest extends Request {
         }
 
         /**
-         * <p>The file path.</p>
+         * <p>The path of the file.</p>
          * 
          * <strong>example:</strong>
          * <p>/etc/pam****</p>
@@ -337,7 +337,7 @@ public class ListFileProtectClientEventRequest extends Request {
         }
 
         /**
-         * <p>The private IP address.</p>
+         * <p>The internal IP address.</p>
          * 
          * <strong>example:</strong>
          * <p>172.26.XX.XX</p>
@@ -355,7 +355,7 @@ public class ListFileProtectClientEventRequest extends Request {
          * <li><strong>WRITE</strong>: File write.</li>
          * <li><strong>READ</strong>: File read.</li>
          * <li><strong>RENAME</strong>: File rename.</li>
-         * <li><strong>CHOWN</strong>: Setting the file owner and file group.</li>
+         * <li><strong>CHOWN</strong>: Change of file owner and group.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -368,7 +368,7 @@ public class ListFileProtectClientEventRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries to return on each page in a paged query.</p>
+         * <p>The maximum number of entries to return per page in a paging query.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -380,7 +380,7 @@ public class ListFileProtectClientEventRequest extends Request {
         }
 
         /**
-         * <p>The process path.</p>
+         * <p>The path of the process.</p>
          * 
          * <strong>example:</strong>
          * <p>c:/windows/system32/i****</p>
@@ -392,7 +392,7 @@ public class ListFileProtectClientEventRequest extends Request {
         }
 
         /**
-         * <p>The name of the configuration rule.</p>
+         * <p>The name of the configured rule.</p>
          * 
          * <strong>example:</strong>
          * <p>text-001</p>
@@ -404,7 +404,7 @@ public class ListFileProtectClientEventRequest extends Request {
         }
 
         /**
-         * <p>The start time. This value is a UNIX timestamp in milliseconds.</p>
+         * <p>The start time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1650470399999</p>
@@ -416,7 +416,7 @@ public class ListFileProtectClientEventRequest extends Request {
         }
 
         /**
-         * <p>The event status. Valid values:</p>
+         * <p>The status of the event. Valid values:</p>
          * <ul>
          * <li><strong>0</strong>: Unhandled.</li>
          * <li><strong>1</strong>: Handled.</li>

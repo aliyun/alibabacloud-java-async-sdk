@@ -129,7 +129,7 @@ public class DescribeImageSensitiveFileByKeyRequest extends Request {
         } 
 
         /**
-         * <p>Specifies the page number of the returned results. Default value: <strong>1</strong>.</p>
+         * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -141,11 +141,11 @@ public class DescribeImageSensitiveFileByKeyRequest extends Request {
         }
 
         /**
-         * <p>The image UUID.</p>
+         * <p>The UUID of the image.</p>
          * <blockquote>
          * <p>You can call the <a href="~~DescribeImageListBySensitiveFile~~">DescribeImageListBySensitiveFile</a> operation to obtain this parameter from the ImageInfos[].Uuid field in the response.
          * This parameter is required. If you do not specify this parameter, the API returns an HTTP 400 error with the error code -101.
-         * The ByKey suffix in the operation name indicates filtering by sensitive file type. To locate an image, you must specify this parameter (imageUuid). SensitiveFileKey is an optional filter condition for the sensitive file type.</p>
+         * The &quot;ByKey&quot; in the operation name indicates filtering by sensitive file type. To locate the image, you must specify this parameter (imageUuid). SensitiveFileKey is an optional filter condition for the sensitive file type.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -158,7 +158,7 @@ public class DescribeImageSensitiveFileByKeyRequest extends Request {
         }
 
         /**
-         * <p>Specifies the language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
          * <ul>
          * <li><strong>zh</strong>: Chinese</li>
          * <li><strong>en</strong>: English</li>
@@ -174,7 +174,7 @@ public class DescribeImageSensitiveFileByKeyRequest extends Request {
         }
 
         /**
-         * <p>Specifies the maximum number of entries to return on each page in a paging query. Default value: <strong>20</strong>.</p>
+         * <p>The maximum number of entries to return on each page during paging in a paged query. Default value: <strong>20</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -200,7 +200,7 @@ public class DescribeImageSensitiveFileByKeyRequest extends Request {
         }
 
         /**
-         * <p>The sensitive file alerting type. Valid values:</p>
+         * <p>The Alarm Metric for sensitive file alerting. Valid values:</p>
          * <ul>
          * <li><strong>npm_token</strong>: NPM access token</li>
          * <li><strong>ftp_cfg</strong>: FTP configuration</li>
@@ -218,8 +218,8 @@ public class DescribeImageSensitiveFileByKeyRequest extends Request {
          * <li><strong>aws_access_key</strong>: AWS access key</li>
          * <li><strong>esmtp_cfg</strong>: ESMTP mail server configuration</li>
          * <li><strong>docker_registry_cfg</strong>: Docker image repository configuration</li>
-         * <li><strong>pem</strong>: PEM file</li>
-         * <li><strong>common_cred</strong>: common credential</li>
+         * <li><strong>pem</strong>: PEM</li>
+         * <li><strong>common_cred</strong>: Common credential</li>
          * <li><strong>sftp_cfg</strong>: SFTP connection configuration</li>
          * <li><strong>grafana_token</strong>: Grafana token</li>
          * <li><strong>slack_token</strong>: Slack token</li>
@@ -233,11 +233,11 @@ public class DescribeImageSensitiveFileByKeyRequest extends Request {
          * <li><strong>openssh_private_key</strong>: OpenSSH private key</li>
          * <li><strong>square_oauth</strong>: Square OAuth credential</li>
          * <li><strong>typeform_token</strong>: Typeform token</li>
-         * <li><strong>common_database_cfg</strong>: common database connection configuration</li>
+         * <li><strong>common_database_cfg</strong>: Common database connection configuration</li>
          * <li><strong>wordpress_database_cfg</strong>: WordPress database configuration</li>
          * <li><strong>googlecloud_api_key</strong>: Google Cloud API key</li>
-         * <li><strong>vscode_sftp</strong>: VSCode SFTP configuration</li>
-         * <li><strong>apache_htpasswd</strong>: Apache htpasswd file</li>
+         * <li><strong>vscode_sftp</strong>: VS Code SFTP configuration</li>
+         * <li><strong>apache_htpasswd</strong>: Apache htpasswd</li>
          * <li><strong>planetscale_token</strong>: PlanetScale token</li>
          * <li><strong>contentful_preview_token</strong>: Contentful preview token</li>
          * <li><strong>php_database_cfg</strong>: PHP application database password</li>
@@ -251,7 +251,7 @@ public class DescribeImageSensitiveFileByKeyRequest extends Request {
          * <li><strong>pgp</strong>: PGP encrypted file</li>
          * <li><strong>stripe_skpk</strong>: Stripe secret key</li>
          * <li><strong>square_token</strong>: Square access token</li>
-         * <li><strong>rails_carrierwave</strong>: Rails Carrierwave file upload credential</li>
+         * <li><strong>rails_carrierwave</strong>: Rails CarrierWave file upload credential</li>
          * <li><strong>dbeaver_database_cfg</strong>: DBeaver database configuration</li>
          * <li><strong>robomongo_cred</strong>: Robomongo credential</li>
          * <li><strong>github_oauth_token</strong>: GitHub OAuth access token</li>
@@ -264,7 +264,7 @@ public class DescribeImageSensitiveFileByKeyRequest extends Request {
          * <li><strong>microsoft_sdf</strong>: Microsoft SQL CE database</li>
          * <li><strong>kubernetes_dashboard_cred</strong>: Kubernetes Dashboard user credential</li>
          * <li><strong>atlassian_token</strong>: Atlassian token</li>
-         * <li><strong>rdp</strong>: Remote Desktop Protocol (RDP) connection</li>
+         * <li><strong>rdp</strong>: remote desktop connection RDP</li>
          * <li><strong>mailgun_key</strong>: Mailgun webhook signing key</li>
          * <li><strong>mailchimp_api_key</strong>: Mailchimp API key</li>
          * <li><strong>netrc_cfg</strong>: .netrc configuration file</li>
@@ -278,7 +278,7 @@ public class DescribeImageSensitiveFileByKeyRequest extends Request {
          * <li><strong>databricks_token</strong>: Databricks token</li>
          * <li><strong>gitLab_personal_token</strong>: GitLab personal access token</li>
          * <li><strong>rails_master_key</strong>: Rails master key</li>
-         * <li><strong>sqlite</strong>: SQLite3/SQLite database</li>
+         * <li><strong>sqlite</strong>: SQLite3 or SQLite database</li>
          * <li><strong>firefox_logins</strong>: Firefox logon configuration</li>
          * <li><strong>mailgun_private_token</strong>: Mailgun private token</li>
          * <li><strong>joomla_cfg</strong>: Joomla configuration</li>
@@ -293,7 +293,7 @@ public class DescribeImageSensitiveFileByKeyRequest extends Request {
          * <li><strong>huaweicloud_ak</strong>: Huawei Cloud Secret Access Key</li>
          * <li><strong>aws_s3cmd</strong>: AWS S3cmd configuration</li>
          * <li><strong>php_config</strong>: PHP configuration</li>
-         * <li><strong>common_private_key</strong>: common private key type</li>
+         * <li><strong>common_private_key</strong>: Common private key type</li>
          * <li><strong>microsoft_mdf</strong>: Microsoft SQL database</li>
          * <li><strong>mediawiki_cfg</strong>: MediaWiki configuration</li>
          * <li><strong>jenkins_cred</strong>: Jenkins credential</li>
@@ -312,7 +312,7 @@ public class DescribeImageSensitiveFileByKeyRequest extends Request {
          * <li><strong>rails_app_token</strong>: Rails app token</li>
          * <li><strong>git_cred</strong>: Git user credential</li>
          * <li><strong>newrelic_api_key</strong>: New Relic user API key</li>
-         * <li><strong>github_hub</strong>: hub configuration that stores GitHub tokens</li>
+         * <li><strong>github_hub</strong>: Hub configuration that stores GitHub tokens</li>
          * <li><strong>rubygem</strong>: RubyGems token</li>
          * </ul>
          * 

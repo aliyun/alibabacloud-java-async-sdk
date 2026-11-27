@@ -113,10 +113,10 @@ public class DescribeDomainSecureVulListRequest extends Request {
         }
 
         /**
-         * <p>The language type of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <p>Specifies the language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
          * <ul>
          * <li><strong>zh</strong>: Chinese</li>
-         * <li><strong>en</strong>: English.</li>
+         * <li><strong>en</strong>: English</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -129,7 +129,7 @@ public class DescribeDomainSecureVulListRequest extends Request {
         }
 
         /**
-         * <p>The IP address of the access source.</p>
+         * <p>The source IP address.</p>
          * 
          * <strong>example:</strong>
          * <p>111.196.<em>.</em></p>
@@ -143,7 +143,7 @@ public class DescribeDomainSecureVulListRequest extends Request {
         /**
          * <p>The vulnerability type. Valid values:</p>
          * <ul>
-         * <li><strong>app</strong>: application vulnerability.</li>
+         * <li><strong>app</strong>: application vulnerability</li>
          * </ul>
          * 
          * <strong>example:</strong>

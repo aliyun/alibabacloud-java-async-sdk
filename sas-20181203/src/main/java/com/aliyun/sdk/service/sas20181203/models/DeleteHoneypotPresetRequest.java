@@ -76,7 +76,7 @@ public class DeleteHoneypotPresetRequest extends Request {
         /**
          * <p>The unique ID of the honeypot template.</p>
          * <blockquote>
-         * <p>Call the <a href="~~ListHoneypotPreset~~">ListHoneypotPreset</a> operation to obtain this parameter.</p>
+         * <p>You can call the <a href="~~ListHoneypotPreset~~">ListHoneypotPreset</a> operation to obtain this parameter.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -90,10 +90,10 @@ public class DeleteHoneypotPresetRequest extends Request {
         }
 
         /**
-         * <p>The language of the content in the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <p>Specifies the language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
          * <ul>
          * <li><strong>zh</strong>: Chinese</li>
-         * <li><strong>en</strong>: English.</li>
+         * <li><strong>en</strong>: English</li>
          * </ul>
          * 
          * <strong>example:</strong>

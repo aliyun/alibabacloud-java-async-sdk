@@ -136,7 +136,7 @@ public class ModifySearchConditionRequest extends Request {
          *     &quot;filterParams&quot;: [
          *         {
          *             &quot;label&quot;: &quot;UUID：xxx&quot;,
-         *             &quot;value&quot;: &quot;{\&quot;name\&quot;:\&quot;uuidList\&quot;,\&quot;value\&quot;:\&quot;xxx\&quot;}&quot;
+         *             &quot;value&quot;: &quot;{&quot;name&quot;:&quot;uuidList&quot;,&quot;value&quot;:&quot;xxx&quot;}&quot;
          *         }
          *     ],
          *     &quot;LogicalExp&quot;: &quot;OR&quot;

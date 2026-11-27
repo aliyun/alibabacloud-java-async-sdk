@@ -60,7 +60,7 @@ public class DeleteVpcHoneyPotRequest extends Request {
         } 
 
         /**
-         * <p>The VPC ID of the honeypot instance that you want to delete.</p>
+         * <p>The VPC ID of the honeypot instance to be deleted.</p>
          * <blockquote>
          * <p>You can call the <a href="~~DescribeVpcHoneyPotList~~">DescribeVpcHoneyPotList</a> operation to obtain the VPC ID of the honeypot instance.</p>
          * </blockquote>

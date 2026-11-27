@@ -91,7 +91,7 @@ public class DescribeHoneyPotAuthResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of consumed authorizations.</p>
+         * <p>The number of used authorizations.</p>
          * 
          * <strong>example:</strong>
          * <p>4</p>
@@ -102,7 +102,7 @@ public class DescribeHoneyPotAuthResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID. Alibaba Cloud generates a unique identifier for each API request. You can use this ID to troubleshoot issues.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>0F5023B6-9C1F-459F-ACCC-8B4636804037</p>

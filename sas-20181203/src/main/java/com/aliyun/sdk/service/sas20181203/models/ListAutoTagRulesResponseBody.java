@@ -281,7 +281,7 @@ public class ListAutoTagRulesResponseBody extends TeaModel {
              * <p>The expression of the rule.</p>
              * 
              * <strong>example:</strong>
-             * <p>[{\&quot;groups\&quot;:\&quot;0\&quot;,\&quot;fieldValueType\&quot;:\&quot;string\&quot;,\&quot;field\&quot;:\&quot;internetIp\&quot;,\&quot;operator\&quot;:\&quot;equals\&quot;,\&quot;value\&quot;:\&quot;12.0.0.1\&quot;}]</p>
+             * <p>[{&quot;groups&quot;:&quot;0&quot;,&quot;fieldValueType&quot;:&quot;string&quot;,&quot;field&quot;:&quot;internetIp&quot;,&quot;operator&quot;:&quot;equals&quot;,&quot;value&quot;:&quot;12.0.0.1&quot;}]</p>
              */
             public Builder expression(String expression) {
                 this.expression = expression;
@@ -336,7 +336,7 @@ public class ListAutoTagRulesResponseBody extends TeaModel {
              * <p>The tag content.</p>
              * 
              * <strong>example:</strong>
-             * <p>{\&quot;tagId\&quot;:4577447}</p>
+             * <p>{&quot;tagId&quot;:4577447}</p>
              */
             public Builder tagContext(String tagContext) {
                 this.tagContext = tagContext;

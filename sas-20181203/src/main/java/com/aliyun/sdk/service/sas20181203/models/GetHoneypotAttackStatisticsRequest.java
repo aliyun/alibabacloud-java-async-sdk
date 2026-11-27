@@ -159,7 +159,7 @@ public class GetHoneypotAttackStatisticsRequest extends Request {
         } 
 
         /**
-         * <p>The page number of the returned page. Pages start from page <strong>1</strong>. Default value: <strong>1</strong>.</p>
+         * <p>The number of the page to return. Pages start from page <strong>1</strong>. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -183,7 +183,7 @@ public class GetHoneypotAttackStatisticsRequest extends Request {
         }
 
         /**
-         * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <p>The language of the request and response messages. Default value: <strong>zh</strong>. Valid values:</p>
          * <ul>
          * <li><strong>zh</strong>: Chinese</li>
          * <li><strong>en</strong>: English</li>
@@ -199,7 +199,7 @@ public class GetHoneypotAttackStatisticsRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries to return on each page in a paging query. Default value: 20. If this parameter is left empty, 20 entries are returned by default. Do not leave this parameter empty.</p>
+         * <p>The maximum number of entries to return on each page in a paged query. Default value: 20. If this parameter is left empty, 20 entries are returned by default. Do not leave the paging parameter empty.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -245,12 +245,12 @@ public class GetHoneypotAttackStatisticsRequest extends Request {
         }
 
         /**
-         * <p>The type of statistics for the attack source. Valid values:</p>
+         * <p>The type of statistics information for the attack source. Valid values:</p>
          * <ul>
-         * <li><strong>TOP_ATTACKED_AGENT</strong>: The top 5 probes that are attacked most frequently.</li>
-         * <li><strong>TOP_ATTACKED_IP</strong>: The top 5 IP addresses that are attacked most frequently.</li>
+         * <li><strong>TOP_ATTACKED_AGENT</strong>: The top 5 most attacked probes.</li>
+         * <li><strong>TOP_ATTACKED_IP</strong>: The top 5 most attacked IP addresses.</li>
          * <li><strong>ATTACK_EVENT_TYPE</strong>: The intrusion event type.</li>
-         * <li><strong>ATTACK_HONEYPOT_TYPE</strong>: The type of the attacked honeypot.</li>
+         * <li><strong>ATTACK_HONEYPOT_TYPE</strong>: The type of the compromised honeypot.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

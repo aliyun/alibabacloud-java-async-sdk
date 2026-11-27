@@ -142,7 +142,7 @@ public class UpdateHoneypotProbeRequest extends Request {
         }
 
         /**
-         * <p>The probe name.</p>
+         * <p>The name of the probe.</p>
          * 
          * <strong>example:</strong>
          * <p>svwsx-vpc-4430</p>
@@ -157,7 +157,7 @@ public class UpdateHoneypotProbeRequest extends Request {
          * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
          * <ul>
          * <li><strong>zh</strong>: Chinese</li>
-         * <li><strong>en</strong>: English.</li>
+         * <li><strong>en</strong>: English</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -182,9 +182,9 @@ public class UpdateHoneypotProbeRequest extends Request {
         }
 
         /**
-         * <p>The probe ID.</p>
+         * <p>The ID of the probe.</p>
          * <blockquote>
-         * <p>You can call the <a href="~~ListHoneypotProbe~~">ListHoneypotProbe</a> operation to obtain this parameter.</p>
+         * <p>You can call the <a href="~~ListHoneypotProbe~~">ListHoneypotProbe</a> operation to obtain the value.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 

@@ -80,7 +80,7 @@ public class ListHoneypotAlarmEventsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The alert events.</p>
+         * <p>The list of alert events.</p>
          */
         public Builder honeypotAlarmEvents(java.util.List<HoneypotAlarmEvents> honeypotAlarmEvents) {
             this.honeypotAlarmEvents = honeypotAlarmEvents;
@@ -191,7 +191,7 @@ public class ListHoneypotAlarmEventsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The extended value that corresponds to the field key.</p>
+             * <p>The extended value of the field key.</p>
              * 
              * <strong>example:</strong>
              * <p>dest_ip_ext</p>
@@ -213,7 +213,7 @@ public class ListHoneypotAlarmEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the field. You can ignore this internal parameter.</p>
+             * <p>The field type. This is an internal field and can be ignored.</p>
              * 
              * <strong>example:</strong>
              * <p>level1_item3</p>
@@ -224,7 +224,7 @@ public class ListHoneypotAlarmEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The value that corresponds to the field key.</p>
+             * <p>The value of the field key.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -409,7 +409,7 @@ public class ListHoneypotAlarmEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the alert event.</p>
+             * <p>The alert event name.</p>
              * 
              * <strong>example:</strong>
              * <p>Attack Honeypot</p>
@@ -420,7 +420,7 @@ public class ListHoneypotAlarmEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the alert event.</p>
+             * <p>The alert event type.</p>
              * 
              * <strong>example:</strong>
              * <p>Initial Access</p>
@@ -442,7 +442,7 @@ public class ListHoneypotAlarmEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of times that the alert event was generated.</p>
+             * <p>The total number of occurrences of the event.</p>
              * 
              * <strong>example:</strong>
              * <p>11</p>
@@ -453,7 +453,7 @@ public class ListHoneypotAlarmEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp that indicates the time when the alert event was first detected. Unit: milliseconds.</p>
+             * <p>The timestamp when the event was first detected. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1658193602000</p>
@@ -464,7 +464,7 @@ public class ListHoneypotAlarmEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp that indicates the time when the alert event was last detected. Unit: milliseconds.</p>
+             * <p>The timestamp when the event was last detected. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1660610772000</p>
@@ -475,7 +475,7 @@ public class ListHoneypotAlarmEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The risk information.</p>
+             * <p>The list of risk summaries.</p>
              */
             public Builder mergeFieldList(java.util.List<MergeFieldList> mergeFieldList) {
                 this.mergeFieldList = mergeFieldList;
@@ -483,11 +483,11 @@ public class ListHoneypotAlarmEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The handling status of the alert event. Valid values:</p>
+             * <p>The processing status of the alert event. Valid values:</p>
              * <ul>
-             * <li><strong>1</strong>: pending</li>
-             * <li><strong>2</strong>: ignored</li>
-             * <li><strong>4</strong>: confirmed</li>
+             * <li><strong>1</strong>: Pending</li>
+             * <li><strong>2</strong>: Ignored</li>
+             * <li><strong>4</strong>: Confirmed</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -501,9 +501,9 @@ public class ListHoneypotAlarmEventsResponseBody extends TeaModel {
             /**
              * <p>The risk level. Valid values:</p>
              * <ul>
-             * <li><strong>2</strong>: low</li>
-             * <li><strong>3</strong>: medium</li>
-             * <li><strong>4</strong>: high</li>
+             * <li><strong>2</strong>: Low risk</li>
+             * <li><strong>3</strong>: Medium risk</li>
+             * <li><strong>4</strong>: High risk</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -600,7 +600,7 @@ public class ListHoneypotAlarmEventsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of entries returned on the current page.</p>
+             * <p>The number of entries returned on the current page when paging.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -611,7 +611,7 @@ public class ListHoneypotAlarmEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The page number of the returned page.</p>
+             * <p>The current page number.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -633,7 +633,7 @@ public class ListHoneypotAlarmEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of entries returned.</p>
+             * <p>The total number of entries.</p>
              * 
              * <strong>example:</strong>
              * <p>69</p>

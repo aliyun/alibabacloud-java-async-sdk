@@ -160,12 +160,10 @@ public class DescribeAttackAnalysisDataRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether to encode the value of the <strong>client_url</strong> field in the query results by using the Base64 algorithm. Valid values:</p>
+         * <p>Specifies whether to perform Base64 encoding on <strong>client_url</strong> in the query results. Valid values:</p>
          * <ul>
-         * <li><p><strong>true</strong>: yes</p>
-         * </li>
-         * <li><p><strong>false</strong>: no</p>
-         * </li>
+         * <li><strong>true</strong>: yes</li>
+         * <li><strong>false</strong>: no</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -178,9 +176,9 @@ public class DescribeAttackAnalysisDataRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return. Pages start from page <strong>1</strong>.</p>
+         * <p>The number of the page to return. Pages start from <strong>1</strong>.</p>
          * <blockquote>
-         * <p>If the Type parameter is set to <strong>DETAILS</strong>, you must specify the CurrentPage parameter.</p>
+         * <p>If you set Type to <strong>DETAILS</strong>, this parameter is required.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -193,56 +191,34 @@ public class DescribeAttackAnalysisDataRequest extends Request {
         }
 
         /**
-         * <p>The condition that is used to filter attack events.</p>
+         * <p>The filter conditions for attack events.</p>
          * <blockquote>
-         * <p>The following list describes the valid values of crack_type:</p>
-         * </blockquote>
+         * <p>Description of the crack_type field:</p>
          * <ul>
-         * <li><p>3: brute-force attack on MySQL</p>
-         * </li>
-         * <li><p>4: FTP brute-force attack</p>
-         * </li>
-         * <li><p>5: SSH brute-force attack</p>
-         * </li>
-         * <li><p>6: RDP brute-force attack</p>
-         * </li>
-         * <li><p>9: brute-force attack on Microsoft SQL Server</p>
-         * </li>
-         * <li><p>101: intercepted attack on Java Struts 2</p>
-         * </li>
-         * <li><p>102: intercepted attack on Redis</p>
-         * </li>
-         * <li><p>103: communication with AntSword Webshell</p>
-         * </li>
-         * <li><p>104: communication with China Chopper Webshell</p>
-         * </li>
-         * <li><p>133: communication with XISE Webshell</p>
-         * </li>
-         * <li><p>sqli: SQL injection</p>
-         * </li>
-         * <li><p>codei: code execution</p>
-         * </li>
-         * <li><p>xss: cross-site scripting (XSS)</p>
-         * </li>
-         * <li><p>lfi: local file inclusion</p>
-         * </li>
-         * <li><p>rfi: remote file inclusion</p>
-         * </li>
-         * <li><p>webshell: trojan script</p>
-         * </li>
-         * <li><p>upload: vulnerability upload</p>
-         * </li>
-         * <li><p>path: directory traversal</p>
-         * </li>
-         * <li><p>bypass: unauthorized access</p>
-         * </li>
-         * <li><p>csrf: cross-site request forgery (CSRF)</p>
-         * </li>
-         * <li><p>crlf: carriage return line feed (CRLF)</p>
-         * </li>
-         * <li><p>other: others</p>
-         * </li>
+         * <li>3: MySQL brute-force attacks</li>
+         * <li>4: FTP brute-force attacks</li>
+         * <li>5: SSH brute-force attacks</li>
+         * <li>6: RDP brute-force attacks</li>
+         * <li>9: SQL Server brute-force attacks</li>
+         * <li>101: Java Struts2 attack interception</li>
+         * <li>102: Redis attack interception</li>
+         * <li>103: AntSword WebShell communication</li>
+         * <li>104: China Chopper WebShell communication</li>
+         * <li>133: XISE WebShell communication</li>
+         * <li>sqli: SQL injection</li>
+         * <li>codei: code execution</li>
+         * <li>xss: XSS attack</li>
+         * <li>lfi: local file inclusion (LFI)</li>
+         * <li>rfi: remote file inclusion (RFI)</li>
+         * <li>webshell: web shell</li>
+         * <li>upload: upload vulnerability</li>
+         * <li>path: directory traversal</li>
+         * <li>bypass: unauthorized access</li>
+         * <li>csrf: CSRF</li>
+         * <li>crlf: CRLF</li>
+         * <li>other: other</li>
          * </ul>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>{&quot;crack_type&quot;:&quot;9&quot;}</p>
@@ -254,7 +230,7 @@ public class DescribeAttackAnalysisDataRequest extends Request {
         }
 
         /**
-         * <p>The timestamp when the attack stops. Unit: seconds.</p>
+         * <p>The timestamp when the attack ended. Unit: seconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -267,12 +243,10 @@ public class DescribeAttackAnalysisDataRequest extends Request {
         }
 
         /**
-         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <p>The language of the request and response messages. Default value: <strong>zh</strong>. Valid values:</p>
          * <ul>
-         * <li><p><strong>zh</strong>: Chinese</p>
-         * </li>
-         * <li><p><strong>en</strong>: English</p>
-         * </li>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -285,9 +259,9 @@ public class DescribeAttackAnalysisDataRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page.</p>
+         * <p>Settings for the paged query: the number of attack events to return on each paging page.</p>
          * <blockquote>
-         * <p>If the Type parameter is set to <strong>DETAILS</strong>, you must specify the PageSize parameter.</p>
+         * <p>If you set Type to <strong>DETAILS</strong>, this parameter is required.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -300,9 +274,9 @@ public class DescribeAttackAnalysisDataRequest extends Request {
         }
 
         /**
-         * <p>The timestamp at which the attack starts. By default, the statistics of the previous seven days are queried. Unit: seconds.</p>
+         * <p>The timestamp when the attack started. By default, the data of the last 7 days is queried. Unit: seconds.</p>
          * <blockquote>
-         * <p>The start time that you specify must be within the previous 40 days.</p>
+         * <p>The start time can only be within the last 40 days.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -316,23 +290,17 @@ public class DescribeAttackAnalysisDataRequest extends Request {
         }
 
         /**
-         * <p>The details of attack analysis. Valid values:</p>
+         * <p>The details of the attack analysis. Valid values:</p>
          * <ul>
-         * <li><p><strong>TOTAL</strong>: number of attacks</p>
-         * </li>
-         * <li><p><strong>TREND</strong>: attack trend</p>
-         * </li>
-         * <li><p><strong>PIE_CHART</strong>: distribution of attacks by type</p>
-         * </li>
-         * <li><p><strong>SOURCE_TOP</strong>: top 5 attack sources</p>
-         * </li>
-         * <li><p><strong>CLIENT_TOP</strong>: top 5 attacked assets</p>
-         * </li>
-         * <li><p><strong>DETAILS</strong>: attack details</p>
-         * </li>
+         * <li><strong>TOTAL</strong>: the number of attacks</li>
+         * <li><strong>TREND</strong>: the attack trend</li>
+         * <li><strong>PIE_CHART</strong>: Attack Type Distribution</li>
+         * <li><strong>SOURCE_TOP</strong>: the top 5 attack sources</li>
+         * <li><strong>CLIENT_TOP</strong>: the top 5 attacked assets</li>
+         * <li><strong>DETAILS</strong>: the list of attack details</li>
          * </ul>
          * <blockquote>
-         * <p>If the Type parameter is set to <strong>DETAILS</strong>, you must specify the CurrentPage and PageSize parameters.</p>
+         * <p>If you set Type to <strong>DETAILS</strong>, the paging parameters are required.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 

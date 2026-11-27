@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class UpdateCommonSwitchConfigRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceDirectoryAccountId")
+    private Long resourceDirectoryAccountId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TargetDefault")
     private String targetDefault;
 
@@ -27,6 +31,7 @@ public class UpdateCommonSwitchConfigRequest extends Request {
 
     private UpdateCommonSwitchConfigRequest(Builder builder) {
         super(builder);
+        this.resourceDirectoryAccountId = builder.resourceDirectoryAccountId;
         this.targetDefault = builder.targetDefault;
         this.type = builder.type;
     }
@@ -45,6 +50,13 @@ public class UpdateCommonSwitchConfigRequest extends Request {
     }
 
     /**
+     * @return resourceDirectoryAccountId
+     */
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
+    }
+
+    /**
      * @return targetDefault
      */
     public String getTargetDefault() {
@@ -59,6 +71,7 @@ public class UpdateCommonSwitchConfigRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UpdateCommonSwitchConfigRequest, Builder> {
+        private Long resourceDirectoryAccountId; 
         private String targetDefault; 
         private String type; 
 
@@ -68,17 +81,25 @@ public class UpdateCommonSwitchConfigRequest extends Request {
 
         private Builder(UpdateCommonSwitchConfigRequest request) {
             super(request);
+            this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
             this.targetDefault = request.targetDefault;
             this.type = request.type;
         } 
 
         /**
-         * <p>Specifies whether to turn on the switch for newly added servers. Valid values:</p>
+         * ResourceDirectoryAccountId.
+         */
+        public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+            this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
+            this.resourceDirectoryAccountId = resourceDirectoryAccountId;
+            return this;
+        }
+
+        /**
+         * <p>Specifies whether the switch takes effect by default. Valid values:</p>
          * <ul>
-         * <li><p><strong>add</strong>: yes</p>
-         * </li>
-         * <li><p><strong>del</strong>: no</p>
-         * </li>
+         * <li><strong>add</strong>: Takes effect by default for newly added servers.</li>
+         * <li><strong>del</strong>: Does not take effect by default for newly added servers.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -91,9 +112,9 @@ public class UpdateCommonSwitchConfigRequest extends Request {
         }
 
         /**
-         * <p>The type of the switch.</p>
+         * <p>The general switch type.</p>
          * <blockquote>
-         * <p>You can call the <a href="~~ListClientUserDefineRules~~">ListClientUserDefineRules</a> or <a href="~~ListSystemClientRules~~">ListSystemClientRules</a> operation to obtain the type from the response parameter SwitchId.</p>
+         * <p>You can obtain this parameter from the SwitchId response parameter of the <a href="~~ListClientUserDefineRules~~">ListClientUserDefineRules</a> and <a href="~~ListSystemClientRules~~">ListSystemClientRules</a> operations.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

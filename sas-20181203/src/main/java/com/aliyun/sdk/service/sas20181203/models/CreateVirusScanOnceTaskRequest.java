@@ -130,7 +130,10 @@ public class CreateVirusScanOnceTaskRequest extends Request {
         } 
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request. Different requests should use different tokens. The token supports only ASCII characters and cannot exceed 64 characters in length.</p>
+         * <p>The client token that is used to ensure the idempotence of the request. You must use different tokens for different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>02fb3da4-130e-11e9-8e44-0016e04115b</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -139,12 +142,7 @@ public class CreateVirusScanOnceTaskRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to perform only a dry run of the request. Valid values:</p>
-         * <ul>
-         * <li>true: performs only a dry run without executing the actual operation.</li>
-         * <li>false: performs the actual request.</li>
-         * </ul>
-         * <p>Default value: false.</p>
+         * <p>Specifies whether to only precheck the request. A value of true indicates that only the request is checked and no actual operation is performed. A value of false indicates that the request is normally executed. Default value: false.</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -153,13 +151,13 @@ public class CreateVirusScanOnceTaskRequest extends Request {
         }
 
         /**
-         * <p>The extended information field:</p>
+         * <p>The extended information fields:</p>
          * <ul>
-         * <li><strong>additionType</strong>: the extended scan type</li>
+         * <li><strong>additionType</strong>: The extended scan type.</li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>{\&quot;additionType\&quot;:[\&quot;SCAN_MEMORY\&quot;]}</p>
+         * <p>{&quot;additionType&quot;:[&quot;SCAN_MEMORY&quot;]}</p>
          */
         public Builder param(String param) {
             this.putQueryParameter("Param", param);
@@ -168,7 +166,7 @@ public class CreateVirusScanOnceTaskRequest extends Request {
         }
 
         /**
-         * <p>The scan path information to be transmitted if the scan type is custom scan.</p>
+         * <p>The scan path information required for a custom scan.</p>
          */
         public Builder scanPath(java.util.List<String> scanPath) {
             this.putQueryParameter("ScanPath", scanPath);
@@ -179,8 +177,8 @@ public class CreateVirusScanOnceTaskRequest extends Request {
         /**
          * <p>The scan type of the virus scan. Valid values:</p>
          * <ul>
-         * <li><strong>system</strong>: system scan</li>
-         * <li><strong>user</strong>: custom scan</li>
+         * <li><strong>system</strong>: System scan.</li>
+         * <li><strong>user</strong>: Custom scan.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -193,10 +191,7 @@ public class CreateVirusScanOnceTaskRequest extends Request {
         }
 
         /**
-         * <p>The key that stores asset information.</p>
-         * <blockquote>
-         * <p>You can call the <a href="~~GetAssetSelectionConfig~~">GetAssetSelectionConfig</a> operation to obtain this parameter.</p>
-         * </blockquote>
+         * <p>The key that stores asset information. You can call the <a href="~~GetAssetSelectionConfig~~">GetAssetSelectionConfig</a> operation to obtain this parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>845de1ec-4b08-42e1-b564-31321e48xxxx</p>

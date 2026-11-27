@@ -129,7 +129,7 @@ public class ListHoneypotEventFlowsRequest extends Request {
         } 
 
         /**
-         * <p>The page number of the current page in a paged query. Default value: <strong>1</strong>.</p>
+         * <p>The page number of the current page for paging. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -141,7 +141,7 @@ public class ListHoneypotEventFlowsRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether the event has been handled. Valid values:</p>
+         * <p>Specifies whether the event is handled. Valid values:</p>
          * <ul>
          * <li><strong>y</strong>: Handled. </li>
          * <li><strong>n</strong>: Unhandled. </li>
@@ -160,7 +160,7 @@ public class ListHoneypotEventFlowsRequest extends Request {
         /**
          * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
          * <ul>
-         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>zh</strong>: Chinese.</li>
          * <li><strong>en</strong>: English.</li>
          * </ul>
          * 
@@ -174,9 +174,9 @@ public class ListHoneypotEventFlowsRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries to return per page in a paged query. Default value: 100. If the PageSize parameter is left empty, 100 entries are returned by default.</p>
+         * <p>The maximum number of entries to return on each page for paging. Default value: 100. If this parameter is left empty, 100 entries are returned by default.</p>
          * <blockquote>
-         * <p>Do not leave PageSize empty.</p>
+         * <p>Do not leave this parameter empty.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -189,7 +189,7 @@ public class ListHoneypotEventFlowsRequest extends Request {
         }
 
         /**
-         * <p>Invalid parameter.</p>
+         * <p>An invalid parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>9F4E6157-9600-5588-86B9-38F09067****</p>
@@ -203,7 +203,7 @@ public class ListHoneypotEventFlowsRequest extends Request {
         /**
          * <p>The ID of the alert event.</p>
          * <blockquote>
-         * <p>You can call the <a href="~~ListHoneypotEvents~~">ListHoneypotEvents</a> operation to obtain this parameter.</p>
+         * <p>You can call the <a href="~~ListHoneypotEvents~~">ListHoneypotEvents</a> operation to query this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

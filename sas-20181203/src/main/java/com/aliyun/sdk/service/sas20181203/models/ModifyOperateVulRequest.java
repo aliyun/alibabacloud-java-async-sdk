@@ -161,7 +161,7 @@ public class ModifyOperateVulRequest extends Request {
         } 
 
         /**
-         * <p>The client token used to ensure request idempotence. Use a different token for each request. Only ASCII characters are supported. The value can be up to 64 characters in length.</p>
+         * <p>The client token that is used to ensure the idempotence of the request. You must use different tokens for different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>02fb3da4-130e-11e9-8e44-0016e04115b</p>
@@ -173,7 +173,11 @@ public class ModifyOperateVulRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to perform only a dry run for this request. Valid values: true: performs only a dry run without executing the actual operation. false: sends the request normally. Default value: false.</p>
+         * <p>Specifies whether to only precheck the request. Valid values:</p>
+         * <ul>
+         * <li>true: Prechecks the request without performing the actual operation.</li>
+         * <li>false: Performs the actual operation.</li>
+         * </ul>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -182,7 +186,7 @@ public class ModifyOperateVulRequest extends Request {
         }
 
         /**
-         * <p>The source identifier of the request. Set this parameter to <strong>sas</strong>.</p>
+         * <p>The source identifier of the request. The value is fixed as <strong>sas</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>sas</p>
@@ -194,11 +198,11 @@ public class ModifyOperateVulRequest extends Request {
         }
 
         /**
-         * <p>The information about the vulnerability to handle. This parameter is in JSON format and contains the following fields:</p>
+         * <p>The information about the vulnerabilities to be processed. This parameter is in JSON format and contains the following fields:</p>
          * <ul>
          * <li><strong>name</strong>: The name of the vulnerability.</li>
-         * <li><strong>uuid</strong>: The UUID of the server that has the vulnerability.</li>
-         * <li><strong>tag</strong>: The label of the vulnerability. Valid values:<ul>
+         * <li><strong>uuid</strong>: The UUID of the server where the vulnerability exists.</li>
+         * <li><strong>tag</strong>: The tag of the vulnerability. Valid values:<ul>
          * <li><strong>oval</strong>: Linux software vulnerability</li>
          * <li><strong>system</strong>: Windows system vulnerability</li>
          * <li><strong>cms</strong>: Web-CMS vulnerability</li>
@@ -206,17 +210,17 @@ public class ModifyOperateVulRequest extends Request {
          * </li>
          * </ul>
          * <blockquote>
-         * <p>For other vulnerability types, call the <a href="~~DescribeVulList~~">DescribeVulList</a> operation to obtain vulnerability information.</p>
+         * <p>For other vulnerability types, you can call the <a href="~~DescribeVulList~~">DescribeVulList</a> operation to obtain the vulnerability information.</p>
          * </blockquote>
          * <ul>
-         * <li><strong>isFront</strong>: Specifies whether the Windows patch is a prerequisite patch. Set this parameter only when handling Windows system vulnerabilities. You can ignore this parameter for other vulnerability types. Valid values:<ul>
-         * <li><strong>0</strong>: No.</li>
-         * <li><strong>1</strong>: Yes.</li>
+         * <li><strong>isFront</strong>: Specifies whether the Windows patch is a prerequisite patch. This parameter is required only when you process Windows system vulnerabilities. You can ignore this parameter when you process other types of vulnerabilities. Valid values:<ul>
+         * <li><strong>0</strong>: no</li>
+         * <li><strong>1</strong>: yes</li>
          * </ul>
          * </li>
          * </ul>
          * <blockquote>
-         * <p>Batch processing is supported. Separate multiple vulnerability entries with commas (,). Call the <a href="~~DescribeVulList~~">DescribeVulList</a> operation to obtain vulnerability information.</p>
+         * <p>You can process multiple vulnerabilities at a time. Separate multiple vulnerability information entries with commas (,). You can call the <a href="~~DescribeVulList~~">DescribeVulList</a> operation to obtain the vulnerability information.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -230,13 +234,13 @@ public class ModifyOperateVulRequest extends Request {
         }
 
         /**
-         * <p>The operation to perform on the vulnerability. Valid values:</p>
+         * <p>The processing method for the vulnerability. Valid values:</p>
          * <ul>
-         * <li><strong>vul_fix</strong>: Fix the vulnerability.</li>
-         * <li><strong>vul_verify</strong>: Verify the vulnerability.</li>
-         * <li><strong>vul_ignore</strong>: Ignore the vulnerability.</li>
-         * <li><strong>vul_undo_ignore</strong>: Cancel ignoring the vulnerability.</li>
-         * <li><strong>vul_delete</strong>: Delete the vulnerability.</li>
+         * <li><strong>vul_fix</strong>: Fixes the vulnerability.</li>
+         * <li><strong>vul_verify</strong>: Verifies the vulnerability.</li>
+         * <li><strong>vul_ignore</strong>: Ignores the vulnerability.</li>
+         * <li><strong>vul_undo_ignore</strong>: Cancels ignoring the vulnerability.</li>
+         * <li><strong>vul_delete</strong>: Deletes the vulnerability.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -250,7 +254,10 @@ public class ModifyOperateVulRequest extends Request {
         }
 
         /**
-         * <p>The reason for ignoring the vulnerability. This parameter is required only when the operation is set to <strong>ignore</strong> (that is, <strong>OperateType</strong> is set to <strong>vul_ignore</strong>).</p>
+         * <p>The reason for ignoring the vulnerability.</p>
+         * <blockquote>
+         * <p>This parameter is required only when the processing method is <strong>ignore</strong> (that is, <strong>OperateType</strong> is set to <strong>vul_ignore</strong>).</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>not operate</p>
@@ -262,13 +269,13 @@ public class ModifyOperateVulRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Alibaba Cloud account associated with a member account in the resource directory.</p>
+         * <p>The ID of the Alibaba Cloud account to which the member accounts in the resource folder belong.</p>
          * <blockquote>
-         * <p>Call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
+         * <p>You can invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>1234567890123456</p>
+         * <p>&quot;1234567890123456&quot;</p>
          */
         public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
             this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
@@ -277,7 +284,7 @@ public class ModifyOperateVulRequest extends Request {
         }
 
         /**
-         * <p>The type of vulnerability to handle. Valid values:</p>
+         * <p>The type of the vulnerability to be processed. Valid values:</p>
          * <ul>
          * <li><strong>cve</strong>: Linux software vulnerability</li>
          * <li><strong>sys</strong>: Windows system vulnerability</li>
@@ -287,7 +294,7 @@ public class ModifyOperateVulRequest extends Request {
          * <li><strong>sca</strong>: Software constituency parsing vulnerability</li>
          * </ul>
          * <blockquote>
-         * <p>Fix operations are not supported for emergency vulnerabilities (emg), application vulnerabilities (app), or software constituency parsing vulnerabilities (sca). These vulnerability types do not support the execute vulnerability fix operation.</p>
+         * <p>You cannot execute vulnerability fix operations for emergency vulnerabilities (emg), application vulnerabilities (app), and software constituency parsing vulnerabilities (sca).</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 

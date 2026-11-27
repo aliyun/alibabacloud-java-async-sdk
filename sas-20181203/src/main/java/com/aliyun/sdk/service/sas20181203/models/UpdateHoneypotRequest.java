@@ -102,9 +102,9 @@ public class UpdateHoneypotRequest extends Request {
         } 
 
         /**
-         * <p>The honeypot ID.</p>
+         * <p>The ID of the honeypot.</p>
          * <blockquote>
-         * <p>You can call the <a href="~~ListHoneypot~~">ListHoneypot</a> operation to obtain this value.</p>
+         * <p>You can call the <a href="~~ListHoneypot~~">ListHoneypot</a> operation to obtain the value.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -130,10 +130,10 @@ public class UpdateHoneypotRequest extends Request {
         }
 
         /**
-         * <p>The language of the content in the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <p>Specifies the language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
          * <ul>
          * <li><strong>zh</strong>: Chinese</li>
-         * <li><strong>en</strong>: English.</li>
+         * <li><strong>en</strong>: English</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -148,11 +148,11 @@ public class UpdateHoneypotRequest extends Request {
         /**
          * <p>The custom configuration of the honeypot.</p>
          * <blockquote>
-         * <p>The value of this parameter is obtained from the <strong>Template</strong> field returned by the <a href="~~ListAvailableHoneypot~~">ListAvailableHoneypot</a> operation.</p>
+         * <p>The value of this parameter is derived from the <strong>Template</strong> field returned by the <a href="~~ListAvailableHoneypot~~">ListAvailableHoneypot</a> operation.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>{\&quot;burp\&quot;:\&quot;open\&quot;,\&quot;webshell\&quot;:\&quot;open\&quot;,\&quot;trojan_git\&quot;:\&quot;close\&quot;,\&quot;portrait_option\&quot;:\&quot;true\&quot;}</p>
+         * <p>{&quot;burp&quot;:&quot;open&quot;,&quot;webshell&quot;:&quot;open&quot;,&quot;trojan_git&quot;:&quot;close&quot;,&quot;portrait_option&quot;:&quot;true&quot;}</p>
          */
         public Builder meta(String meta) {
             this.putQueryParameter("Meta", meta);

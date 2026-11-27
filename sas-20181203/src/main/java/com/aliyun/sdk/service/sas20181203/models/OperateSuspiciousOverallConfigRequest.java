@@ -31,6 +31,10 @@ public class OperateSuspiciousOverallConfigRequest extends Request {
     private Boolean noTargetAsOn;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceDirectoryAccountId")
+    private Long resourceDirectoryAccountId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SourceIp")
     private String sourceIp;
 
@@ -44,6 +48,7 @@ public class OperateSuspiciousOverallConfigRequest extends Request {
         this.config = builder.config;
         this.lang = builder.lang;
         this.noTargetAsOn = builder.noTargetAsOn;
+        this.resourceDirectoryAccountId = builder.resourceDirectoryAccountId;
         this.sourceIp = builder.sourceIp;
         this.type = builder.type;
     }
@@ -83,6 +88,13 @@ public class OperateSuspiciousOverallConfigRequest extends Request {
     }
 
     /**
+     * @return resourceDirectoryAccountId
+     */
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
+    }
+
+    /**
      * @return sourceIp
      */
     public String getSourceIp() {
@@ -100,6 +112,7 @@ public class OperateSuspiciousOverallConfigRequest extends Request {
         private String config; 
         private String lang; 
         private Boolean noTargetAsOn; 
+        private Long resourceDirectoryAccountId; 
         private String sourceIp; 
         private String type; 
 
@@ -112,6 +125,7 @@ public class OperateSuspiciousOverallConfigRequest extends Request {
             this.config = request.config;
             this.lang = request.lang;
             this.noTargetAsOn = request.noTargetAsOn;
+            this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
             this.sourceIp = request.sourceIp;
             this.type = request.type;
         } 
@@ -119,8 +133,8 @@ public class OperateSuspiciousOverallConfigRequest extends Request {
         /**
          * <p>The switch status. Valid values:</p>
          * <ul>
-         * <li><strong>on</strong>: Enable</li>
-         * <li><strong>off</strong>: Disable</li>
+         * <li><strong>on</strong>: Enabled</li>
+         * <li><strong>off</strong>: Disabled</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -134,7 +148,7 @@ public class OperateSuspiciousOverallConfigRequest extends Request {
         }
 
         /**
-         * <p>The language type for the request and response messages. Default value: <strong>zh</strong>. Valid values:</p>
+         * <p>Specifies the language type for requests and response messages. Default value: <strong>zh</strong>. Valid values:</p>
          * <ul>
          * <li><strong>zh</strong>: Chinese</li>
          * <li><strong>en</strong>: English</li>
@@ -150,11 +164,11 @@ public class OperateSuspiciousOverallConfigRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether asset configuration is required. Default value: <strong>false</strong>. Valid values:</p>
+         * <p>Specifies whether to configure assets. Default value: <strong>false</strong>. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: Required</li>
-         * <li><strong>false</strong>: Not required<blockquote>
-         * <p>This value takes effect only when <strong>config</strong> is set to <strong>on</strong>.</p>
+         * <li><strong>true</strong>: Yes</li>
+         * <li><strong>false</strong>: No<blockquote>
+         * <p>This value is valid only when <strong>config</strong> is set to <strong>on</strong>.</p>
          * </blockquote>
          * </li>
          * </ul>
@@ -169,7 +183,16 @@ public class OperateSuspiciousOverallConfigRequest extends Request {
         }
 
         /**
-         * <p>The IP address of the access source.</p>
+         * ResourceDirectoryAccountId.
+         */
+        public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+            this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
+            this.resourceDirectoryAccountId = resourceDirectoryAccountId;
+            return this;
+        }
+
+        /**
+         * <p>The source IP address.</p>
          * 
          * <strong>example:</strong>
          * <p>222.178.XX.XX</p>
@@ -185,9 +208,9 @@ public class OperateSuspiciousOverallConfigRequest extends Request {
          * <ul>
          * <li><strong>auto_breaking</strong>: Anti-virus</li>
          * <li><strong>ransomware_breaking</strong>: Anti-ransomware (bait capture)</li>
-         * <li><strong>webshell_cloud_breaking</strong>: Website backdoor connection defense</li>
+         * <li><strong>webshell_cloud_breaking</strong>: Web shell connection defense</li>
          * <li><strong>alinet</strong>: Malicious network behavior defense</li>
-         * <li><strong>k8s_log_analysis</strong>: Container K8s threat detection</li>
+         * <li><strong>k8s_log_analysis</strong>: Container Kubernetes threat detection</li>
          * <li><strong>alisecguard</strong>: Client self-protection defense mode</li>
          * </ul>
          * <p>This parameter is required.</p>

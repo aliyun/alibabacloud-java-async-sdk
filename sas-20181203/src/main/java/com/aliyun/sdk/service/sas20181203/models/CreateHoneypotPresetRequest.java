@@ -132,7 +132,7 @@ public class CreateHoneypotPresetRequest extends Request {
         }
 
         /**
-         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
          * <ul>
          * <li><strong>zh</strong>: Chinese</li>
          * <li><strong>en</strong>: English</li>
@@ -148,11 +148,11 @@ public class CreateHoneypotPresetRequest extends Request {
         }
 
         /**
-         * <p>The custom configurations of the honeypot template. The value is a JSON string that contains the following fields:</p>
+         * <p>The custom parameters of the honeypot template. The value is a JSON string that contains the following fields:</p>
          * <ul>
-         * <li><strong>portrait_option</strong>: Social Source Tracing</li>
-         * <li><strong>burp</strong>: Burp-specific Defense</li>
-         * <li><strong>trojan_git</strong>: Git-specific Defense</li>
+         * <li><strong>portrait_option</strong>: social tracing</li>
+         * <li><strong>burp</strong>: Burp countermeasure</li>
+         * <li><strong>trojan_git</strong>: Git countermeasure</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -166,9 +166,9 @@ public class CreateHoneypotPresetRequest extends Request {
         }
 
         /**
-         * <p>The ID of the management node to which you want to deploy honeypots.</p>
+         * <p>The unique ID of the honeypot management node.</p>
          * <blockquote>
-         * <p>You can call the <a href="~~ListHoneypotNode~~">ListHoneypotNode</a> operation to query the IDs of management nodes.</p>
+         * <p>You can call the <a href="~~ListHoneypotNode~~">ListHoneypotNode</a> operation to obtain this parameter.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 

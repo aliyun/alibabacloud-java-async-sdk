@@ -101,7 +101,7 @@ public class ListHoneypotNodeRequest extends Request {
         } 
 
         /**
-         * <p>The number of the page to return.</p>
+         * <p>The page number for the paging query.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -113,7 +113,7 @@ public class ListHoneypotNodeRequest extends Request {
         }
 
         /**
-         * <p>The ID of the management node.</p>
+         * <p>The ID of the node.</p>
          * 
          * <strong>example:</strong>
          * <p>7d110ca6-05ee-4149-8042-13ad1a41fd****</p>
@@ -137,7 +137,7 @@ public class ListHoneypotNodeRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page.</p>
+         * <p>The maximum number of entries to return per page in a paging query.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>

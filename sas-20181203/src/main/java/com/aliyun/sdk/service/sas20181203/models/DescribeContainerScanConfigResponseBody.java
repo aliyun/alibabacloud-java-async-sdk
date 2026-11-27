@@ -221,7 +221,7 @@ public class DescribeContainerScanConfigResponseBody extends TeaModel {
              * <p>The container application name.</p>
              * 
              * <strong>example:</strong>
-             * <p>[\&quot;alicloud-monitor-controller\&quot;]</p>
+             * <p>[&quot;alicloud-monitor-controller&quot;]</p>
              */
             public Builder appNames(String appNames) {
                 this.appNames = appNames;

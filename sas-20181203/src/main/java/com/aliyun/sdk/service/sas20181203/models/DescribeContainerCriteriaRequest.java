@@ -22,12 +22,17 @@ public class DescribeContainerCriteriaRequest extends Request {
     private String groupField;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IncludeMulticloud")
+    private Boolean includeMulticloud;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Value")
     private String value;
 
     private DescribeContainerCriteriaRequest(Builder builder) {
         super(builder);
         this.groupField = builder.groupField;
+        this.includeMulticloud = builder.includeMulticloud;
         this.value = builder.value;
     }
 
@@ -52,6 +57,13 @@ public class DescribeContainerCriteriaRequest extends Request {
     }
 
     /**
+     * @return includeMulticloud
+     */
+    public Boolean getIncludeMulticloud() {
+        return this.includeMulticloud;
+    }
+
+    /**
      * @return value
      */
     public String getValue() {
@@ -60,6 +72,7 @@ public class DescribeContainerCriteriaRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeContainerCriteriaRequest, Builder> {
         private String groupField; 
+        private Boolean includeMulticloud; 
         private String value; 
 
         private Builder() {
@@ -69,18 +82,19 @@ public class DescribeContainerCriteriaRequest extends Request {
         private Builder(DescribeContainerCriteriaRequest request) {
             super(request);
             this.groupField = request.groupField;
+            this.includeMulticloud = request.includeMulticloud;
             this.value = request.value;
         } 
 
         /**
          * <p>The search field. Valid values:</p>
          * <ul>
-         * <li><strong>pod</strong>: pod.</li>
-         * <li><strong>appName</strong>: application name.</li>
-         * <li><strong>clusterId</strong>: cluster ID.</li>
-         * <li><strong>namespace</strong>: namespace.</li>
-         * <li><strong>image</strong>: image.</li>
-         * <li><strong>containerScan</strong>: container scan.</li>
+         * <li><strong>pod</strong>: Pod.</li>
+         * <li><strong>appName</strong>: Application name.</li>
+         * <li><strong>clusterId</strong>: Cluster ID.</li>
+         * <li><strong>namespace</strong>: Namespace.</li>
+         * <li><strong>image</strong>: Image.</li>
+         * <li><strong>containerScan</strong>: Container scan.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -93,7 +107,19 @@ public class DescribeContainerCriteriaRequest extends Request {
         }
 
         /**
-         * <p>The value of the search field. Fuzzy match is supported for application names, node names, namespaces, cluster names, public IP addresses, pod addresses, regions, pods, instance IDs, cluster IDs, and container IDs.</p>
+         * <p>Specifies whether to include connected multi-cloud clusters in the cluster search criteria. If this parameter is set to true, GroupField must be set to clusterId. If this parameter is not specified or is set to false, the original search criteria are used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        public Builder includeMulticloud(Boolean includeMulticloud) {
+            this.putQueryParameter("IncludeMulticloud", includeMulticloud);
+            this.includeMulticloud = includeMulticloud;
+            return this;
+        }
+
+        /**
+         * <p>The value of the search field. Fuzzy search is supported for application names, node names, namespaces, cluster names, public IP addresses, pod IP addresses, regions, pods, instance IDs, cluster IDs, and container IDs.</p>
          * 
          * <strong>example:</strong>
          * <p>cfb41a869c71e4678a97021582dd8a****</p>

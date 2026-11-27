@@ -42,13 +42,20 @@ public class GenerateK8sAccessInfoRequest extends Request {
     private String auditRegionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    private String clusterId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClusterName")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterName;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CpuArch")
     private String cpuArch;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeploymentProfileCodes")
+    private java.util.List<String> deploymentProfileCodes;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ExpireDate")
@@ -57,12 +64,14 @@ public class GenerateK8sAccessInfoRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("GroupId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private Long groupId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstallPolicyVersion")
+    private String installPolicyVersion;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Vendor")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String vendor;
 
     private GenerateK8sAccessInfoRequest(Builder builder) {
@@ -73,10 +82,13 @@ public class GenerateK8sAccessInfoRequest extends Request {
         this.auditLogStore = builder.auditLogStore;
         this.auditProject = builder.auditProject;
         this.auditRegionId = builder.auditRegionId;
+        this.clusterId = builder.clusterId;
         this.clusterName = builder.clusterName;
         this.cpuArch = builder.cpuArch;
+        this.deploymentProfileCodes = builder.deploymentProfileCodes;
         this.expireDate = builder.expireDate;
         this.groupId = builder.groupId;
+        this.installPolicyVersion = builder.installPolicyVersion;
         this.vendor = builder.vendor;
     }
 
@@ -136,6 +148,13 @@ public class GenerateK8sAccessInfoRequest extends Request {
     }
 
     /**
+     * @return clusterId
+     */
+    public String getClusterId() {
+        return this.clusterId;
+    }
+
+    /**
      * @return clusterName
      */
     public String getClusterName() {
@@ -147,6 +166,13 @@ public class GenerateK8sAccessInfoRequest extends Request {
      */
     public String getCpuArch() {
         return this.cpuArch;
+    }
+
+    /**
+     * @return deploymentProfileCodes
+     */
+    public java.util.List<String> getDeploymentProfileCodes() {
+        return this.deploymentProfileCodes;
     }
 
     /**
@@ -164,6 +190,13 @@ public class GenerateK8sAccessInfoRequest extends Request {
     }
 
     /**
+     * @return installPolicyVersion
+     */
+    public String getInstallPolicyVersion() {
+        return this.installPolicyVersion;
+    }
+
+    /**
      * @return vendor
      */
     public String getVendor() {
@@ -177,10 +210,13 @@ public class GenerateK8sAccessInfoRequest extends Request {
         private String auditLogStore; 
         private String auditProject; 
         private String auditRegionId; 
+        private String clusterId; 
         private String clusterName; 
         private String cpuArch; 
+        private java.util.List<String> deploymentProfileCodes; 
         private Long expireDate; 
         private Long groupId; 
+        private String installPolicyVersion; 
         private String vendor; 
 
         private Builder() {
@@ -195,15 +231,18 @@ public class GenerateK8sAccessInfoRequest extends Request {
             this.auditLogStore = request.auditLogStore;
             this.auditProject = request.auditProject;
             this.auditRegionId = request.auditRegionId;
+            this.clusterId = request.clusterId;
             this.clusterName = request.clusterName;
             this.cpuArch = request.cpuArch;
+            this.deploymentProfileCodes = request.deploymentProfileCodes;
             this.expireDate = request.expireDate;
             this.groupId = request.groupId;
+            this.installPolicyVersion = request.installPolicyVersion;
             this.vendor = request.vendor;
         } 
 
         /**
-         * <p><strong>[Deprecated]</strong> This parameter is deprecated and does not need to be specified.</p>
+         * <p><strong>[Deprecated]</strong> This parameter is deprecated and can be ignored.</p>
          * 
          * <strong>example:</strong>
          * <p>None</p>
@@ -215,7 +254,7 @@ public class GenerateK8sAccessInfoRequest extends Request {
         }
 
         /**
-         * <p><strong>[Deprecated]</strong> This parameter is deprecated and does not need to be specified.</p>
+         * <p><strong>[Deprecated]</strong> This parameter is deprecated and can be ignored.</p>
          * 
          * <strong>example:</strong>
          * <p>None</p>
@@ -227,7 +266,7 @@ public class GenerateK8sAccessInfoRequest extends Request {
         }
 
         /**
-         * <p><strong>[Deprecated]</strong> This parameter is deprecated and does not need to be specified.</p>
+         * <p><strong>[Deprecated]</strong> This parameter is deprecated and can be ignored.</p>
          * 
          * <strong>example:</strong>
          * <p>None</p>
@@ -239,7 +278,7 @@ public class GenerateK8sAccessInfoRequest extends Request {
         }
 
         /**
-         * <p>The SLS Logstore for audit logs.</p>
+         * <p>The SLS Logstore for the audit log.</p>
          * 
          * <strong>example:</strong>
          * <p>audit-cf6baf6afa106eca665296fdf68b65bf</p>
@@ -251,7 +290,7 @@ public class GenerateK8sAccessInfoRequest extends Request {
         }
 
         /**
-         * <p>The Simple Log Service (SLS) project for audit logs.</p>
+         * <p>The Simple Log Service (SLS) project for the audit log.</p>
          * 
          * <strong>example:</strong>
          * <p>k8s-log-custom-huxintest1018-2</p>
@@ -275,8 +314,19 @@ public class GenerateK8sAccessInfoRequest extends Request {
         }
 
         /**
+         * <p>The multi-cloud cluster ID generated synchronously by the server. This parameter is optional. If provided, the cluster must belong to the current trusted tenant and remain valid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cf3824769c85441b4bf3****</p>
+         */
+        public Builder clusterId(String clusterId) {
+            this.putQueryParameter("ClusterId", clusterId);
+            this.clusterId = clusterId;
+            return this;
+        }
+
+        /**
          * <p>The name of the Kubernetes cluster.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -288,7 +338,7 @@ public class GenerateK8sAccessInfoRequest extends Request {
         }
 
         /**
-         * <p>The CPU architecture, which can be ARM architecture or x86 architecture.</p>
+         * <p>The CPU architecture, which can be the ARM architecture or the x86 architecture.</p>
          * 
          * <strong>example:</strong>
          * <p>arm</p>
@@ -300,7 +350,16 @@ public class GenerateK8sAccessInfoRequest extends Request {
         }
 
         /**
-         * <p>The expiration time for container access. This value is a UNIX timestamp in milliseconds.</p>
+         * <p>The expected deployment profiles. The server re-verifies the authorization, directory, and actual capabilities.</p>
+         */
+        public Builder deploymentProfileCodes(java.util.List<String> deploymentProfileCodes) {
+            this.putQueryParameter("DeploymentProfileCodes", deploymentProfileCodes);
+            this.deploymentProfileCodes = deploymentProfileCodes;
+            return this;
+        }
+
+        /**
+         * <p>The expiration time for container access. The value is a UNIX timestamp in milliseconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -313,8 +372,7 @@ public class GenerateK8sAccessInfoRequest extends Request {
         }
 
         /**
-         * <p>The ID of the server group.</p>
-         * <p>This parameter is required.</p>
+         * <p>The ID of the host group.</p>
          * 
          * <strong>example:</strong>
          * <p>11341690</p>
@@ -326,7 +384,19 @@ public class GenerateK8sAccessInfoRequest extends Request {
         }
 
         /**
-         * <p>The cloud asset vendor. Valid values:</p>
+         * <p>The new multi-cloud policy cloud-k8s-install-v2. If omitted, the historical behavior is retained.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cloud-k8s-install-v2</p>
+         */
+        public Builder installPolicyVersion(String installPolicyVersion) {
+            this.putQueryParameter("InstallPolicyVersion", installPolicyVersion);
+            this.installPolicyVersion = installPolicyVersion;
+            return this;
+        }
+
+        /**
+         * <p>The cloud asset provider. Valid values:</p>
          * <ul>
          * <li><strong>Tencent</strong></li>
          * <li><strong>HUAWEICLOUD</strong></li>
@@ -334,7 +404,6 @@ public class GenerateK8sAccessInfoRequest extends Request {
          * <li><strong>AWS</strong> </li>
          * <li><strong>Other cloud assets</strong></li>
          * </ul>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>Tencent</p>

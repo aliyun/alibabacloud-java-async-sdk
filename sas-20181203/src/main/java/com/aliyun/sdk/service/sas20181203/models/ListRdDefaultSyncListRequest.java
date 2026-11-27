@@ -17,8 +17,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListRdDefaultSyncListRequest</p>
  */
 public class ListRdDefaultSyncListRequest extends Request {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceDirectoryAccountId")
+    private Long resourceDirectoryAccountId;
+
     private ListRdDefaultSyncListRequest(Builder builder) {
         super(builder);
+        this.resourceDirectoryAccountId = builder.resourceDirectoryAccountId;
     }
 
     public static Builder builder() {
@@ -34,7 +39,15 @@ public class ListRdDefaultSyncListRequest extends Request {
         return new Builder(this);
     }
 
+    /**
+     * @return resourceDirectoryAccountId
+     */
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
+    }
+
     public static final class Builder extends Request.Builder<ListRdDefaultSyncListRequest, Builder> {
+        private Long resourceDirectoryAccountId; 
 
         private Builder() {
             super();
@@ -42,7 +55,23 @@ public class ListRdDefaultSyncListRequest extends Request {
 
         private Builder(ListRdDefaultSyncListRequest request) {
             super(request);
+            this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
         } 
+
+        /**
+         * <p>The ID of the member account in the resource directory (Alibaba Cloud account).</p>
+         * <blockquote>
+         * <p>To obtain this parameter, call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>127608589417****</p>
+         */
+        public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+            this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
+            this.resourceDirectoryAccountId = resourceDirectoryAccountId;
+            return this;
+        }
 
         @Override
         public ListRdDefaultSyncListRequest build() {

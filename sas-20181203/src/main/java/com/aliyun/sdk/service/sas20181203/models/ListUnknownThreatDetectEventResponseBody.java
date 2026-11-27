@@ -80,7 +80,7 @@ public class ListUnknownThreatDetectEventResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The returned data details.</p>
+         * <p>The details of the returned data.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -438,7 +438,10 @@ public class ListUnknownThreatDetectEventResponseBody extends TeaModel {
             } 
 
             /**
-             * AnalyzeDesc.
+             * <p>The description of the analysis result.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The detection result is a normal process</p>
              */
             public Builder analyzeDesc(String analyzeDesc) {
                 this.analyzeDesc = analyzeDesc;
@@ -446,7 +449,15 @@ public class ListUnknownThreatDetectEventResponseBody extends TeaModel {
             }
 
             /**
-             * AnalyzeResult.
+             * <p>The analysis result. Valid values:</p>
+             * <ul>
+             * <li><strong>black</strong>: Malicious process</li>
+             * <li><strong>white</strong>: Normal process</li>
+             * <li><strong>abnormal</strong>: Abnormal process</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>white</p>
              */
             public Builder analyzeResult(String analyzeResult) {
                 this.analyzeResult = analyzeResult;
@@ -465,7 +476,7 @@ public class ListUnknownThreatDetectEventResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The process command line.</p>
+             * <p>The command line of the process.</p>
              * 
              * <strong>example:</strong>
              * <p>/usr/sbin/sshd -D</p>
@@ -487,7 +498,7 @@ public class ListUnknownThreatDetectEventResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp of the first occurrence.</p>
+             * <p>The timestamp when the event first occurred.</p>
              * 
              * <strong>example:</strong>
              * <p>1694576692000</p>
@@ -498,7 +509,10 @@ public class ListUnknownThreatDetectEventResponseBody extends TeaModel {
             }
 
             /**
-             * HandleRemark.
+             * <p>The remarks on the handling.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Confirmed and handled</p>
              */
             public Builder handleRemark(String handleRemark) {
                 this.handleRemark = handleRemark;
@@ -506,7 +520,10 @@ public class ListUnknownThreatDetectEventResponseBody extends TeaModel {
             }
 
             /**
-             * HandleType.
+             * <p>The type of action taken to handle the alert event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AI</p>
              */
             public Builder handleType(String handleType) {
                 this.handleType = handleType;
@@ -525,7 +542,7 @@ public class ListUnknownThreatDetectEventResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The event ID.</p>
+             * <p>The ID of the event.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -536,7 +553,7 @@ public class ListUnknownThreatDetectEventResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance name.</p>
+             * <p>The name of the instance.</p>
              * 
              * <strong>example:</strong>
              * <p>centos****</p>
@@ -569,7 +586,7 @@ public class ListUnknownThreatDetectEventResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp of the most recent occurrence.</p>
+             * <p>The timestamp when the event was last detected.</p>
              * 
              * <strong>example:</strong>
              * <p>1694576692000</p>
@@ -580,7 +597,7 @@ public class ListUnknownThreatDetectEventResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The MD5 hash of the file.</p>
+             * <p>The MD5 hash value of the file.</p>
              * 
              * <strong>example:</strong>
              * <p>5b394b54ca632fe51c4ab4a6dbaf****</p>
@@ -591,7 +608,7 @@ public class ListUnknownThreatDetectEventResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The parent command line.</p>
+             * <p>The command line of the parent process.</p>
              * 
              * <strong>example:</strong>
              * <p>/usr/sbin/sshd -D</p>
@@ -602,7 +619,7 @@ public class ListUnknownThreatDetectEventResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The parent process ID.</p>
+             * <p>The ID of the parent process.</p>
              * 
              * <strong>example:</strong>
              * <p>12</p>
@@ -613,7 +630,7 @@ public class ListUnknownThreatDetectEventResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The parent process path.</p>
+             * <p>The path of the parent process.</p>
              * 
              * <strong>example:</strong>
              * <p>/usr/bin/tar</p>
@@ -624,7 +641,7 @@ public class ListUnknownThreatDetectEventResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The process ID.</p>
+             * <p>The ID of the process.</p>
              * 
              * <strong>example:</strong>
              * <p>11</p>
@@ -635,7 +652,7 @@ public class ListUnknownThreatDetectEventResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The process path.</p>
+             * <p>The path of the process.</p>
              * 
              * <strong>example:</strong>
              * <p>/usr/bin/tar</p>
@@ -646,7 +663,7 @@ public class ListUnknownThreatDetectEventResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The SHA-256 hash of the file.</p>
+             * <p>The SHA-256 hash value of the file.</p>
              * 
              * <strong>example:</strong>
              * <p>3a6fed5fc11392b3ee9f81caf017b48640d7458766a8eb0382899a605b41****</p>
@@ -657,7 +674,7 @@ public class ListUnknownThreatDetectEventResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The event status. Valid values:</p>
+             * <p>The status of the event. Valid values:</p>
              * <ul>
              * <li><strong>1</strong>: Unhandled.</li>
              * <li><strong>2</strong>: Blocked.</li>
@@ -769,7 +786,7 @@ public class ListUnknownThreatDetectEventResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of alerting events displayed on the current page in a paging query.</p>
+             * <p>The number of alerting events returned on the current page for paging in a paged query.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -780,7 +797,7 @@ public class ListUnknownThreatDetectEventResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The page number of the current page in a paging query.</p>
+             * <p>The page number of the current page for paging in a paged query.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -791,7 +808,7 @@ public class ListUnknownThreatDetectEventResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum number of entries displayed on each page in a paging query.</p>
+             * <p>The maximum number of entries returned on each page for paging in a paged query.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>

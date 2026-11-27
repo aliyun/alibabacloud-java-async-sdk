@@ -90,7 +90,7 @@ public class ModifyContainerScanConfigRequest extends Request {
          * <p>The name of the container application.</p>
          * 
          * <strong>example:</strong>
-         * <p>[\&quot;logtail-ds\&quot;,\&quot;alicloud-monitor-controller\&quot;,\&quot;storage-snapshot-manager\&quot;]</p>
+         * <p>[&quot;logtail-ds&quot;,&quot;alicloud-monitor-controller&quot;,&quot;storage-snapshot-manager&quot;]</p>
          */
         public Builder appNames(String appNames) {
             this.putQueryParameter("AppNames", appNames);

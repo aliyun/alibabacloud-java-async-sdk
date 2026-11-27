@@ -101,7 +101,7 @@ public class ListOssScanConfigRequest extends Request {
         } 
 
         /**
-         * <p>The current page number for paged queries.</p>
+         * <p>The current page number for the paging query.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -125,7 +125,7 @@ public class ListOssScanConfigRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries to display on each page for paged queries.</p>
+         * <p>The number of entries per page for the paging query.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -139,8 +139,8 @@ public class ListOssScanConfigRequest extends Request {
         /**
          * <p>The business source. Valid values:</p>
          * <ul>
-         * <li><strong>OSS</strong>: OSS</li>
-         * <li><strong>NAS</strong>: NAS</li>
+         * <li><strong>OSS</strong>: OSS.</li>
+         * <li><strong>NAS</strong>: NAS.</li>
          * </ul>
          * 
          * <strong>example:</strong>

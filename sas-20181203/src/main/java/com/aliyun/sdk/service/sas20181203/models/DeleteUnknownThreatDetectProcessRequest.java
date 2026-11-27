@@ -59,7 +59,7 @@ public class DeleteUnknownThreatDetectProcessRequest extends Request {
         } 
 
         /**
-         * <p>The IDs of the processes to delete.</p>
+         * <p>The list of process IDs.</p>
          */
         public Builder processIdList(java.util.List<String> processIdList) {
             this.putQueryParameter("ProcessIdList", processIdList);

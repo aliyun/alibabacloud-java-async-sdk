@@ -59,7 +59,7 @@ public class ListAvailableAttackPathRequest extends Request {
         } 
 
         /**
-         * <p>The language type for requests and responses. Values:</p>
+         * <p>The language of the request and response messages. Valid values:</p>
          * <ul>
          * <li><strong>zh</strong>: Chinese</li>
          * <li><strong>en</strong>: English</li>

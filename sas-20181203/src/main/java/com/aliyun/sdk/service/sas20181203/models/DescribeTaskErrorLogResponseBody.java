@@ -134,7 +134,7 @@ public class DescribeTaskErrorLogResponseBody extends TeaModel {
              * <p>The text content of the log.</p>
              * 
              * <strong>example:</strong>
-             * <p>mv: cannot move \&quot;CentOS-Base.repo\&quot; to \&quot;CentOS-Base.repo.backup\&quot;: Permission denied</p>
+             * <p>mv: cannot move &quot;CentOS-Base.repo&quot; to &quot;CentOS-Base.repo.backup&quot;: Permission denied</p>
              */
             public Builder text(String text) {
                 this.text = text;

@@ -17,8 +17,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeModuleConfigRequest</p>
  */
 public class DescribeModuleConfigRequest extends Request {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceDirectoryAccountId")
+    private String resourceDirectoryAccountId;
+
     private DescribeModuleConfigRequest(Builder builder) {
         super(builder);
+        this.resourceDirectoryAccountId = builder.resourceDirectoryAccountId;
     }
 
     public static Builder builder() {
@@ -34,7 +39,15 @@ public class DescribeModuleConfigRequest extends Request {
         return new Builder(this);
     }
 
+    /**
+     * @return resourceDirectoryAccountId
+     */
+    public String getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
+    }
+
     public static final class Builder extends Request.Builder<DescribeModuleConfigRequest, Builder> {
+        private String resourceDirectoryAccountId; 
 
         private Builder() {
             super();
@@ -42,7 +55,17 @@ public class DescribeModuleConfigRequest extends Request {
 
         private Builder(DescribeModuleConfigRequest request) {
             super(request);
+            this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
         } 
+
+        /**
+         * ResourceDirectoryAccountId.
+         */
+        public Builder resourceDirectoryAccountId(String resourceDirectoryAccountId) {
+            this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
+            this.resourceDirectoryAccountId = resourceDirectoryAccountId;
+            return this;
+        }
 
         @Override
         public DescribeModuleConfigRequest build() {

@@ -85,7 +85,7 @@ public class UpdateUnknownThreatDetectProcessRequest extends Request {
         }
 
         /**
-         * <p>The remark for the process.</p>
+         * <p>The remarks.</p>
          * 
          * <strong>example:</strong>
          * <p>remark</p>

@@ -185,7 +185,14 @@ public class ListUnknownThreatDetectEventRequest extends Request {
         } 
 
         /**
-         * AnalyzeResult.
+         * <p>The analysis result. Valid values:</p>
+         * <ul>
+         * <li><strong>black</strong>: Abnormal process</li>
+         * <li><strong>white</strong>: Normal process</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>white</p>
          */
         public Builder analyzeResult(String analyzeResult) {
             this.putQueryParameter("AnalyzeResult", analyzeResult);
@@ -194,7 +201,7 @@ public class ListUnknownThreatDetectEventRequest extends Request {
         }
 
         /**
-         * <p>The page number of the current page in a paging query.</p>
+         * <p>The page number of the current page for paging in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -218,7 +225,14 @@ public class ListUnknownThreatDetectEventRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -227,7 +241,7 @@ public class ListUnknownThreatDetectEventRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries to return on each page in a paging query.</p>
+         * <p>The maximum number of entries to return on each page for paging in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -239,7 +253,7 @@ public class ListUnknownThreatDetectEventRequest extends Request {
         }
 
         /**
-         * <p>The parent process path.</p>
+         * <p>The path of the parent process.</p>
          * 
          * <strong>example:</strong>
          * <p>/bin/bash</p>
@@ -251,7 +265,7 @@ public class ListUnknownThreatDetectEventRequest extends Request {
         }
 
         /**
-         * <p>The process path.</p>
+         * <p>The path of the process.</p>
          * 
          * <strong>example:</strong>
          * <p>/test</p>
@@ -263,7 +277,7 @@ public class ListUnknownThreatDetectEventRequest extends Request {
         }
 
         /**
-         * <p>The filter condition based on instance name or IP address.</p>
+         * <p>The keyword used to filter results by instance name or IP address.</p>
          * 
          * <strong>example:</strong>
          * <p>10.167.XX.XX</p>
@@ -275,7 +289,7 @@ public class ListUnknownThreatDetectEventRequest extends Request {
         }
 
         /**
-         * <p>The event status. Valid values:</p>
+         * <p>The status of the event. Valid values:</p>
          * <ul>
          * <li><strong>1</strong>: Unhandled.</li>
          * <li><strong>2</strong>: Blocked.</li>

@@ -241,7 +241,7 @@ public class CreateOpaStrategyNewRequest extends Request {
         } 
 
         /**
-         * <p>The risks that you want to detect by using the rule.</p>
+         * <p>The details of the alert content included in the policy.</p>
          */
         public Builder alarmDetail(AlarmDetail alarmDetail) {
             String alarmDetailShrink = shrink(alarmDetail, "AlarmDetail", "json");
@@ -253,7 +253,7 @@ public class CreateOpaStrategyNewRequest extends Request {
         /**
          * <p>The cluster ID.</p>
          * <blockquote>
-         * <p>This parameter is deprecated.</p>
+         * <p>Notice: <strong>[Deprecated]</strong></notice></p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -268,13 +268,11 @@ public class CreateOpaStrategyNewRequest extends Request {
         /**
          * <p>The cluster name.</p>
          * <blockquote>
-         * <p>This parameter is deprecated.</p>
+         * <p>Notice: <strong>[Deprecated]</strong></notice></p>
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <ul>
-         * <li></li>
-         * </ul>
+         * <p>sas-test-cnnf</p>
          */
         public Builder clusterName(String clusterName) {
             this.putQueryParameter("ClusterName", clusterName);
@@ -283,7 +281,7 @@ public class CreateOpaStrategyNewRequest extends Request {
         }
 
         /**
-         * <p>The rule description.</p>
+         * <p>The policy description.</p>
          * 
          * <strong>example:</strong>
          * <p>default policy</p>
@@ -295,7 +293,7 @@ public class CreateOpaStrategyNewRequest extends Request {
         }
 
         /**
-         * <p>The image names.</p>
+         * <p>The list of image names.</p>
          */
         public Builder imageName(java.util.List<String> imageName) {
             this.putQueryParameter("ImageName", imageName);
@@ -304,7 +302,7 @@ public class CreateOpaStrategyNewRequest extends Request {
         }
 
         /**
-         * <p>The container tags.</p>
+         * <p>The list of container labels.</p>
          */
         public Builder label(java.util.List<String> label) {
             this.putQueryParameter("Label", label);
@@ -313,12 +311,10 @@ public class CreateOpaStrategyNewRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether the rule supports malicious Internet images. Valid values:</p>
+         * <p>Specifies whether the policy supports malicious images from the Internet. Valid values:</p>
          * <ul>
-         * <li><p><strong>true</strong></p>
-         * </li>
-         * <li><p><strong>false</strong></p>
-         * </li>
+         * <li><strong>true</strong>: Supported.</li>
+         * <li><strong>false</strong>: Not supported.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -331,14 +327,11 @@ public class CreateOpaStrategyNewRequest extends Request {
         }
 
         /**
-         * <p>The action that is performed when the rule is hit. Valid values:</p>
+         * <p>The action to perform when the policy is matched. Valid values:</p>
          * <ul>
-         * <li><p><strong>1</strong>: trigger alerts</p>
-         * </li>
-         * <li><p><strong>2</strong>: block</p>
-         * </li>
-         * <li><p><strong>3</strong>: allow</p>
-         * </li>
+         * <li><strong>1</strong>: Alert.</li>
+         * <li><strong>2</strong>: Block.</li>
+         * <li><strong>3</strong>: Allow.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -351,7 +344,7 @@ public class CreateOpaStrategyNewRequest extends Request {
         }
 
         /**
-         * <p>The application scope of the rule.</p>
+         * <p>The list of policy scopes.</p>
          */
         public Builder scopes(java.util.List<Scopes> scopes) {
             this.putQueryParameter("Scopes", scopes);
@@ -360,13 +353,11 @@ public class CreateOpaStrategyNewRequest extends Request {
         }
 
         /**
-         * <p>The rule ID.</p>
+         * <p>The policy ID.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/2623574.html">ListOpaClusterStrategyNew</a> operation to query the rule ID.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/2623574.html">ListOpaClusterStrategyNew</a> operation to obtain this parameter.</p>
          * </blockquote>
-         * <blockquote>
-         * <p>This parameter is invalid when you create a rule.</p>
-         * </blockquote>
+         * <p><notice>This parameter does not take effect when you create a policy.</p>
          * 
          * <strong>example:</strong>
          * <p>16</p>
@@ -378,7 +369,7 @@ public class CreateOpaStrategyNewRequest extends Request {
         }
 
         /**
-         * <p>The rule name.</p>
+         * <p>The policy name.</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>
@@ -390,9 +381,9 @@ public class CreateOpaStrategyNewRequest extends Request {
         }
 
         /**
-         * <p>The ID of the rule template.</p>
+         * <p>The policy template ID.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/2539952.html">GetOpaStrategyTemplateSummary</a> operation to query the ID of the rule template.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/2539952.html">GetOpaStrategyTemplateSummary</a> operation to obtain this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -405,12 +396,10 @@ public class CreateOpaStrategyNewRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether the rule supports unscanned images. Valid values:</p>
+         * <p>Specifies whether the policy supports unscanned images. Valid values:</p>
          * <ul>
-         * <li><p><strong>true</strong></p>
-         * </li>
-         * <li><p><strong>false</strong></p>
-         * </li>
+         * <li><strong>true</strong>: Supported.</li>
+         * <li><strong>false</strong>: Not supported.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -493,7 +482,7 @@ public class CreateOpaStrategyNewRequest extends Request {
             /**
              * <p>The ID of the baseline check item.</p>
              * <blockquote>
-             * <p>You can call the <a href="https://help.aliyun.com/document_detail/2539883.html">GetOpaClusterBaseLineList</a> operation to query the ID.</p>
+             * <p>You can call the <a href="https://help.aliyun.com/document_detail/2539883.html">GetOpaClusterBaseLineList</a> operation to query this value (ItemKey).</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -507,7 +496,7 @@ public class CreateOpaStrategyNewRequest extends Request {
             /**
              * <p>The name of the baseline check item.</p>
              * <blockquote>
-             * <p>You can call the <a href="https://help.aliyun.com/document_detail/2539883.html">GetOpaClusterBaseLineList</a> operation to query the name.</p>
+             * <p>You can call the <a href="https://help.aliyun.com/document_detail/2539883.html">GetOpaClusterBaseLineList</a> operation to query this value (Alias).</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -578,7 +567,7 @@ public class CreateOpaStrategyNewRequest extends Request {
             } 
 
             /**
-             * <p>The baseline check items.</p>
+             * <p>The list of baseline check items.</p>
              */
             public Builder item(java.util.List<Item> item) {
                 this.item = item;
@@ -586,7 +575,7 @@ public class CreateOpaStrategyNewRequest extends Request {
             }
 
             /**
-             * <p>The risk levels.</p>
+             * <p>The risk level.</p>
              */
             public Builder riskLevel(java.util.List<String> riskLevel) {
                 this.riskLevel = riskLevel;
@@ -653,9 +642,9 @@ public class CreateOpaStrategyNewRequest extends Request {
             } 
 
             /**
-             * <p>The ID of the image build risk.</p>
+             * <p>The ID of the risky image build command type.</p>
              * <blockquote>
-             * <p>You can call the <a href="~~ListImageBuildRiskItem~~">ListImageBuildRiskItem</a> operation to query the ID of the malicious sample.</p>
+             * <p>You can call the <a href="~~ListImageBuildRiskItem~~">ListImageBuildRiskItem</a> operation to query this value.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -667,9 +656,9 @@ public class CreateOpaStrategyNewRequest extends Request {
             }
 
             /**
-             * <p>The name of the image build risk.</p>
+             * <p>The name of the risky image build command type.</p>
              * <blockquote>
-             * <p>You can call the <a href="~~ListImageBuildRiskItem~~">ListImageBuildRiskItem</a> operation to query the ID of the malicious sample.</p>
+             * <p>You can call the <a href="~~ListImageBuildRiskItem~~">ListImageBuildRiskItem</a> operation to query this value.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -740,7 +729,7 @@ public class CreateOpaStrategyNewRequest extends Request {
             } 
 
             /**
-             * <p>The configuration of image build risk.</p>
+             * <p>The list of risk items.</p>
              */
             public Builder item(java.util.List<BuildRiskItem> item) {
                 this.item = item;
@@ -748,7 +737,7 @@ public class CreateOpaStrategyNewRequest extends Request {
             }
 
             /**
-             * <p>The risk levels.</p>
+             * <p>The list of risk levels.</p>
              */
             public Builder riskLevel(java.util.List<String> riskLevel) {
                 this.riskLevel = riskLevel;
@@ -817,7 +806,7 @@ public class CreateOpaStrategyNewRequest extends Request {
             /**
              * <p>The ID of the malicious sample.</p>
              * <blockquote>
-             * <p>You can call the <a href="~~DescribeMatchedMaliciousNames~~">DescribeMatchedMaliciousNames</a> operation to query the ID.</p>
+             * <p>You can call the <a href="~~DescribeMatchedMaliciousNames~~">DescribeMatchedMaliciousNames</a> operation to query this value.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -831,7 +820,7 @@ public class CreateOpaStrategyNewRequest extends Request {
             /**
              * <p>The name of the malicious sample.</p>
              * <blockquote>
-             * <p>You can call the <a href="~~DescribeMatchedMaliciousNames~~">DescribeMatchedMaliciousNames</a> operation to query the name.</p>
+             * <p>You can call the <a href="~~DescribeMatchedMaliciousNames~~">DescribeMatchedMaliciousNames</a> operation to query this value.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -902,7 +891,7 @@ public class CreateOpaStrategyNewRequest extends Request {
             } 
 
             /**
-             * <p>The malicious samples.</p>
+             * <p>The list of malicious samples.</p>
              */
             public Builder item(java.util.List<MaliciousFileItem> item) {
                 this.item = item;
@@ -910,7 +899,7 @@ public class CreateOpaStrategyNewRequest extends Request {
             }
 
             /**
-             * <p>The risk levels.</p>
+             * <p>The list of risk levels.</p>
              */
             public Builder riskLevel(java.util.List<String> riskLevel) {
                 this.riskLevel = riskLevel;
@@ -977,9 +966,9 @@ public class CreateOpaStrategyNewRequest extends Request {
             } 
 
             /**
-             * <p>The ID of the sensitive files.</p>
+             * <p>The ID of the sensitive file type.</p>
              * <blockquote>
-             * <p>You can call the <a href="~~GetSensitiveDefineRuleConfig~~">GetSensitiveDefineRuleConfig</a> operation to query the ID of the malicious sample.</p>
+             * <p>You can call the <a href="~~GetSensitiveDefineRuleConfig~~">GetSensitiveDefineRuleConfig</a> operation to query this value.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -991,9 +980,9 @@ public class CreateOpaStrategyNewRequest extends Request {
             }
 
             /**
-             * <p>The name of the sensitive files.</p>
+             * <p>The name of the sensitive file type.</p>
              * <blockquote>
-             * <p>You can call the <a href="~~GetSensitiveDefineRuleConfig~~">GetSensitiveDefineRuleConfig</a> operation to query the ID of the malicious sample.</p>
+             * <p>You can call the <a href="~~GetSensitiveDefineRuleConfig~~">GetSensitiveDefineRuleConfig</a> operation to query this value.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1064,7 +1053,7 @@ public class CreateOpaStrategyNewRequest extends Request {
             } 
 
             /**
-             * <p>The configuration of sensitive file.</p>
+             * <p>The list of sensitive file check items.</p>
              */
             public Builder item(java.util.List<SensitiveFileItem> item) {
                 this.item = item;
@@ -1072,7 +1061,7 @@ public class CreateOpaStrategyNewRequest extends Request {
             }
 
             /**
-             * <p>The risk levels.</p>
+             * <p>The list of risk levels.</p>
              */
             public Builder riskLevel(java.util.List<String> riskLevel) {
                 this.riskLevel = riskLevel;
@@ -1139,9 +1128,9 @@ public class CreateOpaStrategyNewRequest extends Request {
             } 
 
             /**
-             * <p>The ID of the vulnerability.</p>
+             * <p>The vulnerability ID.</p>
              * <blockquote>
-             * <p>You can call the <a href="https://help.aliyun.com/document_detail/471928.html">DescribeVulListPage</a> operation to query the ID.</p>
+             * <p>You can call the <a href="https://help.aliyun.com/document_detail/471928.html">DescribeVulListPage</a> operation to query this value.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1153,9 +1142,9 @@ public class CreateOpaStrategyNewRequest extends Request {
             }
 
             /**
-             * <p>The name of the vulnerability.</p>
+             * <p>The vulnerability name.</p>
              * <blockquote>
-             * <p>You can call the <a href="https://help.aliyun.com/document_detail/471928.html">DescribeVulListPage</a> operation to query the name.</p>
+             * <p>You can call the <a href="https://help.aliyun.com/document_detail/471928.html">DescribeVulListPage</a> operation to query this value.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1226,12 +1215,10 @@ public class CreateOpaStrategyNewRequest extends Request {
             } 
 
             /**
-             * <p>The ID of the vulnerability types. Valid values:</p>
+             * <p>The ID of the vulnerability type. Valid values:</p>
              * <ul>
-             * <li><p><strong>cve</strong>: system vulnerability</p>
-             * </li>
-             * <li><p><strong>app</strong>: application vulnerability</p>
-             * </li>
+             * <li><strong>cve</strong>: System vulnerability.</li>
+             * <li><strong>app</strong>: Application vulnerability.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1243,16 +1230,14 @@ public class CreateOpaStrategyNewRequest extends Request {
             }
 
             /**
-             * <p>The name of the vulnerability. Valid values:</p>
+             * <p>The name of the vulnerability type. Valid values:</p>
              * <ul>
-             * <li><p><strong>system vulnerability</strong></p>
-             * </li>
-             * <li><p><strong>application vulnerability</strong></p>
-             * </li>
+             * <li><strong>System vulnerability</strong></li>
+             * <li><strong>Application vulnerability</strong></li>
              * </ul>
              * 
              * <strong>example:</strong>
-             * <p>系统漏洞</p>
+             * <p>System vulnerability</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1332,7 +1317,7 @@ public class CreateOpaStrategyNewRequest extends Request {
             } 
 
             /**
-             * <p>The vulnerabilities.</p>
+             * <p>The list of vulnerabilities.</p>
              */
             public Builder item(java.util.List<VulItem> item) {
                 this.item = item;
@@ -1340,7 +1325,7 @@ public class CreateOpaStrategyNewRequest extends Request {
             }
 
             /**
-             * <p>Risk type of vulnerability.</p>
+             * <p>The list of vulnerability types.</p>
              */
             public Builder riskClass(java.util.List<RiskClass> riskClass) {
                 this.riskClass = riskClass;
@@ -1348,7 +1333,7 @@ public class CreateOpaStrategyNewRequest extends Request {
             }
 
             /**
-             * <p>The risk levels.</p>
+             * <p>The list of risk levels.</p>
              */
             public Builder riskLevel(java.util.List<String> riskLevel) {
                 this.riskLevel = riskLevel;
@@ -1454,7 +1439,7 @@ public class CreateOpaStrategyNewRequest extends Request {
             } 
 
             /**
-             * <p>The baseline risks.</p>
+             * <p>The baseline.</p>
              */
             public Builder baseline(Baseline baseline) {
                 this.baseline = baseline;
@@ -1462,7 +1447,7 @@ public class CreateOpaStrategyNewRequest extends Request {
             }
 
             /**
-             * <p>The configuration of image build risk.</p>
+             * <p>The information about risky image build commands.</p>
              */
             public Builder buildRisk(BuildRisk buildRisk) {
                 this.buildRisk = buildRisk;
@@ -1470,7 +1455,7 @@ public class CreateOpaStrategyNewRequest extends Request {
             }
 
             /**
-             * <p>The malicious sample risks.</p>
+             * <p>The malicious sample information.</p>
              */
             public Builder maliciousFile(MaliciousFile maliciousFile) {
                 this.maliciousFile = maliciousFile;
@@ -1478,7 +1463,7 @@ public class CreateOpaStrategyNewRequest extends Request {
             }
 
             /**
-             * <p>The configuration of sensitive file.</p>
+             * <p>The sensitive file information.</p>
              */
             public Builder sensitiveFile(SensitiveFile sensitiveFile) {
                 this.sensitiveFile = sensitiveFile;
@@ -1486,7 +1471,7 @@ public class CreateOpaStrategyNewRequest extends Request {
             }
 
             /**
-             * <p>The vulnerability risks.</p>
+             * <p>The vulnerability information.</p>
              */
             public Builder vul(Vul vul) {
                 this.vul = vul;
@@ -1579,9 +1564,9 @@ public class CreateOpaStrategyNewRequest extends Request {
             } 
 
             /**
-             * <p>The ID of the cluster node to which the rule is applied.</p>
+             * <p>The instance ID of the policy in the cluster.</p>
              * <blockquote>
-             * <p>This parameter is not required when you create the instance.</p>
+             * <p>Notice: This parameter is not required when you create a policy.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1593,12 +1578,10 @@ public class CreateOpaStrategyNewRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to include all namespaces. Valid values:</p>
+             * <p>Specifies whether all namespaces are included. Valid values:</p>
              * <ul>
-             * <li><p><strong>1</strong>: includes all namespaces.</p>
-             * </li>
-             * <li><p><strong>0</strong>: does not include all namespaces.</p>
-             * </li>
+             * <li><strong>1</strong>: Yes.</li>
+             * <li><strong>0</strong>: No.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1610,9 +1593,9 @@ public class CreateOpaStrategyNewRequest extends Request {
             }
 
             /**
-             * <p>The ID of the cluster that is specified in the rule.</p>
+             * <p>The ID of the cluster included in the policy.</p>
              * <blockquote>
-             * <p>You can call the <a href="https://help.aliyun.com/document_detail/421736.html">DescribeGroupedContainerInstances</a> operation to query the cluster ID.</p>
+             * <p>You can call the <a href="https://help.aliyun.com/document_detail/421736.html">DescribeGroupedContainerInstances</a> operation to obtain this parameter.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1624,9 +1607,9 @@ public class CreateOpaStrategyNewRequest extends Request {
             }
 
             /**
-             * <p>The namespaces.</p>
+             * <p>The list of namespaces.</p>
              * <blockquote>
-             * <p>This parameter is valid only when the AllNamespace parameter is set to 0.</p>
+             * <p>Notice: This parameter takes effect only when AllNamespace is set to 0.</p>
              * </blockquote>
              */
             public Builder namespaceList(java.util.List<String> namespaceList) {

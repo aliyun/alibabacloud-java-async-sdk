@@ -26,6 +26,18 @@ public class ModifyCheckRuleRequest extends Request {
     private java.util.List<DeleteInstanceList> deleteInstanceList;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EffectEndTime")
+    private Long effectEndTime;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EffectStartTime")
+    private Long effectStartTime;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EffectType")
+    private String effectType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Remark")
     private String remark;
 
@@ -46,6 +58,9 @@ public class ModifyCheckRuleRequest extends Request {
         super(builder);
         this.addInstanceList = builder.addInstanceList;
         this.deleteInstanceList = builder.deleteInstanceList;
+        this.effectEndTime = builder.effectEndTime;
+        this.effectStartTime = builder.effectStartTime;
+        this.effectType = builder.effectType;
         this.remark = builder.remark;
         this.ruleId = builder.ruleId;
         this.ruleType = builder.ruleType;
@@ -80,6 +95,27 @@ public class ModifyCheckRuleRequest extends Request {
     }
 
     /**
+     * @return effectEndTime
+     */
+    public Long getEffectEndTime() {
+        return this.effectEndTime;
+    }
+
+    /**
+     * @return effectStartTime
+     */
+    public Long getEffectStartTime() {
+        return this.effectStartTime;
+    }
+
+    /**
+     * @return effectType
+     */
+    public String getEffectType() {
+        return this.effectType;
+    }
+
+    /**
      * @return remark
      */
     public String getRemark() {
@@ -110,6 +146,9 @@ public class ModifyCheckRuleRequest extends Request {
     public static final class Builder extends Request.Builder<ModifyCheckRuleRequest, Builder> {
         private java.util.List<AddInstanceList> addInstanceList; 
         private java.util.List<DeleteInstanceList> deleteInstanceList; 
+        private Long effectEndTime; 
+        private Long effectStartTime; 
+        private String effectType; 
         private String remark; 
         private Long ruleId; 
         private String ruleType; 
@@ -123,6 +162,9 @@ public class ModifyCheckRuleRequest extends Request {
             super(request);
             this.addInstanceList = request.addInstanceList;
             this.deleteInstanceList = request.deleteInstanceList;
+            this.effectEndTime = request.effectEndTime;
+            this.effectStartTime = request.effectStartTime;
+            this.effectType = request.effectType;
             this.remark = request.remark;
             this.ruleId = request.ruleId;
             this.ruleType = request.ruleType;
@@ -130,7 +172,7 @@ public class ModifyCheckRuleRequest extends Request {
         } 
 
         /**
-         * <p>The list of instances to add in this rule update. If no instances need to be added, you do not need to specify this parameter.</p>
+         * <p>The list of instances to be added in this rule update. If no instances need to be added, you do not need to specify this parameter.</p>
          */
         public Builder addInstanceList(java.util.List<AddInstanceList> addInstanceList) {
             this.putQueryParameter("AddInstanceList", addInstanceList);
@@ -139,7 +181,7 @@ public class ModifyCheckRuleRequest extends Request {
         }
 
         /**
-         * <p>The list of instances to delete in this rule update. If no instances need to be deleted, you do not need to specify this parameter.</p>
+         * <p>The list of instances to be removed in this rule update. If no instances need to be removed, you do not need to specify this parameter.</p>
          */
         public Builder deleteInstanceList(java.util.List<DeleteInstanceList> deleteInstanceList) {
             this.putQueryParameter("DeleteInstanceList", deleteInstanceList);
@@ -148,7 +190,43 @@ public class ModifyCheckRuleRequest extends Request {
         }
 
         /**
-         * <p>The remarks.</p>
+         * <p>The effective end time of the whitelist rule. The value is a UNIX timestamp in milliseconds. This parameter is required when EffectType is set to CUSTOM. The whitelist automatically expires after this time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1774915200000</p>
+         */
+        public Builder effectEndTime(Long effectEndTime) {
+            this.putQueryParameter("EffectEndTime", effectEndTime);
+            this.effectEndTime = effectEndTime;
+            return this;
+        }
+
+        /**
+         * <p>The effective start time of the whitelist rule. The value is a UNIX timestamp in milliseconds. This parameter is required when EffectType is set to CUSTOM, and the value must be less than or equal to the value of EffectEndTime.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1767225600000</p>
+         */
+        public Builder effectStartTime(Long effectStartTime) {
+            this.putQueryParameter("EffectStartTime", effectStartTime);
+            this.effectStartTime = effectStartTime;
+            return this;
+        }
+
+        /**
+         * <p>The effective pattern of the whitelist rule. Valid values: PERMANENT (permanent, default value) and CUSTOM (custom effective period). If the value is CUSTOM, you must specify both EffectStartTime and EffectEndTime. After the modification, the server immediately recalculates the whitelist status based on the new effective period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CUSTOM</p>
+         */
+        public Builder effectType(String effectType) {
+            this.putQueryParameter("EffectType", effectType);
+            this.effectType = effectType;
+            return this;
+        }
+
+        /**
+         * <p>The remark.</p>
          * 
          * <strong>example:</strong>
          * <p>testRemark</p>
@@ -160,10 +238,7 @@ public class ModifyCheckRuleRequest extends Request {
         }
 
         /**
-         * <p>The rule ID.</p>
-         * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/2590599.html">ListCheckRule</a> operation to obtain this parameter.</p>
-         * </blockquote>
+         * <p>The rule ID. You can call the <a href="https://help.aliyun.com/document_detail/2590599.html">ListCheckRule</a> operation to obtain this parameter.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -191,9 +266,9 @@ public class ModifyCheckRuleRequest extends Request {
         }
 
         /**
-         * <p>The scope of the rule. Valid values:</p>
+         * <p>The effective scope of the modified rule. Valid values:</p>
          * <ul>
-         * <li><strong>INSTNACE</strong>: instance</li>
+         * <li><strong>INSTNACE</strong>: instance.</li>
          * <li><strong>ITEM</strong>: check item.</li>
          * </ul>
          * 

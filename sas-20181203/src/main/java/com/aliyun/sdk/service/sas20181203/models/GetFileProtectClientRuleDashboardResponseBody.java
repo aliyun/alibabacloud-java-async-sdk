@@ -170,7 +170,7 @@ public class GetFileProtectClientRuleDashboardResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The total number of web tamper-proofing licenses.</p>
+             * <p>The total number of file tamper-proofing authorizations.</p>
              * 
              * <strong>example:</strong>
              * <p>5</p>
@@ -181,7 +181,7 @@ public class GetFileProtectClientRuleDashboardResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of bound tamper-proofing licenses.</p>
+             * <p>The number of bound tamper-proofing authorizations.</p>
              * 
              * <strong>example:</strong>
              * <p>4</p>
@@ -192,7 +192,7 @@ public class GetFileProtectClientRuleDashboardResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of web tamper-proofing rules.</p>
+             * <p>The total number of file tamper-proofing rules.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -203,7 +203,7 @@ public class GetFileProtectClientRuleDashboardResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of online web tamper-proofing clients.</p>
+             * <p>The total number of online file tamper-proofing clients.</p>
              * 
              * <strong>example:</strong>
              * <p>12</p>

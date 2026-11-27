@@ -88,7 +88,7 @@ public class DescribeStrategyDetailRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the baseline check policy.</p>
+         * <p>The ID of the baseline policy.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,10 +101,10 @@ public class DescribeStrategyDetailRequest extends Request {
         }
 
         /**
-         * <p>The language type for the request and response messages. Default value: <strong>zh</strong>. Valid values:</p>
+         * <p>Specifies the language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
          * <ul>
          * <li><strong>zh</strong>: Chinese</li>
-         * <li><strong>en</strong>: English.</li>
+         * <li><strong>en</strong>: English</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -117,7 +117,7 @@ public class DescribeStrategyDetailRequest extends Request {
         }
 
         /**
-         * <p>The IP address of the access source.</p>
+         * <p>The source IP address.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.XX.XX</p>

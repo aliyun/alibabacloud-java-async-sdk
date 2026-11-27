@@ -260,7 +260,7 @@ public class DescribeVulListPageResponseBody extends TeaModel {
              * <p>The Server Guard extended field.</p>
              * 
              * <strong>example:</strong>
-             * <p>{\&quot;relatedType\&quot;:[{\&quot;type\&quot;:\&quot;sys\&quot;}]}</p>
+             * <p>{&quot;relatedType&quot;:[{&quot;type&quot;:&quot;sys&quot;}]}</p>
              */
             public Builder extAegis(String extAegis) {
                 this.extAegis = extAegis;

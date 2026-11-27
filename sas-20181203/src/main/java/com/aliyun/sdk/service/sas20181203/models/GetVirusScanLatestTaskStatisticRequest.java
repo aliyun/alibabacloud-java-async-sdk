@@ -17,8 +17,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetVirusScanLatestTaskStatisticRequest</p>
  */
 public class GetVirusScanLatestTaskStatisticRequest extends Request {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceDirectoryAccountId")
+    private Long resourceDirectoryAccountId;
+
     private GetVirusScanLatestTaskStatisticRequest(Builder builder) {
         super(builder);
+        this.resourceDirectoryAccountId = builder.resourceDirectoryAccountId;
     }
 
     public static Builder builder() {
@@ -34,7 +39,15 @@ public class GetVirusScanLatestTaskStatisticRequest extends Request {
         return new Builder(this);
     }
 
+    /**
+     * @return resourceDirectoryAccountId
+     */
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
+    }
+
     public static final class Builder extends Request.Builder<GetVirusScanLatestTaskStatisticRequest, Builder> {
+        private Long resourceDirectoryAccountId; 
 
         private Builder() {
             super();
@@ -42,7 +55,17 @@ public class GetVirusScanLatestTaskStatisticRequest extends Request {
 
         private Builder(GetVirusScanLatestTaskStatisticRequest request) {
             super(request);
+            this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
         } 
+
+        /**
+         * ResourceDirectoryAccountId.
+         */
+        public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+            this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
+            this.resourceDirectoryAccountId = resourceDirectoryAccountId;
+            return this;
+        }
 
         @Override
         public GetVirusScanLatestTaskStatisticRequest build() {

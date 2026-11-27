@@ -325,7 +325,7 @@ public class DataValue extends TeaModel {
         }
 
         /**
-         * <p>The total number of system vulnerability items.</p>
+         * <p>The total number of system vulnerability records.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -336,7 +336,7 @@ public class DataValue extends TeaModel {
         }
 
         /**
-         * <p>The estimated detection volume in GB. This field is not currently returned by the batch statistics operation.</p>
+         * <p>The estimated detection size, in GB. This field is not returned by the batch statistics operation.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -347,7 +347,7 @@ public class DataValue extends TeaModel {
         }
 
         /**
-         * <p>The timestamp of the last scan time, in milliseconds.</p>
+         * <p>The timestamp of the last scan, in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1682577532318</p>
@@ -369,7 +369,7 @@ public class DataValue extends TeaModel {
         }
 
         /**
-         * <p>The number of vulnerable servers.</p>
+         * <p>The number of at-risk servers.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -413,7 +413,7 @@ public class DataValue extends TeaModel {
         }
 
         /**
-         * <p>The total number of Windows system vulnerability items.</p>
+         * <p>The total number of Windows system vulnerability records.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -424,7 +424,7 @@ public class DataValue extends TeaModel {
         }
 
         /**
-         * <p>The number of vulnerability risks.</p>
+         * <p>The number of vulnerabilities.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -446,7 +446,7 @@ public class DataValue extends TeaModel {
         }
 
         /**
-         * <p>The number of emergency vulnerabilities. This field is 0 when ImageVul is set to true.</p>
+         * <p>The number of emergency vulnerabilities. If ImageVul is set to true, the value of this field is 0.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -457,7 +457,7 @@ public class DataValue extends TeaModel {
         }
 
         /**
-         * <p>The number of Windows system vulnerabilities. This field is 0 when ImageVul is set to true.</p>
+         * <p>The Windows system vulnerability count. If ImageVul is set to true, the value of this field is 0.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -468,7 +468,7 @@ public class DataValue extends TeaModel {
         }
 
         /**
-         * <p>The number of Web-CMS vulnerabilities. This field is 0 when ImageVul is set to true.</p>
+         * <p>The number of Web-CMS vulnerabilities. If ImageVul is set to true, the value of this field is 0.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -479,7 +479,7 @@ public class DataValue extends TeaModel {
         }
 
         /**
-         * <p>The number of application vulnerabilities. This field is 0 when ImageVul is set to true.</p>
+         * <p>The number of application vulnerabilities. If ImageVul is set to true, the value of this field is 0.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -490,7 +490,7 @@ public class DataValue extends TeaModel {
         }
 
         /**
-         * <p>The number of software composition analysis (SCA) vulnerabilities.</p>
+         * <p>The number of software constituency parsing (SCA) vulnerabilities.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -534,7 +534,7 @@ public class DataValue extends TeaModel {
         }
 
         /**
-         * <p>The number of high-priority system vulnerabilities among Linux software vulnerabilities and Windows system vulnerabilities.</p>
+         * <p>The number of high-priority system vulnerability items, including Linux software vulnerabilities and Windows system vulnerabilities.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

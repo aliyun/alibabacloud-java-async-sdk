@@ -585,7 +585,7 @@ public class ListAgentlessRelateMaliciousResponseBody extends TeaModel {
              * <p>The highlighted text, in JSON string format.</p>
              * 
              * <strong>example:</strong>
-             * <p>{\&quot;highlight\&quot;:{\&quot;ruleVersion\&quot;:\&quot;20230223\&quot;,\&quot;ruleId\&quot;:600139,\&quot;events\&quot;:[[207,284]]}}</p>
+             * <p>{&quot;highlight&quot;:{&quot;ruleVersion&quot;:&quot;20230223&quot;,&quot;ruleId&quot;:600139,&quot;events&quot;:[[207,284]]}}</p>
              */
             public Builder highLight(String highLight) {
                 this.highLight = highLight;

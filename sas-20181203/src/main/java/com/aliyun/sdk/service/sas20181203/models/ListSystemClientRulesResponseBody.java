@@ -535,7 +535,7 @@ public class ListSystemClientRulesResponseBody extends TeaModel {
              * </ul>
              * 
              * <strong>example:</strong>
-             * <p>alihips</p>
+             * <p>1</p>
              */
             public Builder ruleType(Integer ruleType) {
                 this.ruleType = ruleType;

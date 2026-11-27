@@ -131,7 +131,10 @@ public class AddAssetSelectionCriteriaRequest extends Request {
         } 
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request. You can use different tokens for different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * <p>The client token that is used to ensure the idempotence of the request. Different requests must use different tokens. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>02fb3da4-130e-11e9-8e44-0016e04115b</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -140,13 +143,10 @@ public class AddAssetSelectionCriteriaRequest extends Request {
         }
 
         /**
-         * <p>Specifies the conditions for searching for assets. The value of this parameter is in JSON format. Note that the parameter value is case-sensitive.</p>
-         * <blockquote>
-         * <p>You can search for assets by using conditions such as the instance ID, instance name, VPC ID, region, and public IP address. You can call the <a href="~~DescribeCriteria~~">DescribeCriteria</a> operation to query the supported search conditions.</p>
-         * </blockquote>
+         * <p>The conditions used to search for assets. This parameter is in JSON format. Note that the parameter is case-sensitive. You can search for assets by conditions such as instance ID, instance name, VPC ID, region, and public IP address. You can call the <a href="~~DescribeCriteria~~">DescribeCriteria</a> operation to query supported search conditions.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;LogicalExp&quot;:&quot;AND&quot;,&quot;Criteria&quot;:&quot;[{\&quot;name\&quot;:\&quot;osType\&quot;,\&quot;value\&quot;:\&quot;linux\&quot;,\&quot;logicalExp\&quot;:\&quot;AND\&quot;},{\&quot;name\&quot;:\&quot;alarmStatus\&quot;,\&quot;value\&quot;:\&quot;YES\&quot;,\&quot;logicalExp\&quot;:\&quot;AND\&quot;}]&quot;}</p>
+         * <p>{&quot;LogicalExp&quot;:&quot;AND&quot;,&quot;Criteria&quot;:&quot;[{&quot;name&quot;:&quot;osType&quot;,&quot;value&quot;:&quot;linux&quot;,&quot;logicalExp&quot;:&quot;AND&quot;},{&quot;name&quot;:&quot;alarmStatus&quot;,&quot;value&quot;:&quot;YES&quot;,&quot;logicalExp&quot;:&quot;AND&quot;}]&quot;}</p>
          */
         public Builder criteria(String criteria) {
             this.putQueryParameter("Criteria", criteria);
@@ -171,12 +171,7 @@ public class AddAssetSelectionCriteriaRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to perform a dry run. Valid values:</p>
-         * <ul>
-         * <li>true: performs a dry run. The system checks the request but does not perform the actual operation.</li>
-         * <li>false: performs the actual operation.
-         * Default value: false.</li>
-         * </ul>
+         * <p>Specifies whether to precheck only this request. A value of true indicates that only the request is checked and the actual operation is not performed. A value of false indicates that the request is normally executed. Default value: false.</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -198,7 +193,7 @@ public class AddAssetSelectionCriteriaRequest extends Request {
         }
 
         /**
-         * <p>The asset list.</p>
+         * <p>The list of assets.</p>
          */
         public Builder targetOperationList(java.util.List<TargetOperationList> targetOperationList) {
             this.putQueryParameter("TargetOperationList", targetOperationList);
@@ -268,8 +263,8 @@ public class AddAssetSelectionCriteriaRequest extends Request {
             /**
              * <p>The operation type. Valid values:</p>
              * <ul>
-             * <li><strong>add</strong>: Add.</li>
-             * <li><strong>del</strong>: Delete.</li>
+             * <li><strong>add</strong>: Adds.</li>
+             * <li><strong>del</strong>: Deletes.</li>
              * </ul>
              * 
              * <strong>example:</strong>

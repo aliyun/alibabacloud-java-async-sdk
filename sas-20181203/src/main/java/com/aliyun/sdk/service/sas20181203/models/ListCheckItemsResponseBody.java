@@ -860,7 +860,7 @@ public class ListCheckItemsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The sub-type of the cloud product\&quot;s asset.</p>
+             * <p>The sub-type of the cloud product&quot;s asset.</p>
              * 
              * <strong>example:</strong>
              * <p>DISK</p>

@@ -308,7 +308,7 @@ public class UpdateFileProtectClientEventRequest extends Request {
         }
 
         /**
-         * <p>The end time. The value is a UNIX timestamp.</p>
+         * <p>The timestamp of the end time.</p>
          * 
          * <strong>example:</strong>
          * <p>1650470399999</p>

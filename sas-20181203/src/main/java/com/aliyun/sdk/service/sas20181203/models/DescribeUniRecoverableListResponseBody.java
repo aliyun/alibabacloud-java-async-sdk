@@ -356,8 +356,8 @@ public class DescribeUniRecoverableListResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>{
              *       &quot;files&quot;: {
-             *             &quot;qtc&quot;: &quot;F:\\database\\qtc.mdf&quot;,
-             *             &quot;qtc_log&quot;: &quot;F:\\database\\qtc_0.ldf&quot;
+             *             &quot;qtc&quot;: &quot;F:\database\qtc.mdf&quot;,
+             *             &quot;qtc_log&quot;: &quot;F:\database\qtc_0.ldf&quot;
              *       },
              *       &quot;name&quot;: &quot;qtc&quot;
              * }</p>

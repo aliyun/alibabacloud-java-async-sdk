@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeCommonTargetResultListRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceDirectoryAccountId")
+    private Long resourceDirectoryAccountId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SourceIp")
     private String sourceIp;
 
@@ -28,6 +32,7 @@ public class DescribeCommonTargetResultListRequest extends Request {
 
     private DescribeCommonTargetResultListRequest(Builder builder) {
         super(builder);
+        this.resourceDirectoryAccountId = builder.resourceDirectoryAccountId;
         this.sourceIp = builder.sourceIp;
         this.type = builder.type;
     }
@@ -46,6 +51,13 @@ public class DescribeCommonTargetResultListRequest extends Request {
     }
 
     /**
+     * @return resourceDirectoryAccountId
+     */
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
+    }
+
+    /**
      * @return sourceIp
      */
     public String getSourceIp() {
@@ -60,6 +72,7 @@ public class DescribeCommonTargetResultListRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeCommonTargetResultListRequest, Builder> {
+        private Long resourceDirectoryAccountId; 
         private String sourceIp; 
         private String type; 
 
@@ -69,9 +82,25 @@ public class DescribeCommonTargetResultListRequest extends Request {
 
         private Builder(DescribeCommonTargetResultListRequest request) {
             super(request);
+            this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
             this.sourceIp = request.sourceIp;
             this.type = request.type;
         } 
+
+        /**
+         * <p>The ID of the member accounts in the resource folder. The ID is an Alibaba Cloud account ID.</p>
+         * <blockquote>
+         * <p>You can invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to query the value of this parameter.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1766185894104675</p>
+         */
+        public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+            this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
+            this.resourceDirectoryAccountId = resourceDirectoryAccountId;
+            return this;
+        }
 
         /**
          * <p>The IP address of the access source to query.</p>
@@ -86,15 +115,15 @@ public class DescribeCommonTargetResultListRequest extends Request {
         }
 
         /**
-         * <p>The configuration rule type. Valid values:</p>
+         * <p>The type of the configuration rule. Valid values:</p>
          * <ul>
-         * <li><strong>webshell_timescan</strong>: web shell scan.</li>
-         * <li><strong>aliscriptengine</strong>: deep detection engine.</li>
-         * <li><strong>alidetect</strong>: installation scope of the local file detection engine.</li>
-         * <li><strong>alidetect-scan-enable</strong>: detection scope of the local file detection engine.</li>
+         * <li><strong>webshell_timescan</strong>: Web shell scan and removal.</li>
+         * <li><strong>aliscriptengine</strong>: Deep detection engine.</li>
+         * <li><strong>alidetect</strong>: Installation scope of the local file detection engine.</li>
+         * <li><strong>alidetect-scan-enable</strong>: Detection scope of the local file detection engine.</li>
          * </ul>
          * <blockquote>
-         * <p>You can call <a href="~~ListClientUserDefineRules~~">ListClientUserDefineRules</a> and <a href="~~ListSystemClientRules~~">ListSystemClientRules</a> to obtain more custom and system-configured rule types.</p>
+         * <p>You can call the <a href="~~ListClientUserDefineRules~~">ListClientUserDefineRules</a> and <a href="~~ListSystemClientRules~~">ListSystemClientRules</a> operations to obtain more custom and system configuration rule types.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 

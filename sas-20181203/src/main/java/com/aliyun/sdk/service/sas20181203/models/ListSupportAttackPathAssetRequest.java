@@ -104,8 +104,8 @@ public class ListSupportAttackPathAssetRequest extends Request {
         /**
          * <p>The node type. Valid values:</p>
          * <ul>
-         * <li><strong>start</strong>: start node.</li>
-         * <li><strong>end</strong>: end node.</li>
+         * <li><strong>start</strong>: start node</li>
+         * <li><strong>end</strong>: end node</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -120,7 +120,7 @@ public class ListSupportAttackPathAssetRequest extends Request {
         /**
          * <p>The path name.</p>
          * <blockquote>
-         * <p>Call <a href="~~ListAvailableAttackPath~~">ListAvailableAttackPath</a> to query path names.</p>
+         * <p>You can call <a href="~~ListAvailableAttackPath~~">ListAvailableAttackPath</a> to query the path name.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -135,7 +135,7 @@ public class ListSupportAttackPathAssetRequest extends Request {
         /**
          * <p>The path type.</p>
          * <blockquote>
-         * <p>Call <a href="~~ListAvailableAttackPath~~">ListAvailableAttackPath</a> to query path types.</p>
+         * <p>You can call <a href="~~ListAvailableAttackPath~~">ListAvailableAttackPath</a> to query the path type.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -150,9 +150,9 @@ public class ListSupportAttackPathAssetRequest extends Request {
         /**
          * <p>The support type. Valid values:</p>
          * <ul>
-         * <li><strong>event</strong>: attack path alert event.</li>
-         * <li><strong>whitelist</strong>: attack path whitelist.</li>
-         * <li><strong>sensitive</strong>: attack path sensitive asset.</li>
+         * <li><strong>event</strong>: attack path alert events</li>
+         * <li><strong>whitelist</strong>: attack path whitelists</li>
+         * <li><strong>sensitive</strong>: sensitive assets in attack paths</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

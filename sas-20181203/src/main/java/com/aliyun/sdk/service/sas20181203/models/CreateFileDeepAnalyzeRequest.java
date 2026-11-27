@@ -151,7 +151,7 @@ public class CreateFileDeepAnalyzeRequest extends Request {
         }
 
         /**
-         * <p>The request source. The system verifies the purchased edition based on the request source. Valid values:</p>
+         * <p>The request source. The system verifies the purchased edition based on different request sources. Valid values:</p>
          * <ul>
          * <li><p><strong>edr</strong>: AgenticEDR</p>
          * </li>

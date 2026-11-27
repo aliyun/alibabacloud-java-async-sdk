@@ -88,10 +88,10 @@ public class DescribeAssetDetailByUuidRequest extends Request {
         } 
 
         /**
-         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
          * <ul>
          * <li><strong>zh</strong>: Chinese</li>
-         * <li><strong>en</strong>: English.</li>
+         * <li><strong>en</strong>: English</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -116,7 +116,7 @@ public class DescribeAssetDetailByUuidRequest extends Request {
         }
 
         /**
-         * <p>The UUID of the asset that you want to query.</p>
+         * <p>The UUID of the asset to query.</p>
          * <blockquote>
          * <p>Call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to obtain this parameter.</p>
          * </blockquote>

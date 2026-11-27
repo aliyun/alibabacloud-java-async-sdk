@@ -60,10 +60,10 @@ public class RefreshContainerAssetsRequest extends Request {
         } 
 
         /**
-         * <p>The Asset Type of the container asset to refresh. Valid values:</p>
+         * <p>Specifies the Asset Type of the container assets to refresh. Valid values:</p>
          * <ul>
-         * <li><strong>IMAGE</strong>: container image.</li>
-         * <li><strong>CONTAINER</strong>: container.</li>
+         * <li><strong>IMAGE</strong>: Container images.</li>
+         * <li><strong>CONTAINER</strong>: Containers.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

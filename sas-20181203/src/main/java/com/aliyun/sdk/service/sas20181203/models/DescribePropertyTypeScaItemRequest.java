@@ -99,7 +99,7 @@ public class DescribePropertyTypeScaItemRequest extends Request {
         }
 
         /**
-         * <p>The language of the content within the request and response. Valid values:</p>
+         * <p>The language of the request and response. Valid values:</p>
          * <ul>
          * <li><strong>zh</strong>: Chinese</li>
          * <li><strong>en</strong>: English</li>
@@ -115,9 +115,9 @@ public class DescribePropertyTypeScaItemRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</p>
+         * <p>The paging size, which specifies the maximum number of entries to return per page in a paged query. Default value: 20. If you leave this parameter empty, 20 entries are returned.</p>
          * <blockquote>
-         * <p> We recommend that you do not leave this parameter empty.</p>
+         * <p>Specify a value for this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

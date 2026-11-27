@@ -119,7 +119,7 @@ public class GetHoneypotAttackStatisticsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The result code. A value of <strong>200</strong> indicates success, and other values indicate failure. You can use this field to identify the cause of the failure.</p>
+         * <p>The result code. A value of <strong>200</strong> indicates success, whereas other values indicate failure. You can use this field to identify the cause of the failure.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -130,7 +130,7 @@ public class GetHoneypotAttackStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The statistics data.</p>
+         * <p>The statistics information data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -149,7 +149,7 @@ public class GetHoneypotAttackStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message returned for the request.</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>successful</p>
@@ -171,10 +171,10 @@ public class GetHoneypotAttackStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the API call is successful. Valid values:</p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: The API call is successful.</li>
-         * <li><strong>false</strong>: The API call fails.</li>
+         * <li><strong>true</strong>: The request is successful.</li>
+         * <li><strong>false</strong>: The request fails.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -244,7 +244,7 @@ public class GetHoneypotAttackStatisticsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The count of the statistical value.</p>
+             * <p>The number of occurrences of the statistical value.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -338,7 +338,7 @@ public class GetHoneypotAttackStatisticsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of entries returned on the current page in a paging query.</p>
+             * <p>The number of entries returned on the current page in a paged query.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -349,7 +349,7 @@ public class GetHoneypotAttackStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of statistics.</p>
+             * <p>The list of statistics information.</p>
              */
             public Builder honeypotAttackStatistics(java.util.List<HoneypotAttackStatistics> honeypotAttackStatistics) {
                 this.honeypotAttackStatistics = honeypotAttackStatistics;
@@ -357,12 +357,12 @@ public class GetHoneypotAttackStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of statistics for the attack source. Valid values:</p>
+             * <p>The type of statistics information for the attack source. Valid values:</p>
              * <ul>
-             * <li><strong>TOP_ATTACKED_AGENT</strong>: The top 5 probes that are attacked most frequently.</li>
-             * <li><strong>TOP_ATTACKED_IP</strong>: The top 5 IP addresses that are attacked most frequently.</li>
+             * <li><strong>TOP_ATTACKED_AGENT</strong>: The top 5 most attacked probes.</li>
+             * <li><strong>TOP_ATTACKED_IP</strong>: The top 5 most attacked IP addresses.</li>
              * <li><strong>ATTACK_EVENT_TYPE</strong>: The intrusion event type.</li>
-             * <li><strong>ATTACK_HONEYPOT_TYPE</strong>: The type of the attacked honeypot.</li>
+             * <li><strong>ATTACK_HONEYPOT_TYPE</strong>: The type of the compromised honeypot.</li>
              * </ul>
              * 
              * <strong>example:</strong>

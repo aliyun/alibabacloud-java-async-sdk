@@ -32,6 +32,10 @@ public class ListClientUserDefineRulesRequest extends Request {
     private Integer pageSize;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleCategory")
+    private String ruleCategory;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Type")
     private java.util.List<Integer> type;
 
@@ -40,6 +44,7 @@ public class ListClientUserDefineRulesRequest extends Request {
         this.currentPage = builder.currentPage;
         this.name = builder.name;
         this.pageSize = builder.pageSize;
+        this.ruleCategory = builder.ruleCategory;
         this.type = builder.type;
     }
 
@@ -78,6 +83,13 @@ public class ListClientUserDefineRulesRequest extends Request {
     }
 
     /**
+     * @return ruleCategory
+     */
+    public String getRuleCategory() {
+        return this.ruleCategory;
+    }
+
+    /**
      * @return type
      */
     public java.util.List<Integer> getType() {
@@ -88,6 +100,7 @@ public class ListClientUserDefineRulesRequest extends Request {
         private Integer currentPage; 
         private String name; 
         private Integer pageSize; 
+        private String ruleCategory; 
         private java.util.List<Integer> type; 
 
         private Builder() {
@@ -99,6 +112,7 @@ public class ListClientUserDefineRulesRequest extends Request {
             this.currentPage = request.currentPage;
             this.name = request.name;
             this.pageSize = request.pageSize;
+            this.ruleCategory = request.ruleCategory;
             this.type = request.type;
         } 
 
@@ -119,7 +133,7 @@ public class ListClientUserDefineRulesRequest extends Request {
          * <p>The name of the rule.</p>
          * 
          * <strong>example:</strong>
-         * <p>规则****</p>
+         * <p>Rule****</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -141,7 +155,19 @@ public class ListClientUserDefineRulesRequest extends Request {
         }
 
         /**
-         * <p>The types of rules.</p>
+         * <p>The rule category. process indicates process rules, and network indicates network rules. If this parameter is not specified, all categories are queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>network</p>
+         */
+        public Builder ruleCategory(String ruleCategory) {
+            this.putQueryParameter("RuleCategory", ruleCategory);
+            this.ruleCategory = ruleCategory;
+            return this;
+        }
+
+        /**
+         * <p>The list of rule types.</p>
          */
         public Builder type(java.util.List<Integer> type) {
             this.putQueryParameter("Type", type);

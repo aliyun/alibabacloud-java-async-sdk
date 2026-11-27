@@ -115,7 +115,7 @@ public class DescribeDomainListRequest extends Request {
         } 
 
         /**
-         * <p>The page number of the page to return in a paged query. Default value: <strong>1</strong>, which indicates that the first page is returned.</p>
+         * <p>The number of the page to return. Default value: <strong>1</strong>, which indicates that the query results are displayed starting from the first page.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -130,7 +130,7 @@ public class DescribeDomainListRequest extends Request {
          * <p>The type of the domain name to query. Valid values:</p>
          * <ul>
          * <li><strong>root</strong>: root domain name</li>
-         * <li><strong>sub</strong>: subdomain name.</li>
+         * <li><strong>sub</strong>: subdomain</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -155,7 +155,7 @@ public class DescribeDomainListRequest extends Request {
         }
 
         /**
-         * <p>The number of domain names to display on each page in a paged query. Default value: <strong>10</strong>, which indicates that 10 domain names are displayed on each page.</p>
+         * <p>The Settings for paging in a paged query. This parameter specifies the number of domain names to return on each page. Default value: <strong>10</strong>, which indicates that 10 domain names are displayed on each page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -167,7 +167,7 @@ public class DescribeDomainListRequest extends Request {
         }
 
         /**
-         * <p>The IP address of the access source.</p>
+         * <p>The source IP address.</p>
          * 
          * <strong>example:</strong>
          * <p>192.122.XX.XX</p>

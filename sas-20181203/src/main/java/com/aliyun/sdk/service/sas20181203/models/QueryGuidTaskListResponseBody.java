@@ -67,7 +67,7 @@ public class QueryGuidTaskListResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The list of onboarding task information.</p>
+         * <p>The list of onboarding tasks.</p>
          */
         public Builder guideTaskConfigList(java.util.List<GuideTaskConfigList> guideTaskConfigList) {
             this.guideTaskConfigList = guideTaskConfigList;
@@ -159,8 +159,8 @@ public class QueryGuidTaskListResponseBody extends TeaModel {
             /**
              * <p>The claim status. Valid values:</p>
              * <ul>
-             * <li><strong>1</strong>: Unclaimed.</li>
-             * <li><strong>2</strong>: Claimed.</li>
+             * <li><strong>1</strong>: not claimed</li>
+             * <li><strong>2</strong>: claimed</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -174,11 +174,11 @@ public class QueryGuidTaskListResponseBody extends TeaModel {
             /**
              * <p>The reward name. Valid values:</p>
              * <ul>
-             * <li><strong>addTrialDay</strong>: Add trial days</li>
-             * <li><strong>addAntiRansomwareCapacity</strong>: Add anti-ransomware capacity</li>
-             * <li><strong>addImageScanAuthCount</strong>: Add image scan authorizations</li>
-             * <li><strong>addWebLockAuthCount</strong>: Add web tamper-proofing authorizations</li>
-             * <li><strong>addSlsCapacity</strong>: Add log analysis storage space</li>
+             * <li><strong>addTrialDay</strong>: additional trial days</li>
+             * <li><strong>addAntiRansomwareCapacity</strong>: additional anti-ransomware capacity</li>
+             * <li><strong>addImageScanAuthCount</strong>: additional image security scan authorization quotas</li>
+             * <li><strong>addWebLockAuthCount</strong>: additional web tamper-proofing authorization quotas</li>
+             * <li><strong>addSlsCapacity</strong>: additional log analysis storage space</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -192,15 +192,15 @@ public class QueryGuidTaskListResponseBody extends TeaModel {
             /**
              * <p>The reward configuration information. This parameter is in JSON format.</p>
              * <blockquote>
-             * <p>The JSON key indicates the reward content, and the value indicates the reward amount. Valid values for the key:</p>
+             * <p>In the JSON string, the key indicates the reward content and the value indicates the reward value. Valid values for the key:</p>
              * </blockquote>
              * <ul>
-             * <li><strong>webLockAuthCount</strong>: Web tamper-proofing authorizations</li>
-             * <li><strong>ransomwareCapacity</strong>: Anti-ransomware capacity, in GB</li>
-             * <li><strong>slsCapacity</strong>: Log analysis capacity, in GB</li>
-             * <li><strong>days</strong>: Number of days</li>
-             * <li><strong>imageScanAuthCount</strong>: Image scan authorizations</li>
-             * <li><strong>honeypotAuthCount</strong>: Cloud honeypot authorizations</li>
+             * <li><strong>webLockAuthCount</strong>: web tamper-proofing authorization quotas</li>
+             * <li><strong>ransomwareCapacity</strong>: anti-ransomware capacity, in GB</li>
+             * <li><strong>slsCapacity</strong>: log analysis capacity, in GB</li>
+             * <li><strong>days</strong>: usage days</li>
+             * <li><strong>imageScanAuthCount</strong>: image scan authorization quotas</li>
+             * <li><strong>honeypotAuthCount</strong>: cloud honeypot authorization quotas</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -310,7 +310,7 @@ public class QueryGuidTaskListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The reward information for task completion.</p>
+             * <p>The reward information for completing the task.</p>
              */
             public Builder rewardData(RewardData rewardData) {
                 this.rewardData = rewardData;
@@ -318,7 +318,7 @@ public class QueryGuidTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The points added to the security score upon task completion.</p>
+             * <p>The security score increase upon task completion.</p>
              * 
              * <strong>example:</strong>
              * <p>80</p>
@@ -331,9 +331,9 @@ public class QueryGuidTaskListResponseBody extends TeaModel {
             /**
              * <p>The task status. Valid values:</p>
              * <ul>
-             * <li><strong>0</strong>: Closed.</li>
-             * <li><strong>1</strong>: In progress.</li>
-             * <li><strong>2</strong>: Completed.</li>
+             * <li><strong>0</strong>: closed</li>
+             * <li><strong>1</strong>: running</li>
+             * <li><strong>2</strong>: completed</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -348,7 +348,7 @@ public class QueryGuidTaskListResponseBody extends TeaModel {
              * <p>The task ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>t-000d8slfgx4p40kb64ad</p>
+             * <p>123456</p>
              */
             public Builder taskId(Integer taskId) {
                 this.taskId = taskId;
@@ -358,19 +358,19 @@ public class QueryGuidTaskListResponseBody extends TeaModel {
             /**
              * <p>The task name. Valid values:</p>
              * <ul>
-             * <li><strong>guid_task_security_score_promote_video</strong>: Watch the quick start video task</li>
-             * <li><strong>guide_sub_task_config_defence_hbr</strong>: Server anti-ransomware configuration task</li>
-             * <li><strong>guide_sub_task_config_uni_defence_hbr</strong>: Database anti-ransomware configuration task</li>
-             * <li><strong>guid_task_log_analysis_config</strong>: Log analysis task</li>
-             * <li><strong>guide_sub_task_web_lock_config</strong>: Web tamper-proofing task</li>
-             * <li><strong>guide_sub_task_config_anti_crack</strong>: Anti-brute-force attacks task</li>
-             * <li><strong>guid_task_container_security_video</strong>: Container security video task</li>
-             * <li><strong>guid_task_container_image_scan_config</strong>: Container image scanning task</li>
-             * <li><strong>guid_task_k8s_log_analysis_config</strong>: Kubernetes threat detection task</li>
-             * <li><strong>guid_task_container_network</strong>: Container visualization task</li>
-             * <li><strong>guide_sub_task_config_add_collection</strong>: Add console to favorites task</li>
-             * <li><strong>guide_sub_task_vul_scan</strong>: Vulnerability scanning task</li>
-             * <li><strong>guide_sub_task_virusKill</strong>: Virus scan and removal task</li>
+             * <li><strong>guid_task_security_score_promote_video</strong>: the task of watching the quick start video</li>
+             * <li><strong>guide_sub_task_config_defence_hbr</strong>: the server anti-ransomware configuration task</li>
+             * <li><strong>guide_sub_task_config_uni_defence_hbr</strong>: the database anti-ransomware configuration task</li>
+             * <li><strong>guid_task_log_analysis_config</strong>: the log analysis task</li>
+             * <li><strong>guide_sub_task_web_lock_config</strong>: the tamper-proofing task</li>
+             * <li><strong>guide_sub_task_config_anti_crack</strong>: the brute-force attack prevention task</li>
+             * <li><strong>guid_task_container_security_video</strong>: the container security video task</li>
+             * <li><strong>guid_task_container_image_scan_config</strong>: the container image scan task</li>
+             * <li><strong>guid_task_k8s_log_analysis_config</strong>: the Kubernetes threat detection task</li>
+             * <li><strong>guid_task_container_network</strong>: the container visualization task</li>
+             * <li><strong>guide_sub_task_config_add_collection</strong>: the task of adding the console to favorites</li>
+             * <li><strong>guide_sub_task_vul_scan</strong>: the vulnerability scanning task</li>
+             * <li><strong>guide_sub_task_virusKill</strong>: the virus scan task</li>
              * </ul>
              * 
              * <strong>example:</strong>

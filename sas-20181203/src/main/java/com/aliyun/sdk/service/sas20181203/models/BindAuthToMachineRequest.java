@@ -242,13 +242,13 @@ public class BindAuthToMachineRequest extends Request {
         } 
 
         /**
-         * <p>The authorization version of the asset. Valid values:</p>
+         * <p>Specifies the authorization version of the asset. Valid values:</p>
          * <ul>
-         * <li><strong>6</strong>: Anti-virus Edition</li>
-         * <li><strong>5</strong>: Advanced Edition</li>
-         * <li><strong>3</strong>: Enterprise Edition</li>
-         * <li><strong>7</strong>: Ultimate Edition</li>
-         * <li><strong>10</strong>: Value-added Service Edition</li>
+         * <li><strong>6</strong>: Anti-virus Edition.</li>
+         * <li><strong>5</strong>: Premium Edition.</li>
+         * <li><strong>3</strong>: Enterprise Edition.</li>
+         * <li><strong>7</strong>: Ultimate Edition.</li>
+         * <li><strong>10</strong>: Value-added Service Edition.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -263,8 +263,8 @@ public class BindAuthToMachineRequest extends Request {
         /**
          * <p>Specifies whether to enable automatic binding. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: Disabled</li>
-         * <li><strong>1</strong>: Enabled</li>
+         * <li><strong>0</strong>: Disabled.</li>
+         * <li><strong>1</strong>: Enabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -277,9 +277,9 @@ public class BindAuthToMachineRequest extends Request {
         }
 
         /**
-         * <p>The set of UUIDs to be bound.</p>
+         * <p>The collection of UUIDs to be bound.</p>
          * <blockquote>
-         * <p><strong>Bind</strong> and <strong>UnBind</strong> cannot be empty at the same time.</p>
+         * <p><strong>Bind</strong> and <strong>UnBind</strong> cannot be left empty at the same time.</p>
          * </blockquote>
          */
         public Builder bind(java.util.List<String> bind) {
@@ -291,8 +291,8 @@ public class BindAuthToMachineRequest extends Request {
         /**
          * <p>Specifies whether to bind all assets. Default value: <strong>false</strong>. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: Yes</li>
-         * <li><strong>false</strong>: No</li>
+         * <li><strong>true</strong>: Yes.</li>
+         * <li><strong>false</strong>: No.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -306,6 +306,9 @@ public class BindAuthToMachineRequest extends Request {
 
         /**
          * <p>The client token that is used to ensure the idempotence of the request. You must use different tokens for different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>02fb3da4-130e-11e9-8e44-0016e04115b</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -314,7 +317,7 @@ public class BindAuthToMachineRequest extends Request {
         }
 
         /**
-         * <p>Sets the conditions for searching assets. This parameter is in JSON format. Pay attention to the case sensitivity when you specify this parameter.</p>
+         * <p>Specifies the conditions for searching assets. This parameter is in JSON format and is case-sensitive.</p>
          * <blockquote>
          * <p>You can search for assets by using conditions such as the instance ID, instance name, VPC ID, region, and public IP address of the asset. You can call the <a href="~~DescribeCriteria~~">DescribeCriteria</a> operation to query the supported search conditions.</p>
          * </blockquote>
@@ -329,7 +332,7 @@ public class BindAuthToMachineRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to only precheck the request. true: only prechecks the request and does not perform the actual operation. false: performs the request normally. Default value: false.</p>
+         * <p>Specifies whether to perform a dry run on the request. A value of true indicates that only the request is checked and the actual operation is not performed. A value of false indicates that the request is normally executed. Default value: false.</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -340,11 +343,11 @@ public class BindAuthToMachineRequest extends Request {
         /**
          * <p>Specifies whether the operation is a pre-binding operation. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: No</li>
-         * <li><strong>1</strong>: Yes</li>
+         * <li><strong>0</strong>: No.</li>
+         * <li><strong>1</strong>: Yes.</li>
          * </ul>
          * <blockquote>
-         * <p>After pre-binding is enabled, the system automatically binds the corresponding number of licenses of the specified version to the specified servers after the purchase is completed.</p>
+         * <p>After you enable pre-binding, the system automatically binds the corresponding version of authorization licenses to the specified servers after the purchase is completed.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -359,8 +362,8 @@ public class BindAuthToMachineRequest extends Request {
         /**
          * <p>Specifies the logical relationship among multiple search conditions. Default value: <strong>OR</strong>. Valid values:</p>
          * <ul>
-         * <li><strong>OR</strong>: Specifies the <strong>OR</strong> logical relationship among multiple conditions.</li>
-         * <li><strong>AND</strong>: Specifies the <strong>AND</strong> logical relationship among multiple conditions.</li>
+         * <li><strong>OR</strong>: The conditions have an <strong>OR</strong> logical relationship.</li>
+         * <li><strong>AND</strong>: The conditions have an <strong>AND</strong> logical relationship.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -373,13 +376,13 @@ public class BindAuthToMachineRequest extends Request {
         }
 
         /**
-         * <p>The version of the order associated with the pre-binding operation. Valid values:</p>
+         * <p>Specifies the order version associated with the pre-binding operation. Valid values:</p>
          * <ul>
-         * <li><strong>level7</strong>: Anti-virus Edition</li>
-         * <li><strong>level3</strong>: Advanced Edition</li>
-         * <li><strong>level2</strong>: Enterprise Edition</li>
-         * <li><strong>level8</strong>: Ultimate Edition</li>
-         * <li><strong>level10</strong>: Value-added services only</li>
+         * <li><strong>level7</strong>: Anti-virus Edition.</li>
+         * <li><strong>level3</strong>: Premium Edition.</li>
+         * <li><strong>level2</strong>: Enterprise Edition.</li>
+         * <li><strong>level8</strong>: Ultimate Edition.</li>
+         * <li><strong>level10</strong>: Value-added services only.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -392,7 +395,7 @@ public class BindAuthToMachineRequest extends Request {
         }
 
         /**
-         * <p>The ID of the order associated with the pre-binding operation.</p>
+         * <p>The order ID associated with the pre-binding operation.</p>
          * 
          * <strong>example:</strong>
          * <p>233016**0482</p>
@@ -404,7 +407,10 @@ public class BindAuthToMachineRequest extends Request {
         }
 
         /**
-         * ProductCode.
+         * <p>The product code, which specifies the product for which the authorization is bound. For example, EDR indicates that the EDR authorization is bound.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EDR</p>
          */
         public Builder productCode(String productCode) {
             this.putQueryParameter("ProductCode", productCode);
@@ -413,7 +419,7 @@ public class BindAuthToMachineRequest extends Request {
         }
 
         /**
-         * <p>The ID of the member accounts in the resource folder. The ID is an Alibaba Cloud account ID.</p>
+         * <p>The ID of the member accounts in the resource folder (Alibaba Cloud account).</p>
          * <blockquote>
          * <p>You can invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
          * </blockquote>
@@ -428,9 +434,9 @@ public class BindAuthToMachineRequest extends Request {
         }
 
         /**
-         * <p>The set of UUIDs to be unbound.</p>
+         * <p>The collection of UUIDs to be unbound.</p>
          * <blockquote>
-         * <p><strong>Bind</strong> and <strong>UnBind</strong> cannot be empty at the same time.</p>
+         * <p><strong>Bind</strong> and <strong>UnBind</strong> cannot be left empty at the same time.</p>
          * </blockquote>
          */
         public Builder unBind(java.util.List<String> unBind) {

@@ -75,7 +75,7 @@ public class DescribeAllImageBaselineResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request. The ID is used to locate logs and troubleshoot issues.</p>
+         * <p>The ID of the request. You can use the ID to locate logs and troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>1A975D03-5F49-5354-B2CB-3918D5DA****</p>
@@ -173,7 +173,7 @@ public class DescribeAllImageBaselineResponseBody extends TeaModel {
              * <p>The alias of the baseline sub-item.</p>
              * 
              * <strong>example:</strong>
-             * <p>确保不存在相同密码Hash的账户</p>
+             * <p>Ensure that no accounts have the same password hash</p>
              */
             public Builder alias(String alias) {
                 this.alias = alias;
@@ -181,7 +181,7 @@ public class DescribeAllImageBaselineResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type key of the baseline main item.</p>
+             * <p>The type key of the primary baseline item.</p>
              * 
              * <strong>example:</strong>
              * <p>identification</p>
@@ -203,7 +203,7 @@ public class DescribeAllImageBaselineResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name key of the baseline main item.</p>
+             * <p>The name key of the primary baseline item.</p>
              * 
              * <strong>example:</strong>
              * <p>identification</p>
@@ -299,10 +299,10 @@ public class DescribeAllImageBaselineResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The alias of the baseline main item.</p>
+             * <p>The alias of the primary baseline item.</p>
              * 
              * <strong>example:</strong>
-             * <p>身份鉴别</p>
+             * <p>Identity authentication</p>
              */
             public Builder alias(String alias) {
                 this.alias = alias;
@@ -318,7 +318,7 @@ public class DescribeAllImageBaselineResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type key of the baseline main item.</p>
+             * <p>The type key of the primary baseline item.</p>
              * 
              * <strong>example:</strong>
              * <p>identification</p>
@@ -329,7 +329,7 @@ public class DescribeAllImageBaselineResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name key of the baseline main item.</p>
+             * <p>The name key of the primary baseline item.</p>
              * 
              * <strong>example:</strong>
              * <p>identification</p>
@@ -415,7 +415,7 @@ public class DescribeAllImageBaselineResponseBody extends TeaModel {
              * <p>The alias of the baseline category.</p>
              * 
              * <strong>example:</strong>
-             * <p>身份鉴别</p>
+             * <p>Identity authentication</p>
              */
             public Builder alias(String alias) {
                 this.alias = alias;
@@ -423,7 +423,7 @@ public class DescribeAllImageBaselineResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of baseline main items.</p>
+             * <p>The list of primary baseline items.</p>
              */
             public Builder baselineNameList(java.util.List<BaselineNameList> baselineNameList) {
                 this.baselineNameList = baselineNameList;

@@ -59,7 +59,7 @@ public class DescribeCustomizedDictUploadInfoRequest extends Request {
         } 
 
         /**
-         * <p>The IP address of the access source.</p>
+         * <p>The source IP address.</p>
          * 
          * <strong>example:</strong>
          * <p>106.11.43.***</p>

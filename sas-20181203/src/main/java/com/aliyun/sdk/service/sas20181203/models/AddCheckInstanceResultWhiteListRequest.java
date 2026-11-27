@@ -35,6 +35,18 @@ public class AddCheckInstanceResultWhiteListRequest extends Request {
     private Boolean dryRun;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EffectEndTime")
+    private Long effectEndTime;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EffectStartTime")
+    private Long effectStartTime;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EffectType")
+    private String effectType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceIds")
     private java.util.List<String> instanceIds;
 
@@ -56,6 +68,9 @@ public class AddCheckInstanceResultWhiteListRequest extends Request {
         this.checkId = builder.checkId;
         this.clientToken = builder.clientToken;
         this.dryRun = builder.dryRun;
+        this.effectEndTime = builder.effectEndTime;
+        this.effectStartTime = builder.effectStartTime;
+        this.effectType = builder.effectType;
         this.instanceIds = builder.instanceIds;
         this.instanceList = builder.instanceList;
         this.remark = builder.remark;
@@ -104,6 +119,27 @@ public class AddCheckInstanceResultWhiteListRequest extends Request {
     }
 
     /**
+     * @return effectEndTime
+     */
+    public Long getEffectEndTime() {
+        return this.effectEndTime;
+    }
+
+    /**
+     * @return effectStartTime
+     */
+    public Long getEffectStartTime() {
+        return this.effectStartTime;
+    }
+
+    /**
+     * @return effectType
+     */
+    public String getEffectType() {
+        return this.effectType;
+    }
+
+    /**
      * @return instanceIds
      */
     public java.util.List<String> getInstanceIds() {
@@ -136,6 +172,9 @@ public class AddCheckInstanceResultWhiteListRequest extends Request {
         private Long checkId; 
         private String clientToken; 
         private Boolean dryRun; 
+        private Long effectEndTime; 
+        private Long effectStartTime; 
+        private String effectType; 
         private java.util.List<String> instanceIds; 
         private java.util.List<InstanceList> instanceList; 
         private String remark; 
@@ -151,6 +190,9 @@ public class AddCheckInstanceResultWhiteListRequest extends Request {
             this.checkId = request.checkId;
             this.clientToken = request.clientToken;
             this.dryRun = request.dryRun;
+            this.effectEndTime = request.effectEndTime;
+            this.effectStartTime = request.effectStartTime;
+            this.effectType = request.effectType;
             this.instanceIds = request.instanceIds;
             this.instanceList = request.instanceList;
             this.remark = request.remark;
@@ -185,7 +227,10 @@ public class AddCheckInstanceResultWhiteListRequest extends Request {
         }
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request. Different requests must use different tokens. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * <p>The client token that is used to ensure the idempotence of the request. You can use different tokens for different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>02fb3da4-130e-11e9-8e44-0016e04115b</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -194,11 +239,52 @@ public class AddCheckInstanceResultWhiteListRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to perform only a dry run. A value of true indicates that only a dry run is performed and the actual operation is not performed. A value of false indicates that the actual operation is performed. Default value: false.</p>
+         * <p>Specifies whether to only precheck the request. A value of true indicates that only the request is checked and no actual operations are performed. A value of false indicates that the request is normally executed. Default value: false.</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
             this.dryRun = dryRun;
+            return this;
+        }
+
+        /**
+         * <p>The end time when the whitelist rule expires. The value is a UNIX timestamp in milliseconds. This parameter is required when EffectType is set to CUSTOM. The whitelist rule automatically expires after this time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1774915200000</p>
+         */
+        public Builder effectEndTime(Long effectEndTime) {
+            this.putQueryParameter("EffectEndTime", effectEndTime);
+            this.effectEndTime = effectEndTime;
+            return this;
+        }
+
+        /**
+         * <p>The start time when the whitelist rule takes effect. The value is a UNIX timestamp in milliseconds. This parameter is required when EffectType is set to CUSTOM, and the value must be less than or equal to the value of EffectEndTime.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1767225600000</p>
+         */
+        public Builder effectStartTime(Long effectStartTime) {
+            this.putQueryParameter("EffectStartTime", effectStartTime);
+            this.effectStartTime = effectStartTime;
+            return this;
+        }
+
+        /**
+         * <p>The pattern of the whitelist rule. Valid values:</p>
+         * <ul>
+         * <li>PERMANENT: Permanently effective. This is the default value.</li>
+         * <li>CUSTOM: Custom effective period.
+         * If you set this parameter to CUSTOM, you must specify both EffectStartTime and EffectEndTime.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PERMANENT</p>
+         */
+        public Builder effectType(String effectType) {
+            this.putQueryParameter("EffectType", effectType);
+            this.effectType = effectType;
             return this;
         }
 
@@ -221,10 +307,10 @@ public class AddCheckInstanceResultWhiteListRequest extends Request {
         }
 
         /**
-         * <p>The remarks. The value can be up to 65,535 bytes in length.</p>
+         * <p>The remarks. The maximum size is 65,535 bytes.</p>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>Whitelist remark example</p>
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);

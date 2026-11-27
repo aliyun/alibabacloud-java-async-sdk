@@ -219,7 +219,7 @@ public class ListOperationCheckResponseBody extends TeaModel {
              * <p>The JSON string of the custom configuration item type for the check item.</p>
              * 
              * <strong>example:</strong>
-             * <p>{\&quot;type\&quot;:\&quot;STRING\&quot;,\&quot;range\&quot;:[0,64]}</p>
+             * <p>{&quot;type&quot;:&quot;STRING&quot;,&quot;range&quot;:[0,64]}</p>
              */
             public Builder typeDefine(String typeDefine) {
                 this.typeDefine = typeDefine;

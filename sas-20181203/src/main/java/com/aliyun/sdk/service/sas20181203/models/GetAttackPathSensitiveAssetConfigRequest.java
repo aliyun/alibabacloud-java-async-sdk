@@ -74,7 +74,7 @@ public class GetAttackPathSensitiveAssetConfigRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the attack path sensitive asset configuration.</p>
+         * <p>The ID of the sensitive asset setting for the attack path.</p>
          * 
          * <strong>example:</strong>
          * <p>apsac-123</p>
@@ -88,7 +88,7 @@ public class GetAttackPathSensitiveAssetConfigRequest extends Request {
         /**
          * <p>The configuration type. Valid values:</p>
          * <ul>
-         * <li>asset_instance: asset.</li>
+         * <li>asset_instance: Asset.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

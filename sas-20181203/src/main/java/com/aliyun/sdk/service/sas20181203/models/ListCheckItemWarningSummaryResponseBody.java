@@ -326,7 +326,7 @@ public class ListCheckItemWarningSummaryResponseBody extends TeaModel {
              * <p>The suggestion for the check item.</p>
              * 
              * <strong>example:</strong>
-             * <p>In the Administrative Tools window, double-click Local Security Policy. In the Local Security Policy window that appears, choose Security Settings\\Local Policies\\Audit Policy, configure all audit policies as: <code>Success, Failure</code>.</p>
+             * <p>In the Administrative Tools window, double-click Local Security Policy. In the Local Security Policy window that appears, choose Security Settings\Local Policies\Audit Policy, configure all audit policies as: <code>Success, Failure</code>.</p>
              */
             public Builder advice(String advice) {
                 this.advice = advice;

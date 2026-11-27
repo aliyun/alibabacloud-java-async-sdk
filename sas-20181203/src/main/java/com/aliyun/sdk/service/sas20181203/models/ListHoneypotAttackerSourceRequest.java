@@ -155,7 +155,7 @@ public class ListHoneypotAttackerSourceRequest extends Request {
         }
 
         /**
-         * <p>The end time in UNIX timestamp format.</p>
+         * <p>The end time. The value is a UNIX timestamp.</p>
          * 
          * <strong>example:</strong>
          * <p>1676945366221</p>
@@ -169,8 +169,8 @@ public class ListHoneypotAttackerSourceRequest extends Request {
         /**
          * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
          * <ul>
-         * <li><strong>zh</strong>: Chinese.</li>
-         * <li><strong>en</strong>: English.</li>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -216,7 +216,7 @@ public class ListHoneypotAttackerSourceRequest extends Request {
         }
 
         /**
-         * <p>The start time in UNIX timestamp format.</p>
+         * <p>The start time. The value is a UNIX timestamp.</p>
          * 
          * <strong>example:</strong>
          * <p>1674007632124</p>

@@ -22,6 +22,15 @@ public class RefreshAssetsRequest extends Request {
     private String assetType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AuthIds")
+    private java.util.List<Long> authIds;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Validation(maxLength = 128, minLength = 1)
+    private String clientToken;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CloudAssetSubType")
     private Integer cloudAssetSubType;
 
@@ -30,8 +39,16 @@ public class RefreshAssetsRequest extends Request {
     private Integer cloudAssetType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterIds")
+    private java.util.List<String> clusterIds;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceDirectoryAccountId")
     private Long resourceDirectoryAccountId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScopeIds")
+    private java.util.List<String> scopeIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Vendor")
@@ -40,9 +57,13 @@ public class RefreshAssetsRequest extends Request {
     private RefreshAssetsRequest(Builder builder) {
         super(builder);
         this.assetType = builder.assetType;
+        this.authIds = builder.authIds;
+        this.clientToken = builder.clientToken;
         this.cloudAssetSubType = builder.cloudAssetSubType;
         this.cloudAssetType = builder.cloudAssetType;
+        this.clusterIds = builder.clusterIds;
         this.resourceDirectoryAccountId = builder.resourceDirectoryAccountId;
+        this.scopeIds = builder.scopeIds;
         this.vendor = builder.vendor;
     }
 
@@ -67,6 +88,20 @@ public class RefreshAssetsRequest extends Request {
     }
 
     /**
+     * @return authIds
+     */
+    public java.util.List<Long> getAuthIds() {
+        return this.authIds;
+    }
+
+    /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    /**
      * @return cloudAssetSubType
      */
     public Integer getCloudAssetSubType() {
@@ -81,10 +116,24 @@ public class RefreshAssetsRequest extends Request {
     }
 
     /**
+     * @return clusterIds
+     */
+    public java.util.List<String> getClusterIds() {
+        return this.clusterIds;
+    }
+
+    /**
      * @return resourceDirectoryAccountId
      */
     public Long getResourceDirectoryAccountId() {
         return this.resourceDirectoryAccountId;
+    }
+
+    /**
+     * @return scopeIds
+     */
+    public java.util.List<String> getScopeIds() {
+        return this.scopeIds;
     }
 
     /**
@@ -96,9 +145,13 @@ public class RefreshAssetsRequest extends Request {
 
     public static final class Builder extends Request.Builder<RefreshAssetsRequest, Builder> {
         private String assetType; 
+        private java.util.List<Long> authIds; 
+        private String clientToken; 
         private Integer cloudAssetSubType; 
         private Integer cloudAssetType; 
+        private java.util.List<String> clusterIds; 
         private Long resourceDirectoryAccountId; 
+        private java.util.List<String> scopeIds; 
         private Integer vendor; 
 
         private Builder() {
@@ -108,18 +161,23 @@ public class RefreshAssetsRequest extends Request {
         private Builder(RefreshAssetsRequest request) {
             super(request);
             this.assetType = request.assetType;
+            this.authIds = request.authIds;
+            this.clientToken = request.clientToken;
             this.cloudAssetSubType = request.cloudAssetSubType;
             this.cloudAssetType = request.cloudAssetType;
+            this.clusterIds = request.clusterIds;
             this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
+            this.scopeIds = request.scopeIds;
             this.vendor = request.vendor;
         } 
 
         /**
-         * <p>The type of asset to synchronize. Default value: <strong>ecs</strong>. Valid values:</p>
+         * <p>The asset type for synchronization. Default value: <strong>ecs</strong>. Valid values:</p>
          * <ul>
-         * <li><strong>cloud_product</strong>: cloud product</li>
-         * <li><strong>ecs</strong>: server</li>
-         * <li><strong>container_image</strong>: container image</li>
+         * <li><strong>cloud_product</strong>: Cloud service</li>
+         * <li><strong>ecs</strong>: Server</li>
+         * <li><strong>container_image</strong>: Container image</li>
+         * <li><strong>cloud_k8s</strong>: Multi-cloud Kubernetes clusters and nodes. If you specify this value, you must also specify Vendor and ClientToken. The API only accepts asynchronous tasks. You can call the GetCloudK8sSyncTask operation to query the result.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -132,9 +190,30 @@ public class RefreshAssetsRequest extends Request {
         }
 
         /**
-         * <p>The subtype of the cloud product.</p>
+         * <p>The IDs of the authorization records. You can specify up to 1,000 IDs. This parameter is only used when AssetType is set to cloud_k8s. If you do not specify this parameter or specify an empty array, all available authorizations for the specified cloud provider under the current tenant are selected.</p>
+         */
+        public Builder authIds(java.util.List<Long> authIds) {
+            this.putQueryParameter("AuthIds", authIds);
+            this.authIds = authIds;
+            return this;
+        }
+
+        /**
+         * <p>The idempotency key that is 1 to 128 characters in length. This parameter is required when AssetType is set to cloud_k8s. For other asset types, this parameter is optional and validated by the backend based on specific conditions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cloud-k8s-sync-example-001</p>
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * <p>The subtype of the cloud service.</p>
          * <blockquote>
-         * <p>Refer to the following list for valid values.</p>
+         * <p>For more information about valid values, see the following list.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -147,30 +226,30 @@ public class RefreshAssetsRequest extends Request {
         }
 
         /**
-         * <p>The type of cloud product. Valid values:</p>
+         * <p>The type of the cloud service. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: cloud server</li>
-         * <li><strong>1</strong>: load balancing</li>
-         * <li><strong>3</strong>: ApsaraDB RDS database</li>
-         * <li><strong>4</strong>: ApsaraDB for MongoDB database</li>
-         * <li><strong>5</strong>: Tair (Redis® OSS-Compatible) database</li>
+         * <li><strong>0</strong>: Elastic Compute Service (ECS) server</li>
+         * <li><strong>1</strong>: Server Load Balancer (SLB)</li>
+         * <li><strong>3</strong>: ApsaraDB RDS</li>
+         * <li><strong>4</strong>: ApsaraDB for MongoDB</li>
+         * <li><strong>5</strong>: Tair (Redis® OSS-Compatible)</li>
          * <li><strong>6</strong>: Container Registry</li>
-         * <li><strong>8</strong>: container service for Kubernetes</li>
-         * <li><strong>9</strong>: VPC</li>
+         * <li><strong>8</strong>: Container Service for Kubernetes (ACK)</li>
+         * <li><strong>9</strong>: Virtual Private Cloud (VPC)</li>
          * <li><strong>11</strong>: ActionTrail</li>
-         * <li><strong>12</strong>: CDN</li>
-         * <li><strong>13</strong>: Certificate Management Service (formerly SSL Certificates Service)</li>
-         * <li><strong>14</strong>: Apsara Devops</li>
-         * <li><strong>15</strong>: access control</li>
+         * <li><strong>12</strong>: Content Delivery Network (CDN)</li>
+         * <li><strong>13</strong>: SSL Certificates Service</li>
+         * <li><strong>14</strong>: Apsara DevOps</li>
+         * <li><strong>15</strong>: Resource Access Management (RAM)</li>
          * <li><strong>16</strong>: Anti-DDoS</li>
-         * <li><strong>17</strong>: Web application firewall</li>
-         * <li><strong>18</strong>: OSS</li>
-         * <li><strong>19</strong>: cloud-native relational database PolarDB</li>
-         * <li><strong>20</strong>: ApsaraDB RDS for PostgreSQL database</li>
-         * <li><strong>21</strong>: microservices engine</li>
-         * <li><strong>22</strong>: file storage NAS</li>
-         * <li><strong>23</strong>: Data Security Center</li>
-         * <li><strong>24</strong>: EIP</li>
+         * <li><strong>17</strong>: Web Application Firewall (WAF)</li>
+         * <li><strong>18</strong>: Object Storage Service (OSS)</li>
+         * <li><strong>19</strong>: PolarDB</li>
+         * <li><strong>20</strong>: ApsaraDB RDS for PostgreSQL</li>
+         * <li><strong>21</strong>: Microservices Engine (MSE)</li>
+         * <li><strong>22</strong>: Apsara File Storage NAS</li>
+         * <li><strong>23</strong>: Data Security Center (DSC)</li>
+         * <li><strong>24</strong>: Elastic IP Address (EIP)</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -183,9 +262,18 @@ public class RefreshAssetsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Alibaba Cloud account of the member accounts in the resource directory.</p>
+         * <p>The locators of the cloud provider clusters. You can specify up to 1,000 locators. This parameter is only used when AssetType is set to cloud_k8s. If you do not specify this parameter or specify an empty array, it indicates full coverage of the region.</p>
+         */
+        public Builder clusterIds(java.util.List<String> clusterIds) {
+            this.putQueryParameter("ClusterIds", clusterIds);
+            this.clusterIds = clusterIds;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the Alibaba Cloud account that is one of the resource directory member accounts.</p>
          * <blockquote>
-         * <p>Call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
+         * <p>You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -198,13 +286,22 @@ public class RefreshAssetsRequest extends Request {
         }
 
         /**
-         * <p>The server vendor. Valid values:</p>
+         * <p>The regions of the cloud provider. You can specify up to 1,000 regions. This parameter is only used when AssetType is set to cloud_k8s. If you do not specify this parameter or specify an empty array, the regions are expanded by using the region API.</p>
+         */
+        public Builder scopeIds(java.util.List<String> scopeIds) {
+            this.putQueryParameter("ScopeIds", scopeIds);
+            this.scopeIds = scopeIds;
+            return this;
+        }
+
+        /**
+         * <p>The cloud provider of the server. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: Alibaba Cloud asset</li>
-         * <li><strong>1</strong>: Non-cloud asset</li>
-         * <li><strong>2</strong>: IDC asset</li>
-         * <li><strong>3</strong>, <strong>4</strong>, <strong>5</strong>, <strong>7</strong>: Third-party cloud asset</li>
-         * <li><strong>8</strong>: Lightweight asset</li>
+         * <li><strong>0</strong>: Alibaba Cloud assets</li>
+         * <li><strong>1</strong>: Assets outside Alibaba Cloud</li>
+         * <li><strong>2</strong>: IDC assets</li>
+         * <li><strong>3</strong>, <strong>4</strong>, <strong>5</strong>, and <strong>7</strong>: Assets on other cloud platforms</li>
+         * <li><strong>8</strong>: Simple Application Server assets</li>
          * </ul>
          * 
          * <strong>example:</strong>

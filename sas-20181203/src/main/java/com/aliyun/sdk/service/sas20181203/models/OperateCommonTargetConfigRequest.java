@@ -26,6 +26,10 @@ public class OperateCommonTargetConfigRequest extends Request {
     private String fieldValue;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceDirectoryAccountId")
+    private Long resourceDirectoryAccountId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SourceIp")
     private String sourceIp;
 
@@ -47,6 +51,7 @@ public class OperateCommonTargetConfigRequest extends Request {
         super(builder);
         this.fieldName = builder.fieldName;
         this.fieldValue = builder.fieldValue;
+        this.resourceDirectoryAccountId = builder.resourceDirectoryAccountId;
         this.sourceIp = builder.sourceIp;
         this.targetOperations = builder.targetOperations;
         this.targetType = builder.targetType;
@@ -81,6 +86,13 @@ public class OperateCommonTargetConfigRequest extends Request {
     }
 
     /**
+     * @return resourceDirectoryAccountId
+     */
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
+    }
+
+    /**
      * @return sourceIp
      */
     public String getSourceIp() {
@@ -111,6 +123,7 @@ public class OperateCommonTargetConfigRequest extends Request {
     public static final class Builder extends Request.Builder<OperateCommonTargetConfigRequest, Builder> {
         private String fieldName; 
         private String fieldValue; 
+        private Long resourceDirectoryAccountId; 
         private String sourceIp; 
         private String targetOperations; 
         private String targetType; 
@@ -124,6 +137,7 @@ public class OperateCommonTargetConfigRequest extends Request {
             super(request);
             this.fieldName = request.fieldName;
             this.fieldValue = request.fieldValue;
+            this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
             this.sourceIp = request.sourceIp;
             this.targetOperations = request.targetOperations;
             this.targetType = request.targetType;
@@ -133,8 +147,8 @@ public class OperateCommonTargetConfigRequest extends Request {
         /**
          * <p>The target type of the image switch. Valid values:</p>
          * <ul>
-         * <li><strong>repoName</strong>: repository name.</li>
-         * <li><strong>repoNamespace</strong>: repository namespace name.</li>
+         * <li><strong>repoName</strong>: the repository name</li>
+         * <li><strong>repoNamespace</strong>: the repository namespace name</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -147,7 +161,7 @@ public class OperateCommonTargetConfigRequest extends Request {
         }
 
         /**
-         * <p>The repository name or repository namespace name.</p>
+         * <p>The repository name or the repository namespace name.</p>
          * 
          * <strong>example:</strong>
          * <p>cafcmc-dev</p>
@@ -159,7 +173,22 @@ public class OperateCommonTargetConfigRequest extends Request {
         }
 
         /**
-         * <p>The IP address of the access source.</p>
+         * <p>The ID of the member accounts in the resource folder (Alibaba Cloud account).</p>
+         * <blockquote>
+         * <p>You can invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to retrieve this parameter.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1766185894104675</p>
+         */
+        public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+            this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
+            this.resourceDirectoryAccountId = resourceDirectoryAccountId;
+            return this;
+        }
+
+        /**
+         * <p>The source IP address.</p>
          * 
          * <strong>example:</strong>
          * <p>182.92.XXX.XXX</p>
@@ -171,10 +200,10 @@ public class OperateCommonTargetConfigRequest extends Request {
         }
 
         /**
-         * <p>The parameters for configuring proactive defense on servers. The following parameters are included:</p>
+         * <p>The parameters for configuring proactive defense for servers. This includes the following parameters:</p>
          * <ul>
-         * <li><strong>targetType</strong>: the dimension of the defense configuration. Currently, only the UUID dimension is supported. Fixed value: <strong>uuid</strong>.</li>
-         * <li><strong>target</strong>: the UUID of the server for which you want to configure proactive defense.</li>
+         * <li><strong>targetType</strong>: the dimension of the defense configuration. Currently, only the UUID dimension is supported. Set the value to <strong>uuid</strong>.</li>
+         * <li><strong>target</strong>: the UUID of the server for which you want to configure defense settings</li>
          * <li><strong>flag</strong>: specifies whether to enable or disable proactive defense for the server. Valid values: <strong>add</strong> (enable) and <strong>del</strong> (disable).</li>
          * </ul>
          * <p>This parameter is required.</p>
@@ -195,11 +224,11 @@ public class OperateCommonTargetConfigRequest extends Request {
         }
 
         /**
-         * <p>The Asset Type of the target. Valid values:</p>
+         * <p>The target asset type. Valid values:</p>
          * <ul>
-         * <li><strong>uuid</strong>: server UUID.</li>
-         * <li><strong>Cluster</strong>: cluster ID.</li>
-         * <li><strong>image_repo</strong>: image repository name.</li>
+         * <li><strong>uuid</strong>: the server UUID</li>
+         * <li><strong>Cluster</strong>: the cluster ID</li>
+         * <li><strong>image_repo</strong>: the image repository name</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -214,17 +243,17 @@ public class OperateCommonTargetConfigRequest extends Request {
         /**
          * <p>The switch type. Valid values:</p>
          * <ul>
-         * <li><strong>alidetect-scan-enable</strong>: local file detection that performs detection only locally.</li>
-         * <li><strong>ACTION-TRIAL-PERMISSION</strong>: ActionTrail data delivery.</li>
-         * <li><strong>alidetect</strong>: local file detection engine.</li>
-         * <li><strong>container_prevent_escape</strong>: container escape prevention.</li>
-         * <li><strong>image_repo</strong>: repository image scanning.</li>
-         * <li><strong>proc_filter_switch</strong>: log filtering.</li>
-         * <li><strong>agentless</strong>: agentless detection.</li>
-         * <li><strong>rasp</strong>: application protection.</li>
-         * <li><strong>sensitiveFile</strong>: sensitive information scanning.</li>
-         * <li><strong>aliscriptengine</strong>: deep detection engine.</li>
-         * <li><strong>containerNetwork</strong>: container visualization.</li>
+         * <li><strong>alidetect-scan-enable</strong>: local-only file detection</li>
+         * <li><strong>ACTION-TRIAL-PERMISSION</strong>: ActionTrail data delivery</li>
+         * <li><strong>alidetect</strong>: the local file detection engine</li>
+         * <li><strong>container_prevent_escape</strong>: container escape prevention</li>
+         * <li><strong>image_repo</strong>: repository image scanning</li>
+         * <li><strong>proc_filter_switch</strong>: log filtering</li>
+         * <li><strong>agentless</strong>: agentless detection</li>
+         * <li><strong>rasp</strong>: application protection</li>
+         * <li><strong>sensitiveFile</strong>: sensitive information scanning</li>
+         * <li><strong>aliscriptengine</strong>: the deep detection engine</li>
+         * <li><strong>containerNetwork</strong>: container visualization</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

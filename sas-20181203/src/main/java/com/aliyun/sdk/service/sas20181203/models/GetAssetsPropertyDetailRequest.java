@@ -190,7 +190,7 @@ public class GetAssetsPropertyDetailRequest extends Request {
          * <ul>
          * <li><strong>lkm</strong>: kernel module</li>
          * <li><strong>autorun</strong>: startup item</li>
-         * <li><strong>web_server</strong>: web site.</li>
+         * <li><strong>web_server</strong>: web site</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -216,9 +216,9 @@ public class GetAssetsPropertyDetailRequest extends Request {
         }
 
         /**
-         * <p>The aggregation item name of the Asset Fingerprints to query.</p>
+         * <p>The name of the aggregation item for Asset Fingerprints to query.</p>
          * <blockquote>
-         * <p>Call the <a href="~~GetAssetsPropertyItem~~">GetAssetsPropertyItem</a> operation to obtain this parameter.</p>
+         * <p>Invoke the <a href="~~GetAssetsPropertyItem~~">GetAssetsPropertyItem</a> operation to obtain this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -231,10 +231,10 @@ public class GetAssetsPropertyDetailRequest extends Request {
         }
 
         /**
-         * <p>The language type of the request and response messages. Valid values:</p>
+         * <p>The language of the request and response. Valid values:</p>
          * <ul>
          * <li><strong>zh</strong>: Chinese</li>
-         * <li><strong>en</strong>: English.</li>
+         * <li><strong>en</strong>: English</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -247,9 +247,9 @@ public class GetAssetsPropertyDetailRequest extends Request {
         }
 
         /**
-         * <p>The token that marks the starting position for the query. Leave this parameter empty to query from the beginning.</p>
+         * <p>The token that marks the starting position of the current read operation. If this parameter is left empty, the read operation starts from the beginning.</p>
          * <blockquote>
-         * <p>Do not specify this parameter for the first call. The response includes the NextToken value for the next call. Each subsequent response contains the NextToken value for the following call.</p>
+         * <p>You do not need to specify this parameter for the first call. The response to the first call contains the NextToken value for the second call, and the response to each subsequent call contains the NextToken value for the next call.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -262,9 +262,9 @@ public class GetAssetsPropertyDetailRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries per page for a paging query. Default value: 20. If you leave this parameter empty, 20 entries are returned per page by default.</p>
+         * <p>The maximum number of entries to return on each page in a paged query. Default value: 20. If this parameter is left empty, 20 entries are returned on each page during paging.</p>
          * <blockquote>
-         * <p>Do not leave PageSize empty.</p>
+         * <p>Do not leave this parameter empty.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -277,7 +277,7 @@ public class GetAssetsPropertyDetailRequest extends Request {
         }
 
         /**
-         * <p>The server name or IP address.</p>
+         * <p>The name or IP address of the server.</p>
          * 
          * <strong>example:</strong>
          * <p>1.2.XX.XX</p>
@@ -298,10 +298,10 @@ public class GetAssetsPropertyDetailRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to use the NextToken method to retrieve the vulnerability list. If this parameter is used, TotalCount is no longer returned. Valid values:</p>
+         * <p>Specifies whether to use the NextToken method to retrieve list data. If you use this parameter, TotalCount is not returned. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: Use the NextToken method.</li>
-         * <li><strong>false</strong>: Do not use the NextToken method.</li>
+         * <li><strong>true</strong>: uses the NextToken method.</li>
+         * <li><strong>false</strong>: does not use the NextToken method.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -390,22 +390,13 @@ public class GetAssetsPropertyDetailRequest extends Request {
             /**
              * <p>The name of the search criterion. Valid values:</p>
              * <ul>
-             * <li><strong>remarkItemName</strong>: the aggregation item name of Asset Fingerprints. Fuzzy match is supported.</li>
+             * <li><strong>remarkItemName</strong>: the name of the aggregation item for Asset Fingerprints. Fuzzy match is supported.</li>
              * </ul>
              * <blockquote>
              * <ul>
-             * <li><ul>
-             * <li>When <strong>Biz</strong> is set to <strong>web_server</strong>, <strong>remarkItemName</strong> indicates the domain name.</li>
-             * </ul>
-             * </li>
-             * <li><ul>
-             * <li>When <strong>Biz</strong> is set to <strong>lkm</strong>, <strong>remarkItemName</strong> indicates the module name.</li>
-             * </ul>
-             * </li>
-             * <li><ul>
-             * <li>When <strong>Biz</strong> is set to <strong>autorun</strong>, <strong>remarkItemName</strong> indicates the startup item path.</li>
-             * </ul>
-             * </li>
+             * <li>If <strong>Biz</strong> is set to <strong>web_server</strong>, <strong>remarkItemName</strong> specifies the domain name.</li>
+             * <li>If <strong>Biz</strong> is set to <strong>lkm</strong>, <strong>remarkItemName</strong> specifies the module name.</li>
+             * <li>If <strong>Biz</strong> is set to <strong>autorun</strong>, <strong>remarkItemName</strong> specifies the path of the startup item.</li>
              * </ul>
              * </blockquote>
              * 

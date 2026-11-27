@@ -285,10 +285,10 @@ public class ListAttackPathEventResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The sensitive asset flag. Valid values:</p>
+             * <p>Indicates whether the asset is sensitive. Valid values:</p>
              * <ul>
-             * <li><strong>0</strong>: non-sensitive asset</li>
-             * <li><strong>1</strong>: sensitive asset</li>
+             * <li><strong>0</strong>: The asset is not sensitive.</li>
+             * <li><strong>1</strong>: The asset is sensitive.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -490,10 +490,10 @@ public class ListAttackPathEventResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The sensitive asset flag. Valid values:</p>
+             * <p>Indicates whether the asset is sensitive. Valid values:</p>
              * <ul>
-             * <li><strong>0</strong>: non-sensitive asset</li>
-             * <li><strong>1</strong>: sensitive asset</li>
+             * <li><strong>0</strong>: The asset is not sensitive.</li>
+             * <li><strong>1</strong>: The asset is sensitive.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -666,7 +666,7 @@ public class ListAttackPathEventResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The destination asset.</p>
+             * <p>The end asset.</p>
              */
             public Builder dstAsset(DstAsset dstAsset) {
                 this.dstAsset = dstAsset;
@@ -685,7 +685,7 @@ public class ListAttackPathEventResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp of the latest detection. Unit: milliseconds.</p>
+             * <p>The timestamp when the event was last detected. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1742869699000</p>
@@ -751,7 +751,7 @@ public class ListAttackPathEventResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The source asset.</p>
+             * <p>The start asset.</p>
              */
             public Builder srcAsset(SrcAsset srcAsset) {
                 this.srcAsset = srcAsset;
@@ -844,7 +844,7 @@ public class ListAttackPathEventResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of entries returned on the current page in a paging query.</p>
+             * <p>The number of entries returned on the current page for a paging query.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>
@@ -855,7 +855,7 @@ public class ListAttackPathEventResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The page number of the current page in a paging query.</p>
+             * <p>The current page number for a paging query.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>

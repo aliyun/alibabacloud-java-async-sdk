@@ -108,7 +108,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>When you call this operation, the service connects to and verifies the target image registry. Make sure that the image registry address is accessible and that the username and password are valid.</p>
+     * <p>When you call this operation, the service connects to and verifies the target image repository. Make sure that the image repository address is accessible and the username and password are valid.</p>
      * 
      * @param request the request parameters of AddPrivateRegistry  AddPrivateRegistryRequest
      * @return AddPrivateRegistryResponse
@@ -131,6 +131,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AddPublishBatchResponse> addPublishBatch(AddPublishBatchRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>调用前需确保当前账号已开通容器文件防御模块，可通过 DescribeVersionConfig 返回的 IsNewContainerVersion 字段确认；未开通该模块时本接口返回错误码 -107。</p>
+     * 
      * @param request the request parameters of AddSasContainerWebDefenseRule  AddSasContainerWebDefenseRuleRequest
      * @return AddSasContainerWebDefenseRuleResponse
      */
@@ -225,7 +228,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Modifies the configuration of an existing check policy. This operation only modifies policies and does not create new ones. Breaking change: If any multi-policy field (such as StrategyName, Frequency, or DaysOfMonth) is provided, ConfigId is required. If ConfigId is missing, the system returns IllegalParam (paramName=configId). If ConfigId is not provided and no system default policy exists under the account, the system no longer silently creates a policy and returns success. Instead, it returns NoDefaultStrategy. In this case, use CreateCheckConfig to create a policy. If Frequency is not provided, the current value of the policy is retained. If Frequency is provided, time window parameters must also be provided. The time window supports two sets of parameters: hour-level (StartTime and EndTime) and second-level (StartTimeSeconds and EndTimeSeconds). If both sets are provided, the second-level parameters take precedence. If neither set is provided, the current value of the policy is retained. The frequency of the system default policy (ConfigId=default) is always 6HOURLY and cannot be switched. The system only accepts 6HOURLY and four on-the-hour time windows for requests to the default policy, and will deny requests with multi-policy frequencies or second-level parameters. The ConfigId in the response returns the actual ID of the modified policy. Timed scheduling will execute tasks sequentially by second within the same minute, and the concurrency is 1. During periods of high concurrency, the system may skip and not execute some policies in the current run without makeup runs on the same day. Callers that have strong consistency requirements for the time to execute should avoid peak hours.</p>
+     * <p>Modifies the configuration of an existing check policy. This operation only modifies policies and does not create new ones. Breaking change: If any multi-policy field (such as StrategyName, Frequency, or DaysOfMonth) is provided, ConfigId is required. If ConfigId is missing, the IllegalParam error (paramName=configId) is returned. If ConfigId is not provided and no system default policy exists under the account, the system no longer silently creates a policy and returns success. Instead, it returns the NoDefaultStrategy error. In this case, you must invoke the CreateCheckConfig operation to create a policy. If Frequency is not provided, the current value of the policy is retained. If Frequency is provided, time window parameters must also be provided. The time window supports two sets of parameters: hour-level (StartTime and EndTime) and second-level (StartTimeSeconds and EndTimeSeconds). If both sets are provided, the second-level parameters take precedence. If neither set is provided, the current value of the policy is retained. The frequency of the system default policy (ConfigId=default) is always 6HOURLY and cannot be changed. Requests for the default policy only accept 6HOURLY and four hourly time windows. The system will deny requests with multi-policy frequencies or second-level parameters. The ConfigId in the response returns the actual ID of the modified policy. Timed schedules execute sequentially by the second within the same minute with a concurrency of 1. During high concurrency periods, the system may skip the current execution of some policies without makeup runs on the same day. Callers with strong consistency requirements for execution time should avoid concentrated periods such as hourly marks.</p>
      * 
      * @param request the request parameters of ChangeCheckConfig  ChangeCheckConfigRequest
      * @return ChangeCheckConfigResponse
@@ -383,6 +386,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateCustomBlockRecordResponse> createCustomBlockRecord(CreateCustomBlockRecordRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>调用本接口前，需先调用 DescribeCustomizedDictUploadInfo 获取字典文件上传信息（Host、Key 及临时访问凭证），将弱口令字典文件上传至对应 OSS 地址，再调用本接口完成入库。入库后的字典可通过 DescribeCustomizedDict 查询、通过 DeleteCustomizedDict 删除。</p>
+     * 
      * @param request the request parameters of CreateCustomizedDict  CreateCustomizedDictRequest
      * @return CreateCustomizedDictResponse
      */
@@ -403,19 +409,19 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Initiates deep analysis for a specified file and streams the progress of each analysis phase in real time by using Server-Sent Events (SSE).
-     * [Input parameters] You must provide at least one of the Hash and EventId parameters. If EventId is provided, the file hash is preferentially parsed from the corresponding alert details. Otherwise, the provided Hash (MD5 or SHA-256) is used. The Source parameter identifies the call source and is used for commercial verification based on the source.
-     * [Response] The response is of the text/event-stream type. The server pushes events sequentially based on the processing phase. Valid values for the event name (event):</p>
+     * <p>Initiates a deep analysis of a specified malicious file and streams the progress of each analysis stage in real time by using Server-Sent Events (SSE).
+     * [Input parameters] You must provide at least one of the Hash and EventId parameters. If EventId is provided, the file hash is preferentially parsed from the details of the corresponding alert. Otherwise, the provided Hash parameter (MD5 or SHA-256) is used. The Source parameter identifies the call source and is used for commercial verification based on the source.
+     * [Response] The response is of the text/event-stream type. The server pushes events sequentially based on the processing stages. Valid values for the event name (event):</p>
      * <ul>
      * <li>accepted: The request is accepted.</li>
      * <li>authorized: The purchase verification for the source is passed.</li>
      * <li>alertResolved: The file hash is parsed from the alert or input parameters.</li>
      * <li>fileReady: The file download link is ready.</li>
      * <li>dispatched: The file is delivered to the detection engine, including the requestId.</li>
-     * <li>result: The analysis result is matched. This is optional and pushed after asynchronous processing is complete.</li>
-     * <li>done: The current analysis process is complete.</li>
+     * <li>result: The analysis result is hit. This is optional and pushed after the asynchronous task is ready.</li>
+     * <li>done: The current analysis process is completed.</li>
      * <li>error: A processing exception occurs, including the error code and message.
-     * The data body of each event is a JSON object in the data field. The fields vary depending on the event type. For more information, see the response structure description.</li>
+     * The data body of each event is a JSON object in the data field. The fields vary based on the event type. For more information, see the response structure description.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateFileDeepAnalyze  CreateFileDeepAnalyzeRequest
@@ -497,7 +503,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Before creating a management node, make sure that your account has a sufficient honeypot probe quota. Call <a href="~~DescribeHoneyPotAuth~~">DescribeHoneyPotAuth</a> and <a href="~~ListHoneypotNode~~">ListHoneypotNode</a> to query the quota and node usage. If the quota is insufficient, call <a href="~~DeleteHoneypotNode~~">DeleteHoneypotNode</a> to release existing nodes or purchase more probe capacity.</p>
+     * <p>Before you create a management node, ensure that your account has a sufficient honeypot probe quota. You can call the DescribeHoneyPotAuth and ListHoneypotNode operations to query the quota and node usage. If the quota is insufficient, you can call the DeleteHoneypotNode operation to release existing nodes or purchase additional probe capacity.</p>
      * 
      * @param request the request parameters of CreateHoneypotNode  CreateHoneypotNodeRequest
      * @return CreateHoneypotNodeResponse
@@ -518,7 +524,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Before calling this operation to create a probe service, prepare the honeypot infrastructure: purchase a probe authorization quota, and then call the CreateHoneypotNode operation to create a honeypot management node, the CreateHoneypotProbe operation to create a honeypot probe, and the CreateHoneypot operation to create a honeypot instance. After creating these resources, you can call this operation.</p>
+     * <p>Before you call this operation to create a probe service, you must prepare the honeypot infrastructure. Purchase a probe authorization quota, and then call the CreateHoneypotNode operation to create a honeypot management node, the CreateHoneypotProbe operation to create a honeypot probe, and the CreateHoneypot operation to create a honeypot instance in sequence. You can call this operation only after the preceding resources are created.</p>
      * 
      * @param request the request parameters of CreateHoneypotProbeBind  CreateHoneypotProbeBindRequest
      * @return CreateHoneypotProbeBindResponse
@@ -644,6 +650,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateRdDefaultSyncListResponse> createRdDefaultSyncList(CreateRdDefaultSyncListRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>调用前需确保目标服务器已通过 InstallBackupClient 安装备份客户端，并已完成至少一次备份。备份客户端的在线状态可通过 DescribeBackupClients 查询；SnapshotId、SnapshotHash、VaultId 等参数可通过 DescribeSnapshots 查询已生成的快照获得。</p>
+     * 
      * @param request the request parameters of CreateRestoreJob  CreateRestoreJobRequest
      * @return CreateRestoreJobResponse
      */
@@ -669,10 +678,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>The <strong>ActionTrail data delivery</strong> feature requires Cloud Security Posture Management (CSPM) and security alerting to read ActionTrail data. To use this feature, enable the <strong>ActionTrail data delivery</strong> toggle in the Security Center console and authorize the service-linked role <strong>AliyunServiceRoleForSas</strong> for Security Center. After authorization, ActionTrail data is delivered to the LogStore of Security Center.
-     * For more information about the service-linked role <strong>AliyunServiceRoleForSas</strong> for Security Center, see <a href="https://help.aliyun.com/document_detail/460226.html">Service-linked role for Security Center</a>.</p>
+     * <p>The <strong>ActionTrail data delivery</strong> feature requires authorization for Cloud Security Posture Management (CSPM) and security alerts to read ActionTrail data. Therefore, you must turn on the <strong>ActionTrail data delivery</strong> switch in the Security Center console and authorize the service-linked role for Security Center (<strong>AliyunServiceRoleForSas</strong>) to deliver ActionTrail data to a Logstore in Security Center.
+     * For more information about the <strong>AliyunServiceRoleForSas</strong> service-linked role, see <a href="https://help.aliyun.com/document_detail/460226.html">Service-linked role for Security Center</a>.</p>
      * <h3>Before you begin</h3>
-     * <p>Before calling this operation, enable the <strong>ActionTrail data delivery</strong> toggle. For more information, see <a href="https://help.aliyun.com/document_detail/197302.html">Access control</a>.</p>
+     * <p>Before you call this operation, you must turn on the <strong>ActionTrail data delivery</strong> switch. For more information, see <a href="https://help.aliyun.com/document_detail/197302.html">Access control</a>.</p>
      * 
      * @param request the request parameters of CreateServiceTrail  CreateServiceTrailRequest
      * @return CreateServiceTrailResponse
@@ -1205,7 +1214,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeAppVulScanCycleResponse> describeAppVulScanCycle(DescribeAppVulScanCycleRequest request);
 
     /**
-     * @deprecated OpenAPI DescribeAssetDetailByUuid is deprecated, please use Sas::2018-12-03::GetAssetDetailByUuid instead.  * @description This operation is about to be deprecated. Call the [GetAssetDetailByUuid](~~GetAssetDetailByUuid~~) operation to obtain asset details.
+     * @deprecated OpenAPI DescribeAssetDetailByUuid is deprecated, please use Sas::2018-12-03::GetAssetDetailByUuid instead.  * @description This service will be retired soon. Call the [GetAssetDetailByUuid](~~GetAssetDetailByUuid~~) operation to obtain asset details.
      * 
      * @param request the request parameters of DescribeAssetDetailByUuid  DescribeAssetDetailByUuidRequest
      * @return DescribeAssetDetailByUuidResponse
@@ -1297,7 +1306,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>If you have created anti-ransomware restoration tasks, you can call this operation to query the number of anti-ransomware restoration tasks in the <strong>Restored</strong> and <strong>Restoring</strong> states.</p>
+     * <p>If you have created anti-ransomware restoration tasks, you can call this operation to query the number of anti-ransomware restoration tasks that are <strong>restored</strong> or <strong>restoring</strong>.</p>
      * 
      * @param request the request parameters of DescribeBackupRestoreCount  DescribeBackupRestoreCountRequest
      * @return DescribeBackupRestoreCountResponse
@@ -1569,6 +1578,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeContainerScanConfigResponse> describeContainerScanConfig(DescribeContainerScanConfigRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>调用前需确保当前账号已开通容器服务 ACK 且目标集群已接入云安全中心；未开通 ACK 时本接口返回 AckFailure。</p>
+     * 
      * @param request the request parameters of DescribeContainerServiceK8sClusterKritisStatus  DescribeContainerServiceK8sClusterKritisStatusRequest
      * @return DescribeContainerServiceK8sClusterKritisStatusResponse
      */
@@ -1701,6 +1713,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeDomainCountResponse> describeDomainCount(DescribeDomainCountRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>DomainName 需为已接入云安全中心的域名资产，可通过 DescribeDomainList 查询当前账号的域名资产；资产列表中不存在的域名无法查询到详情。</p>
+     * 
      * @param request the request parameters of DescribeDomainDetail  DescribeDomainDetailRequest
      * @return DescribeDomainDetailResponse
      */
@@ -2124,9 +2139,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Security Center supports scanning container images only in <strong>Enterprise instances</strong> of Container Registry for security risks and provides statistics.</p>
+     * <p>Security Center only supports scanning container images in <strong>Enterprise Edition instances</strong> of Container Registry for security risks and providing statistical data.</p>
      * <blockquote>
-     * <p>Security Center does not support scanning container images in <strong>default instances</strong> of Container Registry for security risks and does not provide statistics for <strong>default instances</strong>.</p>
+     * <p>Security Center does not support scanning container images in <strong>Enterprise instances</strong> of Container Registry for security risks, and does not provide statistical data for <strong>Enterprise instances</strong>.</p>
      * </blockquote>
      * 
      * @param request the request parameters of DescribeImageStatistics  DescribeImageStatisticsRequest
@@ -2163,9 +2178,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This operation queries the installation commands used to manually install the Security Center agent on a server. The query result includes the installation verification code and server-related information. When you need to manually install the Security Center agent on a server, you can call this operation to obtain the manual installation commands.</p>
+     * <p>This operation queries the installation commands for manually installing the Security Center agent on a server. The query result includes the installation verification code and server-related information. When you need to manually install the Security Center agent on a server, you can call this operation to obtain the manual installation commands.</p>
      * <h3>QPS limits</h3>
-     * <p>The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable rate.</p>
+     * <p>The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable frequency.</p>
      * 
      * @param request the request parameters of DescribeInstallCodes  DescribeInstallCodesRequest
      * @return DescribeInstallCodesResponse
@@ -2252,7 +2267,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>The caller must be a resource directory management account or a Security Center delegated administrator account. Before invoking this operation, verify the role of the current account in the resource directory. Member accounts must be configured as delegated administrators by the management account before they can execute management operations.</p>
+     * <p>The caller must be a Resource Directory management account or a delegated administrator account of Security Center. Before calling this operation, verify the role of the current account in the resource directory. Member accounts must be assigned the corresponding delegated administrator identity by the management account before performing management operations.</p>
      * 
      * @param request the request parameters of DescribeMonitorAccounts  DescribeMonitorAccountsRequest
      * @return DescribeMonitorAccountsResponse
@@ -2894,7 +2909,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>If you specify only the Action parameter without specifying any other request parameters, Security Center returns the list of all VPCs regardless of whether honeypot instances are created in the VPCs.</p>
+     * <p>If you specify only the Action parameter in the request and do not specify any other request parameters, Security Center returns all VPCs regardless of whether honeypot instances are created in the VPCs.</p>
      * 
      * @param request the request parameters of DescribeVpcHoneyPotList  DescribeVpcHoneyPotListRequest
      * @return DescribeVpcHoneyPotListResponse
@@ -3119,7 +3134,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Application whitelist is a China-site public preview feature that is no longer open for new applications. Users who have already applied for or are using this feature can call this operation as usual.</p>
+     * <p>The application whitelist feature is in public preview and is no longer available for new applications. Users who have already applied for or are currently using this feature can call this operation as usual.</p>
      * 
      * @param request the request parameters of DescribeWhiteListStrategyStatistics  DescribeWhiteListStrategyStatisticsRequest
      * @return DescribeWhiteListStrategyStatisticsResponse
@@ -3128,7 +3143,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>The application whitelist feature is in public preview. You cannot apply for a trial of the feature. If you applied for a trial of the feature or the feature is in-use, you can call this operation.</p>
+     * <p>The application whitelist feature is in public preview and no longer accepts new applications. Users who have already applied for or are currently using this feature can call this operation as usual.</p>
      * 
      * @param request the request parameters of DescribeWhiteListStrategyUuidCount  DescribeWhiteListStrategyUuidCountRequest
      * @return DescribeWhiteListStrategyUuidCountResponse
@@ -3136,12 +3151,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeWhiteListStrategyUuidCountResponse> describeWhiteListStrategyUuidCount(DescribeWhiteListStrategyUuidCountRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>被测试的钉钉通知配置需已通过 CreateOrUpdateDingTalk 设置通知范围（ConfigList），否则本接口返回 400 错误。</p>
+     * 
      * @param request the request parameters of DingTalkOnlineTest  DingTalkOnlineTestRequest
      * @return DingTalkOnlineTestResponse
      */
     CompletableFuture<DingTalkOnlineTestResponse> dingTalkOnlineTest(DingTalkOnlineTestRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>暴力破解拦截记录由系统在检测到暴力破解攻击时自动生成，无法通过 API 创建；可通过 DescribeBruteForceRecords 查询当前账号已有的记录。CreateCustomBlockRecord 创建的是自定义拦截记录，与暴力破解拦截记录不是同一类数据，不能互相替代。</p>
+     * 
      * @param request the request parameters of DisableBruteForceRecord  DisableBruteForceRecordRequest
      * @return DisableBruteForceRecordResponse
      */
@@ -3154,6 +3175,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DisableCustomBlockRecordResponse> disableCustomBlockRecord(DisableCustomBlockRecordRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>暴力破解拦截记录由系统在检测到真实暴力破解攻击时自动生成，无法通过 API 手动创建；若 DescribeBruteForceRecords 返回空列表，说明当前账号没有可启用的记录。</p>
+     * 
      * @param request the request parameters of EnableBruteForceRecord  EnableBruteForceRecordRequest
      * @return EnableBruteForceRecordResponse
      */
@@ -3167,7 +3191,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Before calling this operation, associate the target instance with a specified blocking rule by calling <a href="~~ModifyCustomBlockRecord~~">ModifyCustomBlockRecord</a>. You can call <a href="~~CreateCustomBlockRecord~~">CreateCustomBlockRecord</a> to create a rule, call <a href="~~DescribeCustomBlockRecords~~">DescribeCustomBlockRecords</a> to query rules, and then perform the association and enablement operations.</p>
+     * <p>Before calling this operation, associate the target instance with a specified blocking rule by calling ModifyCustomBlockRecord. You can call CreateCustomBlockRecord to create a rule and DescribeCustomBlockRecords to query rules before associating and enabling the instance.</p>
      * 
      * @param request the request parameters of EnableCustomInstanceBlockRecord  EnableCustomInstanceBlockRecordRequest
      * @return EnableCustomInstanceBlockRecordResponse
@@ -3176,7 +3200,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You must use the management account of a resource directory or the delegated administrator account of Security Center to call this operation.</p>
+     * <p>You must call this operation by using the management account of a resource directory or the delegated administrator account of Security Center.</p>
      * 
      * @param request the request parameters of EnableServiceAccessResourceDirectory  EnableServiceAccessResourceDirectoryRequest
      * @return EnableServiceAccessResourceDirectoryResponse
@@ -3250,6 +3274,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<FixCheckWarningsResponse> fixCheckWarnings(FixCheckWarningsRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>调用前需已开通容器服务 ACK 并存在可用的 ACK 集群，可通过 DescribeContainerServiceK8sClusters 查询 ACK 集群的 ClusterId。</p>
+     * 
      * @param request the request parameters of GenerateClusterScannerWebhookYaml  GenerateClusterScannerWebhookYamlRequest
      * @return GenerateClusterScannerWebhookYamlResponse
      */
@@ -3262,6 +3289,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GenerateDynamicDictResponse> generateDynamicDict(GenerateDynamicDictRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>If ClusterId is provided, the identity of the discovered multi-cloud cluster for the current tenant is reused. If ClusterId is not provided, the installation information is generated based on the original access method for self-managed clusters.</p>
+     * 
      * @param request the request parameters of GenerateK8sAccessInfo  GenerateK8sAccessInfoRequest
      * @return GenerateK8sAccessInfoResponse
      */
@@ -3302,7 +3332,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Only Alibaba Cloud accounts that have activated the pay-as-you-go billing method for the agentless detection feature of Security Center can call this operation. The UuidList parameter can contain up to 100 UUIDs. Duplicate UUIDs are deduplicated based on the order of their first appearance. The returned Data is keyed by UUID, and the results for multiple resources are not aggregated. RiskMachine, ScanMachine, and LastTaskTime are account-level statistics, and the results for each resource in the same request remain consistent.</p>
+     * <p>Only Alibaba Cloud accounts that have activated the pay-as-you-go billing method for the agentless detection feature of Security Center can call this operation. The UuidList parameter can contain up to 100 UUIDs. Duplicate UUIDs are deduplicated based on the order of their first appearance. The returned Data uses UUIDs as keys and does not aggregate the results of multiple resources. RiskMachine, ScanMachine, and LastTaskTime are account-level statistics, and the results for each resource in the same request remain consistent.</p>
      * 
      * @param request the request parameters of GetAgentlessTaskCountBatch  GetAgentlessTaskCountBatchRequest
      * @return GetAgentlessTaskCountBatchResponse
@@ -3359,7 +3389,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Before calling this operation to retrieve the details of an attack analysis event, call the ListAttackEventInfo operation to obtain a valid attack analysis event ID.</p>
+     * <p>Before calling this operation to retrieve the details of an attack analysis event, you must call the ListAttackEventInfo operation to obtain a valid attack analysis event ID.</p>
      * 
      * @param request the request parameters of GetAttackEventDetail  GetAttackEventDetailRequest
      * @return GetAttackEventDetailResponse
@@ -3742,7 +3772,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves the details of a specified honeypot probe. Before calling this operation, call ListHoneypotProbe to query the probe status. Call this operation only for ready probes whose status is online or installed. Probes in the install_failed or initialing state are unavailable.</p>
+     * <p>Queries the details of a specified honeypot probe. Before you call this operation, call ListHoneypotProbe to query the probe status. Only call this operation for ready probes whose status is online or installed. Probes in the install_failed or initialing state are unavailable.</p>
      * 
      * @param request the request parameters of GetHoneypotProbe  GetHoneypotProbeRequest
      * @return GetHoneypotProbeResponse
@@ -3925,7 +3955,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Call this operation by using the management account of the resource directory or the delegated administrator account of Security Center.</p>
+     * <p>You must call this operation by using the management account of the resource directory or the delegated administrator account of Security Center.</p>
      * 
      * @param request the request parameters of GetRdTree  GetRdTreeRequest
      * @return GetRdTreeResponse
@@ -4146,7 +4176,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>Before installation, ensure that the Security Center agent on your server is online and that your server has Normal access to Alibaba Cloud services.</p>
+     * <p>Before installation, ensure that the Security Center agent on your server is online and that your server can access Alibaba Cloud services over the network.</p>
      * </blockquote>
      * 
      * @param request the request parameters of InstallCloudMonitor  InstallCloudMonitorRequest
@@ -4155,6 +4185,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<InstallCloudMonitorResponse> installCloudMonitor(InstallCloudMonitorRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>调用前需完成以下准备：(1) 通过 CreateHybridProxyCluster 创建混合云代理集群，或通过 DescribeHybridProxyClusterList 查询已有集群，得到 ClusterName；(2) 确认目标机器已安装云安全中心客户端，并通过 DescribeCloudCenterInstances 获取机器 UUID 列表；(3) 通过 DescribeInstallCode 获取客户端安装码。</p>
+     * 
      * @param request the request parameters of InstallHybridProxy  InstallHybridProxyRequest
      * @return InstallHybridProxyResponse
      */
@@ -4180,7 +4213,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Appelez cette opération à l\&quot;aide du compte de gestion du répertoire de ressources ou du compte administrateur délégué de Security Center.</p>
+     * <p>You must use the management account of the resource directory or the delegated administrator account of Security Center to call this operation.</p>
      * 
      * @param request the request parameters of ListAccountsInResourceDirectory  ListAccountsInResourceDirectoryRequest
      * @return ListAccountsInResourceDirectoryResponse
@@ -4201,7 +4234,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Queries the list of assets for agentless scanning.</p>
+     * <p>Queries the list of assets for agentless detection.</p>
      * 
      * @param request the request parameters of ListAgentlessAsset  ListAgentlessAssetRequest
      * @return ListAgentlessAssetResponse
@@ -4666,7 +4699,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Lists K8s access information.</p>
+     * <p>Queries Kubernetes access information.</p>
      * 
      * @param request the request parameters of ListK8sAccessInfo  ListK8sAccessInfoRequest
      * @return ListK8sAccessInfoResponse
@@ -4729,7 +4762,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Currently, only check operation task queries are supported.</p>
+     * <p>Currently, only queries for check operation tasks are supported.</p>
      * 
      * @param request the request parameters of ListOperationProcess  ListOperationProcessRequest
      * @return ListOperationProcessResponse
@@ -4807,8 +4840,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Call this operation by using the management account of the resource directory or the delegated administrator account of Security Center.
-     * Before calling this operation, enable the multi-account security management feature by calling <a href="~~EnableServiceAccessResourceDirectory~~">EnableServiceAccessResourceDirectory</a>. Otherwise, the API returns a ServiceDisable error.</p>
+     * <p>Use the management account of the resource directory or the delegated administrator account of Security Center to call this operation.
+     * Before calling this operation, enable the multi-account management feature by calling <a href="~~EnableServiceAccessResourceDirectory~~">EnableServiceAccessResourceDirectory</a>. Otherwise, the API returns a ServiceDisable error.</p>
      * 
      * @param request the request parameters of ListRdDefaultSyncList  ListRdDefaultSyncListRequest
      * @return ListRdDefaultSyncListResponse
@@ -4960,6 +4993,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListVulGlobalConfigResponse> listVulGlobalConfig(ListVulGlobalConfigRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>调用前需通过 EnableServiceAccessResourceDirectory 开通多账号管理功能，并确保 AccountIds 中的账号已存在于资源目录中，可通过 ListAccountsInResourceDirectory 查询成员账号 ID。</p>
+     * 
      * @param request the request parameters of MarkMonitorAccounts  MarkMonitorAccountsRequest
      * @return MarkMonitorAccountsResponse
      */
@@ -5097,6 +5133,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyConcernNecessityResponse> modifyConcernNecessity(ModifyConcernNecessityRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>修改规则时，需同时提供 <strong>RuleId</strong>（规则的唯一标识）和 <strong>Scope</strong>（规则生效范围），未提供时服务返回 HTTP 400 错误。</p>
+     * 
      * @param request the request parameters of ModifyContainerDefenseRule  ModifyContainerDefenseRuleRequest
      * @return ModifyContainerDefenseRuleResponse
      */
@@ -5264,7 +5303,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>The application whitelist feature is in public preview and is no longer available for new applications. Users who have already applied for or are currently using this feature can call this operation as usual.</p>
+     * <p>The application whitelist feature is in public preview and no longer accepts new applications. Users who have already applied for or are currently using this feature can call this operation normally.</p>
      * 
      * @param request the request parameters of ModifyProcessWhiteList  ModifyProcessWhiteListRequest
      * @return ModifyProcessWhiteListResponse
@@ -5408,6 +5447,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyWebLockDeleteConfigResponse> modifyWebLockDeleteConfig(ModifyWebLockDeleteConfigRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>调用前需确保：目标服务器已安装云安全中心客户端并已接入云安全中心；已购买网页防篡改授权且已通过 BindAuthToMachine 绑定到目标服务器；网页防篡改防护已开启。可通过 DescribeWebLockBindList、DescribeWebLockProcessList 查询绑定关系与被拦截进程，前置条件不满足时本接口返回错误码 -108。</p>
+     * 
      * @param request the request parameters of ModifyWebLockProcessStatus  ModifyWebLockProcessStatusRequest
      * @return ModifyWebLockProcessStatusResponse
      */
@@ -5480,6 +5522,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<OperateAgentClientInstallResponse> operateAgentClientInstall(OperateAgentClientInstallRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>调用前需确保当前账号的云安全中心订阅已包含新版容器防护，可通过 DescribeVersionConfig 返回的 IsNewContainerVersion 字段确认；未开通该模块时本接口返回 -103。</p>
+     * 
      * @param request the request parameters of OperateApplication  OperateApplicationRequest
      * @return OperateApplicationResponse
      */
@@ -5737,6 +5782,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ResetHoneypotResponse> resetHoneypot(ResetHoneypotRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>调用前需确认账户已开通日志后付费模式：可调用 <a href="~~DescribeLogShipperStatus~~">DescribeLogShipperStatus</a> 接口（From 固定传 sas）查询返回的 LogShipperStatus.PostPaidSupportStatus 字段，值为 yes 表示已支持；若为 no，需先在云安全中心控制台开通日志后付费模式后再调用本接口。</p>
+     * 
      * @param request the request parameters of ResetLogShipper  ResetLogShipperRequest
      * @return ResetLogShipperResponse
      */
@@ -5869,6 +5917,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<StartHoneypotResponse> startHoneypot(StartHoneypotRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>调用前需已通过 AddIdcProbe 创建 IDC 探针配置；可通过 DescribeIdcProbeList 查询已有的探针配置列表。</p>
+     * 
      * @param request the request parameters of StartIdcProbeScan  StartIdcProbeScanRequest
      * @return StartIdcProbeScanResponse
      */
@@ -5888,7 +5939,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Before calling this operation, ensure that you have sufficient honeypot probe quota. First, create a management node by calling CreateHoneypotNode, then create a honeypot by calling CreateHoneypot. Wait until the honeypot enters the running state before calling this operation.</p>
+     * <p>Before calling this operation, ensure that you have sufficient honeypot probe quotas. First, call CreateHoneypotNode to create a management node, and then call CreateHoneypot to create a honeypot. Call this operation after the honeypot enters the running state.</p>
      * 
      * @param request the request parameters of StopHoneypot  StopHoneypotRequest
      * @return StopHoneypotResponse
@@ -5929,6 +5980,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UnBindHybridProxyResponse> unBindHybridProxy(UnBindHybridProxyRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>需使用资源目录的管理账号或云安全中心委派管理员账号调用该接口。AccountIds 中的账号需已存在于资源目录中，可通过 ListAccountsInResourceDirectory 查询。首次使用前需通过 EnableServiceAccessResourceDirectory 开通多账号管理功能。</p>
+     * 
      * @param request the request parameters of UnMarkMonitorAccounts  UnMarkMonitorAccountsRequest
      * @return UnMarkMonitorAccountsResponse
      */
@@ -6083,6 +6137,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateHoneypotPresetResponse> updateHoneypotPreset(UpdateHoneypotPresetRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>目标探针需已完成初始化，初始化期间调用本接口会返回 HoneypotProbeNotExist；建议先通过 ListHoneypotProbe 查询探针状态，待初始化完成后再更新。</p>
+     * 
      * @param request the request parameters of UpdateHoneypotProbe  UpdateHoneypotProbeRequest
      * @return UpdateHoneypotProbeResponse
      */
@@ -6149,6 +6206,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateOssScanConfigResponse> updateOssScanConfig(UpdateOssScanConfigRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>调用前需通过 ModifyPostPayModuleSwitch 将按量付费模块开关（PostPayModuleSwitch）中的 POST_HOST 置为 1；若账号已购买包含主机安全的包年包月版本，按量付费与包年包月配置冲突时按量付费不可用，接口返回 ResultCode=7。</p>
+     * 
      * @param request the request parameters of UpdatePostPaidBindRel  UpdatePostPaidBindRelRequest
      * @return UpdatePostPaidBindRelResponse
      */
@@ -6191,12 +6251,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateStrictEventNameResponse> updateStrictEventName(UpdateStrictEventNameRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>调用前需先通过 AddPublishBatch 创建发布批次取得 BatchId；本接口与 AddPublishBatch 均要求账号具备大客户（BigCustomer）资质，可通过 GetCurrentVersionPublish 返回的 Data.BigCustomer 确认。</p>
+     * 
      * @param request the request parameters of UpdateTargetListByBatch  UpdateTargetListByBatchRequest
      * @return UpdateTargetListByBatchResponse
      */
     CompletableFuture<UpdateTargetListByBatchResponse> updateTargetListByBatch(UpdateTargetListByBatchRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>调用前需先通过 ListUnknownThreatDetectMachine 获取服务器 UUID，再通过 AddUnknownThreatDetectProcess 创建进程并取得进程 ID 作为 ProcessId。</p>
+     * 
      * @param request the request parameters of UpdateUnknownThreatDetectProcess  UpdateUnknownThreatDetectProcessRequest
      * @return UpdateUnknownThreatDetectProcessResponse
      */
@@ -6216,7 +6282,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Application whitelist is a China-site public preview feature that no longer accepts new applications. Users who have already applied for or are using this feature can call this operation as usual.</p>
+     * <p>The application whitelist feature is in public preview and is no longer open for new applications. Users who have already applied for or are currently using this feature can call this API operation as usual.</p>
      * 
      * @param request the request parameters of UpdateWhiteListStrategyStatus  UpdateWhiteListStrategyStatusRequest
      * @return UpdateWhiteListStrategyStatusResponse
@@ -6259,11 +6325,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Before calling this operation to upgrade a honeypot management node version, ensure the following prerequisites are met:</p>
+     * <p>Before you call this operation to upgrade the version of a honeypot management node, make sure that the following prerequisites are met:</p>
      * <ol>
-     * <li>A honeypot management node already exists. If no node exists, call the CreateHoneypotNode operation to create one first.</li>
+     * <li>A honeypot management node exists. If no node is available, call the CreateHoneypotNode operation to create one.</li>
      * <li>The probe quota is greater than zero (TotalProbeCount is greater than 0). The probe quota is allocated by purchasing a Security Center honeypot subscription.</li>
-     * <li>You can call the <a href="~~ListHoneypotNode~~">ListHoneypotNode</a> operation to obtain the NodeId of the management node to be upgraded.</li>
+     * <li>You can call the ListHoneypotNode operation to obtain the NodeId of the management node to be upgraded.</li>
      * </ol>
      * 
      * @param request the request parameters of UpgradeHoneypotNode  UpgradeHoneypotNodeRequest
@@ -6279,7 +6345,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Before calling this operation, complete the following steps in order:</p>
+     * <p>Before you call this operation, complete the following steps in sequence:</p>
      * <ol>
      * <li>Call <a href="~~CreateHoneypotNode~~">CreateHoneypotNode</a> to create a management node, or call <a href="~~ListHoneypotNode~~">ListHoneypotNode</a> to query existing nodes and obtain a valid NodeId.</li>
      * <li>Call <a href="~~GetHoneyPotUploadPolicyInfo~~">GetHoneyPotUploadPolicyInfo</a> to obtain the OSS upload credentials, upload policy, and Data.Key.</li>

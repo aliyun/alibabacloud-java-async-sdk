@@ -91,10 +91,10 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the call was successful. Valid values:</p>
+         * <p>The status of the API call. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: The call was successful.</li>
-         * <li><strong>false</strong>: The call failed.</li>
+         * <li><strong>true</strong>: The API call succeeded.</li>
+         * <li><strong>false</strong>: The API call failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -106,7 +106,7 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The details of the trace graph.</p>
+         * <p>The details of the tracing graph.</p>
          */
         public Builder traceInfoDetail(TraceInfoDetail traceInfoDetail) {
             this.traceInfoDetail = traceInfoDetail;
@@ -222,7 +222,7 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The end vertex ID of the edge in the trace graph.</p>
+             * <p>The ID of the end vertex of the edge in the tracing graph.</p>
              * 
              * <strong>example:</strong>
              * <p>a1d1fa39e5345dcef3f9712172cxxxxx</p>
@@ -233,7 +233,7 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start vertex ID of the edge in the trace graph.</p>
+             * <p>The ID of the start vertex of the edge in the tracing graph.</p>
              * 
              * <strong>example:</strong>
              * <p>02b4bf933c8e3bb8b9465eee502xxxxx</p>
@@ -244,7 +244,7 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The point in time.</p>
+             * <p>The point in time. The time is in the YYYY-MM-DD HH:mm:ss format.</p>
              * 
              * <strong>example:</strong>
              * <p>2022-12-21 10:24:42</p>
@@ -255,7 +255,7 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the edge in the trace graph.</p>
+             * <p>The type of the edge in the tracing graph.</p>
              * 
              * <strong>example:</strong>
              * <p>trigger_file_alert</p>
@@ -442,7 +442,7 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Deprecated.</p>
+             * <p><strong>[Deprecated]</strong></p>
              * 
              * <strong>example:</strong>
              * <p>Deprecated</p>
@@ -475,7 +475,7 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Deprecated.</p>
+             * <p><strong>[Deprecated]</strong></p>
              * 
              * <strong>example:</strong>
              * <p>[{&quot;name&quot;:&quot;${logtime}&quot;,&quot;value&quot;:&quot;$!{time}&quot;}]</p>
@@ -519,7 +519,7 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Deprecated.</p>
+             * <p><strong>[Deprecated]</strong></p>
              * 
              * <strong>example:</strong>
              * <p>Deprecated</p>
@@ -554,7 +554,7 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Deprecated.</p>
+             * <p><strong>[Deprecated]</strong></p>
              * 
              * <strong>example:</strong>
              * <p>Deprecated</p>
@@ -665,8 +665,8 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
             /**
              * <p>Indicates whether the edge is directed. Valid values:</p>
              * <ul>
-             * <li><strong>1</strong>: yes</li>
-             * <li><strong>0</strong>: no.</li>
+             * <li><strong>1</strong>: Yes</li>
+             * <li><strong>0</strong>: No</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -711,7 +711,7 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Deprecated.</p>
+             * <p><strong>[Deprecated]</strong></p>
              * 
              * <strong>example:</strong>
              * <p>Deprecated</p>
@@ -805,7 +805,7 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether there is a next page.</p>
+             * <p>Indicates whether more pages are available.</p>
              * 
              * <strong>example:</strong>
              * <p>False</p>
@@ -816,7 +816,7 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the neighbor node. The value is fixed as <strong>alert</strong>.</p>
+             * <p>The type of the neighbor node. The value is fixed to <strong>alert</strong>.</p>
              * 
              * <strong>example:</strong>
              * <p>alert</p>
@@ -949,7 +949,7 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The vertex ID.</p>
+             * <p>The ID of the vertex.</p>
              * 
              * <strong>example:</strong>
              * <p>a1d1fa39e5345dcef3f9712172xxxxxx</p>
@@ -971,7 +971,7 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about neighbor nodes.</p>
+             * <p>The information about the neighbor nodes.</p>
              */
             public Builder neighborList(java.util.List<NeighborList> neighborList) {
                 this.neighborList = neighborList;
@@ -979,7 +979,7 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The point in time.</p>
+             * <p>The point in time. The time is in the YYYY-MM-DD HH:mm:ss format.</p>
              * 
              * <strong>example:</strong>
              * <p>2022-12-21 10:24:42</p>
@@ -1086,7 +1086,7 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The edge information in the trace graph.</p>
+             * <p>The edge information in the tracing graph.</p>
              */
             public Builder edgeList(java.util.List<EdgeList> edgeList) {
                 this.edgeList = edgeList;
@@ -1094,7 +1094,7 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The metadata configuration of vertex types.</p>
+             * <p>The metadata configuration information of the vertex type.</p>
              */
             public Builder entityTypeList(java.util.List<EntityTypeList> entityTypeList) {
                 this.entityTypeList = entityTypeList;
@@ -1102,7 +1102,7 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The metadata configuration of edge types.</p>
+             * <p>The metadata configuration information of the edge type.</p>
              */
             public Builder relationTypeList(java.util.List<RelationTypeList> relationTypeList) {
                 this.relationTypeList = relationTypeList;
@@ -1110,7 +1110,7 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about all vertices in the trace graph.</p>
+             * <p>The information about all vertices in the tracing graph.</p>
              */
             public Builder vertexList(java.util.List<VertexList> vertexList) {
                 this.vertexList = vertexList;

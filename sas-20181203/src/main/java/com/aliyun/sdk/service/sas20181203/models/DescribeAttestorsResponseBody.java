@@ -80,7 +80,7 @@ public class DescribeAttestorsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The witnesses.</p>
+         * <p>The attestors.</p>
          */
         public Builder attestors(java.util.List<Attestors> attestors) {
             this.attestors = attestors;
@@ -96,7 +96,7 @@ public class DescribeAttestorsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>7BC55C8F-226E-5AF5-9A2C-2EC43864****</p>
@@ -226,7 +226,7 @@ public class DescribeAttestorsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version ID of the Key Management Service (KMS) key.</p>
+             * <p>The ID of the KMS key version.</p>
              * 
              * <strong>example:</strong>
              * <p>8d7c9c91-57ce-4cf4-a959-1e700e13****</p>
@@ -237,7 +237,7 @@ public class DescribeAttestorsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the witness.</p>
+             * <p>The name of the attestor.</p>
              * 
              * <strong>example:</strong>
              * <p>attestor-123</p>
@@ -248,7 +248,7 @@ public class DescribeAttestorsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description.</p>
+             * <p>The remarks.</p>
              * 
              * <strong>example:</strong>
              * <p>attestor</p>
@@ -355,7 +355,7 @@ public class DescribeAttestorsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The page number.</p>
+             * <p>The page number of the current page returned in a paging query.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -366,7 +366,7 @@ public class DescribeAttestorsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of entries per page.</p>
+             * <p>The maximum number of entries returned on each page in a paging query.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>
@@ -377,7 +377,7 @@ public class DescribeAttestorsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of entries returned.</p>
+             * <p>The total number of entries.</p>
              * 
              * <strong>example:</strong>
              * <p>122</p>

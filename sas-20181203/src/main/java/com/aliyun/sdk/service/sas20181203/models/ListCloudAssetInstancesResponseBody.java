@@ -414,10 +414,10 @@ public class ListCloudAssetInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether the cloud asset has security alerts. Valid values:</p>
+             * <p>Indicates whether security alerts exist for the cloud asset. Valid values:</p>
              * <ul>
-             * <li><strong>YES</strong>: The cloud asset has security alerts.</li>
-             * <li><strong>NO</strong>: The cloud asset does not have security alerts.</li>
+             * <li><strong>YES</strong>: Security alerts exist.</li>
+             * <li><strong>NO</strong>: No security alerts exist.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -429,32 +429,33 @@ public class ListCloudAssetInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The subtype of the cloud product, which corresponds to the asset type. Valid values:</p>
+             * <p>The subtype of the cloud service.
+             * The asset type and subtype. Valid values:</p>
              * <ul>
-             * <li><p><strong>0</strong>: ECS server </p>
+             * <li><p><strong>0</strong>: Elastic Compute Service (ECS) server</p>
              * <ul>
              * <li><strong>0</strong>: instance</li>
-             * <li><strong>1</strong>: cloud disk (storage)</li>
+             * <li><strong>1</strong>: cloud disk</li>
              * <li><strong>2</strong>: security group</li>
              * </ul>
              * </li>
-             * <li><p><strong>1</strong>: Server Load Balancer (SLB)</p>
+             * <li><p><strong>1</strong>: load balancing</p>
              * <ul>
-             * <li><strong>0</strong>: Server Load Balancer (SLB)</li>
+             * <li><strong>0</strong>: load balancing</li>
              * <li><strong>1</strong>: Application Load Balancer (ALB)</li>
              * </ul>
              * </li>
-             * <li><p><strong>3</strong>: ApsaraDB RDS</p>
+             * <li><p><strong>3</strong>: ApsaraDB RDS database</p>
              * <ul>
              * <li><strong>0</strong>: instance</li>
              * </ul>
              * </li>
-             * <li><p><strong>4</strong>: ApsaraDB for MongoDB</p>
+             * <li><p><strong>4</strong>: ApsaraDB for MongoDB database</p>
              * <ul>
              * <li><strong>0</strong>: instance</li>
              * </ul>
              * </li>
-             * <li><p><strong>5</strong>: ApsaraDB for Tair (Redis-compatible)</p>
+             * <li><p><strong>5</strong>: Tair (Redis® OSS-Compatible) database</p>
              * <ul>
              * <li><strong>0</strong>: instance</li>
              * </ul>
@@ -483,12 +484,12 @@ public class ListCloudAssetInstancesResponseBody extends TeaModel {
              * <li><strong>0</strong>: trail</li>
              * </ul>
              * </li>
-             * <li><p><strong>12</strong>: CDN</p>
+             * <li><p><strong>12</strong>: Alibaba Cloud CDN</p>
              * <ul>
              * <li><strong>0</strong>: instance</li>
              * </ul>
              * </li>
-             * <li><p><strong>13</strong>: SSL Certificates Service</p>
+             * <li><p><strong>13</strong>: Certificate Management Service</p>
              * <ul>
              * <li><strong>0</strong>: certificate</li>
              * </ul>
@@ -508,22 +509,22 @@ public class ListCloudAssetInstancesResponseBody extends TeaModel {
              * <li><strong>0</strong>: domain name</li>
              * </ul>
              * </li>
-             * <li><p><strong>18</strong>: OSS</p>
+             * <li><p><strong>18</strong>: Object Storage Service (OSS)</p>
              * <ul>
              * <li><strong>0</strong>: bucket</li>
              * </ul>
              * </li>
-             * <li><p><strong>19</strong>: PolarDB</p>
+             * <li><p><strong>19</strong>: cloud-native relational database PolarDB</p>
              * <ul>
              * <li><strong>0</strong>: cluster</li>
              * </ul>
              * </li>
-             * <li><p><strong>20</strong>: ApsaraDB for PostgreSQL</p>
+             * <li><p><strong>20</strong>: ApsaraDB RDS for PostgreSQL database</p>
              * <ul>
              * <li><strong>0</strong>: instance</li>
              * </ul>
              * </li>
-             * <li><p><strong>21</strong>: Microservices Engine (MSE)</p>
+             * <li><p><strong>21</strong>: Microservices Engine</p>
              * <ul>
              * <li><strong>0</strong>: cluster</li>
              * </ul>
@@ -538,12 +539,12 @@ public class ListCloudAssetInstancesResponseBody extends TeaModel {
              * <li><strong>0</strong>: instance</li>
              * </ul>
              * </li>
-             * <li><p><strong>24</strong>: EIP</p>
+             * <li><p><strong>24</strong>: Elastic IP Address (EIP)</p>
              * <ul>
              * <li><strong>0</strong>: Anycast EIP</li>
              * </ul>
              * </li>
-             * <li><p><strong>25</strong>: EIAM</p>
+             * <li><p><strong>25</strong>: IDaaS EIAM</p>
              * <ul>
              * <li><strong>0</strong>: instance</li>
              * </ul>
@@ -582,28 +583,28 @@ public class ListCloudAssetInstancesResponseBody extends TeaModel {
             /**
              * <p>The type of the asset. Valid values:</p>
              * <ul>
-             * <li><strong>0</strong>: ECS server</li>
-             * <li><strong>1</strong>: Server Load Balancer (SLB)</li>
-             * <li><strong>3</strong>: ApsaraDB RDS</li>
-             * <li><strong>4</strong>: ApsaraDB for MongoDB</li>
-             * <li><strong>5</strong>: ApsaraDB for Tair (Redis-compatible)</li>
+             * <li><strong>0</strong>: Elastic Compute Service (ECS) server</li>
+             * <li><strong>1</strong>: load balancing</li>
+             * <li><strong>3</strong>: ApsaraDB RDS database</li>
+             * <li><strong>4</strong>: ApsaraDB for MongoDB database</li>
+             * <li><strong>5</strong>: Tair (Redis® OSS-Compatible) database</li>
              * <li><strong>6</strong>: Container Registry</li>
              * <li><strong>8</strong>: Container Service for Kubernetes (ACK)</li>
              * <li><strong>9</strong>: Virtual Private Cloud (VPC)</li>
              * <li><strong>11</strong>: ActionTrail</li>
-             * <li><strong>12</strong>: Content Delivery Network (CDN)</li>
-             * <li><strong>13</strong>: SSL Certificates Service</li>
+             * <li><strong>12</strong>: Alibaba Cloud CDN</li>
+             * <li><strong>13</strong>: Certificate Management Service</li>
              * <li><strong>14</strong>: Yunxiao</li>
              * <li><strong>16</strong>: Anti-DDoS</li>
              * <li><strong>17</strong>: Web Application Firewall (WAF)</li>
              * <li><strong>18</strong>: Object Storage Service (OSS)</li>
-             * <li><strong>19</strong>: PolarDB</li>
-             * <li><strong>20</strong>: ApsaraDB for PostgreSQL</li>
-             * <li><strong>21</strong>: Microservices Engine (MSE)</li>
+             * <li><strong>19</strong>: cloud-native relational database PolarDB</li>
+             * <li><strong>20</strong>: ApsaraDB RDS for PostgreSQL database</li>
+             * <li><strong>21</strong>: Microservices Engine</li>
              * <li><strong>22</strong>: Apsara File Storage NAS</li>
              * <li><strong>23</strong>: Data Security Center (DSC)</li>
              * <li><strong>24</strong>: Elastic IP Address (EIP)</li>
-             * <li><strong>25</strong>: Elastic Identity and Access Management (EIAM)</li>
+             * <li><strong>25</strong>: IDaaS EIAM</li>
              * <li><strong>26</strong>: PolarDB-X</li>
              * <li><strong>27</strong>: Elasticsearch</li>
              * </ul>
@@ -683,7 +684,7 @@ public class ListCloudAssetInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the region where the asset instance resides.</p>
+             * <p>The ID of the region to which the asset instance belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hanghzou</p>
@@ -694,10 +695,10 @@ public class ListCloudAssetInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the cloud asset has security risks. Valid values:</p>
+             * <p>Indicates whether security risks exist for the cloud asset. Valid values:</p>
              * <ul>
-             * <li><strong>YES</strong>: The cloud asset has security risks.</li>
-             * <li><strong>NO</strong>: The cloud asset does not have security risks.</li>
+             * <li><strong>YES</strong>: Security risks exist.</li>
+             * <li><strong>NO</strong>: No security risks exist.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -750,12 +751,12 @@ public class ListCloudAssetInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The asset vendor. Valid values:</p>
+             * <p>The vendor of the asset. Valid values:</p>
              * <ul>
              * <li><strong>0</strong>: Alibaba Cloud asset</li>
-             * <li><strong>1</strong>: non-Alibaba Cloud asset</li>
+             * <li><strong>1</strong>: non-cloud asset</li>
              * <li><strong>2</strong>: IDC asset</li>
-             * <li><strong>3</strong>, <strong>4</strong>, <strong>5</strong>, and <strong>7</strong>: other cloud asset</li>
+             * <li><strong>3</strong>, <strong>4</strong>, <strong>5</strong>, <strong>7</strong>: other cloud assets</li>
              * <li><strong>8</strong>: lightweight asset</li>
              * </ul>
              * 
@@ -886,7 +887,7 @@ public class ListCloudAssetInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The page number of the current page in a paged query.</p>
+             * <p>The page number of the current page during paging in a paged query.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -897,7 +898,7 @@ public class ListCloudAssetInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of entries per page.</p>
+             * <p>The number of entries returned per page.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>

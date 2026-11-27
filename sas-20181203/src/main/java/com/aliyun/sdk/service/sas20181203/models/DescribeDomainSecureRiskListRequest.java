@@ -87,7 +87,7 @@ public class DescribeDomainSecureRiskListRequest extends Request {
         } 
 
         /**
-         * <p>The identifier of the request source. Set the value to sas.</p>
+         * <p>The source identifier of the request. Set the value to sas.</p>
          * 
          * <strong>example:</strong>
          * <p>sas</p>
@@ -99,10 +99,10 @@ public class DescribeDomainSecureRiskListRequest extends Request {
         }
 
         /**
-         * <p>The language type of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
          * <ul>
          * <li><strong>zh</strong>: Chinese</li>
-         * <li><strong>en</strong>: English.</li>
+         * <li><strong>en</strong>: English</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -115,7 +115,7 @@ public class DescribeDomainSecureRiskListRequest extends Request {
         }
 
         /**
-         * <p>The IP address of the access source.</p>
+         * <p>The source IP address.</p>
          * 
          * <strong>example:</strong>
          * <p>124.78.<em>.</em></p>

@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ModifyClientConfSetupRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceDirectoryAccountId")
+    private Long resourceDirectoryAccountId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StrategyConfig")
     private String strategyConfig;
 
@@ -33,6 +37,7 @@ public class ModifyClientConfSetupRequest extends Request {
 
     private ModifyClientConfSetupRequest(Builder builder) {
         super(builder);
+        this.resourceDirectoryAccountId = builder.resourceDirectoryAccountId;
         this.strategyConfig = builder.strategyConfig;
         this.strategyTag = builder.strategyTag;
         this.strategyTagValue = builder.strategyTagValue;
@@ -49,6 +54,13 @@ public class ModifyClientConfSetupRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return resourceDirectoryAccountId
+     */
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
     }
 
     /**
@@ -73,6 +85,7 @@ public class ModifyClientConfSetupRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyClientConfSetupRequest, Builder> {
+        private Long resourceDirectoryAccountId; 
         private String strategyConfig; 
         private String strategyTag; 
         private String strategyTagValue; 
@@ -83,16 +96,32 @@ public class ModifyClientConfSetupRequest extends Request {
 
         private Builder(ModifyClientConfSetupRequest request) {
             super(request);
+            this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
             this.strategyConfig = request.strategyConfig;
             this.strategyTag = request.strategyTag;
             this.strategyTagValue = request.strategyTagValue;
         } 
 
         /**
-         * <p>The configurations of the Security Center agent.</p>
+         * <p>The ID of the resource folder member accounts (Alibaba Cloud account).</p>
+         * <blockquote>
+         * <p>You can invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to retrieve this parameter.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1766185894104675</p>
+         */
+        public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+            this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
+            this.resourceDirectoryAccountId = resourceDirectoryAccountId;
+            return this;
+        }
+
+        /**
+         * <p>The client policy configuration specified by the user.</p>
          * <ul>
-         * <li>cpu: the maximum CPU utilization that can be occupied by the Security Center agent on the server</li>
-         * <li>mem: the maximum memory usage that can be occupied by the Security Center agent on the server</li>
+         * <li>cpu: the maximum CPU percentage of host resources occupied by the client.</li>
+         * <li>mem: the maximum memory size of host resources occupied by the client.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -107,7 +136,7 @@ public class ModifyClientConfSetupRequest extends Request {
         }
 
         /**
-         * <p>The type of the tag.</p>
+         * <p>The policy tag type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -120,7 +149,7 @@ public class ModifyClientConfSetupRequest extends Request {
         }
 
         /**
-         * <p>The value of the tag. Valid values:</p>
+         * <p>The client policy tag value. Valid values:</p>
          * <ul>
          * <li>major</li>
          * <li>advanced</li>

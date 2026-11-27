@@ -88,7 +88,7 @@ public class DescribePropertyTypeScaItemResponseBody extends TeaModel {
         }
 
         /**
-         * <p>An array that consists of the middleware types.</p>
+         * <p>The middleware types.</p>
          */
         public Builder propertyTypeItems(java.util.List<PropertyTypeItems> propertyTypeItems) {
             this.propertyTypeItems = propertyTypeItems;
@@ -191,7 +191,7 @@ public class DescribePropertyTypeScaItemResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of entries returned on the current page.</p>
+             * <p>The number of middleware types returned on the current page.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>
@@ -202,7 +202,7 @@ public class DescribePropertyTypeScaItemResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The page number of the returned page.</p>
+             * <p>The current page number for paging in a paged query.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -213,7 +213,7 @@ public class DescribePropertyTypeScaItemResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of entries returned per page.</p>
+             * <p>The number of middleware types returned per page for paging in a paged query.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>
@@ -224,7 +224,7 @@ public class DescribePropertyTypeScaItemResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of entries returned.</p>
+             * <p>The total number of middleware types returned.</p>
              * 
              * <strong>example:</strong>
              * <p>69</p>
@@ -305,15 +305,15 @@ public class DescribePropertyTypeScaItemResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the middleware. Valid values:</p>
+             * <p>The type of the middleware. Valid values:  </p>
              * <ul>
-             * <li><strong>system_service</strong>: system service</li>
-             * <li><strong>software_library</strong>: software library</li>
-             * <li><strong>docker_component</strong>: container component</li>
-             * <li><strong>database</strong>: database</li>
-             * <li><strong>web_container</strong>: web container</li>
+             * <li><strong>system_service</strong>: System service</li>
+             * <li><strong>software_library</strong>: Software library</li>
+             * <li><strong>docker_component</strong>: Container component</li>
+             * <li><strong>database</strong>: Database</li>
+             * <li><strong>web_container</strong>: Web container</li>
              * <li><strong>jar</strong>: JAR package</li>
-             * <li><strong>web_framework</strong>: web framework</li>
+             * <li><strong>web_framework</strong>: Web framework</li>
              * </ul>
              * 
              * <strong>example:</strong>

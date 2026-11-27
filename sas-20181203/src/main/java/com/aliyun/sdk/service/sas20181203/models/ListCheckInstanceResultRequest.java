@@ -200,7 +200,7 @@ public class ListCheckInstanceResultRequest extends Request {
         }
 
         /**
-         * <p>The page number of the current page for a paging query.</p>
+         * <p>The page number of the current page returned for a paging query.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -212,7 +212,7 @@ public class ListCheckInstanceResultRequest extends Request {
         }
 
         /**
-         * <p>The instance ID for the check item.</p>
+         * <p>The instance ID of the check item.</p>
          * 
          * <strong>example:</strong>
          * <p>i-uf64w4q6p9jti5gl****</p>
@@ -233,7 +233,7 @@ public class ListCheckInstanceResultRequest extends Request {
         }
 
         /**
-         * <p>The instance name for the check item.</p>
+         * <p>The name of the instance for the check item.</p>
          * 
          * <strong>example:</strong>
          * <p>i-uf64w4q6p9jti5gl****</p>
@@ -247,8 +247,8 @@ public class ListCheckInstanceResultRequest extends Request {
         /**
          * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
          * <ul>
-         * <li><strong>zh</strong>: Chinese.</li>
-         * <li><strong>en</strong>: English.</li>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
          * </ul>
          * 
          * <strong>example:</strong>

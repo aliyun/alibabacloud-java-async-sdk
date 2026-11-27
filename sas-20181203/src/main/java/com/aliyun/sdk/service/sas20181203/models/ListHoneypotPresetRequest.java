@@ -143,7 +143,7 @@ public class ListHoneypotPresetRequest extends Request {
         } 
 
         /**
-         * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+         * <p>The page number of the page to return. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -167,7 +167,7 @@ public class ListHoneypotPresetRequest extends Request {
         }
 
         /**
-         * <p>The language of the content within the request and response. Valid values:</p>
+         * <p>The language of the request and response. Valid values:</p>
          * <ul>
          * <li><strong>zh</strong>: Chinese</li>
          * <li><strong>en</strong>: English</li>
@@ -183,7 +183,7 @@ public class ListHoneypotPresetRequest extends Request {
         }
 
         /**
-         * <p>The ID of the management node.</p>
+         * <p>The unique ID of the honeypot management node.</p>
          * 
          * <strong>example:</strong>
          * <p>d892b4fe-af0d-4486-ab2a-8a518045****</p>
@@ -195,7 +195,7 @@ public class ListHoneypotPresetRequest extends Request {
         }
 
         /**
-         * <p>The name of the management node.</p>
+         * <p>The name of the honeypot management node.</p>
          * 
          * <strong>example:</strong>
          * <p>Node1</p>
@@ -207,9 +207,9 @@ public class ListHoneypotPresetRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</p>
+         * <p>The maximum number of entries to return on each page in a paged query. The default number of entries per page in paging is 20. If the pagesize parameter is empty, 20 entries are returned by default.</p>
          * <blockquote>
-         * <p>We recommend that you do not leave this parameter empty.</p>
+         * <p>Do not leave this parameter empty.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

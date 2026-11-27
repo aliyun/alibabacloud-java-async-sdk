@@ -102,9 +102,9 @@ public class ModifyVulWhitelistTargetRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the whitelist.</p>
+         * <p>The ID of the vulnerability whitelist.</p>
          * <blockquote>
-         * <p> You can call the <a href="~~DescribeVulWhitelist~~">DescribeVulWhitelist</a> operation to query the IDs of whitelists.</p>
+         * <p>You can call the <a href="~~DescribeVulWhitelist~~">DescribeVulWhitelist</a> operation to obtain the ID of the vulnerability whitelist.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -118,7 +118,7 @@ public class ModifyVulWhitelistTargetRequest extends Request {
         }
 
         /**
-         * <p>The reason why you add the server to the whitelist.</p>
+         * <p>The reason for adding the whitelist.</p>
          * 
          * <strong>example:</strong>
          * <p>1221</p>
@@ -130,7 +130,7 @@ public class ModifyVulWhitelistTargetRequest extends Request {
         }
 
         /**
-         * <p>The source IP address of the request.</p>
+         * <p>The source IP address.</p>
          * 
          * <strong>example:</strong>
          * <p>42.120.75.150</p>
@@ -142,22 +142,19 @@ public class ModifyVulWhitelistTargetRequest extends Request {
         }
 
         /**
-         * <p>The applicable scope of the whitelist. The value of this parameter is in the JSON format and contains the following fields:</p>
+         * <p>Specifies the scope where the whitelist takes effect. This field is in JSON format and contains the following fields:</p>
          * <ul>
-         * <li><p><strong>type</strong>: the type of the applicable scope. Valid values:</p>
-         * <ul>
-         * <li><strong>GroupId</strong>: the ID of a server group</li>
-         * <li><strong>Uuid</strong>: the UUID of a server</li>
+         * <li><strong>type</strong>: the scope type. Valid values:<ul>
+         * <li><strong>GroupId</strong>: group</li>
+         * <li><strong>Uuid</strong>: server asset</li>
          * </ul>
          * </li>
-         * <li><p><strong>uuids</strong>: the UUIDs of servers</p>
-         * </li>
-         * <li><p><strong>groupIds</strong>: the IDs of server groups</p>
-         * </li>
-         * </ul>
-         * <blockquote>
-         * <p> If you leave this parameter empty, all servers are added to the whitelist. If you set the <strong>type</strong> field to <strong>GroupId</strong>, you must also specify the <strong>groupIds</strong> field. If you set the <strong>type</strong> field to <strong>Uuid</strong>, you must also specify the <strong>uuids</strong> field.</p>
+         * <li><strong>uuids</strong>: the collection of server asset UUIDs.</li>
+         * <li><strong>groupIds</strong>: the collection of group IDs.<blockquote>
+         * <p>If this value is empty, the whitelist applies to all servers. If <strong>type</strong> is set to <strong>GroupId</strong>, <strong>groupIds</strong> cannot be empty. If <strong>type</strong> is set to <strong>Uuid</strong>, <strong>uuids</strong> cannot be empty.</p>
          * </blockquote>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>{

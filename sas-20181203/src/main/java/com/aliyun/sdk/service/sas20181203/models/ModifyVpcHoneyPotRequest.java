@@ -75,10 +75,10 @@ public class ModifyVpcHoneyPotRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether to enable or disable the honeypot. Valid values:</p>
+         * <p>Specifies the action to perform on the cloud honeypot instance. Valid values:</p>
          * <ul>
-         * <li><strong>disable</strong></li>
-         * <li><strong>enable</strong></li>
+         * <li><strong>disable</strong>: Suspends the instance.</li>
+         * <li><strong>enable</strong>: Starts the instance.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -92,9 +92,9 @@ public class ModifyVpcHoneyPotRequest extends Request {
         }
 
         /**
-         * <p>The ID of the virtual private cloud (VPC) on which the honeypot is deployed.</p>
+         * <p>The VPC ID of the cloud honeypot instance to take effect.</p>
          * <blockquote>
-         * <p> You can call the <a href="~~DescribeVpcHoneyPotList~~">DescribeVpcHoneyPotList</a> operation to query the IDs of VPCs.</p>
+         * <p>You can call the <a href="~~DescribeVpcHoneyPotList~~">DescribeVpcHoneyPotList</a> operation to obtain the VPC ID.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 

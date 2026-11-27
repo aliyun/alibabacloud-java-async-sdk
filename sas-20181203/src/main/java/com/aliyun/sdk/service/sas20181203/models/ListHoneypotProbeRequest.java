@@ -129,7 +129,7 @@ public class ListHoneypotProbeRequest extends Request {
         } 
 
         /**
-         * <p>The page number of the page to return. Minimum value: <strong>1</strong>. Default value: <strong>1</strong>, which indicates that the first page is returned.</p>
+         * <p>The page number of the returned page. Pages start from page <strong>1</strong>. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -141,7 +141,7 @@ public class ListHoneypotProbeRequest extends Request {
         }
 
         /**
-         * <p>The probe name.</p>
+         * <p>The name of the probe.</p>
          * 
          * <strong>example:</strong>
          * <p>probe-test</p>
@@ -169,9 +169,9 @@ public class ListHoneypotProbeRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries per page for a paging query. Default value: 20. If you leave this parameter empty, 20 entries are returned per page.</p>
+         * <p>The maximum number of entries to return on each page in a paging query. Default value: 20. If this parameter is left empty, 20 entries are returned on each page.</p>
          * <blockquote>
-         * <p>Do not leave PageSize empty.</p>
+         * <p>Do not leave this parameter empty.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -184,18 +184,18 @@ public class ListHoneypotProbeRequest extends Request {
         }
 
         /**
-         * <p>The probe status. Valid values:</p>
+         * <p>The status of the probe. Valid values:</p>
          * <ul>
-         * <li><strong>installed</strong>: Installation succeeded.</li>
-         * <li><strong>install_failed</strong>: Installation failed.</li>
-         * <li><strong>online</strong>: Normal.</li>
-         * <li><strong>offline</strong>: Offline.</li>
-         * <li><strong>unnormal</strong>: Service exception.</li>
-         * <li><strong>unprobe</strong>: Unauthorized.</li>
-         * <li><strong>uninstalling</strong>: Uninstalling.</li>
-         * <li><strong>uninstalled</strong>: Uninstallation succeeded.</li>
-         * <li><strong>uninstall_failed</strong>: Uninstallation failed.</li>
-         * <li><strong>not_exist</strong>: Not installed.</li>
+         * <li><strong>installed</strong>: installed successfully</li>
+         * <li><strong>install_failed</strong>: installation failed</li>
+         * <li><strong>online</strong>: online</li>
+         * <li><strong>offline</strong>: offline</li>
+         * <li><strong>unnormal</strong>: service exception</li>
+         * <li><strong>unprobe</strong>: unauthorized</li>
+         * <li><strong>uninstalling</strong>: uninstalling</li>
+         * <li><strong>uninstalled</strong>: uninstalled successfully</li>
+         * <li><strong>uninstall_failed</strong>: uninstallation failed</li>
+         * <li><strong>not_exist</strong>: not installed</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -208,7 +208,7 @@ public class ListHoneypotProbeRequest extends Request {
         }
 
         /**
-         * <p>The probe type. Valid values:</p>
+         * <p>The type of the probe. Valid values:</p>
          * <ul>
          * <li><strong>host_probe</strong>: host probe</li>
          * <li><strong>vpc_black_hole_probe</strong>: VPC blackhole probe</li>

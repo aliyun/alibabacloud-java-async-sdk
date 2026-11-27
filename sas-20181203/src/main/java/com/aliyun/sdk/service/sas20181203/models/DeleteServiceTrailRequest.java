@@ -21,9 +21,14 @@ public class DeleteServiceTrailRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceDirectoryAccountId")
+    private Long resourceDirectoryAccountId;
+
     private DeleteServiceTrailRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.resourceDirectoryAccountId = builder.resourceDirectoryAccountId;
     }
 
     public static Builder builder() {
@@ -46,8 +51,16 @@ public class DeleteServiceTrailRequest extends Request {
         return this.regionId;
     }
 
+    /**
+     * @return resourceDirectoryAccountId
+     */
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
+    }
+
     public static final class Builder extends Request.Builder<DeleteServiceTrailRequest, Builder> {
         private String regionId; 
+        private Long resourceDirectoryAccountId; 
 
         private Builder() {
             super();
@@ -56,13 +69,14 @@ public class DeleteServiceTrailRequest extends Request {
         private Builder(DeleteServiceTrailRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
         } 
 
         /**
          * <p>The region of the Security Center instance. Valid values:</p>
          * <ul>
-         * <li><strong>cn-hangzhou:</strong> China</li>
-         * <li><strong>ap-southeast-1:</strong> Singapore.</li>
+         * <li><strong>cn-hangzhou</strong>: Center</li>
+         * <li><strong>ap-southeast-1</strong>: Singapore</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -71,6 +85,21 @@ public class DeleteServiceTrailRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the member accounts in the resource folder. The member accounts are Alibaba Cloud accounts.</p>
+         * <blockquote>
+         * <p>You can invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain the value of this parameter.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1766185894104675</p>
+         */
+        public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+            this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
+            this.resourceDirectoryAccountId = resourceDirectoryAccountId;
             return this;
         }
 

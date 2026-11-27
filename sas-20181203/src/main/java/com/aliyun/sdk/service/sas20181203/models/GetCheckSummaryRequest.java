@@ -115,10 +115,10 @@ public class GetCheckSummaryRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether to return check item statistics information, including the number of check items published by the system and the number of check items currently owned by the user. Default value: <strong>false</strong>. Valid values:</p>
+         * <p>Specifies whether to return the statistics information of check items, including the number of check items published by the system and the number of check items currently owned by the user. Default value: <strong>false</strong>. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: Returns the statistics information.</li>
-         * <li><strong>false</strong>: Does not return the statistics information.</li>
+         * <li><strong>true</strong>: Returns the statistics.</li>
+         * <li><strong>false</strong>: Does not return the statistics.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -131,10 +131,10 @@ public class GetCheckSummaryRequest extends Request {
         }
 
         /**
-         * <p>The language type for requests and responses.</p>
+         * <p>The language of the request and response messages.</p>
          * <ul>
          * <li><strong>zh</strong>: Chinese</li>
-         * <li><strong>en</strong>: English.</li>
+         * <li><strong>en</strong>: English</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -147,9 +147,9 @@ public class GetCheckSummaryRequest extends Request {
         }
 
         /**
-         * <p>The ID of the member accounts in the resource directory.</p>
+         * <p>The ID of the Alibaba Cloud account of the member accounts in the resource folder.</p>
          * <blockquote>
-         * <p>Invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
+         * <p>You can invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -171,7 +171,7 @@ public class GetCheckSummaryRequest extends Request {
         }
 
         /**
-         * <p>The list of cloud service providers.</p>
+         * <p>The list of cloud providers.</p>
          */
         public Builder vendors(java.util.List<String> vendors) {
             this.putQueryParameter("Vendors", vendors);

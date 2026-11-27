@@ -130,7 +130,7 @@ public class BindAuthToMachineResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of cores for which the core license quota is insufficient.</p>
+         * <p>The number of cores for which the authorization licenses are insufficient.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -141,7 +141,7 @@ public class BindAuthToMachineResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of servers for which the license quota is insufficient.</p>
+         * <p>The number of servers for which the authorization licenses are insufficient.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -165,10 +165,10 @@ public class BindAuthToMachineResponseBody extends TeaModel {
         /**
          * <p>The status code of the binding result. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: Success</li>
-         * <li><strong>1</strong>: Parameter error</li>
-         * <li><strong>2</strong>: Insufficient server licenses</li>
-         * <li><strong>3</strong>: Insufficient server core licenses</li>
+         * <li><strong>0</strong>: Success.</li>
+         * <li><strong>1</strong>: Parameter error.</li>
+         * <li><strong>2</strong>: Insufficient server authorization licenses.</li>
+         * <li><strong>3</strong>: Insufficient server authorization cores.</li>
          * </ul>
          * 
          * <strong>example:</strong>

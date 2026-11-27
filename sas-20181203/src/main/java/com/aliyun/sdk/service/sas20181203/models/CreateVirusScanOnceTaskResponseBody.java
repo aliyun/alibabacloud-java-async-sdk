@@ -54,7 +54,7 @@ public class CreateVirusScanOnceTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>CE500770-42D3-442E-9DDD-156E0F9F3B45</p>

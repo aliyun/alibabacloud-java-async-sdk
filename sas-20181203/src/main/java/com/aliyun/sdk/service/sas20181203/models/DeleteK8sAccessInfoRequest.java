@@ -30,6 +30,10 @@ public class DeleteK8sAccessInfoRequest extends Request {
     private String aliyunYundunGatewayProjectName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    private String clusterId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Id")
     @com.aliyun.core.annotation.Validation(required = true)
     private Long id;
@@ -39,6 +43,7 @@ public class DeleteK8sAccessInfoRequest extends Request {
         this.aliyunYundunGatewayApiName = builder.aliyunYundunGatewayApiName;
         this.aliyunYundunGatewayPopName = builder.aliyunYundunGatewayPopName;
         this.aliyunYundunGatewayProjectName = builder.aliyunYundunGatewayProjectName;
+        this.clusterId = builder.clusterId;
         this.id = builder.id;
     }
 
@@ -77,6 +82,13 @@ public class DeleteK8sAccessInfoRequest extends Request {
     }
 
     /**
+     * @return clusterId
+     */
+    public String getClusterId() {
+        return this.clusterId;
+    }
+
+    /**
      * @return id
      */
     public Long getId() {
@@ -87,6 +99,7 @@ public class DeleteK8sAccessInfoRequest extends Request {
         private String aliyunYundunGatewayApiName; 
         private String aliyunYundunGatewayPopName; 
         private String aliyunYundunGatewayProjectName; 
+        private String clusterId; 
         private Long id; 
 
         private Builder() {
@@ -98,11 +111,12 @@ public class DeleteK8sAccessInfoRequest extends Request {
             this.aliyunYundunGatewayApiName = request.aliyunYundunGatewayApiName;
             this.aliyunYundunGatewayPopName = request.aliyunYundunGatewayPopName;
             this.aliyunYundunGatewayProjectName = request.aliyunYundunGatewayProjectName;
+            this.clusterId = request.clusterId;
             this.id = request.id;
         } 
 
         /**
-         * <p>This parameter is deprecated and can be ignored.</p>
+         * <p><strong>[Deprecated]</strong> This parameter is deprecated and can be ignored.</p>
          * 
          * <strong>example:</strong>
          * <p>None</p>
@@ -114,7 +128,7 @@ public class DeleteK8sAccessInfoRequest extends Request {
         }
 
         /**
-         * <p>This parameter is deprecated and can be ignored.</p>
+         * <p><strong>[Deprecated]</strong> This parameter is deprecated and can be ignored.</p>
          * 
          * <strong>example:</strong>
          * <p>None</p>
@@ -126,7 +140,7 @@ public class DeleteK8sAccessInfoRequest extends Request {
         }
 
         /**
-         * <p>This parameter is deprecated and can be ignored.</p>
+         * <p><strong>[Deprecated]</strong> This parameter is deprecated and can be ignored.</p>
          * 
          * <strong>example:</strong>
          * <p>None</p>
@@ -138,7 +152,19 @@ public class DeleteK8sAccessInfoRequest extends Request {
         }
 
         /**
-         * <p>The default value generated when accessing Kubernetes. You can obtain the ID by calling the <a href="https://help.aliyun.com/document_detail/2623602.html">GenerateK8sAccessInfo</a> operation.</p>
+         * <p>The cluster ID. To delete multi-cloud installation information, you must specify both the ClusterId and Id parameters. If you omit this parameter, the legacy self-managed path is retained.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cf3824769c85441b4bf3****</p>
+         */
+        public Builder clusterId(String clusterId) {
+            this.putQueryParameter("ClusterId", clusterId);
+            this.clusterId = clusterId;
+            return this;
+        }
+
+        /**
+         * <p>The default value generated when connecting to Kubernetes. You can obtain the ID by calling the <a href="https://help.aliyun.com/document_detail/2623602.html">GenerateK8sAccessInfo</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

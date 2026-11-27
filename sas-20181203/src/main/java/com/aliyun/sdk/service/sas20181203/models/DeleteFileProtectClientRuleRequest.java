@@ -26,6 +26,10 @@ public class DeleteFileProtectClientRuleRequest extends Request {
     private java.util.List<Long> excludeIdList;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FileName")
+    private String fileName;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("IdList")
     private java.util.List<Long> idList;
 
@@ -50,6 +54,7 @@ public class DeleteFileProtectClientRuleRequest extends Request {
         super(builder);
         this.alertLevel = builder.alertLevel;
         this.excludeIdList = builder.excludeIdList;
+        this.fileName = builder.fileName;
         this.idList = builder.idList;
         this.platform = builder.platform;
         this.ruleAction = builder.ruleAction;
@@ -82,6 +87,13 @@ public class DeleteFileProtectClientRuleRequest extends Request {
      */
     public java.util.List<Long> getExcludeIdList() {
         return this.excludeIdList;
+    }
+
+    /**
+     * @return fileName
+     */
+    public String getFileName() {
+        return this.fileName;
     }
 
     /**
@@ -122,6 +134,7 @@ public class DeleteFileProtectClientRuleRequest extends Request {
     public static final class Builder extends Request.Builder<DeleteFileProtectClientRuleRequest, Builder> {
         private Integer alertLevel; 
         private java.util.List<Long> excludeIdList; 
+        private String fileName; 
         private java.util.List<Long> idList; 
         private String platform; 
         private String ruleAction; 
@@ -136,6 +149,7 @@ public class DeleteFileProtectClientRuleRequest extends Request {
             super(request);
             this.alertLevel = request.alertLevel;
             this.excludeIdList = request.excludeIdList;
+            this.fileName = request.fileName;
             this.idList = request.idList;
             this.platform = request.platform;
             this.ruleAction = request.ruleAction;
@@ -146,14 +160,10 @@ public class DeleteFileProtectClientRuleRequest extends Request {
         /**
          * <p>The alert notification level. Valid values:</p>
          * <ul>
-         * <li><p>0: No alerts.</p>
-         * </li>
-         * <li><p>1: Reminder.</p>
-         * </li>
-         * <li><p>2: Suspicious.</p>
-         * </li>
-         * <li><p>3: High-risk.</p>
-         * </li>
+         * <li>0: no alert</li>
+         * <li>1: reminder</li>
+         * <li>2: suspicious</li>
+         * <li>3: high-risk</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -175,6 +185,18 @@ public class DeleteFileProtectClientRuleRequest extends Request {
         }
 
         /**
+         * <p>The file name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
+        public Builder fileName(String fileName) {
+            this.putQueryParameter("FileName", fileName);
+            this.fileName = fileName;
+            return this;
+        }
+
+        /**
          * <p>The list of policy IDs.</p>
          */
         public Builder idList(java.util.List<Long> idList) {
@@ -184,10 +206,10 @@ public class DeleteFileProtectClientRuleRequest extends Request {
         }
 
         /**
-         * <p>The type of the operating system. Valid values:</p>
+         * <p>The operating system type. Valid values:</p>
          * <ul>
-         * <li><strong>windows</strong>: Windows.</li>
-         * <li><strong>linux</strong>: Linux.</li>
+         * <li><strong>windows</strong>: Windows</li>
+         * <li><strong>linux</strong>: Linux</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -200,11 +222,11 @@ public class DeleteFileProtectClientRuleRequest extends Request {
         }
 
         /**
-         * <p>The action of the policy. Valid values:</p>
+         * <p>The action to be performed by the policy. Valid values:</p>
          * <ul>
-         * <li><strong>monitor</strong>: Alert.</li>
-         * <li><strong>block</strong>: Block.</li>
-         * <li><strong>pass</strong>: Allow.</li>
+         * <li><strong>monitor</strong>: alert</li>
+         * <li><strong>block</strong>: block</li>
+         * <li><strong>pass</strong>: allow</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -229,7 +251,7 @@ public class DeleteFileProtectClientRuleRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to select all.</p>
+         * <p>Specifies whether to select all items.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

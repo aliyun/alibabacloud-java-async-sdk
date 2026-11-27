@@ -378,7 +378,7 @@ public class GetFileDetectReportResponseBody extends TeaModel {
              * <p>The threat intelligence event, which is a JSON array.</p>
              * <p>Valid values:</p>
              * <ul>
-             * <li>The threat type. The value is an array. The elements in the array can be DDoS trojans, mining programs, network layer intrusions, network service scans, network sharing and discovery, mining pools, exploits, dark webs, malicious logons, malicious download sources, C\&amp;C servers, webshells, and web attacks.</li>
+             * <li>The threat type. The value is an array. The elements in the array can be DDoS trojans, mining programs, network layer intrusions, network service scans, network sharing and discovery, mining pools, exploits, dark webs, malicious logons, malicious download sources, C&amp;C servers, webshells, and web attacks.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -393,7 +393,7 @@ public class GetFileDetectReportResponseBody extends TeaModel {
              * <p>The details of the cloud sandbox check results.</p>
              * 
              * <strong>example:</strong>
-             * <p>{\&quot;BehaviorData\&quot;: {}, \&quot;ProcessData\&quot;: {}, \&quot;SandboxData\&quot;: {}, \&quot;AttackData\&quot;: [], \&quot;NetworkData\&quot;: {}, \&quot;SolutionData\&quot;: {}, \&quot;FileData\&quot;: {}}</p>
+             * <p>{&quot;BehaviorData&quot;: {}, &quot;ProcessData&quot;: {}, &quot;SandboxData&quot;: {}, &quot;AttackData&quot;: [], &quot;NetworkData&quot;: {}, &quot;SolutionData&quot;: {}, &quot;FileData&quot;: {}}</p>
              */
             public Builder sandbox(String sandbox) {
                 this.sandbox = sandbox;

@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeClientConfStrategyRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceDirectoryAccountId")
+    private Long resourceDirectoryAccountId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
     @com.aliyun.core.annotation.Validation(required = true)
     private String tag;
@@ -29,6 +33,7 @@ public class DescribeClientConfStrategyRequest extends Request {
 
     private DescribeClientConfStrategyRequest(Builder builder) {
         super(builder);
+        this.resourceDirectoryAccountId = builder.resourceDirectoryAccountId;
         this.tag = builder.tag;
         this.tagValue = builder.tagValue;
     }
@@ -47,6 +52,13 @@ public class DescribeClientConfStrategyRequest extends Request {
     }
 
     /**
+     * @return resourceDirectoryAccountId
+     */
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
+    }
+
+    /**
      * @return tag
      */
     public String getTag() {
@@ -61,6 +73,7 @@ public class DescribeClientConfStrategyRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeClientConfStrategyRequest, Builder> {
+        private Long resourceDirectoryAccountId; 
         private String tag; 
         private String tagValue; 
 
@@ -70,9 +83,25 @@ public class DescribeClientConfStrategyRequest extends Request {
 
         private Builder(DescribeClientConfStrategyRequest request) {
             super(request);
+            this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
             this.tag = request.tag;
             this.tagValue = request.tagValue;
         } 
+
+        /**
+         * <p>The ID of the member accounts in the resource folder (Alibaba Cloud account).</p>
+         * <blockquote>
+         * <p>You can invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1766185894104675</p>
+         */
+        public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+            this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
+            this.resourceDirectoryAccountId = resourceDirectoryAccountId;
+            return this;
+        }
 
         /**
          * <p>Specifies the client resource tag to query.</p>

@@ -185,22 +185,22 @@ public class ListAttackEventInfoRequest extends Request {
         /**
          * <p>The attack type. Valid values:</p>
          * <ul>
-         * <li>9: SQL Server brute-force attacks</li>
-         * <li>5: SSH brute-force attacks</li>
-         * <li>6: RDP brute-force attacks</li>
-         * <li>101: Java Struts2 attack blocked</li>
-         * <li>102: Redis attack blocked</li>
-         * <li>103: China Chopper (AntSword) WebShell communication</li>
-         * <li>104: China Chopper WebShell communication</li>
-         * <li>133: XISE WebShell communication</li>
-         * <li>161: WebShell upload</li>
-         * <li>209: PHP WebShell upload</li>
-         * <li>210: JSP WebShell upload</li>
-         * <li>211: ASP WebShell upload</li>
-         * <li>215: Special extension WebShell upload</li>
-         * <li>ai_webshell: WebShell upload intelligent defense</li>
-         * <li>java_common_rce: Java common RCE vulnerability blocked</li>
-         * <li>alinet_webrce: Adaptive web attack defense</li>
+         * <li>9: SQL Server brute-force attacks.</li>
+         * <li>5: SSH brute-force attacks.</li>
+         * <li>6: RDP brute-force attacks.</li>
+         * <li>101: Java Struts2 attack interception.</li>
+         * <li>102: Redis attack interception.</li>
+         * <li>103: AntSword WebShell communication.</li>
+         * <li>104: China Chopper WebShell communication.</li>
+         * <li>133: XISE WebShell communication.</li>
+         * <li>161: WebShell upload.</li>
+         * <li>209: PHP WebShell upload.</li>
+         * <li>210: JSP WebShell upload.</li>
+         * <li>211: ASP WebShell upload.</li>
+         * <li>215: WebShell upload with special suffix.</li>
+         * <li>ai_webshell: Intelligent defense against WebShell upload.</li>
+         * <li>java_common_rce: Interception of common Java RCE vulnerabilities.</li>
+         * <li>alinet_webrce: Adaptive web attack defense.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -213,7 +213,7 @@ public class ListAttackEventInfoRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return in a paging query.</p>
+         * <p>The page number of the current page for a paging query.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -225,7 +225,7 @@ public class ListAttackEventInfoRequest extends Request {
         }
 
         /**
-         * <p>The Attack Target Ports of the Attack Target.</p>
+         * <p>The attack target ports.</p>
          * 
          * <strong>example:</strong>
          * <p>9085</p>
@@ -237,8 +237,7 @@ public class ListAttackEventInfoRequest extends Request {
         }
 
         /**
-         * <p>The timestamp of the end time.</p>
-         * <p>This parameter is required. If this parameter is not specified, the API returns HTTP 400.</p>
+         * <p>The timestamp of the end time. This parameter is required. If it is not provided, the API returns an HTTP 400 error.</p>
          * 
          * <strong>example:</strong>
          * <p>1753152532550</p>
@@ -250,10 +249,10 @@ public class ListAttackEventInfoRequest extends Request {
         }
 
         /**
-         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
          * <ul>
-         * <li><strong>zh</strong>: Chinese</li>
-         * <li><strong>en</strong>: English</li>
+         * <li><strong>zh</strong>: Chinese.</li>
+         * <li><strong>en</strong>: English.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -266,7 +265,7 @@ public class ListAttackEventInfoRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries to return on each page in a paging query.</p>
+         * <p>The maximum number of entries per page for a paging query.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -278,7 +277,7 @@ public class ListAttackEventInfoRequest extends Request {
         }
 
         /**
-         * <p>The Attack Source IP Addresses.</p>
+         * <p>The attack source IP addresses.</p>
          * 
          * <strong>example:</strong>
          * <p>185.237.96.***</p>
@@ -290,9 +289,7 @@ public class ListAttackEventInfoRequest extends Request {
         }
 
         /**
-         * <p>The timestamp of the start time.</p>
-         * <p>This parameter is a UNIX timestamp. Unit: milliseconds.</p>
-         * <p>This parameter is required. If this parameter is not specified, the API returns HTTP 400.</p>
+         * <p>The timestamp of the start time. The value is a UNIX timestamp in milliseconds. This parameter is required. If it is not provided, the API returns an HTTP 400 error.</p>
          * 
          * <strong>example:</strong>
          * <p>1752547732549</p>

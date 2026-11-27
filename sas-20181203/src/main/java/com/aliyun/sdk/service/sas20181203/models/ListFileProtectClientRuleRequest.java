@@ -26,6 +26,10 @@ public class ListFileProtectClientRuleRequest extends Request {
     private Integer currentPage;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FileName")
+    private String fileName;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageSize")
     @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
     private Integer pageSize;
@@ -46,6 +50,7 @@ public class ListFileProtectClientRuleRequest extends Request {
         super(builder);
         this.alertLevel = builder.alertLevel;
         this.currentPage = builder.currentPage;
+        this.fileName = builder.fileName;
         this.pageSize = builder.pageSize;
         this.platform = builder.platform;
         this.ruleAction = builder.ruleAction;
@@ -80,6 +85,13 @@ public class ListFileProtectClientRuleRequest extends Request {
     }
 
     /**
+     * @return fileName
+     */
+    public String getFileName() {
+        return this.fileName;
+    }
+
+    /**
      * @return pageSize
      */
     public Integer getPageSize() {
@@ -110,6 +122,7 @@ public class ListFileProtectClientRuleRequest extends Request {
     public static final class Builder extends Request.Builder<ListFileProtectClientRuleRequest, Builder> {
         private Integer alertLevel; 
         private Integer currentPage; 
+        private String fileName; 
         private Integer pageSize; 
         private String platform; 
         private String ruleAction; 
@@ -123,6 +136,7 @@ public class ListFileProtectClientRuleRequest extends Request {
             super(request);
             this.alertLevel = request.alertLevel;
             this.currentPage = request.currentPage;
+            this.fileName = request.fileName;
             this.pageSize = request.pageSize;
             this.platform = request.platform;
             this.ruleAction = request.ruleAction;
@@ -152,7 +166,7 @@ public class ListFileProtectClientRuleRequest extends Request {
         }
 
         /**
-         * <p>The page number of the current page in a paged query.</p>
+         * <p>The page number of the current page during paging in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -164,7 +178,19 @@ public class ListFileProtectClientRuleRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries per page for a paged query.</p>
+         * <p>The name of the file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
+        public Builder fileName(String fileName) {
+            this.putQueryParameter("FileName", fileName);
+            this.fileName = fileName;
+            return this;
+        }
+
+        /**
+         * <p>The maximum number of entries to return per page during paging in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -194,11 +220,11 @@ public class ListFileProtectClientRuleRequest extends Request {
         /**
          * <p>The rule action. Valid values:</p>
          * <ul>
-         * <li><p><strong>block</strong>: Block.</p>
+         * <li><p><strong>block</strong>: block</p>
          * </li>
-         * <li><p><strong>monitor</strong>: Monitor.</p>
+         * <li><p><strong>monitor</strong>: monitor</p>
          * </li>
-         * <li><p><strong>pass</strong>: Allow.</p>
+         * <li><p><strong>pass</strong>: allow</p>
          * </li>
          * </ul>
          * 
@@ -212,7 +238,7 @@ public class ListFileProtectClientRuleRequest extends Request {
         }
 
         /**
-         * <p>The rule name.</p>
+         * <p>The name of the rule.</p>
          * 
          * <strong>example:</strong>
          * <p>tetsRule</p>

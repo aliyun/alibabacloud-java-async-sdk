@@ -73,7 +73,7 @@ public class ListFileProtectBindMachineRequest extends Request {
         } 
 
         /**
-         * <p>The page number of the current page for a paged query.</p>
+         * <p>The number of the current page during paging in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -85,7 +85,7 @@ public class ListFileProtectBindMachineRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries per page for a paged query.</p>
+         * <p>The maximum number of entries to return on each page during paging in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

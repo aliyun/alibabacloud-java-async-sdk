@@ -90,44 +90,44 @@ public class ModifyLoginBaseConfigRequest extends Request {
         } 
 
         /**
-         * <p>The detailed configuration of the unusual logon detection rule for the server. This parameter is in JSON format and contains the following fields:</p>
+         * <p>The detailed configuration of the unusual logon detection rule for servers. This parameter is in JSON format and includes the following fields:</p>
          * <ul>
-         * <li><strong>totalCount</strong>: the total number of assets.</li>
-         * <li><strong>uuidCount</strong>: the number of assets on which the rule takes effect.</li>
-         * <li><strong>id</strong>: the ID of the unusual logon detection rule.</li>
-         * <li><strong>location</strong>: the name of the common logon location.</li>
+         * <li><strong>totalCount</strong>: The total number of assets.</li>
+         * <li><strong>uuidCount</strong>: The number of assets to which the rule applies.</li>
+         * <li><strong>id</strong>: The ID of the unusual logon rule for servers.</li>
+         * <li><strong>location</strong>: The name of the common logon location.</li>
          * </ul>
          * <blockquote>
-         * <p>This field is required only when the Type parameter is set to login_common_location.</p>
+         * <p>You must set this parameter only when the Type parameter is set to login_common_location.</p>
          * </blockquote>
          * <ul>
-         * <li><strong>ip</strong>: the common logon IP address.</li>
+         * <li><strong>ip</strong>: The common logon IP address.</li>
          * </ul>
          * <blockquote>
-         * <p>This field is required only when the Type parameter is set to login_common_ip.</p>
+         * <p>You must set this parameter only when the Type parameter is set to login_common_ip.</p>
          * </blockquote>
          * <ul>
-         * <li><strong>endTime</strong>: the end time of the common logon time range.</li>
+         * <li><strong>endTime</strong>: The end time of the common logon period.</li>
          * </ul>
          * <blockquote>
-         * <p>This field is required only when the Type parameter is set to login_common_time.</p>
+         * <p>You must set this parameter only when the Type parameter is set to login_common_time.</p>
          * </blockquote>
          * <ul>
-         * <li><strong>startTime</strong>: the start time of the common logon time range.</li>
+         * <li><strong>startTime</strong>: The start time of the common logon period.</li>
          * </ul>
          * <blockquote>
-         * <p>This field is required only when the Type parameter is set to login_common_time.</p>
+         * <p>You must set this parameter only when the Type parameter is set to login_common_time.</p>
          * </blockquote>
          * <ul>
-         * <li><strong>account</strong>: the common logon account.</li>
+         * <li><strong>account</strong>: The common logon account.</li>
          * </ul>
          * <blockquote>
-         * <p>This field is required only when the Type parameter is set to login_common_account.</p>
+         * <p>You must set this parameter only when the Type parameter is set to login_common_account.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;totalCount&quot;:174,&quot;uuidCount&quot;:4,&quot;location&quot;:&quot;黑山&quot;,&quot;id&quot;:0}</p>
+         * <p>{&quot;totalCount&quot;:174,&quot;uuidCount&quot;:4,&quot;location&quot;:&quot;Montenegro&quot;,&quot;id&quot;:0}</p>
          */
         public Builder config(String config) {
             this.putQueryParameter("Config", config);
@@ -136,17 +136,17 @@ public class ModifyLoginBaseConfigRequest extends Request {
         }
 
         /**
-         * <p>The configuration of the servers on which the unusual logon detection rule takes effect. This parameter is in JSON format and contains the following fields:</p>
+         * <p>The configuration of the servers to which the unusual logon detection rule applies. This parameter is in JSON format and includes the following fields:</p>
          * <ul>
-         * <li><strong>Target</strong>: the UUID of the server to add or remove.</li>
-         * <li><strong>targetType</strong>: the mode for adding assets on which the rule takes effect. Valid values:<ul>
-         * <li><strong>uuid</strong>: add by individual server.</li>
-         * <li><strong>groupId</strong>: add by server group.</li>
+         * <li><strong>Target</strong>: The UUID of the server to add or remove.</li>
+         * <li><strong>targetType</strong>: The mode in which assets are added. Valid values:<ul>
+         * <li><strong>uuid</strong>: Add by individual server.</li>
+         * <li><strong>groupId</strong>: Add by server group.</li>
          * </ul>
          * </li>
-         * <li><strong>flag</strong>: the operation to perform on the asset. Valid values:<ul>
-         * <li><strong>del</strong>: remove the server from the rule.</li>
-         * <li><strong>add</strong>: add the server to the rule.</li>
+         * <li><strong>flag</strong>: The specific operation on the asset. Valid values:<ul>
+         * <li><strong>del</strong>: Remove the server from the rule.</li>
+         * <li><strong>add</strong>: Add the server to the rule.</li>
          * </ul>
          * </li>
          * </ul>
@@ -162,12 +162,12 @@ public class ModifyLoginBaseConfigRequest extends Request {
         }
 
         /**
-         * <p>The type of unusual logon detection for the server. Valid values:</p>
+         * <p>The type of unusual logon detection for servers to modify. Valid values:</p>
          * <ul>
-         * <li><strong>login_common_location</strong>: common logon location.</li>
-         * <li><strong>login_common_ip</strong>: common logon IP address.</li>
-         * <li><strong>login_common_time</strong>: common logon time.</li>
-         * <li><strong>login_common_account</strong>: common logon account.</li>
+         * <li><strong>login_common_location</strong>: Common logon location.</li>
+         * <li><strong>login_common_ip</strong>: Common logon IP address.</li>
+         * <li><strong>login_common_time</strong>: Common logon time.</li>
+         * <li><strong>login_common_account</strong>: Common logon account.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

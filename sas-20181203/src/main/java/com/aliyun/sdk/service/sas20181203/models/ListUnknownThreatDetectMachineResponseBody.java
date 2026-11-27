@@ -322,7 +322,7 @@ public class ListUnknownThreatDetectMachineResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The duration for which the policy has been in effect, in days.</p>
+             * <p>The number of days the policy has been in effect.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -439,8 +439,8 @@ public class ListUnknownThreatDetectMachineResponseBody extends TeaModel {
             /**
              * <p>The whitelist mode. Valid values:</p>
              * <ul>
-             * <li><strong>hash</strong>: the hash of the process</li>
-             * <li><strong>path</strong>: the path of the process</li>
+             * <li><strong>hash</strong>: process hash</li>
+             * <li><strong>path</strong>: process path</li>
              * </ul>
              * 
              * <strong>example:</strong>

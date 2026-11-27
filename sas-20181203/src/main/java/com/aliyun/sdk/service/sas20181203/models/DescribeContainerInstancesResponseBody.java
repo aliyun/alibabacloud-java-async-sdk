@@ -641,7 +641,7 @@ public class DescribeContainerInstancesResponseBody extends TeaModel {
              * <p>The exposure details in JSON format.</p>
              * 
              * <strong>example:</strong>
-             * <p>[{\&quot;exposedName\&quot;:\&quot;nginx-ingress-lb\&quot;,\&quot;exposedType\&quot;:\&quot;LoadBalancer\&quot;,\&quot;portDOList\&quot;:[{\&quot;name\&quot;:\&quot;http\&quot;,\&quot;nodePort\&quot;:32268,\&quot;port\&quot;:80,\&quot;targetPort\&quot;:80},{\&quot;name\&quot;:\&quot;https\&quot;,\&quot;nodePort\&quot;:32376,\&quot;port\&quot;:443,\&quot;targetPort\&quot;:443}]}]</p>
+             * <p>[{&quot;exposedName&quot;:&quot;nginx-ingress-lb&quot;,&quot;exposedType&quot;:&quot;LoadBalancer&quot;,&quot;portDOList&quot;:[{&quot;name&quot;:&quot;http&quot;,&quot;nodePort&quot;:32268,&quot;port&quot;:80,&quot;targetPort&quot;:80},{&quot;name&quot;:&quot;https&quot;,&quot;nodePort&quot;:32376,&quot;port&quot;:443,&quot;targetPort&quot;:443}]}]</p>
              */
             public Builder exposedDetail(String exposedDetail) {
                 this.exposedDetail = exposedDetail;

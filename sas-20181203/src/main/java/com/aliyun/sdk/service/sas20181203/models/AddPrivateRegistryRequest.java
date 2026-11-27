@@ -236,7 +236,7 @@ public class AddPrivateRegistryRequest extends Request {
         } 
 
         /**
-         * <p>The domain name of the registry.</p>
+         * <p>The domain name of the repository.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -249,7 +249,7 @@ public class AddPrivateRegistryRequest extends Request {
         }
 
         /**
-         * <p>The additional parameters for the image registry. This parameter is required when you use <strong>quay</strong>. The parameters include:</p>
+         * <p>The additional parameters for the image repository. This parameter is required when you use <strong>quay</strong>. The parameters include:</p>
          * <ul>
          * <li><strong>namespace</strong>: The namespace.</li>
          * <li><strong>authToken</strong>: The authorization token.</li>
@@ -286,7 +286,7 @@ public class AddPrivateRegistryRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <hr>
+         * <p>Demo****pwd</p>
          */
         public Builder password(String password) {
             this.putQueryParameter("Password", password);
@@ -324,8 +324,8 @@ public class AddPrivateRegistryRequest extends Request {
         }
 
         /**
-         * <p>The IP address of the registry.</p>
-         * <p>Enter a valid IPv4 address that can be used to connect to the image registry. To specify a domain name for the image registry, use the DomainName parameter.</p>
+         * <p>The IP address of the repository.</p>
+         * <p>Enter a valid IPv4 address that can be used to connect to the image repository. If you want to specify a domain name for the image repository, use the DomainName parameter.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -354,7 +354,7 @@ public class AddPrivateRegistryRequest extends Request {
         }
 
         /**
-         * <p>The type of the private image registry. Valid values:</p>
+         * <p>The type of the private image repository. Valid values:</p>
          * <ul>
          * <li><strong>harbor</strong>: Harbor environment.</li>
          * <li><strong>quay</strong>: Quay environment.</li>
@@ -371,7 +371,7 @@ public class AddPrivateRegistryRequest extends Request {
         }
 
         /**
-         * <p>The version of the image registry. Valid values:</p>
+         * <p>The version of the image repository. Valid values:</p>
          * <ul>
          * <li><strong>V1</strong>: Version 1.0.</li>
          * <li><strong>V2</strong>: Version 2.0.</li>
@@ -400,11 +400,11 @@ public class AddPrivateRegistryRequest extends Request {
         }
 
         /**
-         * <p>The username of the image registry.</p>
+         * <p>The username of the image repository.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxxxx</p>
+         * <p>demo_user</p>
          */
         public Builder userName(String userName) {
             this.putQueryParameter("UserName", userName);

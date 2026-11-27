@@ -89,12 +89,9 @@ public class OperateUnknownThreatDetectMachineRequest extends Request {
         /**
          * <p>The operation type. Valid values:</p>
          * <ul>
-         * <li><p><strong>restart_study</strong>: Restarts the learning process.</p>
-         * </li>
-         * <li><p><strong>increment_study</strong>: Starts incremental learning.</p>
-         * </li>
-         * <li><p><strong>change_status</strong>: Changes the status.</p>
-         * </li>
+         * <li><strong>restart_study</strong>: Restarts learning.</li>
+         * <li><strong>increment_study</strong>: Performs incremental learning.</li>
+         * <li><strong>change_status</strong>: Modifies the status.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -107,12 +104,10 @@ public class OperateUnknownThreatDetectMachineRequest extends Request {
         }
 
         /**
-         * <p>The target status. This parameter applies only when <code>OperateType</code> is set to <code>change_status</code>. Valid values:</p>
+         * <p>The target status. Valid values:</p>
          * <ul>
-         * <li><p><strong>monitoring</strong>: Monitoring mode.</p>
-         * </li>
-         * <li><p><strong>blocking</strong>: Blocking mode.</p>
-         * </li>
+         * <li><strong>monitoring</strong>: Alerting.</li>
+         * <li><strong>blocking</strong>: Blocking.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -125,7 +120,7 @@ public class OperateUnknownThreatDetectMachineRequest extends Request {
         }
 
         /**
-         * <p>A list of server UUIDs.</p>
+         * <p>The list of server UUIDs.</p>
          */
         public Builder uuidList(java.util.List<String> uuidList) {
             this.putQueryParameter("UuidList", uuidList);

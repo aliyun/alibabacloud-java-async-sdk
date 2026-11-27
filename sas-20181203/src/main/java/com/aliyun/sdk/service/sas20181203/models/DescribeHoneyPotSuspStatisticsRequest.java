@@ -146,7 +146,7 @@ public class DescribeHoneyPotSuspStatisticsRequest extends Request {
         }
 
         /**
-         * <p>Specifies the asset type to query. Valid values:</p>
+         * <p>Specifies the Asset Type to query. Valid values:</p>
          * <ul>
          * <li><strong>vpcInstanceId</strong>: VPC-connected instance</li>
          * <li><strong>uuid</strong>: server</li>

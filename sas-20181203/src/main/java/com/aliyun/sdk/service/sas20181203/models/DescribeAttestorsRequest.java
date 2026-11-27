@@ -115,7 +115,7 @@ public class DescribeAttestorsRequest extends Request {
         } 
 
         /**
-         * <p>The page number.</p>
+         * <p>The page number of the current page in a paging query.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -127,7 +127,7 @@ public class DescribeAttestorsRequest extends Request {
         }
 
         /**
-         * <p>The name of the witness.</p>
+         * <p>The name of the attestor.</p>
          * 
          * <strong>example:</strong>
          * <p>attestor-auto-ad5316</p>
@@ -139,7 +139,7 @@ public class DescribeAttestorsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The maximum number of entries to return on each page in a paging query.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>

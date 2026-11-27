@@ -27,6 +27,10 @@ public class AddClientUserDefineRuleRequest extends Request {
     private String cmdline;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Direction")
+    private String direction;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Domain")
     private String domain;
 
@@ -96,6 +100,7 @@ public class AddClientUserDefineRuleRequest extends Request {
         super(builder);
         this.actionType = builder.actionType;
         this.cmdline = builder.cmdline;
+        this.direction = builder.direction;
         this.domain = builder.domain;
         this.filePath = builder.filePath;
         this.ip = builder.ip;
@@ -139,6 +144,13 @@ public class AddClientUserDefineRuleRequest extends Request {
      */
     public String getCmdline() {
         return this.cmdline;
+    }
+
+    /**
+     * @return direction
+     */
+    public String getDirection() {
+        return this.direction;
     }
 
     /**
@@ -256,6 +268,7 @@ public class AddClientUserDefineRuleRequest extends Request {
     public static final class Builder extends Request.Builder<AddClientUserDefineRuleRequest, Builder> {
         private Integer actionType; 
         private String cmdline; 
+        private String direction; 
         private String domain; 
         private String filePath; 
         private String ip; 
@@ -281,6 +294,7 @@ public class AddClientUserDefineRuleRequest extends Request {
             super(request);
             this.actionType = request.actionType;
             this.cmdline = request.cmdline;
+            this.direction = request.direction;
             this.domain = request.domain;
             this.filePath = request.filePath;
             this.ip = request.ip;
@@ -302,8 +316,8 @@ public class AddClientUserDefineRuleRequest extends Request {
         /**
          * <p>The action type. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: allow</li>
-         * <li><strong>1</strong>: block</li>
+         * <li><strong>0</strong>: Add to allowlist</li>
+         * <li><strong>1</strong>: Add to blocklist</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -325,6 +339,18 @@ public class AddClientUserDefineRuleRequest extends Request {
         public Builder cmdline(String cmdline) {
             this.putQueryParameter("Cmdline", cmdline);
             this.cmdline = cmdline;
+            return this;
+        }
+
+        /**
+         * <p>The traffic direction for standard IP rules (when Type is set to 9). A value of in indicates inbound traffic, and a value of out indicates outbound traffic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>out</p>
+         */
+        public Builder direction(String direction) {
+            this.putQueryParameter("Direction", direction);
+            this.direction = direction;
             return this;
         }
 
@@ -381,7 +407,7 @@ public class AddClientUserDefineRuleRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>Rule1</p>
+         * <p>Rule 1</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -390,7 +416,7 @@ public class AddClientUserDefineRuleRequest extends Request {
         }
 
         /**
-         * <p>The new file path for file rename.</p>
+         * <p>The new file path for the renamed file.</p>
          * 
          * <strong>example:</strong>
          * <p>/etc/pam****</p>
@@ -430,7 +456,7 @@ public class AddClientUserDefineRuleRequest extends Request {
          * <ul>
          * <li><strong>windows</strong>: Windows</li>
          * <li><strong>linux</strong>: Linux</li>
-         * <li><strong>all</strong>: all</li>
+         * <li><strong>all</strong>: All</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -443,7 +469,7 @@ public class AddClientUserDefineRuleRequest extends Request {
         }
 
         /**
-         * <p>The port number. This parameter is deprecated.</p>
+         * <p>The port number. <strong>[Deprecated]</strong></p>
          * 
          * <strong>example:</strong>
          * <p>22</p>
@@ -455,7 +481,7 @@ public class AddClientUserDefineRuleRequest extends Request {
         }
 
         /**
-         * <p>The port number. Valid values: <strong>1 to 65535</strong>.</p>
+         * <p>The port number. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>80</p>
@@ -505,8 +531,8 @@ public class AddClientUserDefineRuleRequest extends Request {
         /**
          * <p>Specifies whether machines are automatically added to the rule. Default value: add. Valid values:</p>
          * <ul>
-         * <li><strong>add</strong>: Automatically added by default.</li>
-         * <li><strong>del</strong>: Not automatically added by default.</li>
+         * <li><strong>add</strong>: Added by default.</li>
+         * <li><strong>del</strong>: Not added by default.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -521,16 +547,16 @@ public class AddClientUserDefineRuleRequest extends Request {
         /**
          * <p>The rule type. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: process hash</li>
-         * <li><strong>2</strong>: command line</li>
-         * <li><strong>3</strong>: process network</li>
-         * <li><strong>4</strong>: file read/write</li>
-         * <li><strong>5</strong>: registry operation</li>
-         * <li><strong>6</strong>: dynamic-link library loading</li>
-         * <li><strong>7</strong>: file rename</li>
-         * <li><strong>8</strong>: network domain name</li>
-         * <li><strong>9</strong>: network IP</li>
-         * <li><strong>10</strong>: file path</li>
+         * <li><strong>1</strong>: Process hash</li>
+         * <li><strong>2</strong>: Command line</li>
+         * <li><strong>3</strong>: Process network</li>
+         * <li><strong>4</strong>: File read and write</li>
+         * <li><strong>5</strong>: Registry operation</li>
+         * <li><strong>6</strong>: Dynamic-link library loading</li>
+         * <li><strong>7</strong>: File renaming</li>
+         * <li><strong>8</strong>: Network domain name</li>
+         * <li><strong>9</strong>: Network IP address</li>
+         * <li><strong>10</strong>: File path</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

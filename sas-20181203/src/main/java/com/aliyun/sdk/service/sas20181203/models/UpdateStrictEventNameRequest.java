@@ -30,11 +30,16 @@ public class UpdateStrictEventNameRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String operator;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceDirectoryAccountId")
+    private Long resourceDirectoryAccountId;
+
     private UpdateStrictEventNameRequest(Builder builder) {
         super(builder);
         this.eventNameList = builder.eventNameList;
         this.lang = builder.lang;
         this.operator = builder.operator;
+        this.resourceDirectoryAccountId = builder.resourceDirectoryAccountId;
     }
 
     public static Builder builder() {
@@ -71,10 +76,18 @@ public class UpdateStrictEventNameRequest extends Request {
         return this.operator;
     }
 
+    /**
+     * @return resourceDirectoryAccountId
+     */
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
+    }
+
     public static final class Builder extends Request.Builder<UpdateStrictEventNameRequest, Builder> {
         private java.util.List<String> eventNameList; 
         private String lang; 
         private String operator; 
+        private Long resourceDirectoryAccountId; 
 
         private Builder() {
             super();
@@ -85,13 +98,13 @@ public class UpdateStrictEventNameRequest extends Request {
             this.eventNameList = request.eventNameList;
             this.lang = request.lang;
             this.operator = request.operator;
+            this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
         } 
 
         /**
-         * <p>The list of strict mode alerts to operate on. This is a full list. Strict mode alerts not included in this list will have the opposite action applied.</p>
+         * <p>The list of strict mode alerts to be updated. This is a full list. Strict mode alerts not included in this list will be subjected to the opposite operation.</p>
          * <blockquote>
-         * <p>Call <a href="~~DescribeStrictEventName~~">DescribeStrictEventName</a> to obtain the list of all strict mode alerts.
-         * -.</p>
+         * <h2>You can call <a href="~~DescribeStrictEventName~~">DescribeStrictEventName</a> to obtain the list of all strict mode alerts.</h2>
          * </blockquote>
          */
         public Builder eventNameList(java.util.List<String> eventNameList) {
@@ -101,9 +114,9 @@ public class UpdateStrictEventNameRequest extends Request {
         }
 
         /**
-         * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <p>Specifies the language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
          * <ul>
-         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>zh</strong>: Chinese.</li>
          * <li><strong>en</strong>: English.</li>
          * </ul>
          * 
@@ -117,10 +130,10 @@ public class UpdateStrictEventNameRequest extends Request {
         }
 
         /**
-         * <p>The operator for the rule action. Valid values:</p>
+         * <p>Specifies the action to perform on the alerts. Valid values:</p>
          * <ul>
-         * <li><em>on</em>: enables alerting</li>
-         * <li><em>off</em>: disables alerting.</li>
+         * <li><em>on</em>: enables alerts.</li>
+         * <li><em>off</em>: disables alerts.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -130,6 +143,15 @@ public class UpdateStrictEventNameRequest extends Request {
         public Builder operator(String operator) {
             this.putQueryParameter("Operator", operator);
             this.operator = operator;
+            return this;
+        }
+
+        /**
+         * ResourceDirectoryAccountId.
+         */
+        public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+            this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
+            this.resourceDirectoryAccountId = resourceDirectoryAccountId;
             return this;
         }
 

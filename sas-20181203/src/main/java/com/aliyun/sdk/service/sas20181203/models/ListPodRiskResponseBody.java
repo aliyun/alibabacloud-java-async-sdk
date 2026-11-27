@@ -216,7 +216,7 @@ public class ListPodRiskResponseBody extends TeaModel {
              * <p>The maximum number of entries per page when paging is used.</p>
              * 
              * <strong>example:</strong>
-             * <p>2-</p>
+             * <p>2</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;

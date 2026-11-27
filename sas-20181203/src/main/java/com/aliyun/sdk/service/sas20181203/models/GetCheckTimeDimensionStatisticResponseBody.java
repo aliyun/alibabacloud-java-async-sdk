@@ -317,6 +317,9 @@ public class GetCheckTimeDimensionStatisticResponseBody extends TeaModel {
 
             /**
              * <p>The list of data timestamps.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[1712592000000]</p>
              */
             public Builder dates(java.util.List<Long> dates) {
                 this.dates = dates;

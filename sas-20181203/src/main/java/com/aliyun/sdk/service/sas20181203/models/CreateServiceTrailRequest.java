@@ -21,9 +21,14 @@ public class CreateServiceTrailRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceDirectoryAccountId")
+    private Long resourceDirectoryAccountId;
+
     private CreateServiceTrailRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.resourceDirectoryAccountId = builder.resourceDirectoryAccountId;
     }
 
     public static Builder builder() {
@@ -46,8 +51,16 @@ public class CreateServiceTrailRequest extends Request {
         return this.regionId;
     }
 
+    /**
+     * @return resourceDirectoryAccountId
+     */
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
+    }
+
     public static final class Builder extends Request.Builder<CreateServiceTrailRequest, Builder> {
         private String regionId; 
+        private Long resourceDirectoryAccountId; 
 
         private Builder() {
             super();
@@ -56,13 +69,14 @@ public class CreateServiceTrailRequest extends Request {
         private Builder(CreateServiceTrailRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
         } 
 
         /**
-         * <p>The region ID of the instance to query. Valid values:</p>
+         * <p>The ID of the region where the instance to query resides. Valid values:</p>
          * <ul>
-         * <li><strong>cn-hangzhou</strong> (default): Chinese mainland.</li>
-         * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland.</li>
+         * <li><strong>cn-hangzhou</strong> (default): China.</li>
+         * <li><strong>ap-southeast-1</strong>: Global (excluding China).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -71,6 +85,21 @@ public class CreateServiceTrailRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the member accounts in the resource folder. The ID is an Alibaba Cloud account ID.</p>
+         * <blockquote>
+         * <p>You can invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to query the value of this parameter.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1766185894104675</p>
+         */
+        public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+            this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
+            this.resourceDirectoryAccountId = resourceDirectoryAccountId;
             return this;
         }
 

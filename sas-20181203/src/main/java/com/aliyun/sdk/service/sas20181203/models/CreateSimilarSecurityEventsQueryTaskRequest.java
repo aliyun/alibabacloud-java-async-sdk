@@ -146,6 +146,9 @@ public class CreateSimilarSecurityEventsQueryTaskRequest extends Request {
 
         /**
          * <p>The client token that is used to ensure the idempotence of the request. You can use different tokens for different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>02fb3da4-130e-11e9-8e44-0016e04115b</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -154,10 +157,10 @@ public class CreateSimilarSecurityEventsQueryTaskRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to perform a dry run of the request. Valid values:</p>
+         * <p>Specifies whether to precheck the request. Valid values:</p>
          * <ul>
-         * <li>true: performs a dry run without performing the actual operation.</li>
-         * <li>false: performs the actual operation.
+         * <li>true: The system only prechecks the request and does not perform the actual operation.</li>
+         * <li>false: The system performs the actual operation.
          * Default value: false.</li>
          * </ul>
          */
@@ -168,7 +171,10 @@ public class CreateSimilarSecurityEventsQueryTaskRequest extends Request {
         }
 
         /**
-         * ResourceDirectoryAccountId.
+         * <p>The UID of the member accounts in the resource folder. This parameter is used to specify the target member accounts in multi-account scenarios.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>127608589417****</p>
          */
         public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
             this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
@@ -199,7 +205,7 @@ public class CreateSimilarSecurityEventsQueryTaskRequest extends Request {
         }
 
         /**
-         * <p>The code value of alerting events of the same type or rule hits.</p>
+         * <p>The code of alerting events that hit the same rule or have the same rule hits.</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>
@@ -211,7 +217,7 @@ public class CreateSimilarSecurityEventsQueryTaskRequest extends Request {
         }
 
         /**
-         * <p>The source IP address.</p>
+         * <p>The IP address of the access source.</p>
          * 
          * <strong>example:</strong>
          * <p>1.2.XX.XX</p>

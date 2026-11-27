@@ -217,7 +217,7 @@ public class ListClusterCheckResultResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the regulation for the check item.</p>
+             * <p>The regulation ID of the check item.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -239,7 +239,7 @@ public class ListClusterCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the section for the check item.</p>
+             * <p>The section ID of the check item.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -261,7 +261,7 @@ public class ListClusterCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the standard for the check item.</p>
+             * <p>The standard ID of the check item.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -531,7 +531,7 @@ public class ListClusterCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The standards, regulations, and sections associated with the check result.</p>
+             * <p>The standard, regulation, and section information associated with the check result.</p>
              */
             public Builder checkPolicies(java.util.List<CheckPolicies> checkPolicies) {
                 this.checkPolicies = checkPolicies;
@@ -615,7 +615,7 @@ public class ListClusterCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp of the latest check. Unit: milliseconds.</p>
+             * <p>The timestamp of the last check. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1657793398000</p>
@@ -687,11 +687,11 @@ public class ListClusterCheckResultResponseBody extends TeaModel {
 
             /**
              * <p>The vendor of the asset. Valid values:</p>
-             * <p>0: Alibaba Cloud.
-             * 3: Other cloud.
-             * 4: Other cloud.
-             * 5: Other cloud.
-             * 7: Other cloud.</p>
+             * <p>0: Alibaba Cloud
+             * 3: Third-party cloud
+             * 4: Third-party cloud
+             * 5: Third-party cloud
+             * 7: Third-party cloud</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -787,7 +787,7 @@ public class ListClusterCheckResultResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of data entries displayed on the current page during paging in a paged query.</p>
+             * <p>The number of data entries returned on the current page during paging in a paged query.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>
@@ -809,7 +809,7 @@ public class ListClusterCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of alerting events to display on each page during paging in a paged query. Default value: <strong>20</strong>, which indicates that 20 alerting events are displayed on each page.</p>
+             * <p>The number of alerting events to return on each page during paging in a paged query. Default value: <strong>20</strong>, which indicates that 20 alerting events are displayed on each page.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>

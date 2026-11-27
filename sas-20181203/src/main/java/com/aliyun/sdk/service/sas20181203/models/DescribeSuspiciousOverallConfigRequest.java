@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeSuspiciousOverallConfigRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceDirectoryAccountId")
+    private Long resourceDirectoryAccountId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SourceIp")
     private String sourceIp;
 
@@ -28,6 +32,7 @@ public class DescribeSuspiciousOverallConfigRequest extends Request {
 
     private DescribeSuspiciousOverallConfigRequest(Builder builder) {
         super(builder);
+        this.resourceDirectoryAccountId = builder.resourceDirectoryAccountId;
         this.sourceIp = builder.sourceIp;
         this.type = builder.type;
     }
@@ -46,6 +51,13 @@ public class DescribeSuspiciousOverallConfigRequest extends Request {
     }
 
     /**
+     * @return resourceDirectoryAccountId
+     */
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
+    }
+
+    /**
      * @return sourceIp
      */
     public String getSourceIp() {
@@ -60,6 +72,7 @@ public class DescribeSuspiciousOverallConfigRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeSuspiciousOverallConfigRequest, Builder> {
+        private Long resourceDirectoryAccountId; 
         private String sourceIp; 
         private String type; 
 
@@ -69,12 +82,28 @@ public class DescribeSuspiciousOverallConfigRequest extends Request {
 
         private Builder(DescribeSuspiciousOverallConfigRequest request) {
             super(request);
+            this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
             this.sourceIp = request.sourceIp;
             this.type = request.type;
         } 
 
         /**
-         * <p>The source IP address of the request.</p>
+         * <p>The ID of the member accounts in the resource folder (Alibaba Cloud account).</p>
+         * <blockquote>
+         * <p>You can invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1766185894104675</p>
+         */
+        public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+            this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
+            this.resourceDirectoryAccountId = resourceDirectoryAccountId;
+            return this;
+        }
+
+        /**
+         * <p>The source IP address.</p>
          * 
          * <strong>example:</strong>
          * <p>39.161.XX.XX</p>
@@ -86,14 +115,14 @@ public class DescribeSuspiciousOverallConfigRequest extends Request {
         }
 
         /**
-         * <p>The type of the feature. Valid values:</p>
+         * <p>The switch type. Valid values:</p>
          * <ul>
-         * <li><strong>auto_breaking</strong>: Anti-Virus</li>
-         * <li><strong>ransomware_breaking</strong>: Anti-ransomware (Bait Capture)</li>
-         * <li><strong>webshell_cloud_breaking</strong>: Webshell Protection</li>
-         * <li><strong>alinet</strong>: Behavior prevention</li>
-         * <li><strong>k8s_log_analysis</strong>: K8s Threat Detection</li>
-         * <li><strong>alisecguard</strong>: Defense mode for Client Protection</li>
+         * <li><strong>auto_breaking</strong>: Anti-virus.</li>
+         * <li><strong>ransomware_breaking</strong>: Anti-ransomware (decoy capture).</li>
+         * <li><strong>webshell_cloud_breaking</strong>: Web shell connection defense.</li>
+         * <li><strong>alinet</strong>: Malicious network behavior defense.</li>
+         * <li><strong>k8s_log_analysis</strong>: Container K8s threat detection.</li>
+         * <li><strong>alisecguard</strong>: Client self-protection defense mode.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

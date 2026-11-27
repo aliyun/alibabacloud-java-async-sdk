@@ -128,7 +128,7 @@ public class ConfirmVirusEventsRequest extends Request {
          * <p>The scope of the trojan scan alert handling. This parameter is required when OperationAll is set to 0. This parameter is ignored when OperationAll is set to 1.</p>
          * 
          * <strong>example:</strong>
-         * <p>[{\&quot;type\&quot;:\&quot;machine\&quot;,\&quot;list\&quot;:[\&quot;3aedba3d-bd4d-4dfb-bb0d-xxxxxxxxxxxx\&quot;]}]</p>
+         * <p>[{&quot;type&quot;:&quot;machine&quot;,&quot;list&quot;:[&quot;3aedba3d-bd4d-4dfb-bb0d-xxxxxxxxxxxx&quot;]}]</p>
          */
         public Builder operationRange(String operationRange) {
             this.putQueryParameter("OperationRange", operationRange);

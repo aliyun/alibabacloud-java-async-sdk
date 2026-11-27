@@ -21,9 +21,14 @@ public class DescribeLogShipperStatusRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("From")
     private String from;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceDirectoryAccountId")
+    private Long resourceDirectoryAccountId;
+
     private DescribeLogShipperStatusRequest(Builder builder) {
         super(builder);
         this.from = builder.from;
+        this.resourceDirectoryAccountId = builder.resourceDirectoryAccountId;
     }
 
     public static Builder builder() {
@@ -46,8 +51,16 @@ public class DescribeLogShipperStatusRequest extends Request {
         return this.from;
     }
 
+    /**
+     * @return resourceDirectoryAccountId
+     */
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
+    }
+
     public static final class Builder extends Request.Builder<DescribeLogShipperStatusRequest, Builder> {
         private String from; 
+        private Long resourceDirectoryAccountId; 
 
         private Builder() {
             super();
@@ -56,10 +69,11 @@ public class DescribeLogShipperStatusRequest extends Request {
         private Builder(DescribeLogShipperStatusRequest request) {
             super(request);
             this.from = request.from;
+            this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
         } 
 
         /**
-         * <p>The request source identifier. Set this parameter to <strong>sas</strong>.</p>
+         * <p>The identifier of the request source. The value is fixed to <strong>sas</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>sas</p>
@@ -67,6 +81,21 @@ public class DescribeLogShipperStatusRequest extends Request {
         public Builder from(String from) {
             this.putQueryParameter("From", from);
             this.from = from;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the member accounts in the resource folder. The member accounts are Alibaba Cloud accounts.</p>
+         * <blockquote>
+         * <p>You can invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1766185894104675</p>
+         */
+        public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+            this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
+            this.resourceDirectoryAccountId = resourceDirectoryAccountId;
             return this;
         }
 

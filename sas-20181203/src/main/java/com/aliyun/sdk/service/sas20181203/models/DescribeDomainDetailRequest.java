@@ -74,9 +74,9 @@ public class DescribeDomainDetailRequest extends Request {
         } 
 
         /**
-         * <p>The name of the domain name or website to query.</p>
+         * <p>The domain name or website name to query.</p>
          * <blockquote>
-         * <p>Fuzzy match is not supported. Enter the complete domain name or website name.</p>
+         * <p>Fuzzy search is not supported. You must enter the complete domain name or website name.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -90,7 +90,7 @@ public class DescribeDomainDetailRequest extends Request {
         }
 
         /**
-         * <p>The IP address of the access source.</p>
+         * <p>The source IP address.</p>
          * 
          * <strong>example:</strong>
          * <p>1.2.XX.XX</p>

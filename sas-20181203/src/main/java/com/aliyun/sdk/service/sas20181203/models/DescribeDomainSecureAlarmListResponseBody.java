@@ -620,7 +620,7 @@ public class DescribeDomainSecureAlarmListResponseBody extends TeaModel {
              * </ul>
              * 
              * <strong>example:</strong>
-             * <p>y</p>
+             * <p>true</p>
              */
             public Builder dealed(Boolean dealed) {
                 this.dealed = dealed;
@@ -631,7 +631,7 @@ public class DescribeDomainSecureAlarmListResponseBody extends TeaModel {
              * <p>The description of the alert event.</p>
              * 
              * <strong>example:</strong>
-             * <p>The detection model finds that there is a Trojan horse program on your server. The Trojan horse program is a program specially used to invade the user\&quot;s host. Generally, it will download and release another malicious program after being implanted into the system through disguise.</p>
+             * <p>The detection model finds that there is a Trojan horse program on your server. The Trojan horse program is a program specially used to invade the user&quot;s host. Generally, it will download and release another malicious program after being implanted into the system through disguise.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -799,7 +799,7 @@ public class DescribeDomainSecureAlarmListResponseBody extends TeaModel {
              * <p>The stage of the attack or intrusion.</p>
              * 
              * <strong>example:</strong>
-             * <p>[\&quot;authority_maintenance\&quot;]</p>
+             * <p>[&quot;authority_maintenance&quot;]</p>
              */
             public Builder stages(String stages) {
                 this.stages = stages;

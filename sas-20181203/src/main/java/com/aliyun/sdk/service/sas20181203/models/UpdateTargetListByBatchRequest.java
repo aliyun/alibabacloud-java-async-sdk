@@ -185,7 +185,7 @@ public class UpdateTargetListByBatchRequest extends Request {
             /**
              * <p>The ID of the server group.</p>
              * <blockquote>
-             * <p>Call the <a href="~~DescribeAllGroups~~">DescribeAllGroups</a> operation to query the server group ID.</p>
+             * <p>You can call the <a href="~~DescribeAllGroups~~">DescribeAllGroups</a> operation to query the server group ID.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -199,8 +199,8 @@ public class UpdateTargetListByBatchRequest extends Request {
             /**
              * <p>The operation type. Valid values:</p>
              * <ul>
-             * <li><strong>add</strong>: increase.</li>
-             * <li><strong>del</strong>: delete.</li>
+             * <li><strong>add</strong>: Add.</li>
+             * <li><strong>del</strong>: Delete.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -214,7 +214,7 @@ public class UpdateTargetListByBatchRequest extends Request {
             /**
              * <p>The UUID of the server.</p>
              * <blockquote>
-             * <p>Call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to obtain this parameter.</p>
+             * <p>You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to obtain this parameter.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -226,7 +226,7 @@ public class UpdateTargetListByBatchRequest extends Request {
             }
 
             /**
-             * <p>The ID of the VPC-connected instance.</p>
+             * <p>The VPC-connected instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-bp1ow0rm9t92iza******</p>

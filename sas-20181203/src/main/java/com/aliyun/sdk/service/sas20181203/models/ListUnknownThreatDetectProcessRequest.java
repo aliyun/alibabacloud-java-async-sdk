@@ -229,7 +229,7 @@ public class ListUnknownThreatDetectProcessRequest extends Request {
         }
 
         /**
-         * <p>The page number of the current page returned during paging for a paged query.</p>
+         * <p>The page number of the current page in a paging query.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -241,7 +241,7 @@ public class ListUnknownThreatDetectProcessRequest extends Request {
         }
 
         /**
-         * <p>The end time of the time range during which the process was first detected. The value is a timestamp in milliseconds.</p>
+         * <p>The end time of the time range when the process was first detected. The value is a timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1768891966345</p>
@@ -253,7 +253,7 @@ public class ListUnknownThreatDetectProcessRequest extends Request {
         }
 
         /**
-         * <p>The start time of the time range during which the process was first detected. The value is a timestamp in milliseconds.</p>
+         * <p>The start time of the time range when the process was first detected. The value is a timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1768891966344</p>
@@ -277,7 +277,7 @@ public class ListUnknownThreatDetectProcessRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries to return on each page during paging for a paged query.</p>
+         * <p>The maximum number of entries per page in a paging query.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>

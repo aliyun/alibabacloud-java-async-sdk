@@ -115,22 +115,22 @@ public class UpdateCheckScopeConfigRequest extends Request {
         } 
 
         /**
-         * <p>The JSON string of the automatic scan configuration. The following fields are included:</p>
+         * <p>The JSON string for the automatic scan configuration. Fields:</p>
          * <ul>
-         * <li><strong>autoInclude</strong>: specifies whether to enable automatic scanning. Valid values: <strong>true</strong>: enabled. <strong>false</strong>: disabled.</li>
-         * <li><strong>autoRule</strong>: the configuration for enabling automatic scanning.</li>
-         * <li><strong>ruleOperator</strong>: the rule operator for the configuration. Set the value to <strong>include</strong>.</li>
-         * <li><strong>operator</strong>: the logical operator. Set the value to <strong>or</strong>.</li>
+         * <li><strong>autoInclude</strong>: specifies whether to enable automatic scanning. Valid values: <strong>true</strong> (enabled) and <strong>false</strong> (disabled).</li>
+         * <li><strong>autoRule</strong>: the enablement configuration.</li>
+         * <li><strong>ruleOperator</strong>: the enablement configuration rule. Valid value: <strong>include</strong>.</li>
+         * <li><strong>operator</strong>: the logical operator. Valid value: <strong>or</strong>.</li>
          * <li><strong>rule</strong>: the rule.</li>
-         * <li><strong>condition</strong>: the rule condition. Valid values: <strong>vendor</strong>: vendor, <strong>assetType</strong>: primary asset type, <strong>assetSubType</strong>: secondary asset type.<blockquote>
-         * <p>For specific meanings, refer to the <a href="~~GetCloudAssetCriteria~~">GetCloudAssetCriteria</a> operation.</p>
+         * <li><strong>condition</strong>: the rule condition. Valid values: <strong>vendor</strong> (vendor), <strong>assetType</strong> (primary asset type), and <strong>assetSubType</strong> (secondary asset type).<blockquote>
+         * <p>For more information about the specific meanings, refer to the <a href="~~GetCloudAssetCriteria~~">GetCloudAssetCriteria</a> operation.</p>
          * </blockquote>
          * </li>
          * </ul>
-         * <p>This parameter is required when AutoType is set to 1 (automatic scan enabled). Provide a valid JSON configuration string. This parameter is not required when AutoType is set to 0.</p>
+         * <p>If AutoType is set to 1 (enable automatic scanning), this parameter is required and must be a valid JSON configuration string. If AutoType is set to 0, this parameter is optional.</p>
          * 
          * <strong>example:</strong>
-         * <p>&quot;{\&quot;autoInclude\&quot;:true,\&quot;autoRule\&quot;:{\&quot;ruleOperator\&quot;:\&quot;include\&quot;,\&quot;operator\&quot;:\&quot;or\&quot;,\&quot;rule\&quot;:[{\&quot;condition\&quot;:\&quot;assetSubType\&quot;,\&quot;ruleOperator\&quot;:\&quot;include\&quot;,\&quot;value\&quot;:[{\&quot;vendor\&quot;:\&quot;0\&quot;,\&quot;assetType\&quot;:\&quot;0\&quot;,\&quot;assetSubType\&quot;:\&quot;100\&quot;}]}]}}&quot;</p>
+         * <p>&quot;{&quot;autoInclude&quot;:true,&quot;autoRule&quot;:{&quot;ruleOperator&quot;:&quot;include&quot;,&quot;operator&quot;:&quot;or&quot;,&quot;rule&quot;:[{&quot;condition&quot;:&quot;assetSubType&quot;,&quot;ruleOperator&quot;:&quot;include&quot;,&quot;value&quot;:[{&quot;vendor&quot;:&quot;0&quot;,&quot;assetType&quot;:&quot;0&quot;,&quot;assetSubType&quot;:&quot;100&quot;}]}]}}&quot;</p>
          */
         public Builder autoConfig(String autoConfig) {
             this.putQueryParameter("AutoConfig", autoConfig);
@@ -141,8 +141,8 @@ public class UpdateCheckScopeConfigRequest extends Request {
         /**
          * <p>The type of the automatic scan configuration. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: Automatic scan is disabled.</li>
-         * <li><strong>1</strong>: Automatically scan newly added cloud assets.</li>
+         * <li><strong>0</strong>: disable automatic scanning</li>
+         * <li><strong>1</strong>: automatically scan new cloud assets</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -155,10 +155,7 @@ public class UpdateCheckScopeConfigRequest extends Request {
         }
 
         /**
-         * <p>The ID of the configuration.</p>
-         * <blockquote>
-         * <p>Call the <a href="~~GetCheckScopeConfig~~">GetCheckScopeConfig</a> operation to obtain this parameter.</p>
-         * </blockquote>
+         * <p>The configuration ID. You can call the <a href="~~GetCheckScopeConfig~~">GetCheckScopeConfig</a> operation to query this parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>00cfa8161da093089e6804ba6a33****</p>
@@ -170,10 +167,7 @@ public class UpdateCheckScopeConfigRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Alibaba Cloud account that corresponds to the member accounts in the resource folder.</p>
-         * <blockquote>
-         * <p>Invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
-         * </blockquote>
+         * <p>The ID of the Alibaba Cloud account that is the primary account of the member accounts of the resource folder. You can invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to query this parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>127608589417****</p>

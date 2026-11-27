@@ -67,7 +67,7 @@ public class DescribeImageFixCycleConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The response data.</p>
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,7 @@ public class DescribeImageFixCycleConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The unique request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>D65AADFC-1D20-5A6A-8F6A-9FA53C0D****</p>
@@ -170,7 +170,7 @@ public class DescribeImageFixCycleConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The scheduled fix cycle. Unit: days.</p>
+             * <p>The scheduled repair cycle. Unit: days.</p>
              * 
              * <strong>example:</strong>
              * <p>7</p>
@@ -181,7 +181,7 @@ public class DescribeImageFixCycleConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The scheduled image fix switch. Valid values:</p>
+             * <p>The switch for scheduled image repair. Valid values:</p>
              * <ul>
              * <li><strong>on</strong>: Enabled.</li>
              * <li><strong>off</strong>: Disabled.</li>
@@ -196,14 +196,14 @@ public class DescribeImageFixCycleConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The scope of the scheduled image fix. This parameter is in JSON format and contains the following fields:</p>
+             * <p>The scope of scheduled image repair. This parameter is in JSON format and contains the following fields:</p>
              * <ul>
-             * <li><strong>type</strong>: The target type. The value is fixed as repo.</li>
-             * <li><strong>target</strong>: The target content. Format: namespace/image repository.</li>
+             * <li><strong>type</strong>: The target type, which is fixed to repo.</li>
+             * <li><strong>target</strong>: The target content, in the format of namespace/image repository.</li>
              * </ul>
              * 
              * <strong>example:</strong>
-             * <p>{\&quot;type\&quot;:\&quot;repo\&quot;,\&quot;target\&quot;:[\&quot;qa-dac/yyuan9\&quot;,\&quot;cdp-uat/zentao\&quot;,\&quot;cafdms-qa/xxl-job-admin\&quot;,\&quot;cafdms-qa/utils/jdk\&quot;,\&quot;cafmfbi/ui\&quot;,\&quot;cdp-uat/tradingdesk-webapp\&quot;]}</p>
+             * <p>{&quot;type&quot;:&quot;repo&quot;,&quot;target&quot;:[&quot;qa-dac/yyuan9&quot;,&quot;cdp-uat/zentao&quot;,&quot;cafdms-qa/xxl-job-admin&quot;,&quot;cafdms-qa/utils/jdk&quot;,&quot;cafmfbi/ui&quot;,&quot;cdp-uat/tradingdesk-webapp&quot;]}</p>
              */
             public Builder imageFixTarget(String imageFixTarget) {
                 this.imageFixTarget = imageFixTarget;

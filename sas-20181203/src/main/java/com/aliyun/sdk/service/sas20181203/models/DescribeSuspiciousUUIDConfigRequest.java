@@ -18,12 +18,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeSuspiciousUUIDConfigRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceDirectoryAccountId")
+    private Long resourceDirectoryAccountId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Type")
     @com.aliyun.core.annotation.Validation(required = true)
     private String type;
 
     private DescribeSuspiciousUUIDConfigRequest(Builder builder) {
         super(builder);
+        this.resourceDirectoryAccountId = builder.resourceDirectoryAccountId;
         this.type = builder.type;
     }
 
@@ -41,6 +46,13 @@ public class DescribeSuspiciousUUIDConfigRequest extends Request {
     }
 
     /**
+     * @return resourceDirectoryAccountId
+     */
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
+    }
+
+    /**
      * @return type
      */
     public String getType() {
@@ -48,6 +60,7 @@ public class DescribeSuspiciousUUIDConfigRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeSuspiciousUUIDConfigRequest, Builder> {
+        private Long resourceDirectoryAccountId; 
         private String type; 
 
         private Builder() {
@@ -56,17 +69,30 @@ public class DescribeSuspiciousUUIDConfigRequest extends Request {
 
         private Builder(DescribeSuspiciousUUIDConfigRequest request) {
             super(request);
+            this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
             this.type = request.type;
         } 
 
         /**
-         * <p>The type of proactive defense. Valid values:</p>
+         * <p>The ID of the member accounts in the resource folder (Alibaba Cloud account). You can invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1766185894104675</p>
+         */
+        public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+            this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
+            this.resourceDirectoryAccountId = resourceDirectoryAccountId;
+            return this;
+        }
+
+        /**
+         * <p>The type of proactive defense to query. Valid values:</p>
          * <ul>
-         * <li><strong>auto_breaking</strong>: virus defense</li>
-         * <li><strong>ransomware_breaking</strong>: ransomware capture</li>
-         * <li><strong>webshell_cloud_breaking</strong>: webshell defense</li>
-         * <li><strong>alinet</strong>: malicious behavior defense</li>
-         * <li><strong>alisecguard</strong>: client protection</li>
+         * <li><strong>auto_breaking</strong>: anti-virus</li>
+         * <li><strong>ransomware_breaking</strong>: anti-ransomware (bait capture)</li>
+         * <li><strong>webshell_cloud_breaking</strong>: web shell connection defense</li>
+         * <li><strong>alinet</strong>: malicious network behavior defense</li>
+         * <li><strong>alisecguard</strong>: client self-protection</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

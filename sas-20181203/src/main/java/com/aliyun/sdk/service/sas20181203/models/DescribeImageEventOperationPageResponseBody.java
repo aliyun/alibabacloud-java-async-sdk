@@ -319,7 +319,7 @@ public class DescribeImageEventOperationPageResponseBody extends TeaModel {
              * </ul>
              * 
              * <strong>example:</strong>
-             * <p>[{\&quot;condition\&quot;: \&quot;MD5\&quot;, \&quot;type\&quot;: \&quot;equals\&quot;, \&quot;value\&quot;: \&quot;0083a31cc0083a31ccf7c10367a6e783e\&quot;}]</p>
+             * <p>[{&quot;condition&quot;: &quot;MD5&quot;, &quot;type&quot;: &quot;equals&quot;, &quot;value&quot;: &quot;0083a31cc0083a31ccf7c10367a6e783e&quot;}]</p>
              */
             public Builder conditions(String conditions) {
                 this.conditions = conditions;
@@ -377,7 +377,7 @@ public class DescribeImageEventOperationPageResponseBody extends TeaModel {
              * <p>The remarks.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxx</p>
+             * <p>已检查该告警。</p>
              */
             public Builder note(String note) {
                 this.note = note;
@@ -406,7 +406,7 @@ public class DescribeImageEventOperationPageResponseBody extends TeaModel {
              * </ul>
              * 
              * <strong>example:</strong>
-             * <p>{\&quot;type\&quot;: \&quot;repo\&quot;, \&quot;value\&quot;: \&quot;test-aaa/shenzhen-repo-01\&quot;}</p>
+             * <p>{&quot;type&quot;: &quot;repo&quot;, &quot;value&quot;: &quot;test-aaa/shenzhen-repo-01&quot;}</p>
              */
             public Builder scenarios(String scenarios) {
                 this.scenarios = scenarios;

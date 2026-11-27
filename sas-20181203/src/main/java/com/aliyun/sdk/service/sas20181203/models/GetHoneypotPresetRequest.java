@@ -74,9 +74,9 @@ public class GetHoneypotPresetRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the honeypot template.</p>
+         * <p>The unique ID of the honeypot template.</p>
          * <blockquote>
-         * <p>You can call the <a href="~~ListHoneypotPreset~~">ListHoneypotPreset</a> operation to query the IDs of honeypot templates.</p>
+         * <p>You can call the <a href="~~ListHoneypotPreset~~">ListHoneypotPreset</a> operation to query the value of this parameter.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -90,7 +90,7 @@ public class GetHoneypotPresetRequest extends Request {
         }
 
         /**
-         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <p>Specifies the language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
          * <ul>
          * <li><strong>zh</strong>: Chinese</li>
          * <li><strong>en</strong>: English</li>

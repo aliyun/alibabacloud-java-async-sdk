@@ -170,7 +170,7 @@ public class GetClusterCheckSummaryResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The total number of check items that failed the check.</p>
+             * <p>The total number of failed check items.</p>
              * 
              * <strong>example:</strong>
              * <p>6</p>
@@ -181,7 +181,7 @@ public class GetClusterCheckSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of check items with a high-risk level that failed the check.</p>
+             * <p>The number of failed high-risk check items.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -192,7 +192,7 @@ public class GetClusterCheckSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of check items with a low-risk level that failed the check.</p>
+             * <p>The number of failed low-risk check items.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -203,7 +203,7 @@ public class GetClusterCheckSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of check items with a medium-risk level that failed the check.</p>
+             * <p>The number of failed medium-risk check items.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>

@@ -89,7 +89,7 @@ public class ListHoneypotProbeUuidRequest extends Request {
         /**
          * <p>The ID of the management node.</p>
          * <blockquote>
-         * <p>You can call the <a href="~~ListHoneypotNode~~">ListHoneypotNode</a> operation to obtain this value.</p>
+         * <p>You can call the <a href="~~ListHoneypotNode~~">ListHoneypotNode</a> operation to retrieve this value.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -104,7 +104,7 @@ public class ListHoneypotProbeUuidRequest extends Request {
         /**
          * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
          * <ul>
-         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>zh</strong>: Chinese.</li>
          * <li><strong>en</strong>: English.</li>
          * </ul>
          * 
@@ -120,7 +120,7 @@ public class ListHoneypotProbeUuidRequest extends Request {
         /**
          * <p>The probe type. Valid values:</p>
          * <ul>
-         * <li><p><strong>host_probe</strong>: host probe</p>
+         * <li><p><strong>host_probe</strong>: host probe.</p>
          * </li>
          * <li><p><strong>vpc_black_hole_probe</strong>: VPC blackhole probe.</p>
          * </li>

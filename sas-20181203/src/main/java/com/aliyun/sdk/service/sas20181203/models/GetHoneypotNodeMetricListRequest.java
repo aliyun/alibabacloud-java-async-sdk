@@ -160,7 +160,7 @@ public class GetHoneypotNodeMetricListRequest extends Request {
          * <p>The end time. Supported formats:</p>
          * <ul>
          * <li>UNIX timestamp: the number of milliseconds that have elapsed since January 1, 1970.</li>
-         * <li>Formatted time: YYYY-MM-DDThh:mm:ssZ.</li>
+         * <li>Format: YYYY-MM-DDThh:mm:ssZ.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -173,7 +173,7 @@ public class GetHoneypotNodeMetricListRequest extends Request {
         }
 
         /**
-         * <p>The expression used to perform real-time calculations on the query results.</p>
+         * <p>The expression used to perform real-time calculations on the queried results.</p>
          * <blockquote>
          * <p>Currently, only groupby (similar to the GROUP BY clause in databases) is supported.</p>
          * </blockquote>
@@ -188,7 +188,7 @@ public class GetHoneypotNodeMetricListRequest extends Request {
         }
 
         /**
-         * <p>The number of records to return on each page for paging in a paged query.</p>
+         * <p>The number of records to return on each page for paged queries.</p>
          * <blockquote>
          * <p>The maximum value of Length for a single request is 1440.</p>
          * </blockquote>
@@ -255,7 +255,7 @@ public class GetHoneypotNodeMetricListRequest extends Request {
          * <p>The start time. Supported formats:</p>
          * <ul>
          * <li>UNIX timestamp: the number of milliseconds that have elapsed since January 1, 1970.</li>
-         * <li>Formatted time: YYYY-MM-DDThh:mm:ssZ.</li>
+         * <li>Format: YYYY-MM-DDThh:mm:ssZ.</li>
          * <li>The interval between StartTime and EndTime must be less than or equal to 31 days.</li>
          * </ul>
          * 

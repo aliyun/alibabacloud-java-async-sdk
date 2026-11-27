@@ -363,7 +363,7 @@ public class GetServerlessAuthSummaryResponseBody extends TeaModel {
              * </ul>
              * 
              * <strong>example:</strong>
-             * <p>1</p>
+             * <p>true</p>
              */
             public Builder hasPreBindSetting(Boolean hasPreBindSetting) {
                 this.hasPreBindSetting = hasPreBindSetting;

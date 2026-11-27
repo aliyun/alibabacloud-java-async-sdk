@@ -96,7 +96,7 @@ public class DeleteSecurityEventMarkMissListRequest extends Request {
         }
 
         /**
-         * <p>The Alibaba Cloud account ID of the member accounts in the resource folder.</p>
+         * <p>The ID of the Alibaba Cloud account to which the member account in the resource directory belongs.</p>
          * <blockquote>
          * <p>You can invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
          * </blockquote>

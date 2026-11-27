@@ -113,7 +113,7 @@ public class ListSasContainerWebDefenseRuleRequest extends Request {
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>[{\&quot;name\&quot;:\&quot;ruleName\&quot;,\&quot;value\&quot;:\&quot;test-1818\&quot;,\&quot;logicalExp\&quot;:\&quot;AND\&quot;}]</p>
+         * <p>[{&quot;name&quot;:&quot;ruleName&quot;,&quot;value&quot;:&quot;test-1818&quot;,&quot;logicalExp&quot;:&quot;AND&quot;}]</p>
          */
         public Builder criteria(String criteria) {
             this.putQueryParameter("Criteria", criteria);

@@ -257,7 +257,7 @@ public class DescribeCheckWarningSummaryRequest extends Request {
         /**
          * <p>The ID of the container cluster to query.</p>
          * <blockquote>
-         * <p>Call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to obtain this parameter.</p>
+         * <p>You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to query this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -275,7 +275,7 @@ public class DescribeCheckWarningSummaryRequest extends Request {
          * <li><strong>clusterId</strong>: cluster ID</li>
          * <li><strong>image</strong>: image name</li>
          * <li><strong>imageId</strong>: image ID</li>
-         * <li><strong>namespace</strong>: namespace.</li>
+         * <li><strong>namespace</strong>: namespace</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -300,7 +300,7 @@ public class DescribeCheckWarningSummaryRequest extends Request {
         }
 
         /**
-         * <p>The page number for a paged query.</p>
+         * <p>The page number for a paging query.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -312,9 +312,9 @@ public class DescribeCheckWarningSummaryRequest extends Request {
         }
 
         /**
-         * <p>The group ID of the server to query.</p>
+         * <p>The ID of the server group to query.</p>
          * <blockquote>
-         * <p>Call the <a href="~~DescribeAllGroups~~">DescribeAllGroups</a> operation to obtain the group ID of the server.</p>
+         * <p>You can call the <a href="~~DescribeAllGroups~~">DescribeAllGroups</a> operation to query the server group ID.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -330,7 +330,7 @@ public class DescribeCheckWarningSummaryRequest extends Request {
          * <p>The language of the request and response. Valid values:</p>
          * <ul>
          * <li><strong>zh</strong>: Chinese</li>
-         * <li><strong>en</strong>: English.</li>
+         * <li><strong>en</strong>: English</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -343,7 +343,7 @@ public class DescribeCheckWarningSummaryRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries per page for a paged query.</p>
+         * <p>The maximum number of entries to return per page in a paging query.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -369,8 +369,8 @@ public class DescribeCheckWarningSummaryRequest extends Request {
         /**
          * <p>The status of the baseline check. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: failed </li>
-         * <li><strong>3</strong>: passed.</li>
+         * <li><strong>1</strong>: Failed </li>
+         * <li><strong>3</strong>: Passed</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -383,7 +383,7 @@ public class DescribeCheckWarningSummaryRequest extends Request {
         }
 
         /**
-         * <p>The source IP address of the request.</p>
+         * <p>The source IP address.</p>
          * 
          * <strong>example:</strong>
          * <p>219.133.XX.XX</p>
@@ -397,11 +397,11 @@ public class DescribeCheckWarningSummaryRequest extends Request {
         /**
          * <p>The status of the check item. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: failed</li>
-         * <li><strong>2</strong>: verifying </li>
-         * <li><strong>3</strong>: passed </li>
-         * <li><strong>5</strong>: expired </li>
-         * <li><strong>6</strong>: ignored.</li>
+         * <li><strong>1</strong>: Failed</li>
+         * <li><strong>2</strong>: Verifying </li>
+         * <li><strong>3</strong>: Passed </li>
+         * <li><strong>5</strong>: Invalid </li>
+         * <li><strong>6</strong>: Ignored</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -428,7 +428,7 @@ public class DescribeCheckWarningSummaryRequest extends Request {
         /**
          * <p>The query type. Valid values:</p>
          * <ul>
-         * <li><strong>uuid</strong>: asset ID.</li>
+         * <li><strong>uuid</strong>: asset ID</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -441,9 +441,9 @@ public class DescribeCheckWarningSummaryRequest extends Request {
         }
 
         /**
-         * <p>The level-1 type of the baseline.</p>
+         * <p>The primary type of the baseline.</p>
          * <blockquote>
-         * <p>Call the <a href="~~DescribeRiskType~~">DescribeRiskType</a> operation to obtain this parameter.</p>
+         * <p>You can call the <a href="~~DescribeRiskType~~">DescribeRiskType</a> operation to query this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -458,7 +458,7 @@ public class DescribeCheckWarningSummaryRequest extends Request {
         /**
          * <p>The UUID of the asset.</p>
          * <blockquote>
-         * <p>Call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to obtain this parameter.</p>
+         * <p>You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to query this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

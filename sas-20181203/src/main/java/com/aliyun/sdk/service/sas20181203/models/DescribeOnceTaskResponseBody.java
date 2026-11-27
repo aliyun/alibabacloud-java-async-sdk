@@ -191,7 +191,7 @@ public class DescribeOnceTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of client tasks displayed on the current page for paging.</p>
+             * <p>The number of client tasks displayed on the current page in a paged query.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -202,7 +202,7 @@ public class DescribeOnceTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The page number of the current page for paging.</p>
+             * <p>The current page number in a paged query.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -213,7 +213,7 @@ public class DescribeOnceTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of client tasks per page for paging. Default value: <strong>20</strong>, which indicates that each page contains 20 client tasks.</p>
+             * <p>The number of client tasks per page in a paged query. Default value: <strong>20</strong>.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>
@@ -426,18 +426,18 @@ public class DescribeOnceTaskResponseBody extends TeaModel {
             /**
              * <p>The task execution details. This parameter is in JSON format.</p>
              * <ul>
-             * <li><strong>causeCode</strong>: The return code for the troubleshooting cause.</li>
-             * <li><strong>causeMsg</strong>: The return message for the troubleshooting cause.</li>
-             * <li><strong>resCode</strong>: The troubleshooting return code.</li>
-             * <li><strong>resMsg</strong>: The troubleshooting return message.</li>
-             * <li><strong>problemType</strong>: The problem type.</li>
-             * <li><strong>dispatchType</strong>: The task dispatch method.</li>
-             * <li><strong>uuid</strong>: The server UUID.</li>
-             * <li><strong>instanceId</strong>: The server instance ID.</li>
-             * <li><strong>internetIp</strong>: The public IP address of the server.</li>
-             * <li><strong>intranetIp</strong>: The private IP address of the server.</li>
-             * <li><strong>instanceName</strong>: The server instance name.</li>
-             * <li><strong>url</strong>: The download link for the troubleshooting log.</li>
+             * <li><strong>causeCode</strong>: return code for the troubleshooting cause</li>
+             * <li><strong>causeMsg</strong>: return message for the troubleshooting cause</li>
+             * <li><strong>resCode</strong>: troubleshooting return code</li>
+             * <li><strong>resMsg</strong>: troubleshooting return message</li>
+             * <li><strong>problemType</strong>: problem type</li>
+             * <li><strong>dispatchType</strong>: task delivery method</li>
+             * <li><strong>uuid</strong>: server UUID</li>
+             * <li><strong>instanceId</strong>: server instance ID</li>
+             * <li><strong>internetIp</strong>: public IP address of the server</li>
+             * <li><strong>intranetIp</strong>: private IP address of the server</li>
+             * <li><strong>instanceName</strong>: server instance name</li>
+             * <li><strong>url</strong>: download link for the troubleshooting log</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -450,7 +450,7 @@ public class DescribeOnceTaskResponseBody extends TeaModel {
              *                   &quot;1003&quot;
              *             ],
              *             &quot;resMsg&quot;: [
-             *                   &quot;powershell -executionpolicy bypass -c \&quot;(New-Object Net.WebClient).DownloadFile(\&quot;<a href="http://aegis.alicdn.com/download/aegis_client_self_check/win32/aegis_checker.exe%5C%5C">http://aegis.alicdn.com/download/aegis_client_self_check/win32/aegis_checker.exe\\</a>&quot;, $ExecutionContext.SessionState.Path.GetUnresolvedProviderPathFromPSPath(\&quot;.\\\\aegis_checker.exe\&quot;))\&quot;; \&quot;./aegis_checker.exe -b eyJtb2RlIjoxLCJqc3J2X2RvbWFpbiI6W10sImlzc3VlIjoib2ZmbGluZSIsInVwZGF0ZV9kb21haW4iOltdLCJ1dWlkIjoiaW5ldC1lYWUwNDg2Ny0wMDJmLTQyM2QtYWYwMC1jNzJjZDYyOWIyNDgiLCJjbWRfaWR4IjoiNDRjZThiZWI3ZGYyYTQxMjQ1NGM4ZDc5OTE1ODI1MzMifQ==\&quot;&quot;
+             *                   &quot;powershell -executionpolicy bypass -c &quot;(New-Object Net.WebClient).DownloadFile(&quot;<a href="http://aegis.alicdn.com/download/aegis_client_self_check/win32/aegis_checker.exe%5C">http://aegis.alicdn.com/download/aegis_client_self_check/win32/aegis_checker.exe\</a>&quot;, $ExecutionContext.SessionState.Path.GetUnresolvedProviderPathFromPSPath(&quot;.\\aegis_checker.exe&quot;))&quot;; &quot;./aegis_checker.exe -b eyJtb2RlIjoxLCJqc3J2X2RvbWFpbiI6W10sImlzc3VlIjoib2ZmbGluZSIsInVwZGF0ZV9kb21haW4iOltdLCJ1dWlkIjoiaW5ldC1lYWUwNDg2Ny0wMDJmLTQyM2QtYWYwMC1jNzJjZDYyOWIyNDgiLCJjbWRfaWR4IjoiNDRjZThiZWI3ZGYyYTQxMjQ1NGM4ZDc5OTE1ODI1MzMifQ==&quot;&quot;
              *             ],
              *             &quot;problemType&quot;: &quot;offline&quot;,
              *             &quot;uuid&quot;: &quot;inet-eae04867-002f-423d-af00-c72cd629****&quot;
@@ -507,7 +507,7 @@ public class DescribeOnceTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp when the task actually ends. Unit: milliseconds.</p>
+             * <p>The timestamp when the task actually ended. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1650267989000</p>
@@ -540,7 +540,7 @@ public class DescribeOnceTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp when the task actually starts. Unit: milliseconds.</p>
+             * <p>The timestamp when the task actually started. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1649732012000</p>
@@ -553,10 +553,10 @@ public class DescribeOnceTaskResponseBody extends TeaModel {
             /**
              * <p>The task status. Valid values:</p>
              * <ul>
-             * <li><strong>1</strong>: Started.</li>
-             * <li><strong>2</strong>: Completed.</li>
-             * <li><strong>3</strong>: Failed.</li>
-             * <li><strong>4</strong>: Timed out.</li>
+             * <li><strong>1</strong>: started</li>
+             * <li><strong>2</strong>: completed</li>
+             * <li><strong>3</strong>: failed</li>
+             * <li><strong>4</strong>: timed out</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -570,12 +570,12 @@ public class DescribeOnceTaskResponseBody extends TeaModel {
             /**
              * <p>The text object of the task status. Valid values:</p>
              * <ul>
-             * <li><strong>INIT</strong>: Pending.</li>
-             * <li><strong>START</strong>: Started.</li>
-             * <li><strong>DISPATCH</strong>: Self-check command issued.</li>
-             * <li><strong>SUCCESS</strong>: Self-check completed.</li>
-             * <li><strong>FAIL</strong>: Execution failed.</li>
-             * <li><strong>TIMEOUT</strong>: Timed out.</li>
+             * <li><strong>INIT</strong>: pending</li>
+             * <li><strong>START</strong>: started</li>
+             * <li><strong>DISPATCH</strong>: self-check command delivered</li>
+             * <li><strong>SUCCESS</strong>: self-check completed</li>
+             * <li><strong>FAIL</strong>: execution failed</li>
+             * <li><strong>TIMEOUT</strong>: timed out</li>
              * </ul>
              * 
              * <strong>example:</strong>

@@ -74,7 +74,7 @@ public class GetAgentlessTaskCountBatchRequest extends Request {
         } 
 
         /**
-         * <p>The detection object type. Valid values:</p>
+         * <p>The object type for detection. Valid values:</p>
          * <ul>
          * <li><strong>1</strong>: host snapshot</li>
          * <li><strong>2</strong>: host image</li>

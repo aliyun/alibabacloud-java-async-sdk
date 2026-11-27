@@ -85,9 +85,9 @@ public class GetCheckScopeConfigRequest extends Request {
         }
 
         /**
-         * <p>The ID of the member accounts in the resource directory.</p>
+         * <p>The ID of the Alibaba Cloud account to which the member accounts in the resource folder belong.</p>
          * <blockquote>
-         * <p>Invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
+         * <p>You can invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

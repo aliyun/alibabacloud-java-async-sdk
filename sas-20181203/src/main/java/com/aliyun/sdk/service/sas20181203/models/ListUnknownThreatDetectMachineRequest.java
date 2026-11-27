@@ -190,7 +190,7 @@ public class ListUnknownThreatDetectMachineRequest extends Request {
          * <li><strong>4</strong>: confirmed</li>
          * <li><strong>8</strong>: marked as false positive</li>
          * <li><strong>16</strong>: processing</li>
-         * <li><strong>32</strong>: handled</li>
+         * <li><strong>32</strong>: resolved</li>
          * <li><strong>64</strong>: expired</li>
          * <li><strong>604</strong>: marked as false positive by the system</li>
          * </ul>
@@ -249,8 +249,8 @@ public class ListUnknownThreatDetectMachineRequest extends Request {
         /**
          * <p>The whitelist mode. Valid values:</p>
          * <ul>
-         * <li><strong>hash</strong>: the hash of the process</li>
-         * <li><strong>path</strong>: the path of the process</li>
+         * <li><strong>hash</strong>: process hash</li>
+         * <li><strong>path</strong>: process path</li>
          * </ul>
          * 
          * <strong>example:</strong>

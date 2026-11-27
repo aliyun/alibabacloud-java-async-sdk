@@ -118,8 +118,7 @@ public class DescribeCustomizeReportConfigDetailRequest extends Request {
         }
 
         /**
-         * <p>The report ID.\
-         * Call the <a href="https://help.aliyun.com/document_detail/271655.html">DescribeCustomizeReportList</a> operation to obtain the value of ReportId from the response.</p>
+         * <p>The report ID.<br>Call the <a href="https://help.aliyun.com/document_detail/271655.html">DescribeCustomizeReportList</a> operation to obtain the value of ReportId from the response.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -221,14 +221,10 @@ public class CreateFileProtectClientRuleRequest extends Request {
         /**
          * <p>The alert notification level. Valid values:</p>
          * <ul>
-         * <li><p>0: No alert.</p>
-         * </li>
-         * <li><p>1: Reminder.</p>
-         * </li>
-         * <li><p>2: Suspicious.</p>
-         * </li>
-         * <li><p>3: High-risk.</p>
-         * </li>
+         * <li>0: No alert.</li>
+         * <li>1: Reminder.</li>
+         * <li>2: Suspicious.</li>
+         * <li>3: High-risk.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -241,10 +237,10 @@ public class CreateFileProtectClientRuleRequest extends Request {
         }
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>8d4a7c16-25d9-4b74-b5a7-4b97d277e246</p>
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("ClientToken", clientToken);
@@ -307,7 +303,7 @@ public class CreateFileProtectClientRuleRequest extends Request {
         }
 
         /**
-         * <p>The list of process monitoring paths. Wildcards are supported.</p>
+         * <p>The list of paths monitored by processes. Wildcards are supported.</p>
          * <p>This parameter is required.</p>
          */
         public Builder procPaths(java.util.List<String> procPaths) {
@@ -317,11 +313,11 @@ public class CreateFileProtectClientRuleRequest extends Request {
         }
 
         /**
-         * <p>The action to take when the policy is hit. Valid values:</p>
+         * <p>The action to perform when the rule is matched. Valid values:</p>
          * <ul>
-         * <li><strong>monitor</strong>: Alert.</li>
-         * <li><strong>block</strong>: Block.</li>
-         * <li><strong>pass</strong>: Allow.</li>
+         * <li><strong>monitor</strong>: Generates an alert.</li>
+         * <li><strong>block</strong>: Blocks the operation.</li>
+         * <li><strong>pass</strong>: Allows the operation.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -348,7 +344,7 @@ public class CreateFileProtectClientRuleRequest extends Request {
         }
 
         /**
-         * <p>The rule status. Valid values:</p>
+         * <p>The status of the rule. Valid values:</p>
          * <ul>
          * <li><strong>0</strong>: Disabled.</li>
          * <li><strong>1</strong>: Enabled.</li>
@@ -365,7 +361,7 @@ public class CreateFileProtectClientRuleRequest extends Request {
         }
 
         /**
-         * <p>The switch ID that corresponds to the rule.</p>
+         * <p>The ID of the switch associated with the rule.</p>
          * 
          * <strong>example:</strong>
          * <p>FILE_PROTECT_RULE_SWITCH_TYPE_0000</p>

@@ -155,7 +155,7 @@ public class ModifyImageRegistryRequest extends Request {
         }
 
         /**
-         * <p>The image registry ID. Call the <a href="https://help.aliyun.com/document_detail/471986.html">ListImageRegistry</a> operation to obtain this ID.</p>
+         * <p>The ID of the image registry. You can call the <a href="https://help.aliyun.com/document_detail/471986.html">ListImageRegistry</a> operation to obtain the image registry ID.</p>
          * 
          * <strong>example:</strong>
          * <p>390103286</p>
@@ -170,7 +170,7 @@ public class ModifyImageRegistryRequest extends Request {
          * <p>The password.</p>
          * 
          * <strong>example:</strong>
-         * <hr>
+         * <p>Demo****pwd</p>
          */
         public Builder password(String password) {
             this.putBodyParameter("Password", password);
@@ -191,7 +191,7 @@ public class ModifyImageRegistryRequest extends Request {
         }
 
         /**
-         * <p>The registry IP address.</p>
+         * <p>The IP address of the image registry.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.0.1</p>
@@ -203,7 +203,7 @@ public class ModifyImageRegistryRequest extends Request {
         }
 
         /**
-         * <p>The number of images to scan per hour.</p>
+         * <p>The number of images scanned per hour.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -218,7 +218,7 @@ public class ModifyImageRegistryRequest extends Request {
          * <p>The username.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxxx</p>
+         * <p>demo_user</p>
          */
         public Builder userName(String userName) {
             this.putBodyParameter("UserName", userName);

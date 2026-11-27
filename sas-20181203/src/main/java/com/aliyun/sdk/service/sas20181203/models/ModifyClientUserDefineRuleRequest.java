@@ -27,6 +27,10 @@ public class ModifyClientUserDefineRuleRequest extends Request {
     private String cmdline;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Direction")
+    private String direction;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Domain")
     private String domain;
 
@@ -95,6 +99,7 @@ public class ModifyClientUserDefineRuleRequest extends Request {
         super(builder);
         this.actionType = builder.actionType;
         this.cmdline = builder.cmdline;
+        this.direction = builder.direction;
         this.domain = builder.domain;
         this.filePath = builder.filePath;
         this.ip = builder.ip;
@@ -138,6 +143,13 @@ public class ModifyClientUserDefineRuleRequest extends Request {
      */
     public String getCmdline() {
         return this.cmdline;
+    }
+
+    /**
+     * @return direction
+     */
+    public String getDirection() {
+        return this.direction;
     }
 
     /**
@@ -255,6 +267,7 @@ public class ModifyClientUserDefineRuleRequest extends Request {
     public static final class Builder extends Request.Builder<ModifyClientUserDefineRuleRequest, Builder> {
         private Integer actionType; 
         private String cmdline; 
+        private String direction; 
         private String domain; 
         private String filePath; 
         private String ip; 
@@ -280,6 +293,7 @@ public class ModifyClientUserDefineRuleRequest extends Request {
             super(request);
             this.actionType = request.actionType;
             this.cmdline = request.cmdline;
+            this.direction = request.direction;
             this.domain = request.domain;
             this.filePath = request.filePath;
             this.ip = request.ip;
@@ -299,10 +313,10 @@ public class ModifyClientUserDefineRuleRequest extends Request {
         } 
 
         /**
-         * <p>The action type. Valid values:</p>
+         * <p>The operation type. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: allow</li>
-         * <li><strong>1</strong>: block.</li>
+         * <li><strong>0</strong>: whitelist</li>
+         * <li><strong>1</strong>: blacklist</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -324,6 +338,18 @@ public class ModifyClientUserDefineRuleRequest extends Request {
         public Builder cmdline(String cmdline) {
             this.putQueryParameter("Cmdline", cmdline);
             this.cmdline = cmdline;
+            return this;
+        }
+
+        /**
+         * <p>The traffic direction for common IP rules (Type is 9). A value of in indicates inbound, and a value of out indicates outbound.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>out</p>
+         */
+        public Builder direction(String direction) {
+            this.putQueryParameter("Direction", direction);
+            this.direction = direction;
             return this;
         }
 
@@ -366,7 +392,7 @@ public class ModifyClientUserDefineRuleRequest extends Request {
         /**
          * <p>The ID of the custom rule.</p>
          * <blockquote>
-         * <p>Call the <a href="~~ListClientUserDefineRules~~">ListClientUserDefineRules</a> operation to obtain this parameter.</p>
+         * <p>You can call the <a href="~~ListClientUserDefineRules~~">ListClientUserDefineRules</a> operation to query this parameter.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -393,9 +419,12 @@ public class ModifyClientUserDefineRuleRequest extends Request {
 
         /**
          * <p>The rule name.</p>
+         * <blockquote>
+         * <p>Note: If the name length exceeds the limit, the operation returns UserDefineRuleNameTooLong (HTTP 400) with the error message &quot;The custom rule name is too long.&quot;</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>规则****</p>
+         * <p>Rule****</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -404,7 +433,7 @@ public class ModifyClientUserDefineRuleRequest extends Request {
         }
 
         /**
-         * <p>The new file path for file rename.</p>
+         * <p>The new file path for file renaming.</p>
          * 
          * <strong>example:</strong>
          * <p>/etc/pam****</p>
@@ -416,7 +445,7 @@ public class ModifyClientUserDefineRuleRequest extends Request {
         }
 
         /**
-         * <p>The parent process command line.</p>
+         * <p>The parent command line.</p>
          * 
          * <strong>example:</strong>
          * <p>/usr/sbin/s****</p>
@@ -444,7 +473,7 @@ public class ModifyClientUserDefineRuleRequest extends Request {
          * <ul>
          * <li><strong>windows</strong>: Windows</li>
          * <li><strong>linux</strong>: Linux</li>
-         * <li><strong>all</strong>: all.</li>
+         * <li><strong>all</strong>: all</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -457,7 +486,7 @@ public class ModifyClientUserDefineRuleRequest extends Request {
         }
 
         /**
-         * <p>The port number. This parameter is deprecated.</p>
+         * <p><strong>[Deprecated]</strong> The port number.</p>
          * 
          * <strong>example:</strong>
          * <p>22</p>
@@ -522,11 +551,12 @@ public class ModifyClientUserDefineRuleRequest extends Request {
          * <li><strong>1</strong>: process hash</li>
          * <li><strong>2</strong>: command line</li>
          * <li><strong>3</strong>: process network</li>
-         * <li><strong>4</strong>: file read/write</li>
+         * <li><strong>4</strong>: file read and write</li>
          * <li><strong>5</strong>: registry operation</li>
          * <li><strong>6</strong>: dynamic-link library loading</li>
-         * <li><strong>7</strong>: file rename.</li>
+         * <li><strong>7</strong>: file renaming</li>
          * </ul>
+         * <p>This parameter is required. If this parameter is not provided, the service returns InvalidUserDefineRuleType (HTTP 400) with the error message &quot;Invalid Type value&quot;.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>

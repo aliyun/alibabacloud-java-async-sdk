@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeClientConfSetupRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceDirectoryAccountId")
+    private Long resourceDirectoryAccountId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StrategyTag")
     @com.aliyun.core.annotation.Validation(required = true)
     private String strategyTag;
@@ -29,6 +33,7 @@ public class DescribeClientConfSetupRequest extends Request {
 
     private DescribeClientConfSetupRequest(Builder builder) {
         super(builder);
+        this.resourceDirectoryAccountId = builder.resourceDirectoryAccountId;
         this.strategyTag = builder.strategyTag;
         this.strategyTagValue = builder.strategyTagValue;
     }
@@ -47,6 +52,13 @@ public class DescribeClientConfSetupRequest extends Request {
     }
 
     /**
+     * @return resourceDirectoryAccountId
+     */
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
+    }
+
+    /**
      * @return strategyTag
      */
     public String getStrategyTag() {
@@ -61,6 +73,7 @@ public class DescribeClientConfSetupRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeClientConfSetupRequest, Builder> {
+        private Long resourceDirectoryAccountId; 
         private String strategyTag; 
         private String strategyTagValue; 
 
@@ -70,12 +83,28 @@ public class DescribeClientConfSetupRequest extends Request {
 
         private Builder(DescribeClientConfSetupRequest request) {
             super(request);
+            this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
             this.strategyTag = request.strategyTag;
             this.strategyTagValue = request.strategyTagValue;
         } 
 
         /**
-         * <p>The resource tag of the client to query.</p>
+         * <p>The ID of the member accounts (Alibaba Cloud account) in the resource folder.</p>
+         * <blockquote>
+         * <p>You can invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1766185894104675</p>
+         */
+        public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+            this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
+            this.resourceDirectoryAccountId = resourceDirectoryAccountId;
+            return this;
+        }
+
+        /**
+         * <p>Specifies the client resource tag to query.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -92,7 +121,7 @@ public class DescribeClientConfSetupRequest extends Request {
          * <ul>
          * <li>major</li>
          * <li>advanced</li>
-         * <li>basic.</li>
+         * <li>basic</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

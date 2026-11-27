@@ -144,7 +144,7 @@ public class UpdateAttackPathWhitelistRequest extends Request {
         } 
 
         /**
-         * <p>The list of cloud assets in the attack path.</p>
+         * <p>The list of cloud service assets in the attack path.</p>
          */
         public Builder attackPathAssetList(java.util.List<AttackPathAssetList> attackPathAssetList) {
             this.putQueryParameter("AttackPathAssetList", attackPathAssetList);
@@ -225,8 +225,8 @@ public class UpdateAttackPathWhitelistRequest extends Request {
         /**
          * <p>The whitelist type. Valid values:</p>
          * <ul>
-         * <li><strong>ALL_ASSET</strong>: all assets.</li>
-         * <li><strong>PART_ASSET</strong>: partial assets.</li>
+         * <li><strong>ALL_ASSET</strong>: All assets.</li>
+         * <li><strong>PART_ASSET</strong>: Partial assets.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -350,9 +350,9 @@ public class UpdateAttackPathWhitelistRequest extends Request {
             } 
 
             /**
-             * <p>The subtype of the cloud asset.</p>
+             * <p>The subtype of the cloud service asset.</p>
              * <blockquote>
-             * <p>You can call <a href="~~ListCloudAssetInstances~~">ListCloudAssetInstances</a> to query the subtype of the cloud asset.</p>
+             * <p>You can call <a href="~~ListCloudAssetInstances~~">ListCloudAssetInstances</a> to query the subtype of the cloud service asset.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -364,9 +364,9 @@ public class UpdateAttackPathWhitelistRequest extends Request {
             }
 
             /**
-             * <p>The type of the cloud asset.</p>
+             * <p>The type of the cloud service asset.</p>
              * <blockquote>
-             * <p>You can call <a href="~~ListCloudAssetInstances~~">ListCloudAssetInstances</a> to query the type of the cloud asset.</p>
+             * <p>You can call <a href="~~ListCloudAssetInstances~~">ListCloudAssetInstances</a> to query the type of the cloud service asset.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -378,9 +378,9 @@ public class UpdateAttackPathWhitelistRequest extends Request {
             }
 
             /**
-             * <p>Instance ID of the cloud asset instance.</p>
+             * <p>Instance ID of the cloud service asset instance.</p>
              * <blockquote>
-             * <p>You can call <a href="~~ListCloudAssetInstances~~">ListCloudAssetInstances</a> to query instance ID of the cloud asset instance.</p>
+             * <p>You can call <a href="~~ListCloudAssetInstances~~">ListCloudAssetInstances</a> to query instance ID of the cloud service asset instance.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -394,8 +394,8 @@ public class UpdateAttackPathWhitelistRequest extends Request {
             /**
              * <p>The node type. Valid values:</p>
              * <ul>
-             * <li><strong>start</strong>: start node.</li>
-             * <li><strong>end</strong>: end node.</li>
+             * <li><strong>start</strong>: The start node.</li>
+             * <li><strong>end</strong>: The end node.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -407,9 +407,9 @@ public class UpdateAttackPathWhitelistRequest extends Request {
             }
 
             /**
-             * <p>The region ID of the cloud asset instance.</p>
+             * <p>The region ID of the cloud service asset instance.</p>
              * <blockquote>
-             * <p>You can call <a href="~~ListCloudAssetInstances~~">ListCloudAssetInstances</a> to query the region ID of the cloud asset instance.</p>
+             * <p>You can call <a href="~~ListCloudAssetInstances~~">ListCloudAssetInstances</a> to query the region ID of the cloud service asset instance.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -421,9 +421,9 @@ public class UpdateAttackPathWhitelistRequest extends Request {
             }
 
             /**
-             * <p>The vendor of the cloud asset.</p>
+             * <p>The vendor of the cloud service asset.</p>
              * <blockquote>
-             * <p>You can call <a href="~~ListCloudAssetInstances~~">ListCloudAssetInstances</a> to query the vendor of the cloud asset.</p>
+             * <p>You can call <a href="~~ListCloudAssetInstances~~">ListCloudAssetInstances</a> to query the vendor of the cloud service asset.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>

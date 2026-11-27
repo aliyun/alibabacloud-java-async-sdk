@@ -102,7 +102,7 @@ public class OperateImageVulRequest extends Request {
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>[{\&quot;namespace\&quot;:\&quot;cloud_oa****\&quot;,\&quot;repoName\&quot;:\&quot;hybirdc****\&quot;,\&quot;regionId\&quot;:\&quot;cn-shanghai\&quot;,\&quot;instanceId\&quot;:\&quot;cri-rv4nvbv8iju4****\&quot;,\&quot;repoId\&quot;:\&quot;crr-2q7302qrofxg****\&quot;,\&quot;tag\&quot;:\&quot;hybird-cloud-web_fix_167115945****\&quot;,\&quot;digest\&quot;:\&quot;e1a4fd25884ca2ef8840bb252c9926e4f549df9e046500dd93539b2d458c****\&quot;,\&quot;newTag\&quot;:\&quot;hybird-cloud-web_fix_167115996****\&quot;,\&quot;uuid\&quot;:\&quot;4ad91dd8c0c02de6574fa98085d0****\&quot;,\&quot;ids\&quot;:[197540864,197540865,197540869]}]</p>
+         * <p>[{&quot;namespace&quot;:&quot;cloud_oa****&quot;,&quot;repoName&quot;:&quot;hybirdc****&quot;,&quot;regionId&quot;:&quot;cn-shanghai&quot;,&quot;instanceId&quot;:&quot;cri-rv4nvbv8iju4****&quot;,&quot;repoId&quot;:&quot;crr-2q7302qrofxg****&quot;,&quot;tag&quot;:&quot;hybird-cloud-web_fix_167115945****&quot;,&quot;digest&quot;:&quot;e1a4fd25884ca2ef8840bb252c9926e4f549df9e046500dd93539b2d458c****&quot;,&quot;newTag&quot;:&quot;hybird-cloud-web_fix_167115996****&quot;,&quot;uuid&quot;:&quot;4ad91dd8c0c02de6574fa98085d0****&quot;,&quot;ids&quot;:[197540864,197540865,197540869]}]</p>
          */
         public Builder info(String info) {
             this.putQueryParameter("Info", info);

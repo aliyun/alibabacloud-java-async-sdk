@@ -114,7 +114,7 @@ public class AddCloudVendorTrialConfigRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>{\&quot;sqsRegion\&quot;:\&quot;us-west-2\&quot;,\&quot;sqsQueueName\&quot;:\&quot;****\&quot;}</p>
+         * <p>{&quot;sqsRegion&quot;:&quot;us-west-2&quot;,&quot;sqsQueueName&quot;:&quot;****&quot;}</p>
          */
         public Builder authInfo(String authInfo) {
             this.putQueryParameter("AuthInfo", authInfo);

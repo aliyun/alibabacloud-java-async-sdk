@@ -22,12 +22,17 @@ public class UpdateClientAlertModeRequest extends Request {
     private String mode;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceDirectoryAccountId")
+    private Long resourceDirectoryAccountId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Uuids")
     private java.util.List<String> uuids;
 
     private UpdateClientAlertModeRequest(Builder builder) {
         super(builder);
         this.mode = builder.mode;
+        this.resourceDirectoryAccountId = builder.resourceDirectoryAccountId;
         this.uuids = builder.uuids;
     }
 
@@ -52,6 +57,13 @@ public class UpdateClientAlertModeRequest extends Request {
     }
 
     /**
+     * @return resourceDirectoryAccountId
+     */
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
+    }
+
+    /**
      * @return uuids
      */
     public java.util.List<String> getUuids() {
@@ -60,6 +72,7 @@ public class UpdateClientAlertModeRequest extends Request {
 
     public static final class Builder extends Request.Builder<UpdateClientAlertModeRequest, Builder> {
         private String mode; 
+        private Long resourceDirectoryAccountId; 
         private java.util.List<String> uuids; 
 
         private Builder() {
@@ -69,13 +82,14 @@ public class UpdateClientAlertModeRequest extends Request {
         private Builder(UpdateClientAlertModeRequest request) {
             super(request);
             this.mode = request.mode;
+            this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
             this.uuids = request.uuids;
         } 
 
         /**
-         * <p>The protection mode. Valid values:</p>
+         * <p>Specifies the protection mode. Valid values:</p>
          * <ul>
-         * <li><strong>strict</strong>: Strict mode. Defense mode has a risk of false positives. Use Defense mode during critical event protection periods.</li>
+         * <li><strong>strict</strong>: Strict mode. Defense mode has a certain risk of false positives and is recommended during critical event protection.</li>
          * <li><strong>balance</strong>: Balanced mode. Defense mode detects more suspicious risks while reducing false positives.</li>
          * </ul>
          * 
@@ -85,6 +99,15 @@ public class UpdateClientAlertModeRequest extends Request {
         public Builder mode(String mode) {
             this.putQueryParameter("Mode", mode);
             this.mode = mode;
+            return this;
+        }
+
+        /**
+         * ResourceDirectoryAccountId.
+         */
+        public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+            this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
+            this.resourceDirectoryAccountId = resourceDirectoryAccountId;
             return this;
         }
 

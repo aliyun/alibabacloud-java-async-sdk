@@ -318,7 +318,7 @@ public class ModifyCloudVendorAccountAKRequest extends Request {
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>{\&quot;product\&quot;:\&quot;webFirewall\&quot;,\&quot;remark\&quot;:\&quot;remark\&quot;}</p>
+         * <p>{&quot;product&quot;:&quot;webFirewall&quot;,&quot;remark&quot;:&quot;remark&quot;}</p>
          */
         public Builder extendInfo(String extendInfo) {
             this.putQueryParameter("ExtendInfo", extendInfo);

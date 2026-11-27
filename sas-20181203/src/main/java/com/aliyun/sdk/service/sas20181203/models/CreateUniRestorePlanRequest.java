@@ -236,7 +236,7 @@ public class CreateUniRestorePlanRequest extends Request {
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;files&quot;: {&quot;qtc&quot;:&quot;F:\\database\\qtc.mdf&quot;,&quot;qtc_log&quot;:&quot;F:\\database\\qtc_0.ldf&quot;},
+         * <p>{&quot;files&quot;: {&quot;qtc&quot;:&quot;F:\database\qtc.mdf&quot;,&quot;qtc_log&quot;:&quot;F:\database\qtc_0.ldf&quot;},
          * &quot;name&quot;:&quot;qtc&quot;}</p>
          */
         public Builder restoreInfo(String restoreInfo) {

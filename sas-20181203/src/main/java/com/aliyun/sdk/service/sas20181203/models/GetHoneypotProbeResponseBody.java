@@ -119,7 +119,7 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The result code. A value of <strong>200</strong> indicates success, whereas any other value indicates failure. You can use this field to identify the cause of the failure.</p>
+         * <p>The result code. A value of <strong>200</strong> indicates success, and any other value indicates failure. You can identify the cause of the failure based on this field.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -138,7 +138,7 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code of the response.</p>
+         * <p>The HTTP status code returned for the request.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -149,7 +149,7 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message returned by the API request.</p>
+         * <p>The message returned in the response.</p>
          * 
          * <strong>example:</strong>
          * <p>successful</p>
@@ -257,7 +257,7 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The instance ID of the management node.</p>
+             * <p>The ECS instance ID of the management node.</p>
              * 
              * <strong>example:</strong>
              * <p>i-bp19ijepxytwtzrk****</p>
@@ -434,8 +434,8 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
             /**
              * <p>The status of the listening service. Valid values:</p>
              * <ul>
-             * <li><strong>1</strong>: Service exception.</li>
-             * <li><strong>3</strong>: Normal.</li>
+             * <li><strong>1</strong>: service exception</li>
+             * <li><strong>3</strong>: normal</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -621,7 +621,7 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ending listening port of the probe.</p>
+             * <p>The end listening port of the probe.</p>
              * 
              * <strong>example:</strong>
              * <p>80</p>
@@ -632,7 +632,7 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The bound service port error.</p>
+             * <p>The service port binding error.</p>
              * 
              * <strong>example:</strong>
              * <p>portmap failed</p>
@@ -665,7 +665,7 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The error details of the bound service port.</p>
+             * <p>The details of the service port binding error.</p>
              * 
              * <strong>example:</strong>
              * <p>listen 22 tcp4 failed</p>
@@ -687,7 +687,7 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The starting listening port of the probe.</p>
+             * <p>The start listening port of the probe.</p>
              * 
              * <strong>example:</strong>
              * <p>22</p>
@@ -700,8 +700,8 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
             /**
              * <p>The status of the bound service port. Valid values:</p>
              * <ul>
-             * <li><strong>1</strong>: Service exception.</li>
-             * <li><strong>3</strong>: Normal.</li>
+             * <li><strong>1</strong>: service exception</li>
+             * <li><strong>3</strong>: normal</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -862,8 +862,8 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
             /**
              * <p>The status of the bound honeypot service. Valid values:</p>
              * <ul>
-             * <li><strong>1</strong>: Service exception.</li>
-             * <li><strong>3</strong>: Normal.</li>
+             * <li><strong>1</strong>: service exception</li>
+             * <li><strong>3</strong>: normal</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1249,7 +1249,7 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of honeypot listening port scanning services.</p>
+             * <p>The list of honeypot listening port scan services.</p>
              */
             public Builder honeyPotProbeScanPort(HoneyPotProbeScanPort honeyPotProbeScanPort) {
                 this.honeyPotProbeScanPort = honeyPotProbeScanPort;
@@ -1297,8 +1297,8 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
             /**
              * <p>The operating system type of the probe instance. Valid values:</p>
              * <ul>
-             * <li>windows: Windows.</li>
-             * <li>linux: Linux.</li>
+             * <li>windows: Windows</li>
+             * <li>linux: Linux</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1334,8 +1334,8 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
             /**
              * <p>The probe type. Valid values:</p>
              * <ul>
-             * <li><strong>host_probe</strong>: Host probe.</li>
-             * <li><strong>vpc_black_hole_probe</strong>: VPC blackhole probe.</li>
+             * <li><strong>host_probe</strong>: host probe</li>
+             * <li><strong>vpc_black_hole_probe</strong>: VPC blackhole probe</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1371,16 +1371,16 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
             /**
              * <p>The probe status. Valid values:</p>
              * <ul>
-             * <li><strong>installed</strong>: Installed successfully.</li>
-             * <li><strong>install_failed</strong>: Installation failed.</li>
-             * <li><strong>online</strong>: Normal.</li>
-             * <li><strong>offline</strong>: Offline.</li>
-             * <li><strong>unnormal</strong>: Service exception.</li>
-             * <li><strong>unprobe</strong>: Unauthorized.</li>
-             * <li><strong>uninstalling</strong>: Uninstalling.</li>
-             * <li><strong>uninstalled</strong>: Uninstalled successfully.</li>
-             * <li><strong>uninstall_failed</strong>: Uninstallation failed.</li>
-             * <li><strong>not_exist</strong>: Not installed.</li>
+             * <li><strong>installed</strong>: installed successfully</li>
+             * <li><strong>install_failed</strong>: installation failed</li>
+             * <li><strong>online</strong>: online</li>
+             * <li><strong>offline</strong>: offline</li>
+             * <li><strong>unnormal</strong>: service exception</li>
+             * <li><strong>unprobe</strong>: unauthorized</li>
+             * <li><strong>uninstalling</strong>: uninstalling</li>
+             * <li><strong>uninstalled</strong>: uninstalled successfully</li>
+             * <li><strong>uninstall_failed</strong>: uninstallation failed</li>
+             * <li><strong>not_exist</strong>: not installed</li>
              * </ul>
              * 
              * <strong>example:</strong>

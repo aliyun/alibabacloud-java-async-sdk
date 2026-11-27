@@ -88,7 +88,10 @@ public class CreateServiceLinkedRoleRequest extends Request {
         } 
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request. Different requests must use different tokens. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * <p>The client token that is used to ensure the idempotence of the request. You must use different tokens for different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>02fb3da4-130e-11e9-8e44-0016e04115b</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -97,12 +100,7 @@ public class CreateServiceLinkedRoleRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to perform only a dry run. Valid values:</p>
-         * <ul>
-         * <li>true: performs only a dry run without executing the actual operation.</li>
-         * <li>false: performs the actual operation.</li>
-         * </ul>
-         * <p>Default value: false.</p>
+         * <p>Specifies whether to perform a dry run on the request. A value of true indicates that only the request is checked and no actual operations are performed. A value of false indicates that the request is normally executed. Default value: false.</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -113,8 +111,8 @@ public class CreateServiceLinkedRoleRequest extends Request {
         /**
          * <p>The service-linked role. Default value: <strong>AliyunServiceRoleForSas</strong>. Valid values:</p>
          * <ul>
-         * <li><strong>AliyunServiceRoleForSas</strong>: The service-linked role for Security Center (SAS). Security Center uses this role to access your resources in other Alibaba Cloud services.</li>
-         * <li><strong>AliyunServiceRoleForSasCspm</strong>: The service-linked role for Security Center - Cloud Security Posture Management (CSPM) (sas-cspm). sas-cspm uses this role to access your resources in other Alibaba Cloud services.</li>
+         * <li><strong>AliyunServiceRoleForSas</strong>: the service-linked role for Security Center. Security Center uses this role to access your resources in other Alibaba Cloud services.</li>
+         * <li><strong>AliyunServiceRoleForSasCspm</strong>: the service-linked role for Cloud Security Posture Management (CSPM) of Security Center. CSPM uses this role to access your resources in other Alibaba Cloud services.</li>
          * </ul>
          * 
          * <strong>example:</strong>

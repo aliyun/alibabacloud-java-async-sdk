@@ -85,7 +85,7 @@ public class ModifyVulTargetRequest extends Request {
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>{\&quot;vulType\&quot;:\&quot;sys\&quot;}</p>
+         * <p>{&quot;vulType&quot;:&quot;sys&quot;}</p>
          */
         public Builder config(String config) {
             this.putQueryParameter("Config", config);
@@ -106,7 +106,7 @@ public class ModifyVulTargetRequest extends Request {
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>[{\&quot;target\&quot;: \&quot;9cd5c684-7201-4de5-ad2c-cea89a5e****\&quot;, \&quot;targetType\&quot;: \&quot;uuid\&quot;, \&quot;flag\&quot;: \&quot;add\&quot;}]</p>
+         * <p>[{&quot;target&quot;: &quot;9cd5c684-7201-4de5-ad2c-cea89a5e****&quot;, &quot;targetType&quot;: &quot;uuid&quot;, &quot;flag&quot;: &quot;add&quot;}]</p>
          */
         public Builder target(String target) {
             this.putQueryParameter("Target", target);

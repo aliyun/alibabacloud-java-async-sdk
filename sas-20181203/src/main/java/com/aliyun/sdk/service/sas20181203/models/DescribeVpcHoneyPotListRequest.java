@@ -129,7 +129,7 @@ public class DescribeVpcHoneyPotListRequest extends Request {
         } 
 
         /**
-         * <p>The page number. Pages start from page 1.</p>
+         * <p>Specifies the page number of the current page during paging for a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -141,10 +141,10 @@ public class DescribeVpcHoneyPotListRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether the VPCs to query have cloud honeypot enabled. Valid values:</p>
+         * <p>Specifies whether the cloud honeypot feature is enabled for the VPCs to be queried. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: enabled</li>
-         * <li><strong>false</strong>: disabled</li>
+         * <li><strong>true</strong>: Enabled.</li>
+         * <li><strong>false</strong>: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -157,9 +157,9 @@ public class DescribeVpcHoneyPotListRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Default value: 20. If you leave this parameter empty, 20 entries are returned per page.</p>
+         * <p>Specifies the maximum number of entries to return on each page during paging for a paged query. Default value: 20. If this parameter is left empty, 20 entries are returned by default.</p>
          * <blockquote>
-         * <p>We recommend that you specify this parameter.</p>
+         * <p>Specify a value for PageSize.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -172,7 +172,7 @@ public class DescribeVpcHoneyPotListRequest extends Request {
         }
 
         /**
-         * <p>The ID of the VPC in which the honeypot instance that you want to query resides.</p>
+         * <p>The ID of the VPC where the honeypot instance resides.</p>
          * <blockquote>
          * <p>You can call the <a href="~~DescribeVpcList~~">DescribeVpcList</a> operation to obtain the VPC ID.</p>
          * </blockquote>
@@ -187,7 +187,7 @@ public class DescribeVpcHoneyPotListRequest extends Request {
         }
 
         /**
-         * <p>The name of the VPC in which the honeypot instance that you want to query resides.</p>
+         * <p>The name of the VPC where the honeypot instance resides.</p>
          * <blockquote>
          * <p>You can call the <a href="~~DescribeVpcList~~">DescribeVpcList</a> operation to obtain the VPC name.</p>
          * </blockquote>
@@ -202,7 +202,7 @@ public class DescribeVpcHoneyPotListRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the VPC in which the honeypot instance that you want to query resides.</p>
+         * <p>The region ID of the VPC where the honeypot instance resides.</p>
          * <blockquote>
          * <p>You can call the <a href="~~DescribeVpcList~~">DescribeVpcList</a> operation to obtain the region ID of the VPC.</p>
          * </blockquote>

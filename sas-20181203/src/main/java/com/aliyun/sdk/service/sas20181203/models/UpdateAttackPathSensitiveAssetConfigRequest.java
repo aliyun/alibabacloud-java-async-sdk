@@ -75,7 +75,7 @@ public class UpdateAttackPathSensitiveAssetConfigRequest extends Request {
         } 
 
         /**
-         * <p>The list of cloud service assets for attack path analysis.</p>
+         * <p>The list of cloud service assets in the attack path.</p>
          * <p>This parameter is required.</p>
          */
         public Builder attackPathAssetList(java.util.List<AttackPathAssetList> attackPathAssetList) {
@@ -85,7 +85,7 @@ public class UpdateAttackPathSensitiveAssetConfigRequest extends Request {
         }
 
         /**
-         * <p>The ID of the attack path sensitive asset configuration.</p>
+         * <p>The ID of the sensitive asset configuration for the attack path.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -231,9 +231,9 @@ public class UpdateAttackPathSensitiveAssetConfigRequest extends Request {
             }
 
             /**
-             * <p>The instance ID of the cloud service asset.</p>
+             * <p>Instance ID of the cloud service asset instance.</p>
              * <blockquote>
-             * <p>You can call <a href="~~ListCloudAssetInstances~~">ListCloudAssetInstances</a> to query the instance ID of the cloud service asset.</p>
+             * <p>You can call <a href="~~ListCloudAssetInstances~~">ListCloudAssetInstances</a> to query instance ID of the cloud service asset instance.</p>
              * </blockquote>
              * <p>This parameter is required.</p>
              * 

@@ -98,6 +98,9 @@ public class DescribeContainerCriteriaResponseBody extends TeaModel {
      * <p>DescribeContainerCriteriaResponseBody</p>
      */
     public static class CriteriaList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("MultiValues")
+        private String multiValues;
+
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
@@ -108,6 +111,7 @@ public class DescribeContainerCriteriaResponseBody extends TeaModel {
         private String values;
 
         private CriteriaList(Builder builder) {
+            this.multiValues = builder.multiValues;
             this.name = builder.name;
             this.type = builder.type;
             this.values = builder.values;
@@ -119,6 +123,13 @@ public class DescribeContainerCriteriaResponseBody extends TeaModel {
 
         public static CriteriaList create() {
             return builder().build();
+        }
+
+        /**
+         * @return multiValues
+         */
+        public String getMultiValues() {
+            return this.multiValues;
         }
 
         /**
@@ -143,6 +154,7 @@ public class DescribeContainerCriteriaResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String multiValues; 
             private String name; 
             private String type; 
             private String values; 
@@ -151,33 +163,45 @@ public class DescribeContainerCriteriaResponseBody extends TeaModel {
             } 
 
             private Builder(CriteriaList model) {
+                this.multiValues = model.multiValues;
                 this.name = model.name;
                 this.type = model.type;
                 this.values = model.values;
             } 
 
             /**
-             * <p>The name of the query condition.</p>
+             * <p>The JSON string of multi-level filter values. The region filter returns available regions grouped by cloud provider ID (vendor) and region group (regionIds). This parameter can be empty if there are no multi-level filter values.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;vendor&quot;:7,&quot;regionIds&quot;:{&quot;default&quot;:[&quot;cn-north-1&quot;]}}]</p>
+             */
+            public Builder multiValues(String multiValues) {
+                this.multiValues = multiValues;
+                return this;
+            }
+
+            /**
+             * <p>The name of the search criterion. Valid values:</p>
              * <ul>
-             * <li><strong>instanceId</strong>: container instance ID.</li>
-             * <li><strong>clusterId</strong>: cluster ID.</li>
-             * <li><strong>regionId</strong>: container region.</li>
-             * <li><strong>clusterName</strong>: cluster name.</li>
-             * <li><strong>image</strong>: image name.</li>
-             * <li><strong>imageRepoName</strong>: image repository name.</li>
-             * <li><strong>imageRepoNamespace</strong>: image repository namespace.</li>
-             * <li><strong>imageRepoTag</strong>: image repository tag.</li>
-             * <li><strong>imageDigest</strong>: image digest.</li>
-             * <li><strong>clusterType</strong>: cluster type.</li>
-             * <li><strong>hostIp</strong>: public IP address.</li>
-             * <li><strong>pod</strong>: pod.</li>
-             * <li><strong>podIp</strong>: pod IP address.</li>
-             * <li><strong>containerId</strong>: container ID.</li>
-             * <li><strong>vulStatus</strong>: whether the container has vulnerabilities.</li>
-             * <li><strong>alarmStatus</strong>: whether the container has security alerts.</li>
-             * <li><strong>riskStatus</strong>: whether the container has risks.</li>
-             * <li><strong>riskLevel</strong>: container risk level.</li>
-             * <li><strong>containerScope</strong>: container type.</li>
+             * <li><strong>instanceId</strong>: Container instance ID.</li>
+             * <li><strong>clusterId</strong>: Cluster ID.</li>
+             * <li><strong>regionId</strong>: Container region.</li>
+             * <li><strong>clusterName</strong>: Cluster name.</li>
+             * <li><strong>image</strong>: Image name.</li>
+             * <li><strong>imageRepoName</strong>: Image repository name.</li>
+             * <li><strong>imageRepoNamespace</strong>: Image repository namespace.</li>
+             * <li><strong>imageRepoTag</strong>: Image repository tag.</li>
+             * <li><strong>imageDigest</strong>: Image digest.</li>
+             * <li><strong>clusterType</strong>: Cluster type.</li>
+             * <li><strong>hostIp</strong>: Public IP address.</li>
+             * <li><strong>pod</strong>: Pod.</li>
+             * <li><strong>podIp</strong>: Pod IP address.</li>
+             * <li><strong>containerId</strong>: Container ID.</li>
+             * <li><strong>vulStatus</strong>: Whether the container has vulnerabilities.</li>
+             * <li><strong>alarmStatus</strong>: Whether the container has security alerts.</li>
+             * <li><strong>riskStatus</strong>: Whether the container has risks.</li>
+             * <li><strong>riskLevel</strong>: Container risk level.</li>
+             * <li><strong>containerScope</strong>: Container type.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -189,10 +213,10 @@ public class DescribeContainerCriteriaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the query condition. Valid values:</p>
+             * <p>The type of the search criterion. Valid values:</p>
              * <ul>
-             * <li><strong>input</strong>: You must manually enter the query field.</li>
-             * <li><strong>select</strong>: You must select a subtype of the query condition from a drop-down list.</li>
+             * <li><strong>input</strong>: Requires manual input for the search field.</li>
+             * <li><strong>select</strong>: Requires selecting the subtype of the search criterion from a drop-down list.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -204,9 +228,9 @@ public class DescribeContainerCriteriaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The available options when <strong>Type</strong> (the type of the query condition) is <strong>select</strong>.</p>
+             * <p>The available options when <strong>Type</strong> is <strong>select</strong>.</p>
              * <blockquote>
-             * <p>When <strong>Type</strong> (the type of the query condition) is <strong>input</strong>, this parameter returns an empty value.</p>
+             * <p>If <strong>Type</strong> is <strong>input</strong>, this parameter is empty.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>

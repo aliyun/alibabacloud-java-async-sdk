@@ -74,9 +74,9 @@ public class StartHoneypotRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the honeypot.</p>
+         * <p>The honeypot ID.</p>
          * <blockquote>
-         * <p> You can call the <a href="~~ListHoneypot~~">ListHoneypot</a> operation to query the IDs of honeypots.</p>
+         * <p>You can call the <a href="~~ListHoneypot~~">ListHoneypot</a> operation to obtain this value.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -90,7 +90,7 @@ public class StartHoneypotRequest extends Request {
         }
 
         /**
-         * <p>The language of the content in the request and response messages. Default value: <strong>zh</strong>. Valid values:</p>
+         * <p>Specifies the language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
          * <ul>
          * <li><strong>zh</strong>: Chinese</li>
          * <li><strong>en</strong>: English</li>
