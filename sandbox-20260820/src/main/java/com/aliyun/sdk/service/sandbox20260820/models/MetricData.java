@@ -133,7 +133,7 @@ public class MetricData extends TeaModel {
         }
 
         /**
-         * <p>The grouping keys used for this query. An empty array is returned if no grouping is applied.</p>
+         * <p>The group keys used for this query. An empty array is returned if no grouping is applied.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -157,7 +157,7 @@ public class MetricData extends TeaModel {
         }
 
         /**
-         * <p>The result for each requested metric.</p>
+         * <p>The result corresponding to each requested metric.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -336,7 +336,7 @@ public class MetricData extends TeaModel {
             } 
 
             /**
-             * <p>The team, template, or other grouping values for this series.</p>
+             * <p>The team, template, or other grouping values corresponding to this series.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -348,7 +348,7 @@ public class MetricData extends TeaModel {
             }
 
             /**
-             * <p>The data points in chronological order. Only times with metric values are listed.</p>
+             * <p>The data points arranged in chronological order, listing only the times when metric values are available.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -435,7 +435,7 @@ public class MetricData extends TeaModel {
             } 
 
             /**
-             * <p>The name of the metric in the request.</p>
+             * <p>The name of the metric corresponding to the request.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -447,7 +447,7 @@ public class MetricData extends TeaModel {
             }
 
             /**
-             * <p>The time series for the metric. An empty array is returned if no data points exist.</p>
+             * <p>The time series for the metric. An empty array is returned if there are no data points.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

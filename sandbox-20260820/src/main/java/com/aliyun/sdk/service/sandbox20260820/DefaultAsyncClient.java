@@ -404,7 +404,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves monitoring metrics at a specific point in time or queries metric trends over a period of time. You can filter queries by account, team, template, or sandbox.</p>
+     * <p>Queries monitoring metrics at a specific point in time or retrieves trends over a period of time. You can query metrics by account, team, template, or sandbox. Each metric returns up to 200 time series, and a single request queries up to 100,000 nominal data points.</p>
      * 
      * @param request the request parameters of GetMetricData  GetMetricDataRequest
      * @return GetMetricDataResponse
@@ -425,7 +425,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Queries the CPU, memory, and disk usage over a specified period. You can view the cumulative usage and usage trends by account, team, or template.</p>
+     * <p>Queries the CPU, memory, and disk usage within a specified time range, including the disk usage of template caches and snapshots. You can view the cumulative usage for the interval, hourly usage, or daily usage. You can also group the results by team, template, snapshot, or sandbox plan.</p>
      * 
      * @param request the request parameters of GetResourceUsage  GetResourceUsageRequest
      * @return GetResourceUsageResponse
