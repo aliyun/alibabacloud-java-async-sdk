@@ -26,6 +26,9 @@ public class DistillationTemplateSummary extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
+    @com.aliyun.core.annotation.NameInMap("Doc")
+    private String doc;
+
     @com.aliyun.core.annotation.NameInMap("JobType")
     private String jobType;
 
@@ -51,6 +54,7 @@ public class DistillationTemplateSummary extends TeaModel {
         this.capabilityTags = builder.capabilityTags;
         this.category = builder.category;
         this.description = builder.description;
+        this.doc = builder.doc;
         this.jobType = builder.jobType;
         this.orderNumber = builder.orderNumber;
         this.pipelineStages = builder.pipelineStages;
@@ -91,6 +95,13 @@ public class DistillationTemplateSummary extends TeaModel {
      */
     public String getDescription() {
         return this.description;
+    }
+
+    /**
+     * @return doc
+     */
+    public String getDoc() {
+        return this.doc;
     }
 
     /**
@@ -146,6 +157,7 @@ public class DistillationTemplateSummary extends TeaModel {
         private java.util.List<String> capabilityTags; 
         private String category; 
         private String description; 
+        private String doc; 
         private String jobType; 
         private Integer orderNumber; 
         private java.util.List<PipelineStages> pipelineStages; 
@@ -161,6 +173,7 @@ public class DistillationTemplateSummary extends TeaModel {
             this.capabilityTags = model.capabilityTags;
             this.category = model.category;
             this.description = model.description;
+            this.doc = model.doc;
             this.jobType = model.jobType;
             this.orderNumber = model.orderNumber;
             this.pipelineStages = model.pipelineStages;
@@ -191,6 +204,14 @@ public class DistillationTemplateSummary extends TeaModel {
          */
         public Builder description(String description) {
             this.description = description;
+            return this;
+        }
+
+        /**
+         * Doc.
+         */
+        public Builder doc(String doc) {
+            this.doc = doc;
             return this;
         }
 
